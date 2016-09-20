@@ -17,7 +17,7 @@ import os
 # }
 os.chdir('../models/syntaxnet/')
 
-subprocess.call(['echo "President lives in White House." | syntaxnet/demo.sh > output.txt'],shell=True)
+# subprocess.call(['echo "David Beckham and Victoria Beckham are married." | syntaxnet/demo.sh > output.txt'],shell=True)
 
 filename='output.txt'
 
@@ -32,26 +32,35 @@ def readata(filename):
 #find the verb which is ROOT of the sentence
 
 lists=readata(filename)
-NNP_list = {}
+mylabels = []
+prev_type = ''
 for i,sublist in enumerate(lists):
 	# print sublist
 	if sublist[4]=='NNP':
-		word = sublist[1]
-		NNP_list[i] = word
+		if prev_type == 'NNP':
+			word = word+' '+sublist[1]
+		else:
+			prev_type = sublist[4] 
+			word = sublist[1]
 	elif sublist[7]=='ROOT':
 		predicate = sublist[1]
+		prev_type=''
+	else:
+		prev_type=''
+		# print word
+		mylabels.append('"'+word+'"'+'@en')
 
-print NNP_list
-print predicate
+labels =  set(mylabels)
+labels = list(labels)
+print "predicate=>"+predicate
 
-flag = 0
-for k,v in NNP_list.iteritems():
-	if k != 0 or flag==0:
-		print k
-
-labels =['"David Beckham"@en','"Victoria Beckham"@en']
 entities = {} 
+resources = {}
+
 for i,label in enumerate(labels):
+	resource_list = []
+	print label
+	print "==========="
 	q = ('select distinct ?x where{?x rdfs:label'+ label +' }')
 	result = sparql.query('http://dbpedia.org/sparql', q)
 	types = {}
@@ -59,6 +68,7 @@ for i,label in enumerate(labels):
 		values = sparql.unpack_row(row)
 		if not 'Category:' in values[0]:
 			print values[0]
+			resource_list.append(values[0])
 			my_list = []
 			q1=('SELECT distinct ?type ?superType WHERE  { <'+str(values[0]) + '> rdf:type ?type . optional { ?type rdfs:subClassOf ?superType}}')
 			result1 = sparql.query('http://dbpedia.org/sparql', q1)
@@ -66,30 +76,31 @@ for i,label in enumerate(labels):
 				values1 = sparql.unpack_row(row1)
 				my_list.append(values1)
 			types[values[0]]= my_list
-	entities[i] = types	
+	entities[i] = types
+	resources[label] = resource_list	
 print "==========="
 # print entities
+print resources
 
 # relation=[]
 # with open('mydata_type.csv','wb') as f:
-	# writer = csv.writer(f)
-	# for i,item1 in enumerate(entities[1]):
-		# print i	
-		# for j,item2 in enumerate(entities[0]):
-			# q1=('SELECT ?type ?superType WHERE  { <'+str(item1) + '> rdf:type ?type . optional { ?type rdfs:subClassOf ?superType}')
-# 			# print q1
-# 			try:
-# 				result1 = sparql.query('http://dbpedia.org/sparql', q1)
-# 				for row1 in result1:
-# 					values1 = sparql.unpack_row(row1)
-# 					# print values1
-# 					if values1:
-# 						print j
-# 						print([str(item1),str(values1[0]),str(item2)])
-# 						writer.writerow([str(item1),str(values1[0]),str(item2)])	
-# 					# relation.append(values1[0])
-# 			except:
-# 				pass
+# 	writer = csv.writer(f)
+for item1 in resources[labels[0]]:
+	for item2 in resources[labels[1]]:
+		q1=('SELECT ?r WHERE  { <'+str(item1) + '> ?r <' +str(item2)+'>}')
+		print q1
+		try:
+			result1 = sparql.query('http://dbpedia.org/sparql', q1)
+			for row1 in result1:
+				values1 = sparql.unpack_row(row1)
+				# print values1
+				if values1:
+					print "relation========="
+					print([str(item1),str(values1[0]),str(item2)])
+					# writer.writerow([str(item1),str(values1[0]),str(item2)])	
+				# relation.append(values1[0])
+		except:
+			pass
 
 # with open('mydata_1.csv','wb') as f:
 # 	writer = csv.writer(f)

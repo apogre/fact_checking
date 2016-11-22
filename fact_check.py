@@ -70,12 +70,13 @@ def date_parser(doc):
 
 
 entities = {} 
-resources = {}
 new_labels = []
-ent_size = []
+
 
 def resource_extractor_updated(labels):
     # print labels
+    ent_size = []
+    resources = {}
     for i,label in enumerate(labels):
         resource_list = []
         score_list = {}
@@ -98,7 +99,7 @@ def resource_extractor_updated(labels):
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
-            print q_u
+            # print q_u
             # sys.exit()
             result = sparql.query(sparql_dbpedia, q_u)
             link_list = []
@@ -192,10 +193,11 @@ def redirect_link(o_link):
     return r_link
 
 def relation_extractor(resources):
-    print new_labels
+    # print new_labels
     print "====Relations===="
     my_item1 = []
     my_item2 = []
+    rel_count = 0
     for i in range(0,len(resources)-1):
         if str(new_labels[i][0]) in resources:
             item1_v = resources[new_labels[i][0]]
@@ -226,6 +228,7 @@ def relation_extractor(resources):
                                     # if i1[2]>threshold_value and i2[2] > threshold_value:
                                         # if url1 not in my_item1:
                                     result1 = sparql.query(sparql_dbpedia, q1)
+                                    rel_count+=1
                                     # print "urls============"
                                     # print url1
                                     # print url2
@@ -237,10 +240,13 @@ def relation_extractor(resources):
                                             # print "relations============"
                                             q_c=('SELECT distinct ?c WHERE  { <'+str(values1[0]) + '> rdfs:comment ?c }')
                                             comments = sparql.query(sparql_dbpedia, q_c)
-                                            comment = [sparql.unpack_row(comment) for comment in comments]
+                                            if comments:
+                                                comment = [sparql.unpack_row(comment) for comment in comments]
+                                            else:
+                                                comment = ''
                                             relation = [(str(url1),i1[2]),(str(values1[0])),comment,(str(url2),i2[2])] 
                                             # print([str(url1),str(values1[0]),str(url2)])
-                                            return relation
+                                            return relation, rel_count
             #                                 print '\n'
             #                                 rel =  values1[0].split('/')
             #                                 relation.append(rel[-1])
@@ -252,7 +258,7 @@ def relation_extractor(resources):
                             except:
                                     pass
                         # my_item1.append(url1) 
-    return None
+    return None, rel_count
 
 def date_extractor(date,resources):
     # print resources

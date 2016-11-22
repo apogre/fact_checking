@@ -3,19 +3,22 @@ import fact_check
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
+aux_verb = ['was','is']
 
 with open('sample.txt','r') as f:
     sentences = f.readlines()
     for i,sentence in enumerate(sentences):
+        new_labels = []
+        print sentence
         sent = sentence.replace('.','').split()
         ne = st_ner.tag(sent)
         # print ne
         pos = st_pos.tag(sent)
         # print pos
         ent =  fact_check.get_nodes_updated(ne)
-        print ent
+        # print ent
         vb = fact_check.get_verb(pos)
-        print vb
+        # print vb
         # updated_labels = []
         # for en in ent:
         #     if 'University' in en[0] or 'College' in en[0] or 'School' in en[0]:
@@ -39,12 +42,24 @@ with open('sample.txt','r') as f:
                 for loc in loc_label:
                     ent.append((loc,'LOCATION'))
         print ent
+        print vb
         resources, ent_size = fact_check.resource_extractor_updated(ent)
-        print "====Resources===="
+        print "====Resources Count===="
         print resources
         print ent_size
-        relation = fact_check.relation_extractor(resources)
+        relation, rel_count = fact_check.relation_extractor(resources)
+        print "no. of iterations: " + str(rel_count)
         print relation
+        if relation:
+            for v in vb:
+                # print v
+                # print relation[2][0]
+                if v[0] not in aux_verb:
+                    if v[0] in relation[2][0][0].split():
+                        print "The statement is True"
+                    else:
+                        print "The statement is False"
+
             # print date_flag
             # now_current = datetime.datetime.now()
             # relation_extractor(resources)

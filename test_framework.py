@@ -1,5 +1,7 @@
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
 import fact_check
+from nltk import word_tokenize
+import sys
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
@@ -11,11 +13,16 @@ with open('sample.txt','r') as f:
     for i,sentence in enumerate(sentences):
         new_labels = []
         print sentence
-        sent = sentence.replace('.','').split()
+        sent = word_tokenize(sentence)
+        # print tokens
+        # sent = sentence.replace('.','').split()
         ne = st_ner.tag(sent)
-        # print ne
+        print ne
         pos = st_pos.tag(sent)
-        # print pos
+        print pos
+        # ne1 = st_ner.tag(tokens)
+        # print ne1
+        sys.exit(0)
         ent =  fact_check.get_nodes_updated(ne)
         # print ent
         vb = fact_check.get_verb(pos)

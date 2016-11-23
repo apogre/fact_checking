@@ -202,6 +202,7 @@ def relation_extractor(resources):
     my_item1 = []
     my_item2 = []
     rel_count = 0
+    relation = []
     new_labels = sorted(new_labels,key=operator.itemgetter(2))
     print new_labels
     for i in range(0,len(resources)-1):
@@ -234,33 +235,37 @@ def relation_extractor(resources):
                                     # if i1[2]>threshold_value and i2[2] > threshold_value:
                                         # if url1 not in my_item1:
                                     result1 = sparql.query(sparql_dbpedia, q1)
+                                    # print q1
                                     rel_count+=1
                                     # print "urls============"
                                     # print url1
                                     # print url2
                                     
             #                         my_item2.append(url2)
-                                    for row1 in result1:
-                                        values1 = sparql.unpack_row(row1)
-                                        if values1:
-                                            # print "relations============"
-                                            q_c=('SELECT distinct ?c WHERE  { <'+str(values1[0]) + '> rdfs:comment ?c }')
-                                            comments = sparql.query(sparql_dbpedia, q_c)
-                                            if comments:
-                                                comment = [sparql.unpack_row(comment) for comment in comments]
-                                            else:
-                                                comment = ''
-                                            relation = [(str(url1),i1[2]),(str(values1[0])),comment,(str(url2),i2[2])] 
-                                            # print([str(url1),str(values1[0]),str(url2)])
+                                    if result1:
+                                        for row1 in result1:
+                                            values1 = sparql.unpack_row(row1)
+                                            # print values1
+                                            if 'ontology' in values1[0]:
+                                                # print "relations============"
+                                                q_c=('SELECT distinct ?c WHERE  { <'+str(values1[0]) + '> rdfs:comment ?c }')
+                                                comments = sparql.query(sparql_dbpedia, q_c)
+                                                if comments:
+                                                    comment = [sparql.unpack_row(comment) for comment in comments]
+                                                else:
+                                                    comment = ''
+                                                relation.append([(str(url1),i1[2]),(str(values1[0])),comment,(str(url2),i2[2])]) 
+                                                # print([str(url1),str(values1[0]),str(url2)])
+                                        if relation:
                                             return relation, rel_count
-            #                                 print '\n'
-            #                                 rel =  values1[0].split('/')
-            #                                 relation.append(rel[-1])
-            #                         # print relation
-            #                                     # writer.writerow([str(item1),str(values1[0]),str(item2)])  
-            #                                 # relation.append(values1[0])
-                                    # else:
-                                        # break
+                #                                 print '\n'
+                #                                 rel =  values1[0].split('/')
+                #                                 relation.append(rel[-1])
+                #                         # print relation
+                #                                     # writer.writerow([str(item1),str(values1[0]),str(item2)])  
+                #                                 # relation.append(values1[0])
+                                        # else:
+                                            # break
                             except:
                                     pass
                         # my_item1.append(url1) 

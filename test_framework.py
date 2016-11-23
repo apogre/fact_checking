@@ -5,7 +5,7 @@ import sys
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
-aux_verb = ['was','is']
+aux_verb = ['was','is','become']
 true_flag = 0
 
 with open('sample.txt','r') as f:
@@ -17,12 +17,12 @@ with open('sample.txt','r') as f:
         # print tokens
         # sent = sentence.replace('.','').split()
         ne = st_ner.tag(sent)
-        print ne
+        # print ne
         pos = st_pos.tag(sent)
-        print pos
+        # print pos
         # ne1 = st_ner.tag(tokens)
         # print ne1
-        sys.exit(0)
+        # sys.exit(0)
         ent =  fact_check.get_nodes_updated(ne)
         # print ent
         vb = fact_check.get_verb(pos)
@@ -42,34 +42,36 @@ with open('sample.txt','r') as f:
         #     date_flag = 1
         # except:
         #     pass
-        print "====Entities===="
+        # print "====Entities===="
         # print ent
         for e in ent:
             if e[1] == 'LOCATION' and ',' in e[0]:
                 loc_label = e[0].split(',')
                 for loc in loc_label:
                     ent.append((loc,'LOCATION'))
-        print ent
-        print vb
+        # print ent
+        # print vb
         resources, ent_size = fact_check.resource_extractor_updated(ent)
-        print "====Resources Count===="
+        # print "====Resources Count===="
         # print resources
-        print ent_size
+        # print ent_size
         relation, rel_count = fact_check.relation_extractor(resources)
+        print vb
         print "no. of iterations: " + str(rel_count)
         print relation
         if relation:
-            for v in vb:
-                # print v
-                # print relation[2]
-                if v[0] not in aux_verb:
-                    for rel in relation[2]:
-                        if v[0] in rel[0].split():
-                            print "The statement is True"
-                            true_flag = 1
+            for rel in relation:
+                for v in vb:
+                    # print v
+                    # print relation[2]
+                    if v[0] not in aux_verb:
+                        for r in rel[2]:
+                            if v[0].lower() in r[0].split():
+                                print "The statement is True"
+                                true_flag = 1
         if true_flag == 0:
             print "The statement is False"
-
+        print "=============================================="
             # print date_flag
             # now_current = datetime.datetime.now()
             # relation_extractor(resources)

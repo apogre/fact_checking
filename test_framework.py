@@ -4,6 +4,7 @@ import fact_check
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
 aux_verb = ['was','is']
+true_flag = 0
 
 with open('sample.txt','r') as f:
     sentences = f.readlines()
@@ -45,7 +46,7 @@ with open('sample.txt','r') as f:
         print vb
         resources, ent_size = fact_check.resource_extractor_updated(ent)
         print "====Resources Count===="
-        print resources
+        # print resources
         print ent_size
         relation, rel_count = fact_check.relation_extractor(resources)
         print "no. of iterations: " + str(rel_count)
@@ -53,12 +54,14 @@ with open('sample.txt','r') as f:
         if relation:
             for v in vb:
                 # print v
-                # print relation[2][0]
+                # print relation[2]
                 if v[0] not in aux_verb:
-                    if v[0] in relation[2][0][0].split():
-                        print "The statement is True"
-                    else:
-                        print "The statement is False"
+                    for rel in relation[2]:
+                        if v[0] in rel[0].split():
+                            print "The statement is True"
+                            true_flag = 1
+        if true_flag == 0:
+            print "The statement is False"
 
             # print date_flag
             # now_current = datetime.datetime.now()

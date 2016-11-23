@@ -75,13 +75,15 @@ new_labels = []
 
 def resource_extractor_updated(labels):
     # print labels
+    global new_labels
+    new_labels = []
     ent_size = []
     resources = {}
     for i,label in enumerate(labels):
         resource_list = []
         score_list = {}
         if label[1] != 'DATE':
-            new_labels.append(label)
+            
             my_labels = label[0].split()
             if label[1] == 'PERSON':
                 if len(my_labels) == 1:
@@ -110,6 +112,8 @@ def resource_extractor_updated(labels):
             new_val = [val for val in values if not 'Category:' in val[0] and not 'wikidata' in val[0]]
             values = new_val
             ent_size.append(len(values))
+            label = label+(len(new_val),)
+            new_labels.append(label)
 
             add_score = [similar(label[0],val[1]) for val in values]
             # print add_score
@@ -193,11 +197,13 @@ def redirect_link(o_link):
     return r_link
 
 def relation_extractor(resources):
-    # print new_labels
+    global new_labels
     print "====Relations===="
     my_item1 = []
     my_item2 = []
     rel_count = 0
+    new_labels = sorted(new_labels,key=operator.itemgetter(2))
+    print new_labels
     for i in range(0,len(resources)-1):
         if str(new_labels[i][0]) in resources:
             item1_v = resources[new_labels[i][0]]
@@ -322,7 +328,7 @@ if __name__ == '__main__':
                 # sys.exit()
                 resources = resource_extractor_updated(ent)
                 print "====Resources===="
-                print resources
+                # print resources
                 relation_extractor(resources)
                 print date_flag
                 now_current = datetime.datetime.now()

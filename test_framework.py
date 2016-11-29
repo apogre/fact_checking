@@ -2,6 +2,7 @@ from nltk.tag import StanfordNERTagger,StanfordPOSTagger
 import fact_check
 from nltk import word_tokenize
 import sys
+import time
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
@@ -13,6 +14,7 @@ with open('sample.txt','r') as f:
     for i,sentence in enumerate(sentences):
         new_labels = []
         print sentence
+        start_time = time.time()
         sent = word_tokenize(sentence)
         # print tokens
         # sent = sentence.replace('.','').split()
@@ -44,20 +46,21 @@ with open('sample.txt','r') as f:
         #     pass
         # print "====Entities===="
         # print ent
-        for e in ent:
-            if e[1] == 'LOCATION' and ',' in e[0]:
-                loc_label = e[0].split(',')
-                for loc in loc_label:
-                    ent.append((loc,'LOCATION'))
+        # for e in ent:
+        #     if e[1] == 'LOCATION' and ',' in e[0]:
+        #         loc_label = e[0].split(',')
+        #         for loc in loc_label:
+        #             ent.append((loc,'LOCATION'))
         # print ent
         # print vb
+        print("--- %s seconds ---" % (time.time() - start_time))
         resources, ent_size = fact_check.resource_extractor_updated(ent)
         # print "====Resources Count===="
         # print resources
         # print ent_size
-        relation, rel_count = fact_check.relation_extractor(resources)
+        relation, rel_count = fact_check.relation_extractor_updated(resources)
         print vb
-        print "no. of iterations: " + str(rel_count)
+        # print "no. of iterations: " + str(rel_count)
         print relation
         if relation:
             for rel in relation:
@@ -71,6 +74,7 @@ with open('sample.txt','r') as f:
                                 true_flag = 1
         if true_flag == 0:
             print "The statement is False"
+        print("--- %s seconds ---" % (time.time() - start_time))
         print "=============================================="
             # print date_flag
             # now_current = datetime.datetime.now()

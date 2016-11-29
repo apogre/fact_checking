@@ -50,6 +50,7 @@ threshold_value = 0.8
 def get_nodes_updated(netagged_words):
     ent = []
     for tag, chunk in groupby(netagged_words, lambda x:x[1]):
+        # print tag
         if tag != "O":
             tuple1 =(" ".join(w for w, t in chunk),tag)
             ent.append(tuple1)
@@ -195,6 +196,77 @@ def redirect_link(o_link):
     except:
         r_link = o_link
     return r_link
+
+def relation_extractor_updated(resources):
+    # print resources
+    # sys.exit(0)
+    global new_labels
+    rel_count = 0
+    relation = []
+    new_labels = sorted(new_labels,key=operator.itemgetter(2))
+    print new_labels
+    all_output=[]
+    for i in range(0,len(resources)-1):
+        if str(new_labels[i][0]) in resources:
+            item1_v = resources[new_labels[i][0]]
+            for i1 in item1_v:
+                if 'dbpedia' in i1[0]:
+                    url1 = redirect_link(i1[0])
+                    q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s =<'+ url1 + '> )}')
+                    # print q_all
+                    result = sparql.query(sparql_dbpedia, q_all)
+                    q1_values = [sparql.unpack_row(row_result) for row_result in result]
+                    # print url1
+                for j in range(i+1,len(resources)):
+                    if str(new_labels[j][0]) in resources:
+                        item2_v = resources[new_labels[j][0]]
+                        if new_labels[j][1]=='PERSON':
+                            threshold = 0.5
+                        else:
+                            threshold = 0.9
+                        # print threshold
+                        for i2 in item2_v:
+                            # print i2
+                            if i2[2]>threshold:
+                                if 'dbpedia' in i2[0]:
+                                    url2 = redirect_link(i2[0])
+                                    # print url2
+                                    output = [val for val in q1_values if url2 in val]
+                                    # print output
+                                    if output:
+                                        # print output
+                                        for o in output:
+                                            o.append(url1)
+                                        all_output.append(output)
+                                        # print all_output
+                                        break
+                            else:
+                                break
+                # print output
+                if all_output:
+                    # print "ereeee"
+                    break
+    # print all_output
+    # sys.exit(0)
+    if all_output:
+        for out in all_output[0]:
+            # print out
+            # sys.exit(0)
+            if 'ontology' in out[0]:
+                # print out
+                # print "relations============"
+                q_c=('SELECT distinct ?c WHERE  { <'+str(out[0]) + '> rdfs:comment ?c }')
+                # print q_c
+                comments = sparql.query(sparql_dbpedia, q_c)
+                if comments:
+                    comment = [sparql.unpack_row(comment) for comment in comments]
+                else:
+                    comment = ''
+                relation.append([(out[2]),(str(out[0])),comment,(out[1])]) 
+                # print([str(url1),str(values1[0]),str(url2)])
+        if relation:
+            return relation, rel_count
+    return None, rel_count
 
 def relation_extractor(resources):
     global new_labels

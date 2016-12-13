@@ -19,9 +19,9 @@ import operator
 objects = []
 relation=[]
 ROOT = 'ROOT'
-SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
-# sparql_dbpedia = 'http://localhost:8890/sparql'
-sparql_dbpedia = 'https://dbpedia.org/sparql'
+# SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
+sparql_dbpedia = 'http://localhost:8890/sparql'
+# sparql_dbpedia = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
@@ -75,7 +75,7 @@ new_labels = []
 
 
 def resource_extractor_updated(labels):
-    # print labels
+    print labels
     global new_labels
     new_labels = []
     ent_size = []
@@ -93,16 +93,16 @@ def resource_extractor_updated(labels):
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[-1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
             elif label[1] == 'LOCATION':
                 if len(my_labels) == 1:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
+                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
                 else:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
+                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
             else:
                 if len(my_labels) == 1:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
-            # print q_u
+            print q_u
             # sys.exit()
             result = sparql.query(sparql_dbpedia, q_u)
             link_list = []
@@ -110,6 +110,7 @@ def resource_extractor_updated(labels):
             # types = {}
             
             values = [sparql.unpack_row(row) for row in result]
+            # print values
             new_val = [val for val in values if not 'Category:' in val[0] and not 'wikidata' in val[0]]
             values = new_val
             ent_size.append(len(values))
@@ -204,7 +205,7 @@ def relation_extractor_updated(resources):
     rel_count = 0
     relation = []
     new_labels = sorted(new_labels,key=operator.itemgetter(2))
-    print new_labels
+    # print new_labels
     all_output=[]
     for i in range(0,len(resources)-1):
         if str(new_labels[i][0]) in resources:
@@ -256,7 +257,7 @@ def relation_extractor_updated(resources):
                 # print out
                 # print "relations============"
                 q_c=('SELECT distinct ?c WHERE  { <'+str(out[0]) + '> rdfs:comment ?c }')
-                # print q_c
+                print q_c
                 comments = sparql.query(sparql_dbpedia, q_c)
                 if comments:
                     comment = [sparql.unpack_row(comment) for comment in comments]

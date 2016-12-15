@@ -14,6 +14,7 @@ import datetime
 from string import digits
 from itertools import groupby
 import operator
+from nltk.tag import StanfordNERTagger,StanfordPOSTagger
 
 
 objects = []
@@ -25,6 +26,9 @@ sparql_dbpedia = 'http://localhost:8890/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
+
+st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
+st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
 
 # export STANFORDTOOLSDIR=$HOME
 # export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09
@@ -70,12 +74,18 @@ def date_parser(doc):
     return dp.parse(doc,fuzzy=True)
 
 
+def st_tagger(sentence_list):
+    ne_s = st_ner.tag_sents(sentence_list)
+    pos_s = st_pos.tag_sents(sentence_list)
+    return ne_s, pos_s
+
+
 entities = {} 
 new_labels = []
 
 
 def resource_extractor_updated(labels):
-    print labels
+    # print labels
     global new_labels
     new_labels = []
     ent_size = []
@@ -84,7 +94,7 @@ def resource_extractor_updated(labels):
         resource_list = []
         score_list = {}
         if label[1] != 'DATE':
-            
+            # print label[0]
             my_labels = label[0].split()
             if label[1] == 'PERSON':
                 if len(my_labels) == 1:
@@ -94,6 +104,10 @@ def resource_extractor_updated(labels):
             elif label[1] == 'LOCATION':
                 if len(my_labels) == 1:
                     q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
+                elif ',' in label[0]:
+                    print label[0]
+                    my_labels = label[0].split(', ')
+                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[1])+'"))}')
                 else:
                     q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
             else:
@@ -102,12 +116,13 @@ def resource_extractor_updated(labels):
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
-            print q_u
+            # print q_u
             # sys.exit()
             result = sparql.query(sparql_dbpedia, q_u)
             link_list = []
             # print result
             # types = {}
+            # print 'here'
             
             values = [sparql.unpack_row(row) for row in result]
             # print values
@@ -205,24 +220,30 @@ def relation_extractor_updated(resources):
     rel_count = 0
     relation = []
     new_labels = sorted(new_labels,key=operator.itemgetter(2))
-    # print new_labels
+    print new_labels
     all_output=[]
+    loc_flag = 0
     for i in range(0,len(resources)-1):
         if str(new_labels[i][0]) in resources:
             item1_v = resources[new_labels[i][0]]
             for i1 in item1_v:
                 if 'dbpedia' in i1[0]:
                     url1 = redirect_link(i1[0])
-                    q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s =<'+ url1 + '> )}')
+                    q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url1 + '> )}')
                     # print q_all
                     result = sparql.query(sparql_dbpedia, q_all)
                     q1_values = [sparql.unpack_row(row_result) for row_result in result]
+                    # print q1_values
                     # print url1
                 for j in range(i+1,len(resources)):
                     if str(new_labels[j][0]) in resources:
                         item2_v = resources[new_labels[j][0]]
+                        # print item2_v
                         if new_labels[j][1]=='PERSON':
                             threshold = 0.5
+                        if new_labels[j][1]=='LOCATION':
+                            loc_flag = 1
+                            threshold = 0.9
                         else:
                             threshold = 0.9
                         # print threshold
@@ -232,6 +253,22 @@ def relation_extractor_updated(resources):
                                 if 'dbpedia' in i2[0]:
                                     url2 = redirect_link(i2[0])
                                     # print url2
+                                    if loc_flag == 1:
+                                        loc_detail = []
+                                        q_loc = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url2 + '> )}')
+                                        result_loc = sparql.query(sparql_dbpedia, q_loc)
+                                        q1_loc = [sparql.unpack_row(row_result_loc) for row_result_loc in result_loc]
+                                        # print q1_loc
+                                        search = ['http://dbpedia.org/ontology/capital','http://dbpedia.org/ontology/country']
+                                        for s in search:
+                                            match = [e for e in q1_loc if e[0] == s]
+                                                # print e[0]
+                                            match.append(url2)
+                                            loc_detail.append(match)
+                                            # print loc_detail
+                                        # sys.exit(0)
+                                        loc_flag = 0
+                                    # print q1_values
                                     output = [val for val in q1_values if url2 in val]
                                     # print output
                                     if output:
@@ -241,6 +278,14 @@ def relation_extractor_updated(resources):
                                         all_output.append(output)
                                         # print all_output
                                         break
+                                    else:
+                                        if loc_detail:
+                                            for loc_d in loc_detail:
+                                                output_ext = [val for val in q1_values if loc_d[0][1] in val]
+                                            print url1,output_ext,url2
+                                            # print url1,loc_detail
+
+
                             else:
                                 break
                 # print output
@@ -257,7 +302,7 @@ def relation_extractor_updated(resources):
                 # print out
                 # print "relations============"
                 q_c=('SELECT distinct ?c WHERE  { <'+str(out[0]) + '> rdfs:comment ?c }')
-                print q_c
+                # print q_c
                 comments = sparql.query(sparql_dbpedia, q_c)
                 if comments:
                     comment = [sparql.unpack_row(comment) for comment in comments]

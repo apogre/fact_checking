@@ -105,9 +105,17 @@ def resource_extractor_updated(labels):
                 if len(my_labels) == 1:
                     q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
                 elif ',' in label[0]:
-                    print label[0]
+                    # print label[0]
                     my_labels = label[0].split(', ')
-                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[1])+'"))}')
+                    print my_labels
+                    a=''
+                    b=''
+                    for my in my_labels:
+                        if len(my.split(' '))>1:
+                            b = my
+                        else:
+                            a = my
+                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(a) +'" . FILTER (CONTAINS(?label, "'+str(b)+'"))}')
                 else:
                     q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
             else:
@@ -214,14 +222,14 @@ def redirect_link(o_link):
     return r_link
 
 def relation_extractor_updated(resources):
-    # print resources
-    # sys.exit(0)
     global new_labels
     rel_count = 0
     relation = []
     new_labels = sorted(new_labels,key=operator.itemgetter(2))
     print new_labels
     all_output=[]
+    ext_output=[]
+    rel_dict = {}
     loc_flag = 0
     for i in range(0,len(resources)-1):
         if str(new_labels[i][0]) in resources:
@@ -230,7 +238,7 @@ def relation_extractor_updated(resources):
                 if 'dbpedia' in i1[0]:
                     url1 = redirect_link(i1[0])
                     q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url1 + '> )}')
-                    # print q_all
+                    print q_all
                     result = sparql.query(sparql_dbpedia, q_all)
                     q1_values = [sparql.unpack_row(row_result) for row_result in result]
                     # print q1_values
@@ -263,15 +271,16 @@ def relation_extractor_updated(resources):
                                         for s in search:
                                             match = [e for e in q1_loc if e[0] == s]
                                                 # print e[0]
-                                            match.append(url2)
-                                            loc_detail.append(match)
-                                            # print loc_detail
+                                            if match:
+                                                match[0].append(url2)
+                                                loc_detail.append(match[0])
+                                        # print loc_detail
                                         # sys.exit(0)
-                                        loc_flag = 0
                                     # print q1_values
                                     output = [val for val in q1_values if url2 in val]
                                     # print output
                                     if output:
+                                        # print "here"
                                         # print output
                                         for o in output:
                                             o.append(url1)
@@ -279,40 +288,50 @@ def relation_extractor_updated(resources):
                                         # print all_output
                                         break
                                     else:
-                                        if loc_detail:
-                                            for loc_d in loc_detail:
-                                                output_ext = [val for val in q1_values if loc_d[0][1] in val]
-                                            print url1,output_ext,url2
-                                            # print url1,loc_detail
-
-
+                                        if loc_flag==1:
+                                            if loc_detail:
+                                                for loc_d in loc_detail:
+                                                    output_ext = [val for val in q1_values if loc_d[1] in val]
+                                                    for o_c,oe in enumerate(output_ext):
+                                                        ext_output.append([url1,oe,loc_d,url2])
+                                        loc_flag = 0
+                                # print ext_output
                             else:
                                 break
-                # print output
                 if all_output:
-                    # print "ereeee"
                     break
-    # print all_output
-    # sys.exit(0)
+    if ext_output:
+        for ext in ext_output:
+            if 'ontology' in ext[1][0]:
+                # print ext[1][0]
+                comment = comment_extractor(ext[1][0])
+                if comment:
+                    ext[1].append(comment[0])
+            # print ext
+            if 'ext' not in rel_dict:
+                rel_dict['ext'] = [ext]
+            else:
+                rel_dict['ext'].append(ext)
+                # print ext[0],ext[1][0],comment,ext[3]
     if all_output:
         for out in all_output[0]:
-            # print out
-            # sys.exit(0)
-            if 'ontology' in out[0]:
-                # print out
-                # print "relations============"
-                q_c=('SELECT distinct ?c WHERE  { <'+str(out[0]) + '> rdfs:comment ?c }')
-                # print q_c
-                comments = sparql.query(sparql_dbpedia, q_c)
-                if comments:
-                    comment = [sparql.unpack_row(comment) for comment in comments]
-                else:
-                    comment = ''
+            if 'ontology' in out[0]:    
+                comment = comment_extractor(out[0])
                 relation.append([(out[2]),(str(out[0])),comment,(out[1])]) 
-                # print([str(url1),str(values1[0]),str(url2)])
         if relation:
-            return relation, rel_count
+            rel_dict['relation'] = relation
+        return rel_dict, rel_count
     return None, rel_count
+
+def comment_extractor(ont):
+    q_c=('SELECT distinct ?c WHERE  { <'+str(ont) + '> rdfs:comment ?c }')
+    comments = sparql.query(sparql_dbpedia, q_c)
+    if comments:
+        comment = [sparql.unpack_row(comment) for comment in comments]
+    else:
+        comment = ''
+    return comment
+
 
 def relation_extractor(resources):
     global new_labels

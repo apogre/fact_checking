@@ -29,6 +29,7 @@ threshold_value = 0.8
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
+target_predicate = {'born':['birthDate','birthName','birthPlace','birthYear'],'married':['spouse']}
 
 # export STANFORDTOOLSDIR=$HOME
 # export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09
@@ -101,6 +102,7 @@ def resource_extractor_updated(labels):
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[-1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
+                    q_birthname = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?name WHERE { ?uri dbo:birthName ?name . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?name), "EN" ).?name bif:contains "' +str(my_labels[-1]) +'" . FILTER (CONTAINS(?name, "'+str(my_labels[0])+'"))}')
             elif label[1] == 'LOCATION':
                 if len(my_labels) == 1:
                     q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
@@ -127,12 +129,18 @@ def resource_extractor_updated(labels):
             # print q_u
             # sys.exit()
             result = sparql.query(sparql_dbpedia, q_u)
+            # if not result:
+            # print result
             link_list = []
             # print result
             # types = {}
             # print 'here'
             
             values = [sparql.unpack_row(row) for row in result]
+            if not values and label[1] == 'PERSON':
+                # print 'here' 
+                result = sparql.query(sparql_dbpedia, q_birthname)
+                values = [sparql.unpack_row(row) for row in result]
             # print values
             new_val = [val for val in values if not 'Category:' in val[0] and not 'wikidata' in val[0]]
             values = new_val
@@ -221,11 +229,56 @@ def redirect_link(o_link):
         r_link = o_link
     return r_link
 
+def target_predicate_processor(resources,vb):
+    rel_dict = {}
+    global new_labels
+    new_labels = sorted(new_labels,key=operator.itemgetter(2))
+    # print new_labels
+    new_labels.sort(key=lambda x: len(x[1]))
+    # new_labels = sorted(new_labels,key=len(operator.itemgetter(1)),reverse=True)
+    print new_labels
+    print vb
+    # for v in vb:
+    predicates = [target_predicate.get(v[0].lower()) for v in vb]
+    predicates = [pred for pred in predicates if pred is not None]
+    print predicates
+    for i in range(0,len(resources)-1):
+        if str(new_labels[i][0]) in resources:
+            item1_v = resources[new_labels[i][0]]
+            for i1 in item1_v:
+                if 'dbpedia' in i1[0]:
+                    url1 = redirect_link(i1[0])
+                    print url1
+                    # q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url1 + '> )}')
+                    q_all = ('SELECT ?p ?o WHERE { <'+ url1 + '> ?p ?o .}')
+                    # print q_all
+                    result = sparql.query(sparql_dbpedia, q_all)
+                    q1_values = [sparql.unpack_row(row_result) for row_result in result]
+                    # print q1_values
+                    verb_ont = []
+                    for predicate in predicates:
+                        verb_ont = [q1_val for q1_val in q1_values if q1_val[0].split('/')[-1] in predicate]
+
+                    if verb_ont:
+                        for j in range(i+1,len(resources)):
+                            if str(new_labels[j][0]) in resources:
+                                item2_v = resources[new_labels[j][0]]
+                                for i2 in item2_v:
+                                    if 'dbpedia' in i2[0]:
+                                        url2 = redirect_link(i2[0])
+                                        print url2
+                                        rel = [[url1,vo,url2] for vo in verb_ont if url2 in vo]
+                                        if rel:
+                                            return rel
+                    else:
+                        return None
+ 
 def relation_extractor_updated(resources):
     global new_labels
     rel_count = 0
     relation = []
     new_labels = sorted(new_labels,key=operator.itemgetter(2))
+    new_labels = sorted(new_labels,key=operator.itemgetter(1),reverse=True)
     print new_labels
     all_output=[]
     ext_output=[]
@@ -237,8 +290,10 @@ def relation_extractor_updated(resources):
             for i1 in item1_v:
                 if 'dbpedia' in i1[0]:
                     url1 = redirect_link(i1[0])
-                    q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url1 + '> )}')
-                    print q_all
+                    print url1
+                    # q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url1 + '> )}')
+                    q_all = ('SELECT ?p ?o WHERE { <'+ url1 + '> ?p ?o .}')
+                    # print q_all
                     result = sparql.query(sparql_dbpedia, q_all)
                     q1_values = [sparql.unpack_row(row_result) for row_result in result]
                     # print q1_values
@@ -260,20 +315,23 @@ def relation_extractor_updated(resources):
                             if i2[2]>threshold:
                                 if 'dbpedia' in i2[0]:
                                     url2 = redirect_link(i2[0])
-                                    # print url2
+                                    print url2
                                     if loc_flag == 1:
                                         loc_detail = []
-                                        q_loc = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url2 + '> )}')
+                                        # q_loc = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url2 + '> )}')
+                                        q_loc = ('SELECT ?p ?o WHERE { <'+ url2 + '> ?p ?o .}')
                                         result_loc = sparql.query(sparql_dbpedia, q_loc)
                                         q1_loc = [sparql.unpack_row(row_result_loc) for row_result_loc in result_loc]
                                         # print q1_loc
-                                        search = ['http://dbpedia.org/ontology/capital','http://dbpedia.org/ontology/country']
+                                        search = ['http://dbpedia.org/ontology/capital','http://dbpedia.org/ontology/country','http://dbpedia.org/ontology/isPartOf']
                                         for s in search:
                                             match = [e for e in q1_loc if e[0] == s]
                                                 # print e[0]
+                                            # print match
                                             if match:
-                                                match[0].append(url2)
-                                                loc_detail.append(match[0])
+                                                for m in match:
+                                                    m.append(url2)
+                                                    loc_detail.append(m)
                                         # print loc_detail
                                         # sys.exit(0)
                                     # print q1_values
@@ -290,6 +348,7 @@ def relation_extractor_updated(resources):
                                     else:
                                         if loc_flag==1:
                                             if loc_detail:
+                                                # print loc_detail
                                                 for loc_d in loc_detail:
                                                     output_ext = [val for val in q1_values if loc_d[1] in val]
                                                     for o_c,oe in enumerate(output_ext):
@@ -301,6 +360,7 @@ def relation_extractor_updated(resources):
                 if all_output:
                     break
     if ext_output:
+        # print ext_output
         for ext in ext_output:
             if 'ontology' in ext[1][0]:
                 # print ext[1][0]
@@ -313,13 +373,14 @@ def relation_extractor_updated(resources):
             else:
                 rel_dict['ext'].append(ext)
                 # print ext[0],ext[1][0],comment,ext[3]
-    if all_output:
-        for out in all_output[0]:
-            if 'ontology' in out[0]:    
-                comment = comment_extractor(out[0])
-                relation.append([(out[2]),(str(out[0])),comment,(out[1])]) 
-        if relation:
-            rel_dict['relation'] = relation
+    if all_output or ext_output:
+        if all_output:
+            for out in all_output[0]:
+                if 'ontology' in out[0]:    
+                    comment = comment_extractor(out[0])
+                    relation.append([(out[2]),(str(out[0])),comment,(out[1])]) 
+            if relation:
+                rel_dict['relation'] = relation
         return rel_dict, rel_count
     return None, rel_count
 
@@ -332,6 +393,9 @@ def comment_extractor(ont):
         comment = ''
     return comment
 
+def entity_sorter(labels):
+    pass
+
 
 def relation_extractor(resources):
     global new_labels
@@ -341,7 +405,9 @@ def relation_extractor(resources):
     rel_count = 0
     relation = []
     new_labels = sorted(new_labels,key=operator.itemgetter(2))
+    new_labels = sorted(new_labels,key=operator.itemgetter(1),reverse=True)
     print new_labels
+    print "here"
     for i in range(0,len(resources)-1):
         if str(new_labels[i][0]) in resources:
             item1_v = resources[new_labels[i][0]]

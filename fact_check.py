@@ -15,7 +15,7 @@ from string import digits
 from itertools import groupby
 import operator
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
-
+import time
 
 objects = []
 relation=[]
@@ -29,7 +29,7 @@ threshold_value = 0.8
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
-target_predicate = {'born':['birthDate','birthName','birthPlace','birthYear'],'married':['spouse']}
+target_predicate = {'born':['birthName','birthPlace','birthDate'],'married':['spouse']}
 
 # export STANFORDTOOLSDIR=$HOME
 # export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09
@@ -71,8 +71,16 @@ def get_verb(postagged_words):
 def similar(a,b):
     return SequenceMatcher(None,a,b).ratio()
 
-def date_parser(doc):
-    return dp.parse(doc,fuzzy=True)
+def date_parser(docs):
+    dates = []
+    for doc in docs:
+        print doc
+        try:
+            dates.append([dp.parse(doc,fuzzy=True)])
+        except:
+            dates.append('')
+    # dates = [dp.parse(doc,fuzzy=True) for doc in docs]
+    return dates
 
 
 def st_tagger(sentence_list):
@@ -91,9 +99,12 @@ def resource_extractor_updated(labels):
     new_labels = []
     ent_size = []
     resources = {}
+    res_query1 = time.time()
     for i,label in enumerate(labels):
+        # print label
         resource_list = []
         score_list = {}
+        date_labels = []
         if label[1] != 'DATE':
             # print label[0]
             my_labels = label[0].split()
@@ -109,7 +120,7 @@ def resource_extractor_updated(labels):
                 elif ',' in label[0]:
                     # print label[0]
                     my_labels = label[0].split(', ')
-                    print my_labels
+                    # print my_labels
                     a=''
                     b=''
                     for my in my_labels:
@@ -126,17 +137,16 @@ def resource_extractor_updated(labels):
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
-            # print q_u
+            print q_u
             # sys.exit()
             result = sparql.query(sparql_dbpedia, q_u)
-            # if not result:
-            # print result
+            # print("--- %s res raw query seconds ---" % (time.time() - res_query1))
+            # print "=============================================="
             link_list = []
-            # print result
-            # types = {}
-            # print 'here'
-            
             values = [sparql.unpack_row(row) for row in result]
+            # print len(values)
+            # print("--- %s res query seconds ---" % (time.time() - res_query1))
+            # print "=============================================="
             if not values and label[1] == 'PERSON':
                 # print 'here' 
                 result = sparql.query(sparql_dbpedia, q_birthname)
@@ -157,68 +167,16 @@ def resource_extractor_updated(labels):
                 else:
                     values.remove(values[s])
             # print values
-
             sorted_values = sorted(values,key=operator.itemgetter(2),reverse=True)
-            # print "=====================sorted"
-            # print sorted_values
-            # resources.append(sorted_values)
-            # sys.exit()
-                # if not 'Category:' in values[0] and not 'wikidata' in values[0]:
-                #     r_link = redirect_link(values[0])
-                #     if r_link not in link_list:
-                #         try:
-                #             # q_type=('SELECT distinct ?type WHERE  { <'+str(r_link.encode('utf-8')) + '> rdf:type ?type }')
-                #             # result_type = sparql.query(sparql_dbpedia, q_type)
-                #             link_list.append(r_link)
-                #             type_list = []
-                #             # print q_type
-                #             # for row_type in result_type:
-                #                 # types1 = sparql.unpack_row(row_type)
-                #                 # print types1
-                #                 # mytype =  types1[0].split('/')[-1]
-                #                 # types = str(mytype).translate(None,digits)
-                #                 # print types
-                #                 # if '#' in types:
-                #                 #     types = types.split('#')[-1]
-                #                 # type_list.append(types)
-                #             # type_list = list(set(type_list))
-                #             # if 'Q' in type_list:
-                #             #     type_list.remove('Q')
-                #             # print type_list
-                #             score = similar(values[1],label[0])
-                #             print score
-                #             # values.append(type_list)
-                #             if score in score_list:
-                #                 score_list[score].append(values)
-                #             else:
-                #                 score_list[score] = [values]
-                #         except:
-                #             pass
-            # q = ('select distinct ?x where{?x rdfs:label "'+ label[0] +'"@en }')
-            # result = sparql.query('http://localhost:8890/sparql', q)
-            # for row in result:
-            #     values = sparql.unpack_row(row)
-            #     if not 'Category:' in values[0] or 'alumni' in values[0]:
-            #         # print values[0]
-            #         # resource_list.append(values[0])
-            #         q1=('SELECT distinct ?type WHERE  { <'+str(values[0].encode()) + '> rdf:type ?type }')
-            #         print q1
-            #         result1 = sparql.query('http://localhost:8890/sparql', q1)
-            #         type_list = []
-            #         for row1 in result1:
-            #             values1 = sparql.unpack_row(row1)
-            #             mytype =  values1[0].split('/')[-1]
-            #             types = str(mytype).translate(None,digits)
-            #             if '#' in types:
-            #                 types = types.split('#')[-1]
-            #             type_list.append(types)
-            #         main_value = [values[0],label[0],type_list]
-            #         if 1.0 in score_list:
-            #             score_list[1.0].append(main_value)
-            #         else:
-            #             score_list[1.0] = [main_value]
             resources[label[0]] = sorted_values
-    return resources, ent_size
+            # print("--- %s res score seconds ---" % (time.time() - res_query1))
+            # print "=============================================="
+        else:
+            date_flag = 1
+            # print '++++++++++++++='
+            # print label
+            date_labels.append(label[0])
+    return resources, ent_size, date_labels
 
 def redirect_link(o_link):
     try:
@@ -229,26 +187,35 @@ def redirect_link(o_link):
         r_link = o_link
     return r_link
 
-def target_predicate_processor(resources,vb):
+def date_checker(dl,vo_date):
+    for d in dl:
+        matched_date = [vo_d for vo_d in vo_date if d.date() == vo_d[1]]
+    if matched_date:
+        return matched_date
+    else:
+        return None
+
+def target_predicate_processor(resources,vb,date_labels):
     rel_dict = {}
     global new_labels
     new_labels = sorted(new_labels,key=operator.itemgetter(2))
-    # print new_labels
+    print new_labels
     new_labels.sort(key=lambda x: len(x[1]))
     # new_labels = sorted(new_labels,key=len(operator.itemgetter(1)),reverse=True)
-    print new_labels
-    print vb
+    # print new_labels
+    # print vb
     # for v in vb:
     predicates = [target_predicate.get(v[0].lower()) for v in vb]
     predicates = [pred for pred in predicates if pred is not None]
-    print predicates
+    # print predicates
     for i in range(0,len(resources)-1):
         if str(new_labels[i][0]) in resources:
             item1_v = resources[new_labels[i][0]]
             for i1 in item1_v:
                 if 'dbpedia' in i1[0]:
-                    url1 = redirect_link(i1[0])
-                    print url1
+                    # url1 = redirect_link(i1[0])
+                    url1 = i1[0]
+                    # print url1
                     # q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url1 + '> )}')
                     q_all = ('SELECT ?p ?o WHERE { <'+ url1 + '> ?p ?o .}')
                     # print q_all
@@ -258,20 +225,34 @@ def target_predicate_processor(resources,vb):
                     verb_ont = []
                     for predicate in predicates:
                         verb_ont = [q1_val for q1_val in q1_values if q1_val[0].split('/')[-1] in predicate]
-
+                    # print verb_ont
+                    # sys.exit(0)
                     if verb_ont:
+                        if date_labels:
+                            vo_date = [vo for vo in verb_ont if type(vo[1]) is datetime.date]
+                            for dl in date_labels:
+                                matched_date = date_checker(dl,vo_date)
+                        else:
+                            matched_date = None
                         for j in range(i+1,len(resources)):
                             if str(new_labels[j][0]) in resources:
                                 item2_v = resources[new_labels[j][0]]
-                                for i2 in item2_v:
-                                    if 'dbpedia' in i2[0]:
-                                        url2 = redirect_link(i2[0])
-                                        print url2
-                                        rel = [[url1,vo,url2] for vo in verb_ont if url2 in vo]
-                                        if rel:
-                                            return rel
+                                # print "item2============="
+                                # print item2_v
+                                new_time=time.time()
+                                url2_list = [i2[0] for i2 in item2_v]
+                                # print url2_list
+                                # print verb_ont
+                                vo_list = [vo[1] for vo in verb_ont]
+                                # print vo_list
+                                intersect = set(url2_list).intersection(vo_list)
+                                for inte in intersect:
+                                    match = [[url1,j,inte] for i, j in enumerate(verb_ont) if j[1] == inte]
+                                if intersect and match:
+                                    # print("--- %s url2 seconds ---" % (time.time() - new_time))
+                                    return match, matched_date
                     else:
-                        return None
+                        return None, None
  
 def relation_extractor_updated(resources):
     global new_labels
@@ -289,8 +270,9 @@ def relation_extractor_updated(resources):
             item1_v = resources[new_labels[i][0]]
             for i1 in item1_v:
                 if 'dbpedia' in i1[0]:
-                    url1 = redirect_link(i1[0])
-                    print url1
+                    # url1 = redirect_link(i1[0])
+                    url1 = i1[0]
+                    # print url1
                     # q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url1 + '> )}')
                     q_all = ('SELECT ?p ?o WHERE { <'+ url1 + '> ?p ?o .}')
                     # print q_all
@@ -314,8 +296,10 @@ def relation_extractor_updated(resources):
                             # print i2
                             if i2[2]>threshold:
                                 if 'dbpedia' in i2[0]:
-                                    url2 = redirect_link(i2[0])
-                                    print url2
+                                    # url2 = redirect_link(i2[0])
+                                    url2 = i2[0]
+                                    # print url2PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "Hawaii" . }
+
                                     if loc_flag == 1:
                                         loc_detail = []
                                         # q_loc = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url2 + '> )}')

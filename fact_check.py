@@ -34,6 +34,7 @@ target_predicate = {'born':['birthName','birthPlace','birthDate'],'married':['sp
 # export STANFORDTOOLSDIR=$HOME
 # export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09
 # export STANFORD_MODELS=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/classifiers:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09/models
+# sudo /etc/init.d/virtuoso-opensource-7 start
 
 # grammar = r"""
 #         NP: {<DT>?<JJ.*>*<NN.*>+}
@@ -74,7 +75,7 @@ def similar(a,b):
 def date_parser(docs):
     dates = []
     for doc in docs:
-        print doc
+        # print doc
         try:
             dates.append([dp.parse(doc,fuzzy=True)])
         except:
@@ -137,7 +138,7 @@ def resource_extractor_updated(labels):
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
-            print q_u
+            # print q_u
             # sys.exit()
             result = sparql.query(sparql_dbpedia, q_u)
             # print("--- %s res raw query seconds ---" % (time.time() - res_query1))
@@ -199,7 +200,7 @@ def target_predicate_processor(resources,vb,date_labels):
     rel_dict = {}
     global new_labels
     new_labels = sorted(new_labels,key=operator.itemgetter(2))
-    print new_labels
+    # print new_labels
     new_labels.sort(key=lambda x: len(x[1]))
     # new_labels = sorted(new_labels,key=len(operator.itemgetter(1)),reverse=True)
     # print new_labels

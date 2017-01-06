@@ -51,7 +51,8 @@ def validator_entitymap(relation,vb,true_flag=0):
 
 def validator_verbpredicate(relation,dates):
     if relation:
-        print relation,dates, "The statement is True"
+        print relation
+        print dates, "The statement is True"
     else:
         print "The statement is False with direct relation"
     print "=============================================="
@@ -75,9 +76,9 @@ def fact_checker(sentence_lis):
     query_time = time.time()
     # print ne_s
     time_stat = []
-    for i in range(0,11):
+    for i in range(0,1):
         for n,ne in enumerate(ne_s):
-            # print ne
+            print ne
             true_flag = 0
             new_time = time.time()
             ent = fact_check.get_nodes_updated(ne)
@@ -92,7 +93,8 @@ def fact_checker(sentence_lis):
                 for dat in dates[n]:
                     date_string = (dates[n],'DATE')
                     ent.append(date_string)
-            print ent
+            # if i == 11:
+            # print ent
             # sys.exit(0)
             vb = fact_check.get_verb(pos_s[n])
             # print vb
@@ -111,18 +113,18 @@ def fact_checker(sentence_lis):
             relation_verb, matched_date = fact_check.target_predicate_processor(resources,vb, date_labels)
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
             validator_verbpredicate(relation_verb, matched_date)
-            # print("--- %s rel seconds ---" % (time.time() - res_time))
-            # print vb  
+            print("--- %s rel seconds ---" % (time.time() - res_time))
+            print vb  
             # print "here================="                  
             
             # validator_entitymap(relation_ent,vb)
-            tt = time.time() - new_time
-            print n+1, tt
-            if i>0:
-                if time_stat[n] > tt:
-                    time_stat[n] = tt
-            else:
-                time_stat.append(tt)
+            # tt = time.time() - new_time
+            # print n+1, tt
+            # if i>0:
+            #     if time_stat[n] > tt:
+            #         time_stat[n] = tt
+            # else:
+            #     time_stat.append(tt)
 
             # print("--- %s seconds ---" % (time.time() - new_time))
             # print "=============================================="

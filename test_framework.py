@@ -5,6 +5,13 @@ import time
 
 aux_verb = ['was','is','become']
 
+expected_outputs = {0:[[u'birthPlace', u'New_York', u'Al_Pacino']],2:[[u'birthPlace', u'Hawaii', u'Barack_Obama']],
+                    1:[[u'spouse', u'Barack_Obama', u'Michelle_Obama']],3:[[u'birthPlace', u'New_York_City', u'Robert_De_Niro']],
+                    5:[[u'birthPlace', u'Neptune_Township,_New_Jersey', u'Danny_DeVito']],6:[[u'birthPlace', u'Santa_Monica,_California', u'Jack_Black']],
+                    11:[[u'birthPlace', u'New_York_City', u'Scarlett_Johansson']],9:[[u'birthPlace', u'Brampton', u'Michael_Cera']],
+                    8:[[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']],7:[[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']],
+                    4:[[u'birthPlace', u'Syracuse,_New_York', u'Megyn_Kelly']],10:[[u'birthPlace', u'New_Brunswick,_New_Jersey', u'Michael_Douglas']]}
+
 count = 0
 
 def location_update(parse):
@@ -57,64 +64,54 @@ def validator_verbpredicate(relation,dates):
         print "The statement is False with direct relation"
     print "=============================================="
 
+def precision_recall(n,relations):
+    unique_rel = [list(x) for x in set(tuple(x) for x in relations)]
+    # print unique_rel
+    ex_out = expected_outputs[n]
+    # print ex_out
+    correct_results = [rel for rel in unique_rel if rel in ex_out]
+    cr = float(len(correct_results))
+    # print cr, len(ex_out), len(unique_rel)
+    precision = cr/float(len(unique_rel))
+    recall = cr/float(len(ex_out))
+    return precision, recall
+
+
 
 def fact_checker(sentence_lis):
-    # print sentence_lis
+    print sentence_lis
     dates = fact_check.date_parser(sentence_lis)
-    # print dates
-    # print len(dates)
-    # sys.exit(0)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-    # print sentence_list
     ne_s,pos_s = fact_check.st_tagger(sentence_list)
-    # print dates
-    # sys.exit(0)
-    # print ne_s
-    # print pos_s
-    # print("--- %s seconds ---" % (time.time() - start_time))
-    # print "================================================"
-    query_time = time.time()
-    # print ne_s
-    time_stat = []
     for i in range(0,1):
         for n,ne in enumerate(ne_s):
-            print ne
-            true_flag = 0
-            new_time = time.time()
             ent = fact_check.get_nodes_updated(ne)
-            # print ent
             new_loc = location_update(ne)
-            # print new_loc
             if new_loc:
                 new_ent = (new_loc[0],'LOCATION')
                 ent.append(new_ent)
-            # print ent
             if dates[n]:
-                for dat in dates[n]:
-                    date_string = (dates[n],'DATE')
-                    ent.append(date_string)
-            # if i == 11:
-            # print ent
-            # sys.exit(0)
+                date_string = (dates[n],'DATE')
+                ent.append(date_string)
             vb = fact_check.get_verb(pos_s[n])
-            # print vb
-            # print("--- %s nlp seconds ---" % (time.time() - new_time))
-            # print "=============================================="
             res_time = time.time()
             # print ent
             resources, ent_size, date_labels = fact_check.resource_extractor_updated(ent)
             # print resources
-            # print "----------------"
-            # print date_labels
-            # print("--- %s res seconds ---" % (time.time() - res_time))
-            # print "=============================================="
             # sys.exit(0)
-            # rel_time = time.time()
-            relation_verb, matched_date = fact_check.target_predicate_processor(resources,vb, date_labels)
+            # relation_verb, matched_date = fact_check.target_predicate_processor(resources,vb, date_labels)
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
-            validator_verbpredicate(relation_verb, matched_date)
-            print("--- %s rel seconds ---" % (time.time() - res_time))
-            print vb  
+            relation_ent, rel_count = fact_check.relation_extractor_updated1(resources)
+            relations = fact_check.relation_processor(relation_ent)
+            precision, recall = precision_recall(n,relations)
+            print "Precision: "+str(precision), "Recall: "+str(recall)
+            execution_time = time.time() - res_time
+            print "Execution Time: "+str(round(execution_time,2))
+            print "================================================="
+            # sys.exit(0)
+            # validator_verbpredicate(relation_verb, matched_date)
+            # print("--- %s rel seconds ---" % (time.time() - res_time))
+            # print vb
             # print "here================="                  
             
             # validator_entitymap(relation_ent,vb)
@@ -130,26 +127,17 @@ def fact_checker(sentence_lis):
             # print "=============================================="
         # print("--- %s query seconds ---" % (time.time() - query_time))
         # print "================================================"
-        print time_stat
+        # print time_stat
                 
 with open('sample.txt','r') as f:
     sentence_list = []
-    all_time = time.time()
     sentences = f.readlines()
-    for i,sentence in enumerate(sentences):
-        i = i+1
-        count = count+1
-        new_labels = []
-        start_time = time.time()
-        # sent = word_tokenize(sentence)
+    for i,sentence in enumerate(sentences,start=1):
         if i%20 != 0:
             sentence_list.append(sentence)
             if i == len(sentences):
                 fact_checker(sentence_list)
         else:
-            # print sentence_list
             fact_checker(sentence_list)
             sentence_list = []
-            sentence_list.append(sent)
-    # print("--- %s full time in seconds ---" % (time.time() - all_time))
-    # print "================================================"
+            sentence_list.append(sentence)

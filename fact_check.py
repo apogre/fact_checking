@@ -1,21 +1,15 @@
 # -*- coding: utf-8 -*- 
 
-import nltk
 from nltk.tree import *
-import cPickle as pickle
-import csv
-import sys
 import dateutil.parser as dp
 import sparql
 import urllib2
-import json
 from difflib import SequenceMatcher
 import datetime
-from string import digits
 from itertools import groupby
 import operator
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
-import time
+import time, sys
 
 objects = []
 relation=[]
@@ -29,29 +23,14 @@ threshold_value = 0.8
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
+# st_dep = StanfordDependencyParser()
 target_predicate = {'born':['birthName','birthPlace','birthDate'],'married':['spouse']}
 
 # export STANFORDTOOLSDIR=$HOME
-# export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09
+# export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser.jar:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar
+#
 # export STANFORD_MODELS=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/classifiers:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09/models
 # sudo /etc/init.d/virtuoso-opensource-7 start
-
-# grammar = r"""
-#         NP: {<DT>?<JJ.*>*<NN.*>+}
-#             {}
-#     """
-# cp = nltk.RegexpParser(grammar)
-# select ?p ?o where {
-#   ?p a owl:DatatypeProperty ;
-#      rdfs:range xsd:date .
-#  <http://dbpedia.org/resource/Barack_Obama> ?p ?o .
-# }
-# SELECT distinct ?uri ?label
-# WHERE {
-#    ?uri rdfs:label ?label .
-#    FILTER regex(str(?label), "Barack Hussein Obama", "i")
-# }
-# q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:'+ str(label[1].title()) + ' . FILTER (regex(str(?label),"'+ str(label[0]) +'", "i") && langMatches(lang(?label),"EN") )} limit 100')
 
 def get_nodes_updated(netagged_words):
     ent = []
@@ -75,14 +54,11 @@ def similar(a,b):
 def date_parser(docs):
     dates = []
     for doc in docs:
-        # print doc
         try:
             dates.append([dp.parse(doc,fuzzy=True)])
         except:
             dates.append('')
-    # dates = [dp.parse(doc,fuzzy=True) for doc in docs]
     return dates
-
 
 def st_tagger(sentence_list):
     ne_s = st_ner.tag_sents(sentence_list)
@@ -95,19 +71,13 @@ new_labels = []
 
 
 def resource_extractor_updated(labels):
-    # print labels
     global new_labels
     new_labels = []
     ent_size = []
     resources = {}
-    res_query1 = time.time()
     for i,label in enumerate(labels):
-        # print label
-        resource_list = []
-        score_list = {}
         date_labels = []
         if label[1] != 'DATE':
-            # print label[0]
             my_labels = label[0].split()
             if label[1] == 'PERSON':
                 if len(my_labels) == 1:
@@ -119,9 +89,7 @@ def resource_extractor_updated(labels):
                 if len(my_labels) == 1:
                     q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
                 elif ',' in label[0]:
-                    # print label[0]
                     my_labels = label[0].split(', ')
-                    # print my_labels
                     a=''
                     b=''
                     for my in my_labels:
@@ -139,17 +107,9 @@ def resource_extractor_updated(labels):
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
             # print q_u
-            # sys.exit()
             result = sparql.query(sparql_dbpedia, q_u)
-            # print("--- %s res raw query seconds ---" % (time.time() - res_query1))
-            # print "=============================================="
-            link_list = []
             values = [sparql.unpack_row(row) for row in result]
-            # print len(values)
-            # print("--- %s res query seconds ---" % (time.time() - res_query1))
-            # print "=============================================="
             if not values and label[1] == 'PERSON':
-                # print 'here' 
                 result = sparql.query(sparql_dbpedia, q_birthname)
                 values = [sparql.unpack_row(row) for row in result]
             # print values
@@ -160,8 +120,6 @@ def resource_extractor_updated(labels):
             new_labels.append(label)
 
             add_score = [similar(label[0],val[1]) for val in values]
-            # print add_score
-
             for s,score in enumerate(add_score):
                 if not 'Category:' in values[0] and not 'wikidata' in values[0]:
                     values[s].append(score)
@@ -195,6 +153,13 @@ def date_checker(dl,vo_date):
         return matched_date
     else:
         return None
+
+def relation_processor(relations):
+    pro_rels = []
+    for rel in relations:
+        pro_rel = [r.split('/')[-1] for r in rel]
+        pro_rels.append(pro_rel)
+    return pro_rels
 
 def target_predicate_processor(resources,vb,date_labels):
     rel_dict = {}
@@ -254,6 +219,38 @@ def target_predicate_processor(resources,vb,date_labels):
                                     return match, matched_date
                     else:
                         return None, None
+
+def relation_extractor_updated1(resources):
+    global new_labels
+    print new_labels
+    relation = []
+    new_labels = sorted(new_labels, key=operator.itemgetter(2))
+    new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)
+    for i in range(0, len(resources) - 1):
+        if str(new_labels[i][0]) in resources:
+            item1_v = resources[new_labels[i][0]]
+            for i1 in item1_v:
+                if 'dbpedia' in i1[0]:
+                    url1 = i1[0]
+                    q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
+                    # print q_all
+                    result = sparql.query(sparql_dbpedia, q_all)
+                    q1_values = [sparql.unpack_row(row_result) for row_result in result]
+                    q1_list = [qv[1] for qv in q1_values]
+                    # print q1_list
+                for j in range(i+1, len(resources)):
+                    if str(new_labels[j][0]) in resources:
+                        item2_v = resources[new_labels[j][0]]
+                        url2_list = [i2[0] for i2 in item2_v]
+                        # print url2_list
+                        intersect = set(url2_list).intersection(q1_list)
+                        for inte in intersect:
+                            match = [[n, [url1]] for m, n in enumerate(q1_values) if n[1] == inte]
+                            # print match
+                            if match:
+                                for ma in match:
+                                    relation.append(sum(ma, []))
+    return relation , len(relation)
  
 def relation_extractor_updated(resources):
     global new_labels
@@ -280,6 +277,10 @@ def relation_extractor_updated(resources):
                     result = sparql.query(sparql_dbpedia, q_all)
                     q1_values = [sparql.unpack_row(row_result) for row_result in result]
                     # print q1_values
+                    q1_list = [qv[1] for qv in q1_values]
+                    print q1_list
+                    # print len(set(q1_list))
+                    # sys.exit(0)
                     # print url1
                 for j in range(i+1,len(resources)):
                     if str(new_labels[j][0]) in resources:
@@ -293,6 +294,16 @@ def relation_extractor_updated(resources):
                         else:
                             threshold = 0.9
                         # print threshold
+                        url2_list = [i2[0] for i2 in item2_v]
+                        print url2_list
+                        intersect = set(url2_list).intersection(q1_list)
+                        print intersect
+                        for inte in intersect:
+                            match = [[j,[url1]] for i, j in enumerate(q1_values) if j[1] == inte]
+                            match = match[0]
+                            print match
+                            print sum(match,[])
+                        sys.exit(0)
                         for i2 in item2_v:
                             # print i2
                             if i2[2]>threshold:

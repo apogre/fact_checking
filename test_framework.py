@@ -66,9 +66,9 @@ def validator_verbpredicate(relation,dates):
 
 def precision_recall(n,relations):
     unique_rel = [list(x) for x in set(tuple(x) for x in relations)]
-    # print unique_rel
+    print unique_rel
     ex_out = expected_outputs[n]
-    # print ex_out
+    print ex_out
     correct_results = [rel for rel in unique_rel if rel in ex_out]
     cr = float(len(correct_results))
     # print cr, len(ex_out), len(unique_rel)
@@ -82,7 +82,7 @@ def fact_checker(sentence_lis):
     print sentence_lis
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-    ne_s,pos_s = fact_check.st_tagger(sentence_list)
+    ne_s,pos_s,dep_s = fact_check.st_tagger(sentence_list)
     for i in range(0,1):
         for n,ne in enumerate(ne_s):
             ent = fact_check.get_nodes_updated(ne)

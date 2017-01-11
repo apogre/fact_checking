@@ -9,6 +9,7 @@ import datetime
 from itertools import groupby
 import operator
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
+from nltk.parse.stanford import StanfordDependencyParser
 import time, sys
 
 objects = []
@@ -21,9 +22,14 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
+stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
+
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
-# st_dep = StanfordDependencyParser()
+parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
+
 target_predicate = {'born':['birthName','birthPlace','birthDate'],'married':['spouse']}
 
 # export STANFORDTOOLSDIR=$HOME
@@ -63,7 +69,8 @@ def date_parser(docs):
 def st_tagger(sentence_list):
     ne_s = st_ner.tag_sents(sentence_list)
     pos_s = st_pos.tag_sents(sentence_list)
-    return ne_s, pos_s
+    dep_s = [[list(parse.triples()) for parse in dep_parse] for dep_parse in parser.parse_sents(sentence_list)]
+    return ne_s, pos_s, dep_s
 
 
 entities = {} 

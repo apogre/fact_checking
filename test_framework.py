@@ -5,12 +5,14 @@ import time
 
 aux_verb = ['was','is','become']
 
-expected_outputs = {0:[[u'birthPlace', u'New_York', u'Al_Pacino']],2:[[u'birthPlace', u'Hawaii', u'Barack_Obama']],
-                    1:[[u'spouse', u'Barack_Obama', u'Michelle_Obama']],3:[[u'birthPlace', u'New_York_City', u'Robert_De_Niro']],
-                    5:[[u'birthPlace', u'Neptune_Township,_New_Jersey', u'Danny_DeVito']],6:[[u'birthPlace', u'Santa_Monica,_California', u'Jack_Black']],
-                    11:[[u'birthPlace', u'New_York_City', u'Scarlett_Johansson']],9:[[u'birthPlace', u'Brampton', u'Michael_Cera']],
-                    8:[[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']],7:[[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']],
-                    4:[[u'birthPlace', u'Syracuse,_New_York', u'Megyn_Kelly']],10:[[u'birthPlace', u'New_Brunswick,_New_Jersey', u'Michael_Douglas']]}
+expected_outputs_entities = {2:{u'Barack Obama': [u'Barack_Obama', u'Presidency_of_Barack_Obama', u'Illinois_Senate_career_of_Barack_Obama', u'Early_life_and_career_of_Barack_Obama', u'United_States_Senate_career_of_Barack_Obama'], u'Hawaii': [u'Hawaii']},0:{u'Alfredo James Pacino': [u'Al_Pacino'], u'New York City': [u'New_York', u'New_York_City']},11:{u'Scarlett Johansson':[u'Scarlett_Johansson'],u'New York City': [u'New_York', u'New_York_City']},10:{u'Michael Douglas':[u'Michael_Douglas'],u'Kirk Douglas':[u'Kirk_Douglas'],u'New Jersey':[u'New_Brunswick,_New_Jersey']},9:{u'Michael Cera':[u'Michael_Cera'],u'Brampton':[u'Brampton'],u'Ontario':[u'Ontario'],u'Canada':[u'Canada']},8:{u'Johansson':[u'Scarlett_Johansson'],u'Ryan Reynolds':[u'Ryan_Reynolds'],u'British Columbia':[u'British_Columbia'],u'Canada':[u'Canada']},7:{u'Johansson':[u'Scarlett_Johansson'],u'Ryan Reynolds':[u'Ryan_Reynolds']},6:{u'Jack Black':[u'Jack Black'],u'Santa Monica, California':[u'Santa_Monica,_California'],u'Santa Monica':[u'Santa_Monica,_California'],u'California':[u'Santa_Monica,_California',u'California']},5:{u'Danny DeVito':[u'Danny_DeVito'],u'New Jersey':[u'Neptune_Township,_New_Jersey',u'New_Jersey']},4:{u'Megyn Kelly':[u'Megyn_Kelly'],u'Syracuse, New York':[u'Syracuse,_New_York'],u'Syracuse':[ u'Syracuse,_New_York'],u'New York':[ u'Syracuse,_New_York']},3:{u'Robert De Niro':[u'Robert_De_Niro'],u'Stella Adler':[u'Stella_Adler'],u'New York City':[u'New_York_City',u'New_York']},1:{u'Barack Obama': [u'Barack_Obama', u'Presidency_of_Barack_Obama', u'Illinois_Senate_career_of_Barack_Obama', u'Early_life_and_career_of_Barack_Obama', u'United_States_Senate_career_of_Barack_Obama'],u'Michelle Obama':[u'Michelle_Obama']}}
+
+expected_outputs_relations = {0:[[u'birthPlace', u'New_York', u'Al_Pacino']], 2:[[u'birthPlace', u'Hawaii', u'Barack_Obama']],
+                              1:[[u'spouse', u'Barack_Obama', u'Michelle_Obama']], 3:[[u'birthPlace', u'New_York_City', u'Robert_De_Niro']],
+                              5:[[u'birthPlace', u'Neptune_Township,_New_Jersey', u'Danny_DeVito']], 6:[[u'birthPlace', u'Santa_Monica,_California', u'Jack_Black']],
+                              11:[[u'birthPlace', u'New_York_City', u'Scarlett_Johansson']], 9:[[u'birthPlace', u'Brampton', u'Michael_Cera'],[u'birthPlace', u'Ontario', u'Michael_Cera']],
+                              8:[[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']], 7:[[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']],
+                              4:[[u'birthPlace', u'Syracuse,_New_York', u'Megyn_Kelly']], 10:[[u'birthPlace', u'New_Brunswick,_New_Jersey', u'Michael_Douglas'],[u'child', u'Michael_Douglas', u'Kirk_Douglas']]}
 
 count = 0
 
@@ -64,11 +66,11 @@ def validator_verbpredicate(relation,dates):
         print "The statement is False with direct relation"
     print "=============================================="
 
-def precision_recall(n,relations):
+def precision_recall_relations(n, relations):
     unique_rel = [list(x) for x in set(tuple(x) for x in relations)]
-    print unique_rel
-    ex_out = expected_outputs[n]
-    print ex_out
+    print "Retrieved Relations: " +str(unique_rel)
+    ex_out = expected_outputs_relations[n]
+    print "Expected Outputs: "+str(ex_out)
     correct_results = [rel for rel in unique_rel if rel in ex_out]
     cr = float(len(correct_results))
     # print cr, len(ex_out), len(unique_rel)
@@ -76,15 +78,30 @@ def precision_recall(n,relations):
     recall = cr/float(len(ex_out))
     return precision, recall
 
-
+def precision_recall_entities(n, raw_resources):
+    expected_entities = expected_outputs_entities[n]
+    # print expected_entities
+    # print raw_resources
+    for res_key,res_val in expected_entities.iteritems():
+        expected_ent = res_val
+        # print res_key
+        retrieved_ent = raw_resources[res_key]
+        correct_results = [ent for ent in expected_ent if ent in retrieved_ent]
+        cr = float(len(correct_results))
+        # print cr, len(ex_out), len(unique_rel)
+        precision = cr/float(len(retrieved_ent))
+        recall = cr/float(len(expected_ent))
+        print res_key+" >>", "Precision: "+str(precision), "Recall: "+str(recall)
 
 def fact_checker(sentence_lis):
-    print sentence_lis
+    # print sentence_lis
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     ne_s,pos_s,dep_s = fact_check.st_tagger(sentence_list)
+    start_time = time.time()
     for i in range(0,1):
         for n,ne in enumerate(ne_s):
+            print n, sentence_lis[n]
             ent = fact_check.get_nodes_updated(ne)
             new_loc = location_update(ne)
             if new_loc:
@@ -96,39 +113,25 @@ def fact_checker(sentence_lis):
             vb = fact_check.get_verb(pos_s[n])
             res_time = time.time()
             # print ent
-            resources, ent_size, date_labels = fact_check.resource_extractor_updated(ent)
-            # print resources
+            resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor_updated(ent)
+            # print raw_resources
+            # print ent_size
             # sys.exit(0)
             # relation_verb, matched_date = fact_check.target_predicate_processor(resources,vb, date_labels)
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
             relation_ent, rel_count = fact_check.relation_extractor_updated1(resources)
             relations = fact_check.relation_processor(relation_ent)
-            precision, recall = precision_recall(n,relations)
-            print "Precision: "+str(precision), "Recall: "+str(recall)
+            precision, recall = precision_recall_relations(n, relations)
+            print "Precision & Recall"
+            print "------------------"
+            precision_recall_entities(n,raw_resources)
+            print "Relations: Precision: "+str(round(precision,2)), "Recall: "+str(round(recall,2))
             execution_time = time.time() - res_time
             print "Execution Time: "+str(round(execution_time,2))
             print "================================================="
-            # sys.exit(0)
-            # validator_verbpredicate(relation_verb, matched_date)
-            # print("--- %s rel seconds ---" % (time.time() - res_time))
-            # print vb
-            # print "here================="                  
-            
-            # validator_entitymap(relation_ent,vb)
-            # tt = time.time() - new_time
-            # print n+1, tt
-            # if i>0:
-            #     if time_stat[n] > tt:
-            #         time_stat[n] = tt
-            # else:
-            #     time_stat.append(tt)
+    ex_time = time.time() - start_time
+    print "Total Execution Time: "+str(round(ex_time,2))
 
-            # print("--- %s seconds ---" % (time.time() - new_time))
-            # print "=============================================="
-        # print("--- %s query seconds ---" % (time.time() - query_time))
-        # print "================================================"
-        # print time_stat
-                
 with open('sample.txt','r') as f:
     sentence_list = []
     sentences = f.readlines()

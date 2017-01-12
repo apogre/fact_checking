@@ -82,6 +82,7 @@ def resource_extractor_updated(labels):
     new_labels = []
     ent_size = []
     resources = {}
+    raw_resources = {}
     for i,label in enumerate(labels):
         date_labels = []
         if label[1] != 'DATE':
@@ -120,6 +121,9 @@ def resource_extractor_updated(labels):
                 result = sparql.query(sparql_dbpedia, q_birthname)
                 values = [sparql.unpack_row(row) for row in result]
             # print values
+            raw_resources[label[0]] = [val[0].split('/')[-1] for val in values]
+            # print raw_resources
+            # sys.exit(0)
             new_val = [val for val in values if not 'Category:' in val[0] and not 'wikidata' in val[0]]
             values = new_val
             ent_size.append(len(values))
@@ -142,7 +146,7 @@ def resource_extractor_updated(labels):
             # print '++++++++++++++='
             # print label
             date_labels.append(label[0])
-    return resources, ent_size, date_labels
+    return resources, ent_size, date_labels, raw_resources
 
 def redirect_link(o_link):
     try:

@@ -22,8 +22,11 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')

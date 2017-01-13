@@ -12,7 +12,7 @@ expected_outputs_relations = {0:[[u'birthPlace', u'New_York', u'Al_Pacino']], 2:
                               5:[[u'birthPlace', u'Neptune_Township,_New_Jersey', u'Danny_DeVito']], 6:[[u'birthPlace', u'Santa_Monica,_California', u'Jack_Black']],
                               11:[[u'birthPlace', u'New_York_City', u'Scarlett_Johansson']], 9:[[u'birthPlace', u'Brampton', u'Michael_Cera'],[u'birthPlace', u'Ontario', u'Michael_Cera']],
                               8:[[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']], 7:[[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']],
-                              4:[[u'birthPlace', u'Syracuse,_New_York', u'Megyn_Kelly']], 10:[[u'birthPlace', u'New_Brunswick,_New_Jersey', u'Michael_Douglas'],[u'child', u'Michael_Douglas', u'Kirk_Douglas']]}
+                              4:[[u'birthPlace', u'Syracuse,_New_York', u'Megyn_Kelly']], 10:[[u'birthPlace', u'New_Brunswick,_New_Jersey', u'Michael_Douglas'],[u'parent', u'Kirk_Douglas', u'Michael_Douglas'],[u'child', u'Michael_Douglas', u'Kirk_Douglas']]}
 
 count = 0
 
@@ -74,7 +74,10 @@ def precision_recall_relations(n, relations):
     correct_results = [rel for rel in unique_rel if rel in ex_out]
     cr = float(len(correct_results))
     # print cr, len(ex_out), len(unique_rel)
-    precision = cr/float(len(unique_rel))
+    unique_rel_len = float(len(unique_rel))
+    if unique_rel_len <1:
+        unique_rel_len=1
+    precision = cr/unique_rel_len
     recall = cr/float(len(ex_out))
     return precision, recall
 

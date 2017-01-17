@@ -2,6 +2,7 @@ import fact_check
 from nltk import word_tokenize
 import sys
 import time
+import operator
 
 test_count = 0
 
@@ -21,7 +22,7 @@ expected_outputs_entities = {2: {
     8: {u'Johansson': [u'Scarlett_Johansson'], u'Ryan Reynolds': [u'Ryan_Reynolds'],
         u'British Columbia': [u'British_Columbia'], u'Canada': [u'Canada']},
     7: {u'Johansson': [u'Scarlett_Johansson'], u'Ryan Reynolds': [u'Ryan_Reynolds']},
-    6: {u'Jack Black': [u'Jack Black'],
+    6: {u'Jack Black': [u'Jack_Black'],
         u'Santa Monica, California': [u'Santa_Monica,_California'],
         u'Santa Monica': [u'Santa_Monica,_California'],
         u'California': [u'Santa_Monica,_California', u'California']},
@@ -108,6 +109,7 @@ def precision_recall_entity_match(ent_out_ret,ent_ex_all):
             tp_set_old = len(tp_set)
         else:
             tp_set_new = len(tp_set)
+        # print tp_set_new,tp_set_old
         if tp_set_old != tp_set_new:
             print "---------------------------------------"
             print "Top " + str(e + 1) + " Precision & Recall:"
@@ -116,7 +118,8 @@ def precision_recall_entity_match(ent_out_ret,ent_ex_all):
             print "Retrieved Entites: "+str(ent_ret_k)
             print "Expected Output: "+str(ent_ex_all)
             print "Precision: "+str(float(len(tp_set))/float(len(ent_ret_k))),"Recall: "+str(float(len(tp_set))/float(len(ent_ex_all)))
-            tp_set_old = tp_set_new
+            if e > 0:
+                tp_set_old = tp_set_new
         else:
             pass
 
@@ -125,13 +128,15 @@ def precision_recall_relations(n, relations):
     # print relations
     global test_count
     ex_ent_all = []
-    unique_rel = [list(x) for x in set(tuple(x) for x in relations)]
+    unique_rel_raw = [list(x) for x in set(tuple(x) for x in relations)]
+    unique_rel = sorted(unique_rel_raw, key=operator.itemgetter(3),reverse=True)
     ent_outputs_ret = [corr[1:4] for corr in unique_rel]
     # print ent_outputs_ret
     expected_ent_outs = expected_outputs_entities[n+test_count]
     for ke,ve in expected_ent_outs.iteritems():
         ex_ent_all.extend(ve)
     # print ex_ent_all
+    precision_recall_entity_match(ent_outputs_ret, ex_ent_all)
     print "-----------------------------------------"
     print "Retrieved Relations: " + str(unique_rel)
     ex_out = expected_outputs_relations[n+test_count]
@@ -148,7 +153,6 @@ def precision_recall_relations(n, relations):
         unique_rel_len = 1
     precision = cr / unique_rel_len
     recall = cr / float(len(ex_out))
-    precision_recall_entity_match(ent_outputs_ret,ex_ent_all)
     return precision, recall
 
 

@@ -3,10 +3,12 @@ from nltk import word_tokenize
 import sys
 import time
 import operator
+import collections
 
 test_count = 0
 
 aux_verb = ['was', 'is', 'become']
+precision_recall_stats = collections.OrderedDict()
 
 expected_outputs_entities = {2: {
     u'Barack Obama': [u'Barack_Obama', u'Presidency_of_Barack_Obama', u'Illinois_Senate_career_of_Barack_Obama',
@@ -91,18 +93,29 @@ def validator_verbpredicate(relation, dates):
         print "The statement is False with direct relation"
     print "=============================================="
 
-def precision_recall_entity_match(ent_out_ret,ent_ex_all):
+
+def precision_recall_entity_match(n, relations):
+    global test_count
+    ex_ent_all = []
+    expected_ent_outs = expected_outputs_entities[n+test_count]
+    for ke,ve in expected_ent_outs.iteritems():
+        ex_ent_all.extend(ve)
+    unique_rel_raw = [list(x) for x in set(tuple(x) for x in relations)]
+    unique_rel = sorted(unique_rel_raw, key=operator.itemgetter(3), reverse=True)
+    ent_outputs_ret = [corr[1:4] for corr in unique_rel]
     tp_set = []
     ent_ret_k = []
+    precision_set = []
+    recall_set = []
     tp_set_new = 0
     # print ent_out_ret
     # print ent_ex_all
-    for e,ent_ret in enumerate(ent_out_ret):
+    for e,ent_ret in enumerate(ent_outputs_ret):
         for en in ent_ret:
             # print en
             if isinstance(en, basestring):
                 ent_ret_k.append(en)
-                if en in ent_ex_all:
+                if en in ex_ent_all:
                     tp_set.append(en)
         tp_set = list(set(tp_set))
         if e == 0:
@@ -116,12 +129,17 @@ def precision_recall_entity_match(ent_out_ret,ent_ex_all):
             ent_ret_k = list(set(ent_ret_k))
             print "True Positive: "+str(tp_set)
             print "Retrieved Entites: "+str(ent_ret_k)
-            print "Expected Output: "+str(ent_ex_all)
-            print "Precision: "+str(float(len(tp_set))/float(len(ent_ret_k))),"Recall: "+str(float(len(tp_set))/float(len(ent_ex_all)))
+            print "Expected Output: "+str(ex_ent_all)
+            precision = float(len(tp_set))/float(len(ent_ret_k))
+            recall = float(len(tp_set)) / float(len(ex_ent_all))
+            print "Precision: "+str(precision),"Recall: "+str(recall)
+            precision_set.append(round(precision,2))
+            recall_set.append(round(recall,2))
             if e > 0:
                 tp_set_old = tp_set_new
         else:
             pass
+    return precision_set, recall_set
 
 
 def precision_recall_relations(n, relations):
@@ -130,13 +148,13 @@ def precision_recall_relations(n, relations):
     ex_ent_all = []
     unique_rel_raw = [list(x) for x in set(tuple(x) for x in relations)]
     unique_rel = sorted(unique_rel_raw, key=operator.itemgetter(3),reverse=True)
-    ent_outputs_ret = [corr[1:4] for corr in unique_rel]
+    # ent_outputs_ret = [corr[1:4] for corr in unique_rel]
     # print ent_outputs_ret
     expected_ent_outs = expected_outputs_entities[n+test_count]
     for ke,ve in expected_ent_outs.iteritems():
         ex_ent_all.extend(ve)
     # print ex_ent_all
-    precision_recall_entity_match(ent_outputs_ret, ex_ent_all)
+    # precision_recall_entity_match(ent_outputs_ret, ex_ent_all)
     print "-----------------------------------------"
     print "Retrieved Relations: " + str(unique_rel)
     ex_out = expected_outputs_relations[n+test_count]
@@ -153,7 +171,7 @@ def precision_recall_relations(n, relations):
         unique_rel_len = 1
     precision = cr / unique_rel_len
     recall = cr / float(len(ex_out))
-    return precision, recall
+    return round(precision,2), round(recall,2)
 
 
 def precision_recall_entities(n, raw_resources):
@@ -171,6 +189,7 @@ def precision_recall_entities(n, raw_resources):
         precision = cr / float(len(retrieved_ent))
         recall = cr / float(len(expected_ent))
         print res_key + " >>", "Precision: " + str(precision), "Recall: " + str(recall)
+        return round(precision,2), round(recall,2)
 
 
 def fact_checker(sentence_lis):
@@ -178,6 +197,14 @@ def fact_checker(sentence_lis):
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
+    # print dep_s
+    for d in dep_s[0][0]:
+        # print d
+        for e in d:
+            if len(e)>1:
+                if 'VB' in e[1]:
+                    print d
+    sys.exit(0)
     start_time = time.time()
     for i in range(0, 1):
         for n, ne in enumerate(ne_s):
@@ -205,22 +232,32 @@ def fact_checker(sentence_lis):
             # print relation_ent
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
-            precision_recall_entities(n, raw_resources)
+            precision_ent, recall_ent = precision_recall_entities(n, raw_resources)
             # print '\n'
             relations = fact_check.relation_processor(relation_ent)
-            precision, recall = precision_recall_relations(n, relations)
+            precision_rel, recall_rel = precision_recall_relations(n, relations)
+            precision_ent_out, recall_ent_out = precision_recall_entity_match(n, relations)
             print "------------------------------------------"
             print "Precision & Recall for Relations"
             print "--------------------------------"
-            print "Relations: Precision: " + str(round(precision, 2)), "Recall: " + str(round(recall, 2))
+            print "Relations: Precision: " + str(round(precision_rel, 2)), "Recall: " + str(round(recall_rel, 2))
+            precision_recall_stats[n] = {'p_entities': precision_ent,'r_entities': recall_ent,'p_rel': precision_rel,
+                                         'r_rel': recall_rel,'p_entities_match': precision_ent_out,'r_entities_match': recall_ent_out}
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
     ex_time = time.time() - start_time
     print "Total Execution Time: " + str(round(ex_time, 2))
+    print "{:<8} {:<10} {:<10} {:<8} {:<10} {:<15} {:<15}".format('S.N.', 'p_ent', 'r_ent', 'p_rel', 'r_rel', 'p_ent_match', 'r_ent_match')
+    for k1,v1 in precision_recall_stats.iteritems():
+        vals = []
+        for k2,v2 in v1.iteritems():
+            vals.append(v2)
+        p_e,r_e,p_r,r_r,p_eo,r_eo = vals
+        print "{:<8} {:<10} {:<10} {:<8} {:<10} {:<15} {:<15}".format(k1, p_e, r_e, p_r, p_eo,r_r, r_eo)
 
 
-with open('sample.txt', 'r') as f:
+with open('simple.txt', 'r') as f:
     sentence_list = []
     sentences = f.readlines()
     for i, sentence in enumerate(sentences, start=1):

@@ -3,16 +3,15 @@ from nltk import word_tokenize
 import sys
 import time
 import operator
-import collections
+import collections, re
 
-test_count = 0
+test_count = 2
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
 
 expected_outputs_entities = {2: {
-    u'Barack Obama': [u'Barack_Obama', u'Presidency_of_Barack_Obama', u'Illinois_Senate_career_of_Barack_Obama',
-                      u'Early_life_and_career_of_Barack_Obama', u'United_States_Senate_career_of_Barack_Obama'],
+    u'Barack Obama': [u'Barack_Obama'],
     u'Hawaii': [u'Hawaii']}, 0: {u'Alfredo James Pacino': [u'Al_Pacino'],
                                  u'New York City': [u'New_York', u'New_York_City']},
     11: {u'Scarlett Johansson': [u'Scarlett_Johansson'],
@@ -34,8 +33,7 @@ expected_outputs_entities = {2: {
         u'Syracuse': [u'Syracuse,_New_York'], u'New York': [u'Syracuse,_New_York']},
     3: {u'Robert De Niro': [u'Robert_De_Niro'], u'Stella Adler': [u'Stella_Adler'],
         u'New York City': [u'New_York_City', u'New_York']}, 1: {
-        u'Barack Obama': [u'Barack_Obama', u'Presidency_of_Barack_Obama', u'Illinois_Senate_career_of_Barack_Obama',
-                          u'Early_life_and_career_of_Barack_Obama', u'United_States_Senate_career_of_Barack_Obama'],
+        u'Barack Obama': [u'Barack_Obama'],
         u'Michelle Obama': [u'Michelle_Obama']}}
 
 expected_outputs_relations = {
@@ -83,15 +81,6 @@ def validator_entitymap(relation, vb, true_flag=0):
                                     print ext
                                     print "True by one loop"
                                     pass
-
-
-def validator_verbpredicate(relation, dates):
-    if relation:
-        print relation
-        print dates, "The statement is True"
-    else:
-        print "The statement is False with direct relation"
-    print "=============================================="
 
 
 def precision_recall_entity_match(n, relations):
@@ -192,19 +181,16 @@ def precision_recall_entities(n, raw_resources):
         return round(precision,2), round(recall,2)
 
 
+
 def fact_checker(sentence_lis):
     # print sentence_lis
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
     # print dep_s
-    for d in dep_s[0][0]:
-        # print d
-        for e in d:
-            if len(e)>1:
-                if 'VB' in e[1]:
-                    print d
-    sys.exit(0)
+    verb_entity = fact_check.verb_entity_matcher(dep_s)
+    print verb_entity
+    # sys.exit(0)
     start_time = time.time()
     for i in range(0, 1):
         for n, ne in enumerate(ne_s):
@@ -230,6 +216,7 @@ def fact_checker(sentence_lis):
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
             relation_ent, rel_count = fact_check.relation_extractor_updated1(resources)
             # print relation_ent
+            # sys.exit(0)
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
             precision_ent, recall_ent = precision_recall_entities(n, raw_resources)

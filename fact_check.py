@@ -10,7 +10,7 @@ from itertools import groupby
 import operator
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
 from nltk.parse.stanford import StanfordDependencyParser
-import time, sys
+import time, sys, re
 
 objects = []
 relation=[]
@@ -49,6 +49,18 @@ def get_nodes_updated(netagged_words):
             tuple1 =(" ".join(w for w, t in chunk),tag)
             ent.append(tuple1)
     return ent
+
+
+def verb_entity_matcher(parsed_tree):
+    verb_entity = {}
+    for nodes in parsed_tree[0][0]:
+        if re.search('VB',nodes[0][1]) and re.search('NN',nodes[2][1]):
+            if nodes[0][0] not in verb_entity.keys():
+                verb_entity[nodes[0][0]]=[nodes[2][0]]
+            else:
+                verb_entity[nodes[0][0]].append(nodes[2][0])
+    return verb_entity
+
 
 def get_verb(postagged_words):
     verb = []
@@ -248,6 +260,7 @@ def target_predicate_processor(resources,vb,date_labels):
                     else:
                         return None, None
 
+
 def relation_extractor_updated1(resources):
     global new_labels
     print new_labels
@@ -278,16 +291,24 @@ def relation_extractor_updated1(resources):
                             # print match
                             if match:
                                 for ma in match:
-                                    # print ">>>>>"
-                                    # print ma
-                                    scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
+                                    score = rel_score_simple(ma,score1,item2_v)
+                                    print ">>>>>"
+                                    print ma
+                                    comment = comment_extractor(ma[0][0])
+                                    print comment
+                                    # scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
                                     # print scores2
-                                    score = (score1+scores2[0])/2
+                                    # score = (score1+scores2[0])/2
                                     ma.append([score])
                                     # print ma
                                     relation.append(sum(ma, []))
     return relation , len(relation)
- 
+
+def rel_score_simple(ma,score1,item2_v):
+    scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
+    score = (score1 + scores2[0]) / 2
+    return score
+
 def relation_extractor_updated(resources):
     global new_labels
     rel_count = 0
@@ -418,15 +439,18 @@ def relation_extractor_updated(resources):
 
 def comment_extractor(ont):
     q_c=('SELECT distinct ?c WHERE  { <'+str(ont) + '> rdfs:comment ?c }')
+    q_l = ('SELECT distinct ?c WHERE  { <' + str(ont) + '> rdfs:label ?c }')
+    print q_c
     comments = sparql.query(sparql_dbpedia, q_c)
     if comments:
         comment = [sparql.unpack_row(comment) for comment in comments]
     else:
-        comment = ''
+        comments = sparql.query(sparql_dbpedia, q_l)
+        if comments:
+            comment = [sparql.unpack_row(comment) for comment in comments]
+        else:
+            comment = ''
     return comment
-
-def entity_sorter(labels):
-    pass
 
 
 def relation_extractor(resources):

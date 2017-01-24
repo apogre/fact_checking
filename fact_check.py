@@ -22,10 +22,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -37,7 +37,7 @@ target_predicate = {'born':['birthName','birthPlace','birthDate'],'married':['sp
 
 # export STANFORDTOOLSDIR=$HOME
 # export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser.jar:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar
-#
+
 # export STANFORD_MODELS=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/classifiers:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09/models
 # sudo /etc/init.d/virtuoso-opensource-7 start
 
@@ -196,8 +196,19 @@ def date_checker(dl,vo_date):
 
 def relation_processor(relations):
     pro_rels = []
-    for rel in relations:
+    relation_graph = {}
+    for n,rel in iteritems(relations):
         pro_rel = [r.split('/')[-1] if isinstance(r,basestring) else r for r in rel]
+        print pro_rel
+        for m,items in iteritems(pro_rel):
+            if m==1 or m==2:
+                relation_graph['nodes'] = [{'id':m,'label':item,'score':pro_rel[4]}    
+        if n==0:
+            relation_graph['nodes'] = [{'id':n+1,'label':pro_rel[2],'score':pro_rel[4]},{'id':n+2,'label':pro_rel[2],'score':pro_rel[5]}]
+            relation_graph['edges'] = [{'id':1,'label':pro_rel[0],'score':pro_rel[3],'join':[(n+1,n+2)]}]
+        else:
+            relation_graph['nodes'].extend([{'id':n+1,'label':pro_rel[2],'score':pro_rel[4]},{'id':n+2,'label':pro_rel[2],'score':pro_rel[5]}])
+            relation_graph['edges'].extend([{'id':1,'label':pro_rel[0],'score':pro_rel[3],'join':[(n+1,n+2)]}])
         pro_rels.append(pro_rel)
     return pro_rels
 
@@ -291,15 +302,15 @@ def relation_extractor_updated1(resources):
                             # print match
                             if match:
                                 for ma in match:
-                                    score = rel_score_simple(ma,score1,item2_v)
-                                    print ">>>>>"
-                                    print ma
-                                    comment = comment_extractor(ma[0][0])
-                                    print comment
+                                    score, score2 = rel_score_simple(ma,score1,item2_v)
+                                    # print ">>>>>"
+                                    # print ma
+                                    # comment = comment_extractor(ma[0][0])
+                                    # print comment
                                     # scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
                                     # print scores2
                                     # score = (score1+scores2[0])/2
-                                    ma.append([score])
+                                    ma.append([score,score2,score1])
                                     # print ma
                                     relation.append(sum(ma, []))
     return relation , len(relation)
@@ -307,7 +318,7 @@ def relation_extractor_updated1(resources):
 def rel_score_simple(ma,score1,item2_v):
     scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
     score = (score1 + scores2[0]) / 2
-    return score
+    return score, scores2[0]
 
 def relation_extractor_updated(resources):
     global new_labels

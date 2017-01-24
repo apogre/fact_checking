@@ -168,9 +168,11 @@ def precision_recall_entities(n, raw_resources):
     expected_entities = expected_outputs_entities[n + test_count]
     # print expected_entities
     # print raw_resources
+    p_list=[]
+    r_list=[]
     for res_key, res_val in expected_entities.iteritems():
         expected_ent = res_val
-        # print res_key
+        # print res_val
         retrieved_ent = raw_resources[res_key]
         correct_results = [ent for ent in expected_ent if ent in retrieved_ent]
         cr = float(len(correct_results))
@@ -178,7 +180,9 @@ def precision_recall_entities(n, raw_resources):
         precision = cr / float(len(retrieved_ent))
         recall = cr / float(len(expected_ent))
         print res_key + " >>", "Precision: " + str(precision), "Recall: " + str(recall)
-        return round(precision,2), round(recall,2)
+        p_list.append((precision,2))
+        r_list.append(round(recall,2))
+    return p_list,r_list
 
 
 
@@ -215,13 +219,15 @@ def fact_checker(sentence_lis):
             # relation_verb, matched_date = fact_check.target_predicate_processor(resources,vb, date_labels)
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
             relation_ent, rel_count = fact_check.relation_extractor_updated1(resources)
-            # print relation_ent
-            # sys.exit(0)
+            print relation_ent
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
             precision_ent, recall_ent = precision_recall_entities(n, raw_resources)
             # print '\n'
+            # sys.exit(0)
             relations = fact_check.relation_processor(relation_ent)
+            print relations
+            sys.exit(0)
             precision_rel, recall_rel = precision_recall_relations(n, relations)
             precision_ent_out, recall_ent_out = precision_recall_entity_match(n, relations)
             print "------------------------------------------"

@@ -220,6 +220,7 @@ def fact_checker(sentence_lis):
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
             relation_ent, rel_count = fact_check.relation_extractor_updated1(resources)
             print relation_ent
+            # sys.exit(0)
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
             precision_ent, recall_ent = precision_recall_entities(n, raw_resources)

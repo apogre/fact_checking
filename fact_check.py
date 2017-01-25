@@ -22,10 +22,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -195,22 +195,29 @@ def date_checker(dl,vo_date):
         return None
 
 def relation_processor(relations):
-    pro_rels = []
     relation_graph = {}
-    for n,rel in iteritems(relations):
-        pro_rel = [r.split('/')[-1] if isinstance(r,basestring) else r for r in rel]
-        print pro_rel
-        for m,items in iteritems(pro_rel):
-            if m==1 or m==2:
-                relation_graph['nodes'] = [{'id':m,'label':item,'score':pro_rel[4]}    
-        if n==0:
-            relation_graph['nodes'] = [{'id':n+1,'label':pro_rel[2],'score':pro_rel[4]},{'id':n+2,'label':pro_rel[2],'score':pro_rel[5]}]
-            relation_graph['edges'] = [{'id':1,'label':pro_rel[0],'score':pro_rel[3],'join':[(n+1,n+2)]}]
-        else:
-            relation_graph['nodes'].extend([{'id':n+1,'label':pro_rel[2],'score':pro_rel[4]},{'id':n+2,'label':pro_rel[2],'score':pro_rel[5]}])
-            relation_graph['edges'].extend([{'id':1,'label':pro_rel[0],'score':pro_rel[3],'join':[(n+1,n+2)]}])
-        pro_rels.append(pro_rel)
-    return pro_rels
+    entity_dict = {}
+    edge_dict = {}
+    for n,rel in enumerate(relations):
+        id_list = []
+        for m,item in enumerate(rel):
+            res_key = item[0].split('/')[-1]
+            if m<2:
+                if res_key not in entity_dict.keys():
+                    res_id = len(entity_dict)+1
+                    entity_dict[res_key]={'score':item[1],'id':res_id}
+                    id_list.append(res_id)
+                else:
+                    id_list.append(entity_dict[res_key]['id'])
+            else:
+                if res_key not in edge_dict.keys():
+                    edge_dict[res_key] = [{'id':len(edge_dict)+1,'score':item[1],'join':id_list}]
+                else:
+                    edge_dict[res_key].append({'id': len(edge_dict) + 1, 'score': item[1],'join':id_list})
+        # print entity_dict,edge_dict
+        relation_graph = {'node':entity_dict,'edge':edge_dict}
+    # print relation_graph
+    return relation_graph
 
 def target_predicate_processor(resources,vb,date_labels):
     rel_dict = {}
@@ -298,27 +305,38 @@ def relation_extractor_updated1(resources):
                         # print url2_list
                         intersect = set(url2_list).intersection(q1_list)
                         for inte in intersect:
-                            match = [[n, [url1]] for m, n in enumerate(q1_values) if n[1] == inte]
+                            match = [[[url1,score1],n ] for m, n in enumerate(q1_values) if n[1] == inte]
                             # print match
                             if match:
                                 for ma in match:
-                                    score, score2 = rel_score_simple(ma,score1,item2_v)
                                     # print ">>>>>"
                                     # print ma
+                                    predicate = ma[1][0]
+                                    score, score2 = rel_score_simple(ma,score1,item2_v)
                                     # comment = comment_extractor(ma[0][0])
                                     # print comment
                                     # scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
                                     # print scores2
                                     # score = (score1+scores2[0])/2
-                                    ma.append([score,score2,score1])
+                                    ma.pop(1)
+                                    ma.append(score2)
                                     # print ma
-                                    relation.append(sum(ma, []))
+                                    ma.append([predicate,score])
+                                    # print ma
+                                    # relation.append(sum(ma, []))
+                                    relation.append(ma)
     return relation , len(relation)
 
 def rel_score_simple(ma,score1,item2_v):
-    scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
-    score = (score1 + scores2[0]) / 2
-    return score, scores2[0]
+    scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
+    # print "-----"
+    # print scores2
+    scores2 = scores2[0]
+    if len(scores2)>2:
+        scores2.pop(1)
+    # print scores2
+    score = (score1 + scores2[1]) / 2
+    return score, scores2
 
 def relation_extractor_updated(resources):
     global new_labels

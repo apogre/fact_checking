@@ -22,10 +22,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -195,6 +195,8 @@ def date_checker(dl,vo_date):
         return None
 
 def relation_processor(relations):
+    print relations
+    sys.exit(0)
     relation_graph = {}
     entity_dict = {}
     edge_dict = {}
@@ -291,9 +293,12 @@ def relation_extractor_updated1(resources):
         if str(new_labels[i][0]) in resources:
             item1_v = resources[new_labels[i][0]]
             for i1 in item1_v:
+                # print i1
                 if 'dbpedia' in i1[0]:
                     url1 = i1[0]
-                    score1 = i1[2]
+                    score1 = [it for it in i1 if isinstance(it, float)]
+                    score1 = score1[0]
+                    # print score1
                     q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
                     # print q_all
                     result = sparql.query(sparql_dbpedia, q_all)

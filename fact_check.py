@@ -22,10 +22,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -206,14 +206,16 @@ def relation_processor(relations):
                 if res_key not in entity_dict.keys():
                     res_id = len(entity_dict)+1
                     entity_dict[res_key]={'score':item[1],'id':res_id}
-                    id_list.append(res_id)
+                    id_list.append(res_key)
                 else:
-                    id_list.append(entity_dict[res_key]['id'])
+                    id_list.append(res_key)
             else:
                 if res_key not in edge_dict.keys():
                     edge_dict[res_key] = [{'id':len(edge_dict)+1,'score':item[1],'join':id_list}]
                 else:
-                    edge_dict[res_key].append({'id': len(edge_dict) + 1, 'score': item[1],'join':id_list})
+                    for rels in edge_dict[res_key]:
+                        if rels.get('score') != item[1]:
+                            edge_dict[res_key].append({'id': len(edge_dict) + 1, 'score': item[1],'join':id_list})
         # print entity_dict,edge_dict
         relation_graph = {'node':entity_dict,'edge':edge_dict}
     # print relation_graph

@@ -82,6 +82,21 @@ def validator_entitymap(relation, vb, true_flag=0):
                                     print "True by one loop"
                                     pass
 
+def precision_recall_ent_match(n,relations):
+    ex_ent_all = []
+    expected_ents = expected_outputs_entities[n+test_count]
+    for ke,ve in expected_ents.iteritems():
+        ex_ent_all.extend(ve)
+    print ex_ent_all
+    retrieved_ents = relations['node'].keys()
+    print retrieved_ents
+    true_pos = [e_ent for e_ent in ex_ent_all if e_ent in retrieved_ents]
+    print true_pos
+    true_pos_len = float(len(true_pos))
+    true_false_pos_len = float(len(retrieved_ents))
+    precision = true_pos_len / true_false_pos_len
+    recall = true_pos_len / float(len(ex_ent_all))
+    return precision, recall
 
 def precision_recall_entity_match(n, relations):
     global test_count
@@ -130,37 +145,60 @@ def precision_recall_entity_match(n, relations):
             pass
     return precision_set, recall_set
 
+def precision_recall_relations1(n,relations):
+    # print relations
+    subgraph = relations.get('edge')
+    retrived_rels = []
+    for s_key,s_val in subgraph.iteritems():
+        for rels in s_val:
+            retrived_rel = [s_key]
+            print rels['join']
+            retrived_rel.extend(rels['join'])
+            retrived_rels.append(retrived_rel)
+    print retrived_rels
+    ex_rels = expected_outputs_relations[n+test_count]
+    true_pos = []
+    for ret_rel in retrived_rels:
+        for ex_rel in ex_rels:
+            if set(ret_rel)==set(ex_rel):
+                true_pos.append(ret_rel)
+    true_pos_len = float(len(true_pos))
+    true_false_pos_len = float(len(retrived_rels))
+    precision = true_pos_len / true_false_pos_len
+    recall = true_pos_len / float(len(ex_rels))
+    return round(precision,2), round(recall,2)
 
 def precision_recall_relations(n, relations):
-    # print relations
-    global test_count
-    ex_ent_all = []
-    unique_rel_raw = [list(x) for x in set(tuple(x) for x in relations)]
-    unique_rel = sorted(unique_rel_raw, key=operator.itemgetter(3),reverse=True)
-    # ent_outputs_ret = [corr[1:4] for corr in unique_rel]
-    # print ent_outputs_ret
-    expected_ent_outs = expected_outputs_entities[n+test_count]
-    for ke,ve in expected_ent_outs.iteritems():
-        ex_ent_all.extend(ve)
-    # print ex_ent_all
-    # precision_recall_entity_match(ent_outputs_ret, ex_ent_all)
-    print "-----------------------------------------"
-    print "Retrieved Relations: " + str(unique_rel)
-    ex_out = expected_outputs_relations[n+test_count]
-    print "Expected Outputs: " + str(ex_out)
-    correct_results = [rel for rel in unique_rel if rel[0:3] in ex_out]
-    # if len(ent_outputs)>1:
-    #     end_outputs = [item for sublist in ent_outputs for item in sublist]
-    # print ent_outputs
-    # print "Matched Outputs: " + str(correct_results)
-    cr = float(len(correct_results))
-    # print cr, len(ex_out), len(unique_rel)
-    unique_rel_len = float(len(unique_rel))
-    if unique_rel_len < 1:
-        unique_rel_len = 1
-    precision = cr / unique_rel_len
-    recall = cr / float(len(ex_out))
-    return round(precision,2), round(recall,2)
+    print relations
+    # global test_count
+    # ex_ent_all = []
+    # unique_rel_raw = [list(x) for x in set(tuple(x) for x in relations)]
+    # unique_rel = sorted(unique_rel_raw, key=operator.itemgetter(3),reverse=True)
+    # # ent_outputs_ret = [corr[1:4] for corr in unique_rel]
+    # # print ent_outputs_ret
+    # expected_ent_outs = expected_outputs_entities[n+test_count]
+    # for ke,ve in expected_ent_outs.iteritems():
+    #     ex_ent_all.extend(ve)
+    # # print ex_ent_all
+    # # precision_recall_entity_match(ent_outputs_ret, ex_ent_all)
+    # print "-----------------------------------------"
+    # print "Retrieved Relations: " + str(unique_rel)
+    # ex_out = expected_outputs_relations[n+test_count]
+    # print "Expected Outputs: " + str(ex_out)
+    # correct_results = [rel for rel in unique_rel if rel[0:3] in ex_out]
+    # # if len(ent_outputs)>1:
+    # #     end_outputs = [item for sublist in ent_outputs for item in sublist]
+    # # print ent_outputs
+    # # print "Matched Outputs: " + str(correct_results)
+    # cr = float(len(correct_results))
+    # # print cr, len(ex_out), len(unique_rel)
+    # unique_rel_len = float(len(unique_rel))
+    # if unique_rel_len < 1:
+    #     unique_rel_len = 1
+    # precision = cr / unique_rel_len
+    # recall = cr / float(len(ex_out))
+    # return round(precision,2), round(recall,2)
+    return None, None
 
 
 def precision_recall_entities(n, raw_resources):
@@ -184,6 +222,8 @@ def precision_recall_entities(n, raw_resources):
         r_list.append(round(recall,2))
     return p_list,r_list
 
+def subgraph_generator(relations):
+    pass
 
 
 def fact_checker(sentence_lis):
@@ -228,13 +268,17 @@ def fact_checker(sentence_lis):
             # sys.exit(0)
             relations = fact_check.relation_processor(relation_ent)
             print relations
-            sys.exit(0)
-            precision_rel, recall_rel = precision_recall_relations(n, relations)
-            precision_ent_out, recall_ent_out = precision_recall_entity_match(n, relations)
+            relation_subgraphs = subgraph_generator(relations)
+            precision_rel, recall_rel = precision_recall_relations1(n, relations)
+            precision_ent_out, recall_ent_out = precision_recall_ent_match(n, relations)
+            print "Entity Match: Precision: " + str(round(precision_ent_out, 2)), "Recall: " + str(round(recall_ent_out, 2))
             print "------------------------------------------"
             print "Precision & Recall for Relations"
             print "--------------------------------"
             print "Relations: Precision: " + str(round(precision_rel, 2)), "Recall: " + str(round(recall_rel, 2))
+            
+            sys.exit(0)
+
             precision_recall_stats[n] = {'p_entities': precision_ent,'r_entities': recall_ent,'p_rel': precision_rel,
                                          'r_rel': recall_rel,'p_entities_match': precision_ent_out,'r_entities_match': recall_ent_out}
             execution_time = time.time() - res_time

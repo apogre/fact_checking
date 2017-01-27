@@ -57,15 +57,16 @@ def verb_entity_matcher(parsed_tree):
     for tree in parsed_tree:
         # print tree
         verb_entity = {}
-        # print "----"
+        print "----"
         for nodes in tree[0]:
-            # print nodes
+            print nodes
             if re.search('VB',nodes[0][1]) and re.search('NN',nodes[2][1]):
                 if nodes[0][0] not in verb_entity.keys():
                     verb_entity[nodes[0][0]]=[nodes[2][0]]
                 else:
                     verb_entity[nodes[0][0]].append(nodes[2][0])
         verb_ent.append([verb_entity])
+    sys.exit(0)
     return verb_ent
 
 def get_verb(postagged_words):
@@ -300,6 +301,7 @@ def relation_extractor_updated1(resources,verb_entity):
     for i in range(0, len(resources) - 1):
         if str(new_labels[i][0]) in resources:
             item1_v = resources[new_labels[i][0]]
+            predicate_comment = {}
             for i1 in item1_v:
                 # print i1
                 if 'dbpedia' in i1[0]:
@@ -327,10 +329,20 @@ def relation_extractor_updated1(resources,verb_entity):
                                     # print ">>>>>"
                                     # print ma
                                     predicate = ma[1][0]
-                                    pred_score = rel_score_predicate(predicate,verb_entity)
-                                    # print rel_score
+                                    # if predicate
+                                    # print predicate_comment
+                                    if predicate not in predicate_comment.keys():
+                                        comment = comment_extractor(predicate)
+                                        predicate_comment[predicate] = comment
+                                        # print comment
+                                    else:
+                                        # print "here"
+                                        comment = predicate_comment[predicate]
+                                    pred_score = rel_score_predicate(verb_entity,comment)
+                                    # print pred_score
                                     # sys.exit(0)
-                                    score, score2 = rel_score_simple(ma,score1,item2_v,pred_score)
+                                    score, score2 = rel_score_label(ma,score1,item2_v,pred_score)
+                                    # score, score2 = rel_score_simple(ma, score1, item2_v)
                                     # comment = comment_extractor(ma[0][0])
                                     # print comment
                                     # scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
@@ -345,10 +357,8 @@ def relation_extractor_updated1(resources,verb_entity):
                                     relation.append(ma)
     return relation , len(relation)
 
-def rel_score_predicate(predicate, verb_entity):
-    # print predicate
+def rel_score_predicate(verb_entity,comment):
     print verb_entity
-    comment = comment_extractor(predicate)
     print comment
     meaning = []
     verbs = []
@@ -363,7 +373,18 @@ def rel_score_predicate(predicate, verb_entity):
             return 0
 
 
-def rel_score_simple(ma,score1,item2_v,pred_score):
+def rel_score_label(ma,score1,item2_v,pred_score):
+    scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
+    # print "-----"
+    print scores2
+    scores2 = scores2[0]
+    if len(scores2)>2:
+        scores2.pop(1)
+    print score1, scores2[1],pred_score
+    score = (score1 + scores2[1]+pred_score) / 3
+    return score, scores2
+
+def rel_score_simple(ma,score1,item2_v):
     scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
     # print "-----"
     # print scores2
@@ -371,7 +392,7 @@ def rel_score_simple(ma,score1,item2_v,pred_score):
     if len(scores2)>2:
         scores2.pop(1)
     # print scores2
-    score = (score1 + scores2[1]+pred_score) / 3
+    score = (score1 + scores2[1]) / 2
     return score, scores2
 
 def relation_extractor_updated(resources):
@@ -503,20 +524,32 @@ def relation_extractor_updated(resources):
     return None, rel_count
 
 def comment_extractor(ont):
+    if "property" in ont:
+        ont = ont.replace("property","ontology")
     q_c=('SELECT distinct ?c WHERE  { <'+str(ont) + '> rdfs:comment ?c }')
     q_l = ('SELECT distinct ?c WHERE  { <' + str(ont) + '> rdfs:label ?c }')
-    print q_c
+    # print q_c
     comments = sparql.query(sparql_dbpedia, q_c)
     if comments:
         comment = [sparql.unpack_row(comment) for comment in comments]
+        print q_c
+        if not comment:
+            comments = sparql.query(sparql_dbpedia, q_l)
+            if comments:
+                print q_l
+                comment = [sparql.unpack_row(comment) for comment in comments]
+            else:
+                comment = ''
     else:
+        # print "here"
         comments = sparql.query(sparql_dbpedia, q_l)
         if comments:
             comment = [sparql.unpack_row(comment) for comment in comments]
         else:
             comment = ''
-    sys.exit(0)
+    # sys.exit(0)
     return comment
+
 
 
 def relation_extractor(resources):

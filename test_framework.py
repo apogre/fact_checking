@@ -5,7 +5,7 @@ import time
 import operator
 import collections, re
 
-test_count = 1
+test_count = 0
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
@@ -285,7 +285,7 @@ def fact_checker(sentence_lis):
             
             # sys.exit(0)
 
-            precision_recall_stats[n] = {'p_rel': precision_rel,'r_rel': recall_rel,'p_entities_match': precision_ent_out,'r_entities_match': recall_ent_out}
+            precision_recall_stats[n] = [precision_rel,recall_rel,precision_ent_out,recall_ent_out]
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
@@ -294,11 +294,19 @@ def fact_checker(sentence_lis):
     # print precision_recall_stats
     print "{:<8} {:<10} {:<10} {:<10} {:<10} ".format('S.N.', 'p_rel', 'r_rel', 'p_ent', 'r_ent')
     for k1,v1 in precision_recall_stats.iteritems():
-        vals = []
-        for k2,v2 in v1.iteritems():
-            vals.append(v2)
+        vals = v1
         p_r,r_r,p_eo,r_eo = vals
         print "{:<8} {:<10} {:<10} {:<10} {:<10}".format(k1, p_r, p_eo,r_r, r_eo)
+        if k1 == 0:
+            vals1 = vals
+        else:
+            vals_sum = map(operator.add,vals1,vals)
+            # print vals,vals1,vals_avg
+            vals1 = vals_sum
+    num_sent = len(sentence_list)
+    vals_avg = [round((x/num_sent),2) for x in vals_sum]
+    print vals_avg
+
 
 
 with open('simple.txt', 'r') as f:

@@ -5,7 +5,7 @@ import time
 import operator
 import collections, re
 
-test_count = 3
+test_count = 1
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
@@ -226,9 +226,6 @@ def precision_recall_entities(n, raw_resources):
         r_list.append(round(recall,2))
     return p_list,r_list
 
-def subgraph_generator(relations):
-    pass
-
 
 def fact_checker(sentence_lis):
     # print sentence_lis
@@ -237,8 +234,6 @@ def fact_checker(sentence_lis):
     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
     # print dep_s
     verb_entity = fact_check.verb_entity_matcher(dep_s)
-    print verb_entity
-    # sys.exit(0)
     start_time = time.time()
     for i in range(0, 1):
         for n, ne in enumerate(ne_s):
@@ -262,7 +257,7 @@ def fact_checker(sentence_lis):
             # sys.exit(0)
             # relation_verb, matched_date = fact_check.target_predicate_processor(resources,vb, date_labels)
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
-            relation_ent, rel_count = fact_check.relation_extractor_updated1(resources)
+            relation_ent, rel_count = fact_check.relation_extractor_updated1(resources,verb_entity[n])
             # print relation_ent
             # sys.exit(0)
             print "Precision & Recall for Resource Extractor"
@@ -274,7 +269,6 @@ def fact_checker(sentence_lis):
             print "Relation Graph"
             print "--------------"
             print relations
-            relation_subgraphs = subgraph_generator(relations)
             true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(n, relations)
             true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(n, relations)
             print '\n'
@@ -286,24 +280,25 @@ def fact_checker(sentence_lis):
             print "Precision & Recall for Relations"
             print "--------------------------------"
             precision_rel, recall_rel = precision_recall(true_pos_rel, retrived_rels, ex_rels)
+
             print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
             
             # sys.exit(0)
 
-            precision_recall_stats[n] = {'p_entities': precision_ent,'r_entities': recall_ent,'p_rel': precision_rel,
-                                         'r_rel': recall_rel,'p_entities_match': precision_ent_out,'r_entities_match': recall_ent_out}
+            precision_recall_stats[n] = {'p_rel': precision_rel,'r_rel': recall_rel,'p_entities_match': precision_ent_out,'r_entities_match': recall_ent_out}
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
     ex_time = time.time() - start_time
     print "Total Execution Time: " + str(round(ex_time, 2))
-    print "{:<8} {:<10} {:<10} {:<8} {:<10} {:<15} {:<15}".format('S.N.', 'p_ent', 'r_ent', 'p_rel', 'r_rel', 'p_ent_match', 'r_ent_match')
+    # print precision_recall_stats
+    print "{:<8} {:<10} {:<10} {:<10} {:<10} ".format('S.N.', 'p_rel', 'r_rel', 'p_ent', 'r_ent')
     for k1,v1 in precision_recall_stats.iteritems():
         vals = []
         for k2,v2 in v1.iteritems():
             vals.append(v2)
-        p_e,r_e,p_r,r_r,p_eo,r_eo = vals
-        print "{:<8} {:<10} {:<10} {:<8} {:<10} {:<15} {:<15}".format(k1, p_e, r_e, p_r, p_eo,r_r, r_eo)
+        p_r,r_r,p_eo,r_eo = vals
+        print "{:<8} {:<10} {:<10} {:<10} {:<10}".format(k1, p_r, p_eo,r_r, r_eo)
 
 
 with open('simple.txt', 'r') as f:

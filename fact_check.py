@@ -52,15 +52,21 @@ def get_nodes_updated(netagged_words):
 
 
 def verb_entity_matcher(parsed_tree):
-    verb_entity = {}
-    for nodes in parsed_tree[0][0]:
-        if re.search('VB',nodes[0][1]) and re.search('NN',nodes[2][1]):
-            if nodes[0][0] not in verb_entity.keys():
-                verb_entity[nodes[0][0]]=[nodes[2][0]]
-            else:
-                verb_entity[nodes[0][0]].append(nodes[2][0])
-    return verb_entity
-
+    # print parsed_tree
+    verb_ent = []
+    for tree in parsed_tree:
+        # print tree
+        verb_entity = {}
+        # print "----"
+        for nodes in tree[0]:
+            # print nodes
+            if re.search('VB',nodes[0][1]) and re.search('NN',nodes[2][1]):
+                if nodes[0][0] not in verb_entity.keys():
+                    verb_entity[nodes[0][0]]=[nodes[2][0]]
+                else:
+                    verb_entity[nodes[0][0]].append(nodes[2][0])
+        verb_ent.append([verb_entity])
+    return verb_ent
 
 def get_verb(postagged_words):
     verb = []
@@ -195,8 +201,7 @@ def date_checker(dl,vo_date):
         return None
 
 def relation_processor(relations):
-    print relations
-    sys.exit(0)
+    # print relations
     relation_graph = {}
     entity_dict = {}
     edge_dict = {}
@@ -215,12 +220,15 @@ def relation_processor(relations):
                 if res_key not in edge_dict.keys():
                     edge_dict[res_key] = [{'id':len(edge_dict)+1,'score':item[1],'join':id_list}]
                 else:
+                    joins = []
                     for rels in edge_dict[res_key]:
-                        if rels.get('score') != item[1]:
-                            edge_dict[res_key].append({'id': len(edge_dict) + 1, 'score': item[1],'join':id_list})
+                        joins.append(rels.get('join'))
+                    if id_list not in joins:
+                        edge_dict[res_key].append({'id': len(edge_dict) + 1, 'score': item[1],'join':id_list})
         # print entity_dict,edge_dict
         relation_graph = {'node':entity_dict,'edge':edge_dict}
     # print relation_graph
+    # sys.exit(0)
     return relation_graph
 
 def target_predicate_processor(resources,vb,date_labels):
@@ -283,7 +291,7 @@ def target_predicate_processor(resources,vb,date_labels):
                         return None, None
 
 
-def relation_extractor_updated1(resources):
+def relation_extractor_updated1(resources,verb_entity):
     global new_labels
     print new_labels
     relation = []
@@ -319,7 +327,10 @@ def relation_extractor_updated1(resources):
                                     # print ">>>>>"
                                     # print ma
                                     predicate = ma[1][0]
-                                    score, score2 = rel_score_simple(ma,score1,item2_v)
+                                    pred_score = rel_score_predicate(predicate,verb_entity)
+                                    # print rel_score
+                                    # sys.exit(0)
+                                    score, score2 = rel_score_simple(ma,score1,item2_v,pred_score)
                                     # comment = comment_extractor(ma[0][0])
                                     # print comment
                                     # scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
@@ -334,7 +345,25 @@ def relation_extractor_updated1(resources):
                                     relation.append(ma)
     return relation , len(relation)
 
-def rel_score_simple(ma,score1,item2_v):
+def rel_score_predicate(predicate, verb_entity):
+    # print predicate
+    print verb_entity
+    comment = comment_extractor(predicate)
+    print comment
+    meaning = []
+    verbs = []
+    for vb in verb_entity:
+        verbs.extend(vb.keys())
+    for com in comment:
+        meaning.extend(com[0].split())
+    for verb in verbs:
+        if verb in meaning:
+            return 1
+        else:
+            return 0
+
+
+def rel_score_simple(ma,score1,item2_v,pred_score):
     scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
     # print "-----"
     # print scores2
@@ -342,7 +371,7 @@ def rel_score_simple(ma,score1,item2_v):
     if len(scores2)>2:
         scores2.pop(1)
     # print scores2
-    score = (score1 + scores2[1]) / 2
+    score = (score1 + scores2[1]+pred_score) / 3
     return score, scores2
 
 def relation_extractor_updated(resources):
@@ -486,6 +515,7 @@ def comment_extractor(ont):
             comment = [sparql.unpack_row(comment) for comment in comments]
         else:
             comment = ''
+    sys.exit(0)
     return comment
 
 

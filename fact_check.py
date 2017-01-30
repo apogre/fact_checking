@@ -22,10 +22,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -57,16 +57,16 @@ def verb_entity_matcher(parsed_tree):
     for tree in parsed_tree:
         # print tree
         verb_entity = {}
-        print "----"
+        # print "----"
         for nodes in tree[0]:
-            print nodes
+            # print nodes
             if re.search('VB',nodes[0][1]) and re.search('NN',nodes[2][1]):
                 if nodes[0][0] not in verb_entity.keys():
                     verb_entity[nodes[0][0]]=[nodes[2][0]]
                 else:
                     verb_entity[nodes[0][0]].append(nodes[2][0])
         verb_ent.append([verb_entity])
-    sys.exit(0)
+    # sys.exit(0)
     return verb_ent
 
 def get_verb(postagged_words):
@@ -202,7 +202,7 @@ def date_checker(dl,vo_date):
         return None
 
 def relation_processor(relations):
-    # print relations
+    print relations
     relation_graph = {}
     entity_dict = {}
     edge_dict = {}
@@ -358,8 +358,8 @@ def relation_extractor_updated1(resources,verb_entity):
     return relation , len(relation)
 
 def rel_score_predicate(verb_entity,comment):
-    print verb_entity
-    print comment
+    # print verb_entity
+    # print comment
     meaning = []
     verbs = []
     for vb in verb_entity:
@@ -376,11 +376,11 @@ def rel_score_predicate(verb_entity,comment):
 def rel_score_label(ma,score1,item2_v,pred_score):
     scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
     # print "-----"
-    print scores2
+    # print scores2
     scores2 = scores2[0]
     if len(scores2)>2:
         scores2.pop(1)
-    print score1, scores2[1],pred_score
+    # print score1, scores2[1],pred_score
     score = (score1 + scores2[1]+pred_score) / 3
     return score, scores2
 
@@ -532,11 +532,11 @@ def comment_extractor(ont):
     comments = sparql.query(sparql_dbpedia, q_c)
     if comments:
         comment = [sparql.unpack_row(comment) for comment in comments]
-        print q_c
+        # print q_c
         if not comment:
             comments = sparql.query(sparql_dbpedia, q_l)
             if comments:
-                print q_l
+                # print q_l
                 comment = [sparql.unpack_row(comment) for comment in comments]
             else:
                 comment = ''

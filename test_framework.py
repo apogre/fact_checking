@@ -5,7 +5,7 @@ import time
 import operator
 import collections, re
 
-test_count = 0
+test_count = 3
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
@@ -40,7 +40,7 @@ expected_outputs_relations = {
     0: [[u'birthPlace', u'New_York', u'Al_Pacino'], [u'birthDate', u'April 25, 1940', u'Al_Pacino']],
     2: [[u'birthPlace', u'Hawaii', u'Barack_Obama']],
     1: [[u'spouse', u'Barack_Obama', u'Michelle_Obama']],
-    3: [[u'birthPlace', u'New_York_City', u'Robert_De_Niro'], [u'birthDate', u'August 17, 1943', u'Robert_De_Niro']],
+    3: [[u'birthPlace', u'New_York_City', u'Robert_De_Niro'],[u'birthPlace', u'New_York', u'Robert_De_Niro'], [u'birthDate', u'August 17, 1943', u'Robert_De_Niro']],
     5: [[u'birthPlace', u'Neptune_Township,_New_Jersey', u'Danny_DeVito'], [u'birthDate', u'1944', u'Danny_DeVito']],
     6: [[u'birthPlace', u'Santa_Monica,_California', u'Jack_Black'], [u'birthDate', u'August 28, 1969', u'Jack_Black']],
     8: [[u'spouse', u'Scarlett_Johansson', u'Ryan_Reynolds']],
@@ -49,8 +49,8 @@ expected_outputs_relations = {
     9: [[u'birthPlace', u'Brampton', u'Michael_Cera'], [u'birthPlace', u'Ontario', u'Michael_Cera'],
         [u'birthDate', u'June 7, 1988', u'Michael_Cera']],
     10: [[u'birthPlace', u'New_Brunswick,_New_Jersey', u'Michael_Douglas'], [u'birthDate', u'1944', u'Michael_Douglas'],
-         [u'child', u'Michael_Douglas', u'Kirk_Douglas']],
-    11: [[u'birthPlace', u'New_York_City', u'Scarlett_Johansson'],
+         [u'parent', u'Michael_Douglas', u'Kirk_Douglas']],
+    11: [[u'birthPlace', u'New_York_City', u'Scarlett_Johansson'],[u'birthPlace', u'New_York', u'Scarlett_Johansson'],
          [u'birthDate', u'November 22, 1984', u'Scarlett_Johansson']]}
 
 
@@ -143,6 +143,7 @@ def precision_recall_relations1(n,relations):
     # print relations
     subgraph = relations.get('edge')
     retrived_rels = []
+    # if subgraph:
     for s_key,s_val in subgraph.iteritems():
         for rels in s_val:
             retrived_rel = [s_key]
@@ -159,7 +160,8 @@ def precision_recall_relations1(n,relations):
                 true_pos.append(ret_rel)
     # precision, recall = precision_recall(true_pos,retrived_rels,ex_rels)
     return true_pos,retrived_rels,ex_rels
-
+    # else:
+    #     return None, None, None
 
 def precision_recall(true_pos,true_false_pos,ex_rels):
     true_pos_len = float(len(true_pos))
@@ -269,23 +271,26 @@ def fact_checker(sentence_lis):
             print "Relation Graph"
             print "--------------"
             print relations
-            true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(n, relations)
-            true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(n, relations)
-            print '\n'
-            print "Precision & Recall for Entities"
-            print "--------------------------------"
-            precision_ent_out, recall_ent_out = precision_recall(true_pos_ent, retrieved_ents, ex_ent_all)
-            print "Entity Match: Precision: " + str(precision_ent_out), "Recall: " + str(recall_ent_out)
-            print "------------------------------------------"
-            print "Precision & Recall for Relations"
-            print "--------------------------------"
-            precision_rel, recall_rel = precision_recall(true_pos_rel, retrived_rels, ex_rels)
+            if relations:
+                true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(n, relations)
+                true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(n, relations)
+                print '\n'
+                print "Precision & Recall for Entities"
+                print "--------------------------------"
+                precision_ent_out, recall_ent_out = precision_recall(true_pos_ent, retrieved_ents, ex_ent_all)
+                print "Entity Match: Precision: " + str(precision_ent_out), "Recall: " + str(recall_ent_out)
+                print "------------------------------------------"
+                print "Precision & Recall for Relations"
+                print "--------------------------------"
+                precision_rel, recall_rel = precision_recall(true_pos_rel, retrived_rels, ex_rels)
 
-            print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
+                print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
             
             # sys.exit(0)
 
-            precision_recall_stats[n] = [precision_rel,recall_rel,precision_ent_out,recall_ent_out]
+                precision_recall_stats[n] = [precision_rel,recall_rel,precision_ent_out,recall_ent_out]
+            else:
+                precision_recall_stats[n] = [0,0,0,0]
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
@@ -293,10 +298,11 @@ def fact_checker(sentence_lis):
     print "Total Execution Time: " + str(round(ex_time, 2))
     # print precision_recall_stats
     print "{:<8} {:<10} {:<10} {:<10} {:<10} ".format('S.N.', 'p_rel', 'r_rel', 'p_ent', 'r_ent')
+    vals_sum=0
     for k1,v1 in precision_recall_stats.iteritems():
         vals = v1
         p_r,r_r,p_eo,r_eo = vals
-        print "{:<8} {:<10} {:<10} {:<10} {:<10}".format(k1, p_r, p_eo,r_r, r_eo)
+        print "{:<8} {:<10} {:<10} {:<10} {:<10}".format(k1, p_r, r_r,p_eo, r_eo)
         if k1 == 0:
             vals1 = vals
         else:
@@ -304,8 +310,9 @@ def fact_checker(sentence_lis):
             # print vals,vals1,vals_avg
             vals1 = vals_sum
     num_sent = len(sentence_list)
-    vals_avg = [round((x/num_sent),2) for x in vals_sum]
-    print vals_avg
+    if vals_sum>0:
+        vals_avg = [round((x/num_sent),2) for x in vals_sum]
+        print "average",vals_avg
 
 
 

@@ -5,7 +5,7 @@ import time
 import operator
 import collections, re
 
-test_count = 3
+test_count = 12
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
@@ -14,6 +14,8 @@ expected_outputs_entities = {2: {
     u'Barack Obama': [u'Barack_Obama'],
     u'Hawaii': [u'Hawaii']}, 0: {u'Alfredo James Pacino': [u'Al_Pacino'],
                                  u'New York City': [u'New_York', u'New_York_City']},
+    12: {u'Narendra Modi': [u'Narendra_Modi'],
+         u'India': [u'India']},
     11: {u'Scarlett Johansson': [u'Scarlett_Johansson'],
          u'New York City': [u'New_York', u'New_York_City']},
     10: {u'Michael Douglas': [u'Michael_Douglas'], u'Kirk Douglas': [u'Kirk_Douglas'],
@@ -51,7 +53,9 @@ expected_outputs_relations = {
     10: [[u'birthPlace', u'New_Brunswick,_New_Jersey', u'Michael_Douglas'], [u'birthDate', u'1944', u'Michael_Douglas'],
          [u'parent', u'Michael_Douglas', u'Kirk_Douglas']],
     11: [[u'birthPlace', u'New_York_City', u'Scarlett_Johansson'],[u'birthPlace', u'New_York', u'Scarlett_Johansson'],
-         [u'birthDate', u'November 22, 1984', u'Scarlett_Johansson']]}
+         [u'birthDate', u'November 22, 1984', u'Scarlett_Johansson']],
+    12: [[u'birthPlace', u'India', u'Narendra_Modi']]
+    }
 
 
 def validator_entitymap(relation, vb, true_flag=0):
@@ -236,11 +240,13 @@ def fact_checker(sentence_lis):
     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
     # print dep_s
     verb_entity = fact_check.verb_entity_matcher(dep_s)
+    print verb_entity
     start_time = time.time()
     for i in range(0, 1):
         for n, ne in enumerate(ne_s):
             print n, sentence_lis[n],'\n'
             ent = fact_check.get_nodes_updated(ne)
+
             new_loc = fact_check.location_update(ne)
             if new_loc:
                 new_ent = (new_loc[0], 'LOCATION')
@@ -250,6 +256,7 @@ def fact_checker(sentence_lis):
                 ent.append(date_string)
             vb = fact_check.get_verb(pos_s[n])
             print ent
+            # sys.exit(0)
             res_time = time.time()
             resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor_updated(ent)
             # print raw_resources

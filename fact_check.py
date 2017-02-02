@@ -15,6 +15,7 @@ import time, sys, re
 objects = []
 relation=[]
 ROOT = 'ROOT'
+aux_verb = ['was', 'is', 'become']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
 sparql_dbpedia = 'http://localhost:8890/sparql'
 # sparql_dbpedia = 'https://dbpedia.org/sparql'
@@ -22,10 +23,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -58,6 +59,10 @@ def verb_entity_matcher(parsed_tree):
         # print tree
         verb_entity = {}
         # print "----"
+        be_tree = be_verb(tree[0])
+        # print be_tree
+        if be_tree:
+            verb_ent.append([be_tree])
         for nodes in tree[0]:
             # print nodes
             if re.search('VB',nodes[0][1]) and re.search('NN',nodes[2][1]):
@@ -65,9 +70,36 @@ def verb_entity_matcher(parsed_tree):
                     verb_entity[nodes[0][0]]=[nodes[2][0]]
                 else:
                     verb_entity[nodes[0][0]].append(nodes[2][0])
-        verb_ent.append([verb_entity])
+        if verb_entity:
+            verb_ent.append([verb_entity])
     # sys.exit(0)
     return verb_ent
+
+
+def be_verb(tree):
+    be_tree = {}
+    be_noun = ''
+    b_verb = ''
+    for n,nodes in enumerate(tree):
+        if re.search('NN', nodes[0][1]) and re.search('VB', nodes[2][1]):
+            be_noun = nodes[0][0]
+            b_verb = nodes[2][0]
+            if b_verb not in be_tree.keys():
+                be_tree[b_verb] = [be_noun]
+            else:
+                be_tree[str(b_verb)+str(n)]=[be_noun]
+        if be_noun in nodes[0] and re.search('JJ', nodes[2][1]):
+            adj = nodes[2][0]
+            if b_verb not in be_tree.keys():
+                be_tree[b_verb] = [adj+' '+be_noun]
+            else:
+                if be_noun not in nodes[0]:
+                    be_tree[str(b_verb)+str(n)]=[adj+' '+be_noun]
+                else:
+                    be_tree[str(b_verb)] = [adj + ' ' + be_noun]
+    return be_tree
+
+
 
 def get_verb(postagged_words):
     verb = []

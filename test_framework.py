@@ -5,7 +5,7 @@ import time
 import operator
 import collections, re
 
-test_count = 12
+test_count = 14
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
@@ -14,6 +14,10 @@ expected_outputs_entities = {2: {
     u'Barack Obama': [u'Barack_Obama'],
     u'Hawaii': [u'Hawaii']}, 0: {u'Alfredo James Pacino': [u'Al_Pacino'],
                                  u'New York City': [u'New_York', u'New_York_City']},
+    14: {u'Narendra Modi': [u'Narendra_Modi'],
+         u'Pakistan': [u'Pakistan']},
+    13: {u'Mark Zuckerberg': [u'Mark_Zuckerberg'],
+         u'Facebook': [u'Facebook']},
     12: {u'Narendra Modi': [u'Narendra_Modi'],
          u'India': [u'India']},
     11: {u'Scarlett Johansson': [u'Scarlett_Johansson'],
@@ -54,7 +58,9 @@ expected_outputs_relations = {
          [u'parent', u'Michael_Douglas', u'Kirk_Douglas']],
     11: [[u'birthPlace', u'New_York_City', u'Scarlett_Johansson'],[u'birthPlace', u'New_York', u'Scarlett_Johansson'],
          [u'birthDate', u'November 22, 1984', u'Scarlett_Johansson']],
-    12: [[u'birthPlace', u'India', u'Narendra_Modi']]
+    12: [[u'birthPlace', u'India', u'Narendra_Modi']],
+    13: [[u'founder', u'Facebook', u'Mark_Zuckerberg']],
+    12: [[u'unknown', u'Pakistan', u'Narendra_Modi']],
     }
 
 
@@ -178,58 +184,30 @@ def precision_recall(true_pos,true_false_pos,ex_rels):
     return round(precision, 2), round(recall, 2)
 
 
-def precision_recall_relations(n, relations):
-    print relations
-    # global test_count
-    # ex_ent_all = []
-    # unique_rel_raw = [list(x) for x in set(tuple(x) for x in relations)]
-    # unique_rel = sorted(unique_rel_raw, key=operator.itemgetter(3),reverse=True)
-    # # ent_outputs_ret = [corr[1:4] for corr in unique_rel]
-    # # print ent_outputs_ret
-    # expected_ent_outs = expected_outputs_entities[n+test_count]
-    # for ke,ve in expected_ent_outs.iteritems():
-    #     ex_ent_all.extend(ve)
-    # # print ex_ent_all
-    # # precision_recall_entity_match(ent_outputs_ret, ex_ent_all)
-    # print "-----------------------------------------"
-    # print "Retrieved Relations: " + str(unique_rel)
-    # ex_out = expected_outputs_relations[n+test_count]
-    # print "Expected Outputs: " + str(ex_out)
-    # correct_results = [rel for rel in unique_rel if rel[0:3] in ex_out]
-    # # if len(ent_outputs)>1:
-    # #     end_outputs = [item for sublist in ent_outputs for item in sublist]
-    # # print ent_outputs
-    # # print "Matched Outputs: " + str(correct_results)
-    # cr = float(len(correct_results))
-    # # print cr, len(ex_out), len(unique_rel)
-    # unique_rel_len = float(len(unique_rel))
-    # if unique_rel_len < 1:
-    #     unique_rel_len = 1
-    # precision = cr / unique_rel_len
-    # recall = cr / float(len(ex_out))
-    # return round(precision,2), round(recall,2)
-    return None, None
-
-
 def precision_recall_entities(n, raw_resources):
     global test_count
     expected_entities = expected_outputs_entities[n + test_count]
     # print expected_entities
-    # print raw_resources
+    print raw_resources
+    # sys.exit(0)
     p_list=[]
     r_list=[]
     for res_key, res_val in expected_entities.iteritems():
         expected_ent = res_val
         # print res_val
-        retrieved_ent = raw_resources[res_key]
-        correct_results = [ent for ent in expected_ent if ent in retrieved_ent]
-        cr = float(len(correct_results))
-        # print cr, len(ex_out), len(unique_rel)
-        precision = cr / float(len(retrieved_ent))
-        recall = cr / float(len(expected_ent))
-        print res_key + " >>", "Precision: " + str(precision), "Recall: " + str(recall)
-        p_list.append((precision,2))
-        r_list.append(round(recall,2))
+        retrieved_ent = raw_resources.get(res_key)
+        if retrieved_ent:
+            correct_results = [ent for ent in expected_ent if ent in retrieved_ent]
+            cr = float(len(correct_results))
+            # print cr, len(ex_out), len(unique_rel)
+            precision = cr / float(len(retrieved_ent))
+            recall = cr / float(len(expected_ent))
+            print res_key + " >>", "Precision: " + str(precision), "Recall: " + str(recall)
+            p_list.append((precision,2))
+            r_list.append(round(recall,2))
+        else:
+            p_list.append(0)
+            r_list.append(0)
     return p_list,r_list
 
 
@@ -267,8 +245,10 @@ def fact_checker(sentence_lis):
             # relation_verb, matched_date = fact_check.target_predicate_processor(resources,vb, date_labels)
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
             relation_ent, rel_count = fact_check.relation_extractor_updated1(resources,verb_entity[n])
-            # print relation_ent
-            # sys.exit(0)
+            if not relation_ent:
+                fact_check.relation_extractor_1hop(resources,verb_entity[n])
+            print relation_ent
+            sys.exit(0)
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
             precision_ent, recall_ent = precision_recall_entities(n, raw_resources)
@@ -277,7 +257,8 @@ def fact_checker(sentence_lis):
             relations = fact_check.relation_processor(relation_ent)
             print "Relation Graph"
             print "--------------"
-            print relations
+            # print relations
+            # sys.exit(0)
             if relations:
                 true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(n, relations)
                 true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(n, relations)

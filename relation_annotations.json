@@ -1,0 +1,53 @@
+{
+    "0": {
+         "birthPlace": [ "New_York",  "Al_Pacino"],
+         "birthDate": [ "April 25, 1940",  "Al_Pacino"]
+    },
+    "2": {
+         "birthPlace": [ "Hawaii",  "Barack_Obama"]
+    },
+    "1": {
+         "spose": [ "Barack_Obama",  "Michelle_Obama"]
+    },
+    "3": {
+         "birthPlace": [ "New_York_City",  "Robert_De_Niro"],
+         "birthDate": [ "Agst 17, 1943",  "Robert_De_Niro"]
+    },
+    "5": {
+         "birthPlace": [ "Neptne_Township,_New_Jersey",  "Danny_DeVito"],
+         "birthDate": [ "1944",  "Danny_DeVito"]
+    },
+    "6": {
+         "birthPlace": [ "Santa_Monica,_California",  "Jack_Black"],
+         "birthDate": [ "Agst 28, 1969",  "Jack_Black"]
+    },
+    "8": {
+         "spose": [ "Scarlett_Johansson",  "Ryan_Reynolds"]
+    },
+    "7": {
+         "spose": [ "Scarlett_Johansson",  "Ryan_Reynolds"]
+    },
+    "4": {
+         "birthPlace": [ "Syracse,_New_York",  "Megyn_Kelly"],
+         "birthDate": [ "1970",  "Megyn_Kelly"]
+    },
+    "9": {
+         "birthPlace": [ "Brampton",  "Michael_Cera"],
+         "birthDate": [ "Jne 7, 1988",  "Michael_Cera"]
+    },
+    "10": {
+         "birthPlace": [ "New_Brnswick,_New_Jersey",  "Michael_Doglas"],
+         "birthDate": [ "1944",  "Michael_Doglas"],
+         "parent": [ "Michael_Doglas",  "Kirk_Doglas"]
+    },
+    "11": {
+         "birthPlace": [ "New_York_City",  "Scarlett_Johansson"],
+         "birthDate": [ "November 22, 1984",  "Scarlett_Johansson"]
+    },
+    "12": {
+         "birthPlace": [ "India",  "Narendra_Modi"]
+    },
+    "13": {
+         "fonder": [ "Facebook",  "Mark_Zckerberg"]
+    }
+}

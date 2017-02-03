@@ -1,0 +1,73 @@
+{
+    "14": {
+         "Narendra Modi": [ "Narendra_Modi"],
+         "Pakistan": [ "Pakistan"]
+    },
+    "13": {
+         "Mark Zckerberg": [ "Mark_Zckerberg"],
+         "Facebook": [ "Facebook"]
+    },
+    "12": {
+         "Narendra Modi": [ "Narendra_Modi"],
+         "India": [ "India"]
+    },
+    "11": {
+         "Scarlett Johansson": [ "Scarlett_Johansson"],
+         "New York City": [ "New_York",  "New_York_City"]
+    },
+    "10": {
+         "Michael Doglas": [ "Michael_Doglas"],
+         "Kirk Doglas": [ "Kirk_Doglas"],
+         "New Jersey": [ "New_Brnswick,_New_Jersey"]
+    },
+    "9": {
+         "Michael Cera": [ "Michael_Cera"],
+         "Brampton": [ "Brampton"],
+         "Ontario": [ "Ontario"],
+         "Canada": [ "Canada"]
+    },
+    "8": {
+         "Johansson": [ "Scarlett_Johansson"],
+         "Ryan Reynolds": [ "Ryan_Reynolds"],
+         "British Colmbia": [ "British_Colmbia"],
+         "Canada": [ "Canada"]
+    },
+    "7": {
+         "Johansson": [ "Scarlett_Johansson"],
+         "Ryan Reynolds": [ "Ryan_Reynolds"]
+    },
+    "6": {
+         "Jack Black": [ "Jack_Black"],
+         "Santa Monica, California": [ "Santa_Monica,_California"],
+         "Santa Monica": [ "Santa_Monica,_California"],
+         "California": [ "Santa_Monica,_California",  "California"]
+    },
+    "5": {
+         "Danny DeVito": [ "Danny_DeVito"],
+         "New Jersey": [ "Neptne_Township,_New_Jersey",  "New_Jersey"]
+    },
+    "4": {
+         "Megyn Kelly": [ "Megyn_Kelly"],
+         "Syracse, New York": [ "Syracse,_New_York"],
+         "Syracse": [ "Syracse,_New_York"],
+         "New York": [ "Syracse,_New_York"]
+    },
+    "3": {
+         "Robert De Niro": [ "Robert_De_Niro"],
+         "Stella Adler": [ "Stella_Adler"],
+         "New York City": [ "New_York_City",  "New_York"]
+    },
+    "2": {
+         "Barack Obama": [ "Barack_Obama"],
+         "Hawaii": [ "Hawaii"]
+    },
+    "1": {
+         "Barack Obama": [ "Barack_Obama"],
+         "Michelle Obama": [ "Michelle_Obama"]
+    },
+    "0": {
+         "Alfredo James Pacino": [ "Al_Pacino"],
+         "New York City": [ "New_York",  "New_York_City"]
+    }
+
+}

@@ -1,0 +1,73 @@
+{
+    14: {
+        u 'Narendra Modi': [u 'Narendra_Modi'],
+        u 'Pakistan': [u 'Pakistan']
+    },
+    13: {
+        u 'Mark Zuckerberg': [u 'Mark_Zuckerberg'],
+        u 'Facebook': [u 'Facebook']
+    },
+    12: {
+        u 'Narendra Modi': [u 'Narendra_Modi'],
+        u 'India': [u 'India']
+    },
+    11: {
+        u 'Scarlett Johansson': [u 'Scarlett_Johansson'],
+        u 'New York City': [u 'New_York', u 'New_York_City']
+    },
+    10: {
+        u 'Michael Douglas': [u 'Michael_Douglas'],
+        u 'Kirk Douglas': [u 'Kirk_Douglas'],
+        u 'New Jersey': [u 'New_Brunswick,_New_Jersey']
+    },
+    9: {
+        u 'Michael Cera': [u 'Michael_Cera'],
+        u 'Brampton': [u 'Brampton'],
+        u 'Ontario': [u 'Ontario'],
+        u 'Canada': [u 'Canada']
+    },
+    8: {
+        u 'Johansson': [u 'Scarlett_Johansson'],
+        u 'Ryan Reynolds': [u 'Ryan_Reynolds'],
+        u 'British Columbia': [u 'British_Columbia'],
+        u 'Canada': [u 'Canada']
+    },
+    7: {
+        u 'Johansson': [u 'Scarlett_Johansson'],
+        u 'Ryan Reynolds': [u 'Ryan_Reynolds']
+    },
+    6: {
+        u 'Jack Black': [u 'Jack_Black'],
+        u 'Santa Monica, California': [u 'Santa_Monica,_California'],
+        u 'Santa Monica': [u 'Santa_Monica,_California'],
+        u 'California': [u 'Santa_Monica,_California', u 'California']
+    },
+    5: {
+        u 'Danny DeVito': [u 'Danny_DeVito'],
+        u 'New Jersey': [u 'Neptune_Township,_New_Jersey', u 'New_Jersey']
+    },
+    4: {
+        u 'Megyn Kelly': [u 'Megyn_Kelly'],
+        u 'Syracuse, New York': [u 'Syracuse,_New_York'],
+        u 'Syracuse': [u 'Syracuse,_New_York'],
+        u 'New York': [u 'Syracuse,_New_York']
+    },
+    3: {
+        u 'Robert De Niro': [u 'Robert_De_Niro'],
+        u 'Stella Adler': [u 'Stella_Adler'],
+        u 'New York City': [u 'New_York_City', u 'New_York']
+    },
+    2: {
+        u 'Barack Obama': [u 'Barack_Obama'],
+        u 'Hawaii': [u 'Hawaii']
+    },
+    1: {
+        u 'Barack Obama': [u 'Barack_Obama'],
+        u 'Michelle Obama': [u 'Michelle_Obama']
+    },
+    0: {
+        u 'Alfredo James Pacino': [u 'Al_Pacino'],
+        u 'New York City': [u 'New_York', u 'New_York_City']
+    }
+
+}

@@ -5,7 +5,7 @@ import time
 import operator
 import collections, re
 
-test_count = 14
+test_count = 0
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
@@ -188,7 +188,7 @@ def precision_recall_entities(n, raw_resources):
     global test_count
     expected_entities = expected_outputs_entities[n + test_count]
     # print expected_entities
-    print raw_resources
+    # print raw_resources
     # sys.exit(0)
     p_list=[]
     r_list=[]
@@ -224,7 +224,6 @@ def fact_checker(sentence_lis):
         for n, ne in enumerate(ne_s):
             print n, sentence_lis[n],'\n'
             ent = fact_check.get_nodes_updated(ne)
-
             new_loc = fact_check.location_update(ne)
             if new_loc:
                 new_ent = (new_loc[0], 'LOCATION')
@@ -245,10 +244,10 @@ def fact_checker(sentence_lis):
             # relation_verb, matched_date = fact_check.target_predicate_processor(resources,vb, date_labels)
             # relation_ent, rel_count = fact_check.relation_extractor_updated(resources)
             relation_ent, rel_count = fact_check.relation_extractor_updated1(resources,verb_entity[n])
-            if not relation_ent:
-                fact_check.relation_extractor_1hop(resources,verb_entity[n])
-            print relation_ent
-            sys.exit(0)
+            # if not relation_ent:
+            #     fact_check.relation_extractor_1hop(resources,verb_entity[n])
+            # print relation_ent
+            # sys.exit(0)
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
             precision_ent, recall_ent = precision_recall_entities(n, raw_resources)
@@ -260,6 +259,7 @@ def fact_checker(sentence_lis):
             # print relations
             # sys.exit(0)
             if relations:
+                print relations
                 true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(n, relations)
                 true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(n, relations)
                 print '\n'

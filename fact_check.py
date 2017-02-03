@@ -23,10 +23,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -264,64 +264,6 @@ def relation_processor(relations):
     # sys.exit(0)
     return relation_graph
 
-def target_predicate_processor(resources,vb,date_labels):
-    rel_dict = {}
-    global new_labels
-    new_labels = sorted(new_labels,key=operator.itemgetter(2))
-    # print new_labels
-    new_labels.sort(key=lambda x: len(x[1]))
-    # new_labels = sorted(new_labels,key=len(operator.itemgetter(1)),reverse=True)
-    # print new_labels
-    # print vb
-    # for v in vb:
-    predicates = [target_predicate.get(v[0].lower()) for v in vb]
-    predicates = [pred for pred in predicates if pred is not None]
-    # print predicates
-    for i in range(0,len(resources)-1):
-        if str(new_labels[i][0]) in resources:
-            item1_v = resources[new_labels[i][0]]
-            for i1 in item1_v:
-                if 'dbpedia' in i1[0]:
-                    # url1 = redirect_link(i1[0])
-                    url1 = i1[0]
-                    # print url1
-                    # q_all = ('SELECT ?p ?o WHERE {?s ?p ?o . FILTER ( ?s = <'+ url1 + '> )}')
-                    q_all = ('SELECT ?p ?o WHERE { <'+ url1 + '> ?p ?o .}')
-                    # print q_all
-                    result = sparql.query(sparql_dbpedia, q_all)
-                    q1_values = [sparql.unpack_row(row_result) for row_result in result]
-                    # print q1_values
-                    verb_ont = []
-                    for predicate in predicates:
-                        verb_ont = [q1_val for q1_val in q1_values if q1_val[0].split('/')[-1] in predicate]
-                    # print verb_ont
-                    # sys.exit(0)
-                    if verb_ont:
-                        if date_labels:
-                            vo_date = [vo for vo in verb_ont if type(vo[1]) is datetime.date]
-                            for dl in date_labels:
-                                matched_date = date_checker(dl,vo_date)
-                        else:
-                            matched_date = None
-                        for j in range(i+1,len(resources)):
-                            if str(new_labels[j][0]) in resources:
-                                item2_v = resources[new_labels[j][0]]
-                                # print "item2============="
-                                # print item2_v
-                                new_time=time.time()
-                                url2_list = [i2[0] for i2 in item2_v]
-                                # print url2_list
-                                # print verb_ont
-                                vo_list = [vo[1] for vo in verb_ont]
-                                # print vo_list
-                                intersect = set(url2_list).intersection(vo_list)
-                                for inte in intersect:
-                                    match = [[url1,j,inte] for i, j in enumerate(verb_ont) if j[1] == inte]
-                                if intersect and match:
-                                    # print("--- %s url2 seconds ---" % (time.time() - new_time))
-                                    return match, matched_date
-                    else:
-                        return None, None
 
 def relation_extractor_1hop(resources,verb_entity):
     global new_labels
@@ -349,6 +291,7 @@ def relation_extractor_1hop(resources,verb_entity):
                         for url2 in url2_list:
                             # print url2_list
                             q_1hop='select <'+url1+'> ?rel ?v0 ?rel1 <'+url2+'> where { <'+url1+'> ?rel ?v0 . ?v0 ?rel1 <'+url2+ '> . }'
+                            # print q_1hop
                             result_1 = sparql.query(sparql_dbpedia, q_1hop)
                             val_1hop = [sparql.unpack_row(row_result) for row_result in result_1]
                             if val_1hop:
@@ -356,6 +299,17 @@ def relation_extractor_1hop(resources,verb_entity):
                                 # print q_1hop
                                 for val in val_1hop:
                                     print val
+                            else:
+                                q_2hop='select <'+url1+'> ?rel ?v0 ?rel1 ?v1 ?rel2 <'+url2+'> where { <'+url1+'> ?rel ?v0 . ?v0 ?rel1 ?v1 . ?v1 ?rel2 <'+url2+ '> . }'
+                                # print q_2hop
+                                result_2 = sparql.query(sparql_dbpedia, q_2hop)
+                                val_2hop = [sparql.unpack_row(row_result) for row_result in result_2]
+                                if val_2hop:
+                                    # print url2
+                                    # print q_1hop
+                                    for val in val_2hop:
+                                        print val
+
     return None
 
 def relation_extractor_updated1(resources,verb_entity):
@@ -424,8 +378,8 @@ def relation_extractor_updated1(resources,verb_entity):
     return relation , len(relation)
 
 def rel_score_predicate(verb_entity,comment):
-    print verb_entity
-    print comment
+    # print verb_entity
+    # print comment
     meaning = []
     verbs = []
     for vb in verb_entity:

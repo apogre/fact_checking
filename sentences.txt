@@ -1,0 +1,12 @@
+1,Alfredo James Pacino was born on April 25, 1940, in New York City.
+2,Barack Obama is married to Michelle Obama.
+3,Barack Obama was born in Hawaii.
+4,Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella 5Adler.
+6,Born in Syracuse, New York, in 1970, Megyn Kelly began her career as a lawyer before changing course to become an assignment reporter in 2004.
+7,Danny DeVito was born in New Jersey in 1944.
+8,Jack Black was born on August 28, 1969, in Santa Monica, California.
+9,Johansson married Canadian actor Ryan Reynolds in September 2008.
+10,Johansson married Canadian actor Ryan Reynolds in September 2008, in a small ceremony in British Columbia, Canada.
+11,Michael Cera was born on June 7, 1988, in Brampton, Ontario, Canada.
+12,Michael Douglas, son of movie star Kirk Douglas, was born in New Jersey in 1944.
+13,Scarlett Johansson was born in New York City on November 22, 1984.

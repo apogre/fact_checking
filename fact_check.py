@@ -23,18 +23,16 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
 parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
-
-target_predicate = {'born':['birthName','birthPlace','birthDate'],'married':['spouse']}
 
 # export STANFORDTOOLSDIR=$HOME
 # export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser.jar:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar
@@ -234,7 +232,7 @@ def date_checker(dl,vo_date):
         return None
 
 def relation_processor(relations):
-    print relations
+    # print relations
     relation_graph = {}
     entity_dict = {}
     edge_dict = {}
@@ -346,21 +344,15 @@ def relation_extractor_updated1(resources,verb_entity):
                             # print match
                             if match:
                                 for ma in match:
-                                    # print ">>>>>"
-                                    # print ma
                                     predicate = ma[1][0]
-                                    # if predicate
-                                    # print predicate_comment
                                     if predicate not in predicate_comment.keys():
                                         comment = comment_extractor(predicate)
                                         predicate_comment[predicate] = comment
-                                        # print comment
                                     else:
-                                        # print "here"
                                         comment = predicate_comment[predicate]
+                                    # print ma, comment
                                     pred_score = rel_score_predicate(verb_entity,comment)
                                     # print pred_score
-                                    # sys.exit(0)
                                     score, score2 = rel_score_label(ma,score1,item2_v,pred_score)
 
                                     ma.pop(1)
@@ -381,8 +373,9 @@ def rel_score_predicate(verb_entity,comment):
         verbs.extend(vb.keys())
     for com in comment:
         meaning.extend(com[0].split())
+    # print meaning
     for verb in verbs:
-        if verb in meaning:
+        if verb.lower() in meaning:
             return 1
         else:
             return 0

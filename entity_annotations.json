@@ -16,9 +16,9 @@
          "New York City": [ "New_York",  "New_York_City"]
     },
     "11": {
-         "Michael Doglas": [ "Michael_Doglas"],
-         "Kirk Doglas": [ "Kirk_Doglas"],
-         "New Jersey": [ "New_Brnswick,_New_Jersey"]
+         "Michael Douglas": [ "Michael_Douglas"],
+         "Kirk Douglas": [ "Kirk_Douglas"],
+         "New Jersey": [ "New_Brunswick,_New_Jersey"]
     },
     "10": {
          "Michael Cera": [ "Michael_Cera"],
@@ -38,9 +38,7 @@
     },
     "7": {
          "Jack Black": [ "Jack_Black"],
-         "Santa Monica, California": [ "Santa_Monica,_California"],
-         "Santa Monica": [ "Santa_Monica,_California"],
-         "California": [ "Santa_Monica,_California",  "California"]
+         "Santa Monica, California": [ "Santa_Monica,_California"]
     },
     "6": {
          "Danny DeVito": [ "Danny_DeVito"],
@@ -48,9 +46,7 @@
     },
     "5": {
          "Megyn Kelly": [ "Megyn_Kelly"],
-         "Syracse, New York": [ "Syracse,_New_York"],
-         "Syracse": [ "Syracse,_New_York"],
-         "New York": [ "Syracse,_New_York"]
+         "Syracuse, New York": [ "Syracuse,_New_York"]
     },
     "4": {
          "Robert De Niro": [ "Robert_De_Niro"],

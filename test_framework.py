@@ -4,8 +4,7 @@ import sys
 import time
 import operator, json
 import collections, csv
-
-test_count = 0
+import pprint
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
@@ -18,29 +17,28 @@ def precision_recall_ent_match(n,relations):
         ex_ent_all.extend(ve)
     retrieved_ents = relations['node'].keys()
     true_pos = [e_ent for e_ent in ex_ent_all if e_ent in retrieved_ents]
-    # precision, recall = precision_recall(true_pos, retrieved_ents, ex_ent_all)
     return true_pos, retrieved_ents, ex_ent_all
 
+
 def precision_recall_relations1(n,relations):
-    # print relations
     subgraph = relations.get('edge')
     retrived_rels = []
-    # if subgraph:
     for s_key,s_val in subgraph.iteritems():
         for rels in s_val:
             retrived_rel = [s_key]
-            # print rels['join']
             retrived_rel.extend(rels['join'])
             retrived_rels.append(retrived_rel)
-    # print retrived_rels
-    ex_rels = expected_outputs_relations[str(n)]
-    ex_rels_len = float(len(ex_rels))
+    ex_rels = []
+    ex_dict = expected_outputs_relations[str(n)]
+    for r_key,r_val in ex_dict.iteritems():
+        r_val.append(r_key)
+        ex_rels.append(r_val)
+    # ex_rels = list(set(ex_rels))
     true_pos = []
     for ret_rel in retrived_rels:
         for ex_rel in ex_rels:
-            if set(ret_rel)==set(ex_rel):
+            if set(ret_rel) == set(ex_rel):
                 true_pos.append(ret_rel)
-    # precision, recall = precision_recall(true_pos,retrived_rels,ex_rels)
     return true_pos,retrived_rels,ex_rels
 
 
@@ -58,9 +56,6 @@ def precision_recall(true_pos,true_false_pos,ex_rels):
 def precision_recall_entities(n, raw_resources):
     global test_count
     expected_entities = expected_outputs_entities[str(n)]
-    # print expected_entities
-    # print raw_resources
-    # sys.exit(0)
     p_list=[]
     r_list=[]
     for res_key, res_val in expected_entities.iteritems():
@@ -87,7 +82,7 @@ def fact_checker(sentence_lis,id_list):
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
     verb_entity = fact_check.verb_entity_matcher(dep_s)
-    print verb_entity
+    # print verb_entity
     start_time = time.time()
     for i in range(0, 1):
         for n, ne in enumerate(ne_s):
@@ -118,7 +113,7 @@ def fact_checker(sentence_lis,id_list):
             # print relations
             # sys.exit(0)
             if relations:
-                print relations
+                pprint.pprint(relations)
                 true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(sent_id, relations)
                 true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(sent_id, relations)
                 print '\n'
@@ -133,9 +128,9 @@ def fact_checker(sentence_lis,id_list):
 
                 print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
 
-                precision_recall_stats[n] = [precision_rel,recall_rel,precision_ent_out,recall_ent_out]
+                precision_recall_stats[sent_id] = [precision_rel,recall_rel,precision_ent_out,recall_ent_out]
             else:
-                precision_recall_stats[n] = [0,0,0,0]
+                precision_recall_stats[sent_id] = [0,0,0,0]
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
@@ -148,7 +143,7 @@ def fact_checker(sentence_lis,id_list):
         vals = v1
         p_r,r_r,p_eo,r_eo = vals
         print "{:<8} {:<10} {:<10} {:<10} {:<10}".format(k1, p_r, r_r,p_eo, r_eo)
-        if k1 == 0:
+        if k1 == 1:
             vals1 = vals
         else:
             vals_sum = map(operator.add,vals1,vals)
@@ -168,7 +163,7 @@ with open('relation_annotations.json') as json_data:
     expected_outputs_relations = json.load(json_data)
 
 
-with open('sentences.csv') as f:
+with open('sentences1.csv') as f:
     reader = csv.DictReader(f)
     sentence_list = []
     id_list = []

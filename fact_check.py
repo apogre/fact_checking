@@ -23,10 +23,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -362,12 +362,7 @@ def relation_extractor_updated1(resources,verb_entity):
                                     # print pred_score
                                     # sys.exit(0)
                                     score, score2 = rel_score_label(ma,score1,item2_v,pred_score)
-                                    # score, score2 = rel_score_simple(ma, score1, item2_v)
-                                    # comment = comment_extractor(ma[0][0])
-                                    # print comment
-                                    # scores2 = [url2[2] for url2 in item2_v if url2[0] == ma[0][1]]
-                                    # print scores2
-                                    # score = (score1+scores2[0])/2
+
                                     ma.pop(1)
                                     ma.append(score2)
                                     # print ma
@@ -467,54 +462,3 @@ def date_extractor(date,resources):
 if __name__ == '__main__':
     with open('obama_sample.txt','r') as f:
         para = f.readline()
-        for i,row in enumerate(para.split('.')):
-            # try:
-            if row:
-                doc = row
-                print doc
-                tree = st.tag(doc.split())
-                print tree
-                ent =  get_nodes_updated(tree)
-                # print ent
-                # sys.exit()
-                updated_labels = []
-                for en in ent:
-                    if 'University' in en[0] or 'College' in en[0] or 'School' in en[0]:
-                        label1 = str(en[0])+' alumni'
-                        tup2 = (label1,en[1])
-                        # print tup2
-                        updated_labels.append(tup2)
-                ent.extend(updated_labels)
-
-                try:
-                    date = date_parser(doc)
-                    tup1 = (date,'DATE')
-                    ent.append(tup1)
-                    date_flag = 1
-                except:
-                    pass
-                print "====Entities===="
-                # print ent
-                for e in ent:
-                    if e[1] == 'LOCATION' and ',' in e[0]:
-                        loc_label = e[0].split(',')
-                        for loc in loc_label:
-                            ent.append((loc,'LOCATION'))
-                        # ent.remove(e)
-                print ent
-                # sys.exit()
-                resources = resource_extractor_updated(ent)
-                print "====Resources===="
-                # print resources
-                relation_extractor(resources)
-                print date_flag
-                now_current = datetime.datetime.now()
-                relation_extractor(resources)
-                total_time = datetime.datetime.now() - now_current
-                print total_time
-                if date_flag == 1:
-                    date_extractor(date,resources)
-                    date_flag = 0
-                objects.extend(ent)
-            # except:
-            #     pass

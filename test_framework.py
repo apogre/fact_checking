@@ -163,7 +163,7 @@ with open('relation_annotations.json') as json_data:
     expected_outputs_relations = json.load(json_data)
 
 
-with open('sentences1.csv') as f:
+with open('sentences.csv') as f:
     reader = csv.DictReader(f)
     sentence_list = []
     id_list = []

@@ -4,7 +4,8 @@ import sys
 import time
 import operator, json
 import collections, csv
-import pprint
+import pprint, os
+from StanfordOpenIEPython.main import stanford_ie
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
@@ -33,7 +34,6 @@ def precision_recall_relations1(n,relations):
     for r_key,r_val in ex_dict.iteritems():
         r_val.append(r_key)
         ex_rels.append(r_val)
-    # ex_rels = list(set(ex_rels))
     true_pos = []
     for ret_rel in retrived_rels:
         for ex_rel in ex_rels:
@@ -77,11 +77,14 @@ def precision_recall_entities(n, raw_resources):
     return p_list,r_list
 
 
-def fact_checker(sentence_lis,id_list):
+def fact_checker(sentence_lis, id_list):
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
     verb_entity = fact_check.verb_entity_matcher(dep_s)
+    triples = stanford_ie("sentences.txt", verbose=False)
+    print triples
+    sys.exit(0)
     # print verb_entity
     start_time = time.time()
     for i in range(0, 1):
@@ -165,13 +168,19 @@ with open('relation_annotations.json') as json_data:
 
 with open('sentences.csv') as f:
     reader = csv.DictReader(f)
-    sentence_list = []
+    sentences_list = []
     id_list = []
-    for i,row in enumerate(reader):
-        sentence = row['sentence']
-        sentence_list.append(row['sentence'])
-        id_list.append(row['id'])
-    fact_checker(sentence_list,id_list)
+    try:
+        os.remove('sentences.txt')
+    except:
+        pass
+    with open('sentences.txt','a') as text:
+        for i,row in enumerate(reader):
+            sentence = row['sentence']
+            text.write(sentence+'\n')
+            sentences_list.append(row['sentence'])
+            id_list.append(row['id'])
+    fact_checker(sentences_list,id_list)
         # if i % 20 != 0:
         #     sentence_list.append(sentence)
         #     if i == len(sentences):

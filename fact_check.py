@@ -23,10 +23,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -180,22 +180,17 @@ def resource_extractor_updated(labels):
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
-            # print q_u
             result = sparql.query(sparql_dbpedia, q_u)
             values = [sparql.unpack_row(row) for row in result]
             if not values and label[1] == 'PERSON':
                 result = sparql.query(sparql_dbpedia, q_birthname)
                 values = [sparql.unpack_row(row) for row in result]
-            # print values
             raw_resources[label[0]] = [val[0].split('/')[-1] for val in values]
-            # print raw_resources
-            # sys.exit(0)
             new_val = [val for val in values if not 'Category:' in val[0] and not 'wikidata' in val[0]]
             values = new_val
             ent_size.append(len(values))
             label = label+(len(new_val),)
             new_labels.append(label)
-
             add_score = [similar(label[0],val[1]) for val in values]
             for s,score in enumerate(add_score):
                 if not 'Category:' in values[0] and not 'wikidata' in values[0]:
@@ -205,12 +200,8 @@ def resource_extractor_updated(labels):
             # print values
             sorted_values = sorted(values,key=operator.itemgetter(2),reverse=True)
             resources[label[0]] = sorted_values
-            # print("--- %s res score seconds ---" % (time.time() - res_query1))
-            # print "=============================================="
         else:
             date_flag = 1
-            # print '++++++++++++++='
-            # print label
             date_labels.append(label[0])
     return resources, ent_size, date_labels, raw_resources
 
@@ -313,6 +304,7 @@ def relation_extractor_1hop(resources,verb_entity):
 def relation_extractor_updated1(resources,verb_entity):
     global new_labels
     print new_labels
+    print ">>>>>>>>>>>>"
     relation = []
     new_labels = sorted(new_labels, key=operator.itemgetter(2))
     new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)

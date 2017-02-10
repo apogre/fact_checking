@@ -122,6 +122,7 @@ def fact_checker(sentence_lis, id_list):
             # sys.exit(0)
             if relations:
                 pprint.pprint(relations)
+                # sys.exit(0)
                 true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(sent_id, relations)
                 true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(sent_id, relations)
                 print '\n'

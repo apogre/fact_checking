@@ -23,10 +23,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -244,7 +244,10 @@ def relation_processor(relations):
     for n,rel in enumerate(relations):
         id_list = []
         for m,item in enumerate(rel):
-            res_key = item[0].split('/')[-1]
+            try:
+                res_key = item[0].split('/')[-1]
+            except:
+                res_key = str(item[0])
             if m<2:
                 if res_key not in entity_dict.keys():
                     res_id = len(entity_dict)+1
@@ -317,7 +320,7 @@ def relation_extractor_1hop(resources,verb_entity):
 
 
 def relation_extractor_triples(resources, triples):
-    relation_ent = []
+    relation = []
     for triple_k, triple_v in triples.iteritems():
         item1_v = resources[triple_v[0]]
         for i1 in item1_v:
@@ -330,7 +333,7 @@ def relation_extractor_triples(resources, triples):
                 result = sparql.query(sparql_dbpedia, q_all)
                 q1_values = [sparql.unpack_row(row_result) for row_result in result]
                 q1_list = [qv[1] for qv in q1_values]
-            if not isinstance(triple_v[1],datetime):
+            if not isinstance(triple_v[1],datetime.datetime):
                 item2_v = resources[triple_v[1]]
                 url2_list = [i2[0] for i2 in item2_v]
                 # print url2_list
@@ -340,6 +343,8 @@ def relation_extractor_triples(resources, triples):
                     # print match
                     if match:
                         for ma in match:
+                            # print ma
+                            # sys.exit(0)
                             predicate = ma[1][0]
                             if predicate not in predicate_comment.keys():
                                 comment = comment_extractor(predicate)
@@ -347,16 +352,34 @@ def relation_extractor_triples(resources, triples):
                             else:
                                 comment = predicate_comment[predicate]
                             # print ma, comment
-                            pred_score = rel_score_predicate(triple_k, comment)
+                            pred_score = rel_score_triple(triple_k, comment)
                             # print pred_score
                             score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
                             ma.pop(1)
                             ma.append(score2)
-                            ma.append([predicate, score])
+                            ma.append([predicate, pred_score])
                             relation.append(ma)
-            # else:
-
-    return relation_ent
+            else:
+                date_match = get_dates(i1,triple_v[1])
+                # print date_match
+                # sys.exit(0)
+                if date_match:
+                    for dm in date_match:
+                        predicate = dm[1][0]
+                        if predicate not in predicate_comment.keys():
+                            comment = comment_extractor(predicate)
+                            predicate_comment[predicate] = comment
+                        else:
+                            comment = predicate_comment[predicate]
+                        pred_score = rel_score_triple(triple_k, comment)
+                        score = rel_score_literal(dm, score1, pred_score)
+                        dm.pop(1)
+                        dm.append([triple_v[1],0])
+                        dm.append([predicate, pred_score])
+                        # print dm
+                        # sys.exit(0)
+                        relation.append(dm)
+    return relation
 
 
 def relation_extractor_updated1(resources, verb_entity, triples):
@@ -447,6 +470,11 @@ def rel_score_triple(triple_k,comment):
             return 0
 
 
+def rel_score_literal(dm,score1,pred_score):
+    score = (score1+pred_score) / 2
+    return score
+
+
 def rel_score_label(ma,score1,item2_v,pred_score):
     scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
     # print "-----"
@@ -499,25 +527,22 @@ def comment_extractor(ont):
     return comment
 
 
-def date_extractor(date,resources):
-    # print resources
-    for key,val in resources.iteritems():
-        for v in val:
-            # print v
-            if 'dbpedia' in v:
-                link = urllib2.urlopen(v)
-                v = link.geturl()
-                v = v.replace('page','resource')
-                dq=('SELECT distinct ?r ?o WHERE  {  ?r a owl:DatatypeProperty ; rdfs:range xsd:date . <'+str(v) + '> ?r ?o .}')
-                resultd = sparql.query(sparql_dbpedia, dq)
-                # print resultd
-                for i,row1 in enumerate(resultd):
-                    # print i
-                    values1 = sparql.unpack_row(row1)
-                    
-                    if values1[1] == date.date():
-                        print v,values1
-                    # resources[key].extend(values1)
+def get_dates(i1,date_ent):
+    v = i1[0]
+    dates_matched = []
+    if 'dbpedia' in v:
+        link = urllib2.urlopen(v)
+        v = link.geturl()
+        v = v.replace('page', 'resource')
+        dq = ('SELECT distinct ?r ?o WHERE  {  ?r a owl:DatatypeProperty ; rdfs:range xsd:date . <' + str(
+            v) + '> ?r ?o .}')
+        resultd = sparql.query(sparql_dbpedia, dq)
+        for i, row1 in enumerate(resultd):
+            values1 = sparql.unpack_row(row1)
+            if values1[1] == date_ent.date():
+                # print v, values1
+                dates_matched.append([i1,values1])
+    return dates_matched
 
 
 if __name__ == '__main__':

@@ -23,10 +23,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -39,6 +39,7 @@ parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_model
 #
 # export STANFORD_MODELS=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/classifiers:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09/models:$STANFORDTOOLSDIR/stanford-openie/stanford-openie-models.jar
 # sudo /etc/init.d/virtuoso-opensource-7 start
+
 
 def get_nodes_updated(netagged_words):
     ent = []
@@ -74,6 +75,23 @@ def verb_entity_matcher(parsed_tree):
     return verb_ent
 
 
+def svo_finder(ent,triples):
+    triple_dict = {}
+    entity_set = [x[0] for x in ent]
+    for triple in triples:
+        for trip in triple:
+            try:
+                date_ent = dp.parse(trip)
+                if triple[0] in entity_set and date_ent in entity_set:
+                    triple_dict[triple[1]] = [triple[0],date_ent]
+                    # print triple
+            except:
+                pass
+        if triple[0] in entity_set and triple[2].lstrip(' ') in entity_set:
+            triple_dict[triple[1]] = [triple[0], triple[2].lstrip()]
+            # print triple
+    return triple_dict
+
 def be_verb(tree):
     be_tree = {}
     be_noun = ''
@@ -98,7 +116,6 @@ def be_verb(tree):
     return be_tree
 
 
-
 def get_verb(postagged_words):
     verb = []
     for tag in postagged_words:
@@ -106,8 +123,10 @@ def get_verb(postagged_words):
             verb.append(tag)
     return verb
 
+
 def similar(a,b):
     return SequenceMatcher(None,a,b).ratio()
+
 
 def date_parser(docs):
     dates = []
@@ -117,6 +136,7 @@ def date_parser(docs):
         except:
             dates.append('')
     return dates
+
 
 def location_update(parse):
     new_loc = ''
@@ -131,6 +151,7 @@ def location_update(parse):
                         ent = new_loc.split(',')
                         st = [','.join(e.rstrip() for e in ent)]
                         return st
+
 
 def st_tagger(sentence_list):
     ne_s = st_ner.tag_sents(sentence_list)
@@ -205,14 +226,6 @@ def resource_extractor_updated(labels):
             date_labels.append(label[0])
     return resources, ent_size, date_labels, raw_resources
 
-def redirect_link(o_link):
-    try:
-        link = urllib2.urlopen(o_link)
-        url1 = link.geturl()
-        r_link = url1.replace('page','resource')
-    except:
-        r_link = o_link
-    return r_link
 
 def date_checker(dl,vo_date):
     for d in dl:
@@ -222,8 +235,9 @@ def date_checker(dl,vo_date):
     else:
         return None
 
+
 def relation_processor(relations):
-    # print relations
+    print relations
     relation_graph = {}
     entity_dict = {}
     edge_dict = {}
@@ -301,10 +315,53 @@ def relation_extractor_1hop(resources,verb_entity):
 
     return None
 
-def relation_extractor_updated1(resources,verb_entity):
+
+def relation_extractor_triples(resources, triples):
+    relation_ent = []
+    for triple_k, triple_v in triples.iteritems():
+        item1_v = resources[triple_v[0]]
+        for i1 in item1_v:
+            predicate_comment = {}
+            if 'dbpedia' in i1[0]:
+                url1 = i1[0]
+                score1 = [it for it in i1 if isinstance(it, float)]
+                score1 = score1[0]
+                q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
+                result = sparql.query(sparql_dbpedia, q_all)
+                q1_values = [sparql.unpack_row(row_result) for row_result in result]
+                q1_list = [qv[1] for qv in q1_values]
+            if not isinstance(triple_v[1],datetime):
+                item2_v = resources[triple_v[1]]
+                url2_list = [i2[0] for i2 in item2_v]
+                # print url2_list
+                intersect = set(url2_list).intersection(q1_list)
+                for inte in intersect:
+                    match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
+                    # print match
+                    if match:
+                        for ma in match:
+                            predicate = ma[1][0]
+                            if predicate not in predicate_comment.keys():
+                                comment = comment_extractor(predicate)
+                                predicate_comment[predicate] = comment
+                            else:
+                                comment = predicate_comment[predicate]
+                            # print ma, comment
+                            pred_score = rel_score_predicate(triple_k, comment)
+                            # print pred_score
+                            score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
+                            ma.pop(1)
+                            ma.append(score2)
+                            ma.append([predicate, score])
+                            relation.append(ma)
+            # else:
+
+    return relation_ent
+
+
+def relation_extractor_updated1(resources, verb_entity, triples):
     global new_labels
     print new_labels
-    print ">>>>>>>>>>>>"
     relation = []
     new_labels = sorted(new_labels, key=operator.itemgetter(2))
     new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)
@@ -354,7 +411,8 @@ def relation_extractor_updated1(resources,verb_entity):
                                     # print ma
                                     # relation.append(sum(ma, []))
                                     relation.append(ma)
-    return relation , len(relation)
+    return relation, len(relation)
+
 
 def rel_score_predicate(verb_entity,comment):
     # print verb_entity
@@ -363,6 +421,22 @@ def rel_score_predicate(verb_entity,comment):
     verbs = []
     for vb in verb_entity:
         verbs.extend(vb.keys())
+    for com in comment:
+        meaning.extend(com[0].split())
+    # print meaning
+    for verb in verbs:
+        if verb.lower() in meaning:
+            return 1
+        else:
+            return 0
+
+
+def rel_score_triple(triple_k,comment):
+    # print verb_entity
+    # print comment
+    meaning = []
+    verbs = []
+    verbs = [vb for vb in triple_k.split()]
     for com in comment:
         meaning.extend(com[0].split())
     # print meaning
@@ -384,6 +458,7 @@ def rel_score_label(ma,score1,item2_v,pred_score):
     score = (score1 + scores2[1]+pred_score) / 3
     return score, scores2
 
+
 def rel_score_simple(ma,score1,item2_v):
     scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
     # print "-----"
@@ -394,6 +469,7 @@ def rel_score_simple(ma,score1,item2_v):
     # print scores2
     score = (score1 + scores2[1]) / 2
     return score, scores2
+
 
 def comment_extractor(ont):
     if "property" in ont:

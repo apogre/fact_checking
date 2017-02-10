@@ -81,10 +81,12 @@ def fact_checker(sentence_lis, id_list):
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
+    # print dep_s
     verb_entity = fact_check.verb_entity_matcher(dep_s)
+
+    # print verb_entity
     triples = stanford_ie("sentences.txt", verbose=False)
-    print triples
-    sys.exit(0)
+    # print triples
     # print verb_entity
     start_time = time.time()
     for i in range(0, 1):
@@ -92,24 +94,27 @@ def fact_checker(sentence_lis, id_list):
             sent_id = id_list[n]
             print sent_id, sentence_lis[n],'\n'
             ent = fact_check.get_nodes_updated(ne)
+            # print ent
             new_loc = fact_check.location_update(ne)
             if new_loc:
                 new_ent = (new_loc[0], 'LOCATION')
                 ent.append(new_ent)
             if dates[n]:
-                date_string = (dates[n], 'DATE')
+                date_string = (dates[n][0], 'DATE')
                 ent.append(date_string)
             vb = fact_check.get_verb(pos_s[n])
             print ent
             # sys.exit(0)
             res_time = time.time()
             resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor_updated(ent)
-            relation_ent, rel_count = fact_check.relation_extractor_updated1(resources,verb_entity[n])
+            triple_dict = fact_check.svo_finder(ent,triples)
+            print triple_dict
+            relation_ent = fact_check.relation_extractor_triples(resources, triple_dict)
+            # relation_ent, rel_count = fact_check.relation_extractor_updated1(resources, verb_entity[n], triple_dict)
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
             precision_ent, recall_ent = precision_recall_entities(sent_id, raw_resources)
             # print '\n'
-            # sys.exit(0)
             relations = fact_check.relation_processor(relation_ent)
             print "Relation Graph"
             print "--------------"
@@ -166,7 +171,7 @@ with open('relation_annotations.json') as json_data:
     expected_outputs_relations = json.load(json_data)
 
 
-with open('sentences.csv') as f:
+with open('sentences1.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []

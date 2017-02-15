@@ -354,7 +354,7 @@ def relation_extractor_triples(resources, triples):
                     intersect = set(url2_list).intersection(q1_list)
                     for inte in intersect:
                         match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
-                        # print match
+                        print match
                         if match:
                             for ma in match:
                                 # print ma
@@ -489,8 +489,8 @@ def rel_score_literal(dm,score1,pred_score):
 
 def rel_score_label(ma,score1,item2_v,pred_score):
     scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
-    # print "-----"
-    # print scores2
+    print "-----"
+    print score1
     scores2 = scores2[0]
     if len(scores2)>2:
         scores2.pop(1)

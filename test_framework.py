@@ -86,7 +86,7 @@ def fact_checker(sentence_lis, id_list):
 
     # print verb_entity
     triples = stanford_ie("sentences.txt", verbose=False)
-    # print triples
+    print triples
     # print verb_entity
     start_time = time.time()
     for i in range(0, 1):
@@ -118,7 +118,7 @@ def fact_checker(sentence_lis, id_list):
             relations = fact_check.relation_processor(relation_ent)
             print "Relation Graph"
             print "--------------"
-            # print relations
+            print relations
             # sys.exit(0)
             if relations:
                 pprint.pprint(relations)

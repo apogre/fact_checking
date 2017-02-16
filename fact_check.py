@@ -546,12 +546,9 @@ def get_dates(i1,date_ent):
     v = i1[0]
     dates_matched = []
     if 'dbpedia' in v:
-        link = urllib2.urlopen(v)
-        v = link.geturl()
         v = v.replace('page', 'resource')
         dq = ('SELECT distinct ?r ?o WHERE  {  ?r a owl:DatatypeProperty ; rdfs:range xsd:date . <' + str(
             v) + '> ?r ?o .}')
-        # print dq
         resultd = sparql.query(sparql_dbpedia, dq)
         for i, row1 in enumerate(resultd):
             values1 = sparql.unpack_row(row1)

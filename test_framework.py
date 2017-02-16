@@ -110,6 +110,7 @@ def fact_checker(sentence_lis, id_list):
             triple_dict = fact_check.svo_finder(ent,triples)
             print triple_dict
             relation_ent = fact_check.relation_extractor_triples(resources, triple_dict)
+            # sys.exit(0)
             # relation_ent, rel_count = fact_check.relation_extractor_updated1(resources, verb_entity[n], triple_dict)
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"

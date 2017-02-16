@@ -118,7 +118,7 @@ def fact_checker(sentence_lis, id_list):
             relations = fact_check.relation_processor(relation_ent)
             print "Relation Graph"
             print "--------------"
-            print relations
+            # print relations
             # sys.exit(0)
             if relations:
                 pprint.pprint(relations)

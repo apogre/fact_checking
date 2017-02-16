@@ -15,7 +15,7 @@ import time, sys, re
 objects = []
 relation=[]
 ROOT = 'ROOT'
-aux_verb = ['was', 'is', 'become']
+aux_verb = ['was', 'is', 'become','to']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
 sparql_dbpedia = 'http://localhost:8890/sparql'
 # sparql_dbpedia = 'https://dbpedia.org/sparql'
@@ -23,10 +23,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -92,7 +92,7 @@ def svo_finder(ent,triples):
                         triple_dict[triple[1]] = [[triple[0],date_ent]]
                     else:
                         triple_dict[triple[1]].append([triple[0], date_ent])
-                    print triple_dict
+                    # print triple_dict
             except:
                 pass
         if triple[0] in entity_set and triple[2].lstrip(' ') in entity_set:
@@ -371,7 +371,7 @@ def relation_extractor_triples(resources, triples):
                                 score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
                                 ma.pop(1)
                                 ma.append(score2)
-                                ma.append([predicate, pred_score])
+                                ma.append([predicate, score])
                                 relation.append(ma)
                 else:
                     date_match = get_dates(i1, triple_v[1])
@@ -387,7 +387,7 @@ def relation_extractor_triples(resources, triples):
                             score = rel_score_literal(dm, score1, pred_score)
                             dm.pop(1)
                             dm.append([triple_v[1],0])
-                            dm.append([predicate, pred_score])
+                            dm.append([predicate, 1])
                             # print dm
                             # sys.exit(0)
                             relation.append(dm)
@@ -467,30 +467,33 @@ def rel_score_predicate(verb_entity,comment):
 
 
 def rel_score_triple(triple_k, comment):
-    # print verb_entity
+    # print triples_k
     # print comment
     meaning = []
     verbs = []
-    verbs = [vb for vb in triple_k.split()]
+    verbs.extend([vb for vb in triple_k.split()])
     for com in comment:
         meaning.extend(com[0].split())
+    # print "-----"
     # print meaning
+    # print verbs
+    # print "-----"
+    score = 0
     for verb in verbs:
-        if verb.lower() in meaning:
-            return 1
-        else:
-            return 0
+        if verb.lower() in meaning and verb.lower not in aux_verb:
+            score = 1
+    return score
 
 
-def rel_score_literal(dm,score1,pred_score):
+def rel_score_literal(dm, score1, pred_score):
     score = (score1+pred_score) / 2
     return score
 
 
 def rel_score_label(ma,score1,item2_v,pred_score):
     scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
-    print "-----"
-    print score1
+    # print "-----"
+    # print score1
     scores2 = scores2[0]
     if len(scores2)>2:
         scores2.pop(1)

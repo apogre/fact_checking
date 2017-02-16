@@ -6,9 +6,20 @@ import operator, json
 import collections, csv
 import pprint, os
 from StanfordOpenIEPython.main import stanford_ie
+from datetime import datetime
 
 aux_verb = ['was', 'is', 'become']
 precision_recall_stats = collections.OrderedDict()
+new_triple_flag = 0
+
+
+def json_serial(obj):
+    """JSON serializer for objects not serializable by default json code"""
+
+    if isinstance(obj, datetime):
+        serial = obj.isoformat()
+        return serial
+    raise TypeError ("Type not serializable")
 
 
 def precision_recall_ent_match(n,relations):
@@ -85,8 +96,8 @@ def fact_checker(sentence_lis, id_list):
     verb_entity = fact_check.verb_entity_matcher(dep_s)
 
     # print verb_entity
-    triples = stanford_ie("sentences.txt", verbose=False)
-    print triples
+    # triples = stanford_ie("sentences.txt", verbose=False)
+    # print triples
     # print verb_entity
     start_time = time.time()
     for i in range(0, 1):
@@ -107,7 +118,21 @@ def fact_checker(sentence_lis, id_list):
             # sys.exit(0)
             res_time = time.time()
             resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor_updated(ent)
-            triple_dict = fact_check.svo_finder(ent,triples)
+            if sent_id in file_triples.keys():
+                triples = file_triples[sent_id]
+                print triples
+                triple_dict = fact_check.svo_finder(ent, triples)
+            else:
+                try:
+                    os.remove('sentences.txt')
+                except:
+                    pass
+                with open('sentences.txt', 'a') as text:
+                    text.write(sentence_lis[n])
+                triples = stanford_ie("sentences.txt", verbose=False)
+                triple_dict = fact_check.svo_finder(ent,triples)
+                file_triples[sent_id] = triple_dict
+                new_triple_flag = 1
             print triple_dict
             relation_ent = fact_check.relation_extractor_triples(resources, triple_dict)
             # sys.exit(0)
@@ -144,6 +169,13 @@ def fact_checker(sentence_lis, id_list):
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
+
+    if new_triple_flag == 1:
+        os.remove('triples.json')
+        print file_triples
+        with open('triples.json', 'w') as fp:
+            json.dump(file_triples, fp , default=json_serial)
+
     ex_time = time.time() - start_time
     print "Total Execution Time: " + str(round(ex_time, 2))
     # print precision_recall_stats
@@ -172,21 +204,19 @@ with open('entity_annotations.json') as json_data:
 with open('relation_annotations.json') as json_data:
     expected_outputs_relations = json.load(json_data)
 
+with open('triples.json') as json_data:
+    file_triples = json.load(json_data)
+
 
 with open('sentences1.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []
-    try:
-        os.remove('sentences.txt')
-    except:
-        pass
-    with open('sentences.txt','a') as text:
-        for i,row in enumerate(reader):
-            sentence = row['sentence']
-            text.write(sentence+'\n')
-            sentences_list.append(row['sentence'])
-            id_list.append(row['id'])
+
+    for i,row in enumerate(reader):
+        sentence = row['sentence']
+        sentences_list.append(row['sentence'])
+        id_list.append(row['id'])
     fact_checker(sentences_list,id_list)
         # if i % 20 != 0:
         #     sentence_list.append(sentence)

@@ -547,18 +547,22 @@ def get_dates(i1,date_ent):
     dates_matched = []
     if 'dbpedia' in v:
         v = v.replace('page', 'resource')
-        dq = ('SELECT distinct ?r ?o WHERE  {  ?r a owl:DatatypeProperty ; rdfs:range xsd:date . <' + str(
-            v) + '> ?r ?o .}')
-        resultd = sparql.query(sparql_dbpedia, dq)
-        for i, row1 in enumerate(resultd):
-            values1 = sparql.unpack_row(row1)
-            if values1[1] == date_ent.date():
-                # print v, values1
-                dates_matched.append([i1,values1])
-            else:
-                year1 = str(values1[1]).split('-')[0]
-                if year1 == str(date_ent.date().year):
-                    dates_matched.append([i1, values1])
+        # print v
+        try:
+            dq = ('SELECT distinct ?r ?o WHERE  {  ?r a owl:DatatypeProperty ; rdfs:range xsd:date . <' + str(
+                v) + '> ?r ?o .}')
+            resultd = sparql.query(sparql_dbpedia, dq)
+            for i, row1 in enumerate(resultd):
+                values1 = sparql.unpack_row(row1)
+                if values1[1] == date_ent.date():
+                    # print v, values1
+                    dates_matched.append([i1,values1])
+                else:
+                    year1 = str(values1[1]).split('-')[0]
+                    if year1 == str(date_ent.date().year):
+                        dates_matched.append([i1, values1])
+        except:
+            pass
     return dates_matched
 
 

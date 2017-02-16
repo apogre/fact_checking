@@ -5,7 +5,7 @@ import dateutil.parser as dp
 import sparql
 import urllib2
 from difflib import SequenceMatcher
-import datetime
+from datetime import datetime
 from itertools import groupby
 import operator
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
@@ -23,10 +23,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -80,12 +80,12 @@ def svo_finder(ent,triples):
     entity_set = [x[0] for x in ent]
     for triple in triples:
         for ent in entity_set:
-            if not isinstance(ent, datetime.datetime):
-                if ent in triple[2].lstrip(' ') and triple[1].lstrip(' ') not in aux_verb:
+            if not isinstance(ent, datetime):
+                if ent in triple[2] and triple[1] not in aux_verb:
                     triple[2] = ent
         for trip in triple:
             try:
-                date_ent = dp.parse(trip,default=datetime.datetime(2017, 1, 1))
+                date_ent = dp.parse(trip,default=datetime(2017, 1, 1))
                 print date_ent
                 if triple[0] in entity_set and date_ent in entity_set:
                     if triple[1] not in triple_dict.keys():
@@ -95,11 +95,12 @@ def svo_finder(ent,triples):
                     # print triple_dict
             except:
                 pass
-        if triple[0] in entity_set and triple[2].lstrip(' ') in entity_set:
+        if triple[0] in entity_set and triple[2] in entity_set:
             if triple[1] not in triple_dict.keys():
-                triple_dict[triple[1]] = [[triple[0], triple[2].lstrip()]]
+                triple_dict[triple[1]] = [[triple[0], triple[2]]]
             else:
-                triple_dict[triple[1]].append([triple[0], triple[2].lstrip()])
+                triple_dict[triple[1]].append([triple[0], triple[2]])
+    print "here1"
     return triple_dict
 
 
@@ -143,7 +144,7 @@ def date_parser(docs):
     dates = []
     for doc in docs:
         try:
-            dates.append([dp.parse(doc, fuzzy=True,default=datetime.datetime(2017, 1, 1))])
+            dates.append([dp.parse(doc, fuzzy=True,default=datetime(2017, 1, 1))])
         except:
             dates.append('')
     return dates
@@ -248,7 +249,7 @@ def date_checker(dl,vo_date):
 
 
 def relation_processor(relations):
-    print relations
+    # print relations
     relation_graph = {}
     entity_dict = {}
     edge_dict = {}
@@ -345,16 +346,13 @@ def relation_extractor_triples(resources, triples):
                     result = sparql.query(sparql_dbpedia, q_all)
                     q1_values = [sparql.unpack_row(row_result) for row_result in result]
                     q1_list = [qv[1] for qv in q1_values]
-                if not isinstance(triple_v[1], datetime.datetime):
-                    # print "------------"
-                    # print triple_v[1]
-                    item2_v = resources[triple_v[1]]
+                item2_v = resources.get(triple_v[1])
+                if item2_v:
                     url2_list = [i2[0] for i2 in item2_v]
-                    # print url2_list
                     intersect = set(url2_list).intersection(q1_list)
                     for inte in intersect:
                         match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
-                        print match
+                        # print match
                         if match:
                             for ma in match:
                                 # print ma
@@ -375,6 +373,8 @@ def relation_extractor_triples(resources, triples):
                                 relation.append(ma)
                 else:
                     date_match = get_dates(i1, triple_v[1])
+                    # print date_match
+                    # sys.exit(0)
                     if date_match:
                         for dm in date_match:
                             predicate = dm[1][0]
@@ -394,7 +394,7 @@ def relation_extractor_triples(resources, triples):
     return relation
 
 
-def relation_extractor_updated1(resources, verb_entity, triples):
+def relation_extractor_updated1(resources, verb_entity):
     global new_labels
     print new_labels
     relation = []
@@ -542,9 +542,14 @@ def comment_extractor(ont):
     return comment
 
 
-def get_dates(i1,date_ent):
+def get_dates(i1,date_ent_str):
     v = i1[0]
     dates_matched = []
+    if not isinstance(date_ent_str,datetime):
+        # u'1940-04-25T00:00:00'
+        date_ent = datetime.strptime(date_ent_str,"%Y-%m-%dT%H:%M:%S")
+    # print date_ent
+    # print date_ent.date()
     if 'dbpedia' in v:
         v = v.replace('page', 'resource')
         # print v
@@ -554,6 +559,7 @@ def get_dates(i1,date_ent):
             resultd = sparql.query(sparql_dbpedia, dq)
             for i, row1 in enumerate(resultd):
                 values1 = sparql.unpack_row(row1)
+                # print values1[1],date_ent.date()
                 if values1[1] == date_ent.date():
                     # print v, values1
                     dates_matched.append([i1,values1])

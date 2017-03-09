@@ -183,6 +183,7 @@ def resource_extractor_updated(labels):
     resources = {}
     raw_resources = {}
     for i,label in enumerate(labels):
+        print label
         date_labels = []
         if label[1] != 'DATE':
             my_labels = label[0].split()
@@ -213,6 +214,7 @@ def resource_extractor_updated(labels):
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
+            print q_u
             result = sparql.query(sparql_dbpedia, q_u)
             values = [sparql.unpack_row(row) for row in result]
             if not values and label[1] == 'PERSON':

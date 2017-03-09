@@ -209,7 +209,7 @@ with open('triples.json') as json_data:
     file_triples = json.load(json_data)
 
 
-with open('sentences.csv') as f:
+with open('sentences1.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []

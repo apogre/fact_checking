@@ -176,6 +176,20 @@ entities = {}
 new_labels = []
 
 
+def predicate_finder(triple_dict):
+    pval_list=[]
+    for k in triple_dict.keys():
+        print k
+        q_comment = 'SELECT distinct ?uri ?comment WHERE { ?uri rdfs:comment ?comment . FILTER langMatches( lang(?comment), "EN" ).  ?comment bif:contains "'+k.split()[1]+'" .}'
+        q_label = 'SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type rdf:Property . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "'+k.split()[1]+'" .}'
+        predicate_result = sparql.query(sparql_dbpedia, q_comment)
+        p_values = [sparql.unpack_row(row) for row in predicate_result]
+        if not p_values:
+            predicate_result = sparql.query(sparql_dbpedia, q_label)
+            p_values = [sparql.unpack_row(row) for row in predicate_result]
+        pval_list.append(p_values)
+    return pval_list
+
 def resource_extractor_updated(labels):
     global new_labels
     new_labels = []

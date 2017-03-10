@@ -87,6 +87,9 @@ def precision_recall_entities(n, raw_resources):
     return p_list,r_list
 
 
+
+
+
 def fact_checker(sentence_lis, id_list):
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -164,7 +167,11 @@ def fact_checker(sentence_lis, id_list):
 
                 print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
 
-                precision_recall_stats[sent_id] = [precision_rel,recall_rel,precision_ent_out,recall_ent_out]
+                precision_recall_stats[sent_id] = [precision_rel, recall_rel, precision_ent_out, recall_ent_out]
+                if not true_pos_rel:
+                    print "use path mining approach"
+                    predicate_list = fact_check.predicate_finder(triple_dict)
+                    print predicate_list
             else:
                 precision_recall_stats[sent_id] = [0,0,0,0]
             execution_time = time.time() - res_time

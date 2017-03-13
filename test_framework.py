@@ -116,6 +116,8 @@ def fact_checker(sentence_lis, id_list):
             # sys.exit(0)
             res_time = time.time()
             resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor_updated(ent)
+            # print resources
+            # exit(0)
             if sent_id in file_triples.keys():
                 triple_dict = file_triples[sent_id]
                 # print triples
@@ -171,7 +173,15 @@ def fact_checker(sentence_lis, id_list):
                 if not true_pos_rel:
                     print "use path mining approach"
                     predicate_list = fact_check.predicate_finder(triple_dict)
-                    print predicate_list
+                    # print predicate_list
+                    entity_set = fact_check.entity_threshold(resources)
+                    print entity_set
+                    id_set = fact_check.entity_id_finder(entity_set)
+                    print id_set
+                    data_size = fact_check.test_set(id_set)
+                    # fact_check.csv_processor(data_size)
+
+
             else:
                 precision_recall_stats[sent_id] = [0,0,0,0]
             execution_time = time.time() - res_time

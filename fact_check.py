@@ -10,7 +10,8 @@ from itertools import groupby
 import operator
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
 from nltk.parse.stanford import StanfordDependencyParser
-import time, sys, re
+import time, sys, re, csv
+import pandas
 
 objects = []
 relation=[]
@@ -190,6 +191,84 @@ def predicate_finder(triple_dict):
         pval_list.append(p_values)
     return pval_list
 
+
+def entity_threshold(resources):
+    limit_entity ={}
+    for label, entities in resources.iteritems():
+        ent_coded = []
+        for i,ent in enumerate(entities):
+            if i < 20:
+                ent_code = ent[0].split('/')[-1]
+                ent_coded.append(ent_code)
+            else:
+                break
+        limit_entity[label] = ent_coded
+    return limit_entity
+
+
+def entity_id_finder(entity_set):
+    id_set = {}
+    for label, e_set in entity_set.iteritems():
+        id_list = []
+        with open("infobox.nodes", "rb") as csvfile:
+            reader = csv.reader(csvfile, delimiter='\t')
+            print label
+            for row in reader:
+                try:
+                    if row[1] in e_set:
+                        print row
+                        id_list.append(row)
+                except:
+                    pass
+            id_set[label] = id_list
+    return id_set
+
+
+def csv_processor(data_size):
+    with open('output.csv', 'rb') as csvfile:
+        reader = csv.DictReader(csvfile)
+        output_head = reader.fieldnames
+    with open('original.csv','rb') as csvfile:
+        reader = csv.DictReader(csvfile)
+        original_head = reader.fieldnames
+    print len(original_head), len(output_head)
+    residue = [head for head in original_head if head not in output_head]
+    nreq = [head for head in output_head if head not in original_head]
+    with open('residue.csv', 'wb') as csvfile:
+        rwriter = csv.writer(csvfile)
+        for i in range(0,data_size+1):
+            if i == 0:
+                rwriter.writerow(residue)
+            else:
+                rwriter.writerow([0]*len(residue))
+    cs1 = pandas.read_csv('output.csv')
+    cs2 = pandas.read_csv('residue.csv')
+    cs1['t'] = 1
+    cs2['t'] = 1
+    merged = cs1.merge(cs2, on=['t'])
+    merged = merged.drop('t', axis=1)
+    # print merged.shape
+    merged = merged.drop(nreq, inplace=True, axis=1)
+    # print merged.shape
+    merged.to_csv("final.csv", index=False)
+
+
+def test_set(id_set):
+    with open('test_data.csv','wb') as csvfile:
+        datawriter = csv.writer(csvfile)
+        id_keys = id_set.keys()
+        # for k,v in id_set.iteritems():
+        val1 = id_set[id_keys[0]]
+        val2 = id_set[id_keys[1]]
+        print val1, len(val1)
+        print val2, len(val2)
+        data_size = len(val1) * len(val2)
+        for v1 in val1:
+            for v2 in val2:
+                datawriter.writerow([v1[0],v2[0]])
+    return data_size
+
+
 def resource_extractor_updated(labels):
     global new_labels
     new_labels = []
@@ -269,7 +348,7 @@ def relation_processor(relations):
     relation_graph = {}
     entity_dict = {}
     edge_dict = {}
-    for n,rel in enumerate(relations):
+    for n, rel in enumerate(relations):
         id_list = []
         for m,item in enumerate(rel):
             try:
@@ -285,7 +364,7 @@ def relation_processor(relations):
                     id_list.append(res_key)
             else:
                 if res_key not in edge_dict.keys():
-                    edge_dict[res_key] = [{'id':len(edge_dict)+1,'score':item[1],'join':id_list}]
+                    edge_dict[res_key] = [{'id':len(edge_dict)+1, 'score':item[1], 'join':id_list}]
                 else:
                     joins = []
                     for rels in edge_dict[res_key]:

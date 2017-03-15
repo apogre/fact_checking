@@ -154,7 +154,7 @@ def fact_checker(sentence_lis, id_list):
             # sys.exit(0)
             if relations:
                 pprint.pprint(relations)
-                # sys.exit(0)
+                sys.exit(0)
                 true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(sent_id, relations)
                 true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(sent_id, relations)
                 print '\n'
@@ -173,7 +173,7 @@ def fact_checker(sentence_lis, id_list):
                 if not true_pos_rel:
                     print "use path mining approach"
                     predicate_list = fact_check.predicate_finder(triple_dict)
-                    # print predicate_list
+                    print predicate_list
                     entity_set = fact_check.entity_threshold(resources)
                     print entity_set
                     id_set = fact_check.entity_id_finder(entity_set)

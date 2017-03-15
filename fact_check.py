@@ -16,7 +16,7 @@ import pandas
 objects = []
 relation=[]
 ROOT = 'ROOT'
-aux_verb = ['was', 'is', 'become','to']
+aux_verb = ['was', 'is', 'become','to','of']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
 sparql_dbpedia = 'http://localhost:8890/sparql'
 # sparql_dbpedia = 'https://dbpedia.org/sparql'
@@ -24,10 +24,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -216,7 +216,7 @@ def entity_id_finder(entity_set):
             for row in reader:
                 try:
                     if row[1] in e_set:
-                        print row
+                        # print row
                         id_list.append(row)
                 except:
                     pass
@@ -307,7 +307,7 @@ def resource_extractor_updated(labels):
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
-            print q_u
+            # print q_u
             result = sparql.query(sparql_dbpedia, q_u)
             values = [sparql.unpack_row(row) for row in result]
             if not values and label[1] == 'PERSON':
@@ -448,11 +448,13 @@ def relation_extractor_triples(resources, triples):
                     for inte in intersect:
                         match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
                         # print match
+                        # sys.exit(0)
                         if match:
                             for ma in match:
                                 # print ma
                                 # sys.exit(0)
                                 predicate = ma[1][0]
+                                # print predicate
                                 if predicate not in predicate_comment.keys():
                                     comment = comment_extractor(predicate)
                                     predicate_comment[predicate] = comment
@@ -461,6 +463,7 @@ def relation_extractor_triples(resources, triples):
                                 # print ma, comment
                                 pred_score = rel_score_triple(triple_k, comment)
                                 # print pred_score
+                                # print pred_score, triple_k, comment
                                 score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
                                 ma.pop(1)
                                 ma.append(score2)
@@ -531,7 +534,6 @@ def relation_extractor_updated1(resources, verb_entity):
                                         comment = predicate_comment[predicate]
                                     # print ma, comment
                                     pred_score = rel_score_predicate(verb_entity,comment)
-                                    # print pred_score
                                     score, score2 = rel_score_label(ma,score1,item2_v,pred_score)
 
                                     ma.pop(1)
@@ -562,7 +564,7 @@ def rel_score_predicate(verb_entity,comment):
 
 
 def rel_score_triple(triple_k, comment):
-    # print triples_k
+    # print triple_k
     # print comment
     meaning = []
     verbs = []
@@ -575,8 +577,10 @@ def rel_score_triple(triple_k, comment):
     # print "-----"
     score = 0
     for verb in verbs:
-        if verb.lower() in meaning and verb.lower not in aux_verb:
-            score = 1
+        if verb.lower() not in aux_verb:
+            # print verb.lower(), aux_verb
+            if verb.lower() in meaning:
+                score = 1
     return score
 
 
@@ -610,6 +614,7 @@ def rel_score_simple(ma,score1,item2_v):
 
 
 def comment_extractor(ont):
+    # print ont
     if "property" in ont:
         ont = ont.replace("property","ontology")
     q_c=('SELECT distinct ?c WHERE  { <'+str(ont) + '> rdfs:comment ?c }')

@@ -24,10 +24,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -268,6 +268,41 @@ def test_set(id_set):
                 datawriter.writerow([v1[0],v2[0]])
     return data_size
 
+
+def ent_type_extractor(resources, triples):
+    type_set = {}
+    for triple_k, triples_v in triples.iteritems():
+        for triple_v in triples_v:
+            for ent in triple_v:
+                item1_v = resources[ent]
+                type_list = []
+                for i1 in item1_v:
+                    if 'dbpedia' in i1[0]:
+                        url1 = i1[0]
+                        q_type = ('SELECT distinct ?t WHERE { <' + url1 + '> rdf:type ?t .}')
+                        result = sparql.query(sparql_dbpedia, q_type)
+                        type_values = [sparql.unpack_row(row_result) for row_result in result]
+                        type_vals = [val[0].split('/')[-1] for val in type_values if 'ontology' in val[0]]
+                        type_list.extend(type_vals)
+                type_set[ent] = list(set(type_list))
+    return type_set
+
+
+def possible_predicate_type(type_set, triples):
+    predicate_list=[]
+    for triple_k, triples_v in triples.iteritems():
+        for triple_v in triples_v:
+            item1_v = type_set[triple_v[0]]
+            item2_v = type_set[triple_v[1]]
+            for it1 in item1_v:
+                for it2 in item2_v:
+                    q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . ?url1 ?p ?url2 .}'
+                    print q_pp
+                    result = sparql.query(sparql_dbpedia, q_pp)
+                    pred_values = [sparql.unpack_row(row_result) for row_result in result]
+                    pred_vals = [val[0].split('/')[-1] for val in pred_values if 'ontology' in val[0]]
+                    predicate_list.extend(pred_vals)
+    return predicate_list
 
 def resource_extractor_updated(labels):
     global new_labels

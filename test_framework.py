@@ -87,9 +87,6 @@ def precision_recall_entities(n, raw_resources):
     return p_list,r_list
 
 
-
-
-
 def fact_checker(sentence_lis, id_list):
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -138,13 +135,17 @@ def fact_checker(sentence_lis, id_list):
                 file_triples[sent_id] = triple_dict
                 new_triple_flag = 1
             print triple_dict
-            # sys.exit(0)
+            print "here"
             relation_ent = fact_check.relation_extractor_triples(resources, triple_dict)
+            print "here1"
             type_set = fact_check.ent_type_extractor(resources,triple_dict)
             print type_set
             predicate_list = fact_check.possible_predicate_type(type_set,triple_dict)
             print predicate_list
-            sys.exit(0)
+            print len(predicate_list)
+            predicate_list = fact_check.predicate_ranker(predicate_list)
+            prob_value = fact_check.KG_implementation(predicate_list)
+            # sys.exit(0)
             if not relation_ent:
                 relation_ent, rel_count = fact_check.relation_extractor_updated1(resources, verb_entity[n])
             print "Precision & Recall for Resource Extractor"
@@ -158,6 +159,8 @@ def fact_checker(sentence_lis, id_list):
             # sys.exit(0)
             if relations:
                 pprint.pprint(relations)
+                execution_time = time.time() - res_time
+                print execution_time
                 sys.exit(0)
                 true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(sent_id, relations)
                 true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(sent_id, relations)

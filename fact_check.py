@@ -19,7 +19,7 @@ ROOT = 'ROOT'
 aux_verb = ['was', 'is', 'become','to','of']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
 sparql_dbpedia = 'http://localhost:8890/sparql'
-# sparql_dbpedia = 'https://dbpedia.org/sparql'
+sparql_dbpedia_on = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
@@ -290,19 +290,53 @@ def ent_type_extractor(resources, triples):
 
 def possible_predicate_type(type_set, triples):
     predicate_list=[]
+    pair_list = []
+    count = 0
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
             item1_v = type_set[triple_v[0]]
             item2_v = type_set[triple_v[1]]
+            print len(item1_v), len(item2_v)
+
+            print "===================="
             for it1 in item1_v:
                 for it2 in item2_v:
-                    q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . ?url1 ?p ?url2 .}'
+                    if it1 != it2:
+                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . {?url1 ?p ?url2 .} UNION {?url2 ?p ?url1 .}}'
+                    else:
+                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/' + it1 + '> . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2 + '> . ?url1 ?p ?url2 .}'
                     print q_pp
-                    result = sparql.query(sparql_dbpedia, q_pp)
-                    pred_values = [sparql.unpack_row(row_result) for row_result in result]
-                    pred_vals = [val[0].split('/')[-1] for val in pred_values if 'ontology' in val[0]]
-                    predicate_list.extend(pred_vals)
+                    pair = [it1,it2]
+                    if pair not in pair_list:
+                        try:
+                            result = sparql.query(sparql_dbpedia_on, q_pp)
+                            pred_values = [sparql.unpack_row(row_result) for row_result in result]
+                            if pred_values:
+                                pair_list.append(pair)
+                                pred_vals = [val[0].split('/')[-1] for val in pred_values if 'ontology' in val[0]]
+                                predicate_list.extend(pred_vals)
+                                count=count+1
+                                print count
+                        except:
+                            pass
+    predicate_list = list(set(predicate_list))
     return predicate_list
+
+
+def predicate_ranker(predicates):
+    # for predcate in predicates:
+    #     predicate = predicate
+    return predicates
+
+
+def KG_implementation(predicates):
+    # for predicate in predicates:
+    #     q_ts = 'select distinct ?url1 ?url2 where { ?url1 <http://dbpedia.org/ontology/'+predicate+'> ?url2 } limit 50'
+    #     result = sparql.query(sparql_dbpedia_on, q_ts)
+    #     training_set = [sparql.unpack_row(row_result) for row_result in result]
+        # execute the KGMINER script
+    return 0.5
+
 
 def resource_extractor_updated(labels):
     global new_labels
@@ -465,7 +499,8 @@ def relation_extractor_triples(resources, triples):
     relation = []
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
-            item1_v = resources[triple_v[0]]
+            # print triple_v[0]
+            item1_v = resources.get(triple_v[0])
             for i1 in item1_v:
                 predicate_comment = {}
                 if 'dbpedia' in i1[0]:
@@ -477,6 +512,7 @@ def relation_extractor_triples(resources, triples):
                     q1_values = [sparql.unpack_row(row_result) for row_result in result]
                     q1_list = [qv[1] for qv in q1_values]
                 item2_v = resources.get(triple_v[1])
+                # print triple_v[1]
                 if item2_v:
                     url2_list = [i2[0] for i2 in item2_v]
                     intersect = set(url2_list).intersection(q1_list)

@@ -6,12 +6,14 @@ import sparql
 import urllib2
 from difflib import SequenceMatcher
 from datetime import datetime
-from itertools import groupby
+from itertools import groupby,product
 import operator
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
 from nltk.parse.stanford import StanfordDependencyParser
 import time, sys, re, csv
 import pandas
+from nltk.corpus import wordnet as wn
+
 
 objects = []
 relation=[]
@@ -140,6 +142,15 @@ def get_verb(postagged_words):
 def similar(a,b):
     return SequenceMatcher(None,a,b).ratio()
 
+
+def compare(word1, word2):
+    # print word1, word2
+    ss1 = wn.synsets(word1)
+    ss2 = wn.synsets(word2)
+    try:
+        return max(s1.path_similarity(s2) for (s1, s2) in product(ss1, ss2))
+    except:
+        return 0.0
 
 def date_parser(docs):
     dates = []
@@ -323,18 +334,41 @@ def possible_predicate_type(type_set, triples):
     return predicate_list
 
 
-def predicate_ranker(predicates):
-    # for predcate in predicates:
-    #     predicate = predicate
-    return predicates
+def predicate_ranker(predicates,triple):
+    predicate_KG = {}
+    for ky in triple.keys():
+        print ky
+        predicate_ranked = []
+        for k in ky.split():
+            if k not in aux_verb:
+                for predicate in predicates:
+                    predicate_full = "http://dbpedia.org/ontology/" + predicate
+                    phrase = comment_extractor(predicate_full)
+                    if phrase:
+                        # print k, predicate
+                        score = max(compare(k,ph[0]) for ph in phrase if isinstance(ph[0],basestring))
+                        try:
+                            score = round(round, 2)
+                        except:
+                            pass
+                        # print score
+                        predicate_ranked.append([predicate, score])
+        sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
+        # print sorted_values
+        predicate_KG[ky] = sorted_values
+    return predicate_KG
 
 
-def KG_implementation(predicates):
-    # for predicate in predicates:
-    #     q_ts = 'select distinct ?url1 ?url2 where { ?url1 <http://dbpedia.org/ontology/'+predicate+'> ?url2 } limit 50'
-    #     result = sparql.query(sparql_dbpedia_on, q_ts)
-    #     training_set = [sparql.unpack_row(row_result) for row_result in result]
-        # execute the KGMINER script
+def KG_implementation(predicate_ranked):
+    for sent_pred in predicate_ranked.keys():
+        predicate_of_interest = predicate_ranked[sent_pred]
+        for poi in predicate_of_interest:
+            q_ts = 'select distinct ?url1 ?url2 where { ?url1 <http://dbpedia.org/ontology/'+poi[0]+'> ?url2 } limit 50'
+            result = sparql.query(sparql_dbpedia_on, q_ts)
+            training_set = [sparql.unpack_row(row_result) for row_result in result]
+            print training_set
+            sys.exit(0)
+            # execute the KGMINER script
     return 0.5
 
 
@@ -688,8 +722,8 @@ def comment_extractor(ont):
     # print ont
     if "property" in ont:
         ont = ont.replace("property","ontology")
-    q_c=('SELECT distinct ?c WHERE  { <'+str(ont) + '> rdfs:comment ?c }')
-    q_l = ('SELECT distinct ?c WHERE  { <' + str(ont) + '> rdfs:label ?c }')
+    q_l=('SELECT distinct ?c WHERE  { <'+str(ont) + '> rdfs:comment ?c }')
+    q_c = ('SELECT distinct ?c WHERE  { <' + str(ont) + '> rdfs:label ?c }')
     # print q_c
     comments = sparql.query(sparql_dbpedia, q_c)
     if comments:

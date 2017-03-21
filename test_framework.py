@@ -137,15 +137,17 @@ def fact_checker(sentence_lis, id_list):
             print triple_dict
             print "here"
             relation_ent = fact_check.relation_extractor_triples(resources, triple_dict)
-            print "here1"
-            type_set = fact_check.ent_type_extractor(resources,triple_dict)
-            print type_set
-            predicate_list = fact_check.possible_predicate_type(type_set,triple_dict)
-            print predicate_list
-            print len(predicate_list)
-            predicate_list = fact_check.predicate_ranker(predicate_list)
-            prob_value = fact_check.KG_implementation(predicate_list)
-            # sys.exit(0)
+            # print "here1"
+            # type_set = fact_check.ent_type_extractor(resources,triple_dict)
+            # print type_set
+            # predicate_list = fact_check.possible_predicate_type(type_set,triple_dict)
+            predicate_list = predicate_list_json["data1"]
+            # print predicate_list
+            # print len(predicate_list)
+            predicate_ranked = fact_check.predicate_ranker(predicate_list,triple_dict)
+            print predicate_ranked
+            prob_value = fact_check.KG_implementation(predicate_ranked)
+            sys.exit(0)
             if not relation_ent:
                 relation_ent, rel_count = fact_check.relation_extractor_updated1(resources, verb_entity[n])
             print "Precision & Recall for Resource Extractor"
@@ -228,6 +230,9 @@ with open('entity_annotations.json') as json_data:
 
 with open('relation_annotations.json') as json_data:
     expected_outputs_relations = json.load(json_data)
+
+with open('predicate_dict.json') as json_data:
+    predicate_list_json = json.load(json_data)
 
 with open('triples.json') as json_data:
     file_triples = json.load(json_data)

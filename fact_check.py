@@ -13,6 +13,7 @@ from nltk.parse.stanford import StanfordDependencyParser
 import time, sys, re, csv
 import pandas
 from nltk.corpus import wordnet as wn
+from ftfy.badness import sequence_weirdness
 
 
 objects = []
@@ -81,6 +82,9 @@ def verb_entity_matcher(parsed_tree):
 def svo_finder(ent,triples):
     triple_dict = {}
     entity_set = [x[0] for x in ent]
+    print ent
+    print entity_set
+    print "----"
     for triple in triples:
         for ent in entity_set:
             if not isinstance(ent, datetime):
@@ -144,13 +148,23 @@ def similar(a,b):
 
 
 def compare(word1, word2):
-    # print word1, word2
-    ss1 = wn.synsets(word1)
-    ss2 = wn.synsets(word2)
-    try:
-        return max(s1.path_similarity(s2) for (s1, s2) in product(ss1, ss2))
-    except:
-        return 0.0
+    wierdness2 = sequence_weirdness(word2)
+    if wierdness2 == 0:
+        wierdness1 = sequence_weirdness(word1)
+        if wierdness1 == 0:
+            print word1, word2
+            ss1 = sum([wn.synsets(word) for word in word1.split()],[])
+            ss2 = sum([wn.synsets(word) for word in word2.split()],[])
+            print ss1, ss2
+            # ss1 = sum(ss1,[])
+            # ss2 = sum(ss2,[])
+            # print ss1, ss2
+            try:
+                return max(s1.path_similarity(s2) for (s1, s2) in product(ss1, ss2))
+            except:
+                print "exception"
+                return 0.0
+
 
 def date_parser(docs):
     dates = []
@@ -280,7 +294,7 @@ def test_set(id_set):
     return data_size
 
 
-def ent_type_extractor(resources, triples):
+def ent_type_extractor(resources, triples, ent_dict):
     type_set = {}
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
@@ -290,13 +304,38 @@ def ent_type_extractor(resources, triples):
                 for i1 in item1_v:
                     if 'dbpedia' in i1[0]:
                         url1 = i1[0]
-                        q_type = ('SELECT distinct ?t WHERE { <' + url1 + '> rdf:type ?t .}')
+                        q_type = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?t WHERE {{ <' + url1 + '> dbo:type ?t .} UNION { <' + url1 + '> rdf:type ?t .}}')
+                        # print q_type
                         result = sparql.query(sparql_dbpedia, q_type)
                         type_values = [sparql.unpack_row(row_result) for row_result in result]
-                        type_vals = [val[0].split('/')[-1] for val in type_values if 'ontology' in val[0]]
+                        type_vals = [val[0] for val in type_values if 'ontology' in val[0] or 'resource' in val[0]]
                         type_list.extend(type_vals)
                 type_set[ent] = list(set(type_list))
     return type_set
+
+
+def ent_type_ranker(type_set, ent_dict):
+    type_set_ranked = {}
+    for k,v in ent_dict.iteritems():
+        print k
+        type_ranked = []
+        for ent_type in type_set[k]:
+            # type_full = "http://dbpedia.org/resource/" + ent_type
+            phrase = comment_extractor(ent_type)
+            if phrase:
+                score = max(compare(v, ph[0]) for ph in phrase if isinstance(ph[0], basestring))
+                try:
+                    score = round(score, 2)
+                except:
+                    pass
+                print ent_type.split('/')[-1], phrase, score
+                print "+++++++++++++++++++++++++++"
+                type_ranked.append([ent_type.split('/')[-1], score])
+                # sys.exit(0)
+        sorted_values = sorted(type_ranked, key=operator.itemgetter(1), reverse=True)
+        # print sorted_values
+        type_set_ranked[k] = sorted_values
+    return type_set_ranked
 
 
 def possible_predicate_type(type_set, triples):
@@ -334,7 +373,7 @@ def possible_predicate_type(type_set, triples):
     return predicate_list
 
 
-def predicate_ranker(predicates,triple):
+def predicate_ranker(predicates, triple):
     predicate_KG = {}
     for ky in triple.keys():
         print ky
@@ -348,7 +387,7 @@ def predicate_ranker(predicates,triple):
                         # print k, predicate
                         score = max(compare(k,ph[0]) for ph in phrase if isinstance(ph[0],basestring))
                         try:
-                            score = round(round, 2)
+                            score = round(score, 2)
                         except:
                             pass
                         # print score
@@ -371,7 +410,7 @@ def KG_implementation(predicate_ranked):
             node_ids = node_lookup(train_ents)
             print node_ids
             train_data_csv(train_ents,node_ids)
-            sys.exit(0)
+            # sys.exit(0)
             # execute the KGMINER script
     return 0.5
 
@@ -406,7 +445,7 @@ def resource_extractor_updated(labels):
     resources = {}
     raw_resources = {}
     for i,label in enumerate(labels):
-        print label
+        # print label
         date_labels = []
         if label[1] != 'DATE':
             my_labels = label[0].split()

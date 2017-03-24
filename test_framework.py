@@ -110,6 +110,7 @@ def fact_checker(sentence_lis, id_list):
                 ent.append(date_string)
             vb = fact_check.get_verb(pos_s[n])
             print ent
+            ent_dict = dict(ent)
             # sys.exit(0)
             res_time = time.time()
             resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor_updated(ent)
@@ -135,11 +136,13 @@ def fact_checker(sentence_lis, id_list):
                 file_triples[sent_id] = triple_dict
                 new_triple_flag = 1
             print triple_dict
-            print "here"
             relation_ent = fact_check.relation_extractor_triples(resources, triple_dict)
             # print "here1"
-            # type_set = fact_check.ent_type_extractor(resources,triple_dict)
+            type_set = fact_check.ent_type_extractor(resources,triple_dict,ent_dict)
+            type_set_ranked = fact_check.ent_type_ranker(type_set, ent_dict)
             # print type_set
+            print type_set_ranked
+            # sys.exit(0)
             # predicate_list = fact_check.possible_predicate_type(type_set,triple_dict)
             predicate_list = predicate_list_json["data1"]
             # print predicate_list

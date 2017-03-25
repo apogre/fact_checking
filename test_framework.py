@@ -138,15 +138,17 @@ def fact_checker(sentence_lis, id_list):
             print triple_dict
             relation_ent = fact_check.relation_extractor_triples(resources, triple_dict)
             # print "here1"
-            type_set = fact_check.ent_type_extractor(resources,triple_dict,ent_dict)
-            type_set_ranked = fact_check.ent_type_ranker(type_set, ent_dict)
+            type_set = fact_check.ent_type_extractor(resources, triple_dict, ent_dict)
+            type_set_ranked, threshold_ranked = fact_check.ent_type_ranker(type_set, ent_dict)
             # print type_set
-            print type_set_ranked
+            # print type_set_ranked
+            print threshold_ranked
             # sys.exit(0)
-            # predicate_list = fact_check.possible_predicate_type(type_set,triple_dict)
-            predicate_list = predicate_list_json["data1"]
-            # print predicate_list
-            # print len(predicate_list)
+            predicate_list = fact_check.possible_predicate_type(threshold_ranked,triple_dict)
+            # predicate_list = predicate_list_json["data1"]
+            print predicate_list
+            print len(predicate_list)
+            sys.exit(0)
             predicate_ranked = fact_check.predicate_ranker(predicate_list,triple_dict)
             print predicate_ranked
             prob_value = fact_check.KG_implementation(predicate_ranked)

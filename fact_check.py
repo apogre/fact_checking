@@ -152,17 +152,17 @@ def compare(word1, word2):
     if wierdness2 == 0:
         wierdness1 = sequence_weirdness(word1)
         if wierdness1 == 0:
-            print word1, word2
+            # print word1, word2
             ss1 = sum([wn.synsets(word) for word in word1.split()],[])
             ss2 = sum([wn.synsets(word) for word in word2.split()],[])
-            print ss1, ss2
+            # print ss1, ss2
             # ss1 = sum(ss1,[])
             # ss2 = sum(ss2,[])
             # print ss1, ss2
             try:
                 return max(s1.path_similarity(s2) for (s1, s2) in product(ss1, ss2))
             except:
-                print "exception"
+                # print "exception"
                 return 0.0
 
 
@@ -316,8 +316,9 @@ def ent_type_extractor(resources, triples, ent_dict):
 
 def ent_type_ranker(type_set, ent_dict):
     type_set_ranked = {}
+    threshold_ranked = {}
     for k,v in ent_dict.iteritems():
-        print k
+        # print k
         type_ranked = []
         for ent_type in type_set[k]:
             # type_full = "http://dbpedia.org/resource/" + ent_type
@@ -328,14 +329,17 @@ def ent_type_ranker(type_set, ent_dict):
                     score = round(score, 2)
                 except:
                     pass
-                print ent_type.split('/')[-1], phrase, score
-                print "+++++++++++++++++++++++++++"
+                # print ent_type.split('/')[-1], phrase, score
+                # print "+++++++++++++++++++++++++++"
                 type_ranked.append([ent_type.split('/')[-1], score])
                 # sys.exit(0)
         sorted_values = sorted(type_ranked, key=operator.itemgetter(1), reverse=True)
-        # print sorted_values
+        print len(sorted_values)
         type_set_ranked[k] = sorted_values
-    return type_set_ranked
+        threshold_sorted = [vals for vals in sorted_values if vals[1]>=0.2]
+        print len(threshold_sorted)
+        threshold_ranked[k] = threshold_sorted
+    return type_set_ranked, threshold_ranked
 
 
 def possible_predicate_type(type_set, triples):
@@ -347,16 +351,15 @@ def possible_predicate_type(type_set, triples):
             item1_v = type_set[triple_v[0]]
             item2_v = type_set[triple_v[1]]
             print len(item1_v), len(item2_v)
-
             print "===================="
             for it1 in item1_v:
                 for it2 in item2_v:
-                    if it1 != it2:
-                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . {?url1 ?p ?url2 .} UNION {?url2 ?p ?url1 .}}'
+                    if it1[0] != it2[0]:
+                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1[0]+'> . ?url2 rdf:type <http://dbpedia.org/ontology/'+it2[0]+'> . {?url1 ?p ?url2 .} UNION {?url2 ?p ?url1 .}}'
                     else:
-                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/' + it1 + '> . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2 + '> . ?url1 ?p ?url2 .}'
+                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/' + it1[0] + '> . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2[0] + '> . ?url1 ?p ?url2 .}'
                     print q_pp
-                    pair = [it1,it2]
+                    pair = [it1[0],it2[0]]
                     if pair not in pair_list:
                         try:
                             result = sparql.query(sparql_dbpedia_on, q_pp)
@@ -364,6 +367,7 @@ def possible_predicate_type(type_set, triples):
                             if pred_values:
                                 pair_list.append(pair)
                                 pred_vals = [val[0].split('/')[-1] for val in pred_values if 'ontology' in val[0]]
+                                print pred_vals
                                 predicate_list.extend(pred_vals)
                                 count=count+1
                                 print count

@@ -1,0 +1,71 @@
+{
+	"1": {
+		"birthPlace": ["Hyde_Park,_New_York", "Franklin_D._Roosevelt"],
+		"birthDate": ["1882-01-30", "Franklin_D._Roosevelt"],
+		"<hasDisease>": ["Poliomyelitis", "Franklin_D._Roosevelt"]
+	},
+	"2": {
+		"office": ["Franklin_D._Roosevelt", "<32nd President of the United States"],
+		"<numberOfTerms>": ["Franklin_D._Roosevelt", "4"]
+	},
+	"3": {
+		"deathDate": ["1945-04-12", "Franklin_D._Roosevelt"],
+		"deathPlace": ["Warm_Springs,_Georgia", "Franklin_D._Roosevelt"]
+	},
+	"4": {
+		"deathDate":["!2017-03-22!", "David_Rockefeller"],
+		"<grandparent>":["John_D._Rockefeller", "David_Rockefeller"],
+		"<firstBillionaireOf>":["United_States", "John_D._Rockefeller"]
+	},
+	"5": {
+		"<advisorTo>":["President_of_the_United_States", "David_Rockefeller"],
+		"<offeredPosition>":[["<Federal_Reserve_chairman>", "David_Rockefeller"],["<Secretary_of_the_Treasury>", "David_Rockefeller"]]
+	},
+	"6": {
+		"<headOf>":["JPMorgan_Chase", "David_Rockefeller"],
+		"<headFromTo>":["1969-01-01", "1981-01-01", "David_Rockefeller"]
+	},
+	"7": {
+        "wikiPageRedirects": ["Joe_Biden", "Joseph_Robinette_Biden"],
+        "birthDate":["Joe_Biden", "#1942-11-20T00:00:00#"],
+        "birthPlace": ["Joe_Biden", "Scranton,_Pennsylvania"],
+        "office": ["Joe_Biden", "47thVice President of the United States"],
+        "vicePresident": ["Joe_Biden", "Barack_Obama"]
+    },
+    "8": {
+         "residence": [ "Joe_Biden",  "New_Castle_County,_Delaware"],
+         "almaMater":[["Joe_Biden", "University_of_Delaware"],["Joe_Biden", "Syracuse_University_College_of_Law"]]
+    },
+    "9": {
+         "spouse": [[ "Joe_Biden",  "#Neilia Hunter#"], ["Joe_Biden", "1966"]]
+    },
+    "10": {
+        "birthDate": ["March 26, 1973", "Larry_Page"],
+        "birthPlace":["East_Lansin,_Michigan", "Larry_Page"],
+        "birthName": ["Lawrence Page","Larry_Page"]
+    },
+    "11": {
+        "<father>": ["#Carl_Page#", "Larry_Page"],
+        "<pioneer>":["artifical_intelligence", "#Carl_Page#"],
+        "<pioneer>": ["computer_science","#Carl_Page#"]
+    },
+    "12": {
+        "<mother>": ["#Gloria_Page#", "Larry_Page"],
+        "<taught>": ["computer_programming", "#Gloria_Page#"]
+    },
+    "13": {
+        "birthPlace": ["Elon_Musk","South_Africa"],
+        "<sold>": ["Elon_Musk","<Zip2>"]
+    },
+    "14": {
+        "knownFor": [["Elon_Musk","SpaceX"],["Elon_Musk","Tesla_Motors"]]
+    },
+    "15": {
+        "<occupation>": ["Sheryl Sandberg", "<COO of Facebook>"],
+        "keyPerson": ["Sheryl Sandberg", "Facebook"]
+    },
+    "16":{
+        "<residence>":["Sheryl_Sandberg","Silicon_Valley"],
+        "<startOccupation>":["Sheryl_Sandberg","Google"]
+    }
+}

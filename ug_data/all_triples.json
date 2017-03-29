@@ -1,0 +1,75 @@
+{
+	"1": {
+		"born on":["January 30, 1882", "Franklin D. Roosevelt"],
+		"born":["Hyde Park, New York", "Franklin D. Roosevelt"],
+		"has disease":["Poliomyelitis", "Franklin D. Roosevelt"]
+	},
+	"2": {
+		"became the":["32nd U.S. president", "Franklin D. Roosevelt"],
+		"elected x many times":["four", "Franklin D. Roosevelt"]
+	},
+	"3": {
+		"died in":["1945", "Franklin D. Roosevelt"],
+		"died in":["Georgia", "Franklin D. Roosevelt"]
+	},
+	"4": {
+		"died on":["March 22, 2017", "David Rockefeller"],
+		"last surviving grandson of":["John D. Rockefeller", "David Rockefeller"],
+		"first billionaire of":["America", "John D. Rockefeller"]
+	},
+	"5": {
+		"advisor to":["U.S. President", "David Rockefeller"],
+		"offered position":[["Federal Reserve chairman", "David Rockefeller"], ["Secretary of the Treasury", "David Rockefeller"]]
+	},
+	"6": {
+		"head of":["David Rockefeller", "Chase Manhattan Bank"],
+		"head of bank from and to":["David Rockefeller", "1969", "1981"]
+	},
+	"7": {
+        "by name": ["Joe Biden", "Joseph Robinette Biden"],
+        "born on": ["Joe Biden", "November 20, 1942"],
+        "born in": ["Joe Biden", "Scranton, Pennsylvania, U.S."],
+        "vice president": ["Joe Biden", "United States"],
+        "vice President under": ["Joe Biden", "Pres. Barack Obama"]
+    },
+    "8": {
+        "raised in": ["Joe Biden", "New Castle county, Delaware"],
+        "bachelor's degree from": ["Joe Biden", "University of Delaware"],
+        "law degree from": ["Joe Biden", "Syracuse University"]
+    },
+    "9": {
+        "married": ["Joe Biden", "Neilia Hunter"],
+        "married in": ["Joe Biden", "1966"]
+    },
+    "10": {
+        "born as": ["Lawrence Page", "Larry_Page"],
+        "born on": ["March 26, 1973", "Larry_Page"],
+        "born": ["East Lansin, Michigan", "Larry_Page"]
+    },
+    "11": {
+        "father": ["Carl Page", "Larry Page"],
+        "pioneer": ["computer science", "Carl Page"],
+        "pioneer": ["artificall intelligence", "Carl Page"],
+        "born": ["East Lansin, Michigan", "Larry Page"]
+    },
+    "12":{
+        "mother": ["Gloria Page", "Larry Page"],
+        "taught": ["computer programming", "Gloria Page"]
+    },
+    "13": {
+        "born in": ["Elon Musk","South Africa"],
+        "became": ["Elon Musk","multimillionare"],
+        "sold": ["Elon Musk","Zip2"]
+    },
+    "14": {
+        "founding": [["Elon Musk","SpaceX"],["Elon Musk","Tesla Motors"]]
+    },
+    "15": {
+        "moved to":["Sheryl Sandberg", "Facebook"],
+        "has been COO":["Sheryl Sandberg", "Facebook"]
+    },
+    "16":{
+        "moved to":["Sheryl Sandberg","Silicon Valley"],
+        "worked for":["Sheryl Sandberg","Google"]
+    }
+}

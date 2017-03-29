@@ -27,10 +27,10 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 # [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
 
@@ -294,53 +294,6 @@ def test_set(id_set):
     return data_size
 
 
-def ent_type_extractor(resources, triples, ent_dict):
-    type_set = {}
-    for triple_k, triples_v in triples.iteritems():
-        for triple_v in triples_v:
-            for ent in triple_v:
-                item1_v = resources[ent]
-                type_list = []
-                for i1 in item1_v:
-                    if 'dbpedia' in i1[0]:
-                        url1 = i1[0]
-                        q_type = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?t WHERE {{ <' + url1 + '> dbo:type ?t .} UNION { <' + url1 + '> rdf:type ?t .}}')
-                        # print q_type
-                        result = sparql.query(sparql_dbpedia, q_type)
-                        type_values = [sparql.unpack_row(row_result) for row_result in result]
-                        type_vals = [val[0] for val in type_values if 'ontology' in val[0] or 'resource' in val[0]]
-                        type_list.extend(type_vals)
-                type_set[ent] = list(set(type_list))
-    return type_set
-
-
-def ent_type_ranker(type_set, ent_dict):
-    type_set_ranked = {}
-    threshold_ranked = {}
-    for k,v in ent_dict.iteritems():
-        # print k
-        type_ranked = []
-        for ent_type in type_set[k]:
-            # type_full = "http://dbpedia.org/resource/" + ent_type
-            phrase = comment_extractor(ent_type)
-            if phrase:
-                score = max(compare(v, ph[0]) for ph in phrase if isinstance(ph[0], basestring))
-                try:
-                    score = round(score, 2)
-                except:
-                    pass
-                # print ent_type.split('/')[-1], phrase, score
-                # print "+++++++++++++++++++++++++++"
-                type_ranked.append([ent_type.split('/')[-1], score])
-                # sys.exit(0)
-        sorted_values = sorted(type_ranked, key=operator.itemgetter(1), reverse=True)
-        print len(sorted_values)
-        type_set_ranked[k] = sorted_values
-        threshold_sorted = [vals for vals in sorted_values if vals[1]>=0.2]
-        print len(threshold_sorted)
-        threshold_ranked[k] = threshold_sorted
-    return type_set_ranked, threshold_ranked
-
 
 def possible_predicate_type(type_set, triples):
     predicate_list=[]
@@ -442,7 +395,7 @@ def node_lookup(train_ents):
     return id_list
 
 
-def resource_extractor_updated(labels):
+def resource_extractor(labels):
     global new_labels
     new_labels = []
     ent_size = []
@@ -531,7 +484,7 @@ def relation_processor(relations):
             if m<2:
                 if res_key not in entity_dict.keys():
                     res_id = len(entity_dict)+1
-                    entity_dict[res_key]={'score':item[1],'id':res_id}
+                    entity_dict[res_key]={'score':item[-1],'id':res_id}
                     id_list.append(res_key)
                 else:
                     id_list.append(res_key)
@@ -605,119 +558,120 @@ def relation_extractor_triples(resources, triples):
         for triple_v in triples_v:
             # print triple_v[0]
             item1_v = resources.get(triple_v[0])
-            for i1 in item1_v:
-                predicate_comment = {}
-                if 'dbpedia' in i1[0]:
-                    url1 = i1[0]
-                    score1 = [it for it in i1 if isinstance(it, float)]
-                    score1 = score1[0]
-                    q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
-                    result = sparql.query(sparql_dbpedia, q_all)
-                    q1_values = [sparql.unpack_row(row_result) for row_result in result]
-                    q1_list = [qv[1] for qv in q1_values]
-                item2_v = resources.get(triple_v[1])
-                # print triple_v[1]
-                if item2_v:
-                    url2_list = [i2[0] for i2 in item2_v]
-                    intersect = set(url2_list).intersection(q1_list)
-                    for inte in intersect:
-                        match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
-                        # print match
-                        # sys.exit(0)
-                        if match:
-                            for ma in match:
-                                # print ma
-                                # sys.exit(0)
-                                predicate = ma[1][0]
-                                # print predicate
-                                if predicate not in predicate_comment.keys():
-                                    comment = comment_extractor(predicate)
-                                    predicate_comment[predicate] = comment
-                                else:
-                                    comment = predicate_comment[predicate]
-                                # print ma, comment
-                                pred_score = rel_score_triple(triple_k, comment)
-                                # print pred_score
-                                # print pred_score, triple_k, comment
-                                score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
-                                ma.pop(1)
-                                ma.append(score2)
-                                ma.append([predicate, score])
-                                relation.append(ma)
-                else:
-                    date_match = get_dates(i1, triple_v[1])
-                    # print date_match
-                    # sys.exit(0)
-                    if date_match:
-                        for dm in date_match:
-                            predicate = dm[1][0]
-                            if predicate not in predicate_comment.keys():
-                                comment = comment_extractor(predicate)
-                                predicate_comment[predicate] = comment
-                            else:
-                                comment = predicate_comment[predicate]
-                            pred_score = rel_score_triple(triple_k, comment)
-                            score = rel_score_literal(dm, score1, pred_score)
-                            dm.pop(1)
-                            dm.append([triple_v[1],0])
-                            dm.append([predicate, 1])
-                            # print dm
-                            # sys.exit(0)
-                            relation.append(dm)
-    return relation
-
-
-def relation_extractor_updated1(resources, verb_entity):
-    global new_labels
-    print new_labels
-    relation = []
-    new_labels = sorted(new_labels, key=operator.itemgetter(2))
-    new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)
-    for i in range(0, len(resources) - 1):
-        if str(new_labels[i][0]) in resources:
-            item1_v = resources[new_labels[i][0]]
-            predicate_comment = {}
-            for i1 in item1_v:
-                # print i1
-                if 'dbpedia' in i1[0]:
-                    url1 = i1[0]
-                    score1 = [it for it in i1 if isinstance(it, float)]
-                    score1 = score1[0]
-                    # print score1
-                    q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
-                    # print q_all
-                    result = sparql.query(sparql_dbpedia, q_all)
-                    q1_values = [sparql.unpack_row(row_result) for row_result in result]
-                    q1_list = [qv[1] for qv in q1_values]
-                    # print q1_list
-                for j in range(i+1, len(resources)):
-                    if str(new_labels[j][0]) in resources:
-                        item2_v = resources[new_labels[j][0]]
+            if item1_v:
+                for i1 in item1_v:
+                    predicate_comment = {}
+                    if 'dbpedia' in i1[0]:
+                        url1 = i1[0]
+                        score1 = [it for it in i1 if isinstance(it, float)]
+                        score1 = score1[0]
+                        q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
+                        result = sparql.query(sparql_dbpedia, q_all)
+                        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+                        q1_list = [qv[1] for qv in q1_values]
+                    item2_v = resources.get(triple_v[1])
+                    # print triple_v[1]
+                    if item2_v:
                         url2_list = [i2[0] for i2 in item2_v]
-                        # print url2_list
                         intersect = set(url2_list).intersection(q1_list)
                         for inte in intersect:
-                            match = [[[url1,score1],n ] for m, n in enumerate(q1_values) if n[1] == inte]
-                            # print match
+                            match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
                             if match:
                                 for ma in match:
+                                    # print ma
+                                    # sys.exit(0)
                                     predicate = ma[1][0]
+                                    # print predicate
                                     if predicate not in predicate_comment.keys():
                                         comment = comment_extractor(predicate)
                                         predicate_comment[predicate] = comment
                                     else:
                                         comment = predicate_comment[predicate]
                                     # print ma, comment
-                                    pred_score = rel_score_predicate(verb_entity,comment)
-                                    score, score2 = rel_score_label(ma,score1,item2_v,pred_score)
-
+                                    pred_score = rel_score_triple(triple_k, comment)
+                                    # print pred_score
+                                    # print pred_score, triple_k, comment
+                                    score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
                                     ma.pop(1)
                                     ma.append(score2)
-                                    # print ma
-                                    ma.append([predicate,score])
-                                    # print ma
-                                    # relation.append(sum(ma, []))
+                                    ma.append([predicate, score])
                                     relation.append(ma)
+                    else:
+                        date_match = get_dates(i1, triple_v[1])
+                        # print date_match
+                        # sys.exit(0)
+                        if date_match:
+                            # sys.exit(0)
+                            for dm in date_match:
+                                predicate = dm[1][0]
+                                if predicate not in predicate_comment.keys():
+                                    comment = comment_extractor(predicate)
+                                    predicate_comment[predicate] = comment
+                                else:
+                                    comment = predicate_comment[predicate]
+                                pred_score = rel_score_triple(triple_k, comment)
+                                score = rel_score_literal(dm, score1, pred_score)
+                                dm.pop(1)
+                                dm.append([triple_v[1],0])
+                                dm.append([predicate, 1])
+                                # print dm
+                                # sys.exit(0)
+                                relation.append(dm)
+    return relation
+
+
+def relation_extractor_all(resources, verb_entity):
+    global new_labels
+    print new_labels
+    relation = []
+    new_labels = sorted(new_labels, key=operator.itemgetter(2))
+    new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)
+    if len(new_labels)>1:
+        for i in range(0, len(resources) - 1):
+            if str(new_labels[i][0]) in resources:
+                item1_v = resources[new_labels[i][0]]
+                predicate_comment = {}
+                for i1 in item1_v:
+                    # print i1
+                    if 'dbpedia' in i1[0]:
+                        url1 = i1[0]
+                        score1 = [it for it in i1 if isinstance(it, float)]
+                        score1 = score1[0]
+                        # print score1
+                        q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
+                        # print q_all
+                        result = sparql.query(sparql_dbpedia, q_all)
+                        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+                        q1_list = [qv[1] for qv in q1_values]
+                        # print q1_list
+                    for j in range(i+1, len(resources)):
+                        if str(new_labels[j][0]) in resources:
+                            item2_v = resources[new_labels[j][0]]
+                            url2_list = [i2[0] for i2 in item2_v]
+                            # print url2_list
+                            intersect = set(url2_list).intersection(q1_list)
+                            for inte in intersect:
+                                match = [[[url1,score1],n ] for m, n in enumerate(q1_values) if n[1] == inte]
+                                # print match
+                                if match:
+                                    for ma in match:
+                                        predicate = ma[1][0]
+                                        if predicate not in predicate_comment.keys():
+                                            comment = comment_extractor(predicate)
+                                            predicate_comment[predicate] = comment
+                                        else:
+                                            comment = predicate_comment[predicate]
+                                        # print ma, comment
+                                        pred_score = rel_score_predicate(verb_entity,comment)
+                                        score, score2 = rel_score_label(ma,score1,item2_v,pred_score)
+
+                                        ma.pop(1)
+                                        ma.append(score2)
+                                        # print ma
+                                        ma.append([predicate,score])
+                                        # print ma
+                                        # relation.append(sum(ma, []))
+                                        relation.append(ma)
     return relation, len(relation)
 
 
@@ -824,6 +778,7 @@ def get_dates(i1,date_ent_str):
         # u'1940-04-25T00:00:00'
         date_ent = datetime.strptime(date_ent_str,"%Y-%m-%dT%H:%M:%S")
     # print date_ent
+    # sys.exit(0)
     # print date_ent.date()
     if 'dbpedia' in v:
         v = v.replace('page', 'resource')
@@ -831,10 +786,12 @@ def get_dates(i1,date_ent_str):
         try:
             dq = ('SELECT distinct ?r ?o WHERE  {  ?r a owl:DatatypeProperty ; rdfs:range xsd:date . <' + str(
                 v) + '> ?r ?o .}')
+            # print dq
             resultd = sparql.query(sparql_dbpedia, dq)
             for i, row1 in enumerate(resultd):
                 values1 = sparql.unpack_row(row1)
                 # print values1[1],date_ent.date()
+                # sys.exit(0)
                 if values1[1] == date_ent.date():
                     # print v, values1
                     dates_matched.append([i1,values1])
@@ -844,6 +801,7 @@ def get_dates(i1,date_ent_str):
                         dates_matched.append([i1, values1])
         except:
             pass
+    # print dates_matched
     return dates_matched
 
 

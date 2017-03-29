@@ -1,0 +1,56 @@
+{
+    "1": {
+         "birthPlace": [ "New_York",  "Al_Pacino"],
+         "birthDate": [ "1940-04-25T00:00:00",  "Al_Pacino"]
+    },
+    "3": {
+         "birthPlace": [ "Hawaii",  "Barack_Obama"]
+    },
+    "2": {
+         "spouse": [ "Barack_Obama",  "Michelle_Obama"]
+    },
+    "4": {
+         "birthPlace": [ "New_York_City",  "Robert_De_Niro"],
+         "birthDate": [ "1943-08-17T00:00:00",  "Robert_De_Niro"]
+    },
+    "6": {
+         "birthPlace": [ "Neptune_Township,_New_Jersey",  "Danny_DeVito"],
+         "birthDate": [ "1944-01-01T00:00:00",  "Danny_DeVito"]
+    },
+    "7": {
+         "birthPlace": [ "Santa_Monica,_California",  "Jack_Black"],
+         "birthDate": [ "1969-08-28T00:00:00",  "Jack_Black"]
+    },
+    "9": {
+         "spouse": [ "Scarlett_Johansson",  "Ryan_Reynolds"]
+    },
+    "8": {
+         "spouse": [ "Scarlett_Johansson",  "Ryan_Reynolds"]
+    },
+    "5": {
+         "birthPlace": [ "Syracuse,_New_York",  "Megyn_Kelly"],
+         "birthDate": [ "1970",  "Megyn_Kelly"]
+    },
+    "10": {
+         "birthPlace": [ "Brampton",  "Michael_Cera"],
+         "birthDate": [ "1988-06-07T00:00:00",  "Michael_Cera"]
+    },
+    "11": {
+         "birthPlace": [ "New_Brunswick,_New_Jersey",  "Michael_Douglas"],
+         "birthDate": [ "1944-01-01T00:00:00",  "Michael_Douglas"],
+         "parent": [ "Michael_Douglas",  "Kirk_Douglas"]
+    },
+    "12": {
+         "birthPlace": [ "New_York_City",  "Scarlett_Johansson"],
+         "birthDate": [ "1984-11-22T00:00:00",  "Scarlett_Johansson"]
+    },
+    "13": {
+         "birthPlace": [ "India",  "Narendra_Modi"]
+    },
+    "14": {
+         "founder": [ "Facebook",  "Mark_Zuckerberg"]
+    },
+    "15": {
+         "capital": [ "Arizona",  "Phoenix,_Arizona"]
+    }
+}

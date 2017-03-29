@@ -1,0 +1,75 @@
+{
+	"1": {
+		"Hyde Park, New York": ["Hyde_Park,_New_York"],
+		"Franklin D. Roosevelt": ["Franklin_D._Roosevelt"],
+		"polio": ["Poliomyelitis"]
+	},
+	"2": {
+		"Franklin D. Roosevelt": ["Franklin_D._Roosevelt"]
+    },
+	"3": {
+		"Roosevelt": ["Franklin_D._Roosevelt"],
+		"Georgia": ["Georgia"]
+	},
+	"4": {
+		"David Rockefeller":["David_Rockefeller"],
+		"John D. Rockefeller":["John_D._Rockefeller"],
+		"America":["United_States"]
+	},
+	"5": {
+		"David Rockefeller":["David_Rockefeller"]
+	},
+	"6": {
+		"David Rockefeller":["David_Rockefeller"],
+		"Chase Manhattan Bank":["JPMorgan_Chase"]
+	},
+	"7": {
+	   	"Joe Biden": ["Joe_Biden"],
+	   	"Joseph Robinette Biden": ["Joseph_Robinette_Biden"],
+	   	"Scranton, Pennsylvania, U.S.":["Scranton,_Pennsylvania"], 
+	   	"United States":["United_States"], 
+	   	"Barack Obama":["Barack_Obama"]
+    },
+    "8": {
+   		"Biden": ["Joe_Biden"],
+   		"Castle county, Delaware": ["<New_Castle_County,_Delaware>"],
+   		"University of Delaware":["University_of_Delaware"],
+   		"Syracuse University":["Syracuse_University_College_of_Law"],
+        "New York":["New_York"],
+        "Scranton":["Scranton,_Pennsylvania"],
+        "Pennsylvania":["Scranton,_Pennsylvania"]
+    },
+    "9": {
+        "Biden": ["Joe_Biden"],
+	   	"Neilia Hunter": ["<Neilia_Hunter>"]
+    },
+    "10": {
+        "Lawrence Page": ["Larry_Page"],
+        "Larry Page": ["Larry_Page"],
+        "East Lansing, Michigan": ["East_Lansing,_Michigan"]
+    },
+    "11": {
+        "Carl Page": ["<Carl_Page>"]
+    },
+    "12": {"Larry Page": ["Larry_Page"],
+           "Gloria Page": ["<Gloria_Page>"]},
+    "13": {
+        "South Africa": ["South_Africa"],
+        "Elon Musk": ["Elon_Musk"],
+        "Compaq Computers": ["<Compaq_Computers>"]
+    },
+    "14" : {
+        "Elon Musk": ["Elon_Musk"],
+        "SpaceX": ["SpaceX"],
+        "Tesla Motors": ["Tesla_Motors"]
+    },
+    "15": {
+        "Sheryl Sandberg": ["Sheryl_Sandberg"],
+        "Facebook": ["Facebook"]
+       },
+    "16": {
+         "Sandberg" : ["Sheryl_Sandberg"],
+         "Silicon Valley" : ["Silicon_Valley"],
+         "Google" : ["Google"]
+    }
+}

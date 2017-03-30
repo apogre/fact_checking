@@ -178,10 +178,18 @@ def fact_checker(sentence_lis, id_list):
                     entity_type_ontology, entity_type_resource = KG_Miner_Extension.entity_type_extractor(resources, triple_dict, ent_dict)
                     pprint.pprint(entity_type_ontology)
                     pprint.pprint(entity_type_resource)
-                    type_set_ranked, threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict)
-                    pprint.pprint(type_set_ranked)
+                    resource_type_set_ranked, resource_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict, triple_dict)
+                    pprint.pprint(resource_threshold_ranked)
+                    if resource_threshold_ranked:
+                        example_entity_resource = KG_Miner_Extension.resource_type_extractor(resource_threshold_ranked,triple_dict)
+                        print example_entity_resource
+                    entity_keys = [kr for kr in ent_dict.keys()]
+                    if example_entity_resource[entity_keys[0]] == example_entity_resource[entity_keys[1]]:
+                        print example_entity_resource[entity_keys[0]]
+                        training_set = [val.split('/')[-1] for val in example_entity_resource[entity_keys[0]]]
+                        print training_set
             else:
-                precision_recall_stats[sent_id] = [0,0,0,0]
+                precision_recall_stats[sent_id] = [0, 0, 0, 0]
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
@@ -189,7 +197,7 @@ def fact_checker(sentence_lis, id_list):
     if new_triple_flag == 1:
         os.remove(data_source+'triples_raw.json')
         with open(data_source+'/all_triples_raw.json', 'w') as fp:
-            json.dump(file_triples, fp , default=json_serial)
+            json.dump(file_triples, fp, default=json_serial)
 
     ex_time = time.time() - start_time
     print "Total Execution Time: " + str(round(ex_time, 2))

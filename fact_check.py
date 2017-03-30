@@ -3,7 +3,6 @@
 from nltk.tree import *
 import dateutil.parser as dp
 import sparql
-import urllib2
 from difflib import SequenceMatcher
 from datetime import datetime
 from itertools import groupby,product
@@ -14,6 +13,7 @@ import time, sys, re, csv
 import pandas
 from nltk.corpus import wordnet as wn
 from ftfy.badness import sequence_weirdness
+import os
 
 
 objects = []
@@ -27,12 +27,13 @@ global date_flag
 date_flag = 0
 threshold_value = 0.8
 
-# stanford_parser_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/apradhan/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
-# [list(parse.triples()) for parse in parser.raw_parse("Born in New York City on August 17, 1943, actor Robert De Niro left school at age 16 to study acting with Stella Adler.")]
+
+stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
+stanford_model_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
+# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
@@ -153,8 +154,8 @@ def compare(word1, word2):
         wierdness1 = sequence_weirdness(word1)
         if wierdness1 == 0:
             # print word1, word2
-            ss1 = sum([wn.synsets(word) for word in word1.split()],[])
-            ss2 = sum([wn.synsets(word) for word in word2.split()],[])
+            ss1 = sum([wn.synsets(word) for word in word1.split() if word not in aux_verb],[])
+            ss2 = sum([wn.synsets(word) for word in word2.split() if word not in aux_verb],[])
             # print ss1, ss2
             # ss1 = sum(ss1,[])
             # ss2 = sum(ss2,[])

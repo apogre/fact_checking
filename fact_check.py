@@ -31,8 +31,6 @@ threshold_value = 0.8
 
 stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
 stanford_model_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
-# stanford_parser_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser.jar'
-# stanford_model_jar = '/home/nepal/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
@@ -232,24 +230,6 @@ def entity_threshold(resources):
     return limit_entity
 
 
-def entity_id_finder(entity_set):
-    id_set = {}
-    for label, e_set in entity_set.iteritems():
-        id_list = []
-        with open("infobox.nodes", "rb") as csvfile:
-            reader = csv.reader(csvfile, delimiter='\t')
-            print label
-            for row in reader:
-                try:
-                    if row[1] in e_set:
-                        # print row
-                        id_list.append(row)
-                except:
-                    pass
-            id_set[label] = id_list
-    return id_set
-
-
 def csv_processor(data_size):
     with open('output.csv', 'rb') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -278,21 +258,21 @@ def csv_processor(data_size):
     # print merged.shape
     merged.to_csv("final.csv", index=False)
 
-
-def test_set(id_set):
-    with open('test_data.csv','wb') as csvfile:
-        datawriter = csv.writer(csvfile)
-        id_keys = id_set.keys()
-        # for k,v in id_set.iteritems():
-        val1 = id_set[id_keys[0]]
-        val2 = id_set[id_keys[1]]
-        print val1, len(val1)
-        print val2, len(val2)
-        data_size = len(val1) * len(val2)
-        for v1 in val1:
-            for v2 in val2:
-                datawriter.writerow([v1[0],v2[0]])
-    return data_size
+#
+# def test_set(id_set):
+#     with open('test_data.csv','wb') as csvfile:
+#         datawriter = csv.writer(csvfile)
+#         # id_keys = id_set.keys()
+#         # for k,v in id_set.iteritems():
+#         # val1 = id_set[id_keys[0]]
+#         # val2 = id_set[id_keys[1]]
+#         # print val1, len(val1)
+#         # print val2, len(val2)
+#         # data_size = len(val1) * len(val2)
+#         for v1 in val1:
+#             for v2 in val2:
+#                 datawriter.writerow([v1[0],v2[0]])
+#     return data_size
 
 
 

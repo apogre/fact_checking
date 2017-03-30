@@ -188,6 +188,22 @@ def fact_checker(sentence_lis, id_list):
                         print example_entity_resource[entity_keys[0]]
                         training_set = [val.split('/')[-1] for val in example_entity_resource[entity_keys[0]]]
                         print training_set
+                        training_set_one = [element.split(',')[-1][1:]  if ',' in element else '' for element in training_set]
+                        print training_set_one
+                        training_id_one = KG_Miner_Extension.entity_id_finder(training_set_one)
+                        training_id = KG_Miner_Extension.entity_id_finder(training_set)
+                        print training_id_one, training_id
+                        training_data=[]
+                        for i, v1 in enumerate(training_set_one):
+                            if v1 != 'Arizona':
+                                id_one = [row[0] for row in training_id_one if v1==row[1]]
+                                if id_one:
+                                    id_two = [row[0] for row in training_id if training_set[i]==row[1]]
+                                    if id_two:
+                                        training_data.append([id_one[0], id_two[0]])
+                        if training_data:
+                            KG_Miner_Extension.test_set(training_data)
+
             else:
                 precision_recall_stats[sent_id] = [0, 0, 0, 0]
             execution_time = time.time() - res_time

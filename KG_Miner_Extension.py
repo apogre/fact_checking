@@ -1,10 +1,13 @@
 import sparql
 import fact_check
 import operator
+import csv
 
 entity_type_threshold=0.5
 sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
+
+kg_data_source = 'KG_Miner_data/'
 
 
 def entity_type_extractor(resources, triples, ent_dict):
@@ -83,6 +86,36 @@ def entity_type_ranker(type_set, ent_dict,triple_dict):
         print len(threshold_sorted)
         threshold_ranked[k] = threshold_sorted
     return type_set_ranked, threshold_ranked
+
+
+def entity_id_finder(entity_set):
+    # id_set = {}
+    # for label, e_set in entity_set.iteritems():
+    id_list = []
+    with open("infobox.nodes", "rb") as csvfile:
+        reader = csv.reader(csvfile, delimiter='\t')
+        # print label
+        for row in reader:
+            try:
+                if row[1] in entity_set:
+                    id_list.append(row)
+            except:
+                pass
+            # id_set[label] = id_list
+    return id_list
+
+def test_set(training_data):
+    with open(kg_data_source+'test_data.csv', 'wb') as csvfile:
+        datawriter = csv.writer(csvfile)
+        # id_keys = id_set.keys()
+        # for k,v in id_set.iteritems():
+        # val1 = id_set[id_keys[0]]
+        # val2 = id_set[id_keys[1]]
+        # print val1, len(val1)
+        # print val2, len(val2)
+        # data_size = len(val1) * len(val2)
+        for data in training_data:
+            datawriter.writerow(data)
 
 
         # print type_set

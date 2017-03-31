@@ -276,64 +276,6 @@ def csv_processor(data_size):
 
 
 
-def possible_predicate_type(type_set, triples):
-    predicate_list=[]
-    pair_list = []
-    count = 0
-    for triple_k, triples_v in triples.iteritems():
-        for triple_v in triples_v:
-            item1_v = type_set[triple_v[0]]
-            item2_v = type_set[triple_v[1]]
-            print len(item1_v), len(item2_v)
-            print "===================="
-            for it1 in item1_v:
-                for it2 in item2_v:
-                    if it1[0] != it2[0]:
-                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1[0]+'> . ?url2 rdf:type <http://dbpedia.org/ontology/'+it2[0]+'> . {?url1 ?p ?url2 .} UNION {?url2 ?p ?url1 .}}'
-                    else:
-                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/' + it1[0] + '> . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2[0] + '> . ?url1 ?p ?url2 .}'
-                    print q_pp
-                    pair = [it1[0],it2[0]]
-                    if pair not in pair_list:
-                        try:
-                            result = sparql.query(sparql_dbpedia_on, q_pp)
-                            pred_values = [sparql.unpack_row(row_result) for row_result in result]
-                            if pred_values:
-                                pair_list.append(pair)
-                                pred_vals = [val[0].split('/')[-1] for val in pred_values if 'ontology' in val[0]]
-                                print pred_vals
-                                predicate_list.extend(pred_vals)
-                                count=count+1
-                                print count
-                        except:
-                            pass
-    predicate_list = list(set(predicate_list))
-    return predicate_list
-
-
-def predicate_ranker(predicates, triple):
-    predicate_KG = {}
-    for ky in triple.keys():
-        print ky
-        predicate_ranked = []
-        for k in ky.split():
-            if k not in aux_verb:
-                for predicate in predicates:
-                    predicate_full = "http://dbpedia.org/ontology/" + predicate
-                    phrase = comment_extractor(predicate_full)
-                    if phrase:
-                        # print k, predicate
-                        score = max(compare(k,ph[0]) for ph in phrase if isinstance(ph[0],basestring))
-                        try:
-                            score = round(score, 2)
-                        except:
-                            pass
-                        # print score
-                        predicate_ranked.append([predicate, score])
-        sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
-        # print sorted_values
-        predicate_KG[ky] = sorted_values
-    return predicate_KG
 
 
 def KG_implementation(predicate_ranked):
@@ -533,8 +475,8 @@ def relation_extractor_1hop(resources,verb_entity):
     return None
 
 
-def relation_extractor_triples(resources, triples):
-    relation = []
+def relation_extractor_triples(resources, triples, relation):
+    # relation = []
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
             # print triple_v[0]
@@ -550,11 +492,24 @@ def relation_extractor_triples(resources, triples):
                         result = sparql.query(sparql_dbpedia, q_all)
                         q1_values = [sparql.unpack_row(row_result) for row_result in result]
                         q1_list = [qv[1] for qv in q1_values]
+                        # print len(q1_list)
+                        # print q1_list
+                        q_all_back = ('SELECT ?p ?s WHERE { ?s ?p <' + url1 + '> .}')
+                        # print q_all_back
+                        result_back = sparql.query(sparql_dbpedia, q_all_back)
+                        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+                        q1_list_back = [qv[1] for qv in q1_values_back]
+                        q1_list.extend(q1_list_back)
+                        q1_values.extend(q1_values_back)
+                        # print len(q1_list)
+                        # print set(q1_list_back)
+
                     item2_v = resources.get(triple_v[1])
                     # print triple_v[1]
                     if item2_v:
                         url2_list = [i2[0] for i2 in item2_v]
                         intersect = set(url2_list).intersection(q1_list)
+
                         for inte in intersect:
                             match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
                             if match:

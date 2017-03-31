@@ -8,6 +8,7 @@ import collections, csv
 import pprint, os
 from StanfordOpenIEPython.main import stanford_ie
 from datetime import datetime
+import subprocess
 
 aux_verb = ['was', 'is', 'become']
 KG_Miner = True
@@ -141,7 +142,9 @@ def fact_checker(sentence_lis, id_list):
                 file_triples[sent_id] = triple_dict
                 new_triple_flag = 1
             print triple_dict
-            relation_ent = fact_check.relation_extractor_triples(resources, triple_dict)
+            relation = []
+            relation_ent = fact_check.relation_extractor_triples(resources, triple_dict, relation)
+            # sys.exit(0)
             if not relation_ent:
                 print "here"
                 relation_ent, rel_count = fact_check.relation_extractor_all(resources, verb_entity[n])
@@ -152,7 +155,7 @@ def fact_checker(sentence_lis, id_list):
             relations = fact_check.relation_processor(relation_ent)
             print "Relation Graph"
             print "--------------"
-            print relations
+            # print relations
             # sys.exit(0)
             if relations:
                 pprint.pprint(relations)
@@ -182,27 +185,34 @@ def fact_checker(sentence_lis, id_list):
                     pprint.pprint(resource_threshold_ranked)
                     if resource_threshold_ranked:
                         example_entity_resource = KG_Miner_Extension.resource_type_extractor(resource_threshold_ranked,triple_dict)
-                        print example_entity_resource
+                        # print example_entity_resource
                     entity_keys = [kr for kr in ent_dict.keys()]
                     if example_entity_resource[entity_keys[0]] == example_entity_resource[entity_keys[1]]:
                         print example_entity_resource[entity_keys[0]]
                         training_set = [val.split('/')[-1] for val in example_entity_resource[entity_keys[0]]]
-                        print training_set
+                    #     print training_set
                         training_set_one = [element.split(',')[-1][1:]  if ',' in element else '' for element in training_set]
-                        print training_set_one
+                    #     print training_set_one
                         training_id_one = KG_Miner_Extension.entity_id_finder(training_set_one)
                         training_id = KG_Miner_Extension.entity_id_finder(training_set)
-                        print training_id_one, training_id
+                    #     print training_id_one, training_id
                         training_data=[]
+                        test_data = []
                         for i, v1 in enumerate(training_set_one):
-                            if v1 != 'Arizona':
-                                id_one = [row[0] for row in training_id_one if v1==row[1]]
-                                if id_one:
-                                    id_two = [row[0] for row in training_id if training_set[i]==row[1]]
-                                    if id_two:
-                                        training_data.append([id_one[0], id_two[0]])
+                            id_one = [row[0] for row in training_id_one if v1==row[1]]
+                            if id_one:
+                                id_two = [row[0] for row in training_id if training_set[i]==row[1]]
+                                if id_two and v1 != 'Arizona':
+                                    training_data.append([id_one[0], id_two[0]])
+                                else:
+                                    test_data.append([id_one[0], id_two[0]])
+
                         if training_data:
-                            KG_Miner_Extension.test_set(training_data)
+                            KG_Miner_Extension.test_set(training_data,file_name='training_data')
+                        if test_data:
+                            KG_Miner_Extension.test_set(test_data, file_name='test_data')
+                    #     os.chdir('KGMiner')
+                    #     subprocess.call('./run_test.sh')
 
             else:
                 precision_recall_stats[sent_id] = [0, 0, 0, 0]

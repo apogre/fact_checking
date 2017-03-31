@@ -11,7 +11,7 @@ kg_data_source = 'KG_Miner_data/'
 
 
 def entity_type_extractor(resources, triples, ent_dict):
-    print resources
+    # print resources
     type_set_ontology = {}
     type_set_resource = {}
     for triple_k, triples_v in triples.iteritems():
@@ -80,10 +80,10 @@ def entity_type_ranker(type_set, ent_dict,triple_dict):
                 # type_ranked.append([ent_type.split('/')[-1], score])
                 type_ranked.append([ent_type, score])
         sorted_values = sorted(type_ranked, key=operator.itemgetter(1), reverse=True)
-        print len(sorted_values)
+        # print len(sorted_values)
         type_set_ranked[k] = sorted_values
         threshold_sorted = [vals for vals in sorted_values if vals[1] >= entity_type_threshold]
-        print len(threshold_sorted)
+        # print len(threshold_sorted)
         threshold_ranked[k] = threshold_sorted
     return type_set_ranked, threshold_ranked
 
@@ -104,8 +104,8 @@ def entity_id_finder(entity_set):
             # id_set[label] = id_list
     return id_list
 
-def test_set(training_data):
-    with open(kg_data_source+'test_data.csv', 'wb') as csvfile:
+def test_set(training_data, file_name):
+    with open(kg_data_source+file_name+'.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
         # id_keys = id_set.keys()
         # for k,v in id_set.iteritems():
@@ -118,7 +118,72 @@ def test_set(training_data):
             datawriter.writerow(data)
 
 
-        # print type_set
+def possible_predicate_type(type_set, triples):
+    predicate_list = []
+    pair_list = []
+    count = 0
+    for triple_k, triples_v in triples.iteritems():
+        for triple_v in triples_v:
+            item1_v = type_set[triple_v[0]]
+            item2_v = type_set[triple_v[1]]
+            print len(item1_v), len(item2_v)
+            print "===================="
+            for it1 in item1_v:
+                for it2 in item2_v:
+                    if it1[0] != it2[0]:
+                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/' + \
+                               it1[0] + '> . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2[
+                                   0] + '> . {?url1 ?p ?url2 .} UNION {?url2 ?p ?url1 .}}'
+                    else:
+                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/' + \
+                               it1[0] + '> . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2[
+                                   0] + '> . ?url1 ?p ?url2 .}'
+                    print q_pp
+                    pair = [it1[0], it2[0]]
+                    if pair not in pair_list:
+                        try:
+                            result = sparql.query(sparql_dbpedia_on, q_pp)
+                            pred_values = [sparql.unpack_row(row_result) for row_result in result]
+                            if pred_values:
+                                pair_list.append(pair)
+                                pred_vals = [val[0].split('/')[-1] for val in pred_values if
+                                             'ontology' in val[0]]
+                                print pred_vals
+                                predicate_list.extend(pred_vals)
+                                count = count + 1
+                                print count
+                        except:
+                            pass
+    predicate_list = list(set(predicate_list))
+    return predicate_list
+
+
+def predicate_ranker(predicates, triple):
+    predicate_KG = {}
+    for ky in triple.keys():
+        print ky
+        predicate_ranked = []
+        for k in ky.split():
+            if k not in fact_check.aux_verb:
+                for predicate in predicates:
+                    predicate_full = "http://dbpedia.org/ontology/" + predicate
+                    phrase = fact_check.comment_extractor(predicate_full)
+                    if phrase:
+                        # print k, predicate
+                        score = max(fact_check.compare(k, ph[0]) for ph in phrase if isinstance(ph[0], basestring))
+                        try:
+                            score = round(score, 2)
+                        except:
+                            pass
+                        # print score
+                        predicate_ranked.append([predicate, score])
+        sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
+        # print sorted_values
+        predicate_KG[ky] = sorted_values
+    return predicate_KG
+
+
+                # print type_set
 #         # print type_set_ranked
 #         # print threshold_ranked
 #         # sys.exit(0)

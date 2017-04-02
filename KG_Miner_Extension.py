@@ -3,7 +3,8 @@ import fact_check
 import operator
 import csv
 
-entity_type_threshold=0.5
+entity_type_threshold=0
+possible_predicate_threshold = 1
 sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
 
@@ -65,6 +66,7 @@ def entity_type_ranker(type_set, ent_dict,triple_dict):
         for ent_type in type_set[k]:
             # type_full = "http://dbpedia.org/resource/" + ent_type
             phrase = fact_check.comment_extractor(ent_type)
+            # print phrase
             if phrase:
                 score_enitity_type = max(fact_check.compare(v, ph[0]) for ph in phrase if isinstance(ph[0], basestring))
                 score_entity_relation = 0
@@ -92,6 +94,7 @@ def entity_id_finder(entity_set):
     # id_set = {}
     # for label, e_set in entity_set.iteritems():
     id_list = []
+    print entity_set
     with open("infobox.nodes", "rb") as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         # print label
@@ -99,6 +102,7 @@ def entity_id_finder(entity_set):
             try:
                 if row[1] in entity_set:
                     id_list.append(row)
+                    print row
             except:
                 pass
             # id_set[label] = id_list
@@ -126,19 +130,19 @@ def possible_predicate_type(type_set, triples):
         for triple_v in triples_v:
             item1_v = type_set[triple_v[0]]
             item2_v = type_set[triple_v[1]]
-            print len(item1_v), len(item2_v)
+            # print len(item1_v), len(item2_v)
             print "===================="
             for it1 in item1_v:
                 for it2 in item2_v:
                     if it1[0] != it2[0]:
-                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/' + \
-                               it1[0] + '> . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2[
+                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <' + \
+                               it1[0] + '> . ?url2 rdf:type <' + it2[
                                    0] + '> . {?url1 ?p ?url2 .} UNION {?url2 ?p ?url1 .}}'
                     else:
-                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/' + \
-                               it1[0] + '> . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2[
+                        q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <' + \
+                               it1[0] + '> . ?url2 rdf:type <' + it2[
                                    0] + '> . ?url1 ?p ?url2 .}'
-                    print q_pp
+                    # print q_pp
                     pair = [it1[0], it2[0]]
                     if pair not in pair_list:
                         try:
@@ -148,7 +152,7 @@ def possible_predicate_type(type_set, triples):
                                 pair_list.append(pair)
                                 pred_vals = [val[0].split('/')[-1] for val in pred_values if
                                              'ontology' in val[0]]
-                                print pred_vals
+                                # print pred_vals
                                 predicate_list.extend(pred_vals)
                                 count = count + 1
                                 print count
@@ -160,6 +164,7 @@ def possible_predicate_type(type_set, triples):
 
 def predicate_ranker(predicates, triple):
     predicate_KG = {}
+    predicate_KG_threshold = {}
     for ky in triple.keys():
         print ky
         predicate_ranked = []
@@ -178,9 +183,11 @@ def predicate_ranker(predicates, triple):
                         # print score
                         predicate_ranked.append([predicate, score])
         sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
+        threshold_sorted = [vals for vals in sorted_values if vals[1] >= possible_predicate_threshold]
         # print sorted_values
         predicate_KG[ky] = sorted_values
-    return predicate_KG
+        predicate_KG_threshold[ky] = threshold_sorted
+    return predicate_KG , predicate_KG_threshold
 
 
                 # print type_set

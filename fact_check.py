@@ -505,7 +505,7 @@ def relation_extractor_triples(resources, triples, relation):
                         # print set(q1_list_back)
 
                     item2_v = resources.get(triple_v[1])
-                    # print triple_v[1]
+                    # print item2_v
                     if item2_v:
                         url2_list = [i2[0] for i2 in item2_v]
                         intersect = set(url2_list).intersection(q1_list)

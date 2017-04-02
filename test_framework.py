@@ -9,13 +9,14 @@ import pprint, os
 from StanfordOpenIEPython.main import stanford_ie
 from datetime import datetime
 import subprocess
+import evaluation
 
 aux_verb = ['was', 'is', 'become']
 KG_Miner = True
 precision_recall_stats = collections.OrderedDict()
 
 
-data_source = 'ug_data/all_'
+# data_source = 'ug_data/all_'
 data_source = 'main_data/'
 
 def json_serial(obj):
@@ -24,75 +25,6 @@ def json_serial(obj):
         serial = obj.isoformat()
         return serial
     raise TypeError ("Type not serializable")
-
-
-def precision_recall_ent_match(n,relations):
-    ex_ent_all = []
-    expected_ents = expected_outputs_entities[str(n)]
-    for ke,ve in expected_ents.iteritems():
-        ex_ent_all.extend(ve)
-    retrieved_ents = relations['node'].keys()
-    true_pos = [e_ent for e_ent in ex_ent_all if e_ent in retrieved_ents]
-    return true_pos, retrieved_ents, ex_ent_all
-
-
-def precision_recall_relations1(n,relations):
-    subgraph = relations.get('edge')
-    retrived_rels = []
-    for s_key,s_val in subgraph.iteritems():
-        for rels in s_val:
-            retrived_rel = [s_key]
-            retrived_rel.extend(rels['join'])
-            retrived_rels.append(retrived_rel)
-    ex_rels = []
-    ex_dict = expected_outputs_relations[str(n)]
-    for r_key,r_val in ex_dict.iteritems():
-        r_val.append(r_key)
-        ex_rels.append(r_val)
-    true_pos = []
-    for ret_rel in retrived_rels:
-        for ex_rel in ex_rels:
-            try:
-                if set(ret_rel) == set(ex_rel):
-                    true_pos.append(ret_rel)
-            except:
-                pass
-    return true_pos,retrived_rels,ex_rels
-
-
-def precision_recall(true_pos,true_false_pos,ex_rels):
-    true_pos_len = float(len(true_pos))
-    true_false_pos_len = float(len(true_false_pos))
-    print "Retrieved: " + str(true_false_pos)
-    print "Expected: " + str(ex_rels)
-    print "True Positive: " + str(true_pos)
-    precision = true_pos_len / true_false_pos_len
-    recall = true_pos_len / float(len(ex_rels))
-    return round(precision, 2), round(recall, 2)
-
-
-def precision_recall_entities(n, raw_resources):
-    global test_count
-    expected_entities = expected_outputs_entities[str(n)]
-    p_list=[]
-    r_list=[]
-    for res_key, res_val in expected_entities.iteritems():
-        expected_ent = res_val
-        # print res_val
-        retrieved_ent = raw_resources.get(res_key)
-        if retrieved_ent:
-            correct_results = [ent for ent in expected_ent if ent in retrieved_ent]
-            cr = float(len(correct_results))
-            # print cr, len(ex_out), len(unique_rel)
-            precision = cr / float(len(retrieved_ent))
-            recall = cr / float(len(expected_ent))
-            print res_key + " >>", "Precision: " + str(precision), "Recall: " + str(recall)
-            p_list.append((precision,2))
-            r_list.append(round(recall,2))
-        else:
-            p_list.append(0)
-            r_list.append(0)
-    return p_list,r_list
 
 
 def fact_checker(sentence_lis, id_list):
@@ -142,7 +74,13 @@ def fact_checker(sentence_lis, id_list):
                 file_triples[sent_id] = triple_dict
                 new_triple_flag = 1
             print triple_dict
+            precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resources)
+            print entity_matched
+            # print resources
+            resources = entity_matched
+            # sys.exit(0)
             relation = []
+            # Using entity_matched instead of all resource
             relation_ent = fact_check.relation_extractor_triples(resources, triple_dict, relation)
             # sys.exit(0)
             if not relation_ent:
@@ -150,29 +88,29 @@ def fact_checker(sentence_lis, id_list):
                 relation_ent, rel_count = fact_check.relation_extractor_all(resources, verb_entity[n])
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
-            precision_ent, recall_ent = precision_recall_entities(sent_id, raw_resources)
+
             # print '\n'
             relations = fact_check.relation_processor(relation_ent)
             print "Relation Graph"
             print "--------------"
-            # print relations
+            print relations
             # sys.exit(0)
             if relations:
                 pprint.pprint(relations)
                 execution_time = time.time() - res_time
                 print execution_time
                 # sys.exit(0)
-                true_pos_rel, retrived_rels, ex_rels = precision_recall_relations1(sent_id, relations)
-                true_pos_ent, retrieved_ents, ex_ent_all = precision_recall_ent_match(sent_id, relations)
+                true_pos_rel, retrived_rels, ex_rels = evaluation.precision_recall_relations1(sent_id, relations)
+                true_pos_ent, retrieved_ents, ex_ent_all = evaluation.precision_recall_ent_match(sent_id, relations)
                 print '\n'
                 print "Precision & Recall for Entities"
                 print "--------------------------------"
-                precision_ent_out, recall_ent_out = precision_recall(true_pos_ent, retrieved_ents, ex_ent_all)
+                precision_ent_out, recall_ent_out = evaluation.precision_recall(true_pos_ent, retrieved_ents, ex_ent_all)
                 print "Entity Match: Precision: " + str(precision_ent_out), "Recall: " + str(recall_ent_out)
                 print "------------------------------------------"
                 print "Precision & Recall for Relations"
                 print "--------------------------------"
-                precision_rel, recall_rel = precision_recall(true_pos_rel, retrived_rels, ex_rels)
+                precision_rel, recall_rel = evaluation.precision_recall(true_pos_rel, retrived_rels, ex_rels)
                 print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
                 precision_recall_stats[sent_id] = [precision_rel, recall_rel, precision_ent_out, recall_ent_out]
                 if KG_Miner:
@@ -181,32 +119,43 @@ def fact_checker(sentence_lis, id_list):
                     entity_type_ontology, entity_type_resource = KG_Miner_Extension.entity_type_extractor(resources, triple_dict, ent_dict)
                     pprint.pprint(entity_type_ontology)
                     pprint.pprint(entity_type_resource)
+                    # sys.exit(0)
                     resource_type_set_ranked, resource_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict, triple_dict)
-                    pprint.pprint(resource_threshold_ranked)
-                    if resource_threshold_ranked:
-                        example_entity_resource = KG_Miner_Extension.resource_type_extractor(resource_threshold_ranked,triple_dict)
+                    ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_ontology, ent_dict, triple_dict)
+                    pprint.pprint(resource_type_set_ranked)
+                    pprint.pprint(ontology_type_set_ranked)
+                    # sys.exit(0)
+                    # possible_predicate_set = KG_Miner_Extension.possible_predicate_type(ontology_type_set_ranked,triple_dict)
+                    possible_predicate_set = predicate_list_json['data3']
+                    possible_predicate_set_ranked, possible_predicate_set_threshold = KG_Miner_Extension.predicate_ranker(possible_predicate_set,triple_dict)
+                    # print possible_predicate_set
+                    print possible_predicate_set_ranked
+                    print possible_predicate_set_threshold
+                    sys.exit(0)
+                    # if resource_threshold_ranked:
+                    #     example_entity_resource = KG_Miner_Extension.resource_type_extractor(resource_threshold_ranked,triple_dict)
                         # print example_entity_resource
-                    entity_keys = [kr for kr in ent_dict.keys()]
-                    if example_entity_resource[entity_keys[0]] == example_entity_resource[entity_keys[1]]:
-                        print example_entity_resource[entity_keys[0]]
-                        training_set = [val.split('/')[-1] for val in example_entity_resource[entity_keys[0]]]
+                    # entity_keys = [kr for kr in ent_dict.keys()]
+                    # if example_entity_resource[entity_keys[0]] == example_entity_resource[entity_keys[1]]:
+                    #     print example_entity_resource[entity_keys[0]]
+                    #     training_set = [val.split('/')[-1] for val in example_entity_resource[entity_keys[0]]]
                     #     print training_set
-                        training_set_one = [element.split(',')[-1][1:]  if ',' in element else '' for element in training_set]
+                    #     training_set_one = [element.split(',')[-1][1:]  if ',' in element else '' for element in training_set]
                     #     print training_set_one
-                        training_id_one = KG_Miner_Extension.entity_id_finder(training_set_one)
-                        training_id = KG_Miner_Extension.entity_id_finder(training_set)
+                    #     training_id_one = KG_Miner_Extension.entity_id_finder(training_set_one)
+                    #     training_id = KG_Miner_Extension.entity_id_finder(training_set)
                     #     print training_id_one, training_id
-                        training_data=[]
-                        test_data = []
-                        for i, v1 in enumerate(training_set_one):
-                            id_one = [row[0] for row in training_id_one if v1==row[1]]
-                            if id_one:
-                                id_two = [row[0] for row in training_id if training_set[i]==row[1]]
-                                if id_two and v1 != 'Arizona':
-                                    training_data.append([id_one[0], id_two[0]])
-                                else:
-                                    test_data.append([id_one[0], id_two[0]])
-
+                    #     training_data=[]
+                    #     test_data = []
+                    #     for i, v1 in enumerate(training_set_one):
+                    #         id_one = [row[0] for row in training_id_one if v1==row[1]]
+                    #         if id_one:
+                    #             id_two = [row[0] for row in training_id if training_set[i]==row[1]]
+                    #             if id_two and v1 != 'Arizona':
+                    #                 training_data.append([id_one[0], id_two[0]])
+                    #             else:
+                    #                 test_data.append([id_one[0], id_two[0]])
+                    #
                         if training_data:
                             KG_Miner_Extension.test_set(training_data,file_name='training_data')
                         if test_data:
@@ -245,15 +194,10 @@ def fact_checker(sentence_lis, id_list):
         print "average",vals_avg
 
 
-with open(data_source+'entity_annotations.json') as json_data:
-    expected_outputs_entities = json.load(json_data)
-
-
-with open(data_source+'relation_annotations.json') as json_data:
-    expected_outputs_relations = json.load(json_data)
 
 with open('predicate_dict.json') as json_data:
     predicate_list_json = json.load(json_data)
+
 
 with open(data_source+'triples_raw.json') as json_data:
     file_triples = json.load(json_data)

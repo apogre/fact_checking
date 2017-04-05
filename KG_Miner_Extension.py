@@ -3,6 +3,7 @@ import fact_check
 import operator
 import csv
 import sys
+import os
 
 entity_type_threshold=0
 possible_predicate_threshold = 1
@@ -109,7 +110,7 @@ def entity_id_finder(entity_set):
             # id_set[label] = id_list
     return id_list
 
-def test_set(training_data, file_name):
+def kg_miner_csv(training_data, file_name):
     with open(kg_data_source+file_name+'.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
         # id_keys = id_set.keys()
@@ -191,17 +192,18 @@ def predicate_ranker(predicates, triple):
     return predicate_KG , predicate_KG_threshold
 
 
-def train_data_csv(training_set_one,node_ids):
+def train_data_csv(train_ents, node_ids):
     training_data=[]
     test_data = []
-    for i, v1 in enumerate(training_set_one):
-            id_one = [row[0] for row in training_id_one if v1==row[1]]
+    for i in range(0, len(train_ents)-2,2):
+            id_one = [row[0] for row in node_ids if train_ents[i]==row[1]]
             if id_one:
-                id_two = [row[0] for row in training_id if training_set[i]==row[1]]
-                if id_two and v1 != 'Arizona':
+                id_two = [row[0] for row in node_ids if train_ents[i+1]==row[1]]
+                if id_two and train_ents[i] != 'Arizona' and train_ents[i+1] != 'Phoenix,_Arizona':
                     training_data.append([id_one[0], id_two[0]])
                 else:
                     test_data.append([id_one[0], id_two[0]])
+    return training_data, test_data
 
 
 def get_training_set(predicate_ranked):
@@ -223,31 +225,12 @@ def get_training_set(predicate_ranked):
                 print train_ents
                 node_ids = entity_id_finder(train_ents)
                 print node_ids
-                # train_data_csv(train_ents, node_ids)
-            # sys.exit(0)
-            # execute the KGMINER script
-    # return train_ents
-                # print type_set
-#         # print type_set_ranked
-#         # print threshold_ranked
-#         # sys.exit(0)
-#         # predicate_list = fact_check.possible_predicate_type(threshold_ranked,triple_dict)
-#         # predicate_list = predicate_list_json["data1"]
-#         # print predicate_list
-#         # print len(predicate_list)
-#         # sys.exit(0)
-#         # predicate_ranked = fact_check.predicate_ranker(predicate_list,triple_dict)
-#         # print predicate_ranked
-#         # prob_value = fact_check.KG_implementation(predicate_ranked)
-#         print relation_ent
-#         # sys.exit(0)
-
-
-#     predicate_list = fact_check.predicate_finder(triple_dict)
-#     print predicate_list
-#     entity_set = fact_check.entity_threshold(resources)
-#     print entity_set
-#     id_set = fact_check.entity_id_finder(entity_set)
-#     print id_set
-#     data_size = fact_check.test_set(id_set)
-#     # fact_check.csv_processor(data_size)
+                training_data, test_data = train_data_csv(train_ents, node_ids)
+                print training_data, test_data
+                # execute the KGMINER script
+                if training_data:
+                    kg_miner_csv(training_data, file_name='training_data')
+                if test_data:
+                    kg_miner_csv(test_data, file_name='test_data')
+                    os.chdir('KGMiner')
+                #     subprocess.call('./run_test.sh')

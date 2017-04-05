@@ -158,12 +158,6 @@ def fact_checker(sentence_lis, id_list):
                     #             else:
                     #                 test_data.append([id_one[0], id_two[0]])
                     #
-                        # if training_data:
-                        #     KG_Miner_Extension.test_set(training_data,file_name='training_data')
-                        # if test_data:
-                        #     KG_Miner_Extension.test_set(test_data, file_name='test_data')
-                    #     os.chdir('KGMiner')
-                    #     subprocess.call('./run_test.sh')
 
             else:
                 precision_recall_stats[sent_id] = [0, 0, 0, 0]

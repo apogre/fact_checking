@@ -2,6 +2,7 @@ import sparql
 import fact_check
 import operator
 import csv
+import sys
 
 entity_type_threshold=0
 possible_predicate_threshold = 1
@@ -94,7 +95,7 @@ def entity_id_finder(entity_set):
     # id_set = {}
     # for label, e_set in entity_set.iteritems():
     id_list = []
-    print entity_set
+    # print entity_set
     with open("infobox.nodes", "rb") as csvfile:
         reader = csv.reader(csvfile, delimiter='\t')
         # print label
@@ -190,6 +191,42 @@ def predicate_ranker(predicates, triple):
     return predicate_KG , predicate_KG_threshold
 
 
+def train_data_csv(training_set_one,node_ids):
+    training_data=[]
+    test_data = []
+    for i, v1 in enumerate(training_set_one):
+            id_one = [row[0] for row in training_id_one if v1==row[1]]
+            if id_one:
+                id_two = [row[0] for row in training_id if training_set[i]==row[1]]
+                if id_two and v1 != 'Arizona':
+                    training_data.append([id_one[0], id_two[0]])
+                else:
+                    test_data.append([id_one[0], id_two[0]])
+
+
+def get_training_set(predicate_ranked):
+    for sent_pred in predicate_ranked.keys():
+        predicate_of_interest = predicate_ranked[sent_pred]
+        for poi in predicate_of_interest:
+            print poi
+            q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { {?url1 <http://dbpedia.org/ontology/' + poi[
+                0] + '> ?url2} UNION {?url2 <http://dbpedia.org/ontology/' + poi[
+                0] + '> ?url1}.' \
+                     ' ?url1 rdf:type <http://dbpedia.org/ontology/Region> . ?url1 rdf:type <http://dbpedia.org/ontology/PopulatedPlace>. ' \
+                     '?url1 rdf:type <http://dbpedia.org/ontology/Place> . ?url2 dbo:type <http://dbpedia.org/resource/List_of_capitals_in_the_United_States>. ' \
+                     '?url2 rdf:type <http://dbpedia.org/ontology/PopulatedPlace>. ?url2 rdf:type <http://dbpedia.org/ontology/Place> .} limit 50'
+            result = sparql.query(sparql_dbpedia_on, q_ts)
+            training_set = [sparql.unpack_row(row_result) for row_result in result]
+            if training_set:
+                training_set = sum(training_set, [])
+                train_ents = [val.split('/')[-1] for val in training_set]
+                print train_ents
+                node_ids = entity_id_finder(train_ents)
+                print node_ids
+                # train_data_csv(train_ents, node_ids)
+            # sys.exit(0)
+            # execute the KGMINER script
+    # return train_ents
                 # print type_set
 #         # print type_set_ranked
 #         # print threshold_ranked

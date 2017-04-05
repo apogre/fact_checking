@@ -131,6 +131,8 @@ def fact_checker(sentence_lis, id_list):
                     # print possible_predicate_set
                     print possible_predicate_set_ranked
                     print possible_predicate_set_threshold
+                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold)
+                    # print training_set
                     sys.exit(0)
                     # if resource_threshold_ranked:
                     #     example_entity_resource = KG_Miner_Extension.resource_type_extractor(resource_threshold_ranked,triple_dict)
@@ -156,10 +158,10 @@ def fact_checker(sentence_lis, id_list):
                     #             else:
                     #                 test_data.append([id_one[0], id_two[0]])
                     #
-                        if training_data:
-                            KG_Miner_Extension.test_set(training_data,file_name='training_data')
-                        if test_data:
-                            KG_Miner_Extension.test_set(test_data, file_name='test_data')
+                        # if training_data:
+                        #     KG_Miner_Extension.test_set(training_data,file_name='training_data')
+                        # if test_data:
+                        #     KG_Miner_Extension.test_set(test_data, file_name='test_data')
                     #     os.chdir('KGMiner')
                     #     subprocess.call('./run_test.sh')
 

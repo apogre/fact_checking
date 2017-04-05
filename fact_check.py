@@ -277,47 +277,6 @@ def csv_processor(data_size):
 
 
 
-
-def KG_implementation(predicate_ranked):
-    for sent_pred in predicate_ranked.keys():
-        predicate_of_interest = predicate_ranked[sent_pred]
-        for poi in predicate_of_interest:
-            q_ts = 'select distinct ?url1 ?url2 where { ?url1 <http://dbpedia.org/ontology/'+poi[0]+'> ?url2 } limit 50'
-            result = sparql.query(sparql_dbpedia_on, q_ts)
-            training_set = [sparql.unpack_row(row_result) for row_result in result]
-            training_set= sum(training_set,[])
-            train_ents = [val.split('/')[-1] for val in training_set]
-            node_ids = node_lookup(train_ents)
-            print node_ids
-            train_data_csv(train_ents,node_ids)
-            # sys.exit(0)
-            # execute the KGMINER script
-    return 0.5
-
-
-def train_data_csv(train_ents,node_ids):
-    with open('train_data.csv','wb') as csvfile:
-        twriter = csv.writer(csvfile)
-        i=0
-        while i<=len(train_ents)/2:
-            twriter.writerow([node_ids.get(train_ents[i],0), node_ids.get(train_ents[i+1],0)])
-            i=i+2
-
-def node_lookup(train_ents):
-    print train_ents
-    id_list = {}
-    with open("infobox.nodes", "rb") as csvfile:
-        reader = csv.reader(csvfile, delimiter='\t')
-        for row in reader:
-            try:
-                if row[1] in train_ents:
-                    print row
-                    id_list[row[1]] = row[0]
-            except:
-                pass
-    return id_list
-
-
 def resource_extractor(labels):
     global new_labels
     new_labels = []

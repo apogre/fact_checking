@@ -131,7 +131,7 @@ def fact_checker(sentence_lis, id_list):
                     # print possible_predicate_set
                     print possible_predicate_set_ranked
                     print possible_predicate_set_threshold
-                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold)
+                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_type_set_ranked)
                     # print training_set
                     sys.exit(0)
                     # if resource_threshold_ranked:

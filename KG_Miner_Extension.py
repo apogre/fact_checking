@@ -206,20 +206,44 @@ def train_data_csv(train_ents, node_ids):
     return training_data, test_data
 
 
-def get_training_set(predicate_ranked):
+def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_type_set_ranked):
+    # print resource_type_set_ranked
+    # print ontology_type_set_ranked
+    q_part_base = '?url1 rdf:type <'
+    q_part =''
+    for k,v in ontology_type_set_ranked.iteritems():
+        # print k
+        for val in v:
+            # print val
+            q_part = q_part+q_part_base+val[0]+'> . '
+        q_part_base = '?url2 rdf:type <'
+    # print q_part
+    q_part_base_res = '?url1 dbo:type <'
+    q_part_res =''
+    for k,v in resource_type_set_ranked.iteritems():
+        # print k
+        for val in v:
+            # print val
+            q_part_res = q_part_res+q_part_base_res+val[0]+'> . '
+        q_part_base_res = '?url2 dbo:type <'
+    # print q_part_res
+    # sys.exit(0)
     for sent_pred in predicate_ranked.keys():
         predicate_of_interest = predicate_ranked[sent_pred]
         for poi in predicate_of_interest:
             print poi
             q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { {?url1 <http://dbpedia.org/ontology/' + poi[
                 0] + '> ?url2} UNION {?url2 <http://dbpedia.org/ontology/' + poi[
-                0] + '> ?url1}.' \
-                     ' ?url1 rdf:type <http://dbpedia.org/ontology/Region> . ?url1 rdf:type <http://dbpedia.org/ontology/PopulatedPlace>. ' \
-                     '?url1 rdf:type <http://dbpedia.org/ontology/Place> . ?url2 dbo:type <http://dbpedia.org/resource/List_of_capitals_in_the_United_States>. ' \
-                     '?url2 rdf:type <http://dbpedia.org/ontology/PopulatedPlace>. ?url2 rdf:type <http://dbpedia.org/ontology/Place> .} limit 50'
+                0] + '> ?url1}. ' + q_part+q_part_res+'} limit 50'
+                     # ' ?url1 rdf:type <http://dbpedia.org/ontology/Region> . ?url1 rdf:type <http://dbpedia.org/ontology/PopulatedPlace>. ' \
+                     # '?url1 rdf:type <http://dbpedia.org/ontology/Place> . ?url2 dbo:type <http://dbpedia.org/resource/List_of_capitals_in_the_United_States>. ' \
+                     # '?url2 rdf:type <http://dbpedia.org/ontology/PopulatedPlace>. ?url2 rdf:type <http://dbpedia.org/ontology/Place> .' \
+
             result = sparql.query(sparql_dbpedia_on, q_ts)
             training_set = [sparql.unpack_row(row_result) for row_result in result]
             if training_set:
+                print q_ts
+                # sys.exit(0)
                 training_set = sum(training_set, [])
                 train_ents = [val.split('/')[-1] for val in training_set]
                 print train_ents
@@ -232,5 +256,5 @@ def get_training_set(predicate_ranked):
                     kg_miner_csv(training_data, file_name='training_data')
                 if test_data:
                     kg_miner_csv(test_data, file_name='test_data')
-                    os.chdir('KGMiner')
+                    # os.chdir('KGMiner')
                 #     subprocess.call('./run_test.sh')

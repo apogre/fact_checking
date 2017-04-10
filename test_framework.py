@@ -74,6 +74,7 @@ def fact_checker(sentence_lis, id_list):
                 file_triples[sent_id] = triple_dict
                 new_triple_flag = 1
             print triple_dict
+            sys.exit(0)
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resources)
             print entity_matched
             # print resources

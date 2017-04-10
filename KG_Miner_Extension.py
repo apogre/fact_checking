@@ -4,6 +4,7 @@ import operator
 import csv
 import sys
 import os
+import subprocess
 
 entity_type_threshold=0
 possible_predicate_threshold = 1
@@ -256,5 +257,5 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_type_s
                     kg_miner_csv(training_data, file_name='training_data')
                 if test_data:
                     kg_miner_csv(test_data, file_name='test_data')
-                    # os.chdir('KGMiner')
-                #     subprocess.call('./run_test.sh')
+                    os.chdir('KGMiner')
+                    subprocess.call('./run_test.sh')

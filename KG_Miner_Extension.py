@@ -111,6 +111,24 @@ def entity_id_finder(entity_set):
             # id_set[label] = id_list
     return id_list
 
+def predicate_id_finder(poi):
+    id_list = []
+    with open("infobox.edgetypes", "rb") as csvfile:
+        reader = csv.reader(csvfile, delimiter='\t')
+        # print label
+        for row in reader:
+            try:
+                if row[1] == poi:
+                    id_list.append(row)
+                    print row
+                    with open(kg_data_source + 'poi.csv', 'wb') as csvfile:
+                        datawriter = csv.writer(csvfile)
+                        datawriter.writerow([row[0]])
+            except:
+                pass
+            # id_set[label] = id_list
+    return id_list
+
 def kg_miner_csv(training_data, file_name):
     with open(kg_data_source+file_name+'.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
@@ -264,12 +282,10 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
         predicate_of_interest = predicate_ranked[sent_pred]
         for poi in predicate_of_interest:
             print poi
+            pred_id = predicate_id_finder(poi[0])
             q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { {?url1 <http://dbpedia.org/ontology/' + poi[
                 0] + '> ?url2} UNION {?url2 <http://dbpedia.org/ontology/' + poi[
                 0] + '> ?url1}. ' + q_part+q_part_res+'.} limit 50'
-                     # ' ?url1 rdf:type <http://dbpedia.org/ontology/Region> . ?url1 rdf:type <http://dbpedia.org/ontology/PopulatedPlace>. ' \
-                     # '?url1 rdf:type <http://dbpedia.org/ontology/Place> . ?url2 dbo:type <http://dbpedia.org/resource/List_of_capitals_in_the_United_States>. ' \
-                     # '?url2 rdf:type <http://dbpedia.org/ontology/PopulatedPlace>. ?url2 rdf:type <http://dbpedia.org/ontology/Place> .' \
             # print q_ts
             result = sparql.query(sparql_dbpedia, q_ts)
             training_set = [sparql.unpack_row(row_result) for row_result in result]
@@ -287,6 +303,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 # execute the KGMINER script
                 if training_data:
                     kg_miner_csv(training_data, file_name='training_data')
+
                 # if test_data:
                 #     kg_miner_csv(test_data, file_name='test_data')
                     os.chdir('KGMiner')

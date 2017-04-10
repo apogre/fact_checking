@@ -258,23 +258,6 @@ def csv_processor(data_size):
     # print merged.shape
     merged.to_csv("final.csv", index=False)
 
-#
-# def test_set(id_set):
-#     with open('test_data.csv','wb') as csvfile:
-#         datawriter = csv.writer(csvfile)
-#         # id_keys = id_set.keys()
-#         # for k,v in id_set.iteritems():
-#         # val1 = id_set[id_keys[0]]
-#         # val2 = id_set[id_keys[1]]
-#         # print val1, len(val1)
-#         # print val2, len(val2)
-#         # data_size = len(val1) * len(val2)
-#         for v1 in val1:
-#             for v2 in val2:
-#                 datawriter.writerow([v1[0],v2[0]])
-#     return data_size
-
-
 
 
 def resource_extractor(labels):

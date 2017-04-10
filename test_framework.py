@@ -74,7 +74,7 @@ def fact_checker(sentence_lis, id_list):
                 file_triples[sent_id] = triple_dict
                 new_triple_flag = 1
             print triple_dict
-            sys.exit(0)
+            # sys.exit(0)
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resources)
             print entity_matched
             # print resources
@@ -124,7 +124,7 @@ def fact_checker(sentence_lis, id_list):
                     resource_type_set_ranked, resource_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict, triple_dict)
                     ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_ontology, ent_dict, triple_dict)
                     pprint.pprint(resource_type_set_ranked)
-                    pprint.pprint(ontology_type_set_ranked)
+                    pprint.pprint(ontology_threshold_ranked)
                     # sys.exit(0)
                     # possible_predicate_set = KG_Miner_Extension.possible_predicate_type(ontology_type_set_ranked,triple_dict)
                     possible_predicate_set = predicate_list_json['data3']
@@ -132,9 +132,9 @@ def fact_checker(sentence_lis, id_list):
                     # print possible_predicate_set
                     print possible_predicate_set_ranked
                     print possible_predicate_set_threshold
-                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_type_set_ranked)
+                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_threshold_ranked)
                     # print training_set
-                    sys.exit(0)
+                    # sys.exit(0)
                     # if resource_threshold_ranked:
                     #     example_entity_resource = KG_Miner_Extension.resource_type_extractor(resource_threshold_ranked,triple_dict)
                         # print example_entity_resource

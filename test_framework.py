@@ -37,6 +37,7 @@ def fact_checker(sentence_lis, id_list):
     verb_entity = fact_check.verb_entity_matcher(dep_s)
     start_time = time.time()
     new_triple_flag = 0
+    new_predicate_flag = 0
     for i in range(0, 1):
         for n, ne in enumerate(ne_s):
             sent_id = id_list[n]
@@ -51,7 +52,7 @@ def fact_checker(sentence_lis, id_list):
                 date_string = (dates[n][0], 'DATE')
                 ent.append(date_string)
             vb = fact_check.get_verb(pos_s[n])
-            print ent
+            # print ent
             ent_dict = dict(ent)
     #         # sys.exit(0)
             res_time = time.time()
@@ -75,9 +76,8 @@ def fact_checker(sentence_lis, id_list):
                 file_triples[sent_id] = triple_dict
                 new_triple_flag = 1
             print triple_dict
-            # sys.exit(0)
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resources)
-            print entity_matched
+            # print entity_matched
             # print resources
             resources = entity_matched
             # sys.exit(0)
@@ -90,12 +90,10 @@ def fact_checker(sentence_lis, id_list):
                 relation_ent, rel_count = fact_check.relation_extractor_all(resources, verb_entity[n])
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"
-
-            # print '\n'
             relations = fact_check.relation_processor(relation_ent)
             print "Relation Graph"
             print "--------------"
-            print relations
+            # print relations
             # sys.exit(0)
             if relations:
                 pprint.pprint(relations)
@@ -126,40 +124,20 @@ def fact_checker(sentence_lis, id_list):
                     ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_ontology, ent_dict, triple_dict)
                     pprint.pprint(resource_type_set_ranked)
                     pprint.pprint(ontology_threshold_ranked)
-                    # sys.exit(0)
-                    # possible_predicate_set = KG_Miner_Extension.possible_predicate_type(ontology_type_set_ranked,triple_dict)
-                    possible_predicate_set = predicate_list_json['data3']
+                    if sent_id in possible_predicate.keys():
+                        possible_predicate_set = possible_predicate[sent_id]
+                    else:
+                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(ontology_type_set_ranked,triple_dict)
+                        new_predicate_flag=1
+                    # print possible_predicate_set
                     possible_predicate_set_ranked, possible_predicate_set_threshold = KG_Miner_Extension.predicate_ranker(possible_predicate_set,triple_dict)
                     # print possible_predicate_set
                     print possible_predicate_set_ranked
                     print possible_predicate_set_threshold
-                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_threshold_ranked)
-                    # print training_set
                     # sys.exit(0)
-                    # if resource_threshold_ranked:
-                    #     example_entity_resource = KG_Miner_Extension.resource_type_extractor(resource_threshold_ranked,triple_dict)
-                        # print example_entity_resource
-                    # entity_keys = [kr for kr in ent_dict.keys()]
-                    # if example_entity_resource[entity_keys[0]] == example_entity_resource[entity_keys[1]]:
-                    #     print example_entity_resource[entity_keys[0]]
-                    #     training_set = [val.split('/')[-1] for val in example_entity_resource[entity_keys[0]]]
-                    #     print training_set
-                    #     training_set_one = [element.split(',')[-1][1:]  if ',' in element else '' for element in training_set]
-                    #     print training_set_one
-                    #     training_id_one = KG_Miner_Extension.entity_id_finder(training_set_one)
-                    #     training_id = KG_Miner_Extension.entity_id_finder(training_set)
-                    #     print training_id_one, training_id
-                    #     training_data=[]
-                    #     test_data = []
-                    #     for i, v1 in enumerate(training_set_one):
-                    #         id_one = [row[0] for row in training_id_one if v1==row[1]]
-                    #         if id_one:
-                    #             id_two = [row[0] for row in training_id if training_set[i]==row[1]]
-                    #             if id_two and v1 != 'Arizona':
-                    #                 training_data.append([id_one[0], id_two[0]])
-                    #             else:
-                    #                 test_data.append([id_one[0], id_two[0]])
-                    #
+
+                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_threshold_ranked,ex_ent_all)
+
 
             else:
                 precision_recall_stats[sent_id] = [0, 0, 0, 0]
@@ -169,8 +147,13 @@ def fact_checker(sentence_lis, id_list):
 
     if new_triple_flag == 1:
         os.remove(data_source+'triples_raw.json')
-        with open(data_source+'/all_triples_raw.json', 'w') as fp:
+        with open(data_source+'/triples_raw.json', 'w') as fp:
             json.dump(file_triples, fp, default=json_serial)
+
+    if new_predicate_flag == 1:
+        os.remove(data_source+'possible_predicate.json')
+        with open(data_source+'/possible_predicate.json', 'w') as fp:
+            json.dump(possible_predicate_set, fp, default=json_serial)
 
     ex_time = time.time() - start_time
     print "Total Execution Time: " + str(round(ex_time, 2))
@@ -193,12 +176,11 @@ def fact_checker(sentence_lis, id_list):
 
 
 
-with open('predicate_dict.json') as json_data:
-    predicate_list_json = json.load(json_data)
-
-
 with open(data_source+'triples_raw.json') as json_data:
     file_triples = json.load(json_data)
+
+with open(data_source+'possible_predicate.json') as json_data:
+    possible_predicate = json.load(json_data)
 
 
 with open(data_source+'sentences1.csv') as f:

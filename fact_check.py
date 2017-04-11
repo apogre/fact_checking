@@ -267,7 +267,7 @@ def resource_extractor(labels):
     resources = {}
     raw_resources = {}
     for i,label in enumerate(labels):
-        print label
+        # print label
         date_labels = []
         if label[1] != 'DATE':
             my_labels = label[0].split()
@@ -298,10 +298,10 @@ def resource_extractor(labels):
                 else:
                     q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
-            print q_u
+            # print q_u
             result = sparql.query(sparql_dbpedia, q_u)
             values = [sparql.unpack_row(row) for row in result]
-            print values
+            # print values
             if not values and label[1] == 'PERSON':
                 result = sparql.query(sparql_dbpedia, q_birthname)
                 values = [sparql.unpack_row(row) for row in result]
@@ -320,7 +320,7 @@ def resource_extractor(labels):
             # print values
             sorted_values = sorted(values,key=operator.itemgetter(2),reverse=True)
             resources[label[0]] = sorted_values
-            print resources
+            # print resources
         else:
             date_flag = 1
             date_labels.append(label[0])

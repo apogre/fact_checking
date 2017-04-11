@@ -16,12 +16,15 @@ def precision_recall_entities(n, resources):
         if retrieved_ent:
             for ents in retrieved_ent:
                 # print ents, expected_ent
-                if ents[0].split('/')[-1]==expected_ent[0]:
-                    correct_results=ents
+                retrieved_entity = ents[0].split('/')[-1]
+                if retrieved_entity==expected_ent[0]:
+                    correct_results=[retrieved_entity]
+                    correct_resource = ents
             # correct_results = [ent for ent in expected_ent if ent in retrieved_ent]
             if correct_results:
                 cr = float(len(correct_results))
-                entity_matched[res_key]=[correct_results]
+                # print cr
+                entity_matched[res_key]=[correct_resource]
                 # print cr, len(ex_out), len(unique_rel)
                 precision = cr / float(len(retrieved_ent))
                 recall = cr / float(len(expected_ent))

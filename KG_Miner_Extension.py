@@ -7,7 +7,7 @@ import os
 import subprocess
 
 entity_type_threshold=0
-possible_predicate_threshold = 1
+possible_predicate_threshold = 0.5
 sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
 
@@ -105,7 +105,7 @@ def entity_id_finder(entity_set):
             try:
                 if row[1] in entity_set:
                     id_list.append(row)
-                    print row
+                    # print row
             except:
                 pass
             # id_set[label] = id_list
@@ -129,17 +129,11 @@ def predicate_id_finder(poi):
             # id_set[label] = id_list
     return id_list
 
-def kg_miner_csv(training_data, file_name):
+
+def kg_miner_csv(input_data, file_name):
     with open(kg_data_source+file_name+'.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
-        # id_keys = id_set.keys()
-        # for k,v in id_set.iteritems():
-        # val1 = id_set[id_keys[0]]
-        # val2 = id_set[id_keys[1]]
-        # print val1, len(val1)
-        # print val2, len(val2)
-        # data_size = len(val1) * len(val2)
-        for data in training_data:
+        for data in input_data:
             datawriter.writerow(data)
 
 
@@ -167,6 +161,7 @@ def possible_predicate_type(type_set, triples):
                     pair = [it1[0], it2[0]]
                     if pair not in pair_list:
                         try:
+                            # print q_pp
                             result = sparql.query(sparql_dbpedia_on, q_pp)
                             pred_values = [sparql.unpack_row(row_result) for row_result in result]
                             if pred_values:
@@ -176,7 +171,7 @@ def possible_predicate_type(type_set, triples):
                                 # print pred_vals
                                 predicate_list.extend(pred_vals)
                                 count = count + 1
-                                print count
+                                # print count
                         except:
                             pass
     predicate_list = list(set(predicate_list))
@@ -211,7 +206,7 @@ def predicate_ranker(predicates, triple):
     return predicate_KG , predicate_KG_threshold
 
 
-def train_data_csv(train_ents, node_ids):
+def train_data_csv(train_ents, node_ids, expected_entities):
     training_data=[]
     test_data = []
     for i in range(0, len(train_ents)-2,2):
@@ -220,7 +215,7 @@ def train_data_csv(train_ents, node_ids):
                 try:
                     # print id_one
                     id_two = [row[0] for row in node_ids if train_ents[i+1]==row[1]]
-                    if id_two and train_ents[i] != 'Arizona' and train_ents[i+1] != 'Phoenix,_Arizona':
+                    if id_two and train_ents[i] not in expected_entities and train_ents[i+1] not in expected_entities:
                         # print id_two
                         training_data.append([id_one[0], id_two[0]])
                     else:
@@ -256,9 +251,12 @@ def and_query_prep(resource_type_set_ranked, ontology_threshold_ranked):
     q_part = ''
     for k, v in ontology_threshold_ranked.iteritems():
         # print k
-        for val in v:
+        for i, val in enumerate(v):
             # print val
-            q_part = q_part + q_part_base + val[0] + '> } UNION '
+            if i==len(v)-1:
+                q_part = q_part + q_part_base + val[0] + '> } '
+            else:
+                q_part = q_part + q_part_base + val[0] + '> } UNION '
         q_part_base = '{ ?url2 rdf:type <'
     # print q_part
     q_part_base_res = '{ ?url1 dbo:type <'
@@ -272,12 +270,17 @@ def and_query_prep(resource_type_set_ranked, ontology_threshold_ranked):
     return q_part, q_part_res
 
 
-def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_threshold_ranked):
+def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_threshold_ranked,ex_ent_all):
     # print resource_type_set_ranked
     # print ontology_type_set_ranked
     # q_part, q_part_res = or_query_prep(resource_type_set_ranked,ontology_threshold_ranked)
     q_part, q_part_res = and_query_prep(resource_type_set_ranked,ontology_threshold_ranked)
     # sys.exit(0)
+    test_node_ids = entity_id_finder(ex_ent_all)
+    print test_node_ids
+    test_data = [node_id[0] for node_id in test_node_ids]
+    print test_data
+    kg_miner_csv([test_data], file_name='test_data')
     for sent_pred in predicate_ranked.keys():
         predicate_of_interest = predicate_ranked[sent_pred]
         for poi in predicate_of_interest:
@@ -291,15 +294,15 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
             training_set = [sparql.unpack_row(row_result) for row_result in result]
             if training_set:
                 # print "here--------------"
-                print q_ts
+                # print q_ts
                 # sys.exit(0)
                 training_set = sum(training_set, [])
                 train_ents = [val.split('/')[-1] for val in training_set]
-                print train_ents
+                # print train_ents
                 node_ids = entity_id_finder(train_ents)
                 # print node_ids
-                training_data, test_data = train_data_csv(train_ents, node_ids)
-                print training_data, test_data
+                training_data, test_data = train_data_csv(train_ents, node_ids, ex_ent_all)
+                # print training_data, test_data
                 # execute the KGMINER script
                 if training_data:
                     kg_miner_csv(training_data, file_name='training_data')

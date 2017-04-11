@@ -52,5 +52,8 @@
     },
     "15": {
          "capital": [ "Arizona",  "Phoenix,_Arizona"]
-    }
+    },
+    "17": {
+           "parent": ["Donald_Trump", "Ivanka_Trump"]
+      }
 }

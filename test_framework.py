@@ -55,10 +55,11 @@ def fact_checker(sentence_lis, id_list):
             ent_dict = dict(ent)
     #         # sys.exit(0)
             res_time = time.time()
-            try:
-                resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor(ent)
-            except:
-                print "resource error"
+            # try:
+            resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor(ent)
+            # except:
+            #     print "resource error"
+            # sys.exit(0)
             if sent_id in file_triples.keys():
                 triple_dict = file_triples[sent_id]
             else:

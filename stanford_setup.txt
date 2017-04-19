@@ -1,0 +1,17 @@
+wget http://nlp.stanford.edu/software/stanford-ner-2015-12-09.zip
+wget http://nlp.stanford.edu/software/stanford-postagger-full-2015-12-09.zip
+wget http://nlp.stanford.edu/software/stanford-parser-full-2015-12-09.zip
+
+unzip stanford-ner-2015-12-09.zip
+unzip stanford-parser-full-2015-12-09.zip
+unzip stanford-postagger-full-2015-12-09.zip
+
+git clone https://github.com/philipperemy/Stanford-OpenIE-Python.git
+cd Stanford-OpenIE-Python/
+mv stanford-openie/ ../
+
+export STANFORDTOOLSDIR=$HOME
+export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser.jar:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar:$STANFORDTOOLSDIR/stanford-openie/stanford-openie.jar
+
+export STANFORD_MODELS=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/classifiers:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09/models:$STANFORDTOOLSDIR/stanford-openie/stanford-openie-models.jar
+# sudo /etc/init.d/virtuoso-opensource-7 start

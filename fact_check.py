@@ -26,22 +26,18 @@ sparql_dbpedia_on = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
+stanford_setup = True
 
 
+if stanford_setup:
+    stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
+    stanford_model_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
-stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
+    st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
+    st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
+    parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
 
-st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
-st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
-parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
-
-# export STANFORDTOOLSDIR=$HOME
-# export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser.jar:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar:$STANFORDTOOLSDIR/stanford-openie/stanford-openie.jar
-#
-# export STANFORD_MODELS=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/classifiers:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09/models:$STANFORDTOOLSDIR/stanford-openie/stanford-openie-models.jar
-# sudo /etc/init.d/virtuoso-opensource-7 start
 
 
 def get_nodes_updated(netagged_words):

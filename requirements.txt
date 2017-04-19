@@ -1,0 +1,6 @@
+requests
+sparql-client
+nltk
+python-dateutil
+pandas
+ftfy==4.4.2

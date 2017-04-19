@@ -12,7 +12,7 @@ import subprocess
 import evaluation
 
 aux_verb = ['was', 'is', 'become']
-KG_Miner = True
+KG_Miner = False
 precision_recall_stats = collections.OrderedDict()
 stanford_setup = False
 
@@ -30,7 +30,7 @@ def json_serial(obj):
 def fact_checker(sentence_lis, id_list):
     dates = fact_check.date_parser(sentence_lis)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-    # print sentence_list
+    print sentence_list
     # sys.exit(0)
     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
     # print dep_s

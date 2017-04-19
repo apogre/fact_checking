@@ -9,6 +9,9 @@ unzip stanford-postagger-full-2015-12-09.zip
 git clone https://github.com/philipperemy/Stanford-OpenIE-Python.git
 cd Stanford-OpenIE-Python/
 mv stanford-openie/ ../
+make __init__.py
+
+download nltk punkt
 
 export STANFORDTOOLSDIR=$HOME
 export CLASSPATH=$STANFORDTOOLSDIR/stanford-ner-2015-12-09/stanford-ner.jar:$STANFORDTOOLSDIR/stanford-postagger-full-2015-12-09:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser.jar:$STANFORDTOOLSDIR/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar:$STANFORDTOOLSDIR/stanford-openie/stanford-openie.jar

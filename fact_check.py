@@ -21,8 +21,9 @@ relation=[]
 ROOT = 'ROOT'
 aux_verb = ['was', 'is', 'become','to','of']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
-sparql_dbpedia = 'http://localhost:8890/sparql'
+# sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
+sparql_dbpedia = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8

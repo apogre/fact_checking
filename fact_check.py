@@ -422,14 +422,21 @@ def relation_extractor_triples(resources, triples, relation):
         for triple_v in triples_v:
             # print triple_v[0]
             item1_v = resources.get(triple_v[0])
+            print item1_v
             if item1_v:
                 for i1 in item1_v:
                     predicate_comment = {}
                     if 'dbpedia' in i1[0]:
                         url1 = i1[0]
+                        if '%' in url1:
+                            url1 = url1.replace('%20','_')
+                            url1 = url1.replace('%2C', ',')
+                        print url1
                         score1 = [it for it in i1 if isinstance(it, float)]
                         score1 = score1[0]
                         q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
+                        print q_all
+                        # sys.exit(0)
                         result = sparql.query(sparql_dbpedia, q_all)
                         q1_values = [sparql.unpack_row(row_result) for row_result in result]
                         q1_list = [qv[1] for qv in q1_values]

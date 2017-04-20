@@ -1,4 +1,5 @@
 import KG_Miner_Extension
+import ambiverse_api
 import fact_check
 from nltk import word_tokenize
 import sys
@@ -15,6 +16,7 @@ aux_verb = ['was', 'is', 'become']
 KG_Miner = False
 precision_recall_stats = collections.OrderedDict()
 stanford_setup = False
+ambiverse = True
 
 # data_source = 'ug_data/all_'
 data_source = 'main_data/'
@@ -26,15 +28,35 @@ def json_serial(obj):
         return serial
     raise TypeError ("Type not serializable")
 
+def triples_extractor(sent_id, sentence ,ne, new_triple_flag):
+    if sent_id in file_triples.keys():
+        triple_dict = file_triples[sent_id]
+    else:
+        try:
+            os.remove('sentences.txt')
+        except:
+            pass
+        with open('sentences.txt', 'a') as text:
+            text.write(sentence)
+        triples_raw = stanford_ie("sentences.txt", verbose=False)
+        triples = [[trip.lstrip() for trip in triple] for triple in triples_raw]
+        ent = fact_check.get_nodes_updated(ne)
+        triple_dict = fact_check.svo_finder(ent, triples)
+        file_triples[sent_id] = triple_dict
+        new_triple_flag = 1
+    return new_triple_flag, triple_dict
+
 
 def fact_checker(sentence_lis, id_list):
+    print sentence_lis
     dates = fact_check.date_parser(sentence_lis)
-    sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-    print sentence_list
-    # sys.exit(0)
-    ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
-    # print dep_s
-    verb_entity = fact_check.verb_entity_matcher(dep_s)
+    if stanford_setup:
+        sentence_list = [word_tokenize(sent) for sent in sentence_lis]
+        print sentence_list
+        ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
+        verb_entity = fact_check.verb_entity_matcher(dep_s)
+    else:
+        ne_s = sentence_lis
     start_time = time.time()
     new_triple_flag = 0
     new_predicate_flag = 0
@@ -42,46 +64,35 @@ def fact_checker(sentence_lis, id_list):
         for n, ne in enumerate(ne_s):
             sent_id = id_list[n]
             print sent_id, sentence_lis[n],'\n'
-            ent = fact_check.get_nodes_updated(ne)
+            if stanford_setup:
+                ent = fact_check.get_nodes_updated(ne)
             # print ent
-            new_loc = fact_check.location_update(ne)
-            if new_loc:
-                new_ent = (new_loc[0], 'LOCATION')
-                ent.append(new_ent)
-            if dates[n]:
-                date_string = (dates[n][0], 'DATE')
-                ent.append(date_string)
-            vb = fact_check.get_verb(pos_s[n])
+                new_loc = fact_check.location_update(ne)
+                if new_loc:
+                    new_ent = (new_loc[0], 'LOCATION')
+                    ent.append(new_ent)
+                if dates[n]:
+                    date_string = (dates[n][0], 'DATE')
+                    ent.append(date_string)
+                vb = fact_check.get_verb(pos_s[n])
             # print ent
-            ent_dict = dict(ent)
+                ent_dict = dict(ent)
     #         # sys.exit(0)
+                resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor(ent)
             res_time = time.time()
-            resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor(ent)
-
-            if sent_id in file_triples.keys():
-                triple_dict = file_triples[sent_id]
-            else:
-                try:
-                    os.remove('sentences.txt')
-                except:
-                    pass
-                with open('sentences.txt', 'a') as text:
-                    text.write(sentence_lis[n])
-                triples_raw = stanford_ie("sentences.txt", verbose=False)
-                triples = [[trip.lstrip() for trip in triple] for triple in triples_raw]
-                triple_dict = fact_check.svo_finder(ent,triples)
-                file_triples[sent_id] = triple_dict
-                new_triple_flag = 1
-            print triple_dict
-            precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resources)
+            new_triple_flag,triple_dict = triples_extractor(sent_id, sentence_lis[n],ne, new_triple_flag)
+            if stanford_setup:
+                precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resources)
             # print entity_matched
             # print resources
-            resources = entity_matched
+                resources = entity_matched
             # sys.exit(0)
             relation = []
-            # Using entity_matched instead of all resource
-            relation_ent = fact_check.relation_extractor_triples(resources, triple_dict, relation)
-            # sys.exit(0)
+            if ambiverse:
+                resource_text = ambiverse_api.entity_parser(sentence_lis[n])
+            print resource_text
+            relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
+            print relation_ent
             if not relation_ent:
                 print "here"
                 relation_ent, rel_count = fact_check.relation_extractor_all(resources, verb_entity[n])

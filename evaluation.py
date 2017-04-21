@@ -13,6 +13,7 @@ def precision_recall_entities(n, resources):
         expected_ent = res_val
         # print res_val
         retrieved_ent = resources.get(res_key)
+        print retrieved_ent
         if retrieved_ent:
             for ents in retrieved_ent:
                 # print ents, expected_ent

@@ -52,7 +52,6 @@ def fact_checker(sentence_lis, id_list):
     dates = fact_check.date_parser(sentence_lis)
     if stanford_setup:
         sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-        print sentence_list
         ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
         verb_entity = fact_check.verb_entity_matcher(dep_s)
     else:
@@ -66,7 +65,6 @@ def fact_checker(sentence_lis, id_list):
             print sent_id, sentence_lis[n],'\n'
             if stanford_setup:
                 ent = fact_check.get_nodes_updated(ne)
-            # print ent
                 new_loc = fact_check.location_update(ne)
                 if new_loc:
                     new_ent = (new_loc[0], 'LOCATION')
@@ -75,26 +73,28 @@ def fact_checker(sentence_lis, id_list):
                     date_string = (dates[n][0], 'DATE')
                     ent.append(date_string)
                 vb = fact_check.get_verb(pos_s[n])
-            # print ent
                 ent_dict = dict(ent)
-    #         # sys.exit(0)
                 resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor(ent)
             res_time = time.time()
             new_triple_flag,triple_dict = triples_extractor(sent_id, sentence_lis[n],ne, new_triple_flag)
-            if stanford_setup:
-                precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resources)
+
             # print entity_matched
-            # print resources
-                resources = entity_matched
-            # sys.exit(0)
+            #     resources = entity_matched
             relation = []
             if ambiverse:
                 resource_text = ambiverse_api.entity_parser(sentence_lis[n])
-            print resource_text
+                resources = resource_text
+            pprint.pprint(resource_text)
+            # print resources
+            # sys.exit(0)
+            precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
             relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
-            print relation_ent
+            # print relation_ent
             if not relation_ent:
                 print "here"
+                sentence_list = [word_tokenize(sent) for sent in sentence_lis]
+                ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
+                verb_entity = fact_check.verb_entity_matcher(dep_s)
                 relation_ent, rel_count = fact_check.relation_extractor_all(resources, verb_entity[n])
             print "Precision & Recall for Resource Extractor"
             print "-----------------------------------------"

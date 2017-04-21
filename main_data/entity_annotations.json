@@ -20,12 +20,12 @@
     },
     "12": {
          "Scarlett Johansson": [ "Scarlett_Johansson"],
-         "New York City": [ "New_York",  "New_York_City"]
+         "New York City": [ "New_York_City","New_York"]
     },
     "11": {
          "Michael Douglas": [ "Michael_Douglas"],
          "Kirk Douglas": [ "Kirk_Douglas"],
-         "New Jersey": [ "New_Brunswick,_New_Jersey"]
+         "New Jersey": [ "New_Jersey","New_Brunswick,_New_Jersey"]
     },
     "10": {
          "Michael Cera": [ "Michael_Cera"],

@@ -87,22 +87,25 @@ def fact_checker(sentence_lis, id_list):
             pprint.pprint(resource_text)
             # print resources
             # sys.exit(0)
+            print triple_dict
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
-            relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
-            # print relation_ent
-            if not relation_ent:
-                print "here"
-                sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-                ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
-                verb_entity = fact_check.verb_entity_matcher(dep_s)
-                relation_ent, rel_count = fact_check.relation_extractor_all(resources, verb_entity[n])
-            print "Precision & Recall for Resource Extractor"
-            print "-----------------------------------------"
-            relations = fact_check.relation_processor(relation_ent)
-            print "Relation Graph"
-            print "--------------"
+            # break
+            # relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
+            # # print relation_ent
+            # if not relation_ent:
+            #     print "here"
+            #     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
+            #     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
+            #     verb_entity = fact_check.verb_entity_matcher(dep_s)
+            #     relation_ent, rel_count = fact_check.relation_extractor_all(resources, verb_entity[n])
+            # print "Precision & Recall for Resource Extractor"
+            # print "-----------------------------------------"
+            # relations = fact_check.relation_processor(relation_ent)
+            # print "Relation Graph"
+            # print "--------------"
             # print relations
             # sys.exit(0)
+            relations = False
             if relations:
                 pprint.pprint(relations)
                 execution_time = time.time() - res_time
@@ -191,7 +194,7 @@ with open(data_source+'possible_predicate.json') as json_data:
     possible_predicate = json.load(json_data)
 
 
-with open(data_source+'sentences1.csv') as f:
+with open(data_source+'sentences.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []

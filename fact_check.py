@@ -27,7 +27,7 @@ sparql_dbpedia = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
-stanford_setup = True
+stanford_setup = False
 
 
 if stanford_setup:

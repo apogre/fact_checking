@@ -19,17 +19,23 @@ def entity_parser(text,sentence_id):
         global_settings.new_ambi_query = 1
         payload = '{\"text\" : \"'+text+'\", "language":"en"}'
         response = requests.request("POST", url, data=payload, headers=headers)
+        # print response.text
         json_data = json.loads(response.text)
         entitites = json_data['matches']
 
         resource = {}
         for entity in entitites:
-            url1=entity['entity']['url'].split('/')[-1]
+            try:
+                url1=entity['entity']['url'].split('/')[-1]
+                confidence = entity['entity']['confidence']
+            except:
+                url1 = ''
+                confidence = 0
             if '%' in url1:
                 url1 = url1.replace('%20','_')
                 url1 = url1.replace('%2C', ',')
             resource[entity.get('text')] = [['http://dbpedia.org/resource/'+url1, entity.get('text'),
-                                            entity['entity']['confidence']]]
+                                            confidence]]
         ambiverse_resources[sentence_id] = resource
     return resource
 

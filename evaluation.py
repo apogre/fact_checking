@@ -1,20 +1,21 @@
 import json
 
-data_source = 'main_data/'
-
+# data_source = 'main_data/'
+data_source = 'ug_data/all_'
 
 def precision_recall_entities(n, resources):
-    global test_count
+    # global test_count
     expected_entities = expected_outputs_entities[str(n)]
     p_list=[]
     r_list=[]
     entity_matched = {}
     for res_key, res_val in expected_entities.iteritems():
         expected_ent = res_val
-        # print res_val
+        print str(res_key)+" Expected: "+ str(res_val)
         retrieved_ent = resources.get(res_key)
-        # print retrieved_ent
+        print "retrieved "+str(retrieved_ent)
         if retrieved_ent:
+            correct_results = []
             for ents in retrieved_ent:
                 # print ents, expected_ent
                 retrieved_entity = ents[0].split('/')[-1]

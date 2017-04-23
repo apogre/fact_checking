@@ -20,8 +20,8 @@ stanford_setup = False
 ambiverse = True
 
 global_settings.init()
-# data_source = 'ug_data/all_'
-data_source = 'main_data/'
+data_source = 'ug_data/all_'
+# data_source = 'main_data/'
 
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
@@ -166,7 +166,7 @@ def fact_checker(sentence_lis, id_list):
     if global_settings.new_ambi_query==1:
         first_query = ambiverse_api.first_ambiverse()
         os.remove(data_source+'ambiverse_resources.json')
-        with open(data_source+'/ambiverse_resources.json', 'w') as fp:
+        with open(data_source+'ambiverse_resources.json', 'w') as fp:
             json.dump(first_query, fp, default=json_serial)
 
 
@@ -207,7 +207,7 @@ with open(data_source+'possible_predicate.json') as json_data:
     possible_predicate = json.load(json_data)
 
 
-with open(data_source+'sentences1.csv') as f:
+with open(data_source+'sentences.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []

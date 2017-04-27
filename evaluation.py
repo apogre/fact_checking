@@ -1,7 +1,7 @@
 import json
 
-# data_source = 'main_data/'
-data_source = 'ug_data/all_'
+data_source = 'main_data/'
+# data_source = 'ug_data/all_'
 
 def precision_recall_entities(n, resources):
     # global test_count

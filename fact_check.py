@@ -21,24 +21,22 @@ relation=[]
 ROOT = 'ROOT'
 aux_verb = ['was', 'is', 'become','to','of']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
-# sparql_dbpedia = 'http://localhost:8890/sparql'
+sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
-sparql_dbpedia = 'https://dbpedia.org/sparql'
+# sparql_dbpedia = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
-stanford_setup = False
+stanford_setup = True
 
 
 if stanford_setup:
     stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
     stanford_model_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
-
     st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
     st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
     parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
-
 
 
 def get_nodes_updated(netagged_words):

@@ -7,14 +7,14 @@ import os
 import subprocess
 
 entity_type_threshold=0
-possible_predicate_threshold = 0.5
+possible_predicate_threshold = 0.25
 sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
 
 kg_data_source = 'KG_Miner_data/'
 
 
-def entity_type_extractor(resources, triples, ent_dict):
+def entity_type_extractor(resources, triples):
     # print resources
     type_set_ontology = {}
     type_set_resource = {}

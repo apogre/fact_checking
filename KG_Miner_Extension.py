@@ -289,7 +289,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
             q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { {?url1 <http://dbpedia.org/ontology/' + poi[
                 0] + '> ?url2} UNION {?url2 <http://dbpedia.org/ontology/' + poi[
                 0] + '> ?url1}. ' + q_part+q_part_res+'.} limit 50'
-            # print q_ts
+            print q_ts
             result = sparql.query(sparql_dbpedia, q_ts)
             training_set = [sparql.unpack_row(row_result) for row_result in result]
             if training_set:
@@ -298,7 +298,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 # sys.exit(0)
                 training_set = sum(training_set, [])
                 train_ents = [val.split('/')[-1] for val in training_set]
-                # print train_ents
+                print train_ents
                 node_ids = entity_id_finder(train_ents)
                 # print node_ids
                 training_data, test_data = train_data_csv(train_ents, node_ids, ex_ent_all)

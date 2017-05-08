@@ -275,7 +275,6 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
     # print resource_type_set_ranked
     # print ontology_type_set_ranked
     # q_part, q_part_res = or_query_prep(resource_type_set_ranked,ontology_threshold_ranked)
-    word_vec_train = []
     q_part, q_part_res = and_query_prep(resource_type_set_ranked,ontology_threshold_ranked)
     print ex_ent_all
     print q_part
@@ -306,7 +305,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 training_set = sum(training_set, [])
                 train_ents = [val.split('/')[-1] for val in training_set]
                 # print train_ents
-
+                word_vec_train = []
                 for j in range(0, len(train_ents)-1, 2):
                     # print j
                     # print 'DBPEDIA_ID/' + ex_ent_all[1], 'DBPEDIA_ID/' + train_ents[j]
@@ -328,25 +327,28 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                     except:
                         # print "here"
                         pass
-                if word_vec_train:
+                if len(word_vec_train)>5:
+                    print word_vec_train
                     word_vec_train = sum(word_vec_train,[])
                     print len(word_vec_train)
-                    print word_vec_train
-                print "here"
 
-                # sys.exit(0)
-                node_ids = entity_id_finder(word_vec_train)
-                # print node_ids
-                training_data, test_data = train_data_csv(word_vec_train, node_ids, ex_ent_all)
-                # print training_data, test_data
-                # execute the KGMINER script
-                if training_data:
-                    kg_miner_csv(training_data, file_name='training_data')
-
-                # if test_data:
-                #     kg_miner_csv(test_data, file_name='test_data')
-                    os.chdir('KGMiner')
                     print "here"
-                    subprocess.call('./run_test.sh')
-                    os.chdir('..')
+
+                    # sys.exit(0)
+                    node_ids = entity_id_finder(word_vec_train)
+                    # print node_ids
+                    training_data, test_data = train_data_csv(word_vec_train, node_ids, ex_ent_all)
+                    # print training_data, test_data
+                    # execute the KGMINER script
+                    if training_data:
+                        kg_miner_csv(training_data, file_name='training_data')
+
+                    # if test_data:
+                    #     kg_miner_csv(test_data, file_name='test_data')
+                        os.chdir('KGMiner')
+                        print "here"
+                        subprocess.call('./run_test.sh')
+                        os.chdir('..')
+                else:
+                    print "Insufficient Training Set"
                 # sys.exit(0)

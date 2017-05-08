@@ -82,7 +82,7 @@ def fact_checker(sentence_lis, id_list):
                 # resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor(ent)
             res_time = time.time()
             new_triple_flag,triple_dict = triples_extractor(sent_id, sentence_lis[n],ne, new_triple_flag)
-
+            print triple_dict
             # print entity_matched
             #     resources = entity_matched
             relation = []
@@ -91,7 +91,7 @@ def fact_checker(sentence_lis, id_list):
                 resources = resource_text
             pprint.pprint(resource_text)
             # print resources
-            # sys.exit(0)
+            sys.exit(0)
             print triple_dict
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
             relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)

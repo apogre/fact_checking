@@ -13,6 +13,7 @@ import subprocess
 import evaluation
 import global_settings
 
+
 aux_verb = ['was', 'is', 'become']
 KG_Miner = True
 precision_recall_stats = collections.OrderedDict()

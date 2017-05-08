@@ -225,36 +225,6 @@ def entity_threshold(resources):
     return limit_entity
 
 
-def csv_processor(data_size):
-    with open('output.csv', 'rb') as csvfile:
-        reader = csv.DictReader(csvfile)
-        output_head = reader.fieldnames
-    with open('original.csv','rb') as csvfile:
-        reader = csv.DictReader(csvfile)
-        original_head = reader.fieldnames
-    print len(original_head), len(output_head)
-    residue = [head for head in original_head if head not in output_head]
-    nreq = [head for head in output_head if head not in original_head]
-    with open('residue.csv', 'wb') as csvfile:
-        rwriter = csv.writer(csvfile)
-        for i in range(0,data_size+1):
-            if i == 0:
-                rwriter.writerow(residue)
-            else:
-                rwriter.writerow([0]*len(residue))
-    cs1 = pandas.read_csv('output.csv')
-    cs2 = pandas.read_csv('residue.csv')
-    cs1['t'] = 1
-    cs2['t'] = 1
-    merged = cs1.merge(cs2, on=['t'])
-    merged = merged.drop('t', axis=1)
-    # print merged.shape
-    merged = merged.drop(nreq, inplace=True, axis=1)
-    # print merged.shape
-    merged.to_csv("final.csv", index=False)
-
-
-
 def resource_extractor(labels):
     global new_labels
     new_labels = []

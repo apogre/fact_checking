@@ -5,8 +5,9 @@ import csv
 import sys
 import os
 import subprocess
+import global_settings
 
-entity_type_threshold=0
+entity_type_threshold=0.16
 possible_predicate_threshold = 0.25
 sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
@@ -274,21 +275,25 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
     # print resource_type_set_ranked
     # print ontology_type_set_ranked
     # q_part, q_part_res = or_query_prep(resource_type_set_ranked,ontology_threshold_ranked)
+    word_vec_train = []
     q_part, q_part_res = and_query_prep(resource_type_set_ranked,ontology_threshold_ranked)
-    # sys.exit(0)
+    print ex_ent_all
+    print q_part
+    print q_part_res
     test_node_ids = entity_id_finder(ex_ent_all)
     print test_node_ids
     test_data = [node_id[0] for node_id in test_node_ids]
-    print test_data
+    # print test_data
     kg_miner_csv([test_data], file_name='test_data')
     for sent_pred in predicate_ranked.keys():
         predicate_of_interest = predicate_ranked[sent_pred]
         for poi in predicate_of_interest:
             print poi
+            # poi = ['spouse','1']
             pred_id = predicate_id_finder(poi[0])
             q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { {?url1 <http://dbpedia.org/ontology/' + poi[
                 0] + '> ?url2} UNION {?url2 <http://dbpedia.org/ontology/' + poi[
-                0] + '> ?url1}. ' + q_part+q_part_res+'.} limit 50'
+                0] + '> ?url1}. ' + q_part+q_part_res+'.} limit 15000'
             print q_ts
             result = sparql.query(sparql_dbpedia, q_ts)
             training_set = [sparql.unpack_row(row_result) for row_result in result]
@@ -296,12 +301,43 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 # print "here--------------"
                 # print q_ts
                 # sys.exit(0)
+                # print training_set
+                # sys.exit(0)
                 training_set = sum(training_set, [])
                 train_ents = [val.split('/')[-1] for val in training_set]
-                print train_ents
-                node_ids = entity_id_finder(train_ents)
+                # print train_ents
+
+                for j in range(0, len(train_ents)-1, 2):
+                    # print j
+                    # print 'DBPEDIA_ID/' + ex_ent_all[1], 'DBPEDIA_ID/' + train_ents[j]
+                    # print 'DBPEDIA_ID/' + ex_ent_all[0], 'DBPEDIA_ID/' + train_ents[j+1]
+                    try:
+                        # print global_settings.model_wv.similarity('DBPEDIA_ID/Barack_Obama', 'DBPEDIA_ID/Michelle_Obama')
+                        sim1 = global_settings.model_wv.similarity('DBPEDIA_ID/' + ex_ent_all[1],
+                                                                  'DBPEDIA_ID/' + train_ents[j])
+                        # print sim1
+                        sim2 = global_settings.model_wv.similarity('DBPEDIA_ID/' + ex_ent_all[0],
+                                                                  'DBPEDIA_ID/' + train_ents[j + 1])
+                        # print sim2
+                        # print train_ents[j], train_ents[j+1]
+                        if sim1 > 0.2 and sim2 > 0.2:
+                            # print [train_ents[j],train_ents[j+1]]
+                            # print 'here'
+                            word_vec_train.append([train_ents[j],train_ents[j+1]])
+
+                    except:
+                        # print "here"
+                        pass
+                if word_vec_train:
+                    word_vec_train = sum(word_vec_train,[])
+                    print len(word_vec_train)
+                    print word_vec_train
+                print "here"
+
+                # sys.exit(0)
+                node_ids = entity_id_finder(word_vec_train)
                 # print node_ids
-                training_data, test_data = train_data_csv(train_ents, node_ids, ex_ent_all)
+                training_data, test_data = train_data_csv(word_vec_train, node_ids, ex_ent_all)
                 # print training_data, test_data
                 # execute the KGMINER script
                 if training_data:
@@ -313,3 +349,4 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                     print "here"
                     subprocess.call('./run_test.sh')
                     os.chdir('..')
+                # sys.exit(0)

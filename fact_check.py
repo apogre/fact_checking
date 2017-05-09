@@ -16,6 +16,7 @@ from ftfy.badness import sequence_weirdness
 import os
 
 
+
 objects = []
 relation=[]
 ROOT = 'ROOT'
@@ -37,6 +38,7 @@ if stanford_setup:
     st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
     st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
     parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
+
 
 
 def get_nodes_updated(netagged_words):
@@ -142,9 +144,10 @@ def similar(a,b):
 
 
 def compare(word1, word2):
-    wierdness2 = sequence_weirdness(word2)
+    # print word2, word1
+    wierdness2 = sequence_weirdness(unicode(word2))
     if wierdness2 == 0:
-        wierdness1 = sequence_weirdness(word1)
+        wierdness1 = sequence_weirdness(unicode(word1))
         if wierdness1 == 0:
             # print word1, word2
             ss1 = sum([wn.synsets(word) for word in word1.split() if word not in aux_verb],[])
@@ -385,12 +388,9 @@ def relation_extractor_1hop(resources,verb_entity):
 
 
 def relation_extractor_triples(resources, triples, relation):
-    # relation = []
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
-            # print triple_v[0]
             item1_v = resources.get(triple_v[0])
-            # print item1_v
             if item1_v:
                 for i1 in item1_v:
                     predicate_comment = {}
@@ -399,12 +399,9 @@ def relation_extractor_triples(resources, triples, relation):
                         if '%' in url1:
                             url1 = url1.replace('%20','_')
                             url1 = url1.replace('%2C', ',')
-                        # print url1
                         score1 = [it for it in i1 if isinstance(it, float)]
                         score1 = score1[0]
                         q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
-                        # print q_all
-                        # sys.exit(0)
                         result = sparql.query(sparql_dbpedia, q_all)
                         q1_values = [sparql.unpack_row(row_result) for row_result in result]
                         q1_list = [qv[1] for qv in q1_values]
@@ -417,11 +414,8 @@ def relation_extractor_triples(resources, triples, relation):
                         q1_list_back = [qv[1] for qv in q1_values_back]
                         q1_list.extend(q1_list_back)
                         q1_values.extend(q1_values_back)
-                        # print len(q1_list)
-                        # print set(q1_list_back)
 
                     item2_v = resources.get(triple_v[1])
-                    # print item2_v
                     if item2_v:
                         url2_list = [i2[0] for i2 in item2_v]
                         intersect = set(url2_list).intersection(q1_list)
@@ -430,18 +424,21 @@ def relation_extractor_triples(resources, triples, relation):
                             match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
                             if match:
                                 for ma in match:
-                                    # print ma
-                                    # sys.exit(0)
                                     predicate = ma[1][0]
-                                    # print predicate
+                                    # sys.exit(0)
                                     if predicate not in predicate_comment.keys():
                                         comment = comment_extractor(predicate)
                                         predicate_comment[predicate] = comment
                                     else:
                                         comment = predicate_comment[predicate]
+                                    # print "+++++++++++++="
                                     # print ma, comment
-                                    pred_score = rel_score_triple(triple_k, comment)
+                                    if comment:
+                                        pred_score = rel_score_triple(triple_k, comment[0][0])
+                                    else:
+                                        pred_score = rel_score_triple(triple_k, predicate.split('/')[-1])
                                     # print pred_score
+                                    # sys.exit(0)
                                     # print pred_score, triple_k, comment
                                     score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
                                     ma.pop(1)
@@ -478,7 +475,7 @@ def relation_extractor_all(resources, verb_entity):
     relation = []
     new_labels = sorted(new_labels, key=operator.itemgetter(2))
     new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)
-    if len(new_labels)>1:
+    if len(new_labels) > 1:
         for i in range(0, len(resources) - 1):
             if str(new_labels[i][0]) in resources:
                 item1_v = resources[new_labels[i][0]]
@@ -503,7 +500,7 @@ def relation_extractor_all(resources, verb_entity):
                             # print url2_list
                             intersect = set(url2_list).intersection(q1_list)
                             for inte in intersect:
-                                match = [[[url1,score1],n ] for m, n in enumerate(q1_values) if n[1] == inte]
+                                match = [[[url1,score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
                                 # print match
                                 if match:
                                     for ma in match:
@@ -520,7 +517,7 @@ def relation_extractor_all(resources, verb_entity):
                                         ma.pop(1)
                                         ma.append(score2)
                                         # print ma
-                                        ma.append([predicate,score])
+                                        ma.append([predicate, score])
                                         # print ma
                                         # relation.append(sum(ma, []))
                                         relation.append(ma)
@@ -547,21 +544,10 @@ def rel_score_predicate(verb_entity,comment):
 def rel_score_triple(triple_k, comment):
     # print triple_k
     # print comment
-    meaning = []
-    verbs = []
-    verbs.extend([vb for vb in triple_k.split()])
-    for com in comment:
-        meaning.extend(com[0].split())
-    # print "-----"
-    # print meaning
-    # print verbs
-    # print "-----"
-    score = 0
-    for verb in verbs:
-        if verb.lower() not in aux_verb:
-            # print verb.lower(), aux_verb
-            if verb.lower() in meaning:
-                score = 1
+    # try:
+    score = compare(triple_k, comment)
+    # except:
+    #     score = 0
     return score
 
 
@@ -598,13 +584,14 @@ def comment_extractor(ont):
     # print ont
     if "property" in ont:
         ont = ont.replace("property","ontology")
-    q_l=('SELECT distinct ?c WHERE  { <'+str(ont) + '> rdfs:comment ?c }')
-    q_c = ('SELECT distinct ?c WHERE  { <' + str(ont) + '> rdfs:label ?c }')
+    q_l=('SELECT distinct ?c WHERE  { <'+str(ont) + '> rdfs:comment ?c . FILTER langMatches( lang(?c), "EN" ) }')
+    q_c = ('SELECT distinct ?c WHERE  { <' + str(ont) + '> rdfs:label ?c . FILTER langMatches( lang(?c), "EN" ) }')
     # print q_c
     comments = sparql.query(sparql_dbpedia, q_c)
     if comments:
         comment = [sparql.unpack_row(comment) for comment in comments]
         # print q_c
+        # print comment
         if not comment:
             comments = sparql.query(sparql_dbpedia, q_l)
             if comments:

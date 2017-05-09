@@ -55,5 +55,8 @@
     },
     "17": {
            "parent": ["Donald_Trump", "Ivanka_Trump"]
+      },
+  "18": {
+           "currentclub": ["Lionel_Messi", "FC_Barcelona"]
       }
 }

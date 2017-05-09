@@ -77,37 +77,35 @@ def fact_checker(sentence_lis, id_list):
                     ent.append(date_string)
                 vb = fact_check.get_verb(pos_s[n])
                 ent_dict = dict(ent)
-                print ent_dict
+                print "NER: "+str(ent_dict)
                 # sys.exit(0)
                 # resources, ent_size, date_labels, raw_resources = fact_check.resource_extractor(ent)
             res_time = time.time()
             new_triple_flag,triple_dict = triples_extractor(sent_id, sentence_lis[n],ne, new_triple_flag)
-            print triple_dict
+            print "Relation Triples: "+str(triple_dict)
             # print entity_matched
             #     resources = entity_matched
             relation = []
             if ambiverse:
                 resource_text = ambiverse_api.entity_parser(sentence_lis[n],id_list[n])
                 resources = resource_text
+            print "Resource Extractor"
+            print "=================="
             pprint.pprint(resource_text)
-            # print resources
-            sys.exit(0)
-            print triple_dict
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
             relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
             # print relation_ent
             if not relation_ent:
-                print "here"
                 sentence_list = [word_tokenize(sent) for sent in sentence_lis]
                 ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
                 verb_entity = fact_check.verb_entity_matcher(dep_s)
                 relation_ent, rel_count = fact_check.relation_extractor_all(resources, verb_entity[n])
-            print "Precision & Recall for Resource Extractor"
-            print "-----------------------------------------"
+            # print "Precision & Recall for Resource Extractor"
+            # print "-----------------------------------------"
             relations = fact_check.relation_processor(relation_ent)
             print "Relation Graph"
             print "--------------"
-            print relations
+            # print relations
             # sys.exit(0)
             # relations = False
             if relations:
@@ -129,27 +127,27 @@ def fact_checker(sentence_lis, id_list):
                 print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
                 precision_recall_stats[sent_id] = [precision_rel, recall_rel, precision_ent_out, recall_ent_out]
                 if KG_Miner:
-                    print "================================================================="
                     print "Using KG_Miner"
                     entity_type_ontology, entity_type_resource = KG_Miner_Extension.entity_type_extractor(resources, triple_dict)
+                    print "Type of Entities"
                     pprint.pprint(entity_type_ontology)
-                    pprint.pprint(entity_type_resource)
+                    # pprint.pprint(entity_type_resource)
                     # sys.exit(0)
                     resource_type_set_ranked, resource_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict, triple_dict)
                     ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_ontology, ent_dict, triple_dict)
-                    pprint.pprint(resource_type_set_ranked)
-                    pprint.pprint(ontology_threshold_ranked)
+                    # pprint.pprint(resource_type_set_ranked)
+                    # pprint.pprint(ontology_threshold_ranked)
                     if sent_id in possible_predicate.keys():
                         possible_predicate_set = possible_predicate[sent_id]
                     else:
-                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(ontology_type_set_ranked,triple_dict)
+                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(ontology_type_set_ranked, triple_dict)
                         possible_predicate[sent_id] = possible_predicate_set
                         new_predicate_flag=1
                     # print possible_predicate_set
                     possible_predicate_set_ranked, possible_predicate_set_threshold = KG_Miner_Extension.predicate_ranker(possible_predicate_set,triple_dict)
                     # print possible_predicate_set
                     print possible_predicate_set_ranked
-                    print possible_predicate_set_threshold
+                    # print possible_predicate_set_threshold
                     # sys.exit(0)
 
                     KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_threshold_ranked,ex_ent_all)

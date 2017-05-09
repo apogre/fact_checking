@@ -11,9 +11,9 @@ def precision_recall_entities(n, resources):
     entity_matched = {}
     for res_key, res_val in expected_entities.iteritems():
         expected_ent = res_val
-        print str(res_key)+" Expected: "+ str(res_val)
+        # print str(res_key)+" Expected: "+ str(res_val)
         retrieved_ent = resources.get(res_key)
-        print "retrieved "+str(retrieved_ent)
+        # print "retrieved "+str(retrieved_ent)
         if retrieved_ent:
             correct_results = []
             for ents in retrieved_ent:

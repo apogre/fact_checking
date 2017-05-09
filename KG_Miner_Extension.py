@@ -7,7 +7,7 @@ import os
 import subprocess
 import global_settings
 
-entity_type_threshold=0.16
+entity_type_threshold=0.20
 possible_predicate_threshold = 0.25
 sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
@@ -139,6 +139,8 @@ def kg_miner_csv(input_data, file_name):
 
 
 def possible_predicate_type(type_set, triples):
+    print type_set
+    print triples
     predicate_list = []
     pair_list = []
     count = 0
@@ -146,8 +148,9 @@ def possible_predicate_type(type_set, triples):
         for triple_v in triples_v:
             item1_v = type_set[triple_v[0]]
             item2_v = type_set[triple_v[1]]
-            # print len(item1_v), len(item2_v)
-            print "===================="
+            print item1_v, item2_v
+            # sys.exit(0)
+            # print "===================="
             for it1 in item1_v:
                 for it2 in item2_v:
                     if it1[0] != it2[0]:
@@ -159,7 +162,8 @@ def possible_predicate_type(type_set, triples):
                                it1[0] + '> . ?url2 rdf:type <' + it2[
                                    0] + '> . ?url1 ?p ?url2 .}'
                     # print q_pp
-                    pair = [it1[0], it2[0]]
+                    pair = str([it1[0], it2[0]])
+                    print pair
                     if pair not in pair_list:
                         try:
                             # print q_pp
@@ -172,7 +176,7 @@ def possible_predicate_type(type_set, triples):
                                 # print pred_vals
                                 predicate_list.extend(pred_vals)
                                 count = count + 1
-                                # print count
+                                print count
                         except:
                             pass
     predicate_list = list(set(predicate_list))
@@ -276,9 +280,9 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
     # print ontology_type_set_ranked
     # q_part, q_part_res = or_query_prep(resource_type_set_ranked,ontology_threshold_ranked)
     q_part, q_part_res = and_query_prep(resource_type_set_ranked,ontology_threshold_ranked)
-    print ex_ent_all
-    print q_part
-    print q_part_res
+    # print ex_ent_all
+    # print q_part
+    # print q_part_res
     test_node_ids = entity_id_finder(ex_ent_all)
     print test_node_ids
     test_data = [node_id[0] for node_id in test_node_ids]
@@ -291,9 +295,8 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
             # poi = ['spouse','1']
             pred_id = predicate_id_finder(poi[0])
             q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { {?url1 <http://dbpedia.org/ontology/' + poi[
-                0] + '> ?url2} UNION {?url2 <http://dbpedia.org/ontology/' + poi[
-                0] + '> ?url1}. ' + q_part+q_part_res+'.} limit 15000'
-            print q_ts
+                0] + '> ?url2} . ' + q_part+q_part_res+'.} limit 15000'
+            # print q_ts
             result = sparql.query(sparql_dbpedia, q_ts)
             training_set = [sparql.unpack_row(row_result) for row_result in result]
             if training_set:
@@ -332,7 +335,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                     word_vec_train = sum(word_vec_train,[])
                     print len(word_vec_train)
 
-                    print "here"
+                    # print "here"
 
                     # sys.exit(0)
                     node_ids = entity_id_finder(word_vec_train)
@@ -346,7 +349,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                     # if test_data:
                     #     kg_miner_csv(test_data, file_name='test_data')
                         os.chdir('KGMiner')
-                        print "here"
+                        # print "here"
                         subprocess.call('./run_test.sh')
                         os.chdir('..')
                 else:

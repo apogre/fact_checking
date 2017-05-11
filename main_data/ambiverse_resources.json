@@ -1,4 +1,11 @@
-{"18":{"FC Barcelona": [["http://dbpedia.org/resource/FC_Barcelona",
+{"19":{"Barack Obama": [["http://dbpedia.org/resource/Barack_Obama",
+                    "Barack Obama",
+                    0.9610843729301696]],
+ "Hillary Clinton": [["http://dbpedia.org/resource/Hillary_Clinton",
+                       "Hillary Clinton",
+                       0.9086481071061474]]},
+
+  "18":{"FC Barcelona": [["http://dbpedia.org/resource/FC_Barcelona",
                     "FC Barcelona",
                     0.22176561307836157]],
  "Lionel Messi": [["http://dbpedia.org/resource/Lionel_Messi",

@@ -1,11 +1,11 @@
-import json
+import json, sys
 
 data_source = 'main_data/'
 # data_source = 'ug_data/all_'
 
 def precision_recall_entities(n, resources):
     # global test_count
-    expected_entities = expected_outputs_entities[str(n)]
+    expected_entities = expected_outputs_entities.get(str(n),[])
     p_list=[]
     r_list=[]
     entity_matched = {}
@@ -41,7 +41,8 @@ def precision_recall_entities(n, resources):
 
 def precision_recall_ent_match(n,relations):
     ex_ent_all = []
-    expected_ents = expected_outputs_entities[str(n)]
+    expected_ents = expected_outputs_entities.get(str(n),{})
+    print expected_ents
     for ke,ve in expected_ents.iteritems():
         ex_ent_all.extend(ve)
     retrieved_ents = relations['node'].keys()
@@ -52,24 +53,27 @@ def precision_recall_ent_match(n,relations):
 def precision_recall_relations1(n,relations):
     subgraph = relations.get('edge')
     retrived_rels = []
+    true_pos = []
+    ex_rels = []
     for s_key,s_val in subgraph.iteritems():
         for rels in s_val:
             retrived_rel = [s_key]
             retrived_rel.extend(rels['join'])
             retrived_rels.append(retrived_rel)
-    ex_rels = []
-    ex_dict = expected_outputs_relations[str(n)]
-    for r_key,r_val in ex_dict.iteritems():
-        r_val.append(r_key)
-        ex_rels.append(r_val)
-    true_pos = []
-    for ret_rel in retrived_rels:
-        for ex_rel in ex_rels:
-            try:
-                if set(ret_rel) == set(ex_rel):
-                    true_pos.append(ret_rel)
-            except:
-                pass
+
+    ex_dict = expected_outputs_relations.get(str(n),{})
+    if ex_dict:
+        for r_key,r_val in ex_dict.iteritems():
+            r_val.append(r_key)
+            ex_rels.append(r_val)
+
+        for ret_rel in retrived_rels:
+            for ex_rel in ex_rels:
+                try:
+                    if set(ret_rel) == set(ex_rel):
+                        true_pos.append(ret_rel)
+                except:
+                    pass
     return true_pos,retrived_rels,ex_rels
 
 
@@ -80,7 +84,10 @@ def precision_recall(true_pos,true_false_pos,ex_rels):
     print "Expected: " + str(ex_rels)
     print "True Positive: " + str(true_pos)
     precision = true_pos_len / true_false_pos_len
-    recall = true_pos_len / float(len(ex_rels))
+    if ex_rels:
+        recall = true_pos_len / float(len(ex_rels))
+    else:
+        recall = 0
     return round(precision, 2), round(recall, 2)
 
 

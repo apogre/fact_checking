@@ -20,6 +20,7 @@ precision_recall_stats = collections.OrderedDict()
 stanford_setup = True
 ambiverse = True
 
+
 global_settings.init()
 # data_source = 'ug_data/all_'
 data_source = 'main_data/'
@@ -115,6 +116,8 @@ def fact_checker(sentence_lis, id_list):
                 # sys.exit(0)
                 true_pos_rel, retrived_rels, ex_rels = evaluation.precision_recall_relations1(sent_id, relations)
                 true_pos_ent, retrieved_ents, ex_ent_all = evaluation.precision_recall_ent_match(sent_id, relations)
+                print ex_ent_all
+                # sys.exit(0)
                 print '\n'
                 print "Precision & Recall for Entities"
                 print "--------------------------------"
@@ -131,16 +134,17 @@ def fact_checker(sentence_lis, id_list):
                     entity_type_ontology, entity_type_resource = KG_Miner_Extension.entity_type_extractor(resources, triple_dict)
                     print "Type of Entities"
                     pprint.pprint(entity_type_ontology)
-                    # pprint.pprint(entity_type_resource)
+                    pprint.pprint(entity_type_resource)
                     # sys.exit(0)
                     resource_type_set_ranked, resource_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict, triple_dict)
                     ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_ontology, ent_dict, triple_dict)
                     # pprint.pprint(resource_type_set_ranked)
+                    # pprint.pprint(ontology_type_set_ranked)
                     # pprint.pprint(ontology_threshold_ranked)
                     if sent_id in possible_predicate.keys():
                         possible_predicate_set = possible_predicate[sent_id]
                     else:
-                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(ontology_type_set_ranked, triple_dict)
+                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(entity_type_ontology, triple_dict)
                         possible_predicate[sent_id] = possible_predicate_set
                         new_predicate_flag=1
                     # print possible_predicate_set
@@ -150,7 +154,7 @@ def fact_checker(sentence_lis, id_list):
                     # print possible_predicate_set_threshold
                     # sys.exit(0)
 
-                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_threshold_ranked,ex_ent_all)
+                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_type_set_ranked,ex_ent_all)
 
 
             else:

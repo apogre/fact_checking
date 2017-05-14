@@ -63,6 +63,7 @@ def fact_checker(sentence_lis, id_list):
     start_time = time.time()
     new_triple_flag = 0
     new_predicate_flag = 0
+    output_linkprediction = {}
     for i in range(0, 1):
         for n, ne in enumerate(ne_s):
             sent_id = id_list[n]
@@ -136,15 +137,16 @@ def fact_checker(sentence_lis, id_list):
                     pprint.pprint(entity_type_ontology)
                     pprint.pprint(entity_type_resource)
                     # sys.exit(0)
-                    resource_type_set_ranked, resource_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict, triple_dict)
-                    ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_ontology, ent_dict, triple_dict)
+                    # resource_type_set_ranked, resource_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict, triple_dict)
+                    # ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_ontology, ent_dict, triple_dict)
                     # pprint.pprint(resource_type_set_ranked)
                     # pprint.pprint(ontology_type_set_ranked)
                     # pprint.pprint(ontology_threshold_ranked)
+                    # sys.exit(0)
                     if sent_id in possible_predicate.keys():
                         possible_predicate_set = possible_predicate[sent_id]
                     else:
-                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(entity_type_ontology, triple_dict)
+                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(entity_type_ontology, ex_ent_all)
                         possible_predicate[sent_id] = possible_predicate_set
                         new_predicate_flag=1
                     # print possible_predicate_set
@@ -154,14 +156,17 @@ def fact_checker(sentence_lis, id_list):
                     # print possible_predicate_set_threshold
                     # sys.exit(0)
 
-                    KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, resource_type_set_ranked, ontology_type_set_ranked,ex_ent_all)
-
-
+                    predicate_results = KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, entity_type_resource, entity_type_ontology,ex_ent_all)
+                    output_linkprediction[id_list[n]] = predicate_results
             else:
                 precision_recall_stats[sent_id] = [0, 0, 0, 0]
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
+        print output_linkprediction
+
+    with open(data_source+'/link_prediction.json', 'w') as fp:
+        json.dump(output_linkprediction, fp, default=json_serial)
 
     if new_triple_flag == 1:
         os.remove(data_source+'triples_raw.json')
@@ -212,7 +217,7 @@ with open(data_source+'possible_predicate.json') as json_data:
     possible_predicate = json.load(json_data)
 
 
-with open(data_source+'sentences1.csv') as f:
+with open(data_source+'sentences.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []

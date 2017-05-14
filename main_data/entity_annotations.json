@@ -29,12 +29,12 @@
     },
     "12": {
          "Scarlett Johansson": [ "Scarlett_Johansson"],
-         "New York City": [ "New_York_City","New_York"]
+         "New York City": [ "New_York_City"]
     },
     "11": {
          "Michael Douglas": [ "Michael_Douglas"],
          "Kirk Douglas": [ "Kirk_Douglas"],
-         "New Jersey": [ "New_Jersey","New_Brunswick,_New_Jersey"]
+         "New Jersey": [ "New_Jersey"]
     },
     "10": {
          "Michael Cera": [ "Michael_Cera"],
@@ -58,7 +58,7 @@
     },
     "6": {
          "Danny DeVito": [ "Danny_DeVito"],
-         "New Jersey": [ "New_Jersey","Neptne_Township,_New_Jersey"]
+         "New Jersey": [ "New_Jersey"]
     },
     "5": {
          "Megyn Kelly": [ "Megyn_Kelly"],

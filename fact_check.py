@@ -144,7 +144,7 @@ def similar(a,b):
 
 
 def compare(word1, word2):
-    # print word2, word1
+    print word2, word1
     wierdness2 = sequence_weirdness(unicode(word2))
     if wierdness2 == 0:
         wierdness1 = sequence_weirdness(unicode(word1))
@@ -388,6 +388,8 @@ def relation_extractor_1hop(resources,verb_entity):
 
 
 def relation_extractor_triples(resources, triples, relation):
+    print triples
+    # sys.exit(0)
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
             item1_v = resources.get(triple_v[0])
@@ -434,8 +436,12 @@ def relation_extractor_triples(resources, triples, relation):
                                     # print "+++++++++++++="
                                     # print ma, comment
                                     if comment:
+                                        # print triple_k, comment[0][0]
+                                        # sys.exit(0)
                                         pred_score = rel_score_triple(triple_k, comment[0][0])
                                     else:
+                                        print triple_k, predicate.split('/')[-1]
+                                        sys.exit(0)
                                         pred_score = rel_score_triple(triple_k, predicate.split('/')[-1])
                                     # print pred_score
                                     # sys.exit(0)
@@ -458,7 +464,7 @@ def relation_extractor_triples(resources, triples, relation):
                                     predicate_comment[predicate] = comment
                                 else:
                                     comment = predicate_comment[predicate]
-                                pred_score = rel_score_triple(triple_k, comment)
+                                pred_score = rel_score_triple(triple_k, comment[0][0])
                                 score = rel_score_literal(dm, score1, pred_score)
                                 dm.pop(1)
                                 dm.append([triple_v[1],0])
@@ -542,8 +548,8 @@ def rel_score_predicate(verb_entity,comment):
 
 
 def rel_score_triple(triple_k, comment):
-    # print triple_k
-    # print comment
+    print triple_k
+    print comment
     # try:
     score = compare(triple_k, comment)
     # except:

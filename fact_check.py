@@ -22,9 +22,9 @@ relation=[]
 ROOT = 'ROOT'
 aux_verb = ['was', 'is', 'become','to','of']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
-sparql_dbpedia = 'http://localhost:8890/sparql'
+# sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
-# sparql_dbpedia = 'https://dbpedia.org/sparql'
+sparql_dbpedia = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
@@ -440,8 +440,8 @@ def relation_extractor_triples(resources, triples, relation):
                                         # sys.exit(0)
                                         pred_score = rel_score_triple(triple_k, comment[0][0])
                                     else:
-                                        print triple_k, predicate.split('/')[-1]
-                                        sys.exit(0)
+                                        # print triple_k, predicate.split('/')[-1]
+                                        # sys.exit(0)
                                         pred_score = rel_score_triple(triple_k, predicate.split('/')[-1])
                                     # print pred_score
                                     # sys.exit(0)
@@ -548,8 +548,8 @@ def rel_score_predicate(verb_entity,comment):
 
 
 def rel_score_triple(triple_k, comment):
-    print triple_k
-    print comment
+    # print triple_k
+    # print comment
     # try:
     score = compare(triple_k, comment)
     # except:

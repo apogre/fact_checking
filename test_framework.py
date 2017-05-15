@@ -15,7 +15,7 @@ import global_settings
 
 
 aux_verb = ['was', 'is', 'become']
-KG_Miner = True
+KG_Miner = False
 precision_recall_stats = collections.OrderedDict()
 stanford_setup = True
 ambiverse = True
@@ -53,6 +53,7 @@ def triples_extractor(sent_id, sentence ,ne, new_triple_flag):
 
 def fact_checker(sentence_lis, id_list):
     print sentence_lis
+    output_realations = {}
     dates = fact_check.date_parser(sentence_lis)
     if stanford_setup:
         sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -95,6 +96,8 @@ def fact_checker(sentence_lis, id_list):
             print "=================="
             pprint.pprint(resource_text)
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
+            precision_res = sum(precision_ent)/len(precision_ent)
+            recall_res = sum(recall_ent)/len(recall_ent)
             relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
             # print relation_ent
             if not relation_ent:
@@ -111,6 +114,7 @@ def fact_checker(sentence_lis, id_list):
             # sys.exit(0)
             # relations = False
             if relations:
+                output_realations[id_list[n]] = relations
                 pprint.pprint(relations)
                 execution_time = time.time() - res_time
                 print execution_time
@@ -129,7 +133,7 @@ def fact_checker(sentence_lis, id_list):
                 print "--------------------------------"
                 precision_rel, recall_rel = evaluation.precision_recall(true_pos_rel, retrived_rels, ex_rels)
                 print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
-                precision_recall_stats[sent_id] = [precision_rel, recall_rel, precision_ent_out, recall_ent_out]
+                precision_recall_stats[sent_id] = [precision_res, recall_res, precision_rel, recall_rel, precision_ent_out, recall_ent_out]
                 if KG_Miner:
                     print "Using KG_Miner"
                     entity_type_ontology, entity_type_resource = KG_Miner_Extension.entity_type_extractor(resources, triple_dict)
@@ -159,14 +163,22 @@ def fact_checker(sentence_lis, id_list):
                     predicate_results = KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, entity_type_resource, entity_type_ontology,ex_ent_all)
                     output_linkprediction[id_list[n]] = predicate_results
             else:
-                precision_recall_stats[sent_id] = [0, 0, 0, 0]
+                precision_recall_stats[sent_id] = [0,0,0, 0, 0, 0]
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
         print output_linkprediction
 
+    with open(data_source+'/evaluation.csv', 'wb') as fp:
+        w = csv.DictWriter(fp, precision_recall_stats.keys())
+        w.writeheader()
+        w.writerow(precision_recall_stats)
+
     with open(data_source+'/link_prediction.json', 'w') as fp:
         json.dump(output_linkprediction, fp, default=json_serial)
+
+    with open(data_source+'/output_relations.json', 'w') as fp:
+        json.dump(output_realations, fp, default=json_serial)
 
     if new_triple_flag == 1:
         os.remove(data_source+'triples_raw.json')
@@ -187,12 +199,12 @@ def fact_checker(sentence_lis, id_list):
 
     ex_time = time.time() - start_time
     print "Total Execution Time: " + str(round(ex_time, 2))
-    print "{:<8} {:<10} {:<10} {:<10} {:<10} ".format('S.N.', 'p_rel', 'r_rel', 'p_ent', 'r_ent')
+    print "{:<8} {:<10} {:<10} {:<10} {:<10} ".format('S.N.','p_res','r_res' 'p_rel', 'r_rel', 'p_ent', 'r_ent')
     vals_sum=0
     for k1,v1 in precision_recall_stats.iteritems():
         vals = v1
-        p_r,r_r,p_eo,r_eo = vals
-        print "{:<8} {:<10} {:<10} {:<10} {:<10}".format(k1, p_r, r_r,p_eo, r_eo)
+        p_res, r_res, p_r,r_r,p_eo,r_eo = vals
+        print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format(k1,p_res, r_res, p_r, r_r,p_eo, r_eo)
         if k1 == '1':
             vals1 = vals
         else:

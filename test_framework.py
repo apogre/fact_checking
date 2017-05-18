@@ -15,7 +15,7 @@ import global_settings
 
 
 aux_verb = ['was', 'is', 'become']
-KG_Miner = False
+KG_Miner = True
 precision_recall_stats = collections.OrderedDict()
 stanford_setup = True
 ambiverse = True
@@ -95,6 +95,7 @@ def fact_checker(sentence_lis, id_list):
             print "Resource Extractor"
             print "=================="
             pprint.pprint(resource_text)
+            resource_ids = fact_check.get_resource_id(resource_text)
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
             precision_res = sum(precision_ent)/len(precision_ent)
             recall_res = sum(recall_ent)/len(recall_ent)
@@ -150,35 +151,40 @@ def fact_checker(sentence_lis, id_list):
                     if sent_id in possible_predicate.keys():
                         possible_predicate_set = possible_predicate[sent_id]
                     else:
-                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(entity_type_ontology, ex_ent_all)
+                        possible_predicate_set = KG_Miner_Extension.possible_predicate_type(entity_type_ontology, triple_dict, resource_ids)
                         possible_predicate[sent_id] = possible_predicate_set
                         new_predicate_flag=1
-                    # print possible_predicate_set
-                    possible_predicate_set_ranked, possible_predicate_set_threshold = KG_Miner_Extension.predicate_ranker(possible_predicate_set,triple_dict)
-                    # print possible_predicate_set
-                    print possible_predicate_set_ranked
+                    print possible_predicate_set
+                    # possible_predicate_set_ranked, possible_predicate_set_threshold = KG_Miner_Extension.predicate_ranker(possible_predicate_set,triple_dict)
+                    # print possible_predicate_set_ranked
                     # print possible_predicate_set_threshold
                     # sys.exit(0)
-
-                    predicate_results = KG_Miner_Extension.get_training_set(possible_predicate_set_threshold, entity_type_resource, entity_type_ontology,ex_ent_all)
+                    try:
+                        os.remove('KG_Miner_data/poi.csv')
+                        os.remove('KG_Miner_data/predicate_probability.csv')
+                    except:
+                        pass
+                    predicate_results = KG_Miner_Extension.get_training_set(possible_predicate_set, \
+                                                                            entity_type_resource, entity_type_ontology, \
+                                                                            triple_dict, resource_ids)
                     output_linkprediction[id_list[n]] = predicate_results
             else:
                 precision_recall_stats[sent_id] = [0,0,0, 0, 0, 0]
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
+            with open(data_source+'/evaluation.json', 'w') as fp:
+                json.dump(precision_recall_stats, fp, default=json_serial)
+
+            with open(data_source+'/link_prediction.json', 'w') as fp:
+                json.dump(output_linkprediction, fp, default=json_serial)
+
+            with open(data_source+'/output_relations.json', 'w') as fp:
+                json.dump(output_realations, fp, default=json_serial)
         print output_linkprediction
 
-    with open(data_source+'/evaluation.csv', 'wb') as fp:
-        w = csv.DictWriter(fp, precision_recall_stats.keys())
-        w.writeheader()
-        w.writerow(precision_recall_stats)
 
-    with open(data_source+'/link_prediction.json', 'w') as fp:
-        json.dump(output_linkprediction, fp, default=json_serial)
-
-    with open(data_source+'/output_relations.json', 'w') as fp:
-        json.dump(output_realations, fp, default=json_serial)
+    
 
     if new_triple_flag == 1:
         os.remove(data_source+'triples_raw.json')
@@ -199,7 +205,7 @@ def fact_checker(sentence_lis, id_list):
 
     ex_time = time.time() - start_time
     print "Total Execution Time: " + str(round(ex_time, 2))
-    print "{:<8} {:<10} {:<10} {:<10} {:<10} ".format('S.N.','p_res','r_res' 'p_rel', 'r_rel', 'p_ent', 'r_ent')
+    print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10} ".format('S.N.','p_res','r_res' 'p_rel', 'r_rel', 'p_ent', 'r_ent')
     vals_sum=0
     for k1,v1 in precision_recall_stats.iteritems():
         vals = v1

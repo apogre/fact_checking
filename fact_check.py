@@ -22,9 +22,9 @@ relation=[]
 ROOT = 'ROOT'
 aux_verb = ['was', 'is', 'become','to','of']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
-# sparql_dbpedia = 'http://localhost:8890/sparql'
+sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
-sparql_dbpedia = 'https://dbpedia.org/sparql'
+# sparql_dbpedia = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
@@ -144,7 +144,7 @@ def similar(a,b):
 
 
 def compare(word1, word2):
-    print word2, word1
+    # print word2, word1
     wierdness2 = sequence_weirdness(unicode(word2))
     if wierdness2 == 0:
         wierdness1 = sequence_weirdness(unicode(word1))
@@ -584,6 +584,13 @@ def rel_score_simple(ma,score1,item2_v):
     # print scores2
     score = (score1 + scores2[1]) / 2
     return score, scores2
+
+
+def get_resource_id(resources):
+    resource_ids = {}
+    for k,v in resources.iteritems():
+        resource_ids[k] = v[0][0].split('/')[-1]
+    return resource_ids
 
 
 def comment_extractor(ont):

@@ -1,1 +1,5 @@
-{"a": ["governorGeneral"], "19": ["governorGeneral", "deputy", "taoiseach", "profession", "relative", "relation", "almaMater", "militaryBranch", "partner", "runningMate", "notableWork", "influenced", "knownFor", "militaryUnit", "religion", "incumbent", "party", "occupation", "influencedBy", "opponent", "predecessor", "birthPlace", "parent", "associate", "chancellor", "appointer", "award", "lieutenant", "militaryRank", "child", "genre", "president", "vicePresident", "spouse", "successor", "otherParty", "monarch", "wikiPageDisambiguates", "governor", "vicePrimeMinister", "presenter", "primeMinister", "movement"], "17": ["founder", "birthPlace", "relative", "relation", "almaMater", "owner", "partner", "education", "ethnicity", "notableWork", "influenced", "agency", "knownFor", "employer", "owningCompany", "keyPerson", "influencedBy", "movement", "product", "parent", "associate", "occupation", "award", "child", "genre", "subsidiary", "spouse", "successor", "foundedBy"], "18": ["picture", "birthPlace", "coach", "manager", "deathPlace", "team", "owner", "position", "clubsRecordGoalscorer", "managerClub", "chairman"]}
+{
+  "a": [
+    "governorGeneral"
+  ]
+}

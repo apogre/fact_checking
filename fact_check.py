@@ -203,8 +203,10 @@ def predicate_finder(triple_dict):
     pval_list=[]
     for k in triple_dict.keys():
         print k
-        q_comment = 'SELECT distinct ?uri ?comment WHERE { ?uri rdfs:comment ?comment . FILTER langMatches( lang(?comment), "EN" ).  ?comment bif:contains "'+k.split()[1]+'" .}'
-        q_label = 'SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type rdf:Property . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "'+k.split()[1]+'" .}'
+        q_comment = 'SELECT distinct ?uri ?comment WHERE { ?uri rdfs:comment ?comment . \
+        FILTER langMatches( lang(?comment), "EN" ).  ?comment bif:contains "'+k.split()[1]+'" .}'
+        q_label = 'SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type rdf:Property . \
+        FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "'+k.split()[1]+'" .}'
         predicate_result = sparql.query(sparql_dbpedia, q_comment)
         p_values = [sparql.unpack_row(row) for row in predicate_result]
         if not p_values:
@@ -241,13 +243,20 @@ def resource_extractor(labels):
             my_labels = label[0].split()
             if label[1] == 'PERSON':
                 if len(my_labels) == 1:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
+                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . \
+                    FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
                 else:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[-1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
-                    q_birthname = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?name WHERE { ?uri dbo:birthName ?name . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?name), "EN" ).?name bif:contains "' +str(my_labels[-1]) +'" . FILTER (CONTAINS(?name, "'+str(my_labels[0])+'"))}')
+                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . \
+                    FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[-1]) +'" . \
+                    FILTER (CONTAINS(?label, "'+ str(my_labels[0])+'"))}')
+                    q_birthname = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?name WHERE \
+                    { ?uri dbo:birthName ?name . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?name), "EN" ).\
+                    ?name bif:contains "' + str(my_labels[-1]) + '" . FILTER (CONTAINS(?name, "'+ str(my_labels[0]) + '"))}')
             elif label[1] == 'LOCATION':
                 if len(my_labels) == 1:
-                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
+                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE \
+                    { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). \
+                    ?label bif:contains "' +str(my_labels[0]) +'" . }')
                 elif ',' in label[0]:
                     my_labels = label[0].split(', ')
                     a=''
@@ -257,14 +266,21 @@ def resource_extractor(labels):
                             b = my
                         else:
                             a = my
-                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(a) +'" . FILTER (CONTAINS(?label, "'+str(b)+'"))}')
+                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE \
+                    { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). \
+                    ?label bif:contains "' +str(a) +'" . FILTER (CONTAINS(?label, "'+str(b)+'"))}')
                 else:
-                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
+                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE \
+                    { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). \
+                    ?label bif:contains "' + str(my_labels[1]) + '" . FILTER (CONTAINS(?label, "' + str(my_labels[0])+'"))}')
             else:
                 if len(my_labels) == 1:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
+                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . \
+                    FILTER langMatches(lang(?label), "EN" ). ?label bif:contains "' + str(my_labels[0]) + '" . }')
                 else:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label .  FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[1]) +'" . FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
+                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . \
+                    FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' + str(my_labels[1]) + '" . \
+                    FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
 
             # print q_u
             result = sparql.query(sparql_dbpedia, q_u)
@@ -389,7 +405,6 @@ def relation_extractor_1hop(resources,verb_entity):
 
 def relation_extractor_triples(resources, triples, relation):
     print triples
-    # sys.exit(0)
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
             item1_v = resources.get(triple_v[0])
@@ -399,29 +414,31 @@ def relation_extractor_triples(resources, triples, relation):
                     if 'dbpedia' in i1[0]:
                         url1 = i1[0]
                         if '%' in url1:
-                            url1 = url1.replace('%20','_')
+                            url1 = url1.replace('%20', '_')
                             url1 = url1.replace('%2C', ',')
                         score1 = [it for it in i1 if isinstance(it, float)]
                         score1 = score1[0]
-                        q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
+                        q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o . \
+                         FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")). }')
+                        # print q_all
                         result = sparql.query(sparql_dbpedia, q_all)
                         q1_values = [sparql.unpack_row(row_result) for row_result in result]
                         q1_list = [qv[1] for qv in q1_values]
-                        # print len(q1_list)
                         # print q1_list
-                        q_all_back = ('SELECT ?p ?s WHERE { ?s ?p <' + url1 + '> .}')
+                        q_all_back = ('SELECT ?p ?s WHERE { ?s ?p <' + url1 + '> . \
+                         FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")).}')
                         # print q_all_back
                         result_back = sparql.query(sparql_dbpedia, q_all_back)
                         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
                         q1_list_back = [qv[1] for qv in q1_values_back]
                         q1_list.extend(q1_list_back)
                         q1_values.extend(q1_values_back)
-
                     item2_v = resources.get(triple_v[1])
                     if item2_v:
+                        print item1_v, item2_v
                         url2_list = [i2[0] for i2 in item2_v]
                         intersect = set(url2_list).intersection(q1_list)
-
+                        # print q1_list
                         for inte in intersect:
                             match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
                             if match:

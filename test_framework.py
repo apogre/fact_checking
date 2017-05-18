@@ -24,6 +24,7 @@ ambiverse = True
 global_settings.init()
 # data_source = 'ug_data/all_'
 data_source = 'main_data/'
+output_data = 'output_data/'
 
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
@@ -120,10 +121,10 @@ def fact_checker(sentence_lis, id_list):
                 execution_time = time.time() - res_time
                 print execution_time
                 # sys.exit(0)
-                true_pos_rel, retrived_rels, ex_rels = evaluation.precision_recall_relations1(sent_id, relations)
+                true_pos_rel, retrived_rels, ex_rels = evaluation.precision_recall_relations(sent_id, relations)
+                print true_pos_rel, retrived_rels, ex_rels
                 true_pos_ent, retrieved_ents, ex_ent_all = evaluation.precision_recall_ent_match(sent_id, relations)
                 print ex_ent_all
-                # sys.exit(0)
                 print '\n'
                 print "Precision & Recall for Entities"
                 print "--------------------------------"
@@ -137,13 +138,15 @@ def fact_checker(sentence_lis, id_list):
                 precision_recall_stats[sent_id] = [precision_res, recall_res, precision_rel, recall_rel, precision_ent_out, recall_ent_out]
                 if KG_Miner:
                     print "Using KG_Miner"
-                    entity_type_ontology, entity_type_resource = KG_Miner_Extension.entity_type_extractor(resources, triple_dict)
+                    entity_type_ontology, entity_type_resource = KG_Miner_Extension.entity_type_extractor(resources,\
+                                                                                                          triple_dict)
                     print "Type of Entities"
                     pprint.pprint(entity_type_ontology)
-                    pprint.pprint(entity_type_resource)
+                    # pprint.pprint(entity_type_resource)
                     # sys.exit(0)
                     # resource_type_set_ranked, resource_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_resource, ent_dict, triple_dict)
-                    # ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker(entity_type_ontology, ent_dict, triple_dict)
+                    # ontology_type_set_ranked, ontology_threshold_ranked = KG_Miner_Extension.entity_type_ranker\
+                    #     (entity_type_ontology, ent_dict, triple_dict)
                     # pprint.pprint(resource_type_set_ranked)
                     # pprint.pprint(ontology_type_set_ranked)
                     # pprint.pprint(ontology_threshold_ranked)
@@ -154,7 +157,7 @@ def fact_checker(sentence_lis, id_list):
                         possible_predicate_set = KG_Miner_Extension.possible_predicate_type(entity_type_ontology, triple_dict, resource_ids)
                         possible_predicate[sent_id] = possible_predicate_set
                         new_predicate_flag=1
-                    print possible_predicate_set
+                    # print possible_predicate_set
                     # possible_predicate_set_ranked, possible_predicate_set_threshold = KG_Miner_Extension.predicate_ranker(possible_predicate_set,triple_dict)
                     # print possible_predicate_set_ranked
                     # print possible_predicate_set_threshold
@@ -169,17 +172,17 @@ def fact_checker(sentence_lis, id_list):
                                                                             triple_dict, resource_ids)
                     output_linkprediction[id_list[n]] = predicate_results
             else:
-                precision_recall_stats[sent_id] = [0,0,0, 0, 0, 0]
+                precision_recall_stats[sent_id] = [0, 0, 0, 0, 0, 0]
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
-            with open(data_source+'/evaluation.json', 'w') as fp:
+            with open(output_data+'/evaluation.json', 'w') as fp:
                 json.dump(precision_recall_stats, fp, default=json_serial)
 
-            with open(data_source+'/link_prediction.json', 'w') as fp:
+            with open(output_data+'/link_prediction.json', 'w') as fp:
                 json.dump(output_linkprediction, fp, default=json_serial)
 
-            with open(data_source+'/output_relations.json', 'w') as fp:
+            with open(output_data+'/output_relations.json', 'w') as fp:
                 json.dump(output_realations, fp, default=json_serial)
         print output_linkprediction
 
@@ -227,6 +230,12 @@ def fact_checker(sentence_lis, id_list):
 with open(data_source+'triples_raw.json') as json_data:
     file_triples = json.load(json_data)
 
+with open('nodes_id.json') as json_data:
+    global_settings.nodes_id = json.load(json_data)
+
+
+with open('edge_types_id.json') as json_data:
+    global_settings.edge_id = json.load(json_data)
 
 with open(data_source+'ambiverse_resources.json') as json_data:
     ambiverse_api.ambiverse_resources = json.load(json_data)

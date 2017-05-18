@@ -51,7 +51,7 @@ def precision_recall_ent_match(n,relations):
     return true_pos, retrieved_ents, ex_ent_all
 
 
-def precision_recall_relations1(n,relations):
+def precision_recall_relations(n, relations):
     subgraph = relations.get('edge')
     retrived_rels = []
     true_pos = []
@@ -61,8 +61,9 @@ def precision_recall_relations1(n,relations):
             retrived_rel = [s_key]
             retrived_rel.extend(rels['join'])
             retrived_rels.append(retrived_rel)
-
+    # print retrived_rels
     ex_dict = expected_outputs_relations.get(str(n),{})
+    # print ex_dict
     if ex_dict:
         for r_key,r_val in ex_dict.iteritems():
             r_val.append(r_key)

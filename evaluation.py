@@ -1,15 +1,20 @@
 import json, sys
 
 data_source = 'main_data/'
+# data_source = 'ug_final/'
 # data_source = 'ug_data/all_'
 
 
 def precision_recall_entities(n, resources):
     # global test_count
-    expected_entities = expected_outputs_entities.get(str(n),[])
+    # print n, resources
+    # print expected_outputs_entities
+    expected_entities = expected_outputs_entities.get(str(n),{})
     p_list=[]
     r_list=[]
     entity_matched = {}
+    # print expected_entities
+    # sys.exit(0)
     for res_key, res_val in expected_entities.iteritems():
         expected_ent = res_val
         # print str(res_key)+" Expected: "+ str(res_val)
@@ -37,13 +42,13 @@ def precision_recall_entities(n, resources):
         else:
             p_list.append(0)
             r_list.append(0)
-    return p_list,r_list, entity_matched
+    return p_list, r_list, entity_matched
 
 
 def precision_recall_ent_match(n,relations):
     ex_ent_all = []
     expected_ents = expected_outputs_entities.get(str(n),{})
-    print expected_ents
+    # print expected_ents
     for ke,ve in expected_ents.iteritems():
         ex_ent_all.extend(ve)
     retrieved_ents = relations['node'].keys()

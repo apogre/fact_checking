@@ -78,10 +78,12 @@ def verb_entity_matcher(parsed_tree):
 def svo_finder(ent,triples):
     triple_dict = {}
     entity_set = [x[0] for x in ent]
-    print ent
-    print entity_set
-    print "----"
+    # print ent
+    # print entity_set
+    # print "----"
     for triple in triples:
+        # print triple
+        # sys.exit(0)
         for ent in entity_set:
             if not isinstance(ent, datetime):
                 if ent in triple[2] and triple[1] not in aux_verb:
@@ -102,8 +104,13 @@ def svo_finder(ent,triples):
             if triple[1] not in triple_dict.keys():
                 triple_dict[triple[1]] = [[triple[0], triple[2]]]
             else:
-                triple_dict[triple[1]].append([triple[0], triple[2]])
-    print "here1"
+                triple_list = [item for sublist in triple_dict[triple[1]] for item in sublist]
+                # print triple_list
+                if triple[0] in triple_list and triple[2] in triple_list:
+                    pass
+                else: 
+                    triple_dict[triple[1]].append([triple[0], triple[2]])
+        # print triple_dict
     return triple_dict
 
 
@@ -202,7 +209,7 @@ new_labels = []
 def predicate_finder(triple_dict):
     pval_list=[]
     for k in triple_dict.keys():
-        print k
+        # print k
         q_comment = 'SELECT distinct ?uri ?comment WHERE { ?uri rdfs:comment ?comment . \
         FILTER langMatches( lang(?comment), "EN" ).  ?comment bif:contains "'+k.split()[1]+'" .}'
         q_label = 'SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type rdf:Property . \
@@ -228,6 +235,13 @@ def entity_threshold(resources):
                 break
         limit_entity[label] = ent_coded
     return limit_entity
+
+def get_labels(labels):
+    global new_labels
+    new_labels = []
+    for i,label in enumerate(labels):
+        if label[1] != 'DATE':
+            new_labels.append(label)
 
 
 def resource_extractor(labels):
@@ -404,7 +418,6 @@ def relation_extractor_1hop(resources,verb_entity):
 
 
 def relation_extractor_triples(resources, triples, relation):
-    print triples
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
             item1_v = resources.get(triple_v[0])
@@ -417,11 +430,12 @@ def relation_extractor_triples(resources, triples, relation):
                             url1 = url1.replace('%20', '_')
                             url1 = url1.replace('%2C', ',')
                         score1 = [it for it in i1 if isinstance(it, float)]
-                        score1 = score1[0]
+                        if score1:
+                            score1 = score1[0]
                         q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o . \
                          FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")). }')
                         # print q_all
-                        result = sparql.query(sparql_dbpedia, q_all)
+                        result = sparql.query(sparql_dbpedia_on, q_all)
                         q1_values = [sparql.unpack_row(row_result) for row_result in result]
                         q1_list = [qv[1] for qv in q1_values]
                         # print q1_list
@@ -435,7 +449,7 @@ def relation_extractor_triples(resources, triples, relation):
                         q1_values.extend(q1_values_back)
                     item2_v = resources.get(triple_v[1])
                     if item2_v:
-                        print item1_v, item2_v
+                        # print item1_v, item2_v
                         url2_list = [i2[0] for i2 in item2_v]
                         intersect = set(url2_list).intersection(q1_list)
                         # print q1_list
@@ -496,7 +510,7 @@ def relation_extractor_all(resources, verb_entity):
     global new_labels
     print new_labels
     relation = []
-    new_labels = sorted(new_labels, key=operator.itemgetter(2))
+    # new_labels = sorted(new_labels, key=operator.itemgetter(2))
     new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)
     if len(new_labels) > 1:
         for i in range(0, len(resources) - 1):

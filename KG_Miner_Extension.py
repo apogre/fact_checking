@@ -19,7 +19,45 @@ kg_data_source = 'KG_Miner_data/'
 def get_leaf_nodes(type_values):
     leaf, root = [x[0] for x in type_values], [x[1] for x in type_values]
     leaves = [le for le in leaf if le not in root]
+    # leaves = leaf+root
     return leaves
+
+
+def training_entity_type(resources, triples):
+    # print resources
+    # print triples
+    type_set_ontology = {}
+    type_set_resource = {}
+    for triple_k, triples_v in triples.iteritems():
+        for triple_v in triples_v:
+            for ent in triple_v:
+                item1_v = resources.get(ent, None)
+                type_list_ontology = []
+                type_list_resource = []
+                # print item1_v
+                if item1_v:
+                    key = resources[ent][0][0].split('/')[-1]
+                    if key not in type_set_ontology.keys():
+                        for i1 in item1_v:
+                            if 'dbpedia' in i1[0]:
+                                url1 = i1[0]
+                                q_type = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?t WHERE {{ <' + url1 +\
+                                          '> dbo:type ?t } UNION { <' + url1 + '> rdf:type ?t }. \
+                                          FILTER(STRSTARTS(STR(?t), "http://dbpedia.org/ontology") || STRSTARTS(STR(?t), \
+                                          "http://dbpedia.org/resource")).}')
+                                # print q_type
+                                result = sparql.query(sparql_dbpedia, q_type)
+                                type_values = [sparql.unpack_row(row_result) for row_result in result]
+                                # type_ontology = [x[0] for x in type_values]
+                                type_ontology = [val[0] for val in type_values if 'ontology' in val[0]]
+                                type_resource = [val[0] for val in type_values if 'resource' in val[0]]
+                                # print type_ontology
+                                type_list_ontology.extend(type_ontology)
+                                type_list_resource.extend(type_resource)
+                                # print type_list_ontology
+                        type_set_ontology[key] = type_list_ontology
+                        type_set_resource[key] = type_list_resource
+    return type_set_ontology, type_set_resource
 
 
 def entity_type_extractor(resources, triples):
@@ -33,7 +71,7 @@ def entity_type_extractor(resources, triples):
                 item1_v = resources.get(ent, None)
                 type_list_ontology = []
                 type_list_resource = []
-                print item1_v
+                # print item1_v
                 if item1_v:
                     key = resources[ent][0][0].split('/')[-1]
                     if key not in type_set_ontology.keys():
@@ -56,7 +94,7 @@ def entity_type_extractor(resources, triples):
                                 type_list_ontology.extend(type_ontology)
                                 type_list_resource.extend(type_resource)
                         type_set_ontology[key] = list(set(type_list_ontology))
-                        type_set_resource[ent] = list(set(type_list_resource))
+                        type_set_resource[key] = list(set(type_list_resource))
     return type_set_ontology, type_set_resource
 
 
@@ -130,28 +168,6 @@ def predicate_id_finder_json(poi):
     return id_list
 
 
-# def predicate_id_finder(poi):
-#     id_list = []
-#     # print poi
-#     with open("infobox.edgetypes", "rb") as csvfile:
-#         reader = csv.reader(csvfile, delimiter='\t')
-#         # print label
-#         for row in reader:
-#             try:
-#                 # print row[1], poi
-#                 if row[1] == poi:
-#                     id_list.append(row)
-#                     # print row
-#                     with open(kg_data_source + 'poi.csv', 'wb') as csvfile:
-#                         datawriter = csv.writer(csvfile)
-#                         datawriter.writerow([row[0],row[1]])
-#                     return id_list
-#             except:
-#                 pass
-#             # id_set[label] = id_list
-
-
-
 def kg_miner_csv(input_data, file_name):
     with open(kg_data_source+file_name+'.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
@@ -167,7 +183,7 @@ def possible_predicate_type(type_set, triple_dict, resource_ids):
     count = 0
     sort_list = {}
     for triples_k,triples_v in triple_dict.iteritems():
-        print triples_k, triples_v
+        # print triples_k, triples_v
         predicate_list = []
         for triple_v in triples_v:
             res_id1 = resource_ids.get(triple_v[0], [])
@@ -197,7 +213,7 @@ def possible_predicate_type(type_set, triple_dict, resource_ids):
                         try:
                             if len(q_pp)>1:
                                 count = count + 1
-                                print count
+                                # print count
                                 result = sparql.query(sparql_dbpedia_on, q_pp)
                                 pred_values = [sparql.unpack_row(row_result) for row_result in result]
                                 if pred_values:
@@ -270,56 +286,37 @@ def train_data_csv(train_ents, node_ids, expected_entities):
 
 def or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, ex_ent_all):
     q_part_base = '{ ?url1 rdf:type <'
+    q_part_base_res = 'UNION { ?url1 dbo:type <'
     q_part = ''
     # print ">>>>>>>>>>>"
     # print ontology_threshold_ranked
     # print ex_ent_all
-    try:
-        for v in ex_ent_all:
-            types = ontology_threshold_ranked.get(v,[])
-            for i,val in enumerate(types):
-                # print val            
-                if i == (len(types)-1):
-                    q_part = q_part + q_part_base + val + '>} . '
-                else:
-                    q_part = q_part + q_part_base + val + '>} UNION '
-            q_part_base = '{ ?url2 rdf:type <'
-    except:
-        pass
-        # print q_part
-    # q_part_base_res = '{ ?url1 dbo:type <'
-    q_part_res = ''
-    # for k, v in resource_type_set_ranked.iteritems():
-    #     # print k
-    #     for val in v:
-    #         # print val
-    #         q_part_res = q_part_res + q_part_base_res + val[0] + '> } UNION '
-    #     q_part_base_res = '{ ?url2 dbo:type <'
-    return q_part, q_part_res
-
-
-def and_query_prep(resource_type_set_ranked, ontology_threshold_ranked):
-    q_part_base = '{?url1 rdf:type <'
-    q_part = ''
-    for k, v in ontology_threshold_ranked.iteritems():
-        # print k
-        for i, val in enumerate(v):
-            # print val
-            if i==len(v)-1:
-                q_part = q_part + q_part_base + val[0] + '> } '
+    # try:
+    for v in ex_ent_all:
+        q_part_res = ''
+        ont_types = ontology_threshold_ranked.get(v,[])
+        res_types = resource_type_set_ranked.get(v,[])
+        # print ont_types
+        # print res_types
+        for i,val in enumerate(ont_types):
+            # print val            
+            if i == (len(ont_types)-1):
+                q_part = q_part + q_part_base + val + '>} '
             else:
-                q_part = q_part + q_part_base + val[0] + '> } UNION '
-        q_part_base = '{ ?url2 rdf:type <'
-    # print q_part
-    q_part_base_res = '{ ?url1 dbo:type <'
-    q_part_res = ''
-    for k, v in resource_type_set_ranked.iteritems():
-        # print k
-        for val in v:
-            # print val
-            q_part_res = q_part_res + q_part_base_res + val[0] + '> } '
-        q_part_base_res = '{?url2 dbo:type <'
-    return q_part, q_part_res
+                q_part = q_part + q_part_base + val + '>} UNION '
+        if res_types:
+            for j,res_val in enumerate(res_types):
+                if j == (len(res_types)-1):
+                    q_part_res = q_part_res + q_part_base_res + res_val + '>}  .'
+                else:
+                    q_part_res = q_part_res + q_part_base_res + res_val + '>} UNION '
+        else:
+            q_part_res = ' .'
+        q_part = q_part + q_part_res
+        q_part_base = ' { ?url2 rdf:type <'
+        q_part_base_res = 'UNION { ?url2 dbo:type <'
+
+    return q_part
 
 
 def word2vec_similarity(train_ents, resource_v):
@@ -337,9 +334,15 @@ def word2vec_similarity(train_ents, resource_v):
             # print sim2
             # print train_ents[j], train_ents[j+1]
             if sim1 > 0.2 and sim2 > 0.2:
-                # print [train_ents[j],train_ents[j+1]]
-                # print 'here'
-                word_vec_train.append([train_ents[j], train_ents[j + 1]])
+                sim1_1 = global_settings.model_wv.similarity('DBPEDIA_ID/' + resource_v[1],
+                                                       'DBPEDIA_ID/' + train_ents[j])
+            # print sim1
+                sim2_1 = global_settings.model_wv.similarity('DBPEDIA_ID/' + resource_v[0],
+                                                       'DBPEDIA_ID/' + train_ents[j + 1])
+                if sim1_1 > sim1 and sim2_1>sim2:
+                    word_vec_train.append([train_ents[j+1], train_ents[j]])
+                else:
+                    word_vec_train.append([train_ents[j], train_ents[j + 1]])
                 if len(word_vec_train) > 50:
                     return word_vec_train
         except:
@@ -349,6 +352,7 @@ def word2vec_similarity(train_ents, resource_v):
 
 def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_threshold_ranked, triple_dict, resource_ids):
     triple_predicates = {}
+    training_data_set= {}
     for triples_k, triples_v in triple_dict.iteritems():
         for triple_v in triples_v:
             # print triples_k, triple_v
@@ -356,8 +360,10 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
             print resource_v
             predicate_results = {}
             if None not in resource_v:
-                q_part, q_part_res = or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, resource_v)
-                # print q_part, q_part_res
+                q_part = or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, resource_v)
+                # print q_part
+                # print "---------"
+                # sys.exit(0)
                 test_node_ids = entity_id_finder_json(resource_v)
                 # print time.time() - r_time
                 # print test_node_ids
@@ -372,26 +378,38 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                         for poi in predicate_of_interest:
                             print poi
                             pred_id = predicate_id_finder_json(poi)
-                            print pred_id
+                            # print pred_id
                             # sys.exit(0)
                             q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-                            {?url1 <http://dbpedia.org/ontology/' + poi + '> ?url2} . ' + q_part+q_part_res+\
+                            {?url1 <http://dbpedia.org/ontology/' + poi + '> ?url2} . ' + q_part+\
                                    ' FILTER(?url1 != ?url2).} '
-                            print q_ts
-                            try:
-                                result = sparql.query(sparql_dbpedia, q_ts)
-                                training_set = [sparql.unpack_row(row_result) for row_result in result]
-                            except:
-                                print "Sparql Error"
-                                training_set = []
+                            # print q_ts
+                            training_set = []
+
+                            # try:
+                            #     result = sparql.query(sparql_dbpedia, q_ts)
+                            #     training_set = [sparql.unpack_row(row_result) for row_result in result]
+                            # except:
+                            #     print "Sparql Error"
+                                
+                            if not training_set:
+                                try:
+                                    result = sparql.query(sparql_dbpedia_on, q_ts)
+                                    training_set = [sparql.unpack_row(row_result) for row_result in result]
+                                except:
+                                    print "Online Sparql Error"                            
                             print len(training_set)
+                            # sys.exit(0)
                             if len(training_set)>5:
                                 training_set = sum(training_set, [])
                                 train_ents = [val.split('/')[-1] for val in training_set]
                                 word_vec_train = word2vec_similarity(train_ents, resource_v)
+                                # print word_vec_train
                                 if len(word_vec_train) > 5:
                                     print word_vec_train
+                                    # sys.exit(0)
                                     word_vec_train = sum(word_vec_train,[])
+
                                     # print len(word_vec_train)
                                     node_ids = entity_id_finder_json(word_vec_train)
                                     # print node_ids
@@ -412,11 +430,13 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                                         except:
                                             pass
                                         print predicate_results
+                                        training_data_set[(str(triples_k)+'-'+str(triple_v))+'-'+str(poi)] = word_vec_train
                                         os.chdir('..')
                                 else:
                                     print "Insufficient Training Set"
                 else:
                     print "test data error"
 
-        triple_predicates[triples_k] = predicate_results
-    return triple_predicates
+            triple_predicates[(str(triples_k)+'-'+str(triple_v))] = predicate_results
+            
+    return triple_predicates, training_data_set

@@ -16,7 +16,7 @@ import os.path
 
 
 aux_verb = ['was', 'is', 'become']
-KG_Miner = True
+KG_Miner = False
 precision_recall_stats = collections.OrderedDict()
 stanford_setup = True
 ambiverse = True
@@ -116,6 +116,7 @@ def fact_checker(sentence_lis, id_list):
             else:
                 recall_res = 0
             relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
+            relation_hop = fact_check.relation_extractor_1hop(resource_text, triple_dict)
             # print relation_ent
             if not relation_ent:
                 sentence_list = [word_tokenize(sent) for sent in sentence_lis]

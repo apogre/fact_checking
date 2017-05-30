@@ -369,50 +369,42 @@ def relation_processor(relations):
     return relation_graph
 
 
-def relation_extractor_1hop(resources,verb_entity):
-    global new_labels
-    print new_labels
-    relation = []
-    new_labels = sorted(new_labels, key=operator.itemgetter(2))
-    new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)
-    for i in range(0, len(resources) - 1):
-        if str(new_labels[i][0]) in resources:
-            item1_v = resources[new_labels[i][0]]
-            predicate_comment = {}
-            for i1 in item1_v:
-                # print i1
-                if 'dbpedia' in i1[0]:
+def relation_extractor_1hop(resources, triples):
+    for triple_k, triples_v in triples.iteritems():
+        for triple_v in triples_v:
+            item1_v = resources.get(triple_v[0])
+            if item1_v:
+                for i1 in item1_v:
                     url1 = i1[0]
                     score1 = [it for it in i1 if isinstance(it, float)]
-                    score1 = score1[0]
-                    print url1
-                for j in range(i+1, len(resources)):
-                    if str(new_labels[j][0]) in resources:
-                        item2_v = resources[new_labels[j][0]]
-                        url2_list = [i2[0] for i2 in item2_v]
-                        url2_list=list(set(url2_list))
+                    if score1:
+                        score1 = score1[0]
+                    item2_v = resources.get(triple_v[1])
+                    url2_list = [i2[0] for i2 in item2_v]
+                    url2_list=list(set(url2_list))
+                    # print url2_list
+                    for url2 in url2_list:
                         # print url2_list
-                        for url2 in url2_list:
-                            # print url2_list
-                            q_1hop='select <'+url1+'> ?rel ?v0 ?rel1 <'+url2+'> where { <'+url1+'> ?rel ?v0 . ?v0 ?rel1 <'+url2+ '> . }'
+                        q_1hop='select <'+url1+'> ?rel ?v0 ?rel1 <'+url2+'> where { <'+url1+'> ?rel ?v0 . ?v0 ?rel1 <'+url2+ '> . }'
+                        print q_1hop
+                        result_1 = sparql.query(sparql_dbpedia, q_1hop)
+                        val_1hop = [sparql.unpack_row(row_result) for row_result in result_1]
+                        if val_1hop:
+                            # print url2
                             # print q_1hop
-                            result_1 = sparql.query(sparql_dbpedia, q_1hop)
-                            val_1hop = [sparql.unpack_row(row_result) for row_result in result_1]
-                            if val_1hop:
+                            for val in val_1hop:
+                                print val
+                        else:
+                            q_2hop='select <'+url1+'> ?rel ?v0 ?rel1 ?v1 ?rel2 <'+url2+'> where { <'+url1+'> ?rel ?v0 . ?v0 ?rel1 ?v1 . ?v1 ?rel2 <'+url2+ '> . }'
+                            print q_2hop
+                            sys.exit(0)
+                            result_2 = sparql.query(sparql_dbpedia, q_2hop)
+                            val_2hop = [sparql.unpack_row(row_result) for row_result in result_2]
+                            if val_2hop:
                                 # print url2
                                 # print q_1hop
-                                for val in val_1hop:
+                                for val in val_2hop:
                                     print val
-                            else:
-                                q_2hop='select <'+url1+'> ?rel ?v0 ?rel1 ?v1 ?rel2 <'+url2+'> where { <'+url1+'> ?rel ?v0 . ?v0 ?rel1 ?v1 . ?v1 ?rel2 <'+url2+ '> . }'
-                                # print q_2hop
-                                result_2 = sparql.query(sparql_dbpedia, q_2hop)
-                                val_2hop = [sparql.unpack_row(row_result) for row_result in result_2]
-                                if val_2hop:
-                                    # print url2
-                                    # print q_1hop
-                                    for val in val_2hop:
-                                        print val
 
     return None
 
@@ -426,9 +418,9 @@ def relation_extractor_triples(resources, triples, relation):
                     predicate_comment = {}
                     if 'dbpedia' in i1[0]:
                         url1 = i1[0]
-                        if '%' in url1:
-                            url1 = url1.replace('%20', '_')
-                            url1 = url1.replace('%2C', ',')
+                        # if '%' in url1:
+                        #     url1 = url1.replace('%20', '_')
+                        #     url1 = url1.replace('%2C', ',')
                         score1 = [it for it in i1 if isinstance(it, float)]
                         if score1:
                             score1 = score1[0]

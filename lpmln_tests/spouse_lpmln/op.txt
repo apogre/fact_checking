@@ -1,0 +1,901 @@
+_Input STRING
+_Shift 166
+_Stack: STRING
+_Input EQUAL
+_Reduce [string ::= STRING].
+_Shift 55
+_Stack: string
+_Shift 44
+_Stack: string EQUAL
+_Input LPAREN
+_Shift 23
+_Stack: string EQUAL LPAREN
+_Input STRING
+_Shift 166
+_Stack: string EQUAL LPAREN STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: string EQUAL LPAREN string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: string EQUAL LPAREN variable
+_Reduce [variables ::= variable].
+_Shift 60
+_Stack: string EQUAL LPAREN variables
+_Shift 43
+_Stack: string EQUAL LPAREN variables COMMA
+_Input STRING
+_Shift 166
+_Stack: string EQUAL LPAREN variables COMMA STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: string EQUAL LPAREN variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: string EQUAL LPAREN variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 60
+_Stack: string EQUAL LPAREN variables
+_Shift 43
+_Stack: string EQUAL LPAREN variables COMMA
+_Input STRING
+_Shift 166
+_Stack: string EQUAL LPAREN variables COMMA STRING
+_Input RPAREN
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: string EQUAL LPAREN variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: string EQUAL LPAREN variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 60
+_Stack: string EQUAL LPAREN variables
+_Shift 114
+_Stack: string EQUAL LPAREN variables RPAREN
+_Input NEWLINE
+_Reduce [domains ::= LPAREN variables RPAREN].
+_Shift 115
+_Stack: string EQUAL domains
+_Reduce [domain ::= string EQUAL domains].
+_Shift 111
+_Stack: domain
+_Reduce [prog ::= domain].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 55
+_Stack: prog NEWLINE string
+_Shift 22
+_Stack: prog NEWLINE string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 57
+_Stack: prog NEWLINE string LBRACKET variables RBRACKET
+_Input NEWLINE
+_Reduce [decl ::= string LBRACKET variables RBRACKET].
+_Shift 144
+_Stack: prog NEWLINE decl
+_Reduce [prog ::= prog NEWLINE decl].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 55
+_Stack: prog NEWLINE string
+_Shift 22
+_Stack: prog NEWLINE string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 57
+_Stack: prog NEWLINE string LBRACKET variables RBRACKET
+_Input NEWLINE
+_Reduce [decl ::= string LBRACKET variables RBRACKET].
+_Shift 144
+_Stack: prog NEWLINE decl
+_Reduce [prog ::= prog NEWLINE decl].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 55
+_Stack: prog NEWLINE string
+_Shift 22
+_Stack: prog NEWLINE string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 57
+_Stack: prog NEWLINE string LBRACKET variables RBRACKET
+_Input NEWLINE
+_Reduce [decl ::= string LBRACKET variables RBRACKET].
+_Shift 144
+_Stack: prog NEWLINE decl
+_Reduce [prog ::= prog NEWLINE decl].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 55
+_Stack: prog NEWLINE string
+_Shift 22
+_Stack: prog NEWLINE string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 57
+_Stack: prog NEWLINE string LBRACKET variables RBRACKET
+_Input NEWLINE
+_Reduce [decl ::= string LBRACKET variables RBRACKET].
+_Shift 144
+_Stack: prog NEWLINE decl
+_Reduce [prog ::= prog NEWLINE decl].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 55
+_Stack: prog NEWLINE string
+_Shift 22
+_Stack: prog NEWLINE string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 57
+_Stack: prog NEWLINE string LBRACKET variables RBRACKET
+_Input REVERSE_IMPLICATION
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 88
+_Stack: prog NEWLINE literal
+_Reduce [bodydef ::= literal].
+_Shift 121
+_Stack: prog NEWLINE bodydef
+_Reduce [head ::= bodydef].
+_Shift 64
+_Stack: prog NEWLINE head
+_Shift 5
+_Stack: prog NEWLINE head REVERSE_IMPLICATION
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string
+_Shift 34
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables
+_Shift 101
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables RBRACKET
+_Input CONJUNCTION
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 141
+_Stack: prog NEWLINE head REVERSE_IMPLICATION literal
+_Reduce [bodydef ::= literal].
+_Shift 124
+_Stack: prog NEWLINE head REVERSE_IMPLICATION bodydef
+_Reduce [body ::= bodydef].
+_Shift 63
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body
+_Shift 17
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string
+_Shift 34
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables
+_Shift 101
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables RBRACKET
+_Input CONJUNCTION
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 141
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION literal
+_Reduce [bodydef ::= literal].
+_Shift 142
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION bodydef
+_Reduce [body ::= body CONJUNCTION bodydef].
+_Shift 63
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body
+_Shift 17
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION STRING
+_Input NEGATION
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string
+_Shift 93
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string NEGATION
+_Input EQUAL
+_Shift 50
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string NEGATION EQUAL
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string NEGATION EQUAL STRING
+_Input DOT
+_Reduce [string ::= STRING].
+_Shift 125
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string NEGATION EQUAL string
+_Reduce [bodydef ::= string NEGATION EQUAL string].
+_Shift 142
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION bodydef
+_Reduce [body ::= body CONJUNCTION bodydef].
+_Shift 63
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body
+_Shift 119
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body DOT
+_Input NEWLINE
+_Reduce [rule ::= head REVERSE_IMPLICATION body DOT].
+_Shift 146
+_Stack: prog NEWLINE rule
+_Reduce [prog ::= prog NEWLINE rule].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 55
+_Stack: prog NEWLINE string
+_Shift 22
+_Stack: prog NEWLINE string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 57
+_Stack: prog NEWLINE string LBRACKET variables RBRACKET
+_Input REVERSE_IMPLICATION
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 88
+_Stack: prog NEWLINE literal
+_Reduce [bodydef ::= literal].
+_Shift 121
+_Stack: prog NEWLINE bodydef
+_Reduce [head ::= bodydef].
+_Shift 64
+_Stack: prog NEWLINE head
+_Shift 5
+_Stack: prog NEWLINE head REVERSE_IMPLICATION
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string
+_Shift 34
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables
+_Shift 101
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables RBRACKET
+_Input CONJUNCTION
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 141
+_Stack: prog NEWLINE head REVERSE_IMPLICATION literal
+_Reduce [bodydef ::= literal].
+_Shift 124
+_Stack: prog NEWLINE head REVERSE_IMPLICATION bodydef
+_Reduce [body ::= bodydef].
+_Shift 63
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body
+_Shift 17
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string
+_Shift 34
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables
+_Shift 101
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION string LBRACKET variables RBRACKET
+_Input DOT
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 141
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION literal
+_Reduce [bodydef ::= literal].
+_Shift 142
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body CONJUNCTION bodydef
+_Reduce [body ::= body CONJUNCTION bodydef].
+_Shift 63
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body
+_Shift 119
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body DOT
+_Input NEWLINE
+_Reduce [rule ::= head REVERSE_IMPLICATION body DOT].
+_Shift 146
+_Stack: prog NEWLINE rule
+_Reduce [prog ::= prog NEWLINE rule].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 55
+_Stack: prog NEWLINE string
+_Shift 22
+_Stack: prog NEWLINE string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 59
+_Stack: prog NEWLINE string LBRACKET variables
+_Shift 57
+_Stack: prog NEWLINE string LBRACKET variables RBRACKET
+_Input REVERSE_IMPLICATION
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 88
+_Stack: prog NEWLINE literal
+_Reduce [bodydef ::= literal].
+_Shift 121
+_Stack: prog NEWLINE bodydef
+_Reduce [head ::= bodydef].
+_Shift 64
+_Stack: prog NEWLINE head
+_Shift 5
+_Stack: prog NEWLINE head REVERSE_IMPLICATION
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string
+_Shift 34
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 78
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables
+_Shift 101
+_Stack: prog NEWLINE head REVERSE_IMPLICATION string LBRACKET variables RBRACKET
+_Input DOT
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 141
+_Stack: prog NEWLINE head REVERSE_IMPLICATION literal
+_Reduce [bodydef ::= literal].
+_Shift 124
+_Stack: prog NEWLINE head REVERSE_IMPLICATION bodydef
+_Reduce [body ::= bodydef].
+_Shift 63
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body
+_Shift 119
+_Stack: prog NEWLINE head REVERSE_IMPLICATION body DOT
+_Input NEWLINE
+_Reduce [rule ::= head REVERSE_IMPLICATION body DOT].
+_Shift 146
+_Stack: prog NEWLINE rule
+_Reduce [prog ::= prog NEWLINE rule].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input NUMBER
+_Shift 157
+_Stack: prog NEWLINE NUMBER
+_Input STRING
+_Reduce [number ::= NUMBER].
+_Shift 2
+_Stack: prog NEWLINE number
+_Shift 166
+_Stack: prog NEWLINE number STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE number string
+_Shift 34
+_Stack: prog NEWLINE number string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE number string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE number string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE number string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 78
+_Stack: prog NEWLINE number string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE number string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE number string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE number string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE number string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 78
+_Stack: prog NEWLINE number string LBRACKET variables
+_Shift 101
+_Stack: prog NEWLINE number string LBRACKET variables RBRACKET
+_Input NEWLINE
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 65
+_Stack: prog NEWLINE number literal
+_Reduce [predicate ::= number literal].
+_Shift 147
+_Stack: prog NEWLINE predicate
+_Reduce [prog ::= prog NEWLINE predicate].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input NUMBER
+_Shift 157
+_Stack: prog NEWLINE NUMBER
+_Input STRING
+_Reduce [number ::= NUMBER].
+_Shift 2
+_Stack: prog NEWLINE number
+_Shift 166
+_Stack: prog NEWLINE number STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE number string
+_Shift 34
+_Stack: prog NEWLINE number string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE number string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE number string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE number string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 78
+_Stack: prog NEWLINE number string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE number string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE number string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE number string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE number string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 78
+_Stack: prog NEWLINE number string LBRACKET variables
+_Shift 101
+_Stack: prog NEWLINE number string LBRACKET variables RBRACKET
+_Input NEWLINE
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 65
+_Stack: prog NEWLINE number literal
+_Reduce [predicate ::= number literal].
+_Shift 147
+_Stack: prog NEWLINE predicate
+_Reduce [prog ::= prog NEWLINE predicate].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input NUMBER
+_Shift 157
+_Stack: prog NEWLINE NUMBER
+_Input STRING
+_Reduce [number ::= NUMBER].
+_Shift 2
+_Stack: prog NEWLINE number
+_Shift 166
+_Stack: prog NEWLINE number STRING
+_Input LBRACKET
+_Reduce [string ::= STRING].
+_Shift 58
+_Stack: prog NEWLINE number string
+_Shift 34
+_Stack: prog NEWLINE number string LBRACKET
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE number string LBRACKET STRING
+_Input COMMA
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE number string LBRACKET string
+_Reduce [variable ::= string].
+_Shift 150
+_Stack: prog NEWLINE number string LBRACKET variable
+_Reduce [variables ::= variable].
+_Shift 78
+_Stack: prog NEWLINE number string LBRACKET variables
+_Shift 43
+_Stack: prog NEWLINE number string LBRACKET variables COMMA
+_Input STRING
+_Shift 166
+_Stack: prog NEWLINE number string LBRACKET variables COMMA STRING
+_Input RBRACKET
+_Reduce [string ::= STRING].
+_Shift 159
+_Stack: prog NEWLINE number string LBRACKET variables COMMA string
+_Reduce [variable ::= string].
+_Shift 160
+_Stack: prog NEWLINE number string LBRACKET variables COMMA variable
+_Reduce [variables ::= variables COMMA variable].
+_Shift 78
+_Stack: prog NEWLINE number string LBRACKET variables
+_Shift 101
+_Stack: prog NEWLINE number string LBRACKET variables RBRACKET
+_Input NEWLINE
+_Reduce [literal ::= string LBRACKET variables RBRACKET].
+_Shift 65
+_Stack: prog NEWLINE number literal
+_Reduce [predicate ::= number literal].
+_Shift 147
+_Stack: prog NEWLINE predicate
+_Reduce [prog ::= prog NEWLINE predicate].
+_Shift 56
+_Stack: prog
+_Shift 1
+_Stack: prog NEWLINE
+_Input $
+_Reduce [prog ::= prog NEWLINE].
+_Shift 56
+_Stack: prog
+_Reduce [start ::= prog].
+_Accept!
+_Popping $

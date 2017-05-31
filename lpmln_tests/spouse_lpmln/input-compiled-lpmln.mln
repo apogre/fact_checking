@@ -1,0 +1,17 @@
+entity={Bo,Mo,So}
+Spouse(entity,entity)
+Child(entity,entity)
+Mother(entity,entity)
+Father(entity,entity)
+
+
+Child(x,z) ^ Child(y,z) ^ x!=y => Spouse(x,y).
+Mother(z,y) ^ Father(z,x) => Spouse(x,y).
+Spouse(y,x) => Spouse(x,y).
+
+
+2 Child(Bo,So)
+2 Child(Mo,So)
+2 Mother(So,Bo)
+
+//parsing complete!

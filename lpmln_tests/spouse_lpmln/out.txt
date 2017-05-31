@@ -1,0 +1,9 @@
+Spouse(Bo,Bo) 0.685981
+Spouse(Bo,Mo) 0.891961
+Spouse(Bo,So) 0.758974
+Spouse(Mo,Bo) 0.891961
+Spouse(Mo,Mo) 0.633987
+Spouse(Mo,So) 0.758974
+Spouse(So,Bo) 0.758974
+Spouse(So,Mo) 0.758974
+Spouse(So,So) 0.60499

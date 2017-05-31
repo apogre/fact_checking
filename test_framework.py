@@ -26,9 +26,9 @@ global_settings.init()
 # data_source = 'ug_data/all_'
 data_source = 'main_data/'
 # data_source = 'ug_final/'
-if not os.path.exists('output_data'+str(time.time())+'/'):
-    os.makedirs('output_data'+str(time.time())+'/')
-    output_data = 'output_data'+str(time.time())+'/'
+# if not os.path.exists('output_data'+str(time.time())+'/'):
+#     os.makedirs('output_data'+str(time.time())+'/')
+#     output_data = 'output_data'+str(time.time())+'/'
 
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
@@ -104,6 +104,7 @@ def fact_checker(sentence_lis, id_list):
             print "Resource Extractor"
             print "=================="
             pprint.pprint(resource_text)
+            sys.exit(0)
             resource_ids = fact_check.get_resource_id(resource_text)
             print resource_ids
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
@@ -116,7 +117,7 @@ def fact_checker(sentence_lis, id_list):
             else:
                 recall_res = 0
             relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
-            relation_hop = fact_check.relation_extractor_1hop(resource_text, triple_dict)
+            # relation_hop = fact_check.relation_extractor_1hop(resource_text, triple_dict)
             # print relation_ent
             if not relation_ent:
                 sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -265,12 +266,13 @@ if os.path.isfile(data_source+'triples_raw.json'):
 else:
     file_triples = {"a":"b"}
 
-with open('nodes_id.json') as json_data:
-    global_settings.nodes_id = json.load(json_data)
+if os.path.isfile('nodes_id.json'):
+    with open('nodes_id.json') as json_data:
+        global_settings.nodes_id = json.load(json_data)
 
-
-with open('edge_types_id.json') as json_data:
-    global_settings.edge_id = json.load(json_data)
+if os.path.isfile('edge_types_id.json'):
+    with open('edge_types_id.json') as json_data:
+        global_settings.edge_id = json.load(json_data)
 
 
 if os.path.isfile(data_source+'ambiverse_resources.json'):

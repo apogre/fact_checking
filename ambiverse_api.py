@@ -17,7 +17,7 @@ def entity_parser(text,sentence_id):
     else:
         print "ambiverse query"
         global_settings.new_ambi_query = 1
-        payload = '{\"text\" : \"'+text+'\", "language":"en"}'
+        payload = '{\"text\" : \"'+text+'\", "language":"en", "coherentDocument": true}'
         response = requests.request("POST", url, data=payload, headers=headers)
         # print response.text
         json_data = json.loads(response.text)
@@ -27,6 +27,7 @@ def entity_parser(text,sentence_id):
         for entity in entitites:
             try:
                 url1=entity['entity']['url'].split('/')[-1]
+                wikidata_url=entity['entity']['id'].split('/')[-1]
                 confidence = entity['entity']['confidence']
             except:
                 url1 = ''
@@ -34,8 +35,8 @@ def entity_parser(text,sentence_id):
             if '%' in url1:
                 url1 = url1.replace('%20','_')
                 url1 = url1.replace('%2C', ',')
-            resource[entity.get('text')] = [['http://dbpedia.org/resource/'+url1, entity.get('text'),
-                                            confidence]]
+            resource[entity.get('text')] = {"dbpedia_url":"http://dbpedia.org/resource/"+url1,"confidence":confidence, \
+            "wikidata_url":wikidata_url}
         ambiverse_resources[sentence_id] = resource
     return resource
 
@@ -44,6 +45,7 @@ def first_ambiverse():
 
 
 if __name__ == '__main__':
-    entitites = entity_parser("Trump decided to send missiles to Syria.")
+    ambiverse_resources = {'a':'b'}
+    resource = entity_parser("Messi plays for Barcelona.",1)
     print resource
 

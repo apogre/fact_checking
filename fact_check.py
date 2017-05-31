@@ -22,9 +22,9 @@ relation=[]
 ROOT = 'ROOT'
 aux_verb = ['was', 'is', 'become','to','of']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
-sparql_dbpedia = 'http://localhost:8890/sparql'
+# sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
-# sparql_dbpedia = 'https://dbpedia.org/sparql'
+sparql_dbpedia = 'https://dbpedia.org/sparql'
 global date_flag
 date_flag = 0
 threshold_value = 0.8
@@ -586,14 +586,18 @@ def rel_score_literal(dm, score1, pred_score):
 
 
 def rel_score_label(ma,score1,item2_v,pred_score):
+    print item2_v
+    print ma
     scores2 = [url2 for url2 in item2_v if url2[0] == ma[1][1]]
     # print "-----"
     # print score1
     scores2 = scores2[0]
-    if len(scores2)>2:
-        scores2.pop(1)
-    # print score1, scores2[1],pred_score
-    score = (score1 + scores2[1]+pred_score) / 3
+    # if len(scores2)>2:
+        # scores2.pop(1)
+    # print score1, scores2[1], pred_score
+    # print type(score1), type(scores2[1]), type(pred_score)
+    # sys.exit(0)
+    score = (score1 + scores2[1]+pred_score) / 3.0
     return score, scores2
 
 

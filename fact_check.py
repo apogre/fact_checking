@@ -14,8 +14,7 @@ import pandas
 from nltk.corpus import wordnet as wn
 from ftfy.badness import sequence_weirdness
 import os
-
-
+import global_settings
 
 objects = []
 relation=[]
@@ -30,6 +29,7 @@ date_flag = 0
 threshold_value = 0.8
 stanford_setup = True
 
+prefixes = "PREFIX entity: <http://dbpedia.org/resource/>"
 
 if stanford_setup:
     stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
@@ -409,92 +409,82 @@ def relation_extractor_1hop(resources, triples):
     return None
 
 
-def relation_extractor_triples(resources, triples, relation):
+def relation_extractor_triples(resources, triples):
+    relation = []
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
             item1_v = resources.get(triple_v[0])
-            if item1_v:
-                for i1 in item1_v:
-                    predicate_comment = {}
-                    if 'dbpedia' in i1[0]:
-                        url1 = i1[0]
-                        # if '%' in url1:
-                        #     url1 = url1.replace('%20', '_')
-                        #     url1 = url1.replace('%2C', ',')
-                        score1 = [it for it in i1 if isinstance(it, float)]
-                        if score1:
-                            score1 = score1[0]
-                        q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o . \
-                         FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")). }')
-                        # print q_all
-                        result = sparql.query(sparql_dbpedia_on, q_all)
-                        q1_values = [sparql.unpack_row(row_result) for row_result in result]
-                        q1_list = [qv[1] for qv in q1_values]
-                        # print q1_list
-                        q_all_back = ('SELECT ?p ?s WHERE { ?s ?p <' + url1 + '> . \
-                         FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")).}')
-                        # print q_all_back
-                        result_back = sparql.query(sparql_dbpedia, q_all_back)
-                        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
-                        q1_list_back = [qv[1] for qv in q1_values_back]
-                        q1_list.extend(q1_list_back)
-                        q1_values.extend(q1_values_back)
-                    item2_v = resources.get(triple_v[1])
-                    if item2_v:
-                        # print item1_v, item2_v
-                        url2_list = [i2[0] for i2 in item2_v]
-                        intersect = set(url2_list).intersection(q1_list)
-                        # print q1_list
-                        for inte in intersect:
-                            match = [[[url1, score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
-                            if match:
-                                for ma in match:
-                                    predicate = ma[1][0]
-                                    # sys.exit(0)
-                                    if predicate not in predicate_comment.keys():
-                                        comment = comment_extractor(predicate)
-                                        predicate_comment[predicate] = comment
-                                    else:
-                                        comment = predicate_comment[predicate]
-                                    # print "+++++++++++++="
-                                    # print ma, comment
-                                    if comment:
-                                        # print triple_k, comment[0][0]
-                                        # sys.exit(0)
-                                        pred_score = rel_score_triple(triple_k, comment[0][0])
-                                    else:
-                                        # print triple_k, predicate.split('/')[-1]
-                                        # sys.exit(0)
-                                        pred_score = rel_score_triple(triple_k, predicate.split('/')[-1])
-                                    # print pred_score
-                                    # sys.exit(0)
-                                    # print pred_score, triple_k, comment
-                                    score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
-                                    ma.pop(1)
-                                    ma.append(score2)
-                                    ma.append([predicate, score])
-                                    relation.append(ma)
-                    else:
-                        date_match = get_dates(i1, triple_v[1])
-                        # print date_match
+            item2_v = resources.get(triple_v[1])
+            if item1_v and item2_v:
+                predicate_comment = {}
+                url1 = item1_v.get('dbpedia_id')
+                url2 = item2_v.get('dbpedia_id')
+                score1 = item1_v.get('confidence')
+                score2 = item2_v.get('confidence')
+                q_all = (prefixes+' SELECT distinct ?p WHERE { entity:' + url1 + ' ?p entity:'+url2+' . }')
+                result = sparql.query(sparql_dbpedia_on, q_all)
+                q1_values = [sparql.unpack_row(row_result) for row_result in result]
+                q1_list = list(set([qv[0].split('/')[-1] for qv in q1_values]))
+                for rel in q1_list:
+                    sim_score = global_settings.model_wv_g.similarity(rel,triple_k)
+                    relation.append((rel, url1, url2, sim_score))
+                q_all_back = (prefixes+' SELECT distinct ?p WHERE { entity:'+url2+' ?p entity:' + url1 + '.}')
+                result_back = sparql.query(sparql_dbpedia, q_all_back)
+                q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+                q1_list_back = list(set([qv[0].split('/')[-1] for qv in q1_values_back]))
+                for rel in q1_list_back:
+                    sim_score = global_settings.model_wv_g.similarity(rel, triple_k)
+                    relation.append((rel, url2, url1, sim_score))
+                print relation
+                sys.exit(0)
+                if match:
+                    for ma in match:
+                        predicate = ma[1][0]
                         # sys.exit(0)
-                        if date_match:
+                        if predicate not in predicate_comment.keys():
+                            comment = comment_extractor(predicate)
+                            predicate_comment[predicate] = comment
+                        else:
+                            comment = predicate_comment[predicate]
+                        # print "+++++++++++++="
+                        # print ma, comment
+                        if comment:
+                            # print triple_k, comment[0][0]
                             # sys.exit(0)
-                            for dm in date_match:
-                                predicate = dm[1][0]
-                                if predicate not in predicate_comment.keys():
-                                    comment = comment_extractor(predicate)
-                                    predicate_comment[predicate] = comment
-                                else:
-                                    comment = predicate_comment[predicate]
-                                pred_score = rel_score_triple(triple_k, comment[0][0])
-                                score = rel_score_literal(dm, score1, pred_score)
-                                dm.pop(1)
-                                dm.append([triple_v[1],0])
-                                dm.append([predicate, 1])
-                                # print dm
-                                # sys.exit(0)
-                                relation.append(dm)
+                            pred_score = rel_score_triple(triple_k, comment[0][0])
+                        else:
+                            # print triple_k, predicate.split('/')[-1]
+                            # sys.exit(0)
+                            pred_score = rel_score_triple(triple_k, predicate.split('/')[-1])
+                        # print pred_score
+                        # sys.exit(0)
+                        # print pred_score, triple_k, comment
+                        score, score2 = rel_score_label(ma, score1, item2_v, pred_score)
+                        ma.pop(1)
+                        ma.append(score2)
+                        ma.append([predicate, score])
+                        relation.append(ma)
+                else:
+                    date_match = get_dates(i1, triple_v[1])
+                    # print date_match
+                    # sys.exit(0)
+                    if date_match:
+                        # sys.exit(0)
+                        for dm in date_match:
+                            predicate = dm[1][0]
+                            if predicate not in predicate_comment.keys():
+                                comment = comment_extractor(predicate)
+                                predicate_comment[predicate] = comment
+                            else:
+                                comment = predicate_comment[predicate]
+                            pred_score = rel_score_triple(triple_k, comment[0][0])
+                            score = rel_score_literal(dm, score1, pred_score)
+                            dm.pop(1)
+                            dm.append([triple_v[1],0])
+                            dm.append([predicate, 1])
+                            # print dm
+                            # sys.exit(0)
+                            relation.append(dm)
     return relation
 
 
@@ -611,13 +601,6 @@ def rel_score_simple(ma,score1,item2_v):
     # print scores2
     score = (score1 + scores2[1]) / 2
     return score, scores2
-
-
-def get_resource_id(resources):
-    resource_ids = {}
-    for k,v in resources.iteritems():
-        resource_ids[k] = v[0][0].split('/')[-1]
-    return resource_ids
 
 
 def comment_extractor(ont):

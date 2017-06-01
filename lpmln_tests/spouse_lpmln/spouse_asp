@@ -1,0 +1,12 @@
+2 spouse(X,Y) :-  child(X,Z) , child(Y,Z) , X!=Y .
+1 spouse(X,Y) :- mother(Z,Y) , father(Z,X).
+0.5 spouse(X,Y) :- sibling(A,B), mother(A,Y) , father(B,X).
+spouse(X,Y) :- spouse(Y,X). 
+
+
+2 mother(co,mo).
+2 father(co,fo).
+2 father(do,fo).
+1 sibling(co,do).
+
+

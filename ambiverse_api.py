@@ -35,8 +35,8 @@ def entity_parser(text,sentence_id):
             if '%' in url1:
                 url1 = url1.replace('%20','_')
                 url1 = url1.replace('%2C', ',')
-            resource[entity.get('text')] = {"dbpedia_url":"http://dbpedia.org/resource/"+url1,"confidence":confidence, \
-            "wikidata_url":wikidata_url}
+            resource[entity.get('text')] = {"dbpedia_id":url1,"confidence":confidence, \
+            "wikidata_id":wikidata_url}
         ambiverse_resources[sentence_id] = resource
     return resource
 

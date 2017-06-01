@@ -20,11 +20,12 @@ KG_Miner = False
 precision_recall_stats = collections.OrderedDict()
 stanford_setup = True
 ambiverse = True
-
+data_dump = False
 
 global_settings.init()
 # data_source = 'ug_data/all_'
 data_source = 'main_data/'
+output_data = ''
 # data_source = 'ug_final/'
 # if not os.path.exists('output_data'+str(time.time())+'/'):
 #     os.makedirs('output_data'+str(time.time())+'/')
@@ -58,7 +59,7 @@ def triples_extractor(sent_id, sentence ,ne, new_triple_flag):
 
 def fact_checker(sentence_lis, id_list):
     print sentence_lis
-    output_realations = {}
+    output_relations = {}
     dates = fact_check.date_parser(sentence_lis)
     if stanford_setup:
         sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -97,16 +98,13 @@ def fact_checker(sentence_lis, id_list):
             # sys.exit(0)
             # print entity_matched
             #     resources = entity_matched
-            relation = []
             if ambiverse:
                 resource_text = ambiverse_api.entity_parser(sentence_lis[n],id_list[n])
                 resources = resource_text
             print "Resource Extractor"
             print "=================="
             pprint.pprint(resource_text)
-            sys.exit(0)
-            resource_ids = fact_check.get_resource_id(resource_text)
-            print resource_ids
+
             precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
             if precision_ent:
                 precision_res = sum(precision_ent)/len(precision_ent)
@@ -116,15 +114,15 @@ def fact_checker(sentence_lis, id_list):
                 recall_res = sum(recall_ent)/len(recall_ent)
             else:
                 recall_res = 0
-            relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict, relation)
+            relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict)
             # relation_hop = fact_check.relation_extractor_1hop(resource_text, triple_dict)
             # print relation_ent
-            if not relation_ent:
-                sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-                ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
-                verb_entity = fact_check.verb_entity_matcher(dep_s)
-                relation_ent, rel_count = fact_check.relation_extractor_all(resource_text, verb_entity[n])
-                # print relation_ent
+            # if not relation_ent:
+            #     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
+            #     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
+            #     verb_entity = fact_check.verb_entity_matcher(dep_s)
+            #     relation_ent, rel_count = fact_check.relation_extractor_all(resource_text, verb_entity[n])
+            #     # print relation_ent
                 # sys.exit(0)
             # print "Precision & Recall for Resource Extractor"
             # print "-----------------------------------------"
@@ -133,9 +131,9 @@ def fact_checker(sentence_lis, id_list):
             print "--------------"
             # print relations
             # sys.exit(0)
-            # relations = False
+            relations = False
             if relations:
-                output_realations[id_list[n]] = relations
+                output_relations[id_list[n]] = relations
                 pprint.pprint(relations)
                 execution_time = time.time() - res_time
                 print execution_time
@@ -178,7 +176,7 @@ def fact_checker(sentence_lis, id_list):
                 if sent_id in possible_predicate.keys():
                     possible_predicate_set = possible_predicate[sent_id]
                 else:
-                    possible_predicate_set = KG_Miner_Extension.possible_predicate_type(entity_type_ontology, triple_dict, resource_ids)
+                    possible_predicate_set = KG_Miner_Extension.possible_predicate_type(entity_type_ontology, triple_dict, resource_text)
                     possible_predicate[sent_id] = possible_predicate_set
                     new_predicate_flag=1
                 # print possible_predicate_set
@@ -197,24 +195,25 @@ def fact_checker(sentence_lis, id_list):
                 # sys.exit(0)
                 predicate_results, training_data_set = KG_Miner_Extension.get_training_set(possible_predicate_set, \
                                                                         training_resource_type, training_entity_type, \
-                                                                        triple_dict, resource_ids)
+                                                                        triple_dict, resource_text)
                 output_linkprediction[id_list[n]] = predicate_results
                 output_training_data[id_list[n]] = training_data_set
             
             execution_time = time.time() - res_time
             print "Execution Time: " + str(round(execution_time, 2))
             print "================================================="
-            with open(output_data+'/evaluation.json', 'w') as fp:
-                json.dump(precision_recall_stats, fp, default=json_serial)
+            if data_dump == True:
+                with open(output_data+'/evaluation.json', 'w') as fp:
+                    json.dump(precision_recall_stats, fp, default=json_serial)
 
-            with open(output_data+'/link_prediction.json', 'w') as fp:
-                json.dump(output_linkprediction, fp, default=json_serial)
+                with open(output_data+'/link_prediction.json', 'w') as fp:
+                    json.dump(output_linkprediction, fp, default=json_serial)
 
-            with open(output_data+'/training_data.json', 'w') as fp:
-                json.dump(output_training_data, fp, default=json_serial)
+                with open(output_data+'/training_data.json', 'w') as fp:
+                    json.dump(output_training_data, fp, default=json_serial)
 
-            with open(output_data+'/output_relations.json', 'w') as fp:
-                json.dump(output_realations, fp, default=json_serial)
+                with open(output_data+'/output_relations.json', 'w') as fp:
+                    json.dump(output_relations, fp, default=json_serial)
         print output_linkprediction
 
 
@@ -241,23 +240,23 @@ def fact_checker(sentence_lis, id_list):
             json.dump(possible_predicate, fp, default=json_serial)
 
     ex_time = time.time() - start_time
-    print "Total Execution Time: " + str(round(ex_time, 2))
-    print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10} ".format('S.N.','p_res','r_res' 'p_rel', 'r_rel', 'p_ent', 'r_ent')
-    vals_sum=0
-    for k1,v1 in precision_recall_stats.iteritems():
-        vals = v1
-        p_res, r_res, p_r,r_r,p_eo,r_eo = vals
-        print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format(k1,p_res, r_res, p_r, r_r,p_eo, r_eo)
-        if k1 == '1':
-            vals1 = vals
-        else:
-            vals_sum = map(operator.add,vals1,vals)
-            # print vals,vals1,vals_avg
-            vals1 = vals_sum
-    num_sent = len(sentence_list)
-    if vals_sum>0:
-        vals_avg = [round((x/num_sent),2) for x in vals_sum]
-        print "average",vals_avg
+    # print "Total Execution Time: " + str(round(ex_time, 2))
+    # print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10} ".format('S.N.','p_res','r_res' 'p_rel', 'r_rel', 'p_ent', 'r_ent')
+    # vals_sum=0
+    # for k1,v1 in precision_recall_stats.iteritems():
+    #     vals = v1
+    #     p_res, r_res, p_r,r_r,p_eo,r_eo = vals
+    #     print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format(k1,p_res, r_res, p_r, r_r,p_eo, r_eo)
+    #     if k1 == '1':
+    #         vals1 = vals
+    #     else:
+    #         vals_sum = map(operator.add,vals1,vals)
+    #         # print vals,vals1,vals_avg
+    #         vals1 = vals_sum
+    # num_sent = len(sentence_list)
+    # if vals_sum>0:
+    #     vals_avg = [round((x/num_sent),2) for x in vals_sum]
+    #     print "average",vals_avg
 
 
 if os.path.isfile(data_source+'triples_raw.json'):

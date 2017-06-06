@@ -15,14 +15,15 @@ from nltk.corpus import wordnet as wn
 from ftfy.badness import sequence_weirdness
 import os
 import global_settings
+import numpy as np
 
 objects = []
 ROOT = 'ROOT'
-aux_verb = ['was', 'is', 'become','to','of']
+aux_verb = ['was', 'is', 'become','to','of', 'in', 'the']
 # SPARQL_SERVICE_URL = 'https://query.wikidata.org/sparql'
-# sparql_dbpedia = 'http://localhost:8890/sparql'
+sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
-sparql_dbpedia = 'https://dbpedia.org/sparql'
+# sparql_dbpedia = 'https://dbpedia.org/sparql'
 sparql_wikidata = 'https://query.wikidata.org/sparql'
 global date_flag
 date_flag = 0
@@ -33,6 +34,11 @@ prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"
 prefixes_wikidata = "PREFIX entity: <http://www.wikidata.org/entity/>"
 suffixes_wikidata = '?prop wikibase:directClaim ?p . ?prop1 wikibase:directClaim ?q . SERVICE wikibase:label \
                     {bd:serviceParam wikibase:language "en" . }'
+suffixes_wikidata_2 = '?prop wikibase:directClaim ?p . ?prop1 wikibase:directClaim ?r . ?prop2 wikibase:directClaim ?q . \
+                        SERVICE wikibase:label {bd:serviceParam wikibase:language "en" . }'
+suffixes_wikidata_0 = '?prop wikibase:directClaim ?p . SERVICE wikibase:label {bd:serviceParam wikibase:language "en" .}'
+suffixes_dbpedia = '?v rdfs:label ?vl . ?p rdfs:label ?pl . ?q rdfs:label ?ql . FILTER langMatches( lang(?ql), "EN" ) .'
+suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) .'
 
 if stanford_setup:
     stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
@@ -247,87 +253,6 @@ def get_labels(labels):
             new_labels.append(label)
 
 
-def resource_extractor(labels):
-    global new_labels
-    new_labels = []
-    ent_size = []
-    resources = {}
-    raw_resources = {}
-    for i,label in enumerate(labels):
-        # print label
-        date_labels = []
-        if label[1] != 'DATE':
-            my_labels = label[0].split()
-            if label[1] == 'PERSON':
-                if len(my_labels) == 1:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . \
-                    FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[0]) +'" . }')
-                else:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type foaf:Person . \
-                    FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' +str(my_labels[-1]) +'" . \
-                    FILTER (CONTAINS(?label, "'+ str(my_labels[0])+'"))}')
-                    q_birthname = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?name WHERE \
-                    { ?uri dbo:birthName ?name . ?uri rdf:type foaf:Person . FILTER langMatches( lang(?name), "EN" ).\
-                    ?name bif:contains "' + str(my_labels[-1]) + '" . FILTER (CONTAINS(?name, "'+ str(my_labels[0]) + '"))}')
-            elif label[1] == 'LOCATION':
-                if len(my_labels) == 1:
-                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE \
-                    { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). \
-                    ?label bif:contains "' +str(my_labels[0]) +'" . }')
-                elif ',' in label[0]:
-                    my_labels = label[0].split(', ')
-                    a=''
-                    b=''
-                    for my in my_labels:
-                        if len(my.split(' '))>1:
-                            b = my
-                        else:
-                            a = my
-                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE \
-                    { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). \
-                    ?label bif:contains "' +str(a) +'" . FILTER (CONTAINS(?label, "'+str(b)+'"))}')
-                else:
-                    q_u = ('PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE \
-                    { ?uri rdfs:label ?label . ?uri rdf:type dbo:Location . FILTER langMatches( lang(?label), "EN" ). \
-                    ?label bif:contains "' + str(my_labels[1]) + '" . FILTER (CONTAINS(?label, "' + str(my_labels[0])+'"))}')
-            else:
-                if len(my_labels) == 1:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . \
-                    FILTER langMatches(lang(?label), "EN" ). ?label bif:contains "' + str(my_labels[0]) + '" . }')
-                else:
-                    q_u = ('SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . \
-                    FILTER langMatches( lang(?label), "EN" ). ?label bif:contains "' + str(my_labels[1]) + '" . \
-                    FILTER (CONTAINS(?label, "'+str(my_labels[0])+'"))}')
-
-            # print q_u
-            result = sparql.query(sparql_dbpedia, q_u)
-            values = [sparql.unpack_row(row) for row in result]
-            # print values
-            if not values and label[1] == 'PERSON':
-                result = sparql.query(sparql_dbpedia, q_birthname)
-                values = [sparql.unpack_row(row) for row in result]
-            raw_resources[label[0]] = [val[0].split('/')[-1] for val in values]
-            new_val = [val for val in values if not 'Category:' in val[0] and not 'wikidata' in val[0]]
-            values = new_val
-            ent_size.append(len(values))
-            label = label+(len(new_val),)
-            new_labels.append(label)
-            add_score = [similar(label[0],val[1]) for val in values]
-            for s,score in enumerate(add_score):
-                if not 'Category:' in values[0] and not 'wikidata' in values[0]:
-                    values[s].append(score)
-                else:
-                    values.remove(values[s])
-            # print values
-            sorted_values = sorted(values,key=operator.itemgetter(2),reverse=True)
-            resources[label[0]] = sorted_values
-            # print resources
-        else:
-            date_flag = 1
-            date_labels.append(label[0])
-    return resources, ent_size, date_labels, raw_resources
-
-
 def date_checker(dl,vo_date):
     for d in dl:
         matched_date = [vo_d for vo_d in vo_date if d.date() == vo_d[1]]
@@ -339,113 +264,186 @@ def date_checker(dl,vo_date):
 
 def relation_processor(relations):
     # print relations
+    predicate_set = []
     relation_graph = {}
-    entity_dict = {}
-    edge_dict = {}
-    for n, rel in enumerate(relations):
-        id_list = []
-        for m,item in enumerate(rel):
+    for item in relations:
+        if item[1] not in predicate_set:
+            predicate_set.append(item[1])
+        if item[0] not in relation_graph.keys():
+            relation_graph[item[0]] = [{'predicate':item[1], 'entity1':item[2], 'entity2':item[3], 'score':item[4]}]
+        else:
+            relation_graph[item[0]].extend([{'predicate': item[1], 'entity1': item[2], 'entity2': item[3],\
+                                            'score': item[4]}])
+    return relation_graph, predicate_set
+
+
+def relation_extractor_0hop(kb, id1, id2, label, relations, triple_k):
+    if kb == 'wikidata':
+        sparql_endpoint = sparql_wikidata
+        query = (prefixes_wikidata+' SELECT distinct ?propLabel WHERE { entity:'+id1+' ?p entity:'+id2+' . '+\
+                 suffixes_wikidata_0+'}')
+        # print query
+        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel WHERE { entity:' +id2+ ' ?p entity:'+id1 + ' . '\
+                      +suffixes_wikidata_0+ '}')
+        # print query_back
+    if kb == 'dbpedia':
+        sparql_endpoint = sparql_dbpedia
+        if ',' in id1 or ',' in id2:
+            query = (prefixes_dbpedia + ' SELECT distinct ?pl WHERE { <http://dbpedia.org/resource/' + id1 + '> ?p \
+             <http://dbpedia.org/resource/' + id2 + '> . ' + suffixes_dbpedia_0 + '}')
+            # print query
+            query_back = (prefixes_dbpedia + ' SELECT distinct ?pl WHERE {<http://dbpedia.org/resource/' + id2 + '> ?p \
+            <http://dbpedia.org/resource/' + id1 + '> . ' + suffixes_dbpedia_0 + '}')
+            # print query_back
+        else:
+            query = (prefixes_dbpedia+' SELECT distinct ?pl WHERE { entity:'+id1+' ?p  entity:'+id2+' . ' +\
+                     suffixes_dbpedia_0+'}')
+            # print query
+            query_back = (prefixes_dbpedia+' SELECT distinct ?pl WHERE {entity:'+id2+' ?p entity:'+id1+' . '\
+                          +suffixes_dbpedia_0+ '}')
+            # print query_back
+    try:
+        result = sparql.query(sparql_endpoint, query)
+        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+    except:
+        q1_values = []
+        pass
+    if q1_values:
+        for vals in q1_values:
             try:
-                res_key = item[0].split('/')[-1]
+                val_score = predicate_confidence(vals[0], triple_k)
             except:
-                res_key = str(item[0])
-            if m<2:
-                if res_key not in entity_dict.keys():
-                    res_id = len(entity_dict)+1
-                    entity_dict[res_key]={'score':item[-1],'id':res_id}
-                    id_list.append(res_key)
-                else:
-                    id_list.append(res_key)
-            else:
-                if res_key not in edge_dict.keys():
-                    edge_dict[res_key] = [{'id':len(edge_dict)+1, 'score':item[1], 'join':id_list}]
-                else:
-                    joins = []
-                    for rels in edge_dict[res_key]:
-                        joins.append(rels.get('join'))
-                    if id_list not in joins:
-                        edge_dict[res_key].append({'id': len(edge_dict) + 1, 'score': item[1],'join':id_list})
-        # print entity_dict,edge_dict
-        relation_graph = {'node':entity_dict,'edge':edge_dict}
-    # print relation_graph
-    # sys.exit(0)
-    return relation_graph
+                val_score = 0
+            relations.append((kb, vals[0], label[0], label[1], val_score))
+    try:
+        result_back = sparql.query(sparql_endpoint, query_back)
+        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+    except:
+        q1_values_back = []
+    for vals in q1_values_back:
+        try:
+            val_score = predicate_confidence(vals[0], triple_k)
+        except:
+            val_score = 0
+        relations.append((kb, vals[0], label[1], label[0], val_score))
+    return relations
 
 
-def relation_extractor_1hop(resources, triples):
-    for triple_k, triples_v in triples.iteritems():
-        for triple_v in triples_v:
-            item1_v = resources.get(triple_v[0])
-            if item1_v:
-                for i1 in item1_v:
-                    url1 = i1[0]
-                    score1 = [it for it in i1 if isinstance(it, float)]
-                    if score1:
-                        score1 = score1[0]
-                    item2_v = resources.get(triple_v[1])
-                    url2_list = [i2[0] for i2 in item2_v]
-                    url2_list=list(set(url2_list))
-                    # print url2_list
-                    for url2 in url2_list:
-                        # print url2_list
-                        q_1hop='select <'+url1+'> ?rel ?v0 ?rel1 <'+url2+'> where { <'+url1+'> ?rel ?v0 . ?v0 ?rel1 <'+url2+ '> . }'
-                        print q_1hop
-                        result_1 = sparql.query(sparql_dbpedia, q_1hop)
-                        val_1hop = [sparql.unpack_row(row_result) for row_result in result_1]
-                        if val_1hop:
-                            # print url2
-                            # print q_1hop
-                            for val in val_1hop:
-                                print val
-                        else:
-                            q_2hop='select <'+url1+'> ?rel ?v0 ?rel1 ?v1 ?rel2 <'+url2+'> where { <'+url1+'> ?rel ?v0 . ?v0 ?rel1 ?v1 . ?v1 ?rel2 <'+url2+ '> . }'
-                            print q_2hop
-                            sys.exit(0)
-                            result_2 = sparql.query(sparql_dbpedia, q_2hop)
-                            val_2hop = [sparql.unpack_row(row_result) for row_result in result_2]
-                            if val_2hop:
-                                # print url2
-                                # print q_1hop
-                                for val in val_2hop:
-                                    print val
+def relation_extractor_2hop(kb, id1, id2, label, relations, triple_k):
+    if kb == 'wikidata':
+        sparql_endpoint = sparql_wikidata
+        query = (prefixes_wikidata+' SELECT distinct ?propLabel ?vLabel ?prop1Label ?v1Label ?prop2Label WHERE { \
+        entity:'+id1+' ?p ?v . ?v ?r ?v1 . ?v1 ?q entity:'+id2+' .  FILTER(entity:'+id1+' != ?v1) . FILTER(entity:'\
+                 +id2+' != ?v) .'+suffixes_wikidata_2+'}')
+        print query
+        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?vLabel ?prop1Label WHERE { entity:' + id2 + '\
+         ?p ?v . ?v ?r ?v1 . ?v1 ?q entity:' + id1 + ' . FILTER(entity:'+id2+' != ?v1) . FILTER(entity:'+id1+' != ?v) \
+         .' + suffixes_wikidata_2 + '}')
+        print query_back
+    if kb == 'dbpedia':
+        sparql_endpoint = sparql_dbpedia
+        query = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE { entity:'+id1+' ?p ?v . ?v ?r ?v1  . ?v1 ?q \
+        entity:'+id2+' . ' + suffixes_dbpedia+'}')
+        print query
+        query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {entity:'+id2+' ?p ?v . ?v ?r ?v1 .?v1 ?q \
+        entity:'+id1+' . '+suffixes_dbpedia+ '}')
+        print query_back
+    # try:
+    #     result = sparql.query(sparql_endpoint, query)
+    #     q1_values = [sparql.unpack_row(row_result) for row_result in result]
+    # except:
+    #     q1_values = []
+    #     pass
+    # if q1_values:
+    #     for vals in q1_values:
+    #         try:
+    #             val_score = predicate_confidence(vals[0], triple_k)
+    #             val_score1 = predicate_confidence(vals[2],triple_k)
+    #         except:
+    #             val_score = 0
+    #             val_score1 = 0
+    #         relations.append((kb, vals[0], vals[1], label[0], val_score))
+    #         relations.append((kb, vals[2], label[1], vals[1], val_score1))
+    # try:
+    #     result_back = sparql.query(sparql_endpoint, query_back)
+    #     q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+    # except:
+    #     q1_values_back = []
+    # for vals in q1_values_back:
+    #     try:
+    #         val_score = predicate_confidence(vals[0], triple_k)
+    #         val_score1 = predicate_confidence(vals[2], triple_k)
+    #     except:
+    #         val_score = 0
+    #         val_score1 = 0
+    #     relations.append((kb, vals[0], vals[1], label[1], val_score))
+    #     relations.append((kb, vals[2], label[0], vals[1], val_score1))
+    return relations
 
-    return None
 
-
-def relation_extractor_1hop(kb, id1, id2, label1, label2):
-    relations = []
+def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
     if kb == 'wikidata':
         sparql_endpoint = sparql_wikidata
         query = (prefixes_wikidata+' SELECT distinct ?propLabel ?vLabel ?prop1Label WHERE { entity:'+id1+' ?p ?v . \
         ?v ?q entity:'+id2+' . '+suffixes_wikidata+'}')
-        print query
+        # print query
         query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?vLabel ?prop1Label WHERE { entity:' + id2 + ' ?p ?v . \
                 ?v ?q entity:' + id1 + ' . ' + suffixes_wikidata + '}')
     if kb == 'dbpedia':
         sparql_endpoint = sparql_dbpedia
-        query = (prefixes_dbpedia+' SELECT distinct ?p ?v ?q WHERE { entity:'+id1+' ?p ?v . ?v ?q entity:'+id2+' .}')
-        print query
-        query_back = (prefixes_dbpedia+' SELECT distinct ?p ?v ?q WHERE {entity:'+id2+' ?p ?v . ?v ?q entity:'+id1+' .}')
-        print query_back
-    result = sparql.query(sparql_endpoint, query)
-    q1_values = [sparql.unpack_row(row_result) for row_result in result]
-    for vals in q1_values:
-        relations.append((vals[0], vals[1], label1))
-        relations.append((vals[2], label2, vals[1]))
-    result_back = sparql.query(sparql_wikidata, query_back)
-    q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+        query = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE { entity:'+id1+' ?p ?v . ?v ?q entity:'+id2+' . ' + \
+                 suffixes_dbpedia+'}')
+        # print query
+        query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {entity:'+id2+' ?p ?v . ?v ?q entity:'+id1+' . '\
+                      +suffixes_dbpedia+ '}')
+        # print query_back
+    try:
+        result = sparql.query(sparql_endpoint, query)
+        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+    except:
+        q1_values = []
+        pass
+    if q1_values:
+        for vals in q1_values:
+            try:
+                val_score = predicate_confidence(vals[0], triple_k)
+                val_score1 = predicate_confidence(vals[2],triple_k)
+            except:
+                val_score = 0
+                val_score1 = 0
+            relations.append((kb, vals[0], vals[1], label[0], val_score))
+            relations.append((kb, vals[2], label[1], vals[1], val_score1))
+    try:
+        result_back = sparql.query(sparql_endpoint, query_back)
+        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+    except:
+        q1_values_back = []
     for vals in q1_values_back:
-        relations.append((vals[0], vals[1], label2))
-        relations.append((vals[2], label1, vals[1]))
-    print relations
+        try:
+            val_score = predicate_confidence(vals[0], triple_k)
+            val_score1 = predicate_confidence(vals[2], triple_k)
+        except:
+            val_score = 0
+            val_score1 = 0
+        relations.append((kb, vals[0], vals[1], label[1], val_score))
+        relations.append((kb, vals[2], label[0], vals[1], val_score1))
+    return relations
 
 
 def predicate_confidence(rel, triple_k):
-    return max([global_settings.model_wv_g.similarity(rel, trip) for trip in triple_k.split() if trip not in aux_verb])
+    # print rel, triple_k
+    score = []
+    for r in rel.split():
+        if r not in aux_verb:
+            score.extend([global_settings.model_wv_g.similarity(r, trip) for trip in triple_k.split() if trip not in aux_verb])
+    # print score
+    return round(np.mean(score),3)
 
 
 def relation_extractor_triples(resources, triples):
     relation = []
+    relation_0 = []
+    relation_2 = []
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
             item1_v = resources.get(triple_v[0])
@@ -457,27 +455,18 @@ def relation_extractor_triples(resources, triples):
                 wikidata_id2 = item2_v.get('wikidata_id')
                 score1 = item1_v.get('confidence')
                 score2 = item2_v.get('confidence')
-                relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v[0], triple_v[1])
-                relation_extractor_1hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v[0], triple_v[1])
-                sys.exit(0)
-                q_all = (prefixes_dbpedia+' SELECT distinct ?p WHERE { entity:'+dbpedia_id1+' ?p entity:'+\
-                         dbpedia_id2 + ' . }')
-                result = sparql.query(sparql_dbpedia_on, q_all)
-                q1_values = [sparql.unpack_row(row_result) for row_result in result]
-                q1_list = list(set([qv[0].split('/')[-1] for qv in q1_values]))
-                for rel in q1_list:
-                    sim_score_fwd = predicate_confidence(rel, triple_k)
-                    relation.append((rel, dbpedia_id1, dbpedia_id2, sim_score_fwd))
-                q_all_back = (prefixes_dbpedia + ' SELECT distinct ?p WHERE { entity:' + dbpedia_id2 + ' ?p entity:' + dbpedia_id1 + '.}')
-                result_back = sparql.query(sparql_dbpedia, q_all_back)
-                q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
-                q1_list_back = list(set([qv[0].split('/')[-1] for qv in q1_values_back]))
-                for rel in q1_list_back:
-                    sim_score_bwd = predicate_confidence(rel, triple_k)
-                    relation.append((rel, dbpedia_id2, dbpedia_id1, sim_score_bwd))
+                relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, triple_k)
+                relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, triple_k)
+                print "Groundings"
+                print "=========="
                 print relation
-                sys.exit(0)
-    return relation
+                relation_0 = relation_extractor_0hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0, triple_k)
+                relation_0 = relation_extractor_0hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0, triple_k)
+                print relation_0
+                relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0, triple_k)
+                relation_2 = relation_extractor_2hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0, triple_k)
+                print relation_2
+    return relation, relation_0
 
 
 def relation_extractor_all(resources, verb_entity):

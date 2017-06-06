@@ -1,4 +1,5 @@
 import json, sys
+import os
 
 data_source = 'main_data/'
 # data_source = 'ug_final/'
@@ -97,10 +98,12 @@ def precision_recall(true_pos,true_false_pos,ex_rels):
         recall = 0
     return round(precision, 2), round(recall, 2)
 
+if os.path.isfile(data_source+'entity_annotations.json'):
+    with open(data_source+'entity_annotations.json') as json_data:
+        expected_outputs_entities = json.load(json_data)
 
-with open(data_source+'entity_annotations.json') as json_data:
-    expected_outputs_entities = json.load(json_data)
 
-with open(data_source+'relation_annotations.json') as json_data:
-    expected_outputs_relations = json.load(json_data)
+if os.path.isfile(data_source+'relation_annotations.json'):
+    with open(data_source+'relation_annotations.json') as json_data:
+        expected_outputs_relations = json.load(json_data)
 

@@ -105,17 +105,16 @@ def fact_checker(sentence_lis, id_list):
             print "=================="
             pprint.pprint(resource_text)
 
-            precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
-            if precision_ent:
-                precision_res = sum(precision_ent)/len(precision_ent)
-            else:
-                precision_res = 0
-            if recall_ent:
-                recall_res = sum(recall_ent)/len(recall_ent)
-            else:
-                recall_res = 0
-            relation_ent = fact_check.relation_extractor_triples(resource_text, triple_dict)
-            # relation_hop = fact_check.relation_extractor_1hop(resource_text, triple_dict)
+            # precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sent_id, resource_text)
+            # if precision_ent:
+            #     precision_res = sum(precision_ent)/len(precision_ent)
+            # else:
+            #     precision_res = 0
+            # if recall_ent:
+            #     recall_res = sum(recall_ent)/len(recall_ent)
+            # else:
+            #     recall_res = 0
+            relation_ent, relation_ent_0, relation_ent_2 = fact_check.relation_extractor_triples(resource_text, triple_dict)
             # print relation_ent
             # if not relation_ent:
             #     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -126,15 +125,21 @@ def fact_checker(sentence_lis, id_list):
                 # sys.exit(0)
             # print "Precision & Recall for Resource Extractor"
             # print "-----------------------------------------"
-            relations = fact_check.relation_processor(relation_ent)
+            relations, predicate_set = fact_check.relation_processor(relation_ent)
+            relations_0,  predicate_set_0 = fact_check.relation_processor(relation_ent_0)
+            print predicate_set
+            print predicate_set_0
             print "Relation Graph"
             print "--------------"
             # print relations
             # sys.exit(0)
+            # pprint.pprint(relations)
+            # pprint.pprint(relations_0)
             relations = False
+
             if relations:
-                output_relations[id_list[n]] = relations
-                pprint.pprint(relations)
+                # output_relations[id_list[n]] = relations
+
                 execution_time = time.time() - res_time
                 print execution_time
                 # sys.exit(0)

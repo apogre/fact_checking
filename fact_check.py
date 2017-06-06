@@ -32,12 +32,18 @@ stanford_setup = True
 
 prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"
 prefixes_wikidata = "PREFIX entity: <http://www.wikidata.org/entity/>"
+
 suffixes_wikidata = '?prop wikibase:directClaim ?p . ?prop1 wikibase:directClaim ?q . SERVICE wikibase:label \
                     {bd:serviceParam wikibase:language "en" . }'
 suffixes_wikidata_2 = '?prop wikibase:directClaim ?p . ?prop1 wikibase:directClaim ?r . ?prop2 wikibase:directClaim ?q . \
                         SERVICE wikibase:label {bd:serviceParam wikibase:language "en" . }'
+
 suffixes_wikidata_0 = '?prop wikibase:directClaim ?p . SERVICE wikibase:label {bd:serviceParam wikibase:language "en" .}'
+
 suffixes_dbpedia = '?v rdfs:label ?vl . ?p rdfs:label ?pl . ?q rdfs:label ?ql . FILTER langMatches( lang(?ql), "EN" ) .'
+suffixes_dbpedia_2 = 'FILTER langMatches( lang(?rl), "EN" ) . ?v rdfs:label ?vl .  FILTER langMatches(lang(?vl1), "EN")\
+. ?p rdfs:label ?pl . ?q rdfs:label ?ql . ?r rdfs:label ?rl . ?v1 rdfs:label ?vl1 . FILTER langMatches(lang(?ql), "EN")\
+ . FILTER langMatches(lang(?pl), "EN") . FILTER langMatches(lang(?vl), "EN") .'
 suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) .'
 
 if stanford_setup:
@@ -47,7 +53,6 @@ if stanford_setup:
     st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
     st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
     parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
-
 
 
 def get_nodes_updated(netagged_words):
@@ -218,7 +223,6 @@ new_labels = []
 def predicate_finder(triple_dict):
     pval_list=[]
     for k in triple_dict.keys():
-        # print k
         q_comment = 'SELECT distinct ?uri ?comment WHERE { ?uri rdfs:comment ?comment . \
         FILTER langMatches( lang(?comment), "EN" ).  ?comment bif:contains "'+k.split()[1]+'" .}'
         q_label = 'SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . ?uri rdf:type rdf:Property . \
@@ -245,6 +249,7 @@ def entity_threshold(resources):
         limit_entity[label] = ent_coded
     return limit_entity
 
+
 def get_labels(labels):
     global new_labels
     new_labels = []
@@ -263,7 +268,6 @@ def date_checker(dl,vo_date):
 
 
 def relation_processor(relations):
-    # print relations
     predicate_set = []
     relation_graph = {}
     for item in relations:
@@ -335,49 +339,54 @@ def relation_extractor_2hop(kb, id1, id2, label, relations, triple_k):
         query = (prefixes_wikidata+' SELECT distinct ?propLabel ?vLabel ?prop1Label ?v1Label ?prop2Label WHERE { \
         entity:'+id1+' ?p ?v . ?v ?r ?v1 . ?v1 ?q entity:'+id2+' .  FILTER(entity:'+id1+' != ?v1) . FILTER(entity:'\
                  +id2+' != ?v) .'+suffixes_wikidata_2+'}')
-        print query
-        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?vLabel ?prop1Label WHERE { entity:' + id2 + '\
-         ?p ?v . ?v ?r ?v1 . ?v1 ?q entity:' + id1 + ' . FILTER(entity:'+id2+' != ?v1) . FILTER(entity:'+id1+' != ?v) \
+        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?vLabel ?prop1Label ?v1Label ?prop2Label WHERE \
+        { entity:' + id2 + ' ?p ?v . ?v ?r ?v1 . ?v1 ?q entity:' + id1 + ' . FILTER(entity:'+id2+' != ?v1) . \
+        FILTER(entity:'+id1+' != ?v) \
          .' + suffixes_wikidata_2 + '}')
-        print query_back
     if kb == 'dbpedia':
         sparql_endpoint = sparql_dbpedia
-        query = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE { entity:'+id1+' ?p ?v . ?v ?r ?v1  . ?v1 ?q \
-        entity:'+id2+' . ' + suffixes_dbpedia+'}')
-        print query
-        query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {entity:'+id2+' ?p ?v . ?v ?r ?v1 .?v1 ?q \
-        entity:'+id1+' . '+suffixes_dbpedia+ '}')
-        print query_back
-    # try:
-    #     result = sparql.query(sparql_endpoint, query)
-    #     q1_values = [sparql.unpack_row(row_result) for row_result in result]
-    # except:
-    #     q1_values = []
-    #     pass
-    # if q1_values:
-    #     for vals in q1_values:
-    #         try:
-    #             val_score = predicate_confidence(vals[0], triple_k)
-    #             val_score1 = predicate_confidence(vals[2],triple_k)
-    #         except:
-    #             val_score = 0
-    #             val_score1 = 0
-    #         relations.append((kb, vals[0], vals[1], label[0], val_score))
-    #         relations.append((kb, vals[2], label[1], vals[1], val_score1))
-    # try:
-    #     result_back = sparql.query(sparql_endpoint, query_back)
-    #     q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
-    # except:
-    #     q1_values_back = []
-    # for vals in q1_values_back:
-    #     try:
-    #         val_score = predicate_confidence(vals[0], triple_k)
-    #         val_score1 = predicate_confidence(vals[2], triple_k)
-    #     except:
-    #         val_score = 0
-    #         val_score1 = 0
-    #     relations.append((kb, vals[0], vals[1], label[1], val_score))
-    #     relations.append((kb, vals[2], label[0], vals[1], val_score1))
+        query = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?rl ?vl1 ?ql WHERE { entity:'+id1+' ?p ?v . ?v ?r ?v1 . \
+        ?v1 ?q entity:'+id2+' . FILTER(entity:'+id1+' != ?v1). FILTER(entity:'+id2+' != ?v).' + suffixes_dbpedia_2+'}')
+        query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?rl ?vl1 ?ql WHERE {entity:'+id2+' ?p ?v . ?v ?r ?v1 .\
+        ?v1 ?q entity:'+id1+' . FILTER(entity:'+id2+' != ?v1). FILTER(entity:'+id1+' != ?v).'+suffixes_dbpedia_2+ '}')
+    # print query_back
+    # print query
+    try:
+        result = sparql.query(sparql_endpoint, query)
+        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+    except:
+        q1_values = []
+    if q1_values:
+        for vals in q1_values:
+            try:
+                val_score = predicate_confidence(vals[0], triple_k)
+                val_score1 = predicate_confidence(vals[2], triple_k)
+                val_score2 = predicate_confidence(vals[4], triple_k)
+            except:
+                val_score = 0
+                val_score1 = 0
+                val_score2 = 0
+            relations.append((kb, vals[0], vals[1], label[0], val_score))
+            relations.append((kb, vals[2], vals[3], vals[1], val_score1))
+            relations.append((kb, vals[4], label[1], vals[3], val_score2))
+    try:
+        result_back = sparql.query(sparql_endpoint, query_back)
+        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+    except:
+        q1_values_back = []
+    if q1_values_back:
+        for vals in q1_values_back:
+            try:
+                val_score = predicate_confidence(vals[0], triple_k)
+                val_score1 = predicate_confidence(vals[2], triple_k)
+                val_score2 = predicate_confidence(vals[4], triple_k)
+            except:
+                val_score = 0
+                val_score1 = 0
+                val_score2 = 0
+            relations.append((kb, vals[0], vals[1], label[1], val_score))
+            relations.append((kb, vals[2], vals[3], vals[1], val_score1))
+            relations.append((kb, vals[4], label[0], vals[3], val_score2))
     return relations
 
 
@@ -418,25 +427,24 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
     except:
         q1_values_back = []
-    for vals in q1_values_back:
-        try:
-            val_score = predicate_confidence(vals[0], triple_k)
-            val_score1 = predicate_confidence(vals[2], triple_k)
-        except:
-            val_score = 0
-            val_score1 = 0
-        relations.append((kb, vals[0], vals[1], label[1], val_score))
-        relations.append((kb, vals[2], label[0], vals[1], val_score1))
+    if q1_values_back:
+        for vals in q1_values_back:
+            try:
+                val_score = predicate_confidence(vals[0], triple_k)
+                val_score1 = predicate_confidence(vals[2], triple_k)
+            except:
+                val_score = 0
+                val_score1 = 0
+            relations.append((kb, vals[0], vals[1], label[1], val_score))
+            relations.append((kb, vals[2], label[0], vals[1], val_score1))
     return relations
 
 
 def predicate_confidence(rel, triple_k):
-    # print rel, triple_k
     score = []
     for r in rel.split():
         if r not in aux_verb:
             score.extend([global_settings.model_wv_g.similarity(r, trip) for trip in triple_k.split() if trip not in aux_verb])
-    # print score
     return round(np.mean(score),3)
 
 
@@ -457,71 +465,11 @@ def relation_extractor_triples(resources, triples):
                 score2 = item2_v.get('confidence')
                 relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, triple_k)
                 relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, triple_k)
-                print "Groundings"
-                print "=========="
-                print relation
                 relation_0 = relation_extractor_0hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0, triple_k)
                 relation_0 = relation_extractor_0hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0, triple_k)
-                print relation_0
-                relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0, triple_k)
-                relation_2 = relation_extractor_2hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0, triple_k)
-                print relation_2
-    return relation, relation_0
-
-
-def relation_extractor_all(resources, verb_entity):
-    global new_labels
-    print new_labels
-    relation = []
-    # new_labels = sorted(new_labels, key=operator.itemgetter(2))
-    new_labels = sorted(new_labels, key=operator.itemgetter(1), reverse=True)
-    if len(new_labels) > 1:
-        for i in range(0, len(resources) - 1):
-            if str(new_labels[i][0]) in resources:
-                item1_v = resources[new_labels[i][0]]
-                predicate_comment = {}
-                for i1 in item1_v:
-                    # print i1
-                    if 'dbpedia' in i1[0]:
-                        url1 = i1[0]
-                        score1 = [it for it in i1 if isinstance(it, float)]
-                        score1 = score1[0]
-                        # print score1
-                        q_all = ('SELECT ?p ?o WHERE { <' + url1 + '> ?p ?o .}')
-                        # print q_all
-                        result = sparql.query(sparql_dbpedia, q_all)
-                        q1_values = [sparql.unpack_row(row_result) for row_result in result]
-                        q1_list = [qv[1] for qv in q1_values]
-                        # print q1_list
-                    for j in range(i+1, len(resources)):
-                        if str(new_labels[j][0]) in resources:
-                            item2_v = resources[new_labels[j][0]]
-                            url2_list = [i2[0] for i2 in item2_v]
-                            # print url2_list
-                            intersect = set(url2_list).intersection(q1_list)
-                            for inte in intersect:
-                                match = [[[url1,score1], n] for m, n in enumerate(q1_values) if n[1] == inte]
-                                # print match
-                                if match:
-                                    for ma in match:
-                                        predicate = ma[1][0]
-                                        if predicate not in predicate_comment.keys():
-                                            comment = comment_extractor(predicate)
-                                            predicate_comment[predicate] = comment
-                                        else:
-                                            comment = predicate_comment[predicate]
-                                        # print ma, comment
-                                        pred_score = rel_score_predicate(verb_entity,comment)
-                                        score, score2 = rel_score_label(ma,score1,item2_v,pred_score)
-
-                                        ma.pop(1)
-                                        ma.append(score2)
-                                        # print ma
-                                        ma.append([predicate, score])
-                                        # print ma
-                                        # relation.append(sum(ma, []))
-                                        relation.append(ma)
-    return relation, len(relation)
+                relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_2, triple_k)
+                relation_2 = relation_extractor_2hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_2, triple_k)
+    return relation, relation_0, relation_2
 
 
 def get_dates(i1,date_ent_str):

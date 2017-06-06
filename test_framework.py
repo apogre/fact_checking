@@ -125,10 +125,27 @@ def fact_checker(sentence_lis, id_list):
                 # sys.exit(0)
             # print "Precision & Recall for Resource Extractor"
             # print "-----------------------------------------"
-            relations, predicate_set = fact_check.relation_processor(relation_ent)
             relations_0,  predicate_set_0 = fact_check.relation_processor(relation_ent_0)
-            print predicate_set
+            relations, predicate_set = fact_check.relation_processor(relation_ent)
+            relations_2,  predicate_set_2 = fact_check.relation_processor(relation_ent_2)
+            print "0-hop Groundings"
+            print "================"
+            print relation_ent_0
+            print "0-hop Unique Predicates"
+            print "======================="
             print predicate_set_0
+            print "1-hop Groundings"
+            print "================"
+            print relation_ent
+            print "1-hop Unique Predicates"
+            print "======================="
+            print predicate_set
+            print "2-hop Groundings"
+            print "================"
+            print relation_ent_2
+            print "2-hop Unique Predicates"
+            print "======================="
+            print predicate_set_2
             print "Relation Graph"
             print "--------------"
             # print relations

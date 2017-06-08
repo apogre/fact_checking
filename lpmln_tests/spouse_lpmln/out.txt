@@ -1,22 +1,19 @@
-unsat(0,"2.000000",X,Y,Z) :-  child(X,Z) , child(Y,Z) , X!=Y ,not spouse(X,Y) .
-spouse(X,Y) :-  child(X,Z) , child(Y,Z) , X!=Y , not unsat(0,"2.000000",X,Y,Z).
-:~unsat(0,"2.000000",X,Y,Z). [2000@0,0,X,Y,Z]
-unsat(1,"1.000000",X,Y,Z) :- mother(Z,Y) , father(Z,X),not spouse(X,Y) .
-spouse(X,Y) :- mother(Z,Y) , father(Z,X), not unsat(1,"1.000000",X,Y,Z).
+unsat(0,"1.000000",X,Y,Z) :-  child(Z,X) , child(Z,Y) , X!=Y ,not married(X,Y) .
+married(X,Y) :-  child(Z,X) , child(Z,Y) , X!=Y , not unsat(0,"1.000000",X,Y,Z).
+:~unsat(0,"1.000000",X,Y,Z). [1000@0,0,X,Y,Z]
+unsat(1,"1.000000",X,Y,Z) :- mother(Y,Z) , father(X,Z),not married(X,Y) .
+married(X,Y) :- mother(Y,Z) , father(X,Z), not unsat(1,"1.000000",X,Y,Z).
 :~unsat(1,"1.000000",X,Y,Z). [1000@0,1,X,Y,Z]
-unsat(2,"0.500000",A,B,X,Y) :- sibling(A,B), mother(A,Y) , father(B,X),not spouse(X,Y) .
-spouse(X,Y) :- sibling(A,B), mother(A,Y) , father(B,X), not unsat(2,"0.500000",A,B,X,Y).
-:~unsat(2,"0.500000",A,B,X,Y). [500@0,2,A,B,X,Y]
-spouse(X,Y) :- spouse(Y,X).
-unsat(4,"2.000000") :-not mother(co,mo).
-mother(co,mo):-not unsat(4,"2.000000").
-:~ unsat(4,"2.000000"). [2000@0,4]
-unsat(5,"2.000000") :-not father(co,fo).
-father(co,fo):-not unsat(5,"2.000000").
-:~ unsat(5,"2.000000"). [2000@0,5]
-unsat(6,"2.000000") :-not father(do,fo).
-father(do,fo):-not unsat(6,"2.000000").
-:~ unsat(6,"2.000000"). [2000@0,6]
-unsat(7,"1.000000") :-not sibling(co,do).
-sibling(co,do):-not unsat(7,"1.000000").
-:~ unsat(7,"1.000000"). [1000@0,7]
+unsat(2,"0.500000",X,Z) :- child(Z,X),not mother(X,Z) .
+mother(X,Z) :- child(Z,X), not unsat(2,"0.500000",X,Z).
+:~unsat(2,"0.500000",X,Z). [500@0,2,X,Z]
+unsat(3,"0.500000",X,Z) :- child(Z,X),not father(X,Z) .
+father(X,Z) :- child(Z,X), not unsat(3,"0.500000",X,Z).
+:~unsat(3,"0.500000",X,Z). [500@0,3,X,Z]
+unsat(4,"1.000000",X,Y,Z) :- child(X,Z), child(Y,Z),not sibling(X,Y) .
+sibling(X,Y) :- child(X,Z), child(Y,Z), not unsat(4,"1.000000",X,Y,Z).
+:~unsat(4,"1.000000",X,Y,Z). [1000@0,4,X,Y,Z]
+child(so,bo).
+child(ma,bo).
+child(ma,mo).
+child(so,mo).

@@ -1,0 +1,5 @@
+1 capital(X,Y) :-  admin_territory(Z,X) , admin_territory(Y,Z) .
+1 capital(X,Y) :-  legislative_body(Z,Y) , headquarters(Z,X) .
+1 capital(X,Y) :-  central_bank(Z,Y) , headquarters(Z,X) .
+0.5 capital(X,Y) :- country(X,Y).
+

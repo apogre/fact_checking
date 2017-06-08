@@ -32,6 +32,7 @@ def entity_parser(text,sentence_id):
             except:
                 url1 = ''
                 confidence = 0
+                wikidata_url = ''
             if '%' in url1:
                 url1 = url1.replace('%20','_')
                 url1 = url1.replace('%2C', ',')
@@ -46,6 +47,6 @@ def first_ambiverse():
 
 if __name__ == '__main__':
     ambiverse_resources = {'a':'b'}
-    resource = entity_parser("Messi plays for Barcelona.",1)
+    resource = entity_parser("Springfield is the capital of Illinois.",1)
     print resource
 

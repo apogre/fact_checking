@@ -1,6 +1,8 @@
 import json, sys
 import os
+import global_settings
 
+# data_source = global_settings.data_source
 data_source = 'main_data/'
 # data_source = 'ug_final/'
 # data_source = 'ug_data/all_'

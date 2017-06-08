@@ -1,0 +1,10 @@
+1 married(X,Y) :-  child(Z,X) , child(Z,Y) , X!=Y .
+1 married(X,Y) :- mother(Y,Z) , father(X,Z).
+0.5 mother(X,Z) :- child(Z,X).
+0.5 father(X,Z) :- child(Z,X).
+1 sibling(X,Y) :- child(X,Z), child(Y,Z).
+
+child(so,bo).
+child(ma,bo).
+child(ma,mo).
+child(so,mo).

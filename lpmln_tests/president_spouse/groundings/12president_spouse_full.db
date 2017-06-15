@@ -1,0 +1,10 @@
+child(Calvin_Coolidge,_Jr.,Calvin_Coolidge).
+parent(Grace_Coolidge,Calvin_Coolidge,_Jr.).
+President(Warren_G._Harding,Grace_Coolidge).
+successor(Calvin_Coolidge,Warren_G._Harding).
+President(Warren_G._Harding,Grace_Coolidge).
+Vice_President(Calvin_Coolidge,Warren_G._Harding).
+President(Warren_G._Harding,Grace_Coolidge).
+vice_president(Calvin_Coolidge,Warren_G._Harding).
+President(Warren_G._Harding,Grace_Coolidge).
+vicepresident(Calvin_Coolidge,Warren_G._Harding).

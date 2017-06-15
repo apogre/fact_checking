@@ -1,0 +1,16 @@
+child(Patti_Davis,Ronald_Reagan).
+mother(Nancy_Reagan,Patti_Davis).
+child(Ron_Reagan,Ronald_Reagan).
+mother(Nancy_Reagan,Ron_Reagan).
+child(Patti_Davis,Nancy_Reagan).
+father(Ronald_Reagan,Patti_Davis).
+child(Ron_Reagan,Nancy_Reagan).
+father(Ronald_Reagan,Ron_Reagan).
+children(Ron_Reagan,Nancy_Reagan).
+parents(Ronald_Reagan,Ron_Reagan).
+children(Ron_Reagan,Nancy_Reagan).
+parent(Ronald_Reagan,Ron_Reagan).
+children(Patti_Davis,Nancy_Reagan).
+parent(Ronald_Reagan,Patti_Davis).
+successor(Barbara_Bush,Nancy_Reagan).
+President(Ronald_Reagan,Barbara_Bush).

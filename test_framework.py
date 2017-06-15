@@ -62,6 +62,7 @@ def triples_extractor(sent_id, sentence, ne, new_triple_flag):
 def fact_checker(sentence_lis, id_list):
     print sentence_lis
     output_relations = {}
+    probabilities = []
     dates = fact_check.date_parser(sentence_lis)
     if stanford_setup:
         sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -143,7 +144,10 @@ def fact_checker(sentence_lis, id_list):
         print "Relation Graph"
         print "--------------"
 
-        lpmln_extention.evidence_writer(relation_ent)
+        lpmln_extention.evidence_writer(relation_ent, sent_id)
+        probability = lpmln_extention.inference()
+        probability.append(sent_id)
+        probabilities.append(probability)
         # print relations
         # sys.exit(0)
         # pprint.pprint(relations)
@@ -233,7 +237,10 @@ def fact_checker(sentence_lis, id_list):
             with open(output_data+'/output_relations.json', 'w') as fp:
                 json.dump(output_relations, fp, default=json_serial)
     print output_linkprediction
-    
+
+    with open('lpmln_tests/'+data_source +'/'+ data_source+'_prob.csv', 'wb') as csvfile:
+        datawriter = csv.writer(csvfile)
+        datawriter.writerows(probabilities)
 
     if new_triple_flag == 1:
         if os.path.isfile('dataset/'+data_source + '/triples_raw.json'):
@@ -281,27 +288,36 @@ if os.path.isfile(data_source+'/triples_raw.json'):
 else:
     file_triples = {"a":"b"}
 
-if os.path.isfile('nodes_id.json'):
-    with open('nodes_id.json') as json_data:
-        global_settings.nodes_id = json.load(json_data)
 
-if os.path.isfile('edge_types_id.json'):
-    with open('edge_types_id.json') as json_data:
-        global_settings.edge_id = json.load(json_data)
+if KG_Miner:
+    if os.path.isfile('nodes_id.json'):
+        with open('nodes_id.json') as json_data:
+            global_settings.nodes_id = json.load(json_data)
+
+    if os.path.isfile('edge_types_id.json'):
+        with open('edge_types_id.json') as json_data:
+            global_settings.edge_id = json.load(json_data)
+
+    if os.path.isfile('dataset/' + data_source + '/possible_predicate.json'):
+        with open('dataset/' + data_source + '/possible_predicate.json') as json_data:
+            possible_predicate = json.load(json_data)
+    else:
+        possible_predicate = {"a": "b"}
 
 
-if os.path.isfile(data_source+'/ambiverse_resources.json'):
-    with open(data_source+'/ambiverse_resources.json') as json_data:
+if os.path.isfile('dataset/'+data_source+'/ambiverse_resources.json'):
+    with open('dataset/'+data_source+'/ambiverse_resources.json') as json_data:
         ambiverse_api.ambiverse_resources = json.load(json_data)
 else:
     ambiverse_api.ambiverse_resources = {"a":"b"}
 
-
-if os.path.isfile(data_source+'/possible_predicate.json'):
-    with open(data_source+'/possible_predicate.json') as json_data:
-        possible_predicate = json.load(json_data)
+if os.path.isfile('lpmln_tests/predicate_set.json'):
+    with open('lpmln_tests/predicate_set.json') as json_data:
+        global_settings.predicate_set = json.load(json_data)
 else:
-    possible_predicate = {"a":"b"}
+    global_settings.predicate_set = {"a":"b"}
+
+
 
 
 with open('dataset/'+data_source+'/sentences_test.csv') as f:
@@ -312,7 +328,7 @@ with open('dataset/'+data_source+'/sentences_test.csv') as f:
         sentence = row['sentence']
         sentences_list.append(row['sentence'])
         id_list.append(row['id'])
-    fact_checker(sentences_list,id_list)
+    fact_checker(sentences_list, id_list)
         # if i % 20 != 0:
         #     sentence_list.append(sentence)
         #     if i == len(sentences):

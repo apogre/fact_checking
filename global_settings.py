@@ -11,6 +11,7 @@ def init():
         print "Loading Word2Vec"
         model_wv_g = Word2Vec.load_word2vec_format("/home/apradhan/Google_Vectors/GoogleNews-vectors-negative300.bin",binary=True)
     global new_ambi_query
+    global predicate_set
     new_ambi_query = 0
     global data_source
     global nodes_id

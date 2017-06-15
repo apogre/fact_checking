@@ -299,8 +299,8 @@ def relation_extractor_0hop(kb, id1, id2, label, relations, triple_k):
                      suffixes_dbpedia_0+'}')
             query_back = (prefixes_dbpedia+' SELECT distinct ?pl WHERE {entity:'+id2+' ?p entity:'+id1+' . '\
                           +suffixes_dbpedia_0+ '}')
-    print query
-    print query_back
+    # print query
+    # print query_back
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -354,8 +354,8 @@ def relation_extractor_2hop(kb, id1, id2, label, relations, triple_k):
         FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v1). FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) . \
         FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v1) .'+\
                       suffixes_dbpedia_2+ '}')
-    print query_back
-    print query
+    # print query_back
+    # print query
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -412,8 +412,8 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
         query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {<http://dbpedia.org/resource/'+id2+'> ?p ?v\
          . ?v ?q <http://dbpedia.org/resource/'+id1+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
          FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+ '}')
-    print query
-    print query_back
+    # print query
+    # print query_back
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]

@@ -13,6 +13,7 @@ import subprocess
 import global_settings
 import evaluation
 import os.path
+import lpmln_extention
 
 
 aux_verb = ['was', 'is', 'become']
@@ -141,6 +142,8 @@ def fact_checker(sentence_lis, id_list):
         print predicate_set_2
         print "Relation Graph"
         print "--------------"
+
+        lpmln_extention.evidence_writer(relation_ent)
         # print relations
         # sys.exit(0)
         # pprint.pprint(relations)
@@ -230,28 +233,26 @@ def fact_checker(sentence_lis, id_list):
             with open(output_data+'/output_relations.json', 'w') as fp:
                 json.dump(output_relations, fp, default=json_serial)
     print output_linkprediction
-
-
     
 
     if new_triple_flag == 1:
-        if os.path.isfile(data_source + 'triples_raw.json'):
-            os.remove(data_source+'triples_raw.json')
-        with open(data_source+'/triples_raw.json', 'w') as fp:
+        if os.path.isfile('dataset/'+data_source + '/triples_raw.json'):
+            os.remove('dataset/'+data_source+'/triples_raw.json')
+        with open('dataset/'+data_source+'/triples_raw.json', 'w') as fp:
             json.dump(file_triples, fp, default=json_serial)
 
     if global_settings.new_ambi_query==1:
         first_query = ambiverse_api.first_ambiverse()
-        if os.path.isfile(data_source+'ambiverse_resources.json'):
-            os.remove(data_source+'ambiverse_resources.json')
-        with open(data_source+'ambiverse_resources.json', 'w') as fp:
+        if os.path.isfile('dataset/'+data_source+'/ambiverse_resources.json'):
+            os.remove('dataset/'+data_source+'/ambiverse_resources.json')
+        with open('dataset/'+data_source+'/ambiverse_resources.json', 'w') as fp:
             json.dump(first_query, fp, default=json_serial)
 
 
     if new_predicate_flag == 1:
-        if os.path.isfile(data_source+'possible_predicate.json'):
-            os.remove(data_source+'possible_predicate.json')
-        with open(data_source+'/possible_predicate.json', 'w') as fp:
+        if os.path.isfile('dataset/'+data_source+'possible_predicate.json'):
+            os.remove('dataset/'+data_source+'possible_predicate.json')
+        with open('dataset/'+data_source+'/possible_predicate.json', 'w') as fp:
             json.dump(possible_predicate, fp, default=json_serial)
 
     ex_time = time.time() - start_time
@@ -274,8 +275,8 @@ def fact_checker(sentence_lis, id_list):
     #     print "average",vals_avg
 
 
-if os.path.isfile(data_source+'triples_raw.json'):
-    with open(data_source+'triples_raw.json') as json_data:
+if os.path.isfile(data_source+'/triples_raw.json'):
+    with open('dataset/'+data_source+'/triples_raw.json') as json_data:
         file_triples = json.load(json_data)
 else:
     file_triples = {"a":"b"}
@@ -289,21 +290,21 @@ if os.path.isfile('edge_types_id.json'):
         global_settings.edge_id = json.load(json_data)
 
 
-if os.path.isfile(data_source+'ambiverse_resources.json'):
-    with open(data_source+'ambiverse_resources.json') as json_data:
+if os.path.isfile(data_source+'/ambiverse_resources.json'):
+    with open(data_source+'/ambiverse_resources.json') as json_data:
         ambiverse_api.ambiverse_resources = json.load(json_data)
 else:
     ambiverse_api.ambiverse_resources = {"a":"b"}
 
 
-if os.path.isfile(data_source+'possible_predicate.json'):
-    with open(data_source+'possible_predicate.json') as json_data:
+if os.path.isfile(data_source+'/possible_predicate.json'):
+    with open(data_source+'/possible_predicate.json') as json_data:
         possible_predicate = json.load(json_data)
 else:
     possible_predicate = {"a":"b"}
 
 
-with open(data_source+'sentences_test.csv') as f:
+with open('dataset/'+data_source+'/sentences_test.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []

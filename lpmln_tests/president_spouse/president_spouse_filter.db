@@ -1,0 +1,4 @@
+child(cc1,bc).
+mother(hc,cc1).
+child(cc1,hc).
+father(bc,cc1).

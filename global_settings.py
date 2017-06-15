@@ -16,6 +16,6 @@ def init():
     global nodes_id
     global edge_id
     # data_source = 'ug_data/all_'
-    # data_source = 'dataset/president_spouse/'
-    data_source = 'dataset/state_capital/'
+    data_source = 'president_spouse'
+    # data_source = 'dataset/state_capital/'
     # data_source = 'dataset/country_capital/'

@@ -1,0 +1,9 @@
+successor(wa,wo).
+spouse(fl,wa).
+predecessor(ed,fl).
+spouse(el,wo).
+child(ma,el).
+successor(ed,ma).
+successor(fl,ed).
+president(wa,fl).
+predecessor(wo,wa).

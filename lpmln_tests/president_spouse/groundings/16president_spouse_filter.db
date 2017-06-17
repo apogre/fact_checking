@@ -1,0 +1,17 @@
+sibling(sa,ly).
+sibling(la,sa).
+child(ly1,ly).
+mother(la,ly1).
+child(lu,ly).
+mother(la,lu).
+child(ly1,la).
+father(ly,ly1).
+child(lu,la).
+father(ly,lu).
+parent(ly,ly1).
+parent(ly,lu).
+sibling(ly1,lu).
+sibling(lu,ly1).
+father(sa2,ly).
+child(sa,sa2).
+child(ly,sa3).

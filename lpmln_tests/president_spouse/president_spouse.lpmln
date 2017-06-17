@@ -1,4 +1,9 @@
 married(X,Y) :-  child(Z,X) , child(Z,Y) , X!=Y .
 married(X,Y) :- mother(Y,Z) , father(X,Z).
+married(X,Y) :- parent(Y,Z) , parent(X,Z).
 married(X,Y) :- married(Y,X).
+
+mother(X,Y) :- child(Y,X).
+father(X,Y) :- child(Y,X).
+
 sibling(X,Y) :- child(X,Z), child(Y,Z).

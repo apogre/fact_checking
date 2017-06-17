@@ -1,2 +1,16 @@
 successor(Grace_Coolidge,Florence_Harding).
-President(Warren_Harding,Grace_Coolidge).
+president(Warren_Harding,Grace_Coolidge).
+successor(Calvin_Coolidge,Warren_Harding).
+spouse(Grace_Coolidge,Calvin_Coolidge).
+predecessor(Florence_Harding,Grace_Coolidge).
+vice_president(Calvin_Coolidge,Warren_Harding).
+vicepresident(Calvin_Coolidge,Warren_Harding).
+predecessor(Woodrow_Wilson,Warren_Harding).
+spouse(Edith_Wilson,Woodrow_Wilson).
+successor(Florence_Harding,Edith_Wilson).
+president(Calvin_Coolidge,Grace_Coolidge).
+predecessor(Warren_Harding,Calvin_Coolidge).
+president(Warren_Harding,Calvin_Coolidge).
+predecessor(Edith_Wilson,Florence_Harding).
+president(Woodrow_Wilson,Edith_Wilson).
+successor(Warren_Harding,Woodrow_Wilson).

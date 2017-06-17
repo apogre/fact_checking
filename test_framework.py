@@ -144,7 +144,7 @@ def fact_checker(sentence_lis, id_list):
         print "Relation Graph"
         print "--------------"
 
-        lpmln_extention.evidence_writer(relation_ent, sent_id)
+        lpmln_extention.evidence_writer(relation_ent+relation_ent_2, sent_id)
         probability = lpmln_extention.inference()
         probability.append(sent_id)
         probabilities.append(probability)
@@ -320,7 +320,7 @@ else:
 
 
 
-with open('dataset/'+data_source+'/sentences_test.csv') as f:
+with open('dataset/'+data_source+'/sentences.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []

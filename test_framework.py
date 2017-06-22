@@ -141,7 +141,7 @@ def fact_checker(sentence_lis, id_list):
         # print "--------------"
 
         lpmln_extention.evidence_writer(relation_ent, sent_id)
-        probability = lpmln_extention.inference()
+        probability = lpmln_extention.inference(sent_id)
         probability.append(sent_id)
         probabilities.append(probability)
         # print relations

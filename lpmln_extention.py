@@ -61,11 +61,12 @@ def evidence_writer(relation_ent, sent_id):
                     datawriter.writerow(item_set)
 
 
-def inference():
-    print "Executing Classification"
-    data_source = 'lpmln_tests/'+global_settings.data_source+'/'+global_settings.data_source
+def inference(sent_id):
+    print "LPMLN Inference"
+    grounding_source = 'lpmln_tests/'+global_settings.data_source+'/groundings1/'+sent_id+global_settings.data_source
+    data_source = 'lpmln_tests/' + global_settings.data_source + '/' + global_settings.data_source
     # os.chdir('lpmln_tests/'+data_source)
-    cmd = "lpmln2asp -i {0}.lpmln -q married -all -e {0}_filter.db -r {0}_result.txt ".format(data_source)
+    cmd = "lpmln2asp -i {0}.lpmln -q married -all -e {1}_filter.db -r {0}_result.txt ".format(data_source, grounding_source)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open(data_source+'_result.txt', 'r')

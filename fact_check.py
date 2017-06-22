@@ -372,8 +372,8 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
         query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {<http://dbpedia.org/resource/'+id2+'> ?p ?v\
          . ?v ?q <http://dbpedia.org/resource/'+id1+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
          FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+ '}')
-    print sparql_endpoint
-    print query
+    # print sparql_endpoint
+    # print query
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -388,10 +388,10 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
             except:
                 val_score = 0
                 val_score1 = 0
-            print vals
+            # print vals
             relations.append((kb, vals[0], vals[1], label[0], val_score))
             relations.append((kb, vals[2], label[1], vals[1], val_score1))
-    print query_back
+    # print query_back
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
@@ -405,7 +405,7 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
             except:
                 val_score = 0
                 val_score1 = 0
-            print vals
+            # print vals
             relations.append((kb, vals[0], vals[1], label[1], val_score))
             relations.append((kb, vals[2], label[0], vals[1], val_score1))
     return relations

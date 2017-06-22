@@ -80,10 +80,6 @@ def fact_checker(sentence_lis, id_list):
         print sent_id, sentence_lis[n],'\n'
         if stanford_setup:
             ent = fact_check.get_nodes_updated(ne)
-            new_loc = fact_check.location_update(ne)
-            if new_loc:
-                new_ent = (new_loc[0], 'LOCATION')
-                ent.append(new_ent)
             if dates[n]:
                 date_string = (dates[n][0], 'DATE')
                 ent.append(date_string)
@@ -135,16 +131,16 @@ def fact_checker(sentence_lis, id_list):
         print "1-hop Unique Predicates"
         print "======================="
         print predicate_set
-        print "2-hop Groundings"
-        print "================"
-        print relation_ent_2
-        print "2-hop Unique Predicates"
-        print "======================="
-        print predicate_set_2
-        print "Relation Graph"
-        print "--------------"
+        # print "2-hop Groundings"
+        # print "================"
+        # print relation_ent_2
+        # print "2-hop Unique Predicates"
+        # print "======================="
+        # print predicate_set_2
+        # print "Relation Graph"
+        # print "--------------"
 
-        lpmln_extention.evidence_writer(relation_ent+relation_ent_2, sent_id)
+        lpmln_extention.evidence_writer(relation_ent, sent_id)
         probability = lpmln_extention.inference()
         probability.append(sent_id)
         probabilities.append(probability)
@@ -320,7 +316,7 @@ else:
 
 
 
-with open('dataset/'+data_source+'/sentences.csv') as f:
+with open('dataset/'+data_source+'/sentences_test.csv') as f:
     reader = csv.DictReader(f)
     sentences_list = []
     id_list = []

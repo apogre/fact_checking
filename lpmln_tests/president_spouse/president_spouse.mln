@@ -1,0 +1,17 @@
+entity = {Ch,Bi,Hi}
+married(entity,entity)
+child(entity,entity)
+mother(entity,entity)
+father(entity,entity)
+sibling(entity,entity)
+parent(entity,entity)
+
+child(z,x) ^ child(z,y) ^ x!=y => married(x,y).
+mother(y,z) ^ father(x,z) => married(x,y).
+parent(y,z) ^ parent(x,z) => married(x,y).
+married(y,x) => married(x,y).
+
+0.5 child(y,x) => mother(x,y)
+0.5 child(y,x) => father(x,y)
+
+child(x,z) ^ child(y,z) => sibling(x,y).

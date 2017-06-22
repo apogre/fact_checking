@@ -1,0 +1,13 @@
+child(Doud_Eisenhower,Dwight_Eisenhower).
+mother(Mamie_Eisenhower,Doud_Eisenhower).
+child(John_Eisenhower,Dwight_Eisenhower).
+mother(Mamie_Eisenhower,John_Eisenhower).
+child(Doud_Eisenhower,Mamie_Eisenhower).
+father(Dwight_Eisenhower,Doud_Eisenhower).
+child(John_Eisenhower,Mamie_Eisenhower).
+father(Dwight_Eisenhower,John_Eisenhower).
+place_of_burial(Eisenhower_Presidential_Center,Mamie_Eisenhower).
+named_after(Dwight_Eisenhower,Eisenhower_Presidential_Center).
+parent(Mamie_Eisenhower,Doud_Eisenhower).
+known_for(Dwight_Eisenhower,Doud_Eisenhower).
+parent(Dwight_Eisenhower,Doud_Eisenhower).

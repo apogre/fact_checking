@@ -1,0 +1,14 @@
+child(Barbara_Pierce_Bush,George_W_Bush).
+mother(Laura_Bush,Barbara_Pierce_Bush).
+child(Jenna_Bush_Hager,George_W_Bush).
+mother(Laura_Bush,Jenna_Bush_Hager).
+child(Barbara_Pierce_Bush,Laura_Bush).
+father(George_W_Bush,Barbara_Pierce_Bush).
+child(Jenna_Bush_Hager,Laura_Bush).
+father(George_W_Bush,Jenna_Bush_Hager).
+parent(Laura_Bush,Barbara_Pierce_Bush).
+parent(Laura_Bush,Jenna_Bush_Hager).
+parent(George_W_Bush,Barbara_Pierce_Bush).
+successor(Anita_Thigpen_Perry,Laura_Bush).
+governor(George_W_Bush,Anita_Thigpen_Perry).
+parent(George_W_Bush,Jenna_Bush_Hager).

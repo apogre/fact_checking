@@ -1,0 +1,13 @@
+child(ba,do).
+mother(me,ba).
+child(ba,me).
+father(do,ba).
+child(iv,do).
+child(er,do).
+child(do1,do).
+child(iv,me).
+parent(do,iv).
+child(er,me).
+parent(do,er).
+child(do1,me).
+parent(do,do1).

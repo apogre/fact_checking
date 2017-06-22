@@ -42,15 +42,15 @@ def evidence_writer(relation_ent, sent_id):
         item_set_initials.add(lemmatizer.lemmatize(rel_set[1].lower()) + '(' + entity_mapping.get(rel[2],'').lower() + \
                               ',' + entity_mapping.get(rel[3], '').lower() + ').')
 
-    with open('lpmln_tests/'+data_source +'/groundings/'+sent_id+data_source+'_full.db', 'wb') as csvfile:
+    with open('lpmln_tests/'+data_source +'/groundings1/'+sent_id+data_source+'_full.db', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
         datawriter.writerows([[i] for i in item_set])
 
-    with open('lpmln_tests/'+data_source +'/groundings/'+sent_id+data_source+'_initials.db', 'wb') as csvfile:
+    with open('lpmln_tests/'+data_source +'/groundings1/'+sent_id+data_source+'_initials.db', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
         datawriter.writerows([[i] for i in item_set_initials])
 
-    with open('lpmln_tests/'+data_source +'/groundings/'+sent_id+data_source+'_filter.db', 'wb') as csvfile:
+    with open('lpmln_tests/'+data_source +'/groundings1/'+sent_id+data_source+'_filter.db', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
         for rel in relation_ent:
             rel_set = [r.replace(' ', '_') for r in rel if isinstance(r, basestring)]

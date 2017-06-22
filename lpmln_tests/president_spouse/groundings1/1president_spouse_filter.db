@@ -2,8 +2,7 @@ child(ch,bi).
 mother(hi,ch).
 child(ch,hi).
 father(bi,ch).
+parent(hi,ch).
 parent(bi,ch).
-parent(ro1,ro).
-parent(hi4,ch).
-married(bi,hi).
 married(hi,bi).
+married(bi,hi).

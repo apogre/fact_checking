@@ -3,23 +3,9 @@ Clingo executed with command:
 clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=married lpmln_tests/president_spouse/president_spouse_filter.db 
 clingo version 4.5.4
 Reading from ...me/apradhan/proj/fact_checking/out.txt ...
-Solving...
-Answer: 1
-child(ch,bi) mother(hi,ch) child(ch,hi) father(bi,ch) married(hi,bi) married(bi,hi) father(hi,ch) mother(bi,ch) married(bi,bi) married(hi,hi) sibling(ch,ch)
+UNKNOWN
 
-
-Probability of Answer 1 : 1.0
-
-
-married(bi, hi) 1.0
-married(hi, bi) 1.0
-married(hi, hi) 1.0
-married(bi, bi) 1.0
-
-
-SATISFIABLE
-
-Models       : 1     
+Models       : 0+    
 Calls        : 1
-Time         : 0.161s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.150s
+Time         : 0.000s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s

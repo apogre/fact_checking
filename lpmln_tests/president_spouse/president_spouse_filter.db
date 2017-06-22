@@ -1,4 +1,8 @@
-child(ch,bi).
-mother(hi,ch).
-child(ch,hi).
-father(bi,ch).
+child(Ch,Bi)
+mother(Hi,Ch)
+child(Ch,Hi)
+father(Bi,Ch)
+parent(Hi,Ch)
+parent(Bi,Ch)
+married(Hi,Bi)
+married(Bi,Hi)

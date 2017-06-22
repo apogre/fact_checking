@@ -18,9 +18,9 @@ import global_settings
 import numpy as np
 
 aux_verb = ['was', 'is', 'become','to','of', 'in', 'the']
-sparql_dbpedia = 'http://localhost:8890/sparql'
+# sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
-# sparql_dbpedia = 'https://dbpedia.org/sparql'
+sparql_dbpedia = 'https://dbpedia.org/sparql'
 sparql_wikidata = 'https://query.wikidata.org/sparql'
 
 global date_flag
@@ -159,30 +159,6 @@ def get_verb(postagged_words):
     return verb
 
 
-def similar(a,b):
-    return SequenceMatcher(None,a,b).ratio()
-
-
-def compare(word1, word2):
-    # print word2, word1
-    wierdness2 = sequence_weirdness(unicode(word2))
-    if wierdness2 == 0:
-        wierdness1 = sequence_weirdness(unicode(word1))
-        if wierdness1 == 0:
-            # print word1, word2
-            ss1 = sum([wn.synsets(word) for word in word1.split() if word not in aux_verb],[])
-            ss2 = sum([wn.synsets(word) for word in word2.split() if word not in aux_verb],[])
-            # print ss1, ss2
-            # ss1 = sum(ss1,[])
-            # ss2 = sum(ss2,[])
-            # print ss1, ss2
-            try:
-                return max(s1.path_similarity(s2) for (s1, s2) in product(ss1, ss2))
-            except:
-                # print "exception"
-                return 0.0
-
-
 def date_parser(docs):
     dates = []
     for doc in docs:
@@ -191,22 +167,6 @@ def date_parser(docs):
         except:
             dates.append('')
     return dates
-
-
-def location_update(parse):
-    new_loc = ''
-    for i,p in enumerate(parse):
-        if p[1] == 'LOCATION':
-            if parse[i+1][0] == ',' or parse[i+1][1] == 'LOCATION':
-                new_loc = p[0]+' '+parse[i+1][0]
-                if parse[i+2][1] == 'LOCATION' or parse[i+2][0] == ',':
-                    new_loc = new_loc+' '+parse[i+2][0]
-                    if parse[i+3][1]=='LOCATION':
-                        new_loc = new_loc+' '+parse[i+3][0]
-                        ent = new_loc.split(',')
-                        st = [','.join(e.rstrip() for e in ent)]
-                        return st
-
 
 def st_tagger(sentence_list):
     ne_s = st_ner.tag_sents(sentence_list)
@@ -412,8 +372,8 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
         query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {<http://dbpedia.org/resource/'+id2+'> ?p ?v\
          . ?v ?q <http://dbpedia.org/resource/'+id1+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
          FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+ '}')
-    # print query
-    # print query_back
+    print sparql_endpoint
+    print query
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -428,8 +388,10 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
             except:
                 val_score = 0
                 val_score1 = 0
+            print vals
             relations.append((kb, vals[0], vals[1], label[0], val_score))
             relations.append((kb, vals[2], label[1], vals[1], val_score1))
+    print query_back
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
@@ -443,6 +405,7 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
             except:
                 val_score = 0
                 val_score1 = 0
+            print vals
             relations.append((kb, vals[0], vals[1], label[1], val_score))
             relations.append((kb, vals[2], label[0], vals[1], val_score1))
     return relations

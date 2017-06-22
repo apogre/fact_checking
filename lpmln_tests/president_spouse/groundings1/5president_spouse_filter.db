@@ -1,0 +1,10 @@
+child(am,ji).
+mother(ro,am).
+child(ja,ji).
+mother(ro,ja).
+child(am,ro).
+father(ji,am).
+child(ja,ro).
+father(ji,ja).
+parent(ro,am).
+parent(ji,am).

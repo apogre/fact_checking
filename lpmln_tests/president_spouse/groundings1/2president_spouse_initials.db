@@ -1,0 +1,14 @@
+child(ba,ge).
+mother(la,ba).
+child(je,ge).
+mother(la,je).
+child(ba,la).
+father(ge,ba).
+child(je,la).
+father(ge,je).
+parent(la,ba).
+parent(la,je).
+parent(ge,ba).
+successor(an,la).
+governor(ge,an).
+parent(ge,je).

@@ -1,0 +1,10 @@
+child(ch,bi).
+mother(hi,ch).
+award_received(gr,hi).
+winner(bi,gr).
+child(ch,hi).
+father(bi,ch).
+parent(hi,ch).
+deputy(wi,hi).
+president(bi,wi).
+parent(bi,ch).

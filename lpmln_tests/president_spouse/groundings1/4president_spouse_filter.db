@@ -1,0 +1,12 @@
+child(pa,ro).
+mother(na,pa).
+child(ro1,ro).
+mother(na,ro1).
+child(pa,na).
+father(ro,pa).
+child(ro1,na).
+father(ro,ro1).
+parent(na,pa).
+parent(na,ro1).
+parent(ro,pa).
+parent(ro,ro1).

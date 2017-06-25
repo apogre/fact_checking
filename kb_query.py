@@ -97,17 +97,13 @@ def get_entity_type(resources, triples):
     return type_set_ontology, type_set_resource, type_set_ontology_full, type_set_resource_full
 
 
-def get_predicates(type_set, triple_dict, resource_ids):
+def get_kgminer_predicates(type_set, triple_dict, resource_ids):
     for triples_k,triples_v in triple_dict.iteritems():
-        # print triples_k, triples_v
         predicate_list = []
         for triple_v in triples_v:
-            res_id1 = resource_ids.get(triple_v[0], [])
-            res_id2 = resource_ids.get(triple_v[1], [])
-            if res_id1 and res_id2:
-                item1_v = type_set.get(res_id1,[])
-                item2_v = type_set.get(res_id2,[])
-                # print item1_v, item2_v
+            item1_v = type_set.get(triple_v[0], [])
+            item2_v = type_set.get(triple_v[1], [])
+            if item1_v and item2_v: 
                 for it1 in item1_v:
                     for it2 in item2_v:
                         if it1 != it2:
@@ -118,32 +114,23 @@ def get_predicates(type_set, triple_dict, resource_ids):
                                     sort_list[it1] = [it2]
                                 else:
                                     sort_list[it1].append(it2)
-                                q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <' + \
-                                       it1 + '> . ?url2 rdf:type <' + it2 + '> . {?url1 ?p ?url2 } UNION {?url2 ?p ?url1 } \
+                                q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'>\
+                                 . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2 + '> . {?url1 ?p ?url2 } UNION {?url2 ?p ?url1 } \
                                                             . FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")). }'
                         else:
-                            q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <' + \
-                                   it1 + '> . ?url2 rdf:type <' + it2 + '> . ?url1 ?p ?url2 .\
-                                    FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")).}'
-                        # print q_pp
+                            q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . \
+                            ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . ?url1 ?p ?url2 . \
+                            FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")).}'
                         try:
-                            if len(q_pp)>1:
-                                count = count + 1
-                                # print count
+                            if q_pp:
                                 result = sparql.query(sparql_dbpedia_on, q_pp)
                                 pred_values = [sparql.unpack_row(row_result) for row_result in result]
                                 if pred_values:
                                     pred_vals = [val[0].split('/')[-1] for val in pred_values]
-                                    # print pred_vals
-                                    # print len(pred_vals)
                                     predicate_list.extend(pred_vals)
                         except:
                             pass
-        if triples_k in predicate_set.keys():
-            predicate_set[triples_k].append(list(set(predicate_list)))
-        else:
-            predicate_set[triples_k] = list(set(predicate_list))
-    return predicate_set
+    return list(set(predicate_list))
 
 
 def predicate_finder(triple_dict):

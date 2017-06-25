@@ -1,16 +1,17 @@
-from gensim.models import Word2Vec
+from gensim.models import KeyedVectors
 import sys
 
 data_source = 'president_spouse'
 KGMiner_data = 'KGMiner/KGMiner_data/'
 aux_verb = ['was', 'is', 'become']
-entity_type_threshold = 0.5
+rank_threshold = 0.5
+kgminer_predicate_threshold = 0.5
 # global model_wv
 # global model_wv_g
 
 if sys.argv[1:][0] == '2':
     print "Loading Word2Vec"
-    model_wv_g = Word2Vec.load_word2vec_format("/home/apradhan/Google_Vectors/GoogleNews-vectors-negative300.bin", \
+    model_wv_g = KeyedVectors.load_word2vec_format("/home/apradhan/Google_Vectors/GoogleNews-vectors-negative300.bin", \
                                                binary=True)
 else:
     model_wv_g = None

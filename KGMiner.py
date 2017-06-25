@@ -8,12 +8,8 @@ import subprocess
 import config
 import time
 
-entity_type_threshold=0.16
-possible_predicate_threshold = 0.1
 sparql_dbpedia = 'http://localhost:8890/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
-
-kg_data_source = 'KGMiner_data/'
 
 
 def resource_type_extractor(resources, triples):
@@ -57,37 +53,6 @@ def kg_miner_csv(input_data, file_name):
         datawriter = csv.writer(csvfile)
         for data in input_data:
             datawriter.writerow(data)
-
-
-def predicate_ranker(predicates, triple):
-    # print predicates
-    # print triple
-    # sys.exit(0)
-    predicate_KG = {}
-    predicate_KG_threshold = {}
-    for ky in triple.keys():
-        # print ky
-        predicate_ranked = []
-        for k in ky.split():
-            if k not in kb_query.aux_verb:
-                for predicate in predicates:
-                    predicate_full = "http://dbpedia.org/ontology/" + predicate
-                    phrase = kb_query.comment_extractor(predicate_full)
-                    if phrase:
-                        # print k, predicate
-                        score = max(kb_query.compare(k, ph[0]) for ph in phrase if isinstance(ph[0], basestring))
-                        try:
-                            score = round(score, 2)
-                        except:
-                            pass
-                        # print score
-                        predicate_ranked.append([predicate, score])
-        sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
-        threshold_sorted = [vals for vals in sorted_values if vals[1] >= possible_predicate_threshold]
-        # print sorted_values
-        predicate_KG[ky] = sorted_values
-        predicate_KG_threshold[ky] = threshold_sorted
-    return predicate_KG , predicate_KG_threshold
 
 
 def train_data_csv(train_ents, node_ids, expected_entities):

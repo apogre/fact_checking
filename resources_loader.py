@@ -20,6 +20,7 @@ def load_files():
 
 
 def load_kgminer_resource():
+    nodes_id, edge_id, possible_predicate = dict() , dict(), dict()
     if os.path.isfile(KGMiner_data+'nodes_id.json'):
         with open(KGMiner_data+'nodes_id.json') as json_data:
             nodes_id = json.load(json_data)

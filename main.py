@@ -1,7 +1,7 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files , load_kgminer_resource
 from ambiverse_api import entity_parser
-from kb_query import get_entity_type, get_description, get_predicates
+from kb_query import get_entity_type, get_description, get_kgminer_predicates
 from nltk import word_tokenize
 import operator, json
 import collections, csv
@@ -9,7 +9,7 @@ from datetime import datetime
 from config import data_source
 import os.path
 import pprint, sys, getopt
-from config import aux_verb, model_wv_g, entity_type_threshold
+from config import aux_verb, model_wv_g, rank_threshold , kgminer_predicate_threshold
 import numpy as np
 
 
@@ -32,8 +32,7 @@ def word2vec_score(rel, triple_k):
         return 0
 
 
-def word2vec_ranker(type_set, ent_dict, triple_dict):
-    print type_set, ent_dict, triple_dict
+def word2vec_ranker(type_set, ent_dict):
     type_set_ranked = {}
     threshold_ranked = {}
     for k, v in ent_dict.iteritems():
@@ -42,19 +41,40 @@ def word2vec_ranker(type_set, ent_dict, triple_dict):
             phrase = get_description(ent_type)
             if phrase:
                 ph = phrase[0][0]
-                score = word2vec_score(ph, ent_type.lower())
+                score = word2vec_score(ph, v.lower())
                 type_ranked.append([ent_type, score])
         sorted_values = sorted(type_ranked, key=operator.itemgetter(1), reverse=True)
         type_set_ranked[k] = sorted_values
-        threshold_sorted = [vals for vals in sorted_values if vals[1] >= entity_type_threshold]
+        threshold_sorted = [vals for vals in sorted_values if vals[1] >= rank_threshold]
         threshold_ranked[k] = threshold_sorted
     return type_set_ranked, threshold_ranked
 
 
-def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, KGMiner, lpmln):
+def predicate_ranker(predicates, triple):
+    predicate_KG = {}
+    predicate_KG_threshold = {}
+    for ky in triple.keys():
+        predicate_ranked = []
+        for predicate in predicates:
+            phrase = get_description(predicate)
+            if phrase:
+                ph = phrase[0][0]
+                print ph, ky
+                score = word2vec_score(ph, ky)
+                print score
+                predicate_ranked.append([predicate, score])
+        sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
+        threshold_sorted = [vals for vals in sorted_values if vals[1] >= kgminer_predicate_threshold]
+        # print sorted_values
+        predicate_KG[ky] = sorted_values
+        predicate_KG_threshold[ky] = threshold_sorted
+    return predicate_KG , predicate_KG_threshold
+
+
+def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, kgminer_predicate_flag, KGMiner, lpmln):
     file_triples, ambiverse_resources = load_files()
     if KGMiner:
-        possible_predicate, nodes_id, edge_id = load_kgminer_resource()
+        possible_kgminer_predicate, nodes_id, edge_id = load_kgminer_resource()
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
     for n, ne in enumerate(named_tags):
@@ -90,15 +110,16 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, KGMiner, lp
             #                                                                       entity_dict, triple_dict)
             # ontology_type_set_ranked, ontology_threshold_ranked = word2vec_ranker(type_set_ontology_full, entity_dict,\
             #                                                                       triple_dict)
-            if sentence_id in possible_predicate.keys():
-                predicates_set = possible_predicate[sentence_id]
+            if sentence_id in possible_kgminer_predicate.keys():
+                kgminer_predicates = possible_kgminer_predicate[sentence_id]
             else:
-                predicates_set = get_predicates(entity_type_ontology, triple_dict, resource)
-                possible_predicate[sentence_id] = predicates_set
-            print predicates_set
-        #     # possible_predicate_set_ranked, possible_predicate_set_threshold = KG_Miner_Extension.predicate_ranker(predicates_set,triple_dict)
-        #     # print possible_predicate_set_ranked
-        #     # print possible_predicate_set_threshold
+                kgminer_predicates = get_kgminer_predicates(entity_type_ontology, triple_dict, resource)
+                possible_kgminer_predicate[sentence_id] = kgminer_predicates
+                kgminer_predicate_flag = True
+            print kgminer_predicates
+            kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates,triple_dict)
+            print kgminer_predicate_ranked
+            print kgminer_predicate_threshold
         #     # sys.exit(0)
         #     try:
         #         os.remove('KGMiner_data/poi.csv')
@@ -109,7 +130,7 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, KGMiner, lp
         #     # print training_entity_type
         #     # print training_resource_type
         #     # sys.exit(0)
-        #     predicate_results, training_data_set = KG_Miner_Extension.get_training_set(predicates_set, \
+        #     predicate_results, training_data_set = KG_Miner_Extension.get_training_set(kgminer_predicates, \
         #                                                             training_resource_type, training_entity_type, \
         #                                                             triple_dict, resource_text)
         #     output_linkprediction[id_list[n]] = predicate_results
@@ -127,6 +148,14 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, KGMiner, lp
                 os.remove('dataset/' + data_source + '/ambiverse_resources.json')
             with open('dataset/' + data_source + '/ambiverse_resources.json', 'w') as fp:
                 json.dump(ambiverse_resources, fp, default=json_serial)
+
+        if kgminer_predicate_flag:
+            print "Updating KGMiner Predicate List"
+            if os.path.isfile('dataset/'+data_source+'possible_kgminer_predicate.json'):
+                os.remove('dataset/'+data_source+'possible_kgminer_predicate.json')
+            with open('dataset/'+data_source+'/possible_kgminer_predicate.json', 'w') as fp:
+                json.dump(possible_kgminer_predicate, fp, default=json_serial)
+
 
                     # sys.exit(0)
         # precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sentence_id, resource_text)
@@ -227,11 +256,6 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, KGMiner, lp
 
 
 
-    # if new_predicate_flag == 1:
-    #     if os.path.isfile('dataset/'+data_source+'possible_predicate.json'):
-    #         os.remove('dataset/'+data_source+'possible_predicate.json')
-    #     with open('dataset/'+data_source+'/possible_predicate.json', 'w') as fp:
-    #         json.dump(possible_predicate, fp, default=json_serial)
 
     # print "Total Execution Time: " + str(round(ex_time, 2))
     # print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10} ".format('S.N.','p_res','r_res' 'p_rel', 'r_rel', 'p_ent', 'r_ent')
@@ -269,4 +293,5 @@ if __name__ == "__main__":
             sentence = row['sentence']
             sentences_list.append(row['sentence'])
             id_list.append(row['id'])
-        fact_checker(sentences_list, id_list, triple_flag=False,ambiverse_flag=False, KGMiner=True, lpmln=False)
+        fact_checker(sentences_list, id_list, triple_flag=False, ambiverse_flag=False, kgminer_predicate_flag=False, \
+                     KGMiner=True, lpmln=False)

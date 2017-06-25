@@ -1,0 +1,7 @@
+entity = {Ch,Bi,Hi}
+married(entity,entity)
+child(entity,entity)
+mother(entity,entity)
+father(entity,entity)
+sibling(entity,entity)
+parent(entity,entity)

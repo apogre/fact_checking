@@ -4,18 +4,13 @@ from nltk.tree import *
 import dateutil.parser as dp
 import sparql
 from difflib import SequenceMatcher
-from datetime import datetime
-from itertools import groupby,product
+
 import operator
-from nltk.tag import StanfordNERTagger,StanfordPOSTagger
-from nltk.parse.stanford import StanfordDependencyParser
+
 import time, sys, re, csv
 import pandas
 from nltk.corpus import wordnet as wn
-from ftfy.badness import sequence_weirdness
 import os
-import global_settings
-import numpy as np
 
 aux_verb = ['was', 'is', 'become','to','of', 'in', 'the']
 # sparql_dbpedia = 'http://localhost:8890/sparql'
@@ -45,138 +40,110 @@ suffixes_dbpedia_2 = 'FILTER langMatches( lang(?rl), "EN" ) . ?v rdfs:label ?vl 
  . FILTER langMatches(lang(?pl), "EN") . FILTER langMatches(lang(?vl), "EN") .'
 suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) .'
 
-if stanford_setup:
-    stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
-    stanford_model_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
-    st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
-    st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
-    parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
-
-
-def get_nodes_updated(netagged_words):
-    ent = []
-    for tag, chunk in groupby(netagged_words, lambda x:x[1]):
-        # print tag
-        if tag != "O":
-            tuple1 =(" ".join(w for w, t in chunk),tag)
-            ent.append(tuple1)
-    return ent
+def get_leaf_nodes(type_values):
+    leaf, root = [x[0] for x in type_values], [x[1] for x in type_values]
+    leaves = [le for le in leaf if le not in root]
+    # leaves = leaf+root
+    return leaves
 
 
-def verb_entity_matcher(parsed_tree):
-    # print parsed_tree
-    verb_ent = []
-    for tree in parsed_tree:
-        # print tree
-        verb_entity = {}
-        # print "----"
-        be_tree = be_verb(tree[0])
-        # print be_tree
-        if be_tree:
-            verb_ent.append([be_tree])
-        for nodes in tree[0]:
-            # print nodes
-            if re.search('VB',nodes[0][1]) and re.search('NN',nodes[2][1]):
-                if nodes[0][0] not in verb_entity.keys():
-                    verb_entity[nodes[0][0]]=[nodes[2][0]]
-                else:
-                    verb_entity[nodes[0][0]].append(nodes[2][0])
-        if verb_entity:
-            verb_ent.append([verb_entity])
-    # sys.exit(0)
-    return verb_ent
+def get_description(entity_type):
+    query = 'SELECT distinct ?label WHERE { <http://dbpedia.org/ontology/' + entity_type + '> rdfs:label ?label . \
+    FILTER langMatches( lang(?label), "EN" ) . }'
+    result = sparql.query(sparql_dbpedia, query)
+    type_values = [sparql.unpack_row(row_result) for row_result in result]
+    return type_values
 
 
-def svo_finder(ent,triples):
-    triple_dict = {}
-    entity_set = [x[0] for x in ent]
-    # print ent
-    # print entity_set
-    # print "----"
-    for triple in triples:
-        # print triple
-        # sys.exit(0)
-        for ent in entity_set:
-            if not isinstance(ent, datetime):
-                if ent in triple[2] and triple[1] not in aux_verb:
-                    triple[2] = ent
-        for trip in triple:
-            try:
-                date_ent = dp.parse(trip,default=datetime(2017, 1, 1))
-                print date_ent
-                if triple[0] in entity_set and date_ent in entity_set:
-                    if triple[1] not in triple_dict.keys():
-                        triple_dict[triple[1]] = [[triple[0],date_ent]]
-                    else:
-                        triple_dict[triple[1]].append([triple[0], date_ent])
-                    # print triple_dict
-            except:
-                pass
-        if triple[0] in entity_set and triple[2] in entity_set:
-            if triple[1] not in triple_dict.keys():
-                triple_dict[triple[1]] = [[triple[0], triple[2]]]
-            else:
-                triple_list = [item for sublist in triple_dict[triple[1]] for item in sublist]
-                # print triple_list
-                if triple[0] in triple_list and triple[2] in triple_list:
-                    pass
-                else: 
-                    triple_dict[triple[1]].append([triple[0], triple[2]])
-        # print triple_dict
-    return triple_dict
+def get_entity_type(resources, triples):
+    type_set_ontology = {}
+    type_set_resource = {}
+    type_set_ontology_full = {}
+    type_set_resource_full = {}
+    for triple_k, triples_v in triples.iteritems():
+        for triple_v in triples_v:
+            for ent in triple_v:
+                item1_v = resources.get(ent, None)
+                type_list_ontology = []
+                type_list_resource = []
+                type_list_ontology_full = []
+                type_list_resource_full = []
+                if item1_v:
+                    key = item1_v.get('dbpedia_id', None)
+                    if key not in type_set_ontology.keys():
+                        q_type = prefixes_dbpedia+' PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?t ?t1 \
+                        WHERE {{entity:'+key+' dbo:type ?t } UNION { entity:'+key+' rdf:type ?t }. ?t rdfs:subClassOf \
+                        ?t1 . FILTER(STRSTARTS(STR(?t), "http://dbpedia.org/ontology") || STRSTARTS(STR(?t), \
+                        "http://dbpedia.org/resource")).}'
+                        result = sparql.query(sparql_dbpedia, q_type)
+                        type_values = [sparql.unpack_row(row_result) for row_result in result]
+                        leaves = get_leaf_nodes(type_values)
+                        type_ontology = [val.split('/')[-1] for val in leaves if 'ontology' in val]
+                        type_resource = [val.split('/')[-1] for val in leaves if 'resource' in val]
+                        type_list_ontology.extend(type_ontology)
+                        type_list_resource.extend(type_resource)
+                        type_set_ontology[ent] = list(set(type_list_ontology))
+                        type_set_resource[ent] = list(set(type_list_resource))
+
+                        # type_ontology = [x[0] for x in type_values]
+                        type_ontology_full = [val[0].split('/')[-1] for val in type_values if 'ontology' in val[0]]
+                        type_resource_full = [val[0].split('/')[-1] for val in type_values if 'resource' in val[0]]
+                        type_list_ontology_full.extend(type_ontology_full)
+                        type_list_resource_full.extend(type_resource_full)
+                        # print type_list_ontology
+                        type_set_ontology_full[ent] = list(set(type_list_ontology_full))
+                        type_set_resource_full[ent] = list(set(type_list_resource_full))
+    return type_set_ontology, type_set_resource, type_set_ontology_full, type_set_resource_full
 
 
-def be_verb(tree):
-    be_tree = {}
-    be_noun = ''
-    b_verb = ''
-    for n,nodes in enumerate(tree):
-        if re.search('NN', nodes[0][1]) and re.search('VB', nodes[2][1]):
-            be_noun = nodes[0][0]
-            b_verb = nodes[2][0]
-            if b_verb not in be_tree.keys():
-                be_tree[b_verb] = [be_noun]
-            else:
-                be_tree[str(b_verb)+str(n)]=[be_noun]
-        if be_noun in nodes[0] and re.search('JJ', nodes[2][1]):
-            adj = nodes[2][0]
-            if b_verb not in be_tree.keys():
-                be_tree[b_verb] = [adj+' '+be_noun]
-            else:
-                if be_noun not in nodes[0]:
-                    be_tree[str(b_verb)+str(n)]=[adj+' '+be_noun]
-                else:
-                    be_tree[str(b_verb)] = [adj + ' ' + be_noun]
-    return be_tree
-
-
-def get_verb(postagged_words):
-    verb = []
-    for tag in postagged_words:
-        if "VB" in tag[1]:
-            verb.append(tag)
-    return verb
-
-
-def date_parser(docs):
-    dates = []
-    for doc in docs:
-        try:
-            dates.append([dp.parse(doc, fuzzy=True,default=datetime(2017, 1, 1))])
-        except:
-            dates.append('')
-    return dates
-
-def st_tagger(sentence_list):
-    ne_s = st_ner.tag_sents(sentence_list)
-    pos_s = st_pos.tag_sents(sentence_list)
-    dep_s = [[list(parse.triples()) for parse in dep_parse] for dep_parse in parser.parse_sents(sentence_list)]
-    return ne_s, pos_s, dep_s
-
-
-entities = {} 
-new_labels = []
+def get_predicates(type_set, triple_dict, resource_ids):
+    for triples_k,triples_v in triple_dict.iteritems():
+        # print triples_k, triples_v
+        predicate_list = []
+        for triple_v in triples_v:
+            res_id1 = resource_ids.get(triple_v[0], [])
+            res_id2 = resource_ids.get(triple_v[1], [])
+            if res_id1 and res_id2:
+                item1_v = type_set.get(res_id1,[])
+                item2_v = type_set.get(res_id2,[])
+                # print item1_v, item2_v
+                for it1 in item1_v:
+                    for it2 in item2_v:
+                        if it1 != it2:
+                            if it2 in sort_list.keys() and it1 in sort_list.get(it2,[]):
+                                q_pp = ''
+                            else:
+                                if it1 not in sort_list.keys():
+                                    sort_list[it1] = [it2]
+                                else:
+                                    sort_list[it1].append(it2)
+                                q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <' + \
+                                       it1 + '> . ?url2 rdf:type <' + it2 + '> . {?url1 ?p ?url2 } UNION {?url2 ?p ?url1 } \
+                                                            . FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")). }'
+                        else:
+                            q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <' + \
+                                   it1 + '> . ?url2 rdf:type <' + it2 + '> . ?url1 ?p ?url2 .\
+                                    FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")).}'
+                        # print q_pp
+                        try:
+                            if len(q_pp)>1:
+                                count = count + 1
+                                # print count
+                                result = sparql.query(sparql_dbpedia_on, q_pp)
+                                pred_values = [sparql.unpack_row(row_result) for row_result in result]
+                                if pred_values:
+                                    pred_vals = [val[0].split('/')[-1] for val in pred_values]
+                                    # print pred_vals
+                                    # print len(pred_vals)
+                                    predicate_list.extend(pred_vals)
+                        except:
+                            pass
+        if triples_k in predicate_set.keys():
+            predicate_set[triples_k].append(list(set(predicate_list)))
+        else:
+            predicate_set[triples_k] = list(set(predicate_list))
+    return predicate_set
 
 
 def predicate_finder(triple_dict):
@@ -207,23 +174,6 @@ def entity_threshold(resources):
                 break
         limit_entity[label] = ent_coded
     return limit_entity
-
-
-def get_labels(labels):
-    global new_labels
-    new_labels = []
-    for i,label in enumerate(labels):
-        if label[1] != 'DATE':
-            new_labels.append(label)
-
-
-def date_checker(dl,vo_date):
-    for d in dl:
-        matched_date = [vo_d for vo_d in vo_date if d.date() == vo_d[1]]
-    if matched_date:
-        return matched_date
-    else:
-        return None
 
 
 def relation_processor(relations):
@@ -270,7 +220,7 @@ def relation_extractor_0hop(kb, id1, id2, label, relations, triple_k):
     if q1_values:
         for vals in q1_values:
             try:
-                val_score = predicate_confidence(vals[0], triple_k)
+                val_score = word2vec_score(vals[0], triple_k)
             except:
                 val_score = 0
             relations.append((kb, vals[0], label[0], label[1], val_score))
@@ -281,7 +231,7 @@ def relation_extractor_0hop(kb, id1, id2, label, relations, triple_k):
         q1_values_back = []
     for vals in q1_values_back:
         try:
-            val_score = predicate_confidence(vals[0], triple_k)
+            val_score = word2vec_score(vals[0], triple_k)
         except:
             val_score = 0
         relations.append((kb, vals[0], label[1], label[0], val_score))
@@ -324,9 +274,9 @@ def relation_extractor_2hop(kb, id1, id2, label, relations, triple_k):
     if q1_values:
         for vals in q1_values:
             try:
-                val_score = predicate_confidence(vals[0], triple_k)
-                val_score1 = predicate_confidence(vals[2], triple_k)
-                val_score2 = predicate_confidence(vals[4], triple_k)
+                val_score = word2vec_score(vals[0], triple_k)
+                val_score1 = word2vec_score(vals[2], triple_k)
+                val_score2 = word2vec_score(vals[4], triple_k)
             except:
                 val_score = 0
                 val_score1 = 0
@@ -342,9 +292,9 @@ def relation_extractor_2hop(kb, id1, id2, label, relations, triple_k):
     if q1_values_back:
         for vals in q1_values_back:
             try:
-                val_score = predicate_confidence(vals[0], triple_k)
-                val_score1 = predicate_confidence(vals[2], triple_k)
-                val_score2 = predicate_confidence(vals[4], triple_k)
+                val_score = word2vec_score(vals[0], triple_k)
+                val_score1 = word2vec_score(vals[2], triple_k)
+                val_score2 = word2vec_score(vals[4], triple_k)
             except:
                 val_score = 0
                 val_score1 = 0
@@ -383,8 +333,8 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
     if q1_values:
         for vals in q1_values:
             try:
-                val_score = predicate_confidence(vals[0], triple_k)
-                val_score1 = predicate_confidence(vals[2],triple_k)
+                val_score = word2vec_score(vals[0], triple_k)
+                val_score1 = word2vec_score(vals[2], triple_k)
             except:
                 val_score = 0
                 val_score1 = 0
@@ -400,8 +350,8 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
     if q1_values_back:
         for vals in q1_values_back:
             try:
-                val_score = predicate_confidence(vals[0], triple_k)
-                val_score1 = predicate_confidence(vals[2], triple_k)
+                val_score = word2vec_score(vals[0], triple_k)
+                val_score1 = word2vec_score(vals[2], triple_k)
             except:
                 val_score = 0
                 val_score1 = 0
@@ -411,12 +361,6 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
     return relations
 
 
-def predicate_confidence(rel, triple_k):
-    score = []
-    for r in rel.split():
-        if r not in aux_verb:
-            score.extend([global_settings.model_wv_g.similarity(r, trip) for trip in triple_k.split() if trip not in aux_verb])
-    return round(np.mean(score),3)
 
 
 def relation_extractor_triples(resources, triples):

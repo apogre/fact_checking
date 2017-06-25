@@ -531,5 +531,5 @@ OPTIMUM FOUND
 Models       : 128   
   Optimum    : yes
 Calls        : 1
-Time         : 0.156s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+Time         : 0.162s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
 CPU Time     : 0.150s

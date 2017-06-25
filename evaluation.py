@@ -1,6 +1,6 @@
 import json, sys
 import os
-import global_settings
+import config
 
 # data_source = global_settings.data_source
 data_source = 'main_data/'

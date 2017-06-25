@@ -1,0 +1,23 @@
+//predicate declarations
+mother(entity,entity)
+father(entity,entity)
+sibling(entity,entity)
+married(entity,entity)
+child(entity,entity)
+parent(entity,entity)
+
+-1.51662   married(a1,a1)
+-1.21742   child(a1,a1)
+-6.69571   child(a1,a2)
+-8.8654    mother(a1,a1)
+4.04296    father(a1,a2)
+-8.8654    father(a1,a1)
+-6.69571   parent(a1,a2)
+-1.04826   sibling(a1,a1)
+4.04296    mother(a1,a2)
+-1.21742   parent(a1,a1)
+-6.16881   married(a1,a2)
+-7.01561   sibling(a1,a2)
+9.49364    !mother(a1,a2) v !father(a1,a3)
+-5.87948   married(a1,a2) v !married(a1,a3) v !child(a4,a3) v mother(a5,a3) v father(a5,a1) v !parent(a1,a4)
+

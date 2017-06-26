@@ -47,6 +47,15 @@ def get_description(entity_type):
     return type_values
 
 
+def kgminer_training_data(poi, qpart):
+    q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
+    {?url1 <http://dbpedia.org/ontology/' + poi[0] + '> ?url2} . ' + q_part + \
+           ' FILTER(?url1 != ?url2).} '
+    result = sparql.query(sparql_dbpedia, q_ts)
+    training_set = [sparql.unpack_row(row_result) for row_result in result]
+    return training_set
+
+
 def or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, triple_v):
     q_part_base = '{ ?url1 rdf:type <http://dbpedia.org/ontology/'
     q_part_base_res = 'UNION { ?url1 dbo:type <http://dbpedia.org/ontology/'
@@ -90,43 +99,15 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                     predicate_of_interest = predicate_ranked[sent_pred]
                     for poi in predicate_of_interest:
                         poi_writer(poi)
-                        q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-                        {?url1 <http://dbpedia.org/ontology/' + poi[0] + '> ?url2} . ' + q_part + \
-                               ' FILTER(?url1 != ?url2).} '
-                        print q_ts
-                        training_set = []
-
-                        # try:
-                        #     result = sparql.query(sparql_dbpedia, q_ts)
-                        #     training_set = [sparql.unpack_row(row_result) for row_result in result]
-                        # except:
-                        #     print "Sparql Error"
-
-                        if not training_set:
-                            try:
-                                result = sparql.query(sparql_dbpedia_on, q_ts)
-                                training_set = [sparql.unpack_row(row_result) for row_result in result]
-                            except:
-                                print "Online Sparql Error"
-                        print len(training_set)
-                        # sys.exit(0)
+                        training_set = kgminer_training_data()
                         if len(training_set) > 5:
                             training_set = sum(training_set, [])
                             train_ents = [val.split('/')[-1] for val in training_set]
                             word_vec_train = word2vec_dbpedia(train_ents, resource_v)
-                            # print word_vec_train
                             if len(word_vec_train) > 5:
-                                print word_vec_train
-                                # sys.exit(0)
                                 word_vec_train = sum(word_vec_train, [])
-
-                                # print len(word_vec_train)
                                 node_ids = entity_id_finder(word_vec_train)
-                                # print node_ids
-                                # sys.exit(0)
                                 training_data, test_data = train_data_csv(word_vec_train, node_ids, resource_v)
-                                # print training_data, test_data
-                                print len(training_data)
                                 if training_data:
                                     print "Executing Classification"
                                     csv_writer(training_data, file_name='training_data')

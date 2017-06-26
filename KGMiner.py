@@ -91,21 +91,14 @@ def train_data_csv(train_ents, node_ids, expected_entities):
 def word2vec_dbpedia(train_ents, resource_v):
     word_vec_train = []
     for j in range(0, len(train_ents) - 1, 2):
-        # print 'DBPEDIA_ID/' + ex_ent_all[1], 'DBPEDIA_ID/' + train_ents[j]
-        # print 'DBPEDIA_ID/' + ex_ent_all[0], 'DBPEDIA_ID/' + train_ents[j+1]
         try:
-            # print global_settings.model_wv.similarity('DBPEDIA_ID/Barack_Obama', 'DBPEDIA_ID/Michelle_Obama')
             sim1 = config.model_wv.similarity('DBPEDIA_ID/' + resource_v[0],
                                                        'DBPEDIA_ID/' + train_ents[j])
-            # print sim1
             sim2 = config.model_wv.similarity('DBPEDIA_ID/' + resource_v[1],
                                                        'DBPEDIA_ID/' + train_ents[j + 1])
-            # print sim2
-            # print train_ents[j], train_ents[j+1]
             if sim1 > 0.2 and sim2 > 0.2:
                 sim1_1 = config.model_wv.similarity('DBPEDIA_ID/' + resource_v[1],
                                                        'DBPEDIA_ID/' + train_ents[j])
-            # print sim1
                 sim2_1 = config.model_wv.similarity('DBPEDIA_ID/' + resource_v[0],
                                                        'DBPEDIA_ID/' + train_ents[j + 1])
                 if sim1_1 > sim1 and sim2_1>sim2:
@@ -117,5 +110,3 @@ def word2vec_dbpedia(train_ents, resource_v):
         except:
             pass
     return word_vec_train
-
-

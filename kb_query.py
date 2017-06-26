@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*- 
 
 from nltk.tree import *
-import dateutil.parser as dp
 import sparql
 from difflib import SequenceMatcher
 
@@ -11,17 +10,9 @@ import time, sys, re, csv
 import pandas
 from nltk.corpus import wordnet as wn
 import os
+from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata
+from KGMiner import get_test_data, csv_writer, poi_writer
 
-aux_verb = ['was', 'is', 'become','to','of', 'in', 'the']
-# sparql_dbpedia = 'http://localhost:8890/sparql'
-sparql_dbpedia_on = 'https://dbpedia.org/sparql'
-sparql_dbpedia = 'https://dbpedia.org/sparql'
-sparql_wikidata = 'https://query.wikidata.org/sparql'
-
-global date_flag
-date_flag = 0
-threshold_value = 0.8
-stanford_setup = True
 
 prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"
 prefixes_wikidata = "PREFIX entity: <http://www.wikidata.org/entity/>"
@@ -54,6 +45,110 @@ def get_description(entity_type):
     result = sparql.query(sparql_dbpedia, query)
     type_values = [sparql.unpack_row(row_result) for row_result in result]
     return type_values
+
+
+def or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, triple_v):
+    q_part_base = '{ ?url1 rdf:type <http://dbpedia.org/ontology/'
+    q_part_base_res = 'UNION { ?url1 dbo:type <http://dbpedia.org/ontology/'
+    q_part = ''
+    for v in triple_v:
+        q_part_res = ''
+        ont_types = ontology_threshold_ranked.get(v, [])
+        res_types = resource_type_set_ranked.get(v, [])
+        for i, val in enumerate(ont_types):
+            if i == (len(ont_types)-1):
+                q_part = q_part + q_part_base + val + '>} '
+            else:
+                q_part = q_part + q_part_base + val + '>} UNION '
+        if res_types:
+            for j,res_val in enumerate(res_types):
+                if j == (len(res_types)-1):
+                    q_part_res = q_part_res + q_part_base_res + res_val + '>}  .'
+                else:
+                    q_part_res = q_part_res + q_part_base_res + res_val + '>} UNION '
+        else:
+            q_part_res = ' .'
+        q_part = q_part + q_part_res
+        q_part_base = ' { ?url2 rdf:type <http://dbpedia.org/ontology/'
+        q_part_base_res = 'UNION { ?url2 dbo:type <http://dbpedia.org/ontology/'
+    return q_part
+
+
+def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_threshold_ranked, triple_dict, resource_ids):
+    triple_predicates = {}
+    training_data_set = {}
+    for triples_k, triples_v in triple_dict.iteritems():
+        for triple_v in triples_v:
+            resource_v = [resource_ids.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
+            predicate_results = {}
+            q_part = or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, triple_v)
+            test_data = get_test_data(resource_v)
+            print test_data
+            if None not in test_data:
+                csv_writer([test_data], file_name='test_data')
+                for sent_pred in predicate_ranked.keys():
+                    predicate_of_interest = predicate_ranked[sent_pred]
+                    for poi in predicate_of_interest:
+                        poi_writer(poi)
+                        q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
+                        {?url1 <http://dbpedia.org/ontology/' + poi[0] + '> ?url2} . ' + q_part + \
+                               ' FILTER(?url1 != ?url2).} '
+                        print q_ts
+                        training_set = []
+
+                        # try:
+                        #     result = sparql.query(sparql_dbpedia, q_ts)
+                        #     training_set = [sparql.unpack_row(row_result) for row_result in result]
+                        # except:
+                        #     print "Sparql Error"
+
+                        if not training_set:
+                            try:
+                                result = sparql.query(sparql_dbpedia_on, q_ts)
+                                training_set = [sparql.unpack_row(row_result) for row_result in result]
+                            except:
+                                print "Online Sparql Error"
+                        print len(training_set)
+                        # sys.exit(0)
+                        if len(training_set) > 5:
+                            training_set = sum(training_set, [])
+                            train_ents = [val.split('/')[-1] for val in training_set]
+                            word_vec_train = word2vec_dbpedia(train_ents, resource_v)
+                            # print word_vec_train
+                            if len(word_vec_train) > 5:
+                                print word_vec_train
+                                # sys.exit(0)
+                                word_vec_train = sum(word_vec_train, [])
+
+                                # print len(word_vec_train)
+                                node_ids = entity_id_finder(word_vec_train)
+                                # print node_ids
+                                # sys.exit(0)
+                                training_data, test_data = train_data_csv(word_vec_train, node_ids, resource_v)
+                                # print training_data, test_data
+                                print len(training_data)
+                                if training_data:
+                                    print "Executing Classification"
+                                    csv_writer(training_data, file_name='training_data')
+                                    os.chdir('KGMiner')
+                                    subprocess.call('./run_test.sh')
+                                    try:
+                                        with open('../KGMiner_data/predicate_probability.csv') as f:
+                                            reader = csv.DictReader(f)
+                                            for i, row in enumerate(reader):
+                                                predicate_results[row['poi']] = row['score']
+                                    except:
+                                        pass
+                                    print predicate_results
+                                    training_data_set[
+                                        (str(triples_k) + '-' + str(triple_v)) + '-' + str(poi)] = word_vec_train
+                                    os.chdir('..')
+                            else:
+                                print "Insufficient Training Set"
+
+            triple_predicates[(str(triples_k) + '-' + str(triple_v))] = predicate_results
+
+    return triple_predicates, training_data_set
 
 
 def get_entity_type(resources, triples):
@@ -97,9 +192,10 @@ def get_entity_type(resources, triples):
     return type_set_ontology, type_set_resource, type_set_ontology_full, type_set_resource_full
 
 
-def get_kgminer_predicates(type_set, triple_dict, resource_ids):
+def get_kgminer_predicates(type_set, triple_dict):
     for triples_k,triples_v in triple_dict.iteritems():
         predicate_list = []
+        sort_list = dict()
         for triple_v in triples_v:
             item1_v = type_set.get(triple_v[0], [])
             item2_v = type_set.get(triple_v[1], [])
@@ -161,20 +257,6 @@ def entity_threshold(resources):
                 break
         limit_entity[label] = ent_coded
     return limit_entity
-
-
-def relation_processor(relations):
-    predicate_set = []
-    relation_graph = {}
-    for item in relations:
-        if item[1] not in predicate_set:
-            predicate_set.append(item[1])
-        if item[0] not in relation_graph.keys():
-            relation_graph[item[0]] = [{'predicate':item[1], 'entity1':item[2], 'entity2':item[3], 'score':item[4]}]
-        else:
-            relation_graph[item[0]].extend([{'predicate': item[1], 'entity1': item[2], 'entity2': item[3],\
-                                            'score': item[4]}])
-    return relation_graph, predicate_set
 
 
 def relation_extractor_0hop(kb, id1, id2, label, relations, triple_k):
@@ -372,40 +454,6 @@ def relation_extractor_triples(resources, triples):
                 relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_2, triple_k)
                 relation_2 = relation_extractor_2hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_2, triple_k)
     return relation, relation_0, relation_2
-
-
-def get_dates(i1,date_ent_str):
-    v = i1[0]
-    dates_matched = []
-    if not isinstance(date_ent_str,datetime):
-        # u'1940-04-25T00:00:00'
-        date_ent = datetime.strptime(date_ent_str,"%Y-%m-%dT%H:%M:%S")
-    # print date_ent
-    # sys.exit(0)
-    # print date_ent.date()
-    if 'dbpedia' in v:
-        v = v.replace('page', 'resource')
-        # print v
-        try:
-            dq = ('SELECT distinct ?r ?o WHERE  {  ?r a owl:DatatypeProperty ; rdfs:range xsd:date . <' + str(
-                v) + '> ?r ?o .}')
-            # print dq
-            resultd = sparql.query(sparql_dbpedia, dq)
-            for i, row1 in enumerate(resultd):
-                values1 = sparql.unpack_row(row1)
-                # print values1[1],date_ent.date()
-                # sys.exit(0)
-                if values1[1] == date_ent.date():
-                    # print v, values1
-                    dates_matched.append([i1,values1])
-                else:
-                    year1 = str(values1[1]).split('-')[0]
-                    if year1 == str(date_ent.date().year):
-                        dates_matched.append([i1, values1])
-        except:
-            pass
-    # print dates_matched
-    return dates_matched
 
 
 if __name__ == '__main__':

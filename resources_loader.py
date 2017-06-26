@@ -16,7 +16,13 @@ def load_files():
     else:
         ambiverse_resources = {"a":"b"}
 
-    return file_triples, ambiverse_resources
+    if os.path.isfile('dataset/' + data_source + '/possible_predicate.json'):
+        with open('dataset/' + data_source + '/possible_predicate.json') as json_data:
+            possible_predicate = json.load(json_data)
+    else:
+        possible_predicate = {"a": "b"}
+
+    return file_triples, ambiverse_resources, possible_predicate
 
 
 def load_kgminer_resource():
@@ -28,10 +34,4 @@ def load_kgminer_resource():
     if os.path.isfile(KGMiner_data+'edge_types_id.json'):
         with open(KGMiner_data+'edge_types_id.json') as json_data:
             edge_id = json.load(json_data)
-
-    if os.path.isfile('dataset/' + data_source + '/possible_predicate.json'):
-        with open('dataset/' + data_source + '/possible_predicate.json') as json_data:
-            possible_predicate = json.load(json_data)
-    else:
-        possible_predicate = {"a": "b"}
-    return possible_predicate, nodes_id, edge_id
+    return nodes_id, edge_id

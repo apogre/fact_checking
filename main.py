@@ -1,15 +1,16 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
-from resources_loader import load_files , load_kgminer_resource
+from resources_loader import load_files, load_kgminer_resource
 from ambiverse_api import entity_parser
-from kb_query import get_entity_type, get_description, get_kgminer_predicates
+from kb_query import get_entity_type, get_description, get_kgminer_predicates, get_training_set
+from config import data_source, aux_verb, model_wv_g, rank_threshold, kgminer_predicate_threshold
+from KGMiner import remove_stats
+
 from nltk import word_tokenize
 import operator, json
 import collections, csv
 from datetime import datetime
-from config import data_source
 import os.path
 import pprint, sys, getopt
-from config import aux_verb, model_wv_g, rank_threshold , kgminer_predicate_threshold
 import numpy as np
 
 
@@ -22,13 +23,13 @@ def json_serial(obj):
 
 
 def word2vec_score(rel, triple_k):
-    score = []
-    try:
+    if model_wv_g:
+        score = []
         for r in rel.split():
             if r not in aux_verb:
                 score.extend([model_wv_g.similarity(r, trip) for trip in triple_k.split() if trip not in aux_verb])
         return round(np.mean(score), 3)
-    except:
+    else:
         return 0
 
 
@@ -59,22 +60,32 @@ def predicate_ranker(predicates, triple):
             phrase = get_description(predicate)
             if phrase:
                 ph = phrase[0][0]
-                print ph, ky
                 score = word2vec_score(ph, ky)
-                print score
                 predicate_ranked.append([predicate, score])
         sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
         threshold_sorted = [vals for vals in sorted_values if vals[1] >= kgminer_predicate_threshold]
         # print sorted_values
         predicate_KG[ky] = sorted_values
         predicate_KG_threshold[ky] = threshold_sorted
-    return predicate_KG , predicate_KG_threshold
+    return predicate_KG, predicate_KG_threshold
+
+
+def relation_processor(relations):
+    predicate_set = []
+    relation_graph = {}
+    for item in relations:
+        if item[1] not in predicate_set:
+            predicate_set.append(item[1])
+        if item[0] not in relation_graph.keys():
+            relation_graph[item[0]] = [{'predicate':item[1], 'entity1':item[2], 'entity2':item[3], 'score':item[4]}]
+        else:
+            relation_graph[item[0]].extend([{'predicate': item[1], 'entity1': item[2], 'entity2': item[3],\
+                                            'score': item[4]}])
+    return relation_graph, predicate_set
 
 
 def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, kgminer_predicate_flag, KGMiner, lpmln):
-    file_triples, ambiverse_resources = load_files()
-    if KGMiner:
-        possible_kgminer_predicate, nodes_id, edge_id = load_kgminer_resource()
+    file_triples, ambiverse_resources, possible_kgminer_predicate = load_files()
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
     for n, ne in enumerate(named_tags):
@@ -101,38 +112,27 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, kgminer_pre
         pprint.pprint(resource)
         if KGMiner:
             print "Link Prediction with KG_Miner"
-            entity_type_ontology, entity_type_resource, type_set_ontology_full, type_set_resource_full = \
-                get_entity_type(resource, triple_dict)
+            type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
             print "Type of Entities"
-            pprint.pprint(entity_type_ontology)
-            pprint.pprint(type_set_ontology_full)
-            # resource_type_set_ranked, resource_threshold_ranked = word2vec_ranker(type_set_resource_full, \
+            pprint.pprint(type_ontology)
+            pprint.pprint(type_ontology_full)
+            # resource_type_ranked, resource_threshold_ranked = word2vec_ranker(type_resource_full, \
             #                                                                       entity_dict, triple_dict)
-            # ontology_type_set_ranked, ontology_threshold_ranked = word2vec_ranker(type_set_ontology_full, entity_dict,\
+            # ontology_type_ranked, ontology_threshold_ranked = word2vec_ranker(type_ontology_full, entity_dict,\
             #                                                                       triple_dict)
             if sentence_id in possible_kgminer_predicate.keys():
                 kgminer_predicates = possible_kgminer_predicate[sentence_id]
             else:
-                kgminer_predicates = get_kgminer_predicates(entity_type_ontology, triple_dict, resource)
+                kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
                 possible_kgminer_predicate[sentence_id] = kgminer_predicates
                 kgminer_predicate_flag = True
-            print kgminer_predicates
-            kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates,triple_dict)
+            kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
+            print "Ranked Possible Predicates"
             print kgminer_predicate_ranked
-            print kgminer_predicate_threshold
-        #     # sys.exit(0)
-        #     try:
-        #         os.remove('KGMiner_data/poi.csv')
-        #         os.remove('KGMiner_data/predicate_probability.csv')
-        #     except:
-        #         pass
-        #     # print entity_type_ontology
-        #     # print training_entity_type
-        #     # print training_resource_type
-        #     # sys.exit(0)
-        #     predicate_results, training_data_set = KG_Miner_Extension.get_training_set(kgminer_predicates, \
-        #                                                             training_resource_type, training_entity_type, \
-        #                                                             triple_dict, resource_text)
+            remove_stats()
+            predicate_results, training_data_set = get_training_set(kgminer_predicate_ranked, type_resource_full,\
+                                                                    type_ontology_full, triple_dict, resource)
+
         #     output_linkprediction[id_list[n]] = predicate_results
         #     output_training_data[id_list[n]] = training_data_set
         if triple_flag:
@@ -154,7 +154,7 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, kgminer_pre
             if os.path.isfile('dataset/'+data_source+'possible_kgminer_predicate.json'):
                 os.remove('dataset/'+data_source+'possible_kgminer_predicate.json')
             with open('dataset/'+data_source+'/possible_kgminer_predicate.json', 'w') as fp:
-                json.dump(possible_kgminer_predicate, fp, default=json_serial)
+                json.dump(kgminer_predicate_ranked, fp, default=json_serial)
 
 
                     # sys.exit(0)

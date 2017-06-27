@@ -1,18 +1,19 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files, load_kgminer_resource
 from ambiverse_api import entity_parser
-from kb_query import get_entity_type, get_description, get_kgminer_predicates, get_training_set
-from config import data_source, aux_verb, model_wv_g, rank_threshold, kgminer_predicate_threshold
-from KGMiner import remove_stats
-
+from kb_query import get_entity_type, get_description, get_kgminer_predicates
+from config import data_source, aux_verb, rank_threshold, kgminer_predicate_threshold
+from KGMiner import get_training_set, invoke_kgminer
+from gensim.models import Word2Vec
 from nltk import word_tokenize
 import operator, json
 import collections, csv
 from datetime import datetime
-import os.path
+from os import path, getcwd, remove
 import pprint, sys, getopt
 import numpy as np
 
+load_word2vec = True
 
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
@@ -23,14 +24,20 @@ def json_serial(obj):
 
 
 def word2vec_score(rel, triple_k):
-    if model_wv_g:
+    global load_word2vec
+    if load_word2vec:
+        print "Loading Word2Vec"
+        model_wv_g = Word2Vec.load_word2vec_format("/home/apradhan/Google_Vectors/GoogleNews-vectors-negative300.bin", \
+                                                   binary=True)
+        load_word2vec = False
         score = []
-        for r in rel.split():
-            if r not in aux_verb:
-                score.extend([model_wv_g.similarity(r, trip) for trip in triple_k.split() if trip not in aux_verb])
-        return round(np.mean(score), 3)
-    else:
-        return 0
+        try:
+            for r in rel.split():
+                if r not in aux_verb:
+                    score.extend([model_wv_g.similarity(r, trip) for trip in triple_k.split() if trip not in aux_verb])
+            return round(np.mean(score), 3)
+        except:
+            return 0
 
 
 def word2vec_ranker(type_set, ent_dict):
@@ -60,7 +67,9 @@ def predicate_ranker(predicates, triple):
             phrase = get_description(predicate)
             if phrase:
                 ph = phrase[0][0]
+                print ph, ky
                 score = word2vec_score(ph, ky)
+                print score
                 predicate_ranked.append([predicate, score])
         sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
         threshold_sorted = [vals for vals in sorted_values if vals[1] >= kgminer_predicate_threshold]
@@ -84,13 +93,16 @@ def relation_processor(relations):
     return relation_graph, predicate_set
 
 
-def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, kgminer_predicate_flag, KGMiner, lpmln):
-    file_triples, ambiverse_resources, possible_kgminer_predicate = load_files()
+def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag, kgminer_predicate_flag, kgminer_output_flag, KGMiner, lpmln):
+    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output = load_files()
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
+    kgminer_evaluation = []
     for n, ne in enumerate(named_tags):
         sentence_id = id_list[n]
-        print sentence_id, sentence_lis[n], '\n'
+        true_label = true_labels[n]
+        sentence_check = sentence_lis[n]
+        print sentence_id, sentence_check, '\n'
         named_entities = get_nodes(ne)
         entity_dict = dict(named_entities)
         print "NER: "+str(entity_dict)
@@ -111,53 +123,85 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, kgminer_pre
         print "=================="
         pprint.pprint(resource)
         if KGMiner:
+            kg_output = []
             print "Link Prediction with KG_Miner"
-            type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
-            print "Type of Entities"
-            pprint.pprint(type_ontology)
-            pprint.pprint(type_ontology_full)
-            # resource_type_ranked, resource_threshold_ranked = word2vec_ranker(type_resource_full, \
-            #                                                                       entity_dict, triple_dict)
-            # ontology_type_ranked, ontology_threshold_ranked = word2vec_ranker(type_ontology_full, entity_dict,\
-            #                                                                       triple_dict)
-            if sentence_id in possible_kgminer_predicate.keys():
-                kgminer_predicates = possible_kgminer_predicate[sentence_id]
+            if sentence_id not in kgminer_output.keys():
+                type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
+                print "Type of Entities"
+                pprint.pprint(type_ontology)
+                pprint.pprint(type_ontology_full)
+                # resource_type_ranked, resource_threshold_ranked = word2vec_ranker(type_resource_full, \
+                #                                                                       entity_dict, triple_dict)
+                # ontology_type_ranked, ontology_threshold_ranked = word2vec_ranker(type_ontology_full, entity_dict,\
+                #                                                                       triple_dict)
+                if sentence_id in possible_kgminer_predicate.keys():
+                    kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
+                else:
+                    kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
+                    kgminer_predicate_flag = True
+                    kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
+                    possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+                print "Ranked Possible Predicates"
+                print kgminer_predicate_ranked
+                if not kgminer_predicate_flag:
+                    kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
+                                                      triple_dict, resource, sentence_id)
+                    if kgminer_status:
+                        predicate_result = invoke_kgminer()
+                        if predicate_result:
+                            kg_output = predicate_result.values()
+                            kgminer_output[sentence_id] = predicate_result
+                            kgminer_output_flag = True
+                        else:
+                            print "kgminer failed"
+                    else:
+                        kg_output = [2]
             else:
-                kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
-                possible_kgminer_predicate[sentence_id] = kgminer_predicates
-                kgminer_predicate_flag = True
-            kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
-            print "Ranked Possible Predicates"
-            print kgminer_predicate_ranked
-            remove_stats()
-            predicate_results, training_data_set = get_training_set(kgminer_predicate_ranked, type_resource_full,\
-                                                                    type_ontology_full, triple_dict, resource)
-
-        #     output_linkprediction[id_list[n]] = predicate_results
-        #     output_training_data[id_list[n]] = training_data_set
+                print kgminer_output[sentence_id]
+                kg_output = kgminer_output[sentence_id].values()
+            if kg_output:
+                kgminer_score = float(kg_output[0])
+                if kgminer_score < 0.5:
+                    predicted_label = 'T'
+                elif kgminer_score == 2:
+                    predicted_label = 'N'
+                else:
+                    predicted_label = 'F'
+                kgminer_evaluation.append([sentence_id, sentence_check, true_label, predicted_label])
         if triple_flag:
+            print getcwd()
             print "Updating Relation Triples"
-            if os.path.isfile('dataset/' + data_source + '/triples_raw.json'):
-                os.remove('dataset/' + data_source + '/triples_raw.json')
+            if path.isfile('dataset/' + data_source + '/triples_raw.json'):
+                remove('dataset/' + data_source + '/triples_raw.json')
             with open('dataset/' + data_source + '/triples_raw.json', 'w') as fp:
                 json.dump(file_triples, fp, default=json_serial)
 
         if ambiverse_flag:
             print "Updating Resources"
-            if os.path.isfile('dataset/' + data_source + '/ambiverse_resources.json'):
-                os.remove('dataset/' + data_source + '/ambiverse_resources.json')
+            if path.isfile('dataset/' + data_source + '/ambiverse_resources.json'):
+                remove('dataset/' + data_source + '/ambiverse_resources.json')
             with open('dataset/' + data_source + '/ambiverse_resources.json', 'w') as fp:
                 json.dump(ambiverse_resources, fp, default=json_serial)
 
         if kgminer_predicate_flag:
             print "Updating KGMiner Predicate List"
-            if os.path.isfile('dataset/'+data_source+'possible_kgminer_predicate.json'):
-                os.remove('dataset/'+data_source+'possible_kgminer_predicate.json')
+            if path.isfile('dataset/'+data_source+'possible_kgminer_predicate.json'):
+                remove('dataset/'+data_source+'possible_kgminer_predicate.json')
             with open('dataset/'+data_source+'/possible_kgminer_predicate.json', 'w') as fp:
-                json.dump(kgminer_predicate_ranked, fp, default=json_serial)
+                json.dump(possible_kgminer_predicate, fp, default=json_serial)
 
+        if kgminer_output_flag:
+            print "Updating KGMiner Output"
+            if path.isfile('dataset/' + data_source + 'kgminer_output.json'):
+                remove('dataset/' + data_source + 'kgminer_output.json')
+            with open('dataset/' + data_source + '/kgminer_output.json', 'w') as fp:
+                json.dump(kgminer_output, fp, default=json_serial)
 
-                    # sys.exit(0)
+    print kgminer_evaluation
+    with open('dataset/'+ data_source + '/evaluation.csv', 'wb') as csvfile:
+        datawriter = csv.writer(csvfile)
+        datawriter.writerows(kgminer_evaluation)
+
         # precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sentence_id, resource_text)
         # if precision_ent:
         #     precision_res = sum(precision_ent)/len(precision_ent)
@@ -240,7 +284,7 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, kgminer_pre
     #         with open(output_data+'/evaluation.json', 'w') as fp:
     #             json.dump(precision_recall_stats, fp, default=json_serial)
     #
-    #         with open(output_data+'/link_prediction.json', 'w') as fp:
+    #         with open(output_data+'/kgminer_output.json', 'w') as fp:
     #             json.dump(output_linkprediction, fp, default=json_serial)
     #
     #         with open(output_data+'/training_data.json', 'w') as fp:
@@ -285,13 +329,15 @@ def fact_checker(sentence_lis, id_list, triple_flag, ambiverse_flag, kgminer_pre
 
 
 if __name__ == "__main__":
-    with open('dataset/' + data_source + '/sentences_test.csv') as f:
+    with open('dataset/' + data_source + '/sentences.csv') as f:
         reader = csv.DictReader(f)
         sentences_list = []
         id_list = []
+        true_label = []
         for row in reader:
             sentence = row['sentence']
             sentences_list.append(row['sentence'])
+            true_label.append(row['label'])
             id_list.append(row['id'])
-        fact_checker(sentences_list, id_list, triple_flag=False, ambiverse_flag=False, kgminer_predicate_flag=False, \
-                     KGMiner=True, lpmln=False)
+        fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False, kgminer_predicate_flag=False,\
+                     kgminer_output_flag=False, KGMiner=True, lpmln=False)

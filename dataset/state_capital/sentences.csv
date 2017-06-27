@@ -13,6 +13,6 @@ id,sentence,label
 12,"Sacramento is the capital of California.",T
 13,"Little Rock is the capital of Arkansas.",T
 14,"Hartford is the capital of Connecticut.",T
-15,"Tucson is the capital of Arizona."
-16,"Denver is the capital of Arizona."
+15,"Tucson is the capital of Arizona.",F
+16,"Denver is the capital of Arizona.",F
 

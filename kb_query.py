@@ -11,7 +11,6 @@ import pandas
 from nltk.corpus import wordnet as wn
 import os
 from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata
-from KGMiner import get_test_data, csv_writer, poi_writer
 
 
 prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"
@@ -47,10 +46,11 @@ def get_description(entity_type):
     return type_values
 
 
-def kgminer_training_data(poi, qpart):
+def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
     {?url1 <http://dbpedia.org/ontology/' + poi[0] + '> ?url2} . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
+    print q_ts
     result = sparql.query(sparql_dbpedia, q_ts)
     training_set = [sparql.unpack_row(row_result) for row_result in result]
     return training_set
@@ -77,59 +77,10 @@ def or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, triple_v)
                     q_part_res = q_part_res + q_part_base_res + res_val + '>} UNION '
         else:
             q_part_res = ' .'
-        q_part = q_part + q_part_res
+        q_part += q_part_res
         q_part_base = ' { ?url2 rdf:type <http://dbpedia.org/ontology/'
         q_part_base_res = 'UNION { ?url2 dbo:type <http://dbpedia.org/ontology/'
     return q_part
-
-
-def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_threshold_ranked, triple_dict, resource_ids):
-    triple_predicates = {}
-    training_data_set = {}
-    for triples_k, triples_v in triple_dict.iteritems():
-        for triple_v in triples_v:
-            resource_v = [resource_ids.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
-            predicate_results = {}
-            q_part = or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, triple_v)
-            test_data = get_test_data(resource_v)
-            print test_data
-            if None not in test_data:
-                csv_writer([test_data], file_name='test_data')
-                for sent_pred in predicate_ranked.keys():
-                    predicate_of_interest = predicate_ranked[sent_pred]
-                    for poi in predicate_of_interest:
-                        poi_writer(poi)
-                        training_set = kgminer_training_data()
-                        if len(training_set) > 5:
-                            training_set = sum(training_set, [])
-                            train_ents = [val.split('/')[-1] for val in training_set]
-                            word_vec_train = word2vec_dbpedia(train_ents, resource_v)
-                            if len(word_vec_train) > 5:
-                                word_vec_train = sum(word_vec_train, [])
-                                node_ids = entity_id_finder(word_vec_train)
-                                training_data, test_data = train_data_csv(word_vec_train, node_ids, resource_v)
-                                if training_data:
-                                    print "Executing Classification"
-                                    csv_writer(training_data, file_name='training_data')
-                                    os.chdir('KGMiner')
-                                    subprocess.call('./run_test.sh')
-                                    try:
-                                        with open('../KGMiner_data/predicate_probability.csv') as f:
-                                            reader = csv.DictReader(f)
-                                            for i, row in enumerate(reader):
-                                                predicate_results[row['poi']] = row['score']
-                                    except:
-                                        pass
-                                    print predicate_results
-                                    training_data_set[
-                                        (str(triples_k) + '-' + str(triple_v)) + '-' + str(poi)] = word_vec_train
-                                    os.chdir('..')
-                            else:
-                                print "Insufficient Training Set"
-
-            triple_predicates[(str(triples_k) + '-' + str(triple_v))] = predicate_results
-
-    return triple_predicates, training_data_set
 
 
 def get_entity_type(resources, triples):
@@ -149,9 +100,10 @@ def get_entity_type(resources, triples):
                     key = item1_v.get('dbpedia_id', None)
                     if key not in type_set_ontology.keys():
                         q_type = prefixes_dbpedia+' PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?t ?t1 \
-                        WHERE {{entity:'+key+' dbo:type ?t } UNION { entity:'+key+' rdf:type ?t }. ?t rdfs:subClassOf \
-                        ?t1 . FILTER(STRSTARTS(STR(?t), "http://dbpedia.org/ontology") || STRSTARTS(STR(?t), \
-                        "http://dbpedia.org/resource")).}'
+                        WHERE {{<http://dbpedia.org/resource/'+key+'> dbo:type ?t } UNION {\
+                         <http://dbpedia.org/resource/'+key+'> rdf:type ?t }. ?t rdfs:subClassOf ?t1 . \
+                         FILTER(STRSTARTS(STR(?t), "http://dbpedia.org/ontology") || STRSTARTS(STR(?t), \
+                         "http://dbpedia.org/resource")).}'
                         result = sparql.query(sparql_dbpedia, q_type)
                         type_values = [sparql.unpack_row(row_result) for row_result in result]
                         leaves = get_leaf_nodes(type_values)

@@ -1,16 +1,7 @@
 # -*- coding: utf-8 -*- 
 
-from nltk.tree import *
 import sparql
-from difflib import SequenceMatcher
-
-import operator
-
-import time, sys, re, csv
-import pandas
-from nltk.corpus import wordnet as wn
-import os
-from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata
+from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata, sparql_dbpedia_local
 
 
 prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"
@@ -48,7 +39,7 @@ def get_description(entity_type):
 
 def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-    {?url1 <http://dbpedia.org/ontology/' + poi[0] + '> ?url2} . ' + q_part + \
+    {?url2 <http://dbpedia.org/ontology/' + poi[0] + '> ?url1} . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
     print q_ts
     result = sparql.query(sparql_dbpedia, q_ts)
@@ -106,6 +97,9 @@ def get_entity_type(resources, triples):
                          "http://dbpedia.org/resource")).}'
                         result = sparql.query(sparql_dbpedia, q_type)
                         type_values = [sparql.unpack_row(row_result) for row_result in result]
+                        if not type_values:
+                            result = sparql.query(sparql_dbpedia_local, q_type)
+                            type_values = [sparql.unpack_row(row_result) for row_result in result]
                         leaves = get_leaf_nodes(type_values)
                         type_ontology = [val.split('/')[-1] for val in leaves if 'ontology' in val]
                         type_resource = [val.split('/')[-1] for val in leaves if 'resource' in val]

@@ -32,12 +32,12 @@ def load_files():
 
 
 def load_kgminer_resource():
-    nodes_id, edge_id, possible_predicate = dict() , dict(), dict()
-    if os.path.isfile(KGMiner_data+'nodes_id.json'):
-        with open(KGMiner_data+'nodes_id.json') as json_data:
+    nodes_id, edge_id = dict(), dict()
+    if os.path.isfile(KGMiner_data+'/nodes_id.json'):
+        with open(KGMiner_data+'/nodes_id.json') as json_data:
             nodes_id = json.load(json_data)
 
-    if os.path.isfile(KGMiner_data+'edge_types_id.json'):
-        with open(KGMiner_data+'edge_types_id.json') as json_data:
+    if os.path.isfile(KGMiner_data+'/edge_types_id.json'):
+        with open(KGMiner_data+'/edge_types_id.json') as json_data:
             edge_id = json.load(json_data)
     return nodes_id, edge_id

@@ -14,6 +14,7 @@ import pprint, sys, getopt
 import numpy as np
 
 load_word2vec = True
+model_wv_g = None
 
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
@@ -25,19 +26,20 @@ def json_serial(obj):
 
 def word2vec_score(rel, triple_k):
     global load_word2vec
+    global model_wv_g
     if load_word2vec:
         print "Loading Word2Vec"
         model_wv_g = Word2Vec.load_word2vec_format("/home/apradhan/Google_Vectors/GoogleNews-vectors-negative300.bin", \
                                                    binary=True)
         load_word2vec = False
-        score = []
-        try:
-            for r in rel.split():
-                if r not in aux_verb:
-                    score.extend([model_wv_g.similarity(r, trip) for trip in triple_k.split() if trip not in aux_verb])
-            return round(np.mean(score), 3)
-        except:
-            return 0
+    score = []
+    try:
+        for r in rel.split():
+            if r not in aux_verb:
+                score.extend([model_wv_g.similarity(r, trip) for trip in triple_k.split() if trip not in aux_verb])
+        return round(np.mean(score), 3)
+    except:
+        return 0
 
 
 def word2vec_ranker(type_set, ent_dict):
@@ -67,9 +69,7 @@ def predicate_ranker(predicates, triple):
             phrase = get_description(predicate)
             if phrase:
                 ph = phrase[0][0]
-                print ph, ky
                 score = word2vec_score(ph, ky)
-                print score
                 predicate_ranked.append([predicate, score])
         sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
         threshold_sorted = [vals for vals in sorted_values if vals[1] >= kgminer_predicate_threshold]
@@ -138,12 +138,13 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                     kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
                 else:
                     kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
-                    kgminer_predicate_flag = True
                     kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
-                    possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+                    if kgminer_predicate_ranked:
+                        kgminer_predicate_flag = True
+                        possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
                 print "Ranked Possible Predicates"
                 print kgminer_predicate_ranked
-                if not kgminer_predicate_flag:
+                if not kgminer_predicate_flag and kgminer_predicate_ranked.values()[0]:
                     kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
                                                       triple_dict, resource, sentence_id)
                     if kgminer_status:
@@ -156,6 +157,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                             print "kgminer failed"
                     else:
                         kg_output = [2]
+                else:
+                    predicted_label = 'A'
             else:
                 print kgminer_output[sentence_id]
                 kg_output = kgminer_output[sentence_id].values()
@@ -167,7 +170,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                     predicted_label = 'N'
                 else:
                     predicted_label = 'F'
-                kgminer_evaluation.append([sentence_id, sentence_check, true_label, predicted_label])
+
+            kgminer_evaluation.append([sentence_id, sentence_check, true_label, predicted_label])
         if triple_flag:
             print getcwd()
             print "Updating Relation Triples"
@@ -198,9 +202,10 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                 json.dump(kgminer_output, fp, default=json_serial)
 
     print kgminer_evaluation
-    with open('dataset/'+ data_source + '/evaluation.csv', 'wb') as csvfile:
-        datawriter = csv.writer(csvfile)
-        datawriter.writerows(kgminer_evaluation)
+    if kgminer_evaluation:
+        with open('dataset/'+ data_source + '/evaluation.csv', 'wb') as csvfile:
+            datawriter = csv.writer(csvfile)
+            datawriter.writerows(kgminer_evaluation)
 
         # precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sentence_id, resource_text)
         # if precision_ent:

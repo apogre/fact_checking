@@ -1,5 +1,4 @@
 import csv
-import sys
 from os import listdir, path, remove, chdir, getcwd
 import subprocess
 from gensim.models import Word2Vec
@@ -9,22 +8,22 @@ from resources_loader import load_kgminer_resource
 from kb_query import or_query_prep, kgminer_training_data
 from shutil import copyfile
 
-nodes_id, edge_id = load_kgminer_resource()
 load_dbpedia_word2vec = True
+load_encodings = True
 model_wv = None
+nodes_id, edge_id = dict(), dict()
 
 
 def invoke_kgminer():
     predicate_results = dict()
     print "Executing KGMiner"
-    if path.isfile(KGMiner_data + 'predicate_probability.csv'):
-        remove(KGMiner_data + 'predicate_probability.csv')
+    if path.isfile(KGMiner_data + '/predicate_probability.csv'):
+        remove(KGMiner_data + '/predicate_probability.csv')
     chdir('KGMiner')
     subprocess.call('./run_test.sh')
     chdir('..')
-    print getcwd()
-    if path.isfile(KGMiner_data + 'predicate_probability.csv'):
-        with open(KGMiner_data + 'predicate_probability.csv') as f:
+    if path.isfile(KGMiner_data + '/predicate_probability.csv'):
+        with open(KGMiner_data + '/predicate_probability.csv') as f:
             reader = csv.DictReader(f)
             for i, row in enumerate(reader):
                 predicate_results[row['poi']] = row['score']
@@ -40,7 +39,7 @@ def write_to_kgminer(poi, q_part, resource_v, sentence_id):
     word_vec_train = list(set(map(tuple, word_vec_train)))
     word_vec_train = map(list, word_vec_train)
     print word_vec_train
-    if word_vec_train:
+    if len(word_vec_train)>5:
         csv_writer(word_vec_train, data_source + '/' + sentence_id + data_source)
         word_vec_train = sum(word_vec_train, [])
         node_ids = entity_id_finder(word_vec_train)
@@ -55,15 +54,21 @@ def write_to_kgminer(poi, q_part, resource_v, sentence_id):
 
 def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_threshold_ranked, triple_dict, resource_ids,\
                      sentence_id):
+    global load_encodings, nodes_id, edge_id
+    if load_encodings:
+        print "Loading Nodes & Edges Id"
+        nodes_id, edge_id = load_kgminer_resource()
+        load_encodings = False
+
     for triples_k, triples_v in triple_dict.iteritems():
         for triple_v in triples_v:
             resource_v = [resource_ids.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
             q_part = or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, triple_v)
             test_data = get_test_data(resource_v)
+            predicate_of_interest = predicate_ranked.values()
             print test_data
-            if None not in test_data:
+            if None not in test_data and predicate_of_interest:
                 csv_writer([test_data], file_name='test_data')
-                predicate_of_interest = predicate_ranked.values()
                 poi = predicate_of_interest[0][0]
                 poi_writer(poi)
                 training_files = listdir(KGMiner_data+'/'+data_source)
@@ -100,7 +105,7 @@ def poi_writer(poi):
 
 
 def csv_writer(input_data, file_name):
-    with open(KGMiner_data+file_name+'.csv', 'wb') as csvfile:
+    with open(KGMiner_data+'/'+file_name+'.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
         for data in input_data:
             try:
@@ -139,7 +144,7 @@ def word2vec_dbpedia(train_ents, resource_v):
         try:
             sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
             sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
-            if sim1 > 0.15 and sim2 > 0.15:
+            if sim1 > 0.10 and sim2 > 0.10:
                 sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
                 sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
                 if sim1_1 > sim1 and sim2_1>sim2:

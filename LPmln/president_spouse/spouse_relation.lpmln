@@ -18,3 +18,9 @@
 
 52 placeOfBurial(b,a) :- spouse(a,e), restingPlace(b,e).
 19 placeOfBurial(b,a) :- spouse(a,e), deathPlace(b,e).
+
+
+child(na,ba).
+child(ma,ba).
+child(na,mi).
+child(ma,mi).

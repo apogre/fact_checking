@@ -105,9 +105,10 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         print "=================="
         pprint.pprint(resource)
         # get poi
+        type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, \
+                                                                                               triple_dict)
         if sentence_id not in possible_kgminer_predicate.keys():                
-            type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource,\
-                                                                                                           triple_dict)
+
             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
             kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates,\
                                                                                                  triple_dict)

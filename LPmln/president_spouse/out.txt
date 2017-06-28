@@ -1,4 +1,9 @@
-married(X,Y) :-  child(Z,X) , child(Z,Y) , X!=Y .
-married(X,Y) :- mother(Y,Z) , father(X,Z).
-married(X,Y) :- married(Y,X).
-sibling(X,Y) :- child(X,Z), child(Y,Z).
+unsat(0,"54.000000") :- child(f,a), child(f,b),not spouse(a,b) .
+spouse(a,b) :- child(f,a), child(f,b), not unsat(0,"54.000000").
+:~unsat(0,"54.000000"). [54000@0,0]
+unsat(1,"a") :- not child(ma,ba).
+child(ma,ba) :- not unsat(1,"a").
+:~ unsat(1,"a"). [1@1,1]
+unsat(2,"a") :- not child(ma,mi).
+child(ma,mi) :- not unsat(2,"a").
+:~ unsat(2,"a"). [1@1,2]

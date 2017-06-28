@@ -3,10 +3,6 @@
 1 married(X,Y) :- parent(Y,Z) , parent(X,Z).
 1 married(X,Y) :- married(Y,X).
 
-0.5 mother(X,Y) :- child(Y,X).
-0.5 father(X,Y) :- child(Y,X).
-
-1 sibling(X,Y) :- child(X,Z), child(Y,Z).
 
 1 child(ma,ba).
 1 child(ma,mi).

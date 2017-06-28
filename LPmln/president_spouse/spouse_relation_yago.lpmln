@@ -1,9 +1,7 @@
 
-99 spouse(a,b) :- spouse(b,a).
+99 spouse(A,B) :- spouse(B,A).
 
-54 spouse(a,b) :- child(f,a), child(f,b).
+54 spouse(A,B) :- child(F,A), child(F,B).
 
-
-child(ma,ba).
-child(ma,mi).
-
+56 child(B,A) :- spouse(F,A), child(B,F).
+31 child(B,E) :- spouse(A,E), child(B,A).

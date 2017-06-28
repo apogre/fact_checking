@@ -1,26 +1,24 @@
 
-90 spouse(a,b) :- spouse(b,a).
-18 partner(b,a) :- spouse(a,b).
-
-66 lastAppearance(b,a) :- spouse(f,a), lastAppearance(b,f).
-
-66 child(b,a) :- spouse(f,a), parent(f,b).
-45 child(b,a) :- spouse(a,f), parent(f,b).
-
-56 child(b,a) :- spouse(f,a), child(b,f).
-31 child(b,e) :- spouse(a,e), child(b,a).
-
-47 child(b,a) :- spouse(f,a), relation(f,b).
-35 child(b,a) :- spouse(a,f), relation(f,b).
-
-33 child(b,a) :- spouse(f,a), relative(f,b).
-29 child(b,a) :- spouse(a,f), relative(f,b).
-
-52 placeOfBurial(b,a) :- spouse(a,e), restingPlace(b,e).
-19 placeOfBurial(b,a) :- spouse(a,e), deathPlace(b,e).
 
 
-child(na,ba).
-child(ma,ba).
-child(na,mi).
-child(ma,mi).
+
+90 spouse(A,B) :- spouse(B,A).
+18 partner(B,A) :- spouse(A,B).
+
+66 lastAppearance(B,A) :- spouse(F,A), lastAppearance(B,F).
+
+66 child(B,A) :- spouse(F,A), parent(F,B).
+45 child(B,A) :- spouse(A,F), parent(F,B).
+
+56 child(B,A) :- spouse(F,A), child(B,F).
+31 child(B,E) :- spouse(A,E), child(B,A).
+
+47 child(B,A) :- spouse(F,A), relation(F,B).
+35 child(B,A) :- spouse(A,F), relation(F,B).
+
+33 child(B,A) :- spouse(F,A), relative(F,B).
+29 child(B,A) :- spouse(A,F), relative(F,B).
+
+52 placeOfBurial(B,A) :- spouse(A,E), restingPlace(B,E).
+19 placeOfBurial(B,A) :- spouse(A,E), deathPlace(B,E).
+

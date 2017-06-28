@@ -1,5 +1,5 @@
 import csv
-from config import data_source, evidence_threshold
+from config import data_source, evidence_threshold, rule_threshold
 import subprocess
 import sys
 import re
@@ -9,6 +9,16 @@ from kb_query import relation_extractor_0hop, relation_extractor_1hop, relation_
 
 
 lemmatizer = WordNetLemmatizer()
+
+
+def get_rules(poi):
+    with open('LPmln/' + data_source + '/spouse_relation.csv') as f:
+        reader = csv.DictReader(f)
+        rules = []
+        confidence = []
+        for row in reader:
+            if row['PCA Confidence'] > rule_threshold:
+                print row['Rule']  ,   row['PCA Confidence']
 
 
 def relation_extractor_triples(resources, triples):

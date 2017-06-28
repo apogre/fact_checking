@@ -11,7 +11,7 @@ import csv
 
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, evidence_writer, inference
+from lpmln import relation_extractor_triples, evidence_writer, inference, get_rules
 from resource_writer import update_resources
 
 load_word2vec = True
@@ -104,31 +104,28 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         print "Resource Extractor"
         print "=================="
         pprint.pprint(resource)
+        # get poi
+        if sentence_id not in possible_kgminer_predicate.keys():                
+            type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource,\
+                                                                                                           triple_dict)
+            kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
+            kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates,\
+                                                                                                 triple_dict)
+            if kgminer_predicate_ranked:
+                kgminer_predicate_flag = True
+                possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+        else:
+            kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
+
+        print "Ranked Possible Predicates"
+        print kgminer_predicate_ranked
+        predicate_of_interest = kgminer_predicate_ranked.values()[0]
+                
         if KGMiner:
             kg_output = []
             print "Link Prediction with KG_Miner"
             if sentence_id not in kgminer_output.keys():
-                type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource,\
-                                                                                                       triple_dict)
-                print "Type of Entities"
-                pprint.pprint(type_ontology)
-                pprint.pprint(type_ontology_full)
-                # resource_type_ranked, resource_threshold_ranked = word2vec_ranker(type_resource_full, \
-                #                                                                       entity_dict, triple_dict)
-                # ontology_type_ranked, ontology_threshold_ranked = word2vec_ranker(type_ontology_full, entity_dict,\
-                #                                                                       triple_dict)
-                if sentence_id in possible_kgminer_predicate.keys():
-                    kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
-                else:
-                    kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
-                    kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates,\
-                                                                                             triple_dict)
-                    if kgminer_predicate_ranked:
-                        kgminer_predicate_flag = True
-                        possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
-                print "Ranked Possible Predicates"
-                print kgminer_predicate_ranked
-                if not kgminer_predicate_flag and kgminer_predicate_ranked.values()[0]:
+                if kgminer_predicate_ranked.values()[0]:
                     kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
                                                       triple_dict, resource, sentence_id)
                     if kgminer_status:
@@ -176,6 +173,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                 sorted_predicates = lpmln_predicate.get(sentence_id, {})
             print sorted_predicates
             evidence_writer(sorted_predicates, sentence_id)
+            print predicate_of_interest
+            get_rules(predicate_of_interest)
             probability = inference(sentence_id)
             lpmln_evaluation.append([probability.extend(sentence_id)])
 

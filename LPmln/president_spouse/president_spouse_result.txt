@@ -1,8 +1,8 @@
 lpmln2cl
 Clingo executed with command:
-clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=married LPmln/president_spouse/evidence/9president_spouse_filter.db 
+clingo /home/ap/PP_Labs/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=married LPmln/president_spouse/evidence/9president_spouse_filter.db 
 clingo version 4.5.4
-Reading from ...me/apradhan/proj/fact_checking/out.txt ...
+Reading from /home/ap/PP_Labs/fact_checking/out.txt ...
 Solving...
 Answer: 1
 mother(mi,na) mother(mi,ma) father(ba,na) father(ba,ma) child(na,ba) child(ma,ba) child(na,mi) child(ma,mi) birth_place(un,mi) father(mi,na) father(mi,ma) mother(ba,na) mother(ba,ma) unsat(0,"2.000000",mi,ba,na) unsat(0,"2.000000",mi,ba,ma) unsat(0,"2.000000",ba,mi,na) unsat(0,"2.000000",ba,mi,ma) unsat(1,"1.000000",ba,mi,na) unsat(1,"1.000000",ba,ba,na) unsat(1,"1.000000",ba,mi,ma) unsat(1,"1.000000",ba,ba,ma) unsat(1,"1.000000",mi,mi,na) unsat(1,"1.000000",mi,ba,na) unsat(1,"1.000000",mi,mi,ma) unsat(1,"1.000000",mi,ba,ma) unsat(6,"1.000000",na,na,ba) unsat(6,"1.000000",ma,na,ba) unsat(6,"1.000000",na,ma,ba) unsat(6,"1.000000",ma,ma,ba) unsat(6,"1.000000",na,na,mi) unsat(6,"1.000000",ma,na,mi) unsat(6,"1.000000",na,ma,mi) unsat(6,"1.000000",ma,ma,mi)
@@ -12563,5 +12563,5 @@ OPTIMUM FOUND
 Models       : 3136  
   Optimum    : yes
 Calls        : 1
-Time         : 0.257s (Solving: 0.11s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.250s
+Time         : 0.922s (Solving: 0.46s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.500s

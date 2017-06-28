@@ -1,0 +1,18 @@
+Rule,Support ratio,Head coverage,Confidence,PCA Confidence,Support,Body size,PCA body size,Functional variable,PCA estimation,Applicable,Hit
+?a <dbo:spouse> ?b => ?a <dbo:relative> ?b,0.000005261,0.010828977,0.002882131,0.083573487,58,20124,694,?b,0,0,0
+?a <dbo:spouse> ?b => ?a <dbo:child> ?b,0.000011248,0.01585475,0.006161797,0.126659857,124,20124,979,?b,0,0,0
+?e <dbo:birthPlace> ?b ?e <dbo:spouse> ?a => ?a <dbo:placeOfBurial> ?b,0.000000454,0.010060362,0.00016302,0.147058824,5,30671,34,?a,0.9467609774,1,1
+?b <dbo:spouse> ?a => ?a <dbo:partner> ?b,0.000001996,0.028387097,0.001093222,0.18487395,22,20124,119,?b,0,0,0
+?e <dbo:deathPlace> ?b ?e <dbo:spouse> ?a => ?a <dbo:placeOfBurial> ?b,0.000000726,0.016096579,0.000516762,0.19047619,8,15481,42,?a,2.041851843,1,1
+?b <dbo:relative> ?f ?f <dbo:spouse> ?a => ?a <dbo:child> ?b,0.000014242,0.020074159,0.145640074,0.297348485,157,1078,528,?b,1.022400429,1,1
+?e <dbo:child> ?b ?e <dbo:spouse> ?a => ?a <dbo:child> ?b,0.00011357,0.160081831,0.310208127,0.310208127,1252,4036,4036,?b,0.4006512912,1,1
+?b <dbo:relative> ?f ?a <dbo:spouse> ?f => ?a <dbo:child> ?b,0.000017144,0.024165708,0.122093023,0.33041958,189,1548,572,?b,1.441727044,1,1
+?b <dbo:relation> ?f ?f <dbo:spouse> ?a => ?a <dbo:child> ?b,0.000007438,0.010484593,0.152985075,0.356521739,82,536,230,?b,1.550914899,1,1
+?b <dbo:parent> ?f ?f <dbo:spouse> ?a => ?a <dbo:child> ?b,0.000047895,0.067510549,0.051795174,0.452054795,528,10194,1168,?b,0.5520082724,1,1
+?b <dbo:relation> ?f ?a <dbo:spouse> ?f => ?a <dbo:child> ?b,0.000008708,0.012274645,0.194726166,0.470588235,96,493,204,?b,2.32276726,1,1
+?e <dbo:restingPlace> ?b ?e <dbo:spouse> ?a => ?a <dbo:placeOfBurial> ?b,0.000000816,0.018108652,0.00283197,0.529411765,9,3178,17,?a,4.719540919,1,1
+?f <dbo:child> ?b ?a <dbo:spouse> ?f => ?a <dbo:child> ?b,0.000115565,0.16289477,0.5679893,0.5679893,1274,2243,2243,?b,0.7901115838,1,1
+?e <dbo:lastAppearance> ?b ?e <dbo:spouse> ?a => ?a <dbo:lastAppearance> ?b,0.000008436,0.055192878,0.336956522,0.64137931,93,276,145,?a,74.54321048,1,1
+?b <dbo:parent> ?f ?a <dbo:spouse> ?f => ?a <dbo:child> ?b,0.000062862,0.088607595,0.06706668,0.663793103,693,10333,1044,?b,0.8249330119,1,1
+?f <dbo:lastAppearance> ?b ?a <dbo:spouse> ?f => ?a <dbo:lastAppearance> ?b,0.000009071,0.059347181,0.540540541,0.666666667,100,185,150,?a,80.15398976,1,1
+?b <dbo:spouse> ?a => ?a <dbo:spouse> ?b,0.000954457,0.522858279,0.522858279,0.907694962,10522,20124,11592,?b,0,0,0

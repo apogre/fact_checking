@@ -1,0 +1,20 @@
+
+90 spouse(a,b) :- spouse(b,a).
+18 partner(b,a) :- spouse(a,b).
+
+66 lastAppearance(b,a) :- spouse(f,a), lastAppearance(b,f).
+
+66 child(b,a) :- spouse(f,a), parent(f,b).
+45 child(b,a) :- spouse(a,f), parent(f,b).
+
+56 spouse(f,a) :- child(b,a) , child(b,f).
+31 spouse(a,e) :- child(b,e)  , child(b,a).
+
+47 child(b,a) :- spouse(f,a), relation(f,b).
+35 child(b,a) :- spouse(a,f), relation(f,b).
+
+33 child(b,a) :- spouse(f,a), relative(f,b).
+29 child(b,a) :- spouse(a,f), relative(f,b).
+
+52 placeOfBurial(b,a) :- spouse(a,e), restingPlace(b,e).
+19 placeOfBurial(b,a) :- spouse(a,e), deathPlace(b,e).

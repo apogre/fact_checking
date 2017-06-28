@@ -1,6 +1,0 @@
-child(jo,gr).
-father(ca,jo).
-child(ca1,ca).
-parent(gr,ca1).
-sibling(ca1,jo).
-father(ca,ca1).

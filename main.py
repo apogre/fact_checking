@@ -1,27 +1,21 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
-from resources_loader import load_files, load_kgminer_resource
+from resources_loader import load_files
 from ambiverse_api import entity_parser
 from kb_query import get_entity_type, get_description, get_kgminer_predicates
 from config import data_source, aux_verb, rank_threshold, kgminer_predicate_threshold
 from KGMiner import get_training_set, invoke_kgminer
 from gensim.models import Word2Vec
 from nltk import word_tokenize
-import operator, json
-import collections, csv
-from datetime import datetime
-from os import path, getcwd, remove
-import pprint, sys, getopt
+import operator
+import csv
+
+import pprint
 import numpy as np
+from lpmln import relation_extractor_triples, evidence_writer, inference
+from resource_writer import update_resources
 
 load_word2vec = True
 model_wv_g = None
-
-def json_serial(obj):
-    """JSON serializer for objects not serializable by default json code"""
-    if isinstance(obj, datetime):
-        serial = obj.isoformat()
-        return serial
-    raise TypeError ("Type not serializable")
 
 
 def word2vec_score(rel, triple_k):
@@ -79,25 +73,13 @@ def predicate_ranker(predicates, triple):
     return predicate_KG, predicate_KG_threshold
 
 
-def relation_processor(relations):
-    predicate_set = []
-    relation_graph = {}
-    for item in relations:
-        if item[1] not in predicate_set:
-            predicate_set.append(item[1])
-        if item[0] not in relation_graph.keys():
-            relation_graph[item[0]] = [{'predicate':item[1], 'entity1':item[2], 'entity2':item[3], 'score':item[4]}]
-        else:
-            relation_graph[item[0]].extend([{'predicate': item[1], 'entity1': item[2], 'entity2': item[3],\
-                                            'score': item[4]}])
-    return relation_graph, predicate_set
-
-
-def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag, kgminer_predicate_flag, kgminer_output_flag, KGMiner, lpmln):
-    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output = load_files()
+def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
+                 lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln):
+    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate = load_files()
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
     kgminer_evaluation = []
+    lpmln_evaluation = []
     for n, ne in enumerate(named_tags):
         sentence_id = id_list[n]
         true_label = true_labels[n]
@@ -126,7 +108,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             kg_output = []
             print "Link Prediction with KG_Miner"
             if sentence_id not in kgminer_output.keys():
-                type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
+                type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource,\
+                                                                                                       triple_dict)
                 print "Type of Entities"
                 pprint.pprint(type_ontology)
                 pprint.pprint(type_ontology_full)
@@ -138,7 +121,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                     kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
                 else:
                     kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
-                    kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
+                    kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates,\
+                                                                                             triple_dict)
                     if kgminer_predicate_ranked:
                         kgminer_predicate_flag = True
                         possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
@@ -170,171 +154,50 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                     predicted_label = 'N'
                 else:
                     predicted_label = 'F'
-
             kgminer_evaluation.append([sentence_id, sentence_check, true_label, predicted_label])
-        if triple_flag:
-            print getcwd()
-            print "Updating Relation Triples"
-            if path.isfile('dataset/' + data_source + '/triples_raw.json'):
-                remove('dataset/' + data_source + '/triples_raw.json')
-            with open('dataset/' + data_source + '/triples_raw.json', 'w') as fp:
-                json.dump(file_triples, fp, default=json_serial)
 
-        if ambiverse_flag:
-            print "Updating Resources"
-            if path.isfile('dataset/' + data_source + '/ambiverse_resources.json'):
-                remove('dataset/' + data_source + '/ambiverse_resources.json')
-            with open('dataset/' + data_source + '/ambiverse_resources.json', 'w') as fp:
-                json.dump(ambiverse_resources, fp, default=json_serial)
+        if lpmln:
+            print "Executing LPMLN"
+            if sentence_id not in lpmln_predicate.keys():
+                relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict)
+                unique_predicates = [evidence[1] for evidence in relation_ent]
+                unique_predicates = list(set(unique_predicates))
+                relation = triple_dict.keys()[0]
+                scored_predicates = [[unique_predicate, word2vec_score(unique_predicate, relation)] for unique_predicate \
+                                     in unique_predicates]
+                predicate_dict = dict(scored_predicates)
+                print predicate_dict
+                for ev in relation_ent:
+                    ev.append(predicate_dict.get(ev[1], 0))
+                sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
+                lpmln_predicate[sentence_id] = sorted_predicates
+                lpmln_predicate_flag = True
+            else:
+                sorted_predicates = lpmln_predicate.get(sentence_id, {})
+            print sorted_predicates
+            evidence_writer(sorted_predicates, sentence_id)
+            probability = inference(sentence_id)
+            lpmln_evaluation.append([probability.extend(sentence_id)])
 
-        if kgminer_predicate_flag:
-            print "Updating KGMiner Predicate List"
-            if path.isfile('dataset/'+data_source+'possible_kgminer_predicate.json'):
-                remove('dataset/'+data_source+'possible_kgminer_predicate.json')
-            with open('dataset/'+data_source+'/possible_kgminer_predicate.json', 'w') as fp:
-                json.dump(possible_kgminer_predicate, fp, default=json_serial)
-
-        if kgminer_output_flag:
-            print "Updating KGMiner Output"
-            if path.isfile('dataset/' + data_source + 'kgminer_output.json'):
-                remove('dataset/' + data_source + 'kgminer_output.json')
-            with open('dataset/' + data_source + '/kgminer_output.json', 'w') as fp:
-                json.dump(kgminer_output, fp, default=json_serial)
+        update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
+                         kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
+                         lpmln_predicate, kgminer_output)
 
     print kgminer_evaluation
     if kgminer_evaluation:
-        with open('dataset/'+ data_source + '/evaluation.csv', 'wb') as csvfile:
+        with open('dataset/'+ data_source + '/kgminer_evaluation.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(kgminer_evaluation)
 
-        # precision_ent, recall_ent, entity_matched = evaluation.precision_recall_entities(sentence_id, resource_text)
-        # if precision_ent:
-        #     precision_res = sum(precision_ent)/len(precision_ent)
-        # else:
-        #     precision_res = 0
-        # if recall_ent:
-        #     recall_res = sum(recall_ent)/len(recall_ent)
-        # else:
-        #     recall_res = 0
-        # relation_ent, relation_ent_0, relation_ent_2 = fact_check.relation_extractor_triples(resource_text, triple_dict)
-        # print relation_ent
-        # if not relation_ent:
-        #     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-        #     ne_s, pos_s, dep_s = fact_check.st_tagger(sentence_list)
-        #     verb_entity = fact_check.verb_entity_matcher(dep_s)
-        #     relation_ent, rel_count = fact_check.relation_extractor_all(resource_text, verb_entity[n])
-        #     # print relation_ent
-            # sys.exit(0)
-        # print "Precision & Recall for Resource Extractor"
-        # print "-----------------------------------------"
-        # relations_0,  predicate_set_0 = fact_check.relation_processor(relation_ent_0)
-        # relations, predicate_set = fact_check.relation_processor(relation_ent)
-        # relations_2,  predicate_set_2 = fact_check.relation_processor(relation_ent_2)
-        # print "0-hop Groundings"
-        # print "================"
-        # print relation_ent_0
-        # print "0-hop Unique Predicates"
-        # print "======================="
-        # print predicate_set_0
-        # print "1-hop Groundings"
-        # print "================"
-        # print relation_ent
-        # print "1-hop Unique Predicates"
-        # print "======================="
-        # print predicate_set
-        # # print "2-hop Groundings"
-        # # print "================"
-        # # print relation_ent_2
-        # # print "2-hop Unique Predicates"
-        # # print "======================="
-        # # print predicate_set_2
-        # # print "Relation Graph"
-        # # print "--------------"
-        #
-        # lpmln_extention.evidence_writer(relation_ent, sentence_id)
-        # probability = lpmln_extention.inference(sentence_id)
-        # probability.append(sentence_id)
-        # probabilities.append(probability)
-        # print relations
-        # sys.exit(0)
-        # pprint.pprint(relations)
-        # pprint.pprint(relations_0)
-        # relations = False
-        #
-        # if relations:
-        #     # output_relations[id_list[n]] = relations
-        #
-        #     execution_time = time.time() - res_time
-        #     print execution_time
-        #     # sys.exit(0)
-        #     true_pos_rel, retrived_rels, ex_rels = evaluation.precision_recall_relations(sentence_id, relations)
-        #     print true_pos_rel, retrived_rels, ex_rels
-        #     true_pos_ent, retrieved_ents, ex_ent_all = evaluation.precision_recall_ent_match(sentence_id, relations)
-        #     # print ex_ent_all
-        #     print '\n'
-        #     print "Precision & Recall for Entities"
-        #     print "--------------------------------"
-        #     precision_ent_out, recall_ent_out = evaluation.precision_recall(true_pos_ent, retrieved_ents, ex_ent_all)
-        #     print "Entity Match: Precision: " + str(precision_ent_out), "Recall: " + str(recall_ent_out)
-        #     print "------------------------------------------"
-        #     print "Precision & Recall for Relations"
-        #     print "--------------------------------"
-        #     precision_rel, recall_rel = evaluation.precision_recall(true_pos_rel, retrived_rels, ex_rels)
-        #     print "Relations: Precision: " + str(precision_rel), "Recall: " + str(recall_rel)
-        #     precision_recall_stats[sentence_id] = [precision_res, recall_res, precision_rel, recall_rel, precision_ent_out, recall_ent_out]
-        # else:
-        #     precision_recall_stats[sentence_id] = [0, 0, 0, 0, 0, 0]
-
-    #     if data_dump == True:
-    #         with open(output_data+'/evaluation.json', 'w') as fp:
-    #             json.dump(precision_recall_stats, fp, default=json_serial)
-    #
-    #         with open(output_data+'/kgminer_output.json', 'w') as fp:
-    #             json.dump(output_linkprediction, fp, default=json_serial)
-    #
-    #         with open(output_data+'/training_data.json', 'w') as fp:
-    #             json.dump(output_training_data, fp, default=json_serial)
-    #
-    #         with open(output_data+'/output_relations.json', 'w') as fp:
-    #             json.dump(output_relations, fp, default=json_serial)
-    # print output_linkprediction
-
-    # with open('lpmln_tests/'+data_source +'/'+ data_source+'_prob.csv', 'wb') as csvfile:
-    #     datawriter = csv.writer(csvfile)
-    #     datawriter.writerows(probabilities)
-
-
-
-
-    # print "Total Execution Time: " + str(round(ex_time, 2))
-    # print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10} ".format('S.N.','p_res','r_res' 'p_rel', 'r_rel', 'p_ent', 'r_ent')
-    # vals_sum=0
-    # for k1,v1 in precision_recall_stats.iteritems():
-    #     vals = v1
-    #     p_res, r_res, p_r,r_r,p_eo,r_eo = vals
-    #     print "{:<8} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format(k1,p_res, r_res, p_r, r_r,p_eo, r_eo)
-    #     if k1 == '1':
-    #         vals1 = vals
-    #     else:
-    #         vals_sum = map(operator.add,vals1,vals)
-    #         # print vals,vals1,vals_avg
-    #         vals1 = vals_sum
-    # num_sent = len(sentence_list)
-    # if vals_sum>0:
-    #     vals_avg = [round((x/num_sent),2) for x in vals_sum]
-    #     print "average",vals_avg
-
-
-#
-# if os.path.isfile('lpmln_tests/predicate_set.json'):
-#     with open('lpmln_tests/predicate_set.json') as json_data:
-#         config.predicate_set = json.load(json_data)
-# else:
-#     config.predicate_set = {"a": "b"}
+    print lpmln_evaluation
+    if lpmln_evaluation:
+        with open('dataset/' + data_source + '/lpmln_evaluation.csv', 'wb') as csvfile:
+            datawriter = csv.writer(csvfile)
+            datawriter.writerows(lpmln_evaluation)
 
 
 if __name__ == "__main__":
-    with open('dataset/' + data_source + '/sentences.csv') as f:
+    with open('dataset/' + data_source + '/sentences_test.csv') as f:
         reader = csv.DictReader(f)
         sentences_list = []
         id_list = []
@@ -344,5 +207,6 @@ if __name__ == "__main__":
             sentences_list.append(row['sentence'])
             true_label.append(row['label'])
             id_list.append(row['id'])
-        fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False, kgminer_predicate_flag=False,\
-                     kgminer_output_flag=False, KGMiner=True, lpmln=False)
+        fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False, \
+                     kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False, \
+                     KGMiner=False, lpmln=True)

@@ -1,0 +1,11 @@
+mother(Michelle_Obama,Natasha_Obama).
+mother(Michelle_Obama,Malia_Obama).
+father(Barack_Obama,Natasha_Obama).
+father(Barack_Obama,Malia_Obama).
+child(Natasha_Obama,Barack_Obama).
+child(Malia_Obama,Barack_Obama).
+child(Natasha_Obama,Michelle_Obama).
+child(Malia_Obama,Michelle_Obama).
+birth_place(United_States,Michelle_Obama).
+leader_name(Barack_Obama,United_States).
+leader(Barack_Obama,United_States).

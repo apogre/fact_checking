@@ -172,20 +172,6 @@ def predicate_finder(triple_dict):
     return pval_list
 
 
-def entity_threshold(resources):
-    limit_entity ={}
-    for label, entities in resources.iteritems():
-        ent_coded = []
-        for i,ent in enumerate(entities):
-            if i < 20:
-                ent_code = ent[0].split('/')[-1]
-                ent_coded.append(ent_code)
-            else:
-                break
-        limit_entity[label] = ent_coded
-    return limit_entity
-
-
 def relation_extractor_0hop(kb, id1, id2, label, relations, triple_k):
     if kb == 'wikidata':
         sparql_endpoint = sparql_wikidata
@@ -215,22 +201,14 @@ def relation_extractor_0hop(kb, id1, id2, label, relations, triple_k):
         pass
     if q1_values:
         for vals in q1_values:
-            try:
-                val_score = word2vec_score(vals[0], triple_k)
-            except:
-                val_score = 0
-            relations.append((kb, vals[0], label[0], label[1], val_score))
+            relations.append((kb, vals[0], label[0], label[1]))
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
     except:
         q1_values_back = []
     for vals in q1_values_back:
-        try:
-            val_score = word2vec_score(vals[0], triple_k)
-        except:
-            val_score = 0
-        relations.append((kb, vals[0], label[1], label[0], val_score))
+        relations.append((kb, vals[0], label[1], label[0]))
     return relations
 
 
@@ -269,17 +247,9 @@ def relation_extractor_2hop(kb, id1, id2, label, relations, triple_k):
         q1_values = []
     if q1_values:
         for vals in q1_values:
-            try:
-                val_score = word2vec_score(vals[0], triple_k)
-                val_score1 = word2vec_score(vals[2], triple_k)
-                val_score2 = word2vec_score(vals[4], triple_k)
-            except:
-                val_score = 0
-                val_score1 = 0
-                val_score2 = 0
-            relations.append((kb, vals[0], vals[1], label[0], val_score))
-            relations.append((kb, vals[2], vals[3], vals[1], val_score1))
-            relations.append((kb, vals[4], label[1], vals[3], val_score2))
+            relations.append((kb, vals[0], vals[1], label[0]))
+            relations.append((kb, vals[2], vals[3], vals[1]))
+            relations.append((kb, vals[4], label[1], vals[3]))
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
@@ -287,17 +257,9 @@ def relation_extractor_2hop(kb, id1, id2, label, relations, triple_k):
         q1_values_back = []
     if q1_values_back:
         for vals in q1_values_back:
-            try:
-                val_score = word2vec_score(vals[0], triple_k)
-                val_score1 = word2vec_score(vals[2], triple_k)
-                val_score2 = word2vec_score(vals[4], triple_k)
-            except:
-                val_score = 0
-                val_score1 = 0
-                val_score2 = 0
-            relations.append((kb, vals[0], vals[1], label[1], val_score))
-            relations.append((kb, vals[2], vals[3], vals[1], val_score1))
-            relations.append((kb, vals[4], label[0], vals[3], val_score2))
+            relations.append((kb, vals[0], vals[1], label[1]))
+            relations.append((kb, vals[2], vals[3], vals[1]))
+            relations.append((kb, vals[4], label[0], vals[3]))
     return relations
 
 
@@ -328,15 +290,8 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
         pass
     if q1_values:
         for vals in q1_values:
-            try:
-                val_score = word2vec_score(vals[0], triple_k)
-                val_score1 = word2vec_score(vals[2], triple_k)
-            except:
-                val_score = 0
-                val_score1 = 0
-            # print vals
-            relations.append((kb, vals[0], vals[1], label[0], val_score))
-            relations.append((kb, vals[2], label[1], vals[1], val_score1))
+            relations.append([kb, vals[0], vals[1], label[0]])
+            relations.append([kb, vals[2], label[1], vals[1]])
     # print query_back
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
@@ -345,42 +300,9 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, triple_k):
         q1_values_back = []
     if q1_values_back:
         for vals in q1_values_back:
-            try:
-                val_score = word2vec_score(vals[0], triple_k)
-                val_score1 = word2vec_score(vals[2], triple_k)
-            except:
-                val_score = 0
-                val_score1 = 0
-            # print vals
-            relations.append((kb, vals[0], vals[1], label[1], val_score))
-            relations.append((kb, vals[2], label[0], vals[1], val_score1))
+            relations.append([kb, vals[0], vals[1], label[1]])
+            relations.append([kb, vals[2], label[0], vals[1]])
     return relations
-
-
-
-
-def relation_extractor_triples(resources, triples):
-    relation = []
-    relation_0 = []
-    relation_2 = []
-    for triple_k, triples_v in triples.iteritems():
-        for triple_v in triples_v:
-            item1_v = resources.get(triple_v[0])
-            item2_v = resources.get(triple_v[1])
-            if item1_v and item2_v:
-                dbpedia_id1 = item1_v.get('dbpedia_id')
-                dbpedia_id2 = item2_v.get('dbpedia_id')
-                wikidata_id1 = item1_v.get('wikidata_id')
-                wikidata_id2 = item2_v.get('wikidata_id')
-                score1 = item1_v.get('confidence')
-                score2 = item2_v.get('confidence')
-                relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, triple_k)
-                relation = relation_extractor_1hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation, triple_k)
-                relation_0 = relation_extractor_0hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0, triple_k)
-                relation_0 = relation_extractor_0hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0, triple_k)
-                relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_2, triple_k)
-                relation_2 = relation_extractor_2hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_2, triple_k)
-    return relation, relation_0, relation_2
 
 
 if __name__ == '__main__':

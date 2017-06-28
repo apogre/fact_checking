@@ -1,6 +1,0 @@
-child(ma,ha).
-mother(be,ma).
-child(ma,be).
-father(ha,ma).
-mother(ma,cl).
-child(cl,ma).

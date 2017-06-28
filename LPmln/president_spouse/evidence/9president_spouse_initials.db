@@ -1,0 +1,11 @@
+mother(mi,na).
+mother(mi,ma).
+father(ba,na).
+father(ba,ma).
+child(na,ba).
+child(ma,ba).
+child(na,mi).
+child(ma,mi).
+birth_place(un,mi).
+leader_name(ba,un).
+leader(ba,un).

@@ -1,9 +1,0 @@
-successor(Warren_G._Harding,Woodrow_Wilson).
-spouse(Florence_Harding,Warren_G._Harding).
-predecessor(Edith_Bolling_Wilson,Florence_Harding).
-spouse(Ellen_Axson_Wilson,Woodrow_Wilson).
-child(Margaret_Woodrow_Wilson,Ellen_Axson_Wilson).
-successor(Edith_Bolling_Wilson,Margaret_Woodrow_Wilson).
-successor(Florence_Harding,Edith_Bolling_Wilson).
-president(Warren_G._Harding,Florence_Harding).
-predecessor(Woodrow_Wilson,Warren_G._Harding).

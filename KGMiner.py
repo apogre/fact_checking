@@ -76,7 +76,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                     kgminer_status = write_to_kgminer(poi, q_part, resource_v, sentence_id)
                 else:
                     kgminer_status = True
-                    copyfile(KGMiner_data+'/'+data_source+'/'+sentence_id+data_source+'_ids.csv', KGMiner_data+'/'+\
+                    copyfile(KGMiner_data+'/'+data_source+'/'+sentence_id+data_source+'_ids.csv', KGMiner_data+'/' + \
                              'training_data.csv')
                 return kgminer_status
     return False
@@ -144,7 +144,7 @@ def word2vec_dbpedia(train_ents, resource_v):
         try:
             sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
             sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
-            if sim1 > 0.10 and sim2 > 0.10:
+            if sim1 > 0.15 and sim2 > 0.15:
                 sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
                 sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
                 if sim1_1 > sim1 and sim2_1>sim2:

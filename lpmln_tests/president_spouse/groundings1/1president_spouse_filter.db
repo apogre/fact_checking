@@ -1,6 +1,0 @@
-child(ch,bi).
-mother(hi,ch).
-child(ch,hi).
-father(bi,ch).
-parent(hi,ch).
-parent(bi,ch).

@@ -175,7 +175,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             print sorted_predicates
             evidence_writer(sorted_predicates, sentence_id)
             print predicate_of_interest
-            get_rules(predicate_of_interest)
+            # get_rules(predicate_of_interest)
             probability = inference(sentence_id)
             lpmln_evaluation.append([probability.extend(sentence_id)])
 

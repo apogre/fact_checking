@@ -1,7 +1,6 @@
 
-99 spouse(A,B) :- spouse(B,A).
+73 spouse(A,B) :- spouse(B,A).
 
-54 spouse(A,B) :- child(F,A), child(F,B).
+8 spouse(A,B) :- child(C,A), child(C,B).
 
-56 child(B,A) :- spouse(F,A), child(B,F).
-31 child(B,E) :- spouse(A,E), child(B,A).
+4 spouse(A,B) :- parent(A,C), child(C,B).

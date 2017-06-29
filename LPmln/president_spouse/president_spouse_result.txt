@@ -1,87 +1,25 @@
 lpmln2cl
 Clingo executed with command:
-clingo /home/ap/PP_Labs/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=spouse LPmln/president_spouse/evidence/19president_spouse_filter.db 
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=spouse LPmln/president_spouse/evidence/24president_spouse_filter.db 
 clingo version 4.5.4
-Reading from /home/ap/PP_Labs/fact_checking/out.txt ...
+Reading from ...me/apradhan/proj/fact_checking/out.txt ...
 Solving...
 Answer: 1
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) spouse(ab,ab) unsat(1,"8.000000",ma,ab,ta) unsat(1,"8.000000",ma,ab,ro) unsat(1,"8.000000",ma,ab,wi) unsat(1,"8.000000",ma,ab,ed) unsat(1,"8.000000",ab,ma,ta) spouse(ma,ma) unsat(1,"8.000000",ab,ma,ro) unsat(1,"8.000000",ab,ma,wi) unsat(1,"8.000000",ab,ma,ed) unsat(2,"4.000000",ma,ab,wi) unsat(2,"4.000000",ma,ab,ta) unsat(2,"4.000000",ab,ma,wi) unsat(2,"4.000000",ab,ma,ta)
-Optimization: 80000
-Answer: 2
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) spouse(ab,ab) unsat(1,"8.000000",ma,ab,ta) unsat(1,"8.000000",ma,ab,ro) unsat(1,"8.000000",ma,ab,wi) unsat(1,"8.000000",ma,ab,ed) unsat(1,"8.000000",ab,ma,ta) unsat(1,"8.000000",ma,ma,ta) unsat(1,"8.000000",ab,ma,ro) unsat(1,"8.000000",ma,ma,ro) unsat(1,"8.000000",ab,ma,wi) unsat(1,"8.000000",ma,ma,wi) unsat(1,"8.000000",ab,ma,ed) unsat(1,"8.000000",ma,ma,ed) unsat(2,"4.000000",ma,ab,wi) unsat(2,"4.000000",ma,ma,wi) unsat(2,"4.000000",ma,ab,ta) unsat(2,"4.000000",ma,ma,ta) unsat(2,"4.000000",ab,ma,wi) unsat(2,"4.000000",ab,ma,ta)
-Optimization: 120000
-Answer: 3
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) unsat(1,"8.000000",ab,ab,ta) unsat(1,"8.000000",ma,ab,ta) unsat(1,"8.000000",ab,ab,ro) unsat(1,"8.000000",ma,ab,ro) unsat(1,"8.000000",ab,ab,wi) unsat(1,"8.000000",ma,ab,wi) unsat(1,"8.000000",ab,ab,ed) unsat(1,"8.000000",ma,ab,ed) unsat(1,"8.000000",ab,ma,ta) spouse(ma,ma) unsat(1,"8.000000",ab,ma,ro) unsat(1,"8.000000",ab,ma,wi) unsat(1,"8.000000",ab,ma,ed) unsat(2,"4.000000",ma,ab,wi) unsat(2,"4.000000",ma,ab,ta) unsat(2,"4.000000",ab,ab,wi) unsat(2,"4.000000",ab,ma,wi) unsat(2,"4.000000",ab,ab,ta) unsat(2,"4.000000",ab,ma,ta)
-Optimization: 120000
-Answer: 4
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) unsat(1,"8.000000",ab,ab,ta) unsat(1,"8.000000",ma,ab,ta) unsat(1,"8.000000",ab,ab,ro) unsat(1,"8.000000",ma,ab,ro) unsat(1,"8.000000",ab,ab,wi) unsat(1,"8.000000",ma,ab,wi) unsat(1,"8.000000",ab,ab,ed) unsat(1,"8.000000",ma,ab,ed) unsat(1,"8.000000",ab,ma,ta) unsat(1,"8.000000",ma,ma,ta) unsat(1,"8.000000",ab,ma,ro) unsat(1,"8.000000",ma,ma,ro) unsat(1,"8.000000",ab,ma,wi) unsat(1,"8.000000",ma,ma,wi) unsat(1,"8.000000",ab,ma,ed) unsat(1,"8.000000",ma,ma,ed) unsat(2,"4.000000",ma,ab,wi) unsat(2,"4.000000",ma,ma,wi) unsat(2,"4.000000",ma,ab,ta) unsat(2,"4.000000",ma,ma,ta) unsat(2,"4.000000",ab,ab,wi) unsat(2,"4.000000",ab,ma,wi) unsat(2,"4.000000",ab,ab,ta) unsat(2,"4.000000",ab,ma,ta)
-Optimization: 160000
-Answer: 5
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) spouse(ab,ab) unsat(1,"8.000000",ma,ab,ta) unsat(1,"8.000000",ma,ab,ro) unsat(1,"8.000000",ma,ab,wi) unsat(1,"8.000000",ma,ab,ed) spouse(ab,ma) spouse(ma,ma) unsat(2,"4.000000",ma,ab,wi) unsat(2,"4.000000",ma,ab,ta) unsat(0,"73.000000",ma,ab)
-Optimization: 113000
-Answer: 6
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) unsat(1,"8.000000",ab,ab,ta) unsat(1,"8.000000",ma,ab,ta) unsat(1,"8.000000",ab,ab,ro) unsat(1,"8.000000",ma,ab,ro) unsat(1,"8.000000",ab,ab,wi) unsat(1,"8.000000",ma,ab,wi) unsat(1,"8.000000",ab,ab,ed) unsat(1,"8.000000",ma,ab,ed) spouse(ab,ma) spouse(ma,ma) unsat(2,"4.000000",ma,ab,wi) unsat(2,"4.000000",ma,ab,ta) unsat(2,"4.000000",ab,ab,wi) unsat(2,"4.000000",ab,ab,ta) unsat(0,"73.000000",ma,ab)
-Optimization: 153000
-Answer: 7
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) spouse(ab,ab) unsat(1,"8.000000",ma,ab,ta) unsat(1,"8.000000",ma,ab,ro) unsat(1,"8.000000",ma,ab,wi) unsat(1,"8.000000",ma,ab,ed) spouse(ab,ma) unsat(1,"8.000000",ma,ma,ta) unsat(1,"8.000000",ma,ma,ro) unsat(1,"8.000000",ma,ma,wi) unsat(1,"8.000000",ma,ma,ed) unsat(2,"4.000000",ma,ab,wi) unsat(2,"4.000000",ma,ma,wi) unsat(2,"4.000000",ma,ab,ta) unsat(2,"4.000000",ma,ma,ta) unsat(0,"73.000000",ma,ab)
-Optimization: 153000
-Answer: 8
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) unsat(1,"8.000000",ab,ab,ta) unsat(1,"8.000000",ma,ab,ta) unsat(1,"8.000000",ab,ab,ro) unsat(1,"8.000000",ma,ab,ro) unsat(1,"8.000000",ab,ab,wi) unsat(1,"8.000000",ma,ab,wi) unsat(1,"8.000000",ab,ab,ed) unsat(1,"8.000000",ma,ab,ed) spouse(ab,ma) unsat(1,"8.000000",ma,ma,ta) unsat(1,"8.000000",ma,ma,ro) unsat(1,"8.000000",ma,ma,wi) unsat(1,"8.000000",ma,ma,ed) unsat(2,"4.000000",ma,ab,wi) unsat(2,"4.000000",ma,ma,wi) unsat(2,"4.000000",ma,ab,ta) unsat(2,"4.000000",ma,ma,ta) unsat(2,"4.000000",ab,ab,wi) unsat(2,"4.000000",ab,ab,ta) unsat(0,"73.000000",ma,ab)
-Optimization: 193000
-Answer: 9
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) spouse(ab,ab) spouse(ma,ab) unsat(1,"8.000000",ab,ma,ta) spouse(ma,ma) unsat(1,"8.000000",ab,ma,ro) unsat(1,"8.000000",ab,ma,wi) unsat(1,"8.000000",ab,ma,ed) unsat(2,"4.000000",ab,ma,wi) unsat(2,"4.000000",ab,ma,ta) unsat(0,"73.000000",ab,ma)
-Optimization: 113000
-Answer: 10
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) unsat(1,"8.000000",ab,ab,ta) spouse(ma,ab) unsat(1,"8.000000",ab,ab,ro) unsat(1,"8.000000",ab,ab,wi) unsat(1,"8.000000",ab,ab,ed) unsat(1,"8.000000",ab,ma,ta) spouse(ma,ma) unsat(1,"8.000000",ab,ma,ro) unsat(1,"8.000000",ab,ma,wi) unsat(1,"8.000000",ab,ma,ed) unsat(2,"4.000000",ab,ab,wi) unsat(2,"4.000000",ab,ma,wi) unsat(2,"4.000000",ab,ab,ta) unsat(2,"4.000000",ab,ma,ta) unsat(0,"73.000000",ab,ma)
-Optimization: 153000
-Answer: 11
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) spouse(ab,ab) spouse(ma,ab) unsat(1,"8.000000",ab,ma,ta) unsat(1,"8.000000",ma,ma,ta) unsat(1,"8.000000",ab,ma,ro) unsat(1,"8.000000",ma,ma,ro) unsat(1,"8.000000",ab,ma,wi) unsat(1,"8.000000",ma,ma,wi) unsat(1,"8.000000",ab,ma,ed) unsat(1,"8.000000",ma,ma,ed) unsat(2,"4.000000",ma,ma,wi) unsat(2,"4.000000",ma,ma,ta) unsat(2,"4.000000",ab,ma,wi) unsat(2,"4.000000",ab,ma,ta) unsat(0,"73.000000",ab,ma)
-Optimization: 153000
-Answer: 12
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) unsat(1,"8.000000",ab,ab,ta) spouse(ma,ab) unsat(1,"8.000000",ab,ab,ro) unsat(1,"8.000000",ab,ab,wi) unsat(1,"8.000000",ab,ab,ed) unsat(1,"8.000000",ab,ma,ta) unsat(1,"8.000000",ma,ma,ta) unsat(1,"8.000000",ab,ma,ro) unsat(1,"8.000000",ma,ma,ro) unsat(1,"8.000000",ab,ma,wi) unsat(1,"8.000000",ma,ma,wi) unsat(1,"8.000000",ab,ma,ed) unsat(1,"8.000000",ma,ma,ed) unsat(2,"4.000000",ma,ma,wi) unsat(2,"4.000000",ma,ma,ta) unsat(2,"4.000000",ab,ab,wi) unsat(2,"4.000000",ab,ma,wi) unsat(2,"4.000000",ab,ab,ta) unsat(2,"4.000000",ab,ma,ta) unsat(0,"73.000000",ab,ma)
-Optimization: 193000
-Answer: 13
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) spouse(ab,ab) spouse(ma,ab) spouse(ab,ma) spouse(ma,ma)
-Optimization: 0
-Answer: 14
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) unsat(1,"8.000000",ab,ab,ta) spouse(ma,ab) unsat(1,"8.000000",ab,ab,ro) unsat(1,"8.000000",ab,ab,wi) unsat(1,"8.000000",ab,ab,ed) spouse(ab,ma) spouse(ma,ma) unsat(2,"4.000000",ab,ab,wi) unsat(2,"4.000000",ab,ab,ta)
-Optimization: 40000
-Answer: 15
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) spouse(ab,ab) spouse(ma,ab) spouse(ab,ma) unsat(1,"8.000000",ma,ma,ta) unsat(1,"8.000000",ma,ma,ro) unsat(1,"8.000000",ma,ma,wi) unsat(1,"8.000000",ma,ma,ed) unsat(2,"4.000000",ma,ma,wi) unsat(2,"4.000000",ma,ma,ta)
-Optimization: 40000
-Answer: 16
-child(ta,ab) mother(ma,ta) child(ro,ab) mother(ma,ro) child(wi,ab) mother(ma,wi) child(ed,ab) mother(ma,ed) child(ta,ma) father(ab,ta) child(ro,ma) father(ab,ro) child(wi,ma) father(ab,wi) child(ed,ma) father(ab,ed) parent(ma,wi) parent(ma,ta) parent(ab,wi) parent(ab,ta) successor(el,ma) president(ab,el) known_for(ab,ed) unsat(1,"8.000000",ab,ab,ta) spouse(ma,ab) unsat(1,"8.000000",ab,ab,ro) unsat(1,"8.000000",ab,ab,wi) unsat(1,"8.000000",ab,ab,ed) spouse(ab,ma) unsat(1,"8.000000",ma,ma,ta) unsat(1,"8.000000",ma,ma,ro) unsat(1,"8.000000",ma,ma,wi) unsat(1,"8.000000",ma,ma,ed) unsat(2,"4.000000",ma,ma,wi) unsat(2,"4.000000",ma,ma,ta) unsat(2,"4.000000",ab,ab,wi) unsat(2,"4.000000",ab,ab,ta)
-Optimization: 80000
+spouse(na,ro) spouse(ro1,ji) spouse(ro,na) spouse(ji,ro1) governor(ro,na) governor(ji,ro1) successor(ro,ji) successor(na,ro1) president(ro,na) president(ji,ro1) predecessor(ji,ro) predecessor(ro1,na)
 
 
-Probability of Answer 1 : 1.80485138785e-35
-Probability of Answer 2 : 7.66764807372e-53
-Probability of Answer 3 : 7.66764807372e-53
-Probability of Answer 4 : 3.25748853221e-70
-Probability of Answer 5 : 8.4085971248e-50
-Probability of Answer 6 : 3.57226993762e-67
-Probability of Answer 7 : 3.57226993762e-67
-Probability of Answer 8 : 1.51762681905e-84
-Probability of Answer 9 : 8.4085971248e-50
-Probability of Answer 10 : 3.57226993762e-67
-Probability of Answer 11 : 3.57226993762e-67
-Probability of Answer 12 : 1.51762681905e-84
-Probability of Answer 13 : 1.0
-Probability of Answer 14 : 4.24835425529e-18
-Probability of Answer 15 : 4.24835425529e-18
-Probability of Answer 16 : 1.80485138785e-35
+Probability of Answer 1 : 1.0
 
 
-spouse(ab, ma) 1.0
-spouse(ma, ab) 1.0
-spouse(ma, ma) 1.0
-spouse(ab, ab) 1.0
+spouse(ro, na) 1.0
+spouse(ro1, ji) 1.0
+spouse(na, ro) 1.0
+spouse(ji, ro1) 1.0
 
 
-OPTIMUM FOUND
+SATISFIABLE
 
-Models       : 16    
-  Optimum    : yes
+Models       : 1     
 Calls        : 1
-Time         : 0.591s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.320s
+Time         : 0.166s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.160s

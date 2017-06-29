@@ -120,8 +120,8 @@ def get_entity_type(resources, triples):
 
 
 def get_kgminer_predicates(type_set, triple_dict):
+    predicate_list = []
     for triples_k,triples_v in triple_dict.iteritems():
-        predicate_list = []
         sort_list = dict()
         for triple_v in triples_v:
             item1_v = type_set.get(triple_v[0], [])

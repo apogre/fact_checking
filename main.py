@@ -123,7 +123,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
 
         print "Ranked Possible Predicates"
         print kgminer_predicate_ranked
-        predicate_of_interest = kgminer_predicate_ranked.values()[0]
+        if kgminer_predicate_ranked:
+            predicate_of_interest = kgminer_predicate_ranked.values()[0]
                 
         if KGMiner:
             kg_output = []
@@ -180,11 +181,12 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                 evidence_writer(sorted_predicates, sentence_id)
                 # get_rules(predicate_of_interest)
                 probability = inference(sentence_id)
-                probability.append(sentence_id)
+                probability.extend([sentence_id, sentence_check])
             else:
                 probability = lpmln_output[sentence_id]
-                probability.append(sentence_id)
+                probability.extend([sentence_id, sentence_check])
             lpmln_evaluation.append(probability)
+            print probability
 
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\

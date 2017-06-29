@@ -1,0 +1,10 @@
+spouse(la,ge).
+spouse(hi,bi).
+spouse(ge,la).
+spouse(bi,hi).
+governor(ge,la).
+successor(ge,bi).
+successor(la,hi).
+president(ge,la).
+predecessor(bi,ge).
+predecessor(hi,la).

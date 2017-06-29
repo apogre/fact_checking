@@ -1,0 +1,10 @@
+spouse(Laura_Bush,George_W._Bush).
+spouse(Hillary_Clinton,Bill_Clinton).
+spouse(George_W._Bush,Laura_Bush).
+spouse(Bill_Clinton,Hillary_Clinton).
+governor(George_W._Bush,Laura_Bush).
+successor(George_W._Bush,Bill_Clinton).
+successor(Laura_Bush,Hillary_Clinton).
+president(George_W._Bush,Laura_Bush).
+predecessor(Bill_Clinton,George_W._Bush).
+predecessor(Hillary_Clinton,Laura_Bush).

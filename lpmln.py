@@ -6,6 +6,7 @@ import re
 from nltk.stem.wordnet import WordNetLemmatizer
 from ordered_set import OrderedSet
 from kb_query import relation_extractor_0hop, relation_extractor_1hop, relation_extractor_2hop
+from os import path, remove
 
 
 lemmatizer = WordNetLemmatizer()
@@ -47,15 +48,16 @@ def relation_extractor_triples(resources, triples):
 
 def inference(sentence_id):
     print "LPMLN Inference"
+    if path.isfile('LPmln/' +data_source + '/' + data_source + '_result.txt'):
+        remove('LPmln/' +data_source + '/' + data_source + '_result.txt')
     evidence_source = 'LPmln/' + data_source + '/evidence/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}.lpmln -q married -all -e {1}_filter.db -r {0}_result.txt ".format('LPmln/' +data_source + '/' + data_source, evidence_source)
+    cmd = "lpmln2asp -i {0}.lpmln -q spouse -all -e {1}_filter.db -r {0}_result.txt ".format('LPmln/' +data_source + '/' + data_source, evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' +data_source + '/' + data_source + '_result.txt', 'r')
     f = text.read()
     text.close()
     probs = re.findall("(\w+\(\w+\,\s\w+\)\s\d+\.\d+)",f)
-    print probs
     return probs
 
 
@@ -100,7 +102,7 @@ def evidence_writer(sorted_predicates, sentence_id):
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
         for rel in sorted_predicates:
             rel_set = [r.replace(' ', '_') for r in rel if isinstance(r, basestring)]
-            if rel[4] > evidence_threshold:
+            if rel[4] >= evidence_threshold:
                 item_set = [lemmatizer.lemmatize(rel_set[1].lower())+'('+entity_mapping.get(rel[2],'').lower()+',' + \
                             entity_mapping.get(rel[3],'').lower()+').']
                 if item_set[0] not in final_list:

@@ -34,7 +34,13 @@ def load_files():
     else:
         kgminer_output = {"a": "b"}
 
-    return file_triples, ambiverse_resources, possible_predicate, kgminer_output, lpmln_predicate
+    if os.path.isfile('dataset/' + data_source + '/lpmln_output.json'):
+        with open('dataset/' + data_source + '/lpmln_output.json') as json_data:
+            lpmln_output = json.load(json_data)
+    else:
+        lpmln_output = {"a": "b"}
+
+    return file_triples, ambiverse_resources, possible_predicate, kgminer_output, lpmln_predicate, lpmln_output
 
 
 def load_kgminer_resource():

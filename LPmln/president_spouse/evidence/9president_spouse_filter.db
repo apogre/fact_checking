@@ -7,3 +7,5 @@ child(ma,ba).
 child(na,mi).
 child(ma,mi).
 birth_place(un,mi).
+leader_name(ba,un).
+leader(ba,un).

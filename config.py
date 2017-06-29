@@ -7,7 +7,7 @@ KGMiner_data = 'KGMiner/KGMiner_data'
 aux_verb = ['was', 'is', 'become','to','of', 'in', 'the']
 rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4
-evidence_threshold = 0.2
+evidence_threshold = 0
 rule_threshold = 0.15
 
 sparql_dbpedia_local = 'http://localhost:8890/sparql'

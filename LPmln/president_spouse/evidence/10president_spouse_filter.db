@@ -1,0 +1,4 @@
+child(ma,wo).
+successor(ed,ma).
+predecessor(ma,ed).
+president(wo,ma).

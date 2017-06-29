@@ -1,0 +1,10 @@
+child(ma,ha).
+mother(be,ma).
+child(ma,be).
+father(ha,ma).
+president(fr,be).
+successor(ha,fr).
+predecessor(el,be).
+president(ha,el).
+successor(ja,be).
+president(ha,ja).

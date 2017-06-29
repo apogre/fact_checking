@@ -1,0 +1,4 @@
+child(Margaret_Woodrow_Wilson,Woodrow_Wilson).
+successor(Edith_Bolling_Wilson,Margaret_Woodrow_Wilson).
+predecessor(Margaret_Woodrow_Wilson,Edith_Bolling_Wilson).
+president(Woodrow_Wilson,Margaret_Woodrow_Wilson).

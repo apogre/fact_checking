@@ -1,1 +1,19 @@
-""
+"spouse(bi, hi) 0.999999999962","spouse(hi, bi) 0.999999999962","spouse(hi, hi) 0.999993855825","spouse(bi, bi) 0.999993855825",1
+"spouse(ge, la) 1.0","spouse(la, ge) 1.0","spouse(la, la) 0.999999999962","spouse(ge, ge) 0.999999999962",2
+"spouse(do, me) 1.0","spouse(me, do) 1.0","spouse(me, me) 1.0","spouse(do, do) 1.0",3
+"spouse(ro, na) 1.0","spouse(na, ro) 1.0","spouse(na, na) 0.999999999962","spouse(ro, ro) 0.999999999962",4
+"spouse(ji, ro) 1.0","spouse(ro, ji) 1.0","spouse(ro, ro) 0.999999997939","spouse(ji, ji) 0.999999997939",5
+"spouse(pa, ri) 1.0","spouse(ri, pa) 1.0","spouse(pa, pa) 0.999999999962","spouse(ri, ri) 0.999999999962",6
+"spouse(fr, el1) 1.0","spouse(el1, fr) 1.0","spouse(el1, el1) 1.0","spouse(fr, fr) 1.0",7
+"spouse(jo1, ja) 1.0","spouse(ja, jo1) 1.0","spouse(ja, ja) 1.0","spouse(jo1, jo1) 1.0",8
+"spouse(mi, ba) 1.0","spouse(mi, mi) 0.999999887465","spouse(ba, mi) 1.0","spouse(ba, ba) 0.999999887465",9
+"spouse(wo, wo) 0.99966464987",10
+11
+"spouse(gr, gr) 0.99966464987",12
+13
+"spouse(ha, be) 0.999999887465","spouse(be, ha) 0.999999887465","spouse(be, be) 0.99966464987","spouse(ha, ha) 0.99966464987",14
+"spouse(dw, ma) 1.0","spouse(ma, dw) 1.0","spouse(ma, ma) 0.999999997939","spouse(dw, dw) 0.999999997939",15
+"spouse(la, ly) 1.0","spouse(ly, la) 1.0","spouse(la, la) 0.999999999962","spouse(ly, ly) 0.999999999962",16
+"spouse(ge, be) 1.0","spouse(be, ge) 1.0","spouse(be, be) 1.0","spouse(ge, ge) 1.0",17
+"spouse(ge, ba) 1.0","spouse(ba, ge) 1.0","spouse(ba, ba) 1.0","spouse(ge, ge) 1.0",18
+"spouse(ab, ma) 1.0","spouse(ma, ab) 1.0","spouse(ma, ma) 1.0","spouse(ab, ab) 1.0",19

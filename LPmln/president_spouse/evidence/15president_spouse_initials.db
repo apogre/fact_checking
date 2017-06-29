@@ -1,0 +1,13 @@
+child(jo,dw).
+mother(ma,jo).
+child(do,dw).
+mother(ma,do).
+place_of_burial(ei,ma).
+named_after(dw,ei).
+child(jo,ma).
+father(dw,jo).
+child(do,ma).
+father(dw,do).
+parent(ma,do).
+known_for(dw,do).
+parent(dw,do).

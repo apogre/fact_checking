@@ -12,7 +12,7 @@ def json_serial(obj):
     raise TypeError ("Type not serializable")
 
 def update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, kgminer_output_flag, \
-                     file_triples, ambiverse_resources, possible_kgminer_predicate, lpmln_predicate, kgminer_output ):
+                     file_triples, ambiverse_resources, possible_kgminer_predicate, lpmln_predicate, kgminer_output, lpmln_output_flag ):
     if triple_flag:
         print "Updating Relation Triples"
         if path.isfile('dataset/' + data_source + '/triples_raw.json'):
@@ -43,7 +43,14 @@ def update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_
 
     if kgminer_output_flag:
         print "Updating KGMiner Output"
-        if path.isfile('dataset/' + data_source + 'kgminer_output.json'):
-            remove('dataset/' + data_source + 'kgminer_output.json')
+        if path.isfile('dataset/' + data_source + '/kgminer_output.json'):
+            remove('dataset/' + data_source + '/kgminer_output.json')
         with open('dataset/' + data_source + '/kgminer_output.json', 'w') as fp:
+            json.dump(kgminer_output, fp, default=json_serial)
+
+    if lpmln_output_flag:
+        print "Updating LPmln Output"
+        if path.isfile('dataset/' + data_source + '/lpmln_output.json'):
+            remove('dataset/' + data_source + '/lpmln_output.json')
+        with open('dataset/' + data_source + '/lpmln_output.json', 'w') as fp:
             json.dump(kgminer_output, fp, default=json_serial)

@@ -1,12 +1,6 @@
-2 married(X,Y) :-  child(Z,X) , child(Z,Y) , X!=Y .
-1 married(X,Y) :- mother(Y,Z) , father(X,Z).
-1 married(X,Y) :- parent(Y,Z) , parent(X,Z).
-1 married(X,Y) :- married(Y,X).
 
-0.5 mother(X,Y) :- child(Y,X).
-0.5 father(X,Y) :- child(Y,X).
+73 spouse(A,B) :- spouse(B,A).
 
-1 sibling(X,Y) :- child(X,Z), child(Y,Z).
+8 spouse(A,B) :- child(C,A), child(C,B).
 
-1 child(ma,ba).
-1 child(ma,mi).
+4 spouse(A,B) :- parent(A,C), child(C,B).

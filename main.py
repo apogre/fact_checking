@@ -22,10 +22,13 @@ def word2vec_score(rel, triple_k):
     global load_word2vec
     global model_wv_g
     if load_word2vec:
-        print "Loading Word2Vec"
-        model_wv_g = Word2Vec.load_word2vec_format("/home/apradhan/Google_Vectors/GoogleNews-vectors-negative300.bin", \
-                                                   binary=True)
-        load_word2vec = False
+        try:
+            print "Loading Word2Vec"
+            model_wv_g = Word2Vec.load_word2vec_format("/home/apradhan/Google_Vectors/GoogleNews-vectors-negative300.bin", \
+                                                       binary=True)
+            load_word2vec = False
+        except:
+            print "Loading Word2Vec Failed"
     score = []
     try:
         for r in rel.split():
@@ -74,8 +77,8 @@ def predicate_ranker(predicates, triple):
 
 
 def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
-                 lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln):
-    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate = load_files()
+                 lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag):
+    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output = load_files()
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
     kgminer_evaluation = []
@@ -173,31 +176,35 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             else:
                 sorted_predicates = lpmln_predicate.get(sentence_id, {})
             print sorted_predicates
-            evidence_writer(sorted_predicates, sentence_id)
-            print predicate_of_interest
-            # get_rules(predicate_of_interest)
-            probability = inference(sentence_id)
-            lpmln_evaluation.append([probability.extend(sentence_id)])
+            if sentence_id not in lpmln_output.keys():
+                evidence_writer(sorted_predicates, sentence_id)
+                # get_rules(predicate_of_interest)
+                probability = inference(sentence_id)
+                probability.append(sentence_id)
+            else:
+                probability = lpmln_output[sentence_id]
+                probability.append(sentence_id)
+            lpmln_evaluation.append(probability)
 
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
-                         lpmln_predicate, kgminer_output)
+                         lpmln_predicate, kgminer_output, lpmln_output_flag)
 
-    print kgminer_evaluation
     if kgminer_evaluation:
+        print kgminer_evaluation
         with open('dataset/'+ data_source + '/kgminer_evaluation.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(kgminer_evaluation)
 
-    print lpmln_evaluation
     if lpmln_evaluation:
+        print lpmln_evaluation
         with open('dataset/' + data_source + '/lpmln_evaluation.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)
 
 
 if __name__ == "__main__":
-    with open('dataset/' + data_source + '/sentences_test.csv') as f:
+    with open('dataset/' + data_source + '/sentences.csv') as f:
         reader = csv.DictReader(f)
         sentences_list = []
         id_list = []
@@ -209,4 +216,4 @@ if __name__ == "__main__":
             id_list.append(row['id'])
         fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False, \
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False, \
-                     KGMiner=False, lpmln=True)
+                     KGMiner=False, lpmln=True, lpmln_output_flag=False)

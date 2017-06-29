@@ -1,0 +1,8 @@
+child(John_Coolidge,Grace_Coolidge).
+father(Calvin_Coolidge,John_Coolidge).
+successor(Caro_Dawes,Grace_Coolidge).
+president(Calvin_Coolidge,Caro_Dawes).
+president(Warren_G._Harding,Grace_Coolidge).
+successor(Calvin_Coolidge,Warren_G._Harding).
+vice_president(Calvin_Coolidge,Warren_G._Harding).
+vicepresident(Calvin_Coolidge,Warren_G._Harding).

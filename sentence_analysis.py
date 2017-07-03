@@ -6,7 +6,7 @@ from StanfordOpenIEPython.main import stanford_ie
 from datetime import datetime
 from config import aux_verb
 # stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+stanford_model_jar = str(os.environ['STANFORDTOOLSDIR'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
 st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 # st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')

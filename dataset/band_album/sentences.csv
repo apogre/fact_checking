@@ -1,0 +1,31 @@
+id,sentences,label
+1,"Abbey Road is the musical album by The Beatles.",T
+2,"Nevermind  is the musical album by Nirvana.",T
+3,"The Wall is the musical album by Pink Floyd.",T
+4,"Paranoid is the musical album by Black Sabbath.",T
+5,"Machine Head is the musical album by Deep Purple.",T
+6,"OK Computer is the musical album by Radiohead.",T
+7,"Blonde on Blonde is the musical album by Bob Dylan.",T
+8,"Beggars Banquet is the musical album by The Rolling Stone.",T
+9,"Infinite is the musical album by Eminem.",T
+10,"Red is the musical album by Taylor Swift.",T
+11,"Hotel California is the musical album by Eagles.",T
+12,"Ride the Lightning is the musical album by Metallica.",T
+13,"Blue Moves is the musical album by Elton John.",T
+14,"Loud is the musical album by Rihanna.",T
+15,"Circus is the musical album by Britney Spears.",T
+16,"The Fame is the musical album by Lady Gaga.",T
+17,"Hot Space is the musical album by Queen.",T
+18,"Purple Rain is the musical album by Prince.",T
+19,"Unplugged is the musical album Eric Clapton.",T
+20,"Hysteria is the musical album Def Leppard.",T
+21,"Nevermind is the musical album by The Beatles.",F
+22,"Abbey Road is the musical album by Nirvana.",F
+23,"Machine Head is the musical album by Pink Floyd.",F
+24,"Blonde on Blonde is the musical album by Black Sabbath.",F
+25,"The Wall is the musical album by Deep Purple.",F
+26,"Beggars Banquet is the musical album by Radiohead.",F
+27,"Paranoid is the musical album by Bob Dylan.",F
+28,"OK Computer is the musical album by The Rolling Stone.",F
+29,"Red is the musical album by Eminem.",F
+30,"Infinite is the musical album by Taylor Swift.",F

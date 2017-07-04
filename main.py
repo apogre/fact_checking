@@ -110,14 +110,12 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         print "=================="
         pprint.pprint(resource)
         # get poi
-        type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, \
-                                                                                               triple_dict)
+        type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
         print type_ontology, type_resource, type_ontology_full, type_resource_full
         if sentence_id not in possible_kgminer_predicate.keys():                
 
             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
-            kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates,\
-                                                                                                 triple_dict)
+            kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
             if kgminer_predicate_ranked:
                 kgminer_predicate_flag = True
                 possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
@@ -133,7 +131,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             kg_output = []
             print "Link Prediction with KG_Miner"
             if sentence_id not in kgminer_output.keys():
-                if kgminer_predicate_ranked.values()[0]:
+                if kgminer_predicate_ranked.values():
                     kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
                                                       triple_dict, resource, sentence_id)
                     if kgminer_status:
@@ -224,4 +222,4 @@ if __name__ == "__main__":
             id_list.append(row['id'])
         fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False,\
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
-                     KGMiner=True, lpmln=False, lpmln_output_flag=False)
+                     KGMiner=False, lpmln=False, lpmln_output_flag=False)

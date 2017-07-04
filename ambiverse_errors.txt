@@ -4,3 +4,11 @@ Tokyo is the capital of Japan.
 The capital of Italy is Rome.
 Paris is the capital of France.
 Kingston is the capital of Jamaica.
+Al Pacino starred in Scarface.
+Johnny Depp starred in Sleepy Hollow.
+Tom Cruise starred in Top Gun.
+Christian Bale starred in American Psycho.
+Leonardo DiCaprio starred in Titanic.
+Samuel Jackson starred in Pulp Fiction.
+Jennifer Lawrence starred in American Psycho.
+Sandra Bullock starred in Gravity.

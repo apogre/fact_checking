@@ -22,3 +22,4 @@
 22,Donald Trump is married to Nancy Reagan.
 23,Ronald Reagan is married to Melania Trump.
 "spouse(ro, na) 1.0","spouse(ro1, ji) 1.0","spouse(na, ro) 1.0","spouse(ji, ro1) 1.0",24,Jimmy Carter is married to Nancy Reagan.
+"spouse(ha, be) 0.999999997939","spouse(be, ha) 0.999999997939","spouse(be, be) 0.999993855825","spouse(ha, ha) 0.99966464987",25,Harry Truman was married to Bess Truman.

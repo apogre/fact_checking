@@ -1,0 +1,31 @@
+id,sentence,label
+1,"Tom Hanks starred in Forrest Gump.",T
+2,"George Clooney starred in Tomorrowland.",T
+3,"Ben Affleck starred in Argo.",T
+4,"Al Pacino starred in Scarface.",T
+5,"Johnny Depp starred in Sleepy Hollow.",T
+6,"Matt Damon starred in Good Will Hunting.",T
+7,"Tom Cruise starred in Top Gun.",T
+8,"Brad Pitt starred in Fight Club.",T
+9,"Christian Bale starred in American Psycho.",T
+10,"Leonardo DiCaprio starred in Titanic.",T
+11,"Samuel Jackson starred in Pulp Fiction.",T
+12,"Jennifer Lawrence starred in American Psycho.",T
+13,"Sandra Bullock starred in Gravity.",T
+14,"Meryl Streep starred in Mamma Mia.",T
+15,"Scarlett Johansson starred in Lucy.",T
+16."Julia Roberts starred in Notting Hill.",T
+17,"Amy Adams starred in Enchanted.",T
+18,"Natalie Portman starred in Black Swan.",T
+19,"Charlize Theron starred in Hancock.",T
+20,"Cate Blanchett starred in Carol.",T
+21,"Kristen Stewart starred in Twilight.",T
+22,"Tom Hanks starred in Argo.",F
+23,"George Clooney starred in Twilight.",F
+24,"Ben Affleck starred in Forrest Gump.",F
+25,"Al Pacino starred in American Psycho.",F
+26,"Jennifer Lawrence starred in Scarface.",F
+27,"Sandra Bullock starred in Notting Hill."F
+28,"Meryl Streep starred in Lucy.",F
+29,"Scarlett Johansson starred in Mamma Mia.",F
+30."Julia Roberts starred in Gravity.",F

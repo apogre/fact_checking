@@ -1,4 +1,5 @@
-import requests, pprint, json
+import requests
+import json
 
 url = "https://api.ambiverse.com/v1/entitylinking/analyze"
 
@@ -28,14 +29,17 @@ def entity_parser(text):
             confidence = 0
             wikidata_url = ''
         if '%' in url1:
-            url1 = url1.replace('%20','_')
+            url1 = url1.replace('%20', '_')
             url1 = url1.replace('%2C', ',')
-        resource[entity.get('text')] = {"dbpedia_id":url1,"confidence":confidence, "wikidata_id": wikidata_url}
+            url1 = url1.replace('%28', '(')
+            url1 = url1.replace('%29', ')')
+            url1 = url1.replace('%21', '!')
+        resource[entity.get('text')] = {"dbpedia_id": url1, "confidence": confidence, "wikidata_id": wikidata_url}
     return resource
 
 
 if __name__ == '__main__':
-    ambiverse_resources = {'a':'b'}
+    ambiverse_resources = {'a': 'b'}
     resource = entity_parser("Springfield is the capital of Illinois.")
     print resource
 

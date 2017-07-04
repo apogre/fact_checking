@@ -1,6 +1,6 @@
 
-data_source = 'president_spouse'
-# data_source = 'state_capital'
+# data_source = 'president_spouse'
+data_source = 'state_capital'
 # data_source = 'country_capital'
 
 KGMiner_data = 'KGMiner/KGMiner_data'

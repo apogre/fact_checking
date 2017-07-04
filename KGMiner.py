@@ -1,5 +1,5 @@
 import csv
-from os import listdir, path, remove, chdir, getcwd
+from os import listdir, path, remove, chdir, environ
 import subprocess
 from gensim.models import Word2Vec
 
@@ -140,7 +140,7 @@ def word2vec_dbpedia(train_ents, resource_v):
     global model_wv
     if load_dbpedia_word2vec:
         print "Loading Word2Vec DBpedia"
-        model_wv = Word2Vec.load("/home/apradhan/en_1000_no_stem/en.model")
+        model_wv = Word2Vec.load(str(environ['STANFORDTOOLSDIR']) + "/en_1000_no_stem/en.model")
         load_dbpedia_word2vec = False
 
     for j in range(0, len(train_ents) - 1, 2):

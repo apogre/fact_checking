@@ -6,6 +6,7 @@ from config import data_source, aux_verb, rank_threshold, kgminer_predicate_thre
 from KGMiner import get_training_set, invoke_kgminer
 from gensim.models import Word2Vec
 from nltk import word_tokenize
+from os import environ
 import operator
 import csv
 import argparse
@@ -25,8 +26,8 @@ def word2vec_score(rel, triple_k):
     if load_word2vec:
         try:
             print "Loading Word2Vec"
-            model_wv_g = Word2Vec.load_word2vec_format("/home/apradhan/Google_Vectors/GoogleNews-vectors-negative300.bin", \
-                                                       binary=True)
+            model_wv_g = Word2Vec.load_word2vec_format(str(environ['STANFORDTOOLSDIR']) + \
+                                                       "/Google_Vectors/GoogleNews-vectors-negative300.bin", binary=True)
             load_word2vec = False
         except:
             print "Loading Word2Vec Failed"
@@ -223,4 +224,4 @@ if __name__ == "__main__":
             id_list.append(row['id'])
         fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False,\
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
-                     KGMiner=True, lpmln=True, lpmln_output_flag=False)
+                     KGMiner=True, lpmln=False, lpmln_output_flag=False)

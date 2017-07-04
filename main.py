@@ -223,4 +223,4 @@ if __name__ == "__main__":
             id_list.append(row['id'])
         fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False,\
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
-                     KGMiner=True, lpmln=False, lpmln_output_flag=False)
+                     KGMiner=True, lpmln=True, lpmln_output_flag=False)

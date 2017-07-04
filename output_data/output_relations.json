@@ -1,1 +1,0 @@
-{"1": {"node": {"1940-04-25T00:00:00": {"score": 0, "id": 2}, "Al_Pacino": {"score": 1.0, "id": 1}}, "edge": {"birthDate": [{"score": 1, "join": ["Al_Pacino", "1940-04-25T00:00:00"], "id": 1}]}}}

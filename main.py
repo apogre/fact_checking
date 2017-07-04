@@ -8,6 +8,7 @@ from gensim.models import Word2Vec
 from nltk import word_tokenize
 import operator
 import csv
+import argparse
 
 import pprint
 import numpy as np
@@ -110,6 +111,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         # get poi
         type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, \
                                                                                                triple_dict)
+        print type_ontology, type_resource, type_ontology_full, type_resource_full
         if sentence_id not in possible_kgminer_predicate.keys():                
 
             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
@@ -206,7 +208,10 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
 
 
 if __name__ == "__main__":
-    with open('dataset/' + data_source + '/sentences.csv') as f:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", "--input", default='sentences_test.csv')
+    args = parser.parse_args()
+    with open('dataset/' + data_source + '/' + args.input) as f:
         reader = csv.DictReader(f)
         sentences_list = []
         id_list = []
@@ -216,6 +221,6 @@ if __name__ == "__main__":
             sentences_list.append(row['sentence'])
             true_label.append(row['label'])
             id_list.append(row['id'])
-        fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False, \
-                     kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False, \
-                     KGMiner=False, lpmln=True, lpmln_output_flag=False)
+        fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False,\
+                     kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
+                     KGMiner=True, lpmln=False, lpmln_output_flag=False)

@@ -79,6 +79,9 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                     copyfile(KGMiner_data+'/'+data_source+'/'+sentence_id+data_source+'_ids.csv', KGMiner_data+'/' + \
                              'training_data.csv')
                 return kgminer_status
+            else:
+                print "Test Data Not Found"
+                return False
     return False
 
 
@@ -91,7 +94,7 @@ def get_test_data(resource_v):
 def entity_id_finder(entity_set):
     id_set = {}
     for ent in entity_set:
-        id_set[ent] = nodes_id.get(ent, '')
+        id_set[ent] = nodes_id.get(ent)
     return id_set
 
 
@@ -156,3 +159,4 @@ def word2vec_dbpedia(train_ents, resource_v):
         except:
             pass
     return word_vec_train
+

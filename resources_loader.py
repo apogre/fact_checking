@@ -1,6 +1,8 @@
 import os
 import json
+import csv
 from config import data_source, KGMiner_data
+from resource_writer import json_serial
 
 
 def load_files():
@@ -48,8 +50,22 @@ def load_kgminer_resource():
     if os.path.isfile(KGMiner_data+'/nodes_id.json'):
         with open(KGMiner_data+'/nodes_id.json') as json_data:
             nodes_id = json.load(json_data)
+    else:
+        process_input_data('KGMiner/input_data/infobox.nodes', KGMiner_data+'/nodes_id.json')
 
     if os.path.isfile(KGMiner_data+'/edge_types_id.json'):
         with open(KGMiner_data+'/edge_types_id.json') as json_data:
             edge_id = json.load(json_data)
+    else:
+        process_input_data('KGMiner/input_data/infobox.edgetypes', KGMiner_data + '/edge_types_id.json')
+        load_kgminer_resource()
     return nodes_id, edge_id
+
+
+def process_input_data(input_file, output_file):
+    with open(input_file) as f:
+        reader = csv.reader(f, delimiter='\t')
+        mydict = dict((rows[1], rows[0]) for rows in reader)
+
+    with open(output_file, 'w') as fp:
+        json.dump(mydict, fp, default=json_serial)

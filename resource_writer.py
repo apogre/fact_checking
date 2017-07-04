@@ -11,6 +11,7 @@ def json_serial(obj):
         return serial
     raise TypeError ("Type not serializable")
 
+
 def update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, kgminer_output_flag, \
                      file_triples, ambiverse_resources, possible_kgminer_predicate, lpmln_predicate, kgminer_output, lpmln_output_flag ):
     if triple_flag:

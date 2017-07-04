@@ -1,0 +1,11 @@
+capital(Montgomery,Montgomery_County).
+country(United_States_of_America,Montgomery).
+state(Alabama,Montgomery_County,_Alabama).
+head_of_government(Kay_Ivey,Alabama).
+located_in_the_administrative_territorial_entity(Montgomery_County,Montgomery).
+located_in_the_administrative_territorial_entity(Alabama,Montgomery_County).
+contains_administrative_territorial_entity(Alabama,United_States_of_America).
+contains_administrative_territorial_entity(Montgomery_County,Alabama).
+is_part_of(Montgomery_County,_Alabama,Montgomery).
+subdivision_name(Montgomery_County,_Alabama,Montgomery).
+work_location(Montgomery,Kay_Ivey).

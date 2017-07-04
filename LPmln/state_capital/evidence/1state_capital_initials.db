@@ -1,0 +1,11 @@
+capital(mo,mo1).
+country(un,mo).
+state(al,mo2).
+head_of_government(ka,al).
+located_in_the_administrative_territorial_entity(mo1,mo).
+located_in_the_administrative_territorial_entity(al,mo1).
+contains_administrative_territorial_entity(al,un).
+contains_administrative_territorial_entity(mo1,al).
+is_part_of(mo2,mo).
+subdivision_name(mo2,mo).
+work_location(mo,ka).

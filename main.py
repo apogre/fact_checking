@@ -97,8 +97,9 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             triple_dict = file_triples[sentence_id]
         else:
             triple_dict = triples_extractor(sentence_lis[n], named_entities)
-            file_triples[sentence_id] = triple_dict
-            triple_flag = True
+            if triple_dict:
+                file_triples[sentence_id] = triple_dict
+                triple_flag = True
         print "Relation Triples: "+str(triple_dict)
         if sentence_id in ambiverse_resources.keys():
             resource = ambiverse_resources[sentence_id]
@@ -116,7 +117,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
 
             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
             kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
-            if kgminer_predicate_ranked:
+            if kgminer_predicate_ranked.values():
                 kgminer_predicate_flag = True
                 possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
         else:
@@ -209,7 +210,10 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", default='sentences_test.csv')
+    parser.add_argument("-k", "--kgminer", default=False)
+    parser.add_argument("-l", "--lpmln", default=False)
     args = parser.parse_args()
+    print args.kgminer
     with open('dataset/' + data_source + '/' + args.input) as f:
         reader = csv.DictReader(f)
         sentences_list = []
@@ -222,4 +226,4 @@ if __name__ == "__main__":
             id_list.append(row['id'])
         fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False,\
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
-                     KGMiner=False, lpmln=False, lpmln_output_flag=False)
+                     KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False)

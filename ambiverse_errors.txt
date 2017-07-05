@@ -1,9 +1,12 @@
+*---state_capital---*
 Sacramento is the capital of California.
 Albany is the capital of New York.
+*---country_capital---*
 Tokyo is the capital of Japan.
 The capital of Italy is Rome.
 Paris is the capital of France.
 Kingston is the capital of Jamaica.
+*---movie_actor---*
 Al Pacino starred in Scarface.
 Johnny Depp starred in Sleepy Hollow.
 Tom Cruise starred in Top Gun.
@@ -12,3 +15,11 @@ Leonardo DiCaprio starred in Titanic.
 Samuel Jackson starred in Pulp Fiction.
 Jennifer Lawrence starred in American Psycho.
 Sandra Bullock starred in Gravity.
+Amy Adams starred in Enchanted.
+Kristen Stewart starred in Twilight.
+Tom Hanks starred in Argo.
+George Clooney starred in Twilight.
+Al Pacino starred in American Psycho.
+Jennifer Lawrence starred in Scarface.
+Meryl Streep starred in Lucy.
+Julia Roberts starred in Gravity.

@@ -14,7 +14,7 @@ id,sentence,label
 13,"Sandra Bullock starred in Gravity.",T
 14,"Meryl Streep starred in Mamma Mia.",T
 15,"Scarlett Johansson starred in Lucy.",T
-16."Julia Roberts starred in Notting Hill.",T
+16,"Julia Roberts starred in Notting Hill.",T
 17,"Amy Adams starred in Enchanted.",T
 18,"Natalie Portman starred in Black Swan.",T
 19,"Charlize Theron starred in Hancock.",T
@@ -25,7 +25,7 @@ id,sentence,label
 24,"Ben Affleck starred in Forrest Gump.",F
 25,"Al Pacino starred in American Psycho.",F
 26,"Jennifer Lawrence starred in Scarface.",F
-27,"Sandra Bullock starred in Notting Hill."F
+27,"Sandra Bullock starred in Notting Hill.",F
 28,"Meryl Streep starred in Lucy.",F
 29,"Scarlett Johansson starred in Mamma Mia.",F
-30."Julia Roberts starred in Gravity.",F
+30,"Julia Roberts starred in Gravity.",F

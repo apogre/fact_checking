@@ -1,0 +1,136 @@
+{
+  "24": {
+    "Black Sabbath": {
+      "confidence": 1.0,
+      "wikidata_id": "Q47670",
+      "dbpedia_id": "Black_Sabbath"
+    }
+  },
+  "26": {
+    "Radiohead": {
+      "confidence": 1.0,
+      "wikidata_id": "Q44190",
+      "dbpedia_id": "Radiohead"
+    }
+  },
+  "27": {
+    "Bob Dylan": {
+      "confidence": 1.0,
+      "wikidata_id": "Q392",
+      "dbpedia_id": "Bob_Dylan"
+    }
+  },
+  "23": {
+    "Pink Floyd": {
+      "confidence": 1.0,
+      "wikidata_id": "Q2306",
+      "dbpedia_id": "Pink_Floyd"
+    }
+  },
+  "29": {
+    "Eminem": {
+      "confidence": 1.0,
+      "wikidata_id": "Q5608",
+      "dbpedia_id": "Eminem"
+    }
+  },
+  "3": {
+    "Pink Floyd": {
+      "confidence": 1.0,
+      "wikidata_id": "Q2306",
+      "dbpedia_id": "Pink_Floyd"
+    }
+  },
+  "4": {
+    "Black Sabbath": {
+      "confidence": 1.0,
+      "wikidata_id": "Q47670",
+      "dbpedia_id": "Black_Sabbath"
+    }
+  },
+  "7": {
+    "Bob Dylan": {
+      "confidence": 1.0,
+      "wikidata_id": "Q392",
+      "dbpedia_id": "Bob_Dylan"
+    }
+  },
+  "6": {
+    "Radiohead": {
+      "confidence": 1.0,
+      "wikidata_id": "Q44190",
+      "dbpedia_id": "Radiohead"
+    }
+  },
+  "9": {
+    "Eminem": {
+      "confidence": 1.0,
+      "wikidata_id": "Q5608",
+      "dbpedia_id": "Eminem"
+    }
+  },
+  "11": {
+    "California": {
+      "confidence": 0.8586676984892726,
+      "wikidata_id": "Q99",
+      "dbpedia_id": "California"
+    }
+  },
+  "a": "b",
+  "10": {
+    "Taylor Swift": {
+      "confidence": 1.0,
+      "wikidata_id": "Q26876",
+      "dbpedia_id": "Taylor_Swift"
+    }
+  },
+  "13": {
+    "Elton John": {
+      "confidence": 1.0,
+      "wikidata_id": "Q2808",
+      "dbpedia_id": "Elton_John"
+    }
+  },
+  "12": {
+    "Metallica": {
+      "confidence": 1.0,
+      "wikidata_id": "Q15920",
+      "dbpedia_id": "Metallica"
+    }
+  },
+  "15": {
+    "Britney Spears": {
+      "confidence": 1.0,
+      "wikidata_id": "Q11975",
+      "dbpedia_id": "Britney_Spears"
+    }
+  },
+  "14": {
+    "Rihanna": {
+      "confidence": 1.0,
+      "wikidata_id": "Q36844",
+      "dbpedia_id": "Rihanna"
+    }
+  },
+  "16": {
+    "Lady Gaga": {
+      "confidence": 1.0,
+      "wikidata_id": "Q19848",
+      "dbpedia_id": "Lady_Gaga"
+    }
+  },
+  "19": {
+    "Eric Clapton": {
+      "confidence": 1.0,
+      "wikidata_id": "Q48187",
+      "dbpedia_id": "Eric_Clapton"
+    }
+  },
+  "30": {
+    "Taylor Swift": {
+      "confidence": 1.0,
+      "wikidata_id": "Q26876",
+      "dbpedia_id": "Taylor_Swift"
+    }
+  }
+}

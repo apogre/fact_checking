@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 import sparql
-from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata, sparql_dbpedia_local
+from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata, sparql_dbpedia_local, data_source
 
 
 prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"
@@ -41,9 +41,15 @@ def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
     {?url2 <http://dbpedia.org/ontology/' + poi[0] + '> ?url1} . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
-    print q_ts
     result = sparql.query(sparql_dbpedia, q_ts)
     training_set = [sparql.unpack_row(row_result) for row_result in result]
+    if not training_set:
+        q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
+        {?url1 <http://dbpedia.org/ontology/' + poi[0] + '> ?url2} . ' + q_part + \
+               ' FILTER(?url1 != ?url2).} '
+        result = sparql.query(sparql_dbpedia, q_ts)
+        training_set = [sparql.unpack_row(row_result) for row_result in result]
+    print q_ts
     return training_set
 
 

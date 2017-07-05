@@ -38,17 +38,22 @@ def write_to_kgminer(poi, q_part, resource_v, sentence_id):
     word_vec_train = word2vec_dbpedia(train_ents, resource_v)
     word_vec_train = list(set(map(tuple, word_vec_train)))
     word_vec_train = map(list, word_vec_train)
-    print word_vec_train
-    if len(word_vec_train)>5:
+    if word_vec_train:
         csv_writer(word_vec_train, data_source + '/' + sentence_id + data_source)
         word_vec_train = sum(word_vec_train, [])
-        node_ids = entity_id_finder(word_vec_train)
-        training_data, test_data = train_data_csv(word_vec_train, node_ids, resource_v)
-        csv_writer(training_data, file_name=data_source + '/' + sentence_id + data_source + '_ids')
-        copyfile(KGMiner_data + '/' + data_source + '/' + sentence_id + data_source + '_ids.csv', KGMiner_data + '/' + \
-                 'training_data.csv')
-        if training_data:
-            return True
+    else:
+        print "Word2Vec Failed, Training at Random"
+        word_vec_train = train_ents[:100]
+        csv_writer(training_set, data_source + '/' + sentence_id + data_source)
+    print word_vec_train
+
+    node_ids = entity_id_finder(word_vec_train)
+    training_data, test_data = train_data_csv(word_vec_train, node_ids, resource_v)
+    csv_writer(training_data, file_name=data_source + '/' + sentence_id + data_source + '_ids')
+    copyfile(KGMiner_data + '/' + data_source + '/' + sentence_id + data_source + '_ids.csv', KGMiner_data + '/' + \
+             'training_data.csv')
+    if training_data:
+        return True
     return False
 
 
@@ -65,11 +70,13 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
             resource_v = [resource_ids.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
             q_part = or_query_prep(resource_type_set_ranked, ontology_threshold_ranked, triple_v)
             test_data = get_test_data(resource_v)
-            predicate_of_interest = predicate_ranked.values()
+            predicate_of_interest = predicate_ranked.values()[0]
             print test_data
+            print predicate_of_interest
             if None not in test_data and predicate_of_interest:
                 csv_writer([test_data], file_name='test_data')
-                poi = predicate_of_interest[0][0]
+                poi = predicate_of_interest[0]
+                print poi
                 poi_writer(poi)
                 training_files = listdir(KGMiner_data+'/'+data_source)
                 if sentence_id+data_source+'_ids.csv' not in training_files:
@@ -100,9 +107,9 @@ def entity_id_finder(entity_set):
 
 def poi_writer(poi):
     id_list = [edge_id.get(poi[0], ''), poi]
-    if path.isfile(KGMiner_data + 'poi.csv'):
-        remove(KGMiner_data + 'poi.csv')
-    with open(KGMiner_data + 'poi.csv', 'wb') as csvfile:
+    if path.isfile(KGMiner_data + '/poi.csv'):
+        remove(KGMiner_data + '/poi.csv')
+    with open(KGMiner_data + '/poi.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
         datawriter.writerow(id_list)
 

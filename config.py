@@ -2,7 +2,8 @@
 # data_source = 'president_spouse'
 # data_source = 'state_capital'
 # data_source = 'country_capital'
-data_source = 'movie_actor'
+# data_source = 'movie_actor'
+data_source = 'band_album'
 
 KGMiner_data = 'KGMiner/KGMiner_data'
 aux_verb = ['was', 'is', 'become','to','of', 'in', 'the']

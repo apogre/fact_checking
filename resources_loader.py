@@ -47,17 +47,17 @@ def load_files(data_source):
 
 def load_kgminer_resource():
     nodes_id, edge_id = dict(), dict()
-    if os.path.isfile(KGMiner_data+'/nodes_id.json'):
-        with open(KGMiner_data+'/nodes_id.json') as json_data:
+    if os.path.isfile('KGMiner/input_data/nodes_id.json'):
+        with open('KGMiner/input_data/nodes_id.json') as json_data:
             nodes_id = json.load(json_data)
     else:
-        process_input_data('KGMiner/input_data/infobox.nodes', KGMiner_data+'/nodes_id.json')
+        process_input_data('KGMiner/input_data/infobox.nodes', 'KGMiner/input_data/nodes_id.json')
 
-    if os.path.isfile(KGMiner_data+'/edge_types_id.json'):
-        with open(KGMiner_data+'/edge_types_id.json') as json_data:
+    if os.path.isfile('KGMiner/input_data/edge_types_id.json'):
+        with open('KGMiner/input_data/edge_types_id.json') as json_data:
             edge_id = json.load(json_data)
     else:
-        process_input_data('KGMiner/input_data/infobox.edgetypes', KGMiner_data + '/edge_types_id.json')
+        process_input_data('KGMiner/input_data/infobox.edgetypes', 'KGMiner/input_data/edge_types_id.json')
         load_kgminer_resource()
     return nodes_id, edge_id
 

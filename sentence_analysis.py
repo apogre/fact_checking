@@ -1,31 +1,35 @@
 from nltk.tag import StanfordNERTagger,StanfordPOSTagger
 # from nltk.parse.stanford import StanfordDependencyParser
 import os, sys
-from itertools import groupby,product
+from itertools import groupby
+from nltk import word_tokenize
 from StanfordOpenIEPython.main import stanford_ie
-from datetime import datetime
-from config import aux_verb
+
 # stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
 stanford_model_jar = str(os.environ['STANFORDTOOLSDIR'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
-st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
+st_ner = StanfordNERTagger('english.muc.7class.distsim.crf.ser.gz')
 # st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
 # parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
 
 
-def svo_finder(ent, triples):
+def triple_filter(ent, triples):
     triple_dict = {}
-    entity_set = [x[0] for x in ent]
+    entity_set = [x[0].encode('utf-8') for x in ent]
     for triple in triples:
-        if triple[0] in entity_set and triple[2] in entity_set:
+        key1 = [ent for ent in entity_set if ent in triple[0]]
+        key2 = [ent for ent in entity_set if ent in triple[2]]
+        if key1 and key2:
+            key1 = key1[0]
+            key2 = key2[0]
             if triple[1] not in triple_dict.keys():
-                triple_dict[triple[1]] = [[triple[0], triple[2]]]
+                triple_dict[triple[1]] = [[key1, key2]]
             else:
                 triple_list = [item for sublist in triple_dict[triple[1]] for item in sublist]
-                if triple[0] in triple_list and triple[2] in triple_list:
+                if key1 in triple_list and key2 in triple_list:
                     pass
                 else:
-                    triple_dict[triple[1]].append([triple[0], triple[2]])
+                    triple_dict[triple[1]].append([key1, key2])
     return triple_dict
 
 
@@ -46,7 +50,7 @@ def get_nodes(tagged_words):
     return ent
 
 
-def triples_extractor(sentence, named_entities, new_triple_flag=0):
+def triples_extractor(sentence, named_entities):
     try:
         os.remove('sentences.txt')
     except:
@@ -55,5 +59,19 @@ def triples_extractor(sentence, named_entities, new_triple_flag=0):
         text.write(sentence)
     triples_raw = stanford_ie("sentences.txt", verbose=False)
     triples = [[trip.lstrip() for trip in triple] for triple in triples_raw]
-    triple_dict = svo_finder(named_entities, triples)
+    triple_dict = triple_filter(named_entities, triples)
     return triple_dict
+
+
+if __name__ == "__main__":
+    sentence_lis = ["Born in South Africa in 1971, Elon Musk is known for his company Tesla."]
+    sentence_list = [word_tokenize(sent) for sent in sentence_lis]
+    named_tags = sentence_tagger(sentence_list)
+    for ne in named_tags:
+        sentence_check = sentence_lis[0]
+        print sentence_check
+        named_entities = get_nodes(ne)
+        entity_dict = dict(named_entities)
+        print "NER: "+str(entity_dict)
+        triple_dict = triples_extractor(sentence_check, named_entities)
+        print "Relation Triples: "+str(triple_dict)

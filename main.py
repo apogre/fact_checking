@@ -96,17 +96,19 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         if sentence_id in file_triples.keys():
             triple_dict = file_triples[sentence_id]
         else:
-            triple_dict = triples_extractor(sentence_lis[n], named_entities)
+            triple_dict = triples_extractor(sentence_check, named_entities)
             if triple_dict:
                 file_triples[sentence_id] = triple_dict
-                triple_flag = True
+                if sentence_id != 0:
+                    triple_flag = True
         print "Relation Triples: "+str(triple_dict)
         if sentence_id in ambiverse_resources.keys():
             resource = ambiverse_resources[sentence_id]
         else:
             resource = entity_parser(sentence_lis[n])
             ambiverse_resources[sentence_id] = resource
-            ambiverse_flag = True
+            if sentence_id != 0:
+                ambiverse_flag = True
         print "Resource Extractor"
         print "=================="
         pprint.pprint(resource)
@@ -114,20 +116,17 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
         print type_ontology, type_resource, type_ontology_full, type_resource_full
         if sentence_id not in possible_kgminer_predicate.keys():                
-
             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
             kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
             if kgminer_predicate_ranked.values():
-                kgminer_predicate_flag = True
                 possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+                if sentence_id != 0:
+                    kgminer_predicate_flag = True
         else:
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
 
         print "Ranked Possible Predicates"
         print kgminer_predicate_ranked
-        if kgminer_predicate_ranked:
-            predicate_of_interest = kgminer_predicate_ranked.values()[0]
-                
         if KGMiner:
             kg_output = []
             print "Link Prediction with KG_Miner"
@@ -140,7 +139,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                         if predicate_result:
                             kg_output = predicate_result.values()
                             kgminer_output[sentence_id] = predicate_result
-                            kgminer_output_flag = True
+                            if sentence_id != 0:
+                                kgminer_output_flag = True
                         else:
                             print "kgminer failed"
                     else:
@@ -175,7 +175,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                     ev.append(predicate_dict.get(ev[1], 0))
                 sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
                 lpmln_predicate[sentence_id] = sorted_predicates
-                lpmln_predicate_flag = True
+                if sentence_id != 0:
+                    lpmln_predicate_flag = True
             else:
                 sorted_predicates = lpmln_predicate.get(sentence_id, {})
             print sorted_predicates
@@ -213,6 +214,7 @@ if __name__ == "__main__":
     parser.add_argument("-k", "--kgminer", default=False)
     parser.add_argument("-l", "--lpmln", default=False)
     parser.add_argument("-t", "--test_data", default='president_spouse')
+    parser.add_argument("-s", "--sentence", default='')
     args = parser.parse_args()
     print args.kgminer
     with open('dataset/' + args.test_data + '/' + args.input) as f:
@@ -220,11 +222,15 @@ if __name__ == "__main__":
         sentences_list = []
         id_list = []
         true_label = []
-        for row in reader:
-            sentence = row['sentence']
-            sentences_list.append(row['sentence'])
-            true_label.append(row['label'])
-            id_list.append(row['id'])
+        if args.sentence:
+            sentences_list = [args.sentence]
+            id_list = [0]
+            true_label = ['X']
+        else:
+            for row in reader:
+                sentences_list.append(row.get('sentence'))
+                true_label.append(row.get('label'))
+                id_list.append(row.get('id'))
         fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False,\
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
                      KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False, data_source=args.test_data)

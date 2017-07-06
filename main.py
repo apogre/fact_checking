@@ -2,7 +2,7 @@ from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files
 from ambiverse_api import entity_parser
 from kb_query import get_entity_type, get_description, get_kgminer_predicates
-from config import data_source, aux_verb, rank_threshold, kgminer_predicate_threshold
+from config import aux_verb, rank_threshold, kgminer_predicate_threshold
 from KGMiner import get_training_set, invoke_kgminer
 from gensim.models import Word2Vec
 from nltk import word_tokenize
@@ -79,8 +79,8 @@ def predicate_ranker(predicates, triple):
 
 
 def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
-                 lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag):
-    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output = load_files()
+                 lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source):
+    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output = load_files(data_source)
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
     kgminer_evaluation = []
@@ -134,7 +134,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             if sentence_id not in kgminer_output.keys():
                 if kgminer_predicate_ranked.values():
                     kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
-                                                      triple_dict, resource, sentence_id)
+                                                      triple_dict, resource, sentence_id, data_source)
                     if kgminer_status:
                         predicate_result = invoke_kgminer()
                         if predicate_result:
@@ -180,9 +180,9 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                 sorted_predicates = lpmln_predicate.get(sentence_id, {})
             print sorted_predicates
             if sentence_id not in lpmln_output.keys():
-                evidence_writer(sorted_predicates, sentence_id)
+                evidence_writer(sorted_predicates, sentence_id, data_source)
                 # get_rules(predicate_of_interest)
-                probability = inference(sentence_id)
+                probability = inference(sentence_id, data_source)
                 probability.extend([sentence_id, sentence_check])
             else:
                 probability = lpmln_output[sentence_id]
@@ -192,7 +192,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
 
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
-                         lpmln_predicate, kgminer_output, lpmln_output_flag)
+                         lpmln_predicate, kgminer_output, lpmln_output_flag, data_source)
 
     if kgminer_evaluation:
         print kgminer_evaluation
@@ -212,9 +212,10 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", default='sentences_test.csv')
     parser.add_argument("-k", "--kgminer", default=False)
     parser.add_argument("-l", "--lpmln", default=False)
+    parser.add_argument("-t", "--test_data", default='president_spouse')
     args = parser.parse_args()
     print args.kgminer
-    with open('dataset/' + data_source + '/' + args.input) as f:
+    with open('dataset/' + args.test_data + '/' + args.input) as f:
         reader = csv.DictReader(f)
         sentences_list = []
         id_list = []
@@ -226,4 +227,4 @@ if __name__ == "__main__":
             id_list.append(row['id'])
         fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False,\
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
-                     KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False)
+                     KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False, data_source=args.test_data)

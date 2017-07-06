@@ -1,4 +1,3 @@
-from config import data_source
 import json
 from os import remove, path
 from datetime import datetime
@@ -13,7 +12,8 @@ def json_serial(obj):
 
 
 def update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, kgminer_output_flag, \
-                     file_triples, ambiverse_resources, possible_kgminer_predicate, lpmln_predicate, kgminer_output, lpmln_output_flag ):
+                     file_triples, ambiverse_resources, possible_kgminer_predicate, lpmln_predicate, kgminer_output,\
+                     lpmln_output_flag, data_source):
     if triple_flag:
         print "Updating Relation Triples"
         if path.isfile('dataset/' + data_source + '/triples_raw.json'):

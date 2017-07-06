@@ -1,7 +1,6 @@
 import csv
-from config import data_source, evidence_threshold, rule_threshold
+from config import evidence_threshold, rule_threshold
 import subprocess
-import sys
 import re
 from nltk.stem.wordnet import WordNetLemmatizer
 from ordered_set import OrderedSet
@@ -12,7 +11,7 @@ from os import path, remove
 lemmatizer = WordNetLemmatizer()
 
 
-def get_rules(poi):
+def get_rules(poi, data_source):
     with open('LPmln/' + data_source + '/spouse_relation.csv') as f:
         reader = csv.DictReader(f)
         rules = []
@@ -46,12 +45,13 @@ def relation_extractor_triples(resources, triples):
     return relation, relation_0, relation_2
 
 
-def inference(sentence_id):
+def inference(sentence_id, data_source):
     print "LPMLN Inference"
     if path.isfile('LPmln/' +data_source + '/' + data_source + '_result.txt'):
         remove('LPmln/' +data_source + '/' + data_source + '_result.txt')
     evidence_source = 'LPmln/' + data_source + '/evidence/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}.lpmln -q spouse -all -e {1}_filter.db -r {0}_result.txt ".format('LPmln/' +data_source + '/' + data_source, evidence_source)
+    cmd = "lpmln2asp -i {0}.lpmln -q spouse -all -e {1}_filter.db -r {0}_result.txt ".format('LPmln/' +data_source +\
+                                                                                             '/' + data_source, evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' +data_source + '/' + data_source + '_result.txt', 'r')
@@ -61,7 +61,7 @@ def inference(sentence_id):
     return probs
 
 
-def evidence_writer(sorted_predicates, sentence_id):
+def evidence_writer(sorted_predicates, sentence_id, data_source):
     entity_mapping = dict()
     maps_set = []
     count = 1

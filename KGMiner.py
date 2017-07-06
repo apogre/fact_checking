@@ -3,7 +3,7 @@ from os import listdir, path, remove, chdir, environ
 import subprocess
 from gensim.models import Word2Vec
 
-from config import sparql_dbpedia, KGMiner_data, data_source
+from config import KGMiner_data
 from resources_loader import load_kgminer_resource
 from kb_query import or_query_prep, kgminer_training_data
 from shutil import copyfile
@@ -31,7 +31,7 @@ def invoke_kgminer():
     return predicate_results
 
 
-def write_to_kgminer(poi, q_part, resource_v, sentence_id):
+def write_to_kgminer(poi, q_part, resource_v, sentence_id, data_source):
     training_set = kgminer_training_data(poi, q_part)
     training_set = sum(training_set, [])
     train_ents = [val.split('/')[-1] for val in training_set]
@@ -58,7 +58,7 @@ def write_to_kgminer(poi, q_part, resource_v, sentence_id):
 
 
 def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_threshold_ranked, triple_dict, resource_ids,\
-                     sentence_id):
+                     sentence_id, data_source):
     global load_encodings, nodes_id, edge_id
     if load_encodings:
         print "Loading Nodes & Edges Id"
@@ -80,7 +80,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 poi_writer(poi)
                 training_files = listdir(KGMiner_data+'/'+data_source)
                 if sentence_id+data_source+'_ids.csv' not in training_files:
-                    kgminer_status = write_to_kgminer(poi, q_part, resource_v, sentence_id)
+                    kgminer_status = write_to_kgminer(poi, q_part, resource_v, sentence_id, data_source)
                 else:
                     kgminer_status = True
                     copyfile(KGMiner_data+'/'+data_source+'/'+sentence_id+data_source+'_ids.csv', KGMiner_data+'/' + \
@@ -163,7 +163,7 @@ def word2vec_dbpedia(train_ents, resource_v):
                     word_vec_train.append([train_ents[j], train_ents[j + 1]])
                 if len(word_vec_train) > 50:
                     return word_vec_train
-        except:
-            pass
+        except Exception as e:
+            print e
     return word_vec_train
 

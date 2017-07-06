@@ -1,11 +1,11 @@
 import os
 import json
 import csv
-from config import data_source, KGMiner_data
+from config import KGMiner_data
 from resource_writer import json_serial
 
 
-def load_files():
+def load_files(data_source):
     if os.path.isfile('dataset/'+data_source+'/triples_raw.json'):
         with open('dataset/'+data_source+'/triples_raw.json') as json_data:
             file_triples = json.load(json_data)

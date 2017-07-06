@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 
 import sparql
-from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata, sparql_dbpedia_local, data_source
+from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata, sparql_dbpedia_local
 
 
 prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"

@@ -2,7 +2,7 @@
 
 import sparql
 from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata, sparql_dbpedia_local
-
+import sys
 
 prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"
 prefixes_wikidata = "PREFIX entity: <http://www.wikidata.org/entity/>"
@@ -30,11 +30,17 @@ def get_leaf_nodes(type_values):
 
 
 def get_description(entity_type):
-    query = 'SELECT distinct ?label WHERE { <http://dbpedia.org/ontology/' + entity_type + '> rdfs:label ?label . \
-    FILTER langMatches( lang(?label), "EN" ) . }'
+    query = 'SELECT distinct ?label WHERE { <http://dbpedia.org/ontology/' + entity_type + '> rdfs:comment ?label . \
+        FILTER langMatches( lang(?label), "EN" ) . }'
     result = sparql.query(sparql_dbpedia, query)
     type_values = [sparql.unpack_row(row_result) for row_result in result]
+    if not type_values:
+        query = 'SELECT distinct ?label WHERE { <http://dbpedia.org/ontology/' + entity_type + '> rdfs:label ?label . \
+        FILTER langMatches( lang(?label), "EN" ) . }'
+        result = sparql.query(sparql_dbpedia, query)
+        type_values = [sparql.unpack_row(row_result) for row_result in result]
     return type_values
+
 
 
 def kgminer_training_data(poi, q_part):

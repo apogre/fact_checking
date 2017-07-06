@@ -2,7 +2,7 @@ import csv
 from os import listdir, path, remove, chdir, environ
 import subprocess
 from gensim.models import Word2Vec
-
+from sematch.semantic.similarity import EntitySimilarity
 from config import KGMiner_data
 from resources_loader import load_kgminer_resource
 from kb_query import or_query_prep, kgminer_training_data
@@ -72,7 +72,6 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
             test_data = get_test_data(resource_v)
             predicate_of_interest = predicate_ranked.values()[0]
             print test_data
-            print predicate_of_interest
             if None not in test_data and predicate_of_interest:
                 csv_writer([test_data], file_name='test_data')
                 poi = predicate_of_interest[0]
@@ -82,7 +81,8 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 if sentence_id+data_source+'_ids.csv' not in training_files:
                     kgminer_status = write_to_kgminer(poi, q_part, resource_v, sentence_id, data_source)
                 else:
-                    kgminer_status = True
+                    if sentence_id != '0':
+                        kgminer_status = True
                     copyfile(KGMiner_data+'/'+data_source+'/'+sentence_id+data_source+'_ids.csv', KGMiner_data+'/' + \
                              'training_data.csv')
                 return kgminer_status
@@ -140,23 +140,51 @@ def train_data_csv(train_ents, node_ids, expected_entities):
                 pass
     return training_data, test_data
 
+#
+# def word2vec_dbpedia(train_ents, resource_v):
+#     word_vec_train = []
+#     global load_dbpedia_word2vec
+#     global model_wv
+#     if load_dbpedia_word2vec:
+#         print "Loading Word2Vec DBpedia"
+#         model_wv = Word2Vec.load(str(environ['STANFORDTOOLSDIR']) + "/en_1000_no_stem/en.model")
+#         load_dbpedia_word2vec = False
+#
+#     for j in range(0, len(train_ents) - 1, 2):
+#         try:
+#             sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
+#             sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
+#             if sim1 > 0.15 and sim2 > 0.15:
+#                 sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
+#                 sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
+#                 if sim1_1 > sim1 and sim2_1>sim2:
+#                     word_vec_train.append([train_ents[j+1], train_ents[j]])
+#                 else:
+#                     word_vec_train.append([train_ents[j], train_ents[j + 1]])
+#                 if len(word_vec_train) > 50:
+#                     return word_vec_train
+#         except Exception as e:
+#             print e
+#     return word_vec_train
+
 
 def word2vec_dbpedia(train_ents, resource_v):
+    DBPEDIA_ID = 'http://dbpedia.org/resource/'
     word_vec_train = []
     global load_dbpedia_word2vec
     global model_wv
     if load_dbpedia_word2vec:
-        print "Loading Word2Vec DBpedia"
-        model_wv = Word2Vec.load(str(environ['STANFORDTOOLSDIR']) + "/en_1000_no_stem/en.model")
+        print "Loading Sematch"
+        model_wv = EntitySimilarity()
         load_dbpedia_word2vec = False
 
     for j in range(0, len(train_ents) - 1, 2):
         try:
-            sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
-            sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
+            sim1 = model_wv.similarity(DBPEDIA_ID + resource_v[0], DBPEDIA_ID + train_ents[j])
+            sim2 = model_wv.similarity(DBPEDIA_ID + resource_v[1], DBPEDIA_ID + train_ents[j + 1])
             if sim1 > 0.15 and sim2 > 0.15:
-                sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
-                sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
+                sim1_1 = model_wv.similarity(DBPEDIA_ID + resource_v[1], DBPEDIA_ID + train_ents[j])
+                sim2_1 = model_wv.similarity(DBPEDIA_ID + resource_v[0], DBPEDIA_ID + train_ents[j + 1])
                 if sim1_1 > sim1 and sim2_1>sim2:
                     word_vec_train.append([train_ents[j+1], train_ents[j]])
                 else:

@@ -2,11 +2,11 @@ from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files
 from ambiverse_api import entity_parser
 from kb_query import get_entity_type, get_description, get_kgminer_predicates
-from config import aux_verb, rank_threshold, kgminer_predicate_threshold
+from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data
 from KGMiner import get_training_set, invoke_kgminer
 from gensim.models import Word2Vec
 from nltk import word_tokenize
-from os import environ
+from os import environ, listdir, remove
 import operator
 import csv
 import argparse
@@ -99,16 +99,14 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             triple_dict = triples_extractor(sentence_check, named_entities)
             if triple_dict:
                 file_triples[sentence_id] = triple_dict
-                if sentence_id != 0:
-                    triple_flag = True
+                triple_flag = True
         print "Relation Triples: "+str(triple_dict)
         if sentence_id in ambiverse_resources.keys():
             resource = ambiverse_resources[sentence_id]
         else:
             resource = entity_parser(sentence_lis[n])
             ambiverse_resources[sentence_id] = resource
-            if sentence_id != 0:
-                ambiverse_flag = True
+            ambiverse_flag = True
         print "Resource Extractor"
         print "=================="
         pprint.pprint(resource)
@@ -120,8 +118,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
             if kgminer_predicate_ranked.values():
                 possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
-                if sentence_id != 0:
-                    kgminer_predicate_flag = True
+                kgminer_predicate_flag = True
         else:
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
 
@@ -139,8 +136,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                         if predicate_result:
                             kg_output = predicate_result.values()
                             kgminer_output[sentence_id] = predicate_result
-                            if sentence_id != 0:
-                                kgminer_output_flag = True
+                            kgminer_output_flag = True
                         else:
                             print "kgminer failed"
                     else:
@@ -175,8 +171,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                     ev.append(predicate_dict.get(ev[1], 0))
                 sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
                 lpmln_predicate[sentence_id] = sorted_predicates
-                if sentence_id != 0:
-                    lpmln_predicate_flag = True
+                lpmln_predicate_flag = True
             else:
                 sorted_predicates = lpmln_predicate.get(sentence_id, {})
             print sorted_predicates
@@ -208,15 +203,26 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             datawriter.writerows(lpmln_evaluation)
 
 
+def cleanup_data(sentence_id, test_data):
+    training_files = listdir(KGMiner_data + '/' + test_data)
+    resource_files = listdir(test_data)
+    for f in resource_files:
+        remove(f)
+    if sentence_id + test_data + '_ids.csv' in training_files:
+        remove(sentence_id + test_data + '_ids.csv')
+        remove(sentence_id + test_data + '.csv')
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", default='sentences_test.csv')
     parser.add_argument("-k", "--kgminer", default=False)
     parser.add_argument("-l", "--lpmln", default=False)
-    parser.add_argument("-t", "--test_data", default='president_spouse')
+    parser.add_argument("-t", "--test_data", default='sample_case')
     parser.add_argument("-s", "--sentence", default='')
+    parser.add_argument("-c", "--cleanup_id", default=None)
     args = parser.parse_args()
-    print args.kgminer
+    if args.cleanup_id:
+        cleanup_data(args.cleanup_id, args.test_data)
     with open('dataset/' + args.test_data + '/' + args.input) as f:
         reader = csv.DictReader(f)
         sentences_list = []
@@ -224,7 +230,7 @@ if __name__ == "__main__":
         true_label = []
         if args.sentence:
             sentences_list = [args.sentence]
-            id_list = [0]
+            id_list = ['0']
             true_label = ['X']
         else:
             for row in reader:

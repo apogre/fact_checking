@@ -4,11 +4,13 @@ import os, sys
 from itertools import groupby
 from nltk import word_tokenize
 from StanfordOpenIEPython.main import stanford_ie
+import argparse
 
 # stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
-stanford_model_jar = str(os.environ['STANFORDTOOLSDIR'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
+# stanford_model_jar = str(os.environ['STANFORDTOOLSDIR'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
 
-st_ner = StanfordNERTagger('english.muc.7class.distsim.crf.ser.gz')
+# st_ner = StanfordNERTagger('english.muc.7class.distsim.crf.ser.gz')
+st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 # st_pos = StanfordPOSTagger('english-bidirectional-distsim.tagger')
 # parser = StanfordDependencyParser(path_to_jar=stanford_parser_jar, path_to_models_jar=stanford_model_jar)
 
@@ -64,9 +66,14 @@ def triples_extractor(sentence, named_entities):
 
 
 if __name__ == "__main__":
-    sentence_lis = ["Born in South Africa in 1971, Elon Musk is known for his company Tesla."]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", "--sentence", default='Born in South Africa in 1971, Elon Musk is known for his company SpaceX.')
+    args = parser.parse_args()
+    sentence_lis = [args.sentence]
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
+    print sentence_list
     named_tags = sentence_tagger(sentence_list)
+    print named_tags
     for ne in named_tags:
         sentence_check = sentence_lis[0]
         print sentence_check

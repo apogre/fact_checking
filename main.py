@@ -129,7 +129,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             print "Link Prediction with KG_Miner"
             if sentence_id not in kgminer_output.keys():
                 if kgminer_predicate_ranked.values():
-                    kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
+                    kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology,\
                                                       triple_dict, resource, sentence_id, data_source)
                     if kgminer_status:
                         predicate_result = invoke_kgminer()
@@ -205,12 +205,13 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
 
 def cleanup_data(sentence_id, test_data):
     training_files = listdir(KGMiner_data + '/' + test_data)
-    resource_files = listdir(test_data)
-    for f in resource_files:
-        remove(f)
+    resource_files = listdir('dataset/' + test_data)
+    if 'kgminer_output.json' in resource_files:
+        remove('dataset/' + test_data + '/kgminer_output.json')
     if sentence_id + test_data + '_ids.csv' in training_files:
-        remove(sentence_id + test_data + '_ids.csv')
-        remove(sentence_id + test_data + '.csv')
+        print "Removing Training Data"
+        remove(KGMiner_data + '/' + test_data + '/' + sentence_id + test_data + '_ids.csv')
+        remove(KGMiner_data + '/' + test_data + '/' + sentence_id + test_data + '.csv')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

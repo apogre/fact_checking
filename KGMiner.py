@@ -7,6 +7,7 @@ from config import KGMiner_data
 from resources_loader import load_kgminer_resource
 from kb_query import or_query_prep, kgminer_training_data
 from shutil import copyfile
+import operator
 
 load_dbpedia_word2vec = True
 load_encodings = True
@@ -81,8 +82,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 if sentence_id+data_source+'_ids.csv' not in training_files:
                     kgminer_status = write_to_kgminer(poi, q_part, resource_v, sentence_id, data_source)
                 else:
-                    if sentence_id != '0':
-                        kgminer_status = True
+                    kgminer_status = True
                     copyfile(KGMiner_data+'/'+data_source+'/'+sentence_id+data_source+'_ids.csv', KGMiner_data+'/' + \
                              'training_data.csv')
                 return kgminer_status
@@ -140,51 +140,25 @@ def train_data_csv(train_ents, node_ids, expected_entities):
                 pass
     return training_data, test_data
 
-#
-# def word2vec_dbpedia(train_ents, resource_v):
-#     word_vec_train = []
-#     global load_dbpedia_word2vec
-#     global model_wv
-#     if load_dbpedia_word2vec:
-#         print "Loading Word2Vec DBpedia"
-#         model_wv = Word2Vec.load(str(environ['STANFORDTOOLSDIR']) + "/en_1000_no_stem/en.model")
-#         load_dbpedia_word2vec = False
-#
-#     for j in range(0, len(train_ents) - 1, 2):
-#         try:
-#             sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
-#             sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
-#             if sim1 > 0.15 and sim2 > 0.15:
-#                 sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
-#                 sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
-#                 if sim1_1 > sim1 and sim2_1>sim2:
-#                     word_vec_train.append([train_ents[j+1], train_ents[j]])
-#                 else:
-#                     word_vec_train.append([train_ents[j], train_ents[j + 1]])
-#                 if len(word_vec_train) > 50:
-#                     return word_vec_train
-#         except Exception as e:
-#             print e
-#     return word_vec_train
-
 
 def word2vec_dbpedia(train_ents, resource_v):
-    DBPEDIA_ID = 'http://dbpedia.org/resource/'
     word_vec_train = []
     global load_dbpedia_word2vec
     global model_wv
     if load_dbpedia_word2vec:
-        print "Loading Sematch"
-        model_wv = EntitySimilarity()
+        print "Loading Word2Vec DBpedia"
+        model_wv = Word2Vec.load(str(environ['STANFORDTOOLSDIR']) + "/en_1000_no_stem/en.model")
         load_dbpedia_word2vec = False
 
     for j in range(0, len(train_ents) - 1, 2):
         try:
-            sim1 = model_wv.similarity(DBPEDIA_ID + resource_v[0], DBPEDIA_ID + train_ents[j])
-            sim2 = model_wv.similarity(DBPEDIA_ID + resource_v[1], DBPEDIA_ID + train_ents[j + 1])
-            if sim1 > 0.15 and sim2 > 0.15:
-                sim1_1 = model_wv.similarity(DBPEDIA_ID + resource_v[1], DBPEDIA_ID + train_ents[j])
-                sim2_1 = model_wv.similarity(DBPEDIA_ID + resource_v[0], DBPEDIA_ID + train_ents[j + 1])
+            sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
+            sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
+            # print resource_v[0], train_ents[j], sim1
+            print resource_v[1], train_ents[j + 1], sim2
+            if sim1 > 0.13 and sim2 > 0.13:
+                sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
+                sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
                 if sim1_1 > sim1 and sim2_1>sim2:
                     word_vec_train.append([train_ents[j+1], train_ents[j]])
                 else:
@@ -192,6 +166,44 @@ def word2vec_dbpedia(train_ents, resource_v):
                 if len(word_vec_train) > 50:
                     return word_vec_train
         except Exception as e:
-            print e
+            # print e
+            pass
     return word_vec_train
 
+
+# def word2vec_dbpedia(train_ents, resource_v):
+#     DBPEDIA_ID = 'http://dbpedia.org/resource/'
+#     word_vec_train = []
+#     global load_dbpedia_word2vec
+#     global model_wv
+#     if load_dbpedia_word2vec:
+#         print "Loading Sematch"
+#         model_wv = EntitySimilarity()
+#         load_dbpedia_word2vec = False
+#
+#     for j in range(0, len(train_ents) - 1, 2):
+#         try:
+#
+#             sim1 = model_wv.similarity(DBPEDIA_ID + resource_v[0], DBPEDIA_ID + train_ents[j])
+#             sim2 = model_wv.similarity(DBPEDIA_ID + resource_v[1], DBPEDIA_ID + train_ents[j + 1])
+#             print DBPEDIA_ID + resource_v[0], DBPEDIA_ID + train_ents[j], sim1
+#             print DBPEDIA_ID + resource_v[1], DBPEDIA_ID + train_ents[j + 1], sim2
+#
+#             if sim1 > 0.25 and sim2 > 0.25:
+#                 sim1_1 = model_wv.similarity(DBPEDIA_ID + resource_v[1], DBPEDIA_ID + train_ents[j])
+#                 sim2_1 = model_wv.similarity(DBPEDIA_ID + resource_v[0], DBPEDIA_ID + train_ents[j + 1])
+#                 if sim1_1 > sim1 and sim2_1 > sim2:
+#                     score = (sim1_1 + sim2_1)/2
+#                     word_vec_train.append([train_ents[j+1], train_ents[j], score])
+#                 else:
+#                     score = (sim1 + sim2)/2
+#                     word_vec_train.append([train_ents[j], train_ents[j + 1], score])
+#                 # if len(word_vec_train) > 50:
+#                 #     return word_vec_train
+#         except Exception as e:
+#             print e
+#     sorted_values = sorted(word_vec_train, key=operator.itemgetter(2), reverse=True)
+#     sorted_values = sorted_values[:50]
+#     word_vec_train = [[val[0],val[1]] for val in sorted_values]
+#     return word_vec_train
+#

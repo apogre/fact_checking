@@ -7,7 +7,7 @@
 
 
 KGMiner_data = 'KGMiner/KGMiner_data'
-aux_verb = ['was', 'is', 'become','to', 'of', 'in', 'the', 'for']
+aux_verb = ['was', 'is', 'become','to', 'of', 'in', 'the', 'for', 'where']
 rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4
 evidence_threshold = 0

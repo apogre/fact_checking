@@ -47,7 +47,6 @@ def write_to_kgminer(poi, q_part, resource_v, sentence_id, data_source):
         word_vec_train = train_ents[:100]
         csv_writer(training_set, data_source + '/' + sentence_id + data_source)
     print word_vec_train
-
     node_ids = entity_id_finder(word_vec_train)
     training_data, test_data = train_data_csv(word_vec_train, node_ids, resource_v)
     csv_writer(training_data, file_name=data_source + '/' + sentence_id + data_source + '_ids')
@@ -115,7 +114,7 @@ def poi_writer(poi):
 
 
 def csv_writer(input_data, file_name):
-    with open(KGMiner_data+'/'+file_name+'.csv', 'wb') as csvfile:
+    with open(KGMiner_data + file_name+'.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
         for data in input_data:
             try:
@@ -125,6 +124,7 @@ def csv_writer(input_data, file_name):
 
 
 def train_data_csv(train_ents, node_ids, expected_entities):
+    print train_ents, node_ids, expected_entities
     training_data = []
     test_data = []
     for i in range(0, len(train_ents)-2, 2):
@@ -207,3 +207,17 @@ def word2vec_dbpedia(train_ents, resource_v):
 #     word_vec_train = [[val[0],val[1]] for val in sorted_values]
 #     return word_vec_train
 #
+
+if __name__ == "__main__":
+    nodes_id, edge_id = load_kgminer_resource()
+    with open(KGMiner_data+'/sample_case/0sample_case.csv', 'rb') as f:
+        reader = csv.reader(f)
+        entity_sets = list(reader)
+        entity_set = sum(entity_sets,[])
+        node_ids = entity_id_finder(entity_set)
+        expected_entities = entity_set[:2]
+        training_data, test_data = train_data_csv(entity_set, node_ids, expected_entities)
+        print training_data, test_data
+        csv_writer(training_data, file_name='/sample_case/0sample_case_ids_backup')
+        copyfile(KGMiner_data + '/sample_case/0sample_case_ids_backup.csv', KGMiner_data + '/training_data.csv')
+        invoke_kgminer()

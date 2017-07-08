@@ -60,6 +60,7 @@ def triples_extractor(sentence, named_entities):
     with open('sentences.txt', 'a') as text:
         text.write(sentence)
     triples_raw = stanford_ie("sentences.txt", verbose=False)
+    print triples_raw
     triples = [[trip.lstrip() for trip in triple] for triple in triples_raw]
     triple_dict = triple_filter(named_entities, triples)
     return triple_dict
@@ -67,7 +68,7 @@ def triples_extractor(sentence, named_entities):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--sentence", default='Born in South Africa in 1971, Elon Musk is known for his company SpaceX.')
+    parser.add_argument("-s", "--sentence", default='Born in South Africa in 1971, Elon Musk is known for his company Tesla.')
     args = parser.parse_args()
     sentence_lis = [args.sentence]
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]

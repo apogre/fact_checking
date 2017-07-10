@@ -68,7 +68,7 @@ def triples_extractor(sentence, named_entities):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--sentence", default='Born in South Africa in 1971, Elon Musk is known for his company Tesla.')
+    parser.add_argument("-s", "--sentence", default='Google is located in Mountain View,California.')
     args = parser.parse_args()
     sentence_lis = [args.sentence]
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]

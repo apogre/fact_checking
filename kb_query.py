@@ -33,19 +33,17 @@ def get_description(entity_type):
     query = 'SELECT distinct ?label WHERE { <http://dbpedia.org/ontology/' + entity_type + '> rdfs:comment ?label . \
         FILTER langMatches( lang(?label), "EN" ) . }'
     result = sparql.query(sparql_dbpedia, query)
-    type_values = [sparql.unpack_row(row_result) for row_result in result]
-    if not type_values:
-        query = 'SELECT distinct ?label WHERE { <http://dbpedia.org/ontology/' + entity_type + '> rdfs:label ?label . \
-        FILTER langMatches( lang(?label), "EN" ) . }'
-        result = sparql.query(sparql_dbpedia, query)
-        type_values = [sparql.unpack_row(row_result) for row_result in result]
-    return type_values
-
+    type_comment = [sparql.unpack_row(row_result) for row_result in result]
+    query = 'SELECT distinct ?label WHERE { <http://dbpedia.org/ontology/' + entity_type + '> rdfs:label ?label . \
+    FILTER langMatches( lang(?label), "EN" ) . }'
+    result = sparql.query(sparql_dbpedia, query)
+    type_label = [sparql.unpack_row(row_result) for row_result in result]
+    return type_comment, type_label
 
 
 def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-    {?url2 <http://dbpedia.org/ontology/' + poi[0] + '> ?url1} . ' + q_part + \
+    {?url1 <http://dbpedia.org/ontology/' + poi[0] + '> ?url2} . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
     result = sparql.query(sparql_dbpedia, q_ts)
     training_set = [sparql.unpack_row(row_result) for row_result in result]
@@ -107,7 +105,7 @@ def get_entity_type(resources, triples):
                          <http://dbpedia.org/resource/'+key+'> rdf:type ?t }. ?t rdfs:subClassOf ?t1 . \
                          FILTER(STRSTARTS(STR(?t), "http://dbpedia.org/ontology") || STRSTARTS(STR(?t), \
                          "http://dbpedia.org/resource")).}'
-                        # print q_type
+                        print q_type
                         result = sparql.query(sparql_dbpedia, q_type)
                         type_values = [sparql.unpack_row(row_result) for row_result in result]
                         if not type_values:
@@ -152,11 +150,13 @@ def get_kgminer_predicates(type_set, triple_dict):
                                     sort_list[it1].append(it2)
                                 q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'>\
                                  . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2 + '> . {?url1 ?p ?url2 } UNION {?url2 ?p ?url1 } \
-                                                            . FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")). }'
+                                                            . FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")).' \
+                                                            '}'
                         else:
                             q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . \
                             ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . ?url1 ?p ?url2 . \
                             FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/ontology")).}'
+                        print q_pp
                         try:
                             if q_pp:
                                 result = sparql.query(sparql_dbpedia_on, q_pp)

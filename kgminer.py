@@ -1,5 +1,5 @@
 import csv
-from os import listdir, path, remove, chdir, environ
+from os import listdir, path, remove, chdir, environ, mkdir
 import subprocess
 from gensim.models import Word2Vec
 from sematch.semantic.similarity import EntitySimilarity
@@ -7,7 +7,6 @@ from config import KGMiner_data
 from resources_loader import load_kgminer_resource
 from kb_query import or_query_prep, kgminer_training_data
 from shutil import copyfile
-import operator
 
 load_dbpedia_word2vec = True
 load_encodings = True
@@ -39,14 +38,13 @@ def write_to_kgminer(poi, q_part, resource_v, sentence_id, data_source):
     word_vec_train = word2vec_dbpedia(train_ents, resource_v)
     word_vec_train = list(set(map(tuple, word_vec_train)))
     word_vec_train = map(list, word_vec_train)
-    if word_vec_train:
+    if len(word_vec_train) > 5:
         csv_writer(word_vec_train, data_source + '/' + sentence_id + data_source)
         word_vec_train = sum(word_vec_train, [])
     else:
         print "Word2Vec Failed, Training at Random"
         word_vec_train = train_ents[:100]
-        csv_writer(training_set, data_source + '/' + sentence_id + data_source)
-    print word_vec_train
+        csv_writer(train_ents, data_source + '/' + sentence_id + data_source)
     node_ids = entity_id_finder(word_vec_train)
     training_data, test_data = train_data_csv(word_vec_train, node_ids, resource_v)
     csv_writer(training_data, file_name=data_source + '/' + sentence_id + data_source + '_ids')
@@ -77,6 +75,8 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 poi = predicate_of_interest[0]
                 print poi
                 poi_writer(poi)
+                if not path.isdir(KGMiner_data+'/'+data_source):
+                    mkdir(KGMiner_data+'/'+data_source)
                 training_files = listdir(KGMiner_data+'/'+data_source)
                 if sentence_id+data_source+'_ids.csv' not in training_files:
                     kgminer_status = write_to_kgminer(poi, q_part, resource_v, sentence_id, data_source)
@@ -114,7 +114,7 @@ def poi_writer(poi):
 
 
 def csv_writer(input_data, file_name):
-    with open(KGMiner_data + file_name+'.csv', 'wb') as csvfile:
+    with open(KGMiner_data + '/' + file_name+'.csv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile)
         for data in input_data:
             try:
@@ -124,7 +124,6 @@ def csv_writer(input_data, file_name):
 
 
 def train_data_csv(train_ents, node_ids, expected_entities):
-    print train_ents, node_ids, expected_entities
     training_data = []
     test_data = []
     for i in range(0, len(train_ents)-2, 2):
@@ -143,6 +142,7 @@ def train_data_csv(train_ents, node_ids, expected_entities):
 
 def word2vec_dbpedia(train_ents, resource_v):
     word_vec_train = []
+    entity_tracker = dict()
     global load_dbpedia_word2vec
     global model_wv
     if load_dbpedia_word2vec:
@@ -151,23 +151,34 @@ def word2vec_dbpedia(train_ents, resource_v):
         load_dbpedia_word2vec = False
 
     for j in range(0, len(train_ents) - 1, 2):
-        try:
-            sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
-            sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
-            # print resource_v[0], train_ents[j], sim1
-            print resource_v[1], train_ents[j + 1], sim2
-            if sim1 > 0.13 and sim2 > 0.13:
-                sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
-                sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
-                if sim1_1 > sim1 and sim2_1>sim2:
-                    word_vec_train.append([train_ents[j+1], train_ents[j]])
-                else:
-                    word_vec_train.append([train_ents[j], train_ents[j + 1]])
-                if len(word_vec_train) > 50:
-                    return word_vec_train
-        except Exception as e:
-            # print e
-            pass
+        if entity_tracker.get(train_ents[j+1], 0) < 5 and entity_tracker.get(train_ents[j], 0) < 5:
+            try:
+                sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
+                sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
+                # print resource_v[0], train_ents[j], sim1
+                # print resource_v[1], train_ents[j+1], sim2
+                if sim1 > 0.15 and sim2 > 0.15:
+                    sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
+                    sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
+                    if sim1_1 > sim1 and sim2_1 > sim2:
+                        word_vec_train.append([train_ents[j+1], train_ents[j]])
+
+                    else:
+                        word_vec_train.append([train_ents[j], train_ents[j + 1]])
+                    if train_ents[j] not in entity_tracker.keys():
+                        entity_tracker[train_ents[j]] = 1
+                    else:
+                        entity_tracker[train_ents[j]] += 1
+                    if train_ents[j+1] not in entity_tracker.keys():
+                        entity_tracker[train_ents[j+1]] = 1
+                    else:
+                        entity_tracker[train_ents[j+1]] += 1
+
+                    if len(word_vec_train) > 50:
+                        return word_vec_train
+            except Exception as e:
+                # print e
+                pass
     return word_vec_train
 
 

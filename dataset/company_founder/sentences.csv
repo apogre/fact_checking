@@ -1,4 +1,11 @@
 id,sentence,label
 1,"Bill Gates is the founder of Microsoft.",T
-2,"Steve Jobs is known for his company Apple.",T
-3,"Larry Page is known for his company Google.",T
+2,"Steve Jobs is the founder of Apple.",T
+3,"Larry Page is the founder of Google.",T
+4,"Sergey Brin is the founder of Google.",T
+5,"Steve Wozniak is the founder of Apple.",T
+6,"Paul Allen is the founder of Microsoft.",T
+7,"Mark ZuckerBerg is the founder of Facebook.",T
+8,"Elon Musk is the founder of Tesla.",T
+9,"Elon Musk is the founder of SpaceX.",T
+10,"Elon Musk is the founder of Paypal.",T

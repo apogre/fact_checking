@@ -67,13 +67,15 @@ def predicate_ranker(predicates, triple):
         for predicate in predicates:
             comment, label = get_description(predicate)
             # print comment, label
-            score = 0
+            score_label = 0
+            score_comment = 0
             if comment:
                 ph = comment[0][0]
-                score = word2vec_score(ph, ky)
-            if label and score == 0:
+                score_comment = word2vec_score(ph, ky)
+            if label:
                 ph = label[0][0]
-                score = word2vec_score(ph, ky)
+                score_label = word2vec_score(ph, ky)
+            score = max(score_label, score_comment)
             predicate_ranked.append([predicate, score])
         sorted_values = sorted(predicate_ranked, key=operator.itemgetter(1), reverse=True)
         threshold_sorted = [vals for vals in sorted_values if vals[1] >= kgminer_predicate_threshold]
@@ -122,13 +124,14 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
             if kgminer_predicates:
                 kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
+                print kgminer_predicate_ranked
                 if kgminer_predicate_ranked.values():
                     possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
                     kgminer_predicate_flag = True
         else:
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
         print "Ranked Predicates"
-        print kgminer_predicate_ranked
+        # print kgminer_predicate_ranked
         if KGMiner:
             kg_output = []
             print "Link Prediction with KG_Miner"

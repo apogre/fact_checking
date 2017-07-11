@@ -1,1 +1,10 @@
-1,Bill Gates is one of the founders of Microsoft.,T,N
+1,Bill Gates is the founder of Microsoft.,T,T
+2,Steve Jobs is the founder of Apple.,T,T
+3,Larry Page is the founder of Google.,T,F
+4,Sergey Brin is the founder of Google.,T,T
+5,Steve Wozniak is the founder of Apple.,T,F
+6,Paul Allen is the founder of Microsoft.,T,T
+7,Mark ZuckerBerg is the founder of Facebook.,T,T
+8,Elon Musk is the founder of Tesla.,T,T
+9,Elon Musk is the founder of SpaceX.,T,T
+10,Elon Musk is the founder of Paypal.,T,T

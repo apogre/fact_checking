@@ -120,18 +120,18 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         # get poi
         type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
         print type_ontology, type_resource, type_ontology_full, type_resource_full
-        if sentence_id not in possible_kgminer_predicate.keys():                
+        if sentence_id not in possible_kgminer_predicate.keys():  
             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
+            print kgminer_predicates
             if kgminer_predicates:
                 kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
-                print kgminer_predicate_ranked
                 if kgminer_predicate_ranked.values():
                     possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
                     kgminer_predicate_flag = True
         else:
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
         print "Ranked Predicates"
-        # print kgminer_predicate_ranked
+        print kgminer_predicate_ranked
         if KGMiner:
             kg_output = []
             print "Link Prediction with KG_Miner"

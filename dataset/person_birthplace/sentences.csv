@@ -1,9 +1,11 @@
 id,sentence,label
 1,"Elon Musk was born in South Africa.",T
-2,"Satya Nadella was born in India",T
+2,"Satya Nadella was born in India.",T
 3,"Bill Gates was born in Seattle.",T
 4,"Mark Zuckerberg was born in New York.",T
 5,"Steve Jobs was born in San Fransisco.",T
 6,"Barack Obama was born in Hawaii.",T
 7,"Jack Ma was born in China.",T
 8,"Larry Page was born in Michigan.",T
+9,"Paul Allen was born in Seattle.",T
+10,"Steve Wozniak was born in San Jose.",T

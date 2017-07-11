@@ -43,7 +43,7 @@ def get_description(entity_type):
 
 def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-    { ?url2 <http://dbpedia.org/' + poi + '> ?url1 } . ' + q_part + \
+    { ?url1 <http://dbpedia.org/' + poi + '> ?url2 } . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
     result = sparql.query(sparql_dbpedia, q_ts)
     training_set = [sparql.unpack_row(row_result) for row_result in result]
@@ -150,21 +150,21 @@ def get_kgminer_predicates(type_set, triple_dict):
                                 q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'>\
                                  . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2 + '> . {?url1 ?p ?url2 } UNION {?url2 ?p ?url1 } \
                                                             . FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/")).' \
-                                                            '}'
+                                                            '} limit 100'
                         else:
                             q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . \
                             ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . ?url1 ?p ?url2 . \
-                            FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/")).}'
+                            FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/")).} limit 100'
                         print q_pp
-                        try:
-                            if q_pp:
-                                result = sparql.query(sparql_dbpedia_on, q_pp)
-                                pred_values = [sparql.unpack_row(row_result) for row_result in result]
-                                if pred_values:
-                                    pred_vals = [val[0].replace('/')[-1] for val in pred_values]
-                                    predicate_list.extend(pred_vals)
-                        except:
-                            pass
+                        # try:
+                        if q_pp:
+                            result = sparql.query(sparql_dbpedia_on, q_pp)
+                            pred_values = [sparql.unpack_row(row_result) for row_result in result]
+                            if pred_values:
+                                pred_vals = [val[0].replace('http://dbpedia.org/','') for val in pred_values]
+                                predicate_list.extend(pred_vals)
+                        # except Exception as e:
+                        #     print e
     return list(set(predicate_list))
 
 

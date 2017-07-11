@@ -23,3 +23,6 @@ Al Pacino starred in American Psycho.
 Jennifer Lawrence starred in Scarface.
 Meryl Streep starred in Lucy.
 Julia Roberts starred in Gravity.
+*---company_location---*
+Coursera is located in Mountain View.
+Netscape is located in Mountain View.

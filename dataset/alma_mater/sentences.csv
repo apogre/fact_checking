@@ -1,3 +1,51 @@
 id,sentence,label
 1,"Bill Gates attended Harvard University.",T
 2,"Larry Page attended Stanford University.",T
+3,"Barack Obama attended Harvard Law School.",T
+4,"Michelle Obama attended Harvard Law School.",T
+5,"Steve Jobs attended Reed College.",T
+6,"Steve Wozniak attended University of California, Berkeley.",T
+7,"Elon Musk attended University of Pennsylvania.",T
+8,"Mark ZuckerBerg attended Harvard University.",T
+9,"Priscilla Chan attended Harvard University.",T
+10,"Stephen Hawking attended University College, Oxford.",T
+11,"Paul Allen attended Washington State University.",T
+12,"James Watson attended Indiana University.",T
+13,"Tim Berners-Lee attended University of Oxford.",T
+14,"Noam Chomsky attended University of Pennsylvania.",T
+15,"Donald Trump attended University of Pennsylvania.",T
+16,"Stephen Cook attended Harvard University.",T
+17,"Neil Tyson attended Columbia University.",T
+18,"Ernest Rutherford attended University of Cambridge.",T
+19,"Niels Bohr attended University of Copenhagen.",T
+20,"Dmitri Mendeleev attended Saint Petersburg State University.",T
+21,"Michio Kaku attended University of California, Berkeley.",T
+22,"Max Planck attended Ludwig Maximilian University of Munich.",T
+23,"Jonas Salk attended New York University.",T
+24,"Robert Goddard attended Clark University.",T
+25,"Francis Crick attended University College London.",T
+26,"Francis Crick attended University of California, Berkeley.",F
+27,"Robert Goddard attended Ludwig Maximilian University of Munich.",F
+28,"Jonas Salk attended Clark University.",F
+29,"Max Planck attended Clark University.",F
+30,"Michio Kaku attended University College London.",F
+31,"Bill Gates attended Stanford University.",F
+32,"Larry Page attended Harvard University.",F
+33,"Barack Obama attended Reed College.",F
+34,"Michelle Obama attended University of Pennsylvania.",F
+35,"Steve Jobs attended Harvard Law School.",F
+36,"Steve Wozniak attended University of Pennsylvania.",F
+37,"Elon Musk attended Harvard Law School.",F
+38,"Mark ZuckerBerg attended Indiana University.",F
+39,"Priscilla Chan attended University of Pennsylvania.",F
+40,"Stephen Hawking attended Washington State University.",F
+41,"Paul Allen attended University College, Oxford.",F
+42,"James Watson attended Harvard University.",F
+43,"Tim Berners-Lee attended University of Pennsylvania.",F
+44,"Noam Chomsky attended Harvard University.",F
+45,"Donald Trump attended University of Oxford.",F
+46,"Stephen Cook attended Columbia University.",F
+47,"Neil Tyson attended Harvard University.",F
+48,"Ernest Rutherford attended Arizona State University.",F
+49,"Niels Bohr attended University of Arizona.",F
+50,"Dmitri Mendeleev attended Washington State University.",F

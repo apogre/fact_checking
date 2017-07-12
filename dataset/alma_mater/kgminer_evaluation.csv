@@ -1,1 +1,50 @@
 1,Bill Gates attended Harvard University.,T,F
+2,Larry Page attended Stanford University.,T,F
+3,Barack Obama attended Harvard Law School.,T,F
+4,Michelle Obama attended Harvard Law School.,T,F
+5,Steve Jobs attended Reed College.,T,F
+6,"Steve Wozniak attended University of California, Berkeley.",T,F
+7,Elon Musk attended University of Pennsylvania.,T,N
+8,Mark ZuckerBerg attended Harvard University.,T,F
+9,Priscilla Chan attended Harvard University.,T,N
+10,"Stephen Hawking attended University College, Oxford.",T,T
+11,Paul Allen attended Washington State University.,T,F
+12,James Watson attended Indiana University.,T,F
+13,Tim Berners-Lee attended University of Oxford.,T,F
+14,Noam Chomsky attended University of Pennsylvania.,T,T
+15,Donald Trump attended University of Pennsylvania.,T,F
+16,Stephen Cook attended Harvard University.,T,F
+17,Neil Tyson attended Columbia University.,T,T
+18,Ernest Rutherford attended University of Cambridge.,T,T
+19,Niels Bohr attended University of Copenhagen.,T,T
+20,Dmitri Mendeleev attended Saint Petersburg State University.,T,T
+21,"Michio Kaku attended University of California, Berkeley.",T,F
+22,Max Planck attended Ludwig Maximilian University of Munich.,T,T
+23,Jonas Salk attended New York University.,T,T
+24,Robert Goddard attended Clark University.,T,T
+25,Francis Crick attended University College London.,T,F
+26,"Francis Crick attended University of California, Berkeley.",F,T
+27,Robert Goddard attended Ludwig Maximilian University of Munich.,F,F
+28,Jonas Salk attended Clark University.,F,N
+29,Max Planck attended Clark University.,F,F
+30,Michio Kaku attended University College London.,F,N
+31,Bill Gates attended Stanford University.,F,F
+32,Larry Page attended Harvard University.,F,F
+33,Barack Obama attended Reed College.,F,F
+34,Michelle Obama attended University of Pennsylvania.,F,F
+35,Steve Jobs attended Harvard Law School.,F,F
+36,Steve Wozniak attended University of Pennsylvania.,F,F
+37,Elon Musk attended Harvard Law School.,F,F
+38,Mark ZuckerBerg attended Indiana University.,F,F
+39,Priscilla Chan attended University of Pennsylvania.,F,N
+40,Stephen Hawking attended Washington State University.,F,N
+41,"Paul Allen attended University College, Oxford.",F,F
+42,James Watson attended Harvard University.,F,F
+43,Tim Berners-Lee attended University of Pennsylvania.,F,F
+44,Noam Chomsky attended Harvard University.,F,F
+45,Donald Trump attended University of Oxford.,F,F
+46,Stephen Cook attended Columbia University.,F,T
+47,Neil Tyson attended Harvard University.,F,F
+48,Ernest Rutherford attended Arizona State University.,F,N
+49,Niels Bohr attended University of Arizona.,F,N
+50,Dmitri Mendeleev attended Washington State University.,F,N

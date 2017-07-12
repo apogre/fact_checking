@@ -88,10 +88,14 @@ def predicate_ranker(predicates, triple):
 def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
                  lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source):
     file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output = load_files(data_source)
+    sentence_count = len(sentence_lis)
+    kgminer_true_count = 0
+    pre_kgminer = 0
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
     named_tags = sentence_tagger(sentence_list)
     kgminer_evaluation = []
     lpmln_evaluation = []
+    accuracy = []
     for n, ne in enumerate(named_tags):
         sentence_id = id_list[n]
         true_label = true_labels[n]
@@ -119,8 +123,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         pprint.pprint(resource)
         # get poi
         type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
-        print type_ontology, type_resource, type_ontology_full, type_resource_full
-        if sentence_id not in possible_kgminer_predicate.keys():  
+        if sentence_id not in possible_kgminer_predicate.keys():
             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
             print kgminer_predicates
             if kgminer_predicates:
@@ -151,19 +154,24 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                     else:
                         kg_output = [2]
                 else:
-                    predicted_label = 'A'
+                    kgminer_predicted_label = 'A'
             else:
                 print kgminer_output[sentence_id]
                 kg_output = kgminer_output[sentence_id].values()
             if kg_output:
                 kgminer_score = float(kg_output[0])
                 if kgminer_score < 0.5:
-                    predicted_label = 'T'
+                    kgminer_predicted_label = 'T'
                 elif kgminer_score == 2:
-                    predicted_label = 'N'
+                    kgminer_predicted_label = 'N'
                 else:
-                    predicted_label = 'F'
-            kgminer_evaluation.append([sentence_id, sentence_check, true_label, predicted_label])
+                    kgminer_predicted_label = 'F'
+            if kgminer_predicted_label == 'N' or kgminer_predicted_label == 'A':
+                pre_kgminer += 1
+                sentence_count -= 1
+            if true_label == kgminer_predicted_label:
+                kgminer_true_count += 1
+            kgminer_evaluation.append([sentence_id, sentence_check, true_label, kgminer_predicted_label])
 
         if lpmln:
             print "Executing LPMLN"
@@ -198,6 +206,10 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source)
+
+    kgminer_accuracy = kgminer_true_count / sentence_count
+    accuracy.append([data_source, pre_kgminer, kgminer_true_count, sentence_count, kgminer_accuracy])
+    print accuracy
 
     if kgminer_evaluation:
         print kgminer_evaluation

@@ -5,6 +5,7 @@ from itertools import groupby
 from nltk import word_tokenize
 from StanfordOpenIEPython.main import stanford_ie
 import argparse
+from re import sub
 
 # stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
 # stanford_model_jar = str(os.environ['STANFORDTOOLSDIR'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
@@ -32,6 +33,21 @@ def triple_filter(ent, triples):
                     pass
                 else:
                     triple_dict[triple[1]].append([key1, key2])
+    if not triple_dict:
+        for triple in triples:
+            key1 = [entity_set[0] for trip in triple if trip in entity_set[0]]
+            key2 = [entity_set[1] for trip in triple if trip in entity_set[1]]
+            if key1 and key2:
+                key1 = key1[0]
+                key2 = key2[0]
+                if triple[1] not in triple_dict.keys():
+                    triple_dict[triple[1]] = [[key1, key2]]
+                else:
+                    triple_list = [item for sublist in triple_dict[triple[1]] for item in sublist]
+                    if key1 in triple_list and key2 in triple_list:
+                        pass
+                    else:
+                        triple_dict[triple[1]].append([key1, key2])
     return triple_dict
 
 
@@ -45,9 +61,8 @@ def sentence_tagger(sentence_list):
 def get_nodes(tagged_words):
     ent = []
     for tag, chunk in groupby(tagged_words, lambda x:x[1]):
-        # print tag
         if tag != "O":
-            tuple1 =(" ".join(w for w, t in chunk),tag)
+            tuple1 = (sub(r'\s+([?.!,"])', r'\1', " ".join(w for w, t in chunk)), tag)
             ent.append(tuple1)
     return ent
 
@@ -68,7 +83,7 @@ def triples_extractor(sentence, named_entities):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--sentence", default='Google is located in Mountain View,California.')
+    parser.add_argument("-s", "--sentence", default='Steve Wozniak attended University of California, Berkeley.')
     args = parser.parse_args()
     sentence_lis = [args.sentence]
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -79,6 +94,7 @@ if __name__ == "__main__":
         sentence_check = sentence_lis[0]
         print sentence_check
         named_entities = get_nodes(ne)
+        print named_entities
         entity_dict = dict(named_entities)
         print "NER: "+str(entity_dict)
         triple_dict = triples_extractor(sentence_check, named_entities)

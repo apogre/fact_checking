@@ -131,7 +131,7 @@ def get_entity_type(resources, triples):
 
 def get_kgminer_predicates(type_set, triple_dict):
     predicate_list = []
-    for triples_k,triples_v in triple_dict.iteritems():
+    for triples_k, triples_v in triple_dict.iteritems():
         sort_list = dict()
         for triple_v in triples_v:
             item1_v = type_set.get(triple_v[0], [])
@@ -150,11 +150,11 @@ def get_kgminer_predicates(type_set, triple_dict):
                                 q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'>\
                                  . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2 + '> . {?url1 ?p ?url2 } UNION {?url2 ?p ?url1 } \
                                                             . FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/")).' \
-                                                            '} limit 100'
+                                                            '} limit 80'
                         else:
                             q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . \
                             ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . ?url1 ?p ?url2 . \
-                            FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/")).} limit 100'
+                            FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/")).} limit 80'
                         print q_pp
                         # try:
                         if q_pp:
@@ -224,7 +224,7 @@ def relation_extractor_0hop(kb, id1, id2, label, relations):
     return relations
 
 
-def relation_extractor_2hop(kb, id1, id2, label, relations, triple_k):
+def relation_extractor_2hop(kb, id1, id2, label, relations):
     if kb == 'wikidata':
         sparql_endpoint = sparql_wikidata
 

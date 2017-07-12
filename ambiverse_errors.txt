@@ -26,3 +26,13 @@ Julia Roberts starred in Gravity.
 *---company_location---*
 Coursera is located in Mountain View.
 Netscape is located in Mountain View.
+*---alma_mater---*
+Elon Musk attended University of Pennsylvania.
+Niels Bohr attended University of Arizona.
+Dmitri Mendeleev attended Washington State University.
+Ernest Rutherford attended Arizona State University.
+Stephen Hawking attended Washington State University.
+Priscilla Chan attended University of Pennsylvania.
+Jonas Salk attended Clark University.
+Michio Kaku attended University College London.
+Priscilla Chan attended Harvard University.

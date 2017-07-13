@@ -1,11 +1,12 @@
 import csv
+import sys
 from config import evidence_threshold, rule_threshold
 import subprocess
 import re
 from nltk.stem.wordnet import WordNetLemmatizer
 from ordered_set import OrderedSet
 from kb_query import relation_extractor_0hop, relation_extractor_1hop, relation_extractor_2hop
-from os import path, remove
+from os import path, remove, mkdir
 
 
 lemmatizer = WordNetLemmatizer()
@@ -36,8 +37,8 @@ def relation_extractor_triples(resources, triples):
                 wikidata_id2 = item2_v.get('wikidata_id')
                 score1 = item1_v.get('confidence')
                 score2 = item2_v.get('confidence')
-                relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation)
                 relation = relation_extractor_1hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation)
+                relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation)
                 relation_0 = relation_extractor_0hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0)
                 relation_0 = relation_extractor_0hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0)
                 relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_2)
@@ -89,7 +90,9 @@ def evidence_writer(sorted_predicates, sentence_id, data_source):
         item_set.add(lemmatizer.lemmatize(rel_set[1].lower()) + '(' + rel_set[2] + ',' + rel_set[3] + ').')
         item_set_initials.add(lemmatizer.lemmatize(rel_set[1].lower()) + '(' + entity_mapping.get(rel[2],'').lower() + \
                               ',' + entity_mapping.get(rel[3], '').lower() + ').')
-
+    if not path.isdir('LPmln/' + data_source):
+        mkdir('LPmln/' + data_source)
+        mkdir('LPmln/' + data_source + '/evidence/')
     with open('LPmln/' + data_source + '/evidence/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
         datawriter.writerows([[i] for i in item_set])

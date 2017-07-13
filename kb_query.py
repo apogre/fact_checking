@@ -259,9 +259,11 @@ def relation_extractor_2hop(kb, id1, id2, label, relations):
         q1_values = []
     if q1_values:
         for vals in q1_values:
-            relations.append((kb, vals[0], vals[1], label[0]))
-            relations.append((kb, vals[2], vals[3], vals[1]))
-            relations.append((kb, vals[4], label[1], vals[3]))
+            if vals[0] != 'Link from a Wikipage to another Wikipage' and vals[2] != \
+                    'Link from a Wikipage to another Wikipage' and vals[4] != 'Link from a Wikipage to another Wikipage':
+                relations.append((kb, vals[0], vals[1], label[0]))
+                relations.append((kb, vals[2], vals[3], vals[1]))
+                relations.append((kb, vals[4], label[1], vals[3]))
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
@@ -269,9 +271,11 @@ def relation_extractor_2hop(kb, id1, id2, label, relations):
         q1_values_back = []
     if q1_values_back:
         for vals in q1_values_back:
-            relations.append((kb, vals[0], vals[1], label[1]))
-            relations.append((kb, vals[2], vals[3], vals[1]))
-            relations.append((kb, vals[4], label[0], vals[3]))
+            if vals[0] != 'Link from a Wikipage to another Wikipage' and vals[2] != \
+                    'Link from a Wikipage to another Wikipage' and vals[4] != 'Link from a Wikipage to another Wikipage':
+                relations.append((kb, vals[0], vals[1], label[1]))
+                relations.append((kb, vals[2], vals[3], vals[1]))
+                relations.append((kb, vals[4], label[0], vals[3]))
     return relations
 
 
@@ -293,7 +297,6 @@ def relation_extractor_1hop(kb, id1, id2, label, relations):
          . ?v ?q <http://dbpedia.org/resource/'+id1+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
          FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+ '}')
     # print sparql_endpoint
-    # print query
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -302,9 +305,9 @@ def relation_extractor_1hop(kb, id1, id2, label, relations):
         pass
     if q1_values:
         for vals in q1_values:
-            relations.append([kb, vals[0], vals[1], label[0]])
-            relations.append([kb, vals[2], label[1], vals[1]])
-    # print query_back
+            if vals[0] != 'Link from a Wikipage to another Wikipage' and vals[2] != 'Link from a Wikipage to another Wikipage':
+                relations.append([kb, vals[0], vals[1], label[0]])
+                relations.append([kb, vals[2], label[1], vals[1]])
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
@@ -312,8 +315,9 @@ def relation_extractor_1hop(kb, id1, id2, label, relations):
         q1_values_back = []
     if q1_values_back:
         for vals in q1_values_back:
-            relations.append([kb, vals[0], vals[1], label[1]])
-            relations.append([kb, vals[2], label[0], vals[1]])
+            if vals[0] != 'Link from a Wikipage to another Wikipage' and vals[2] != 'Link from a Wikipage to another Wikipage':
+                relations.append([kb, vals[0], vals[1], label[1]])
+                relations.append([kb, vals[2], label[0], vals[1]])
     return relations
 
 

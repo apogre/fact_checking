@@ -177,6 +177,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             print "Executing LPMLN"
             if sentence_id not in lpmln_predicate.keys():
                 relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict)
+                print relation_ent_2
                 unique_predicates = [evidence[1] for evidence in relation_ent]
                 unique_predicates = list(set(unique_predicates))
                 relation = triple_dict.keys()[0]

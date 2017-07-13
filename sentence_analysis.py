@@ -33,7 +33,7 @@ def triple_filter(ent, triples):
                     pass
                 else:
                     triple_dict[triple[1]].append([key1, key2])
-    if not triple_dict:
+    if not triple_dict and len(entity_set) > 2:
         for triple in triples:
             key1 = [entity_set[0] for trip in triple if trip in entity_set[0]]
             key2 = [entity_set[1] for trip in triple if trip in entity_set[1]]

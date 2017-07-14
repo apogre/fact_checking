@@ -19,3 +19,23 @@ id,sentence,label
 18,"Arizona is the capital of Mexico.",F
 19,"Madrid is the capital of Portugal.",F
 20,"Amsterdam is the capital of England.",F
+21,"Kabul is the capital of Afghanistan.",T
+22,"Vienna is the capital of Austria.",T
+23,"Dhaka  is the capital of Bangladesh.",T
+24,"Brussels is the capital of Belgium.",T
+25,"Ottawa is the capital of Canada.",T
+26,"Suva is the capital of Fizi.",T
+27,"Paris is the capital of France.",T
+28,"Berlin is the capital of Germany.",T
+29,"Tehran is the capital of Iran.",T
+30,"Doha is the capital of Qatar.",T
+31,"Kyoto is the capital of India.",F
+32,"Hiroshima is the capital of Italy.",F
+33,"Nagasaki is the capital of France.",F
+34,"Vatican City is the capital of Japan.",F
+35,"Lyon is the capital of Japan.",F
+36,"Kabul is the capital of Japan.",F
+37,"Brisbane is the capital of Mexico.",F
+38,"Arizona is the capital of Vietnam.",F
+39,"Madrid is the capital of England.",F
+40,"Amsterdam is the capital of Portugal.",F

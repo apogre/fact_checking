@@ -215,22 +215,23 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             else:
                 sorted_predicates = lpmln_predicate.get(sentence_id, {})
             print sorted_predicates
-            if sentence_id not in lpmln_output.keys() and sorted_predicates:
-                evidence_writer(sorted_predicates, sentence_id, data_source)
-                # get_rules(predicate_of_interest)
-                # probability = inference(sentence_id, data_source)
-                # probability.extend([sentence_id, sentence_check])
-            # else:
-            #     probability = lpmln_output[sentence_id]
-            #     probability.extend([sentence_id, sentence_check])
-            # lpmln_evaluation.append(probability)
-            # print probability
+            if sentence_id not in lpmln_output.keys():
+                if sorted_predicates:
+                    evidence_writer(sorted_predicates, sentence_id, data_source)
+                    # get_rules(predicate_of_interest)
+                    probability = inference(sentence_id, data_source)
+                    probability.extend([sentence_id, sentence_check])
+            else:
+                probability = lpmln_output[sentence_id]
+                probability.extend([sentence_id, sentence_check])
+            lpmln_evaluation.append(probability)
+            print probability
 
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source)
 
-    kgminer_accuracy = kgminer_true_count / sentence_count
+    kgminer_accuracy = float(kgminer_true_count)/float(sentence_count)
     accuracy.append([data_source, pre_kgminer, kgminer_true_count, sentence_count, kgminer_accuracy])
     print accuracy
 

@@ -1,0 +1,12 @@
+"location(mo, go1) 1.0",1,Google is located in Mountain View.
+"location(re, mi) 1.0","location(re, mi4) 1.0",2,Microsoft is located in Redmond.
+"location(me, fa1) 0.999954602131",3,Facebook is located in Menlo Park.
+"location(sa, ch) 0.999999997939",5,Chevron is located in San Ramon.
+"location(cu, ap) 1.0",12,Apple is located in Cupertino.
+"location(se1, sa) 1.0","location(so, sa) 1.0","location(so, ch) 1.0","location(so, sa2) 1.0","location(se, sa) 1.0",13,Samsung is located in South Korea.
+"location(wa, am) 1.0",14,Amazon is located in Seattle.
+"location(to, so) 0.999954602131","location(mi, so) 1.0",17,Sony is located in Tokyo.
+"location(sa, in1) 0.999954602131",18,Intel is located in Santa Clara.
+"location(to, to2) 0.999954602131",19,Toshiba is located in Tokyo.
+"location(mo, mi) 0.999954602131",22,Microsoft is located in Mountain View.
+"location(ja, pa) 1.0",39,Panasonic is located in Tokyo.

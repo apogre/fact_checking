@@ -51,7 +51,7 @@ def inference(sentence_id, data_source):
     if path.isfile('LPmln/' +data_source + '/' + data_source + '_result.txt'):
         remove('LPmln/' +data_source + '/' + data_source + '_result.txt')
     evidence_source = 'LPmln/' + data_source + '/evidence/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}.lpmln -q spouse -all -e {1}_filter.db -r {0}_result.txt ".format('LPmln/' +data_source +\
+    cmd = "lpmln2asp -i {0}.lpmln -q location -all -e {1}_filter.db -r {0}_result.txt ".format('LPmln/' +data_source +\
                                                                                              '/' + data_source, evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
@@ -95,11 +95,20 @@ def evidence_writer(sorted_predicates, sentence_id, data_source):
         mkdir('LPmln/' + data_source + '/evidence/')
     with open('LPmln/' + data_source + '/evidence/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
-        datawriter.writerows([[i] for i in item_set])
+        for i in item_set:
+            try:
+                datawriter.writerow([i])
+            except:
+                pass
 
     with open('LPmln/' + data_source + '/evidence/' + sentence_id + data_source + '_initials.db', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
-        datawriter.writerows([[i] for i in item_set_initials])
+        # datawriter.writerows([[i] for i in item_set_initials])
+        for i in item_set_initials:
+            try:
+                datawriter.writerow([i])
+            except:
+                pass
 
     with open('LPmln/' + data_source + '/evidence/' + sentence_id + data_source + '_filter.db', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
@@ -110,6 +119,9 @@ def evidence_writer(sorted_predicates, sentence_id, data_source):
                             entity_mapping.get(rel[3],'').lower()+').']
                 if item_set[0] not in final_list:
                     final_list.append(item_set[0])
-                    datawriter.writerow(item_set)
+                    try:
+                        datawriter.writerow(item_set)
+                    except:
+                        pass
 
 

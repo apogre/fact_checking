@@ -1,0 +1,40 @@
+"capital(ka, ki) 1.0",1,Kathmandu is the capital of Nepal.
+"capital(li, li1) 1.0","capital(li, ki) 1.0",2,Lisbon is the capital of Portugal.
+"capital(ne, de) 1.0",3,New Delhi  is the capital of India.
+"capital(am, ki) 1.0",4,Amsterdam is the capital of Netherlands.
+"capital(is1, is) 1.0","capital(is1, ot) 1.0",5,Istanbul is the capital of Turkey.
+"capital(se, fi) 1.0",6,Seoul is the capital of South Korea.
+7,Havana is the capital of Cuba.
+"capital(ca, ca1) 1.0",8,Cairo is the capital of Egypt.
+9,Harare is the capital of Zimbabwe.
+"capital(be, re) 1.0",10,Beijing is the capital of China.
+"capital(ky1, ky) 1.0",11,Kyoto is the capital of Japan.
+"capital(hi1, hi) 1.0",12,Hiroshima is the capital of Japan.
+"capital(na1, na) 1.0",13,Nagasaki is the capital of Japan.
+14,Vatican City is the capital of Italy.
+15,Lyon is the capital of France.
+"capital(ka, af) 1.0",16,Kabul is the capital of India.
+17,Brisbane is the capital of Vietnam.
+18,Arizona is the capital of Mexico.
+"capital(ma, sp) 1.0","capital(li, po) 1.0",19,Madrid is the capital of Portugal.
+"capital(lo, en) 1.0",20,Amsterdam is the capital of England.
+"capital(ka1, ka) 1.0",21,Kabul is the capital of Afghanistan.
+22,Vienna is the capital of Austria.
+"capital(dh, dh1) 1.0",23,Dhaka  is the capital of Bangladesh.
+"capital(br, be) 1.0","capital(br, br) 1.0",24,Brussels is the capital of Belgium.
+25,Ottawa is the capital of Canada.
+25,Ottawa is the capital of Canada.
+27,Paris is the capital of France.
+28,Berlin is the capital of Germany.
+"capital(te, te1) 1.0",29,Tehran is the capital of Iran.
+30,Doha is the capital of Qatar.
+31,Kyoto is the capital of India.
+32,Hiroshima is the capital of Italy.
+33,Nagasaki is the capital of France.
+34,Vatican City is the capital of Japan.
+35,Lyon is the capital of Japan.
+"capital(ka, af) 1.0",36,Kabul is the capital of Japan.
+37,Brisbane is the capital of Mexico.
+38,Arizona is the capital of Vietnam.
+38,Arizona is the capital of Vietnam.
+38,Arizona is the capital of Vietnam.

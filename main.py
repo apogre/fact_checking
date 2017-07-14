@@ -20,6 +20,10 @@ load_word2vec = True
 model_wv_g = None
 
 
+def word2vec_score_dummy(rel,triple):
+    return 0
+
+
 def word2vec_score(rel, triple_k):
     global load_word2vec
     global model_wv_g
@@ -136,21 +140,22 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             vals = sum(type_ontology.values(), [])
             relation = triple_dict.keys()
             print vals, relation
-            if str(relation[0] + vals[0] + vals[1]) not in stored_query.keys():
-                kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
-                print kgminer_predicates
-                if kgminer_predicates:
-                    kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
-                    if kgminer_predicate_ranked.values():
-                        possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
-                        kgminer_predicate_flag = True
-                        stored_query[str(relation[0] + vals[0] + vals[1])] = kgminer_predicate_ranked
-                        stored_query[str(relation[0] + vals[1] + vals[0])] = kgminer_predicate_ranked
-            else:
-                print "Using Stored Predicate"
-                kgminer_predicate_ranked = stored_query[str(relation[0] + vals[0] + vals[1])]
-                possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
-                kgminer_predicate_flag = True
+            if len(vals) > 1:
+                if str(relation[0] + vals[0] + vals[1]) not in stored_query.keys():
+                    kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
+                    print kgminer_predicates
+                    if kgminer_predicates:
+                        kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
+                        if kgminer_predicate_ranked.values():
+                            possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+                            kgminer_predicate_flag = True
+                            stored_query[str(relation[0] + vals[0] + vals[1])] = kgminer_predicate_ranked
+                            stored_query[str(relation[0] + vals[1] + vals[0])] = kgminer_predicate_ranked
+                else:
+                    print "Using Stored Predicate"
+                    kgminer_predicate_ranked = stored_query[str(relation[0] + vals[0] + vals[1])]
+                    possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+                    kgminer_predicate_flag = True
         else:
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
         print "Ranked Predicates"
@@ -198,12 +203,16 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             if sentence_id not in lpmln_predicate.keys():
                 sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict)
+                print relation_ent, relation_ent_0
+                relation_ent += relation_ent_0
+                print relation_ent
                 if relation_ent:
+                    relation_ent += relation_ent_0
                     unique_predicates = [evidence[1] for evidence in relation_ent]
                     unique_predicates = list(set(unique_predicates))
                     print unique_predicates
                     relation = triple_dict.keys()[0]
-                    scored_predicates = [[unique_predicate, word2vec_score(unique_predicate, relation)] for unique_predicate \
+                    scored_predicates = [[unique_predicate, word2vec_score_dummy(unique_predicate, relation)] for unique_predicate \
                                          in unique_predicates]
                     predicate_dict = dict(scored_predicates)
                     print predicate_dict

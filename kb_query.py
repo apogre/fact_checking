@@ -69,7 +69,7 @@ def get_description(entity_type):
 
 def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-    { ?url1 <http://dbpedia.org/' + poi + '> ?url2 } . ' + q_part + \
+    { ?url2 <http://dbpedia.org/' + poi + '> ?url1 } . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
     result = sparql.query(sparql_dbpedia, q_ts)
     training_set = [sparql.unpack_row(row_result) for row_result in result]
@@ -239,14 +239,16 @@ def relation_extractor_0hop(kb, id1, id2, label, relations):
         pass
     if q1_values:
         for vals in q1_values:
-            relations.append((kb, vals[0], label[0], label[1]))
+            if vals[0] != 'Link from a Wikipage to another Wikipage' and 'capital' not in vals[0]:
+                relations.append([kb, vals[0], label[0], label[1]])
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
     except:
         q1_values_back = []
     for vals in q1_values_back:
-        relations.append((kb, vals[0], label[1], label[0]))
+        if vals[0] != 'Link from a Wikipage to another Wikipage' and 'capital' not in vals[0]:
+            relations.append([kb, vals[0], label[1], label[0]])
     return relations
 
 

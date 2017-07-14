@@ -6,6 +6,7 @@ Tokyo is the capital of Japan.
 The capital of Italy is Rome.
 Paris is the capital of France.
 Kingston is the capital of Jamaica.
+Berlin is the capital of Germany.
 *---movie_actor---*
 Al Pacino starred in Scarface.
 Johnny Depp starred in Sleepy Hollow.

@@ -51,7 +51,7 @@ def inference(sentence_id, data_source):
     if path.isfile('LPmln/' +data_source + '/' + data_source + '_result.txt'):
         remove('LPmln/' +data_source + '/' + data_source + '_result.txt')
     evidence_source = 'LPmln/' + data_source + '/evidence/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}.lpmln -q location -all -e {1}_filter.db -r {0}_result.txt ".format('LPmln/' +data_source +\
+    cmd = "lpmln2asp -i {0}.lpmln -q capital -all -e {1}_filter.db -r {0}_result.txt ".format('LPmln/' +data_source +\
                                                                                              '/' + data_source, evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)

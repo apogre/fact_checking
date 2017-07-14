@@ -19,24 +19,14 @@ st_ner = StanfordNERTagger('english.all.3class.distsim.crf.ser.gz')
 def triple_filter(ent, triples):
     triple_dict = {}
     entity_set = [x[0].encode('utf-8') for x in ent]
-    for triple in triples:
-        key1 = [ent for ent in entity_set if ent in triple[0]]
-        key2 = [ent for ent in entity_set if ent in triple[2]]
-        if key1 and key2:
-            key1 = key1[0]
-            key2 = key2[0]
-            if triple[1] not in triple_dict.keys():
-                triple_dict[triple[1]] = [[key1, key2]]
-            else:
-                triple_list = [item for sublist in triple_dict[triple[1]] for item in sublist]
-                if key1 in triple_list and key2 in triple_list:
-                    pass
-                else:
-                    triple_dict[triple[1]].append([key1, key2])
-    if not triple_dict and len(entity_set) > 2:
+    if len(entity_set) < 2:
         for triple in triples:
-            key1 = [entity_set[0] for trip in triple if trip in entity_set[0]]
-            key2 = [entity_set[1] for trip in triple if trip in entity_set[1]]
+            if entity_set[0] in triple:
+                triple_dict[triple[1]] = [[triple[0], triple[2]]]
+    else:
+        for triple in triples:
+            key1 = [ent for ent in entity_set if ent in triple[0]]
+            key2 = [ent for ent in entity_set if ent in triple[2]]
             if key1 and key2:
                 key1 = key1[0]
                 key2 = key2[0]
@@ -48,6 +38,21 @@ def triple_filter(ent, triples):
                         pass
                     else:
                         triple_dict[triple[1]].append([key1, key2])
+        if not triple_dict and len(entity_set) > 2:
+            for triple in triples:
+                key1 = [entity_set[0] for trip in triple if trip in entity_set[0]]
+                key2 = [entity_set[1] for trip in triple if trip in entity_set[1]]
+                if key1 and key2:
+                    key1 = key1[0]
+                    key2 = key2[0]
+                    if triple[1] not in triple_dict.keys():
+                        triple_dict[triple[1]] = [[key1, key2]]
+                    else:
+                        triple_list = [item for sublist in triple_dict[triple[1]] for item in sublist]
+                        if key1 in triple_list and key2 in triple_list:
+                            pass
+                        else:
+                            triple_dict[triple[1]].append([key1, key2])
     return triple_dict
 
 
@@ -83,7 +88,7 @@ def triples_extractor(sentence, named_entities):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--sentence", default='Steve Wozniak attended University of California, Berkeley.')
+    parser.add_argument("-s", "--sentence", default='Coursera is located in Mountain View.')
     args = parser.parse_args()
     sentence_lis = [args.sentence]
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]

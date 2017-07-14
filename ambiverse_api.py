@@ -20,26 +20,28 @@ def entity_parser(text):
 
     resource = dict()
     for entity in entities:
-        try:
-            url1 = entity['entity']['url'].split('/')[-1]
-            wikidata_url = entity['entity']['id'].split('/')[-1]
-            confidence = entity['entity']['confidence']
-        except:
-            url1 = ''
-            confidence = 0
-            wikidata_url = ''
-        if '%' in url1:
-            url1 = url1.replace('%20', '_')
-            url1 = url1.replace('%2C', ',')
-            url1 = url1.replace('%28', '(')
-            url1 = url1.replace('%29', ')')
-            url1 = url1.replace('%21', '!')
-        resource[entity.get('text')] = {"dbpedia_id": url1, "confidence": confidence, "wikidata_id": wikidata_url}
+        if entity.get('entity',{}):
+            try:
+                url1 = entity['entity']['url'].split('/')[-1]
+                wikidata_url = entity['entity']['id'].split('/')[-1]
+                confidence = entity['entity']['confidence']
+            except:
+                print entity
+                url1 = ''
+                confidence = 0
+                wikidata_url = ''
+            if '%' in url1:
+                url1 = url1.replace('%20', '_')
+                url1 = url1.replace('%2C', ',')
+                url1 = url1.replace('%28', '(')
+                url1 = url1.replace('%29', ')')
+                url1 = url1.replace('%21', '!')
+            resource[entity.get('text')] = {"dbpedia_id": url1, "confidence": confidence, "wikidata_id": wikidata_url}
     return resource
 
 
 if __name__ == '__main__':
     ambiverse_resources = {'a': 'b'}
-    resource = entity_parser("Springfield is the capital of Illinois.")
+    resource = entity_parser("Coursera is located in Mountain View.")
     print resource
 

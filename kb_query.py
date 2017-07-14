@@ -29,6 +29,32 @@ def get_leaf_nodes(type_values):
     return leaves
 
 
+def resource_extractor(entity):
+    db_resource = dict()
+    wiki_resource = dict()
+    resource_ids = dict()
+    query = 'PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . \
+    FILTER langMatches( lang(?label), "EN" ) . ?label bif:contains "' + entity + '" . }'
+    result = sparql.query(sparql_dbpedia, query)
+    resources = [sparql.unpack_row(row_result) for row_result in result]
+    for resource in resources:
+        if 'wikidata' in resource[0]:
+            if resource[1] not in wiki_resource.keys():
+                wiki_resource[resource[1]] = [resource[0]]
+            else:
+                if resource[0] not in sum(wiki_resource.values(), []):
+                    wiki_resource[resource[1]].append(resource[0])
+        else:
+            if resource[1] not in db_resource.keys() and 'Category' not in resource[0]:
+                db_resource[resource[1]] = [resource[0]]
+            else:
+                if resource[0] not in sum(db_resource.values(), []):
+                    db_resource.get(resource[1], []).append(resource[0])
+    resource_ids['dbpedia_id'] = db_resource.get(entity)[0].split('/')[-1]
+    resource_ids['wikidata_id'] = wiki_resource.get(entity)[0].split('/')[-1]
+    return resource_ids
+
+
 def get_description(entity_type):
     query = 'SELECT distinct ?label WHERE { <http://dbpedia.org/' + entity_type + '> rdfs:comment ?label . \
         FILTER langMatches( lang(?label), "EN" ) . }'
@@ -296,7 +322,6 @@ def relation_extractor_1hop(kb, id1, id2, label, relations):
         query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {<http://dbpedia.org/resource/'+id2+'> ?p ?v\
          . ?v ?q <http://dbpedia.org/resource/'+id1+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
          FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+ '}')
-    # print sparql_endpoint
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]

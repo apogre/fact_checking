@@ -1,7 +1,7 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files
 from ambiverse_api import entity_parser
-from kb_query import get_entity_type, get_description, get_kgminer_predicates
+from kb_query import get_entity_type, get_description, get_kgminer_predicates, resource_extractor
 from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data
 from kgminer import get_training_set, invoke_kgminer
 from gensim.models import Word2Vec
@@ -96,6 +96,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
     kgminer_evaluation = []
     lpmln_evaluation = []
     accuracy = []
+    stored_query = dict()
     for n, ne in enumerate(named_tags):
         sentence_id = id_list[n]
         true_label = true_labels[n]
@@ -118,19 +119,38 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             resource = entity_parser(sentence_lis[n])
             ambiverse_resources[sentence_id] = resource
             ambiverse_flag = True
+        if len(resource) < 2:
+            for entity_pair in triple_dict.values():
+                for entity in entity_pair[0]:
+                    if entity not in resource.keys():
+                        resource_ids = resource_extractor(entity)
+                        resource[entity] = resource_ids
         print "Resource Extractor"
         print "=================="
         pprint.pprint(resource)
         # get poi
+        print resource, triple_dict
         type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
+        print type_ontology, type_resource, type_ontology_full, type_resource_full
         if sentence_id not in possible_kgminer_predicate.keys():
-            kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
-            print kgminer_predicates
-            if kgminer_predicates:
-                kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
-                if kgminer_predicate_ranked.values():
-                    possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
-                    kgminer_predicate_flag = True
+            vals = sum(type_ontology.values(), [])
+            relation = triple_dict.keys()
+            print vals, relation
+            if str(relation[0] + vals[0] + vals[1]) not in stored_query.keys():
+                kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
+                print kgminer_predicates
+                if kgminer_predicates:
+                    kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
+                    if kgminer_predicate_ranked.values():
+                        possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+                        kgminer_predicate_flag = True
+                        stored_query[str(relation[0] + vals[0] + vals[1])] = kgminer_predicate_ranked
+                        stored_query[str(relation[0] + vals[1] + vals[0])] = kgminer_predicate_ranked
+            else:
+                print "Using Stored Predicate"
+                kgminer_predicate_ranked = stored_query[str(relation[0] + vals[0] + vals[1])]
+                possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+                kgminer_predicate_flag = True
         else:
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
         print "Ranked Predicates"
@@ -176,33 +196,35 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
         if lpmln:
             print "Executing LPMLN"
             if sentence_id not in lpmln_predicate.keys():
+                sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict)
-                print relation_ent_2
-                unique_predicates = [evidence[1] for evidence in relation_ent]
-                unique_predicates = list(set(unique_predicates))
-                relation = triple_dict.keys()[0]
-                scored_predicates = [[unique_predicate, word2vec_score(unique_predicate, relation)] for unique_predicate \
-                                     in unique_predicates]
-                predicate_dict = dict(scored_predicates)
-                print predicate_dict
-                for ev in relation_ent:
-                    ev.append(predicate_dict.get(ev[1], 0))
-                sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
-                lpmln_predicate[sentence_id] = sorted_predicates
-                lpmln_predicate_flag = True
+                if relation_ent:
+                    unique_predicates = [evidence[1] for evidence in relation_ent]
+                    unique_predicates = list(set(unique_predicates))
+                    print unique_predicates
+                    relation = triple_dict.keys()[0]
+                    scored_predicates = [[unique_predicate, word2vec_score(unique_predicate, relation)] for unique_predicate \
+                                         in unique_predicates]
+                    predicate_dict = dict(scored_predicates)
+                    print predicate_dict
+                    for ev in relation_ent:
+                        ev.append(predicate_dict.get(ev[1], 0))
+                    sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
+                    lpmln_predicate[sentence_id] = sorted_predicates
+                    lpmln_predicate_flag = True
             else:
                 sorted_predicates = lpmln_predicate.get(sentence_id, {})
             print sorted_predicates
-            if sentence_id not in lpmln_output.keys():
+            if sentence_id not in lpmln_output.keys() and sorted_predicates:
                 evidence_writer(sorted_predicates, sentence_id, data_source)
                 # get_rules(predicate_of_interest)
-                probability = inference(sentence_id, data_source)
-                probability.extend([sentence_id, sentence_check])
-            else:
-                probability = lpmln_output[sentence_id]
-                probability.extend([sentence_id, sentence_check])
-            lpmln_evaluation.append(probability)
-            print probability
+                # probability = inference(sentence_id, data_source)
+                # probability.extend([sentence_id, sentence_check])
+            # else:
+            #     probability = lpmln_output[sentence_id]
+            #     probability.extend([sentence_id, sentence_check])
+            # lpmln_evaluation.append(probability)
+            # print probability
 
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\

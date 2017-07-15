@@ -11,20 +11,6 @@
       "wikidata_id": "Q134773"
     }
   },
-  "25": {
-    "Al Pacino": {
-      "confidence": 1.0,
-      "dbpedia_id": "Al_Pacino",
-      "wikidata_id": "Q41163"
-    }
-  },
-  "26": {
-    "Jennifer Lawrence": {
-      "confidence": 1.0,
-      "dbpedia_id": "Jennifer_Lawrence",
-      "wikidata_id": "Q189490"
-    }
-  },
   "27": {
     "Sandra Bullock": {
       "confidence": 1.0,
@@ -47,13 +33,6 @@
       "confidence": 1.0,
       "dbpedia_id": "Cate_Blanchett",
       "wikidata_id": "Q80966"
-    }
-  },
-  "21": {
-    "Kristen Stewart": {
-      "confidence": 1.0,
-      "dbpedia_id": "Kristen_Stewart",
-      "wikidata_id": "Q126599"
     }
   },
   "22": {
@@ -128,41 +107,6 @@
       "dbpedia_id": "George_Clooney"
     }
   },
-  "5": {
-    "Johnny Depp": {
-      "confidence": 1.0,
-      "wikidata_id": "Q37175",
-      "dbpedia_id": "Johnny_Depp"
-    }
-  },
-  "4": {
-    "Al Pacino": {
-      "confidence": 1.0,
-      "wikidata_id": "Q41163",
-      "dbpedia_id": "Al_Pacino"
-    }
-  },
-  "7": {
-    "Tom Cruise": {
-      "confidence": 1.0,
-      "wikidata_id": "Q37079",
-      "dbpedia_id": "Tom_Cruise"
-    }
-  },
-  "6": {
-    "Matt Damon": {
-      "confidence": 1.0,
-      "wikidata_id": "Q175535",
-      "dbpedia_id": "Matt_Damon"
-    }
-  },
-  "9": {
-    "Christian Bale": {
-      "confidence": 1.0,
-      "dbpedia_id": "Christian_Bale",
-      "wikidata_id": "Q45772"
-    }
-  },
   "8": {
     "Fight Club": {
       "confidence": 0.8534479835687019,
@@ -176,34 +120,6 @@
     }
   },
   "a": "b",
-  "11": {
-    "Samuel Jackson": {
-      "confidence": 0.3792321616373111,
-      "dbpedia_id": "Samuel_L._Jackson",
-      "wikidata_id": "Q172678"
-    }
-  },
-  "10": {
-    "Leonardo DiCaprio": {
-      "confidence": 1.0,
-      "dbpedia_id": "Leonardo_DiCaprio",
-      "wikidata_id": "Q38111"
-    }
-  },
-  "13": {
-    "Sandra Bullock": {
-      "confidence": 1.0,
-      "dbpedia_id": "Sandra_Bullock",
-      "wikidata_id": "Q40791"
-    }
-  },
-  "12": {
-    "Jennifer Lawrence": {
-      "confidence": 1.0,
-      "dbpedia_id": "Jennifer_Lawrence",
-      "wikidata_id": "Q189490"
-    }
-  },
   "15": {
     "Lucy": {
       "confidence": 0.31344830061840484,
@@ -226,13 +142,6 @@
       "confidence": 0.273604384121878,
       "wikidata_id": "Q686861",
       "dbpedia_id": "Mamma_Mia!"
-    }
-  },
-  "17": {
-    "Amy Adams": {
-      "confidence": 1.0,
-      "dbpedia_id": "Amy_Adams",
-      "wikidata_id": "Q481832"
     }
   },
   "16": {
@@ -270,13 +179,5 @@
       "dbpedia_id": "Natalie_Portman",
       "wikidata_id": "Q37876"
     }
-  },
-  "30": {
-    "Julia Roberts": {
-      "confidence": 1.0,
-      "wikidata_id": "Q40523",
-      "dbpedia_id": "Julia_Roberts"
-    }
-  },
-  "30.\"Julia Roberts starred in Gravity.\"": {}
+  }
 }

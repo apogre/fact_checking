@@ -13,7 +13,7 @@ kgminer_predicate_threshold = 0.4
 evidence_threshold = 0
 rule_threshold = 0.15
 
-sparql_dbpedia_local = 'http://localhost:8890/sparql'
+sparql_dbpedia_local = 'https://dbpedia.org/sparql'
 sparql_dbpedia_on = 'https://dbpedia.org/sparql'
 sparql_dbpedia = 'https://dbpedia.org/sparql'
 sparql_wikidata = 'https://query.wikidata.org/sparql'

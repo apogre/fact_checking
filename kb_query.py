@@ -33,25 +33,30 @@ def resource_extractor(entity):
     db_resource = dict()
     wiki_resource = dict()
     resource_ids = dict()
+    result = []
     query = 'PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . \
     FILTER langMatches( lang(?label), "EN" ) . ?label bif:contains "' + entity + '" . }'
-    result = sparql.query(sparql_dbpedia, query)
-    resources = [sparql.unpack_row(row_result) for row_result in result]
-    for resource in resources:
-        if 'wikidata' in resource[0]:
-            if resource[1] not in wiki_resource.keys():
-                wiki_resource[resource[1]] = [resource[0]]
+    try:
+        result = sparql.query(sparql_dbpedia, query)
+    except:
+        pass
+    if result:
+        resources = [sparql.unpack_row(row_result) for row_result in result]
+    	for resource in resources:
+            if 'wikidata' in resource[0]:
+            	if resource[1] not in wiki_resource.keys():
+                    wiki_resource[resource[1]] = [resource[0]]
+            	else:
+                    if resource[0] not in sum(wiki_resource.values(), []):
+                    	wiki_resource[resource[1]].append(resource[0])
             else:
-                if resource[0] not in sum(wiki_resource.values(), []):
-                    wiki_resource[resource[1]].append(resource[0])
-        else:
-            if resource[1] not in db_resource.keys() and 'Category' not in resource[0]:
-                db_resource[resource[1]] = [resource[0]]
-            else:
-                if resource[0] not in sum(db_resource.values(), []):
-                    db_resource.get(resource[1], []).append(resource[0])
-    resource_ids['dbpedia_id'] = db_resource.get(entity)[0].split('/')[-1]
-    resource_ids['wikidata_id'] = wiki_resource.get(entity)[0].split('/')[-1]
+            	if resource[1] not in db_resource.keys() and 'Category' not in resource[0]:
+               	    db_resource[resource[1]] = [resource[0]]
+            	else:
+                    if resource[0] not in sum(db_resource.values(), []):
+                    	db_resource.get(resource[1], []).append(resource[0])
+    	resource_ids['dbpedia_id'] = db_resource.get(entity)[0].split('/')[-1]
+    	resource_ids['wikidata_id'] = wiki_resource.get(entity)[0].split('/')[-1]
     return resource_ids
 
 

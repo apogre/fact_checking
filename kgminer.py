@@ -2,12 +2,10 @@ import csv
 from os import listdir, path, remove, chdir, environ, mkdir
 import subprocess
 from gensim.models import Word2Vec
-from sematch.semantic.similarity import EntitySimilarity
 from config import KGMiner_data
 from resources_loader import load_kgminer_resource
 from kb_query import or_query_prep, kgminer_training_data
 from shutil import copyfile
-import sys
 load_dbpedia_word2vec = True
 load_encodings = True
 model_wv = None

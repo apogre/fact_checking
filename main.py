@@ -203,7 +203,6 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             if sentence_id not in lpmln_predicate.keys():
                 sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict)
-                print relation_ent, relation_ent_0
                 relation_ent += relation_ent_0
                 print relation_ent
                 if relation_ent:

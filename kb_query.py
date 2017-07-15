@@ -136,6 +136,7 @@ def get_entity_type(resources, triples):
                          <http://dbpedia.org/resource/'+key+'> rdf:type ?t }. ?t rdfs:subClassOf ?t1 . \
                          FILTER(STRSTARTS(STR(?t), "http://dbpedia.org/ontology") || STRSTARTS(STR(?t), \
                          "http://dbpedia.org/resource")).}'
+			print q_type
                         result = sparql.query(sparql_dbpedia, q_type)
                         type_values = [sparql.unpack_row(row_result) for row_result in result]
                         if not type_values:

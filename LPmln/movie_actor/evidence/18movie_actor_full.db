@@ -1,0 +1,10 @@
+spouse(Benjamin_Millepied,Natalie_Portman).
+link_from_a_wikipage_to_another_wikipage(Black_Swan,Benjamin_Millepied).
+producer(Mike_Medavoy,Black_Swan).
+link_from_a_wikipage_to_another_wikipage(Natalie_Portman,Mike_Medavoy).
+film_director(Darren_Aronofsky,Black_Swan).
+link_from_a_wikipage_to_another_wikipage(Natalie_Portman,Darren_Aronofsky).
+choreographer(Benjamin_Millepied,Black_Swan).
+spouse(Natalie_Portman,Benjamin_Millepied).
+cast_member(Benjamin_Millepied,Black_Swan).
+cast_member(Black_Swan,Natalie_Portman).

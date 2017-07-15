@@ -1,0 +1,5 @@
+film_director(ro,no).
+link_from_a_wikipage_to_another_wikipage(ju,ro).
+writer(ri,no).
+link_from_a_wikipage_to_another_wikipage(ju,ri).
+cast_member(no,ju).

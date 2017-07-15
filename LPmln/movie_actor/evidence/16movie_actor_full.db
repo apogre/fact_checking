@@ -1,0 +1,5 @@
+film_director(Roger_Michell,Notting_Hill).
+link_from_a_wikipage_to_another_wikipage(Julia_Roberts,Roger_Michell).
+writer(Richard_Curtis,Notting_Hill).
+link_from_a_wikipage_to_another_wikipage(Julia_Roberts,Richard_Curtis).
+cast_member(Notting_Hill,Julia_Roberts).

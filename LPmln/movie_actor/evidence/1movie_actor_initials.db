@@ -1,0 +1,7 @@
+relation(ji,to).
+link_from_a_wikipage_to_another_wikipage(fo,ji).
+film_director(ro,fo).
+link_from_a_wikipage_to_another_wikipage(to,ro).
+cast_member(el,fo).
+father(to,el).
+cast_member(fo,to).

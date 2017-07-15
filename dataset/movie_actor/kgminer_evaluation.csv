@@ -1,30 +1,30 @@
 1,Tom Hanks starred in Forrest Gump.,T,F
 2,George Clooney starred in Tomorrowland.,T,F
 3,Ben Affleck starred in Argo.,T,T
-4,Al Pacino starred in Scarface.,T,A
-5,Johnny Depp starred in Sleepy Hollow.,T,A
-6,Matt Damon starred in Good Will Hunting.,T,A
-7,Tom Cruise starred in Top Gun.,T,A
+4,Al Pacino starred in Scarface.,T,N
+5,Johnny Depp starred in Sleepy Hollow.,T,N
+6,Matt Damon starred in Good Will Hunting.,T,N
+7,Tom Cruise starred in Top Gun.,T,N
 8,Brad Pitt starred in Fight Club.,T,F
-9,Christian Bale starred in American Psycho.,T,A
-10,Leonardo DiCaprio starred in Titanic.,T,A
-11,Samuel Jackson starred in Pulp Fiction.,T,A
-12,Jennifer Lawrence starred in American Psycho.,T,A
-13,Sandra Bullock starred in Gravity.,T,A
-14,Meryl Streep starred in Mamma Mia.,T,A
+9,Christian Bale starred in American Psycho.,T,N
+10,Leonardo DiCaprio starred in Titanic.,T,N
+11,Samuel Jackson starred in Pulp Fiction.,T,N
+12,Jennifer Lawrence starred in American Psycho.,T,N
+13,Sandra Bullock starred in Gravity.,T,N
+14,Meryl Streep starred in Mamma Mia.,T,N
 15,Scarlett Johansson starred in Lucy.,T,F
 16,Julia Roberts starred in Notting Hill.,T,F
-17,Amy Adams starred in Enchanted.,T,A
+17,Amy Adams starred in Enchanted.,T,N
 18,Natalie Portman starred in Black Swan.,T,F
 19,Charlize Theron starred in Hancock.,T,F
 20,Cate Blanchett starred in Carol.,T,F
-21,Kristen Stewart starred in Twilight.,T,A
+21,Kristen Stewart starred in Twilight.,T,N
 22,Tom Hanks starred in Argo.,F,N
-23,George Clooney starred in Twilight.,F,A
+23,George Clooney starred in Twilight.,F,N
 24,Ben Affleck starred in Forrest Gump.,F,F
-25,Al Pacino starred in American Psycho.,F,A
-26,Jennifer Lawrence starred in Scarface.,F,A
+25,Al Pacino starred in American Psycho.,F,N
+26,Jennifer Lawrence starred in Scarface.,F,N
 27,Sandra Bullock starred in Notting Hill.,F,F
 28,Meryl Streep starred in Lucy.,F,N
 29,Scarlett Johansson starred in Mamma Mia.,F,F
-30,Julia Roberts starred in Gravity.,F,A
+30,Julia Roberts starred in Gravity.,F,N

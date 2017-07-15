@@ -1,0 +1,15 @@
+title(List_of_awards_and_nominations_received_by_Cate_Blanchett,Cate_Blanchett).
+link_from_a_wikipage_to_another_wikipage(Carol,List_of_awards_and_nominations_received_by_Cate_Blanchett).
+producer(Christine_Vachon,Carol).
+link_from_a_wikipage_to_another_wikipage(Cate_Blanchett,Christine_Vachon).
+film_director(Todd_Haynes,Carol).
+link_from_a_wikipage_to_another_wikipage(Cate_Blanchett,Todd_Haynes).
+production_companies(Number_9_Films,Carol).
+link_from_a_wikipage_to_another_wikipage(Cate_Blanchett,Number_9_Films).
+producer(Elizabeth_Karlsen,Carol).
+link_from_a_wikipage_to_another_wikipage(Cate_Blanchett,Elizabeth_Karlsen).
+production_companies(Killer_Films,Carol).
+link_from_a_wikipage_to_another_wikipage(Cate_Blanchett,Killer_Films).
+nominated_for(Academy_Award_for_Best_Supporting_Actress,Carol).
+winner(Cate_Blanchett,Academy_Award_for_Best_Supporting_Actress).
+cast_member(Carol,Cate_Blanchett).

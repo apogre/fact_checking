@@ -1,0 +1,6 @@
+wikipage_disambiguates(Enchanted_(film),Enchanted).
+link_from_a_wikipage_to_another_wikipage(Amy_Adams,Enchanted_(film)).
+wikipage_disambiguates(Enchanted_(soundtrack),Enchanted).
+link_from_a_wikipage_to_another_wikipage(Amy_Adams,Enchanted_(soundtrack)).
+extra(Amy_Adams,Enchanted_(soundtrack)).
+cast_member(Enchanted,Amy_Adams).

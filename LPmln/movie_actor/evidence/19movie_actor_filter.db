@@ -1,0 +1,3 @@
+film_director(pe,ha).
+link_from_a_wikipage_to_another_wikipage(ch,pe).
+cast_member(ha,ch).

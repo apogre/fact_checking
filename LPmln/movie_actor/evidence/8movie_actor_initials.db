@@ -1,0 +1,5 @@
+work(br,br1).
+link_from_a_wikipage_to_another_wikipage(fi,br).
+film_director(da,fi).
+link_from_a_wikipage_to_another_wikipage(br1,da).
+cast_member(fi,br1).

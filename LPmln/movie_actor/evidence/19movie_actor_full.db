@@ -1,0 +1,3 @@
+film_director(Peter_Berg,Hancock).
+link_from_a_wikipage_to_another_wikipage(Charlize_Theron,Peter_Berg).
+cast_member(Hancock,Charlize_Theron).

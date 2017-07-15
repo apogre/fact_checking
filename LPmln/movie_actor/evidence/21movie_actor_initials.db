@@ -1,0 +1,5 @@
+character(be,tw).
+performer(kr,be).
+followed_by(th,tw).
+cast_member(kr,th).
+cast_member(tw,kr).

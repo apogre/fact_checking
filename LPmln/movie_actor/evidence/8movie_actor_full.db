@@ -1,0 +1,5 @@
+work(Brad_Pitt_filmography,Brad_Pitt).
+link_from_a_wikipage_to_another_wikipage(Fight_Club,Brad_Pitt_filmography).
+film_director(David_Fincher,Fight_Club).
+link_from_a_wikipage_to_another_wikipage(Brad_Pitt,David_Fincher).
+cast_member(Fight_Club,Brad_Pitt).

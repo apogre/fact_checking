@@ -1,0 +1,13 @@
+wikipage_disambiguates(Scarface:_Money._Power._Respect.,Scarface).
+link_from_a_wikipage_to_another_wikipage(Al_Pacino,Scarface:_Money._Power._Respect.).
+wikipage_disambiguates(Scarface:_The_World_Is_Yours,Scarface).
+link_from_a_wikipage_to_another_wikipage(Al_Pacino,Scarface:_The_World_Is_Yours).
+wikipage_disambiguates(Scarface_(1932_film),Scarface).
+link_from_a_wikipage_to_another_wikipage(Al_Pacino,Scarface_(1932_film)).
+wikipage_disambiguates(Scarface_(1983_film),Scarface).
+link_from_a_wikipage_to_another_wikipage(Al_Pacino,Scarface_(1983_film)).
+wikipage_disambiguates(Scarface_Nation,Scarface).
+link_from_a_wikipage_to_another_wikipage(Al_Pacino,Scarface_Nation).
+wikipage_disambiguates(Scarface_gang,Scarface).
+link_from_a_wikipage_to_another_wikipage(Al_Pacino,Scarface_gang).
+cast_member(Scarface,Al_Pacino).

@@ -1,0 +1,21 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/Software/Fact-Checking/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=starring LPmln/movie_actor/evidence/21movie_actor_filter.db 
+clingo version 4.5.4
+Reading from ...re/Fact-Checking/fact_checking/out.txt ...
+Solving...
+Answer: 1
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr)
+
+
+Probability of Answer 1 : 1.0
+
+
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.263s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.260s

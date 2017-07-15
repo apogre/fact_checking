@@ -1,0 +1,6 @@
+wikipage_disambiguates(en,en1).
+link_from_a_wikipage_to_another_wikipage(am,en).
+wikipage_disambiguates(en2,en1).
+link_from_a_wikipage_to_another_wikipage(am,en2).
+extra(am,en2).
+cast_member(en1,am).

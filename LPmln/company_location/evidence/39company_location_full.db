@@ -1,0 +1,6 @@
+location(Japan,Panasonic).
+contains_administrative_territorial_entity(Tokyo,esperonto).
+foundation_place(Japan,Panasonic).
+capital(Tokyo,Japan).
+capital(Tokyo,esperonto).
+country(esperonto,Panasonic).

@@ -1,0 +1,5 @@
+capital_of(af,ka).
+diplomatic_relation(in,af).
+country(af,ka).
+diplomatic_relation(af,in).
+capital(ka,af).

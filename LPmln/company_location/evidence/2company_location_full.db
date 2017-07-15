@@ -1,0 +1,12 @@
+location(Redmond,Microsoft_Redmond_campus).
+headquarters_location(Redmond,Microsoft_Research).
+headquarters_location(Redmond,Microsoft_Studios).
+headquarters_location(Redmond,Perceptive_Pixel).
+headquarters_location(Redmond,Turn_10_Studios).
+headquarters_location(Redmond,Microsoft_Store).
+location_city(Microsoft_Redmond_campus,Microsoft).
+subsidiary(Microsoft_Studios,Microsoft).
+subsidiary(Perceptive_Pixel,Microsoft).
+subsidiary(Turn_10_Studios,Microsoft).
+subsidiary(Microsoft_Store,Microsoft).
+business_division(Microsoft_Research,Microsoft).

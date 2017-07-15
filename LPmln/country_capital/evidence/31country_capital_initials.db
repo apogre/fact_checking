@@ -1,0 +1,6 @@
+country(ja,ky).
+link_from_a_wikipage_to_another_wikipage(in,ja).
+state_party(ja,ky).
+subdivision_type(li,ky).
+link_from_a_wikipage_to_another_wikipage(in,li).
+diplomatic_relation(in,ja).

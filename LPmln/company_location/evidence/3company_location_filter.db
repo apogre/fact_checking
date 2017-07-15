@@ -1,0 +1,7 @@
+headquarters_location(me,fa).
+location_city(me,oc).
+subsidiary(oc,fa1).
+residence(me,sh).
+operator(fa,fa1).
+owned_by(fa,fa1).
+key_person(sh,fa1).

@@ -1,0 +1,4 @@
+country(fr,ly).
+diplomatic_relation(ja,fr).
+sister_city(yo,ly).
+country(ja,yo).

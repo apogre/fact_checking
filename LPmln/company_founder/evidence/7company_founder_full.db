@@ -1,0 +1,8 @@
+chief_executive_officer(Mark_ZuckerBerg,Facebook_Inc.).
+founded_by(Mark_ZuckerBerg,Facebook_Inc.).
+author(Dustin_Moskovitz,Facebook).
+developer(Dustin_Moskovitz,Facebook).
+operator(Facebook_Inc.,Facebook).
+owned_by(Facebook_Inc.,Facebook).
+owned_by(Mark_ZuckerBerg,Facebook_Inc.).
+significant_person(Mark_ZuckerBerg,Dustin_Moskovitz).

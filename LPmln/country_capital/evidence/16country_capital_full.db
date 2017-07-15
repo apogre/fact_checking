@@ -1,0 +1,5 @@
+capital_of(Afghanistan,Kabul).
+diplomatic_relation(India,Afghanistan).
+country(Afghanistan,Kabul).
+diplomatic_relation(Afghanistan,India).
+capital(Kabul,Afghanistan).

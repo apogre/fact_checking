@@ -1,0 +1,3 @@
+headquarters_location(sa,te).
+location_city(sa,te).
+subsidiary(te,ch).

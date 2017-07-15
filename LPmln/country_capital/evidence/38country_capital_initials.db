@@ -1,0 +1,5 @@
+located_in_the_administrative_territorial_entity(un,ar).
+diplomatic_relation(vi,un).
+country(un,ar).
+diplomatic_relation(un,vi).
+contains_administrative_territorial_entity(ar,un).

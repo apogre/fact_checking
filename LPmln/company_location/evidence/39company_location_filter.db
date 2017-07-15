@@ -1,0 +1,6 @@
+location(ja,pa).
+contains_administrative_territorial_entity(to,es).
+foundation_place(ja,pa).
+capital(to,ja).
+capital(to,es).
+country(es,pa).

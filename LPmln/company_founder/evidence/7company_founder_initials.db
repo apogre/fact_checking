@@ -1,0 +1,8 @@
+chief_executive_officer(ma,fa).
+founded_by(ma,fa).
+author(du,fa1).
+developer(du,fa1).
+operator(fa,fa1).
+owned_by(fa,fa1).
+owned_by(ma,fa).
+significant_person(ma,du).

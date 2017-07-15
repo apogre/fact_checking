@@ -1,0 +1,15 @@
+headquarters_location(Mountain_View,GV).
+headquarters_location(Mountain_View,Google_Affiliate_Network).
+headquarters_location(Mountain_View,X).
+headquarters_location(Mountain_View,AdMob).
+headquarters_location(Mountain_View,Alphabet_Inc.).
+headquarters_location(Mountain_View,Keyhole,_Inc).
+location_city(Mountain_View,Alphabet_Inc.).
+subsidiary(GV,Google).
+subsidiary(Google_Affiliate_Network,Google).
+subsidiary(X,Google).
+subsidiary(AdMob,Google).
+subsidiary(Keyhole,_Inc,Google).
+parent_company(Alphabet_Inc.,Google).
+business_division(X,Google).
+parent_organization(Alphabet_Inc.,Google).

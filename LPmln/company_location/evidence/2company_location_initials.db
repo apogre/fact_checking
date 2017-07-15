@@ -1,0 +1,12 @@
+location(re,mi).
+headquarters_location(re,mi1).
+headquarters_location(re,mi2).
+headquarters_location(re,pe).
+headquarters_location(re,tu).
+headquarters_location(re,mi3).
+location_city(mi,mi4).
+subsidiary(mi2,mi4).
+subsidiary(pe,mi4).
+subsidiary(tu,mi4).
+subsidiary(mi3,mi4).
+business_division(mi1,mi4).

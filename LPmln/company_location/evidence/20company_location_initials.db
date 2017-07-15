@@ -1,0 +1,2 @@
+headquarters_location(os,sa).
+owner_of(sa,pa).

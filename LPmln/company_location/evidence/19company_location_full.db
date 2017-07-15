@@ -1,0 +1,15 @@
+headquarters_location(Tokyo,Mitsui).
+headquarters_location(Minato-ku,Toshiba).
+headquarters_location(Tokyo,Toshiba_Medical_Systems_Corporation).
+located_in_the_administrative_territorial_entity(Tokyo,Minato-ku).
+location_city(Japan,Toshiba).
+location_city(Minato,_Tokyo,Toshiba).
+subsidiary(Toshiba_Medical_Systems_Corporation,Toshiba).
+owned_by(Mitsui,Toshiba).
+contains_administrative_territorial_entity(Tokyo,esperonto).
+prefecture(Tokyo,Minato,_Tokyo).
+founded_by(Tanaka_Hisashige,Toshiba).
+place_of_death(Tokyo,Tanaka_Hisashige).
+capital(Tokyo,Japan).
+capital(Tokyo,esperonto).
+country(esperonto,Toshiba).

@@ -1,0 +1,4 @@
+chairperson(Elon_Musk,SolarCity).
+subsidiary(SolarCity,Tesla).
+known_for(SolarCity,Elon_Musk).
+type(Tesla,SolarCity).

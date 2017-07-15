@@ -1,1 +1,3 @@
+10 starring(A,B) :- cast_member(A,B).
+10 starring(K,T) :- character(B,T), performer(K,B).
 10 starring(A,B) :- director(A,B).

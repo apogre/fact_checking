@@ -1,0 +1,2 @@
+country(au,br).
+diplomatic_relation(me,au).

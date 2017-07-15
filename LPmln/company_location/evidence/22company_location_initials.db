@@ -1,0 +1,2 @@
+headquarters_location(mo,te).
+subsidiary(te,mi).

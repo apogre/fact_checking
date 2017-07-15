@@ -1,0 +1,7 @@
+headquarters_location(Menlo_Park,Facebook_Inc.).
+location_city(Menlo_Park,Oculus_VR).
+subsidiary(Oculus_VR,Facebook).
+residence(Menlo_Park,Sheryl_Sandberg).
+operator(Facebook_Inc.,Facebook).
+owned_by(Facebook_Inc.,Facebook).
+key_person(Sheryl_Sandberg,Facebook).

@@ -1,0 +1,10 @@
+founded_by(Bill_Gates,Microsoft_Research).
+founded_by(Bill_Gates,Microsoft_Studios).
+founded_by(Bill_Gates,Microsoft_Store).
+subsidiary(Microsoft_Studios,Microsoft).
+subsidiary(Microsoft_Store,Microsoft).
+business_division(Microsoft_Research,Microsoft).
+key_person(John_W._Thompson,Microsoft).
+employer(Microsoft,Melinda_Gates).
+spouse(Melinda_Gates,Bill_Gates).
+before(Bill_Gates,John_W._Thompson).

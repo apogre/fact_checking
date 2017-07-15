@@ -1,0 +1,2 @@
+headquarters_location(mo,ne).
+shares_border_with(su,mo).

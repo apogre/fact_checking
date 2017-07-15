@@ -1,0 +1,3 @@
+chairperson(el,so).
+subsidiary(so,te).
+known_for(so,el).

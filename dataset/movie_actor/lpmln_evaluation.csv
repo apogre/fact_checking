@@ -1,30 +1,12 @@
-1,Tom Hanks starred in Forrest Gump.
-2,George Clooney starred in Tomorrowland.
-"starring(ar, be) 0.999954602131",3,Ben Affleck starred in Argo.
-4,Al Pacino starred in Scarface.
-4,Al Pacino starred in Scarface.
-4,Al Pacino starred in Scarface.
-4,Al Pacino starred in Scarface.
-8,Brad Pitt starred in Fight Club.
-8,Brad Pitt starred in Fight Club.
-8,Brad Pitt starred in Fight Club.
-8,Brad Pitt starred in Fight Club.
-8,Brad Pitt starred in Fight Club.
-8,Brad Pitt starred in Fight Club.
-8,Brad Pitt starred in Fight Club.
-15,Scarlett Johansson starred in Lucy.
-16,Julia Roberts starred in Notting Hill.
-17,Amy Adams starred in Enchanted.
-18,Natalie Portman starred in Black Swan.
-19,Charlize Theron starred in Hancock.
-20,Cate Blanchett starred in Carol.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
-21,Kristen Stewart starred in Twilight.
+"starring(fo, to) 0.999954602131","starring(el, fo) 0.999954602131",1,Tom Hanks starred in Forrest Gump.
+"starring(to, ge) 0.999954602131",2,George Clooney starred in Tomorrowland.
+"starring(ar, be) 0.999999997939",3,Ben Affleck starred in Argo.
+"starring(sc1, al) 0.999954602131",4,Al Pacino starred in Scarface.
+"starring(fi, br1) 0.999954602131",8,Brad Pitt starred in Fight Club.
+"starring(lu, sc) 0.999954602131",15,Scarlett Johansson starred in Lucy.
+"starring(no, ju) 0.999954602131",16,Julia Roberts starred in Notting Hill.
+"starring(en1, am) 0.999954602131",17,Amy Adams starred in Enchanted.
+"starring(bl, na) 0.999954602131","starring(be, bl) 0.999954602131",18,Natalie Portman starred in Black Swan.
+"starring(ha, ch) 0.999954602131",19,Charlize Theron starred in Hancock.
+"starring(ca1, ca) 0.999954602131",20,Cate Blanchett starred in Carol.
+"starring(kr, tw) 0.999954602131","starring(kr, th) 0.999954602131","starring(tw, kr) 0.999954602131",21,Kristen Stewart starred in Twilight.

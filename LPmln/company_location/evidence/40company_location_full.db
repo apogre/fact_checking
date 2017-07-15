@@ -1,0 +1,2 @@
+headquarters_location(Osaka,Osaka_Exchange).
+stock_exchange(Osaka_Exchange,Toshiba).

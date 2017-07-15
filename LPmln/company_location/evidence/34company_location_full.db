@@ -1,0 +1,5 @@
+birth_place(Seattle,Arthur_D._Levinson).
+place_of_birth(Seattle,Arthur_D._Levinson).
+chairperson(Arthur_D._Levinson,Apple).
+board_member(Arthur_D._Levinson,Apple).
+key_person(Arthur_D._Levinson,Apple).

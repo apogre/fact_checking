@@ -1,0 +1,8 @@
+founded_by(bi,mi).
+founded_by(bi,mi1).
+founded_by(bi,mi2).
+subsidiary(mi1,mi3).
+subsidiary(mi2,mi3).
+business_division(mi,mi3).
+key_person(jo,mi3).
+employer(mi3,me).

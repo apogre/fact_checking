@@ -1,0 +1,15 @@
+headquarters_location(to,mi).
+headquarters_location(mi1,to2).
+headquarters_location(to,to3).
+located_in_the_administrative_territorial_entity(to,mi1).
+location_city(ja,to2).
+location_city(mi4,to2).
+subsidiary(to3,to2).
+owned_by(mi,to2).
+contains_administrative_territorial_entity(to,es).
+prefecture(to,mi4).
+founded_by(ta,to2).
+place_of_death(to,ta).
+capital(to,ja).
+capital(to,es).
+country(es,to2).

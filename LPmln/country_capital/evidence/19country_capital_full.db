@@ -1,0 +1,13 @@
+capital_of(Spain,Madrid).
+diplomatic_relation(Portugal,Spain).
+shares_border_with(Portugal,Spain).
+country(Spain,Madrid).
+sister_city(Lisbon,Madrid).
+country(Portugal,Lisbon).
+capital_of(Portugal,Lisbon).
+shares_border_with(Spain,Portugal).
+capital(Madrid,Spain).
+diplomatic_relation(Spain,Portugal).
+capital(Lisbon,Portugal).
+sister_city(Madrid,Lisbon).
+link_from_a_wikipage_to_another_wikipage(Madrid,Portugal).

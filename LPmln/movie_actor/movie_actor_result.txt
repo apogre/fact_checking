@@ -1,21 +1,54 @@
 lpmln2cl
 Clingo executed with command:
-clingo /home/Software/Fact-Checking/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=starring LPmln/movie_actor/evidence/21movie_actor_filter.db 
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=starring LPmln/movie_actor/evidence/21movie_actor_filter.db 
 clingo version 4.5.4
-Reading from ...re/Fact-Checking/fact_checking/out.txt ...
+Reading from ...me/apradhan/proj/fact_checking/out.txt ...
 Solving...
 Answer: 1
-character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr)
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr) unsat(0,"10.000000",kr,th) unsat(0,"10.000000",tw,kr) starring(kr,tw)
+Optimization: 20000
+Answer: 2
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr) unsat(0,"10.000000",kr,th) unsat(0,"10.000000",tw,kr) unsat(1,"10.000000",be,kr,tw)
+Optimization: 30000
+Answer: 3
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr) unsat(0,"10.000000",kr,th) starring(tw,kr) starring(kr,tw)
+Optimization: 10000
+Answer: 4
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr) unsat(0,"10.000000",kr,th) starring(tw,kr) unsat(1,"10.000000",be,kr,tw)
+Optimization: 20000
+Answer: 5
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr) starring(kr,th) unsat(0,"10.000000",tw,kr) starring(kr,tw)
+Optimization: 10000
+Answer: 6
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr) starring(kr,th) starring(tw,kr) starring(kr,tw)
+Optimization: 0
+Answer: 7
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr) starring(kr,th) unsat(0,"10.000000",tw,kr) unsat(1,"10.000000",be,kr,tw)
+Optimization: 20000
+Answer: 8
+character(be,tw) performer(kr,be) followed_by(th,tw) cast_member(kr,th) cast_member(tw,kr) starring(kr,th) starring(tw,kr) unsat(1,"10.000000",be,kr,tw)
+Optimization: 10000
 
 
-Probability of Answer 1 : 1.0
+Probability of Answer 1 : 2.06087291924e-09
+Probability of Answer 2 : 9.35634857828e-14
+Probability of Answer 3 : 4.5393746863e-05
+Probability of Answer 4 : 2.06087291924e-09
+Probability of Answer 5 : 4.5393746863e-05
+Probability of Answer 6 : 0.999863812577
+Probability of Answer 7 : 2.06087291924e-09
+Probability of Answer 8 : 4.5393746863e-05
 
 
+starring(kr, tw) 0.999954602131
+starring(kr, th) 0.999954602131
+starring(tw, kr) 0.999954602131
 
 
-SATISFIABLE
+OPTIMUM FOUND
 
-Models       : 1     
+Models       : 8     
+  Optimum    : yes
 Calls        : 1
-Time         : 0.263s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.260s
+Time         : 0.159s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.150s

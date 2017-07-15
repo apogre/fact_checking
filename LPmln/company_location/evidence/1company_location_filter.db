@@ -1,0 +1,15 @@
+headquarters_location(mo,gv).
+headquarters_location(mo,go).
+headquarters_location(mo,x).
+headquarters_location(mo,ad).
+headquarters_location(mo,al).
+headquarters_location(mo,ke).
+location_city(mo,al).
+subsidiary(gv,go1).
+subsidiary(go,go1).
+subsidiary(x,go1).
+subsidiary(ad,go1).
+subsidiary(ke,go1).
+parent_company(al,go1).
+business_division(x,go1).
+parent_organization(al,go1).

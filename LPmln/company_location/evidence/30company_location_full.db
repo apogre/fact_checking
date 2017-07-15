@@ -1,0 +1,2 @@
+headquarters_location(Mountain_View,Netscape).
+shares_border_with(Sunnyvale,Mountain_View).

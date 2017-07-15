@@ -1,0 +1,5 @@
+birth_place(se,ar).
+place_of_birth(se,ar).
+chairperson(ar,ap).
+board_member(ar,ap).
+key_person(ar,ap).

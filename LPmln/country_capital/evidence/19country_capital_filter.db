@@ -1,0 +1,13 @@
+capital_of(sp,ma).
+diplomatic_relation(po,sp).
+shares_border_with(po,sp).
+country(sp,ma).
+sister_city(li,ma).
+country(po,li).
+capital_of(po,li).
+shares_border_with(sp,po).
+capital(ma,sp).
+diplomatic_relation(sp,po).
+capital(li,po).
+sister_city(ma,li).
+link_from_a_wikipage_to_another_wikipage(ma,po).

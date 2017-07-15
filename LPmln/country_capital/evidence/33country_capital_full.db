@@ -1,0 +1,4 @@
+country(Japan,Nagasaki).
+diplomatic_relation(France,Japan).
+sister_city(Vaux-sur-Aure,Nagasaki).
+country(France,Vaux-sur-Aure).

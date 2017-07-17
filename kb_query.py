@@ -22,6 +22,18 @@ suffixes_dbpedia_2 = 'FILTER langMatches( lang(?rl), "EN" ) . ?v rdfs:label ?vl 
 suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) .'
 
 
+def dbpedia_wikidata_mapping():
+    resource_dict = dict()
+    query = "PREFIX owl:<http://www.w3.org/2002/07/owl#> PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> SELECT \
+    ?itemLabel ?WikidataProp WHERE { ?DBpediaProp  owl:equivalentProperty  ?WikidataProp . FILTER ( \
+    CONTAINS ( str(?WikidataProp) , 'wikidata')) . ?DBpediaProp  rdfs:label  ?itemLabel . FILTER (lang(?itemLabel) \
+    = 'en') .} ORDER BY  ?DBpediaProp"
+    result = sparql.query(sparql_dbpedia, query)
+    resources = [sparql.unpack_row(row_result) for row_result in result]
+    for resource in resources:
+        resource_dict[resource[0]] = resource[1].split('/')[-1]
+
+
 def get_leaf_nodes(type_values):
     leaf, root = [x[0] for x in type_values], [x[1] for x in type_values]
     leaves = [le for le in leaf if le not in root]
@@ -335,6 +347,8 @@ def relation_extractor_1hop(kb, id1, id2, label, relations):
         query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {<http://dbpedia.org/resource/'+id2+'> ?p ?v\
          . ?v ?q <http://dbpedia.org/resource/'+id1+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
          FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+ '}')
+    print query
+    print query_back
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]

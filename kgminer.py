@@ -160,7 +160,7 @@ def word2vec_dbpedia(train_ents, resource_v):
         load_dbpedia_word2vec = False
 
     for j in range(0, len(train_ents) - 1, 2):
-        if entity_tracker.get(train_ents[j+1], 0) < 5 and entity_tracker.get(train_ents[j], 0) < 5:
+        if entity_tracker.get(train_ents[j+1], 0) < 4 and entity_tracker.get(train_ents[j], 0) < 4:
             try:
                 sim1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j])
                 sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])

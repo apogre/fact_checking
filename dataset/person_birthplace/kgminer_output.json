@@ -1,1 +1,93 @@
-{"24": {"ontology/birthPlace": "0.588235204745078"}, "26": {"ontology/birthPlace": "0.777777268844764"}, "27": {"ontology/birthPlace": "0.821428416630798"}, "20": {"ontology/birthPlace": "0.500000043445923"}, "23": {"ontology/citizenship": "0.777777740169508"}, "28": {"ontology/birthPlace": "0.677251880628918"}, "1": {"ontology/citizenship": "1.1639694617454e-06"}, "3": {"ontology/birthPlace": "0.549999840336243"}, "5": {"ontology/birthPlace": "0.500006275249525"}, "6": {"ontology/birthPlace": "4.31221775298703e-10"}, "8": {"ontology/birthPlace": "0.474850281110802"}, "11": {"ontology/birthPlace": "0.831461341281024"}, "38": {"ontology/birthPlace": "0.555552148723089"}, "a": "b", "10": {"ontology/birthPlace": "0.500006275249491"}, "13": {"ontology/birthPlace": "0.827585910466407"}, "12": {"ontology/birthPlace": "0.52381300546443"}, "15": {"ontology/birthPlace": "0.519999917009361"}, "17": {"ontology/birthPlace": "0.555556621044941"}, "16": {"ontology/birthPlace": "0.84959647973964"}, "19": {"ontology/birthPlace": "0.835442143738407"}, "32": {"ontology/birthPlace": "0.828714356320736"}, "31": {"ontology/birthPlace": "0.500003637954871"}, "36": {"ontology/birthPlace": "0.838383858001644"}, "35": {"ontology/birthPlace": "0.808510440246738"}, "34": {"ontology/birthPlace": "0.60869558356611"}, "33": {"ontology/associatedMusicalArtist": "0.988029413741884"}}
+{
+  "24": {
+    "ontology/birthPlace": "0.588235204745078"
+  },
+  "26": {
+    "ontology/birthPlace": "0.777777268844764"
+  },
+  "27": {
+    "ontology/birthPlace": "0.821428416630798"
+  },
+  "20": {
+    "ontology/birthPlace": "0.500000043445923"
+  },
+  "23": {
+    "ontology/citizenship": "0.777777740169508"
+  },
+  "28": {
+    "ontology/birthPlace": "0.677251880628918"
+  },
+  "1": {
+    "ontology/citizenship": "1.1639694617454e-06"
+  },
+  "3": {
+    "ontology/birthPlace": "0.549999840336243"
+  },
+  "5": {
+    "ontology/birthPlace": "0.500006275249525"
+  },
+  "6": {
+    "ontology/birthPlace": "4.31221775298703e-10"
+  },
+  "8": {
+    "ontology/birthPlace": "0.474850281110802"
+  },
+  "a": "b",
+  "39": {
+    "ontology/birthPlace": "0.588235130224025"
+  },
+  "12": {
+    "ontology/birthPlace": "0.52381300546443"
+  },
+  "11": {
+    "ontology/birthPlace": "0.831461341281024"
+  },
+  "10": {
+    "ontology/birthPlace": "0.500006275249491"
+  },
+  "13": {
+    "ontology/birthPlace": "0.827585910466407"
+  },
+  "38": {
+    "ontology/birthPlace": "0.555552148723089"
+  },
+  "15": {
+    "ontology/birthPlace": "0.519999917009361"
+  },
+  "14": {
+    "ontology/birthPlace": "0.52173923664865"
+  },
+  "17": {
+    "ontology/birthPlace": "0.555556621044941"
+  },
+  "16": {
+    "ontology/birthPlace": "0.84959647973964"
+  },
+  "19": {
+    "ontology/birthPlace": "0.835442143738407"
+  },
+  "32": {
+    "ontology/birthPlace": "0.828714356320736"
+  },
+  "31": {
+    "ontology/birthPlace": "0.500003637954871"
+  },
+  "30": {
+    "ontology/birthPlace": "0.523809006372931"
+  },
+  "36": {
+    "ontology/birthPlace": "0.838383858001644"
+  },
+  "35": {
+    "ontology/birthPlace": "0.808510440246738"
+  },
+  "34": {
+    "ontology/birthPlace": "0.60869558356611"
+  },
+  "33": {
+    "ontology/associatedMusicalArtist": "0.988029413741884"
+  },
+  "18": {
+    "ontology/birthPlace": "0.988037689653553"
+  }
+}

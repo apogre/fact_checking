@@ -93,6 +93,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                  lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source):
     file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output = load_files(data_source)
     sentence_count = len(sentence_lis)
+    executed_sentence = 0
     kgminer_true_count = 0
     pre_kgminer = 0
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
@@ -102,6 +103,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
     accuracy = []
     stored_query = dict()
     for n, ne in enumerate(named_tags):
+        kgminer_predicate_ranked = dict()
         sentence_id = id_list[n]
         true_label = true_labels[n]
         sentence_check = sentence_lis[n]
@@ -160,7 +162,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
         print "Ranked Predicates"
         print kgminer_predicate_ranked
-        if KGMiner:
+        if KGMiner and kgminer_predicate_ranked:
             kg_output = []
             print "Link Prediction with KG_Miner"
             if sentence_id not in kgminer_output.keys():
@@ -193,7 +195,9 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                     kgminer_predicted_label = 'F'
             if kgminer_predicted_label == 'N' or kgminer_predicted_label == 'A':
                 pre_kgminer += 1
-                sentence_count -= 1
+                executed_sentence -= 1
+            else:
+                executed_sentence += 1
             if true_label == kgminer_predicted_label:
                 kgminer_true_count += 1
             kgminer_evaluation.append([sentence_id, sentence_check, true_label, kgminer_predicted_label])
@@ -203,7 +207,7 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
             if sentence_id not in lpmln_predicate.keys():
                 sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict)
-                relation_ent += relation_ent_0
+                # relation_ent += relation_ent_0
                 print relation_ent
                 if relation_ent:
                     relation_ent += relation_ent_0
@@ -239,8 +243,8 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source)
 
-    kgminer_accuracy = float(kgminer_true_count)/float(sentence_count)
-    accuracy.append([data_source, pre_kgminer, kgminer_true_count, sentence_count, kgminer_accuracy])
+    kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)
+    accuracy.append([data_source, (sentence_count-executed_sentence), kgminer_true_count, executed_sentence, kgminer_accuracy])
     print accuracy
 
     if kgminer_evaluation:

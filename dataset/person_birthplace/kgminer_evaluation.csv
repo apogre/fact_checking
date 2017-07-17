@@ -1,12 +1,8 @@
 1,Elon Musk was born in South Africa.,T,T
-2,Satya Nadella was born in India.,T,N
 3,Bill Gates was born in Seattle.,T,F
-4,Mark Zuckerberg was born in New York.,T,N
 5,Steve Jobs was born in San Fransisco.,T,F
 6,Barack Obama was born in Hawaii.,T,T
-7,Jack Ma was born in China.,T,N
 8,Larry Page was born in Michigan.,T,T
-9,Paul Allen was born in Seattle.,T,T
 10,Steve Wozniak was born in San Jose.,T,F
 11,Tom Hanks was born in Concord.,T,F
 12,George Clooney was born in Lexington.,T,F
@@ -18,24 +14,17 @@
 18,Donald Trump was born in New York City.,T,F
 19,Stephen Cook was born in Buffalo.,T,F
 20,Neil Tyson was born in Manhattan.,T,F
-21,Ernest Rutherford was born in New Zealand.,T,F
-22,Satya Nadella was born in South Africa.,F,N
-23,Elon Musk was born in India.,F,F
+23,Elon Musk was born in Seattle.,F,F
 24,Mark Zuckerberg was born in Seattle.,F,F
-25,Bill Gates was born in New York.,F,N
 26,Barack Obama was born in San Fransisco.,F,F
 27,Steve Jobs was born in Hawaii.,F,F
-28,Larry Page was born in China.,F,F
-29,Jack Ma was born in Michigan.,F,N
-30,Steve Wozniak was born in Seattle.,F,N
+28,Larry Page was born in Michigan.,F,F
+30,Steve Wozniak was born in Seattle.,F,F
 31,Paul Allen was born in San Jose.,F,F
 32,Tom Hanks was born in Lexington.,F,F
 33,George Clooney was born in Concord.,F,F
 34,Ben Affleck was born in Manhattan.,F,F
 35,Al Pacino was born in Berkeley.,F,F
 36,Johnny Depp was born in London.,F,F
-37,Tim Berners-Lee was born in Owensboro.,F,N
 38,Noam Chomsky was born in New York City.,F,F
 39,Donald Trump was born in Philadelphia.,F,F
-40,Stephen Cook was born in Manhattan.,F,N
-41,Neil Tyson was born in Buffalo.,F,N

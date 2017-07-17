@@ -3,6 +3,9 @@
 import sparql
 from config import sparql_dbpedia, sparql_dbpedia_on, sparql_wikidata, sparql_dbpedia_local
 import sys
+import json
+from resource_writer import json_serial
+
 
 prefixes_dbpedia = "PREFIX entity: <http://dbpedia.org/resource/>"
 prefixes_wikidata = "PREFIX entity: <http://www.wikidata.org/entity/>"
@@ -31,7 +34,9 @@ def dbpedia_wikidata_mapping():
     result = sparql.query(sparql_dbpedia, query)
     resources = [sparql.unpack_row(row_result) for row_result in result]
     for resource in resources:
-        resource_dict[resource[0]] = resource[1].split('/')[-1]
+        resource_dict[resource[1].split('/')[-1]] = resource[0]
+    with open('LPmln/predicate_dict.json', 'w') as fp:
+        json.dump(resource_dict, fp, default=json_serial)
 
 
 def get_leaf_nodes(type_values):
@@ -330,13 +335,14 @@ def relation_extractor_2hop(kb, id1, id2, label, relations):
     return relations
 
 
-def relation_extractor_1hop(kb, id1, id2, label, relations):
+def relation_extractor_1hop(kb, id1, id2, label, relations, predicate_dict):
     if kb == 'wikidata':
         sparql_endpoint = sparql_wikidata
-        query = (prefixes_wikidata+' SELECT distinct ?propLabel ?vLabel ?prop1Label WHERE { entity:'+id1+' ?p ?v . \
+        query = (prefixes_wikidata+' SELECT distinct ?propLabel ?vLabel ?prop1Label ?prop ?prop1 WHERE { entity:'+id1+' ?p ?v . \
         ?v ?q entity:'+id2+' . FILTER(entity:'+id1+' != ?v) . FILTER(entity:'+id2+' != ?v) . '+suffixes_wikidata+'}')
 
-        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?vLabel ?prop1Label WHERE { entity:' + id2 + ' \
+        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?vLabel ?prop1Label ?prop ?prop1 '
+                                          'WHERE { entity:' + id2 + ' \
         ?p ?v . ?v ?q entity:' + id1 + ' .  FILTER(entity:'+id1+' != ?v) .  FILTER(entity:'+id2+' != ?v) . ' +\
                       suffixes_wikidata + '}')
     if kb == 'dbpedia':
@@ -355,10 +361,24 @@ def relation_extractor_1hop(kb, id1, id2, label, relations):
     except:
         q1_values = []
         pass
-    if q1_values:
+
+    if kb == 'wikidata':
         for vals in q1_values:
-            if vals[0] != 'Link from a Wikipage to another Wikipage' and vals[2] != 'Link from a Wikipage to another \
-            Wikipage':
+            vals_0 = vals[3].split('/')[-1]
+            vals_2 = vals[4].split('/')[-1]
+            vals_0_equivalent = predicate_dict.get(vals_0,'')
+            vals_2_equivalent = predicate_dict.get(vals_2,'')
+            if vals_0_equivalent:
+                relations.append([kb, vals_0_equivalent, vals[1], label[0]])
+            else:
+                relations.append([kb, vals[0], vals[1], label[0]])
+            if vals_2_equivalent:
+                relations.append([kb, vals_2_equivalent, label[1], vals[1]])
+            else:
+                relations.append([kb, vals[2], label[1], vals[1]])
+    else:
+        for vals in q1_values:
+            if 'Wikipage' not in vals[0] and 'Wikipage' not in vals[2]:
                 relations.append([kb, vals[0], vals[1], label[0]])
                 relations.append([kb, vals[2], label[1], vals[1]])
     try:
@@ -368,8 +388,8 @@ def relation_extractor_1hop(kb, id1, id2, label, relations):
         q1_values_back = []
     if q1_values_back:
         for vals in q1_values_back:
-            if vals[0] != 'Link from a Wikipage to another Wikipage' and vals[2] != 'Link from a Wikipage to another \
-            Wikipage':
+            if 'Wikipage' not in vals[0] and 'Wikipage' not in vals[2]:
+                print vals[0], vals[2]
                 relations.append([kb, vals[0], vals[1], label[1]])
                 relations.append([kb, vals[2], label[0], vals[1]])
     return relations

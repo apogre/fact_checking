@@ -19,10 +19,10 @@ def get_rules(poi, data_source):
         confidence = []
         for row in reader:
             if row['PCA Confidence'] > rule_threshold:
-                print row['Rule']  ,   row['PCA Confidence']
+                print row['Rule'],   row['PCA Confidence']
 
 
-def relation_extractor_triples(resources, triples):
+def relation_extractor_triples(resources, triples, predicate_dict):
     relation = []
     relation_0 = []
     relation_2 = []
@@ -37,8 +37,8 @@ def relation_extractor_triples(resources, triples):
                 wikidata_id2 = item2_v.get('wikidata_id')
                 score1 = item1_v.get('confidence')
                 score2 = item2_v.get('confidence')
-                relation = relation_extractor_1hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation)
-                relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation)
+                relation = relation_extractor_1hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation, predicate_dict)
+                relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, predicate_dict)
                 relation_0 = relation_extractor_0hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0)
                 relation_0 = relation_extractor_0hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0)
                 relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_2)

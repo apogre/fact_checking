@@ -1,5 +1,5 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
-from resources_loader import load_files
+from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import entity_parser
 from kb_query import get_entity_type, get_description, get_kgminer_predicates, resource_extractor
 from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data
@@ -89,7 +89,7 @@ def predicate_ranker(predicates, triple):
     return predicate_KG, predicate_KG_threshold
 
 
-def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
+def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
                  lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source):
     file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output = load_files(data_source)
     sentence_count = len(sentence_lis)
@@ -204,9 +204,15 @@ def fact_checker(sentence_lis, id_list, true_labels, triple_flag, ambiverse_flag
 
         if lpmln:
             print "Executing LPMLN"
+            print load_mappings
+            if load_mappings:
+                print "Loading Nodes & Edges Id"
+                predicate_dict = load_lpmln_resource()
+                load_mappings = False
+
             if sentence_id not in lpmln_predicate.keys():
                 sorted_predicates = []
-                relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict)
+                relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict, predicate_dict)
                 # relation_ent += relation_ent_0
                 print relation_ent
                 if relation_ent:
@@ -295,6 +301,10 @@ if __name__ == "__main__":
                 sentences_list.append(row.get('sentence'))
                 true_label.append(row.get('label'))
                 id_list.append(row.get('id'))
-        fact_checker(sentences_list, id_list, true_label, triple_flag=False, ambiverse_flag=False,\
+        if args.lpmln:
+            load_mappings = True
+        else:
+            load_mappings = False
+        fact_checker(sentences_list, id_list, true_label, load_mappings, triple_flag=False, ambiverse_flag=False,\
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
                      KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False, data_source=args.test_data)

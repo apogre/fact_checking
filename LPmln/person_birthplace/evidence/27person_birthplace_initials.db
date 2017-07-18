@@ -1,0 +1,2 @@
+country_of_citizenship(un,st).
+contains_administrative_territorial_entity(ha,un).

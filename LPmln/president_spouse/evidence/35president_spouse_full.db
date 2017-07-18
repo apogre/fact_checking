@@ -1,0 +1,12 @@
+successor(Lyndon_B._Johnson,John_F_Kennedy).
+successor(Richard_Nixon,Lyndon_B._Johnson).
+predecessor(Richard_Nixon,Lyndon_B._Johnson).
+vice_president(Lyndon_B._Johnson,John_F_Kennedy).
+predecessor(Dwight_D._Eisenhower,John_F_Kennedy).
+vice_president(Richard_Nixon,Dwight_D._Eisenhower).
+predecessor(Lyndon_B._Johnson,Richard_Nixon).
+president(John_F_Kennedy,Lyndon_B._Johnson).
+predecessor(John_F_Kennedy,Lyndon_B._Johnson).
+successor(Lyndon_B._Johnson,Richard_Nixon).
+president(Dwight_D._Eisenhower,Richard_Nixon).
+successor(John_F_Kennedy,Dwight_D._Eisenhower).

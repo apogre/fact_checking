@@ -1,0 +1,2 @@
+country_of_citizenship(United_States_of_America,Steve_Jobs).
+contains_administrative_territorial_entity(Hawaii,United_States_of_America).

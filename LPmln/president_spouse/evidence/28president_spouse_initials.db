@@ -1,0 +1,3 @@
+president(ge,ba).
+president(ge1,ge).
+spouse(ge,ba).

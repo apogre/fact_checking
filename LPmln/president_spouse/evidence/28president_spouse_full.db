@@ -1,0 +1,3 @@
+president(George_H._W._Bush,Barbara_Bush).
+president(Gerald_Ford,George_H._W._Bush).
+spouse(George_H._W._Bush,Barbara_Bush).

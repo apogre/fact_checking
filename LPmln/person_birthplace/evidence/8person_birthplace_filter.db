@@ -1,0 +1,10 @@
+birth_place(ea,la).
+is_part_of(mi,ea).
+alma_mater(un,la).
+state(mi,un).
+place_of_birth(ea1,la).
+located_in_the_administrative_territorial_entity(mi,ea1).
+country_of_citizenship(un2,la).
+contains_administrative_territorial_entity(mi,un2).
+educated_at(ea3,la).
+located_in_the_administrative_territorial_entity(mi,ea3).

@@ -1,0 +1,15 @@
+birth_place(Brightwater,Ernest_Rutherford).
+country(New_Zealand,Brightwater).
+educated_at(Nelson_College,Ernest_Rutherford).
+country(New_Zealand,Nelson_College).
+educated_at(University_of_Canterbury,Ernest_Rutherford).
+country(New_Zealand,University_of_Canterbury).
+country_of_citizenship(United_Kingdom,Ernest_Rutherford).
+diplomatic_relation(New_Zealand,United_Kingdom).
+doctoral_student(Norman_Alexander,Ernest_Rutherford).
+country_of_citizenship(New_Zealand,Norman_Alexander).
+doctoral_advisor(Alexander_William_Bickerton,Ernest_Rutherford).
+place_of_birth(New_Zealand,Alexander_William_Bickerton).
+place_of_birth(Nelson,Ernest_Rutherford).
+country(New_Zealand,Nelson).
+country_of_citizenship(Ernest_Rutherford,New_Zealand).

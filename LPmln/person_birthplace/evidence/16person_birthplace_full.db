@@ -1,0 +1,12 @@
+birth_place(England,Tim_Berners-Lee).
+capital(London,England).
+award(Fellow_of_the_Royal_Society,Tim_Berners-Lee).
+location(London,Fellow_of_the_Royal_Society).
+award(Fellow_of_the_Royal_Academy_of_Engineering,Tim_Berners-Lee).
+location(London,Fellow_of_the_Royal_Academy_of_Engineering).
+employer(Open_Data_Institute,Tim_Berners-Lee).
+headquarters_location(London,Open_Data_Institute).
+member_of(Royal_Society,Tim_Berners-Lee).
+headquarters_location(London,Royal_Society).
+country_of_citizenship(United_Kingdom,Tim_Berners-Lee).
+capital(London,United_Kingdom).

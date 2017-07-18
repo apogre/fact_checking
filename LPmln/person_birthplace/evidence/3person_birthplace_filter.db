@@ -1,0 +1,6 @@
+parent(ma,bi).
+birth_place(se,ma).
+death_place(se,ma).
+mother(ma,bi).
+place_of_birth(se,ma).
+place_of_death(se,ma).

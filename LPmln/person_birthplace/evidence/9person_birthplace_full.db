@@ -1,0 +1,4 @@
+occupation(Seattle_Seahawks,Paul_Allen).
+location_city(Seattle,Seattle_Seahawks).
+occupation(Vulcan_Inc.,Paul_Allen).
+headquarter(Seattle,Vulcan_Inc.).

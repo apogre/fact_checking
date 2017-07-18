@@ -1,0 +1,13 @@
+before(Dick_Costolo,Jack_Dorsey).
+employer(Twitter,Dick_Costolo).
+occupation(Twitter,Dick_Costolo).
+title(Twitter,Dick_Costolo).
+after(Evan_Williams_(Internet_entrepreneur),Jack_Dorsey).
+board(Twitter,Evan_Williams_(Internet_entrepreneur)).
+title(Twitter,Evan_Williams_(Internet_entrepreneur)).
+known(Twitter,Evan_Williams_(Internet_entrepreneur)).
+founded_by(Evan_Williams_(Internet_entrepreneur),Twitter).
+before(Jack_Dorsey,Evan_Williams_(Internet_entrepreneur)).
+operator(Twitter,_Inc.,Twitter).
+founded_by(Jack_Dorsey,Twitter,_Inc.).
+chief_executive_officer(Jack_Dorsey,Twitter,_Inc.).

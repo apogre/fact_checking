@@ -1,0 +1,15 @@
+birth_place(br,er).
+country(ne,br).
+educated_at(ne1,er).
+country(ne,ne1).
+educated_at(un,er).
+country(ne,un).
+country_of_citizenship(un2,er).
+diplomatic_relation(ne,un2).
+doctoral_student(no,er).
+country_of_citizenship(ne,no).
+doctoral_advisor(al,er).
+place_of_birth(ne,al).
+place_of_birth(ne3,er).
+country(ne,ne3).
+country_of_citizenship(er,ne).

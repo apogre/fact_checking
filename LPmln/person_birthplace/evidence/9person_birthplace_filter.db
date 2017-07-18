@@ -1,0 +1,4 @@
+occupation(se,pa).
+location_city(se1,se).
+occupation(vu,pa).
+headquarter(se1,vu).

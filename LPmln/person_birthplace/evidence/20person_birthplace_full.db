@@ -1,0 +1,8 @@
+birth_place(New_York_City,Neil_Tyson).
+is_part_of(Manhattan,New_York_City).
+educated_at(Columbia_University,Neil_Tyson).
+located_in_the_administrative_territorial_entity(Manhattan,Columbia_University).
+employer(Hayden_Planetarium,Neil_Tyson).
+located_in_the_administrative_territorial_entity(Manhattan,Hayden_Planetarium).
+place_of_birth(New_York_City,Neil_Tyson).
+contains_administrative_territorial_entity(Manhattan,New_York_City).

@@ -1,0 +1,4 @@
+president(Gerald_Ford,George_H_W_Bush).
+spouse(Betty_Ford,Gerald_Ford).
+successor(Rosalynn_Carter,Betty_Ford).
+after(George_H_W_Bush,Rosalynn_Carter).

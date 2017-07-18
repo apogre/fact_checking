@@ -1,0 +1,6 @@
+birth_place(ne,al).
+is_part_of(ma,ne).
+educated_at(ac,al).
+located_in_the_administrative_territorial_entity(ma,ac).
+educated_at(hb,al).
+located_in_the_administrative_territorial_entity(ma,hb).

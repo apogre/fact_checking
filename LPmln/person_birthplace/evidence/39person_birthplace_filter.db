@@ -1,0 +1,8 @@
+alma_mater(un,do).
+city(ph,un).
+educated_at(th,do).
+headquarters_location(ph,th).
+located_in_the_administrative_territorial_entity(ph,th).
+capital_of(un1,ph).
+head_of_government(do,un1).
+country(un1,ph).

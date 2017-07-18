@@ -1,0 +1,11 @@
+birth_place(Honolulu,Barack_Obama).
+is_part_of(Hawaii,Honolulu).
+parent(Ann_Dunham,Barack_Obama).
+resting_place(Hawaii,Ann_Dunham).
+birth_place(Kapiolani_Medical_Center_for_Women_and_Children,Barack_Obama).
+state(Hawaii,Kapiolani_Medical_Center_for_Women_and_Children).
+country(United_States,Hawaii).
+leader(Barack_Obama,United_States).
+citizenship(United_States_of_America,Barack_Obama).
+contains_administrative_territorial_entity(Hawaii,United_States_of_America).
+capital_of(Hawaii,Honolulu).

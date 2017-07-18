@@ -1,4 +1,4 @@
-chairperson(el,so).
-subsidiary(so,te).
 known_for(so,el).
 type(te,so).
+subsidiary(so,te).
+chairperson(el,so).

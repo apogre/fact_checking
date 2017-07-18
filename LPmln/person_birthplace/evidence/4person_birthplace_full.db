@@ -1,0 +1,8 @@
+home_town(Dobbs_Ferry,_New_York,Mark_Zuckerberg).
+is_part_of(New_York,Dobbs_Ferry,_New_York).
+birth_place(White_Plains,_New_York,Mark_Zuckerberg).
+is_part_of(New_York,White_Plains,_New_York).
+country_of_citizenship(United_States_of_America,Mark_Zuckerberg).
+contains_administrative_territorial_entity(New_York,United_States_of_America).
+educated_at(Ardsley_High_School,Mark_Zuckerberg).
+located_in_the_administrative_territorial_entity(New_York,Ardsley_High_School).

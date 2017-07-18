@@ -1,0 +1,8 @@
+alma_mater(University_of_Pennsylvania,Donald_Trump).
+city(Philadelphia,University_of_Pennsylvania).
+educated_at(The_Wharton_School,Donald_Trump).
+headquarters_location(Philadelphia,The_Wharton_School).
+located_in_the_administrative_territorial_entity(Philadelphia,The_Wharton_School).
+capital_of(United_States_of_America,Philadelphia).
+head_of_government(Donald_Trump,United_States_of_America).
+country(United_States_of_America,Philadelphia).

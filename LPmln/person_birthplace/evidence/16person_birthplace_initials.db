@@ -1,0 +1,12 @@
+birth_place(en,ti).
+capital(lo,en).
+award(fe,ti).
+location(lo,fe).
+award(fe1,ti).
+location(lo,fe1).
+employer(op,ti).
+headquarters_location(lo,op).
+member_of(ro,ti).
+headquarters_location(lo,ro).
+country_of_citizenship(un,ti).
+capital(lo,un).

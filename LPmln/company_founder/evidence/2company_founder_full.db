@@ -1,0 +1,5 @@
+before(Gil_Amelio,Steve_Jobs).
+known_for(Apple,Gil_Amelio).
+title(Apple,Gil_Amelio).
+after(Tim_Cook,Steve_Jobs).
+employer(Apple,Tim_Cook).

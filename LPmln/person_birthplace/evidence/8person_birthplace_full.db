@@ -1,0 +1,10 @@
+birth_place(East_Lansing,_Michigan,Larry_Page).
+is_part_of(Michigan,East_Lansing,_Michigan).
+alma_mater(University_of_Michigan,Larry_Page).
+state(Michigan,University_of_Michigan).
+place_of_birth(East_Lansing,Larry_Page).
+located_in_the_administrative_territorial_entity(Michigan,East_Lansing).
+country_of_citizenship(United_States_of_America,Larry_Page).
+contains_administrative_territorial_entity(Michigan,United_States_of_America).
+educated_at(East_Lansing_High_School,Larry_Page).
+located_in_the_administrative_territorial_entity(Michigan,East_Lansing_High_School).

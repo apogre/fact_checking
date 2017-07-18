@@ -16,6 +16,7 @@ is_part_of(Montgomery_County,_Alabama,Montgomery).
 state(Alabama,Montgomery_County,_Alabama).
 legislature(Alabama_Legislature,Alabama).
 location(Montgomery,Alabama_Legislature).
+<<<<<<< Updated upstream
 located_next_to_body_of_water(Alabama_River,Montgomery).
 settlement(Alabama,Alabama_River).
 settlement(Montgomery_County,Montgomery).
@@ -24,5 +25,15 @@ country(United_States_of_America,Montgomery).
 contains_administrative_territorial_entity(Alabama,United_States_of_America).
 contains_administrative_territorial_entity(Montgomery_County,Alabama).
 capital(Montgomery,Montgomery_County).
+=======
+country(United_States_of_America,Montgomery).
+contains_administrative_territorial_entity(Alabama,United_States_of_America).
+located_next_to_body_of_water(Alabama_River,Montgomery).
+settlement(Alabama,Alabama_River).
+settlement(Montgomery_County,Montgomery).
+settlement(Alabama,Montgomery_County).
+>>>>>>> Stashed changes
 taoiseach(Kay_Ivey,Alabama).
 work_location(Montgomery,Kay_Ivey).
+contains_administrative_territorial_entity(Montgomery_County,Alabama).
+capital(Montgomery,Montgomery_County).

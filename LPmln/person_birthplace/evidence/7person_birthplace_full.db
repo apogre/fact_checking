@@ -1,0 +1,10 @@
+birth_place(Zhejiang,Jack_Ma).
+capital(Hangzhou,Zhejiang).
+occupation(Alibaba_Group,Jack_Ma).
+foundation_place(Hangzhou,Alibaba_Group).
+location_city(Hangzhou,Alibaba_Group).
+alma_mater(Hangzhou_Normal_University,Jack_Ma).
+city(Hangzhou,Hangzhou_Normal_University).
+creator(Alibaba_Group,Jack_Ma).
+location_of_formation(Hangzhou,Alibaba_Group).
+headquarters_location(Hangzhou,Alibaba_Group).

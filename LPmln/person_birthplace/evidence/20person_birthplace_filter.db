@@ -1,0 +1,8 @@
+birth_place(ne,ne1).
+is_part_of(ma,ne).
+educated_at(co,ne1).
+located_in_the_administrative_territorial_entity(ma,co).
+employer(ha,ne1).
+located_in_the_administrative_territorial_entity(ma,ha).
+place_of_birth(ne,ne1).
+contains_administrative_territorial_entity(ma,ne).

@@ -1,0 +1,14 @@
+birth_place(Pretoria,Elon_Musk).
+country(South_Africa,Pretoria).
+relative(Lyndon_Rive,Elon_Musk).
+citizenship(South_Africa,Lyndon_Rive).
+education(Pretoria_Boys_High_School,Elon_Musk).
+country(South_Africa,Pretoria_Boys_High_School).
+citizenship(Canada,Elon_Musk).
+diplomatic_relation(South_Africa,Canada).
+capital_of(South_Africa,Pretoria).
+mother(Maye_Musk,Elon_Musk).
+citizenship(South_Africa,Maye_Musk).
+sibling(Kimbal_Musk,Elon_Musk).
+citizenship(South_Africa,Kimbal_Musk).
+country_of_citizenship(Elon_Musk,South_Africa).

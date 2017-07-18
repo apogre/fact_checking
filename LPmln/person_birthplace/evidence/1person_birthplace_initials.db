@@ -1,0 +1,14 @@
+birth_place(pr,el).
+country(so,pr).
+relative(ly,el).
+citizenship(so,ly).
+education(pr1,el).
+country(so,pr1).
+citizenship(ca,el).
+diplomatic_relation(so,ca).
+capital_of(so,pr).
+mother(ma,el).
+citizenship(so,ma).
+sibling(ki,el).
+citizenship(so,ki).
+country_of_citizenship(el,so).

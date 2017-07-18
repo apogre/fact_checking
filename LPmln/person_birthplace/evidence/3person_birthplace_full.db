@@ -1,0 +1,6 @@
+parent(Mary_Maxwell_Gates,Bill_Gates).
+birth_place(Seattle,Mary_Maxwell_Gates).
+death_place(Seattle,Mary_Maxwell_Gates).
+mother(Mary_Maxwell_Gates,Bill_Gates).
+place_of_birth(Seattle,Mary_Maxwell_Gates).
+place_of_death(Seattle,Mary_Maxwell_Gates).

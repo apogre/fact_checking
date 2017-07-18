@@ -1,0 +1,10 @@
+birth_place(zh,ja).
+capital(ha,zh).
+occupation(al,ja).
+foundation_place(ha,al).
+location_city(ha,al).
+alma_mater(ha1,ja).
+city(ha,ha1).
+creator(al,ja).
+location_of_formation(ha,al).
+headquarters_location(ha,al).

@@ -1,0 +1,12 @@
+successor(ly,jo).
+successor(ri,ly).
+predecessor(ri,ly).
+vice_president(ly,jo).
+predecessor(dw,jo).
+vice_president(ri,dw).
+predecessor(ly,ri).
+president(jo,ly).
+predecessor(jo,ly).
+successor(ly,ri).
+president(dw,ri).
+successor(jo,dw).

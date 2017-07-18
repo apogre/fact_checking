@@ -1,0 +1,11 @@
+birth_place(ho,ba).
+is_part_of(ha,ho).
+parent(an,ba).
+resting_place(ha,an).
+birth_place(ka,ba).
+state(ha,ka).
+country(un,ha).
+leader(ba,un).
+citizenship(un1,ba).
+contains_administrative_territorial_entity(ha,un1).
+capital_of(ha,ho).

@@ -1,0 +1,8 @@
+home_town(do,ma).
+is_part_of(ne,do).
+birth_place(wh,ma).
+is_part_of(ne,wh).
+country_of_citizenship(un,ma).
+contains_administrative_territorial_entity(ne,un).
+educated_at(ar,ma).
+located_in_the_administrative_territorial_entity(ne,ar).

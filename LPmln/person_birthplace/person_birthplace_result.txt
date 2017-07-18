@@ -1,0 +1,22 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c q=birth_place LPmln/person_birthplace/evidence/39person_birthplace_filter.db 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_checking/out.txt ...
+Solving...
+Answer: 1
+alma_mater(un,do) city(ph,un) educated_at(th,do) headquarters_location(ph,th) located_in_the_administrative_territorial_entity(ph,th) capital_of(un1,ph) head_of_government(do,un1) country(un1,ph) birth_place(ph,do)
+
+
+Probability of Answer 1 : 1.0
+
+
+birth_place(ph, do) 1.0
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.204s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.190s

@@ -1,20 +1,20 @@
-7781 is_in_the_administrative_territorial_entity(B,A)   :- capital(A,B).
-4271 contains_administrative_territorial_entity(A,B) :- capital(A,B).
-339 capital(B,F) :-  headquarter(A,F)  , jurisdiction(A,B).
-339 capital(B,F)  :- location(A,F), jurisdiction(A,B).
-333 assembly(A,F) :- capital(B,F),  assembly(A,B).
-306 isPartOf(B,A)  :- capital(A,B).
-306 capital(A,B) :- is_part_of(B,A)  :- .
-247 capital(F,B) :-  country(A,F), garrison(A,B).
-199 country(B,A) :- capital(A,B).
-83 capital(A,B) :- largestCity(A,B).
-83 capital(A,B) :- largest_city(A,B).
-79 capital(F,B) :- federalState(A,F),  administrativeDistrict(A,B).
-75 capital(F,B)  :-  country(A,F) , federalState(A,B).
-46 capital(F,B) :-  state(A,F), municipality(A,B).
-43 capital(F,B) :-  country(A,F) , event_location(A,B).
-41 capital(E,B) :-  state(A,E) , countySeat(A,B).
-38 capital(E,B)  :- district(A,E) ,  municipality(A,B).
-34 capital(A,F) :-  place_of_birth(B,F)  , head_of_state(A,B).
-33 capital(F,B)  :- region(A,F),  municipality(A,B).
-30 capital(E,B)  :- is_in_the_administrative_territorial_entity(A,E), located_in_place(A,B).
+52 is_in_the_administrative_territorial_entity(B,A)   :- capital(A,B).
+29 contains_administrative_territorial_entity(A,B) :- capital(A,B).
+2.3 capital(B,F) :-  headquarter(A,F)  , jurisdiction(A,B).
+2.3 capital(B,F)  :- location(A,F), jurisdiction(A,B).
+2.2 assembly(A,F) :- capital(B,F),  assembly(A,B).
+2 isPartOf(B,A)  :- capital(A,B).
+2 capital(A,B) :- is_part_of(B,A)  :- .
+1.6 capital(F,B) :-  country(A,F), garrison(A,B).
+1.3 country(B,A) :- capital(A,B).
+0.5 capital(A,B) :- largestCity(A,B).
+0.5 capital(A,B) :- largest_city(A,B).
+0.5 capital(F,B) :- federalState(A,F),  administrativeDistrict(A,B).
+0.3 capital(F,B)  :-  country(A,F) , federalState(A,B).
+0.3 capital(F,B) :-  state(A,F), municipality(A,B).
+0.2 capital(F,B) :-  country(A,F) , event_location(A,B).
+0.2 capital(E,B) :-  state(A,E) , countySeat(A,B).
+0.2 capital(E,B)  :- district(A,E) ,  municipality(A,B).
+0.2 capital(A,F) :-  place_of_birth(B,F)  , head_of_state(A,B).
+0.2 capital(F,B)  :- region(A,F),  municipality(A,B).
+0.2 capital(E,B)  :- is_in_the_administrative_territorial_entity(A,E), located_in_place(A,B).

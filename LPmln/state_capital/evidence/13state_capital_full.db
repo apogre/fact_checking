@@ -1,0 +1,16 @@
+is_part_of(Pulaski_County,_Arkansas,Little_Rock).
+state(Arkansas,Pulaski_County,_Arkansas).
+legislature(Arkansas_General_Assembly,Arkansas).
+location(Little_Rock,Arkansas_General_Assembly).
+lowerhouse(Arkansas_House_of_Representatives,Arkansas).
+location(Little_Rock,Arkansas_House_of_Representatives).
+upperhouse(Arkansas_Senate,Arkansas).
+location(Little_Rock,Arkansas_Senate).
+located_in_the_administrative_territorial_entity(Pulaski_County,Little_Rock).
+located_in_the_administrative_territorial_entity(Arkansas,Pulaski_County).
+country(United_States_of_America,Little_Rock).
+contains_administrative_territorial_entity(Arkansas,United_States_of_America).
+contains_administrative_territorial_entity(Pulaski_County,Arkansas).
+capital(Little_Rock,Pulaski_County).
+head_of_government(Asa_Hutchinson,Arkansas).
+work_location(Little_Rock,Asa_Hutchinson).

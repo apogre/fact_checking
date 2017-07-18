@@ -1,0 +1,9 @@
+is_part_of(pi,tu).
+state(ar,pi).
+located_in_the_administrative_territorial_entity(pi1,tu).
+located_in_the_administrative_territorial_entity(ar,pi1).
+country(un,tu).
+contains_administrative_territorial_entity(ar,un).
+contains_administrative_territorial_entity(pi1,ar).
+capital(tu,pi1).
+contains_administrative_territorial_entity(tu,pi1).

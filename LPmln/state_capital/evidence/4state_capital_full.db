@@ -1,0 +1,16 @@
+south(Chesterfield_County,_Virginia,Richmond).
+state(Virginia,Chesterfield_County,_Virginia).
+east(Henrico_County,_Virginia,Richmond).
+state(Virginia,Henrico_County,_Virginia).
+north(Henrico_County,_Virginia,Richmond).
+west(Henrico_County,_Virginia,Richmond).
+lowerhouse(Virginia_House_of_Delegates,Virginia).
+location(Richmond,Virginia_House_of_Delegates).
+senator(Tim_Kaine,Virginia).
+residence(Richmond,Tim_Kaine).
+country(United_States_of_America,Richmond).
+contains_administrative_territorial_entity(Virginia,United_States_of_America).
+shares_border_with(Henrico_County,Richmond).
+located_in_the_administrative_territorial_entity(Virginia,Henrico_County).
+head_of_government(Terry_McAuliffe,Virginia).
+work_location(Richmond,Terry_McAuliffe).

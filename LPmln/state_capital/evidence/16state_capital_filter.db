@@ -1,0 +1,8 @@
+country(un,de).
+contains_administrative_territorial_entity(ar,un).
+located_in_the_administrative_territorial_entity(co,de).
+shares_border_with(ar,co).
+capital_of(co,de).
+shares_border_with(co,ar).
+capital(de,co).
+contains_administrative_territorial_entity(de,co).

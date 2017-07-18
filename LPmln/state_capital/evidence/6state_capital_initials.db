@@ -1,0 +1,15 @@
+is_part_of(da,ma).
+state(wi,da).
+senator(ta,wi).
+birth_place(ma,ta).
+lowerhouse(wi1,wi).
+location(ma,wi1).
+legislature(wi2,wi).
+location(ma,wi2).
+located_in_the_administrative_territorial_entity(da3,ma).
+located_in_the_administrative_territorial_entity(wi,da3).
+capital_of(da3,ma).
+country(un,ma).
+contains_administrative_territorial_entity(wi,un).
+head_of_government(sc,wi).
+work_location(ma,sc).

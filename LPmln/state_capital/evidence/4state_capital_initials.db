@@ -1,0 +1,16 @@
+south(ch,ri).
+state(vi,ch).
+east(he,ri).
+state(vi,he).
+north(he,ri).
+west(he,ri).
+lowerhouse(vi1,vi).
+location(ri,vi1).
+senator(ti,vi).
+residence(ri,ti).
+country(un,ri).
+contains_administrative_territorial_entity(vi,un).
+shares_border_with(he2,ri).
+located_in_the_administrative_territorial_entity(vi,he2).
+head_of_government(te,vi).
+work_location(ri,te).

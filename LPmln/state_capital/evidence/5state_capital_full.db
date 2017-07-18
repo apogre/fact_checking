@@ -1,0 +1,16 @@
+is_part_of(Santa_Fe_County,_New_Mexico,Santa_Fe).
+state(New_Mexico,Santa_Fe_County,_New_Mexico).
+leader_name(Javier_Gonzales,Santa_Fe).
+residence(New_Mexico,Javier_Gonzales).
+lowerhouse(New_Mexico_House_of_Representatives,New_Mexico).
+location(Santa_Fe,New_Mexico_House_of_Representatives).
+upperhouse(New_Mexico_Senate,New_Mexico).
+location(Santa_Fe,New_Mexico_Senate).
+legislature(New_Mexico_Legislature,New_Mexico).
+location(Santa_Fe,New_Mexico_Legislature).
+located_in_the_administrative_territorial_entity(Santa_Fe_County,Santa_Fe).
+located_in_the_administrative_territorial_entity(New_Mexico,Santa_Fe_County).
+country(United_States_of_America,Santa_Fe).
+contains_administrative_territorial_entity(New_Mexico,United_States_of_America).
+head_of_government(Susana_Martinez,New_Mexico).
+work_location(Santa_Fe,Susana_Martinez).

@@ -1,0 +1,2 @@
+country(United_States_of_America,Montgomery).
+contains_administrative_territorial_entity(Texas,United_States_of_America).

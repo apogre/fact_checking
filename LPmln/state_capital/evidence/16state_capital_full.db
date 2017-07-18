@@ -1,0 +1,8 @@
+country(United_States_of_America,Denver).
+contains_administrative_territorial_entity(Arizona,United_States_of_America).
+located_in_the_administrative_territorial_entity(Colorado,Denver).
+shares_border_with(Arizona,Colorado).
+capital_of(Colorado,Denver).
+shares_border_with(Colorado,Arizona).
+capital(Denver,Colorado).
+contains_administrative_territorial_entity(Denver,Colorado).

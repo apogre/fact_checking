@@ -1,0 +1,2 @@
+country(United_States_of_America,Little_Rock).
+contains_administrative_territorial_entity(Connecticut,United_States_of_America).

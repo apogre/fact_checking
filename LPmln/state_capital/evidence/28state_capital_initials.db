@@ -1,0 +1,6 @@
+country(un,sa).
+contains_administrative_territorial_entity(ar,un).
+capital_of(ca,sa).
+shares_border_with(ar,ca).
+shares_border_with(ca,ar).
+capital(sa,ca).

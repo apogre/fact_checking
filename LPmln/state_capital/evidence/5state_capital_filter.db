@@ -1,0 +1,16 @@
+is_part_of(sa,sa1).
+state(ne,sa).
+leader_name(ja,sa1).
+residence(ne,ja).
+lowerhouse(ne2,ne).
+location(sa1,ne2).
+upperhouse(ne3,ne).
+location(sa1,ne3).
+legislature(ne4,ne).
+location(sa1,ne4).
+located_in_the_administrative_territorial_entity(sa5,sa1).
+located_in_the_administrative_territorial_entity(ne,sa5).
+country(un,sa1).
+contains_administrative_territorial_entity(ne,un).
+head_of_government(su,ne).
+work_location(sa1,su).

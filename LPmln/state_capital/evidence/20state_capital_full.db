@@ -1,0 +1,2 @@
+country(United_States_of_America,Richmond).
+contains_administrative_territorial_entity(Utah,United_States_of_America).

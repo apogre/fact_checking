@@ -1,0 +1,15 @@
+is_part_of(Dane_County,_Wisconsin,Madison).
+state(Wisconsin,Dane_County,_Wisconsin).
+senator(Tammy_Baldwin,Wisconsin).
+birth_place(Madison,Tammy_Baldwin).
+lowerhouse(Wisconsin_State_Assembly,Wisconsin).
+location(Madison,Wisconsin_State_Assembly).
+legislature(Wisconsin_Legislature,Wisconsin).
+location(Madison,Wisconsin_Legislature).
+located_in_the_administrative_territorial_entity(Dane_County,Madison).
+located_in_the_administrative_territorial_entity(Wisconsin,Dane_County).
+capital_of(Dane_County,Madison).
+country(United_States_of_America,Madison).
+contains_administrative_territorial_entity(Wisconsin,United_States_of_America).
+head_of_government(Scott_Walker,Wisconsin).
+work_location(Madison,Scott_Walker).

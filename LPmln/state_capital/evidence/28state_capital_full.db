@@ -1,0 +1,6 @@
+country(United_States_of_America,Sacramento).
+contains_administrative_territorial_entity(Arizona,United_States_of_America).
+capital_of(California,Sacramento).
+shares_border_with(Arizona,California).
+shares_border_with(California,Arizona).
+capital(Sacramento,California).

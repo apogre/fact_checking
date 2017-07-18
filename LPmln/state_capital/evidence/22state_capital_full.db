@@ -1,0 +1,2 @@
+country(United_States_of_America,Madison).
+contains_administrative_territorial_entity(New_Mexico,United_States_of_America).

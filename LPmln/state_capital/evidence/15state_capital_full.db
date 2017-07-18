@@ -1,0 +1,9 @@
+is_part_of(Pima_County,_Arizona,Tucson).
+state(Arizona,Pima_County,_Arizona).
+located_in_the_administrative_territorial_entity(Pima_County,Tucson).
+located_in_the_administrative_territorial_entity(Arizona,Pima_County).
+country(United_States_of_America,Tucson).
+contains_administrative_territorial_entity(Arizona,United_States_of_America).
+contains_administrative_territorial_entity(Pima_County,Arizona).
+capital(Tucson,Pima_County).
+contains_administrative_territorial_entity(Tucson,Pima_County).

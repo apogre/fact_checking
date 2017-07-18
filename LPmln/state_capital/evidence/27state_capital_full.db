@@ -1,0 +1,2 @@
+country(United_States_of_America,Phoenix).
+contains_administrative_territorial_entity(Alaska,United_States_of_America).

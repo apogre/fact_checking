@@ -1,0 +1,2 @@
+country(United_States_of_America,Sprinfield).
+contains_administrative_territorial_entity(Illinois,United_States_of_America).

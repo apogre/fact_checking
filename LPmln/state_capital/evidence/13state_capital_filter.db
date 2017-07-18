@@ -1,0 +1,16 @@
+is_part_of(pu,li).
+state(ar,pu).
+legislature(ar1,ar).
+location(li,ar1).
+lowerhouse(ar2,ar).
+location(li,ar2).
+upperhouse(ar3,ar).
+location(li,ar3).
+located_in_the_administrative_territorial_entity(pu4,li).
+located_in_the_administrative_territorial_entity(ar,pu4).
+country(un,li).
+contains_administrative_territorial_entity(ar,un).
+contains_administrative_territorial_entity(pu4,ar).
+capital(li,pu4).
+head_of_government(as,ar).
+work_location(li,as).

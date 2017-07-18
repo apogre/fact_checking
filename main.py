@@ -213,10 +213,9 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             if sentence_id not in lpmln_predicate.keys():
                 sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict, predicate_dict)
-                # relation_ent += relation_ent_0
                 print relation_ent
                 if relation_ent:
-                    relation_ent += relation_ent_0
+                    # relation_ent += relation_ent_0
                     unique_predicates = [evidence[1] for evidence in relation_ent]
                     unique_predicates = list(set(unique_predicates))
                     print unique_predicates

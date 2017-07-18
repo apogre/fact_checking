@@ -18,14 +18,14 @@ id,sentence,label
 17,"Gerald Ford is married to Betty Ford.",T
 18,"George H W Bush is married to Barbara Bush.",T
 19,"Abraham Lincoln was married to Mary Todd.",T
+25,"Harry Truman was married to Bess Truman.",T
+26,"William Taft was married to Helen Taft.",T
+27,"Bill Gates is married to Melinda Gates.",T
 20,"Bill Clinton is married to Laura Bush.",F
 21,"George W Bush is married to Hillary Clinton.",F
 22,"Donald Trump is married to Nancy Reagan.",F
 23,"Ronald Reagan is married to Melania Trump.",F
 24,"Jimmy Carter is married to Nancy Reagan.",F
-25,"Harry Truman was married to Bess Truman.",T
-26,"William Taft was married to Helen Taft.",T
-27,"Bill Gates is married to Melinda Gates.",T
 28,"Gerald Ford is married to Barbara Bush.",F
 29,"George H W Bush is married to Betty Ford.",F
 30,"Harry Truman was married to Mary Todd.",F

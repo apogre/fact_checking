@@ -236,8 +236,8 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 if sorted_predicates:
                     evidence_writer(sorted_predicates, sentence_id, data_source)
                     # get_rules(predicate_of_interest)
-                    # probability = inference(sentence_id, data_source)
-                    probability = [1]
+                    probability = inference(sentence_id, data_source)
+                    # probability = [1]
                     print probability
                 else:
                     probability = 'Evidence Not Found'

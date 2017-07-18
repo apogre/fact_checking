@@ -135,7 +135,6 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         print "=================="
         pprint.pprint(resource)
         # get poi
-        print resource, triple_dict
         type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
         print type_ontology, type_resource, type_ontology_full, type_resource_full
         if sentence_id not in possible_kgminer_predicate.keys():
@@ -160,42 +159,44 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                     kgminer_predicate_flag = True
         else:
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
-        print "Ranked Predicates"
+        # print "Ranked Predicates"
         print kgminer_predicate_ranked
-        if KGMiner and kgminer_predicate_ranked:
-            kg_output = []
-            print "Link Prediction with KG_Miner"
-            if sentence_id not in kgminer_output.keys():
-                if kgminer_predicate_ranked.values():
-                    # print kgminer_predicate_ranked
-                    kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
-                                                      triple_dict, resource, sentence_id, data_source)
-                    if kgminer_status:
-                        predicate_result = invoke_kgminer()
-                        if predicate_result:
-                            kg_output = predicate_result.values()
-                            kgminer_output[sentence_id] = predicate_result
-                            kgminer_output_flag = True
+        if KGMiner:
+            if kgminer_predicate_ranked:
+                kg_output = []
+                print "Link Prediction with KG_Miner"
+                if sentence_id not in kgminer_output.keys():
+                    if kgminer_predicate_ranked.values():
+                        # print kgminer_predicate_ranked
+                        kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
+                                                          triple_dict, resource, sentence_id, data_source)
+                        if kgminer_status:
+                            predicate_result = invoke_kgminer()
+                            if predicate_result:
+                                kg_output = predicate_result.values()
+                                kgminer_output[sentence_id] = predicate_result
+                                kgminer_output_flag = True
+                            else:
+                                print "kgminer failed"
                         else:
-                            print "kgminer failed"
+                            kg_output = [2]
                     else:
-                        kg_output = [2]
+                        kgminer_predicted_label = 'A'
                 else:
-                    kgminer_predicted_label = 'A'
+                    print kgminer_output[sentence_id]
+                    kg_output = kgminer_output[sentence_id].values()
+                if kg_output:
+                    kgminer_score = float(kg_output[0])
+                    if kgminer_score < 0.5:
+                        kgminer_predicted_label = 'T'
+                    elif kgminer_score == 2:
+                        kgminer_predicted_label = 'N'
+                    else:
+                        kgminer_predicted_label = 'F'
             else:
-                print kgminer_output[sentence_id]
-                kg_output = kgminer_output[sentence_id].values()
-            if kg_output:
-                kgminer_score = float(kg_output[0])
-                if kgminer_score < 0.5:
-                    kgminer_predicted_label = 'T'
-                elif kgminer_score == 2:
-                    kgminer_predicted_label = 'N'
-                else:
-                    kgminer_predicted_label = 'F'
+                kgminer_predicted_label = 'N'
             if kgminer_predicted_label == 'N' or kgminer_predicted_label == 'A':
                 pre_kgminer += 1
-                executed_sentence -= 1
             else:
                 executed_sentence += 1
             if true_label == kgminer_predicted_label:
@@ -204,9 +205,8 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
 
         if lpmln:
             print "Executing LPMLN"
-            print load_mappings
             if load_mappings:
-                print "Loading Nodes & Edges Id"
+                print "Loading DBpedia to Wikidata Mappings"
                 predicate_dict = load_lpmln_resource()
                 load_mappings = False
 
@@ -238,20 +238,22 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                     evidence_writer(sorted_predicates, sentence_id, data_source)
                     # get_rules(predicate_of_interest)
                     probability = inference(sentence_id, data_source)
-                    probability.extend([sentence_id, sentence_check])
+                    print probability
+                else:
+                    probability = 'Evidence Not Found'
             else:
                 probability = lpmln_output[sentence_id]
-                probability.extend([sentence_id, sentence_check])
-            lpmln_evaluation.append(probability)
+            lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
             print probability
 
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source)
 
-    kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)
-    accuracy.append([data_source, (sentence_count-executed_sentence), kgminer_true_count, executed_sentence, kgminer_accuracy])
-    print accuracy
+    if KGMiner:
+        kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)
+        accuracy.append([data_source, (sentence_count-executed_sentence), kgminer_true_count, executed_sentence, kgminer_accuracy])
+        print accuracy
 
     if kgminer_evaluation:
         print kgminer_evaluation

@@ -91,9 +91,8 @@ def get_description(entity_type):
 
 def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-    { ?url2 <http://dbpedia.org/' + poi + '> ?url1 } . ' + q_part + \
+    { ?url1 <http://dbpedia.org/' + poi + '> ?url2 } . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
-    print q_ts
     result = sparql.query(sparql_dbpedia, q_ts)
     training_set = [sparql.unpack_row(row_result) for row_result in result]
     if not training_set:
@@ -154,7 +153,6 @@ def get_entity_type(resources, triples):
                          <http://dbpedia.org/resource/'+key+'> rdf:type ?t }. ?t rdfs:subClassOf ?t1 . \
                          FILTER(STRSTARTS(STR(?t), "http://dbpedia.org/ontology") || STRSTARTS(STR(?t), \
                          "http://dbpedia.org/resource")).}'
-			print q_type
                         result = sparql.query(sparql_dbpedia, q_type)
                         type_values = [sparql.unpack_row(row_result) for row_result in result]
                         if not type_values:
@@ -205,7 +203,6 @@ def get_kgminer_predicates(type_set, triple_dict):
                             q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . \
                             ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . ?url1 ?p ?url2 . \
                             FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/")).} limit 80'
-                        print q_pp
                         # try:
                         if q_pp:
                             result = sparql.query(sparql_dbpedia_on, q_pp)
@@ -353,8 +350,6 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, predicate_dict):
         query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {<http://dbpedia.org/resource/'+id2+'> ?p ?v\
          . ?v ?q <http://dbpedia.org/resource/'+id1+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
          FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+ '}')
-    print query
-    print query_back
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -386,10 +381,23 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, predicate_dict):
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
     except:
         q1_values_back = []
-    if q1_values_back:
+    if kb == 'wikidata':
+        for vals in q1_values_back:
+            vals_0 = vals[3].split('/')[-1]
+            vals_2 = vals[4].split('/')[-1]
+            vals_0_equivalent = predicate_dict.get(vals_0,'')
+            vals_2_equivalent = predicate_dict.get(vals_2,'')
+            if vals_0_equivalent:
+                relations.append([kb, vals_0_equivalent, vals[1], label[1]])
+            else:
+                relations.append([kb, vals[0], vals[1], label[1]])
+            if vals_2_equivalent:
+                relations.append([kb, vals_2_equivalent, label[0], vals[1]])
+            else:
+                relations.append([kb, vals[2], label[0], vals[1]])
+    else:
         for vals in q1_values_back:
             if 'Wikipage' not in vals[0] and 'Wikipage' not in vals[2]:
-                print vals[0], vals[2]
                 relations.append([kb, vals[0], vals[1], label[1]])
                 relations.append([kb, vals[2], label[0], vals[1]])
     return relations

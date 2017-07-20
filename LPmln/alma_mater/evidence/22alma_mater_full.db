@@ -1,0 +1,8 @@
+doctoral_student(Max_von_Laue,Max_Planck).
+educated_at(Ludwig_Maximilian_University_of_Munich,Max_von_Laue).
+student(Gustav_Ludwig_Hertz,Max_Planck).
+educated_at(Ludwig_Maximilian_University_of_Munich,Gustav_Ludwig_Hertz).
+father(Wilhelm_von_Planck,Max_Planck).
+employer(Ludwig_Maximilian_University_of_Munich,Wilhelm_von_Planck).
+doctoral_student(Gustav_Ludwig_Hertz,Max_Planck).
+employer(Ludwig_Maximilian_University_of_Munich,Max_von_Laue).

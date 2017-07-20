@@ -1,0 +1,2 @@
+education(Harvard_College,Bill_Gates).
+is_part_of(Harvard_University,Harvard_College).

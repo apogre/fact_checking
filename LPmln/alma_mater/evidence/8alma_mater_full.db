@@ -1,0 +1,10 @@
+relative(Randi_Zuckerberg,Mark_ZuckerBerg).
+alma_mater(Harvard_University,Randi_Zuckerberg).
+spouse(Priscilla_Chan_(philanthropist),Mark_ZuckerBerg).
+alma_mater(Harvard_University,Priscilla_Chan_(philanthropist)).
+spouse(Priscilla_Chan,Mark_ZuckerBerg).
+educated_at(Harvard_University,Priscilla_Chan).
+sibling(Randi_Zuckerberg,Mark_ZuckerBerg).
+educated_at(Harvard_University,Randi_Zuckerberg).
+significant_person(Dustin_Moskovitz,Mark_ZuckerBerg).
+educated_at(Harvard_University,Dustin_Moskovitz).

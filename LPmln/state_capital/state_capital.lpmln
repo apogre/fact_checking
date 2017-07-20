@@ -3,11 +3,9 @@
 2.3 capital(B,F) :-  headquarter(A,F)  , jurisdiction(A,B).
 2.3 capital(B,F)  :- location(A,F), jurisdiction(A,B).
 2.2 assembly(A,F) :- capital(B,F),  assembly(A,B).
-2 isPartOf(B,A)  :- capital(A,B).
-2 capital(A,B) :- is_part_of(B,A)  :- .
+2 capital(A,B) :- is_part_of(B,A).
 1.6 capital(F,B) :-  country(A,F), garrison(A,B).
 1.3 country(B,A) :- capital(A,B).
-0.5 capital(A,B) :- largestCity(A,B).
 0.5 capital(A,B) :- largest_city(A,B).
 0.5 capital(F,B) :- federalState(A,F),  administrativeDistrict(A,B).
 0.3 capital(F,B)  :-  country(A,F) , federalState(A,B).

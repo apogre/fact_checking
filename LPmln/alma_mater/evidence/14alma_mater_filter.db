@@ -1,0 +1,5 @@
+spouse(ca,no).
+education(un,ca).
+student_of(ze,no).
+educated_at(un,ze).
+educated_at(un,ca).

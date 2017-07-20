@@ -1,0 +1,6 @@
+doctoral_advisor(Hao_Wang_(academic),Stephen_Cook).
+alma_mater(Harvard_University,Hao_Wang_(academic)).
+work_institution(Harvard_University,Hao_Wang_(academic)).
+doctoral_advisor(Hao_Wang,Stephen_Cook).
+educated_at(Harvard_University,Hao_Wang).
+employer(Harvard_University,Hao_Wang).

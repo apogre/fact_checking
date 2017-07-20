@@ -1,0 +1,15 @@
+influenced(we,ni).
+workplace(un,we).
+doctoral_advisor(ch,ni).
+employer(un,ch).
+child(aa,ni).
+employer(un,aa).
+sibling(ha,ni).
+educated_at(un,ha).
+student_of(ch,ni).
+educated_at(un,aa).
+father(ch1,ni).
+employer(un,ch1).
+child(ha2,ni).
+employer(un,ha2).
+employer(un,ha).

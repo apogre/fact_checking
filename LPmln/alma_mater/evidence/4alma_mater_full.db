@@ -1,0 +1,4 @@
+president(Barack_Obama,Michelle_Obama).
+alma_mater(Harvard_Law_School,Barack_Obama).
+spouse(Barack_Obama,Michelle_Obama).
+educated_at(Harvard_Law_School,Barack_Obama).

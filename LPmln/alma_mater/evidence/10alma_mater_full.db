@@ -1,0 +1,9 @@
+alma_mater(Trinity_Hall,_Cambridge,Stephen_Hawking).
+sister_college(University_College,Trinity_Hall,_Cambridge).
+is_part_of(University_of_Oxford,University_College).
+caption(Stephen_Hawking,University_of_Oxford).
+child(Lucy_Hawking,Stephen_Hawking).
+educated_at(University_College,Lucy_Hawking).
+sister_college(Oxford,Trinity_Hall,_Cambridge).
+is_part_of(University_of_Oxford,Oxford).
+educated_at(Oxford,Lucy_Hawking).

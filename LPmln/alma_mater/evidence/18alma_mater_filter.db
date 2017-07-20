@@ -1,0 +1,17 @@
+predecessor(ch,er).
+alma_mater(un,ch).
+successor(fr,er).
+work_institution(un,fr).
+doctoral_student(he,er).
+educated_at(un,he).
+doctoral_student(ra,er).
+educated_at(un,ra).
+doctoral_student(c.,er).
+educated_at(un,c.).
+doctoral_advisor(j.,er).
+educated_at(un,j.).
+doctoral_student(yu,er).
+educated_at(un,yu).
+doctoral_student(py,er).
+educated_at(un,py).
+employer(un,j.).

@@ -1,0 +1,5 @@
+student(al,dm).
+employer(sa,al).
+student(q1,dm).
+educated_at(sa,q1).
+educated_at(sa,al).

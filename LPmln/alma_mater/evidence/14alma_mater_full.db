@@ -1,0 +1,5 @@
+spouse(Carol_Chomsky,Noam_Chomsky).
+education(University_of_Pennsylvania,Carol_Chomsky).
+student_of(Zellig_Harris,Noam_Chomsky).
+educated_at(University_of_Pennsylvania,Zellig_Harris).
+educated_at(University_of_Pennsylvania,Carol_Chomsky).

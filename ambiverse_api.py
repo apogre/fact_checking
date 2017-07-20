@@ -1,7 +1,9 @@
 import requests
 import json
+import spotlight
+from kb_query import dbpedia_wikidata_equivalent
 
-url = "https://api.ambiverse.com/v1/entitylinking/analyze"
+query_url = "https://api.ambiverse.com/v1/entitylinking/analyze"
 
 # payload = "{\"text\" : \"Who is the CEO of Apple?\"}"
 headers = {
@@ -11,37 +13,56 @@ headers = {
     }
 
 
-def entity_parser(text):
+def ambiverse_entity_parser(text):
     print "ambiverse query"
     payload = '{\"text\" : \"'+text+'\", "language":"en", "coherentDocument": true}'
-    response = requests.request("POST", url, data=payload, headers=headers)
+    response = requests.request("POST", query_url, data=payload, headers=headers)
     json_data = json.loads(response.text)
     entities = json_data['matches']
 
     resource = dict()
     for entity in entities:
-        if entity.get('entity',{}):
+        if entity.get('entity', {}):
             try:
-                url1 = entity['entity']['url'].split('/')[-1]
+                url = entity['entity']['url'].split('/')[-1]
                 wikidata_url = entity['entity']['id'].split('/')[-1]
                 confidence = entity['entity']['confidence']
             except:
                 print entity
-                url1 = ''
+                url = ''
                 confidence = 0
                 wikidata_url = ''
-            if '%' in url1:
-                url1 = url1.replace('%20', '_')
-                url1 = url1.replace('%2C', ',')
-                url1 = url1.replace('%28', '(')
-                url1 = url1.replace('%29', ')')
-                url1 = url1.replace('%21', '!')
-            resource[entity.get('text')] = {"dbpedia_id": url1, "confidence": confidence, "wikidata_id": wikidata_url}
+            if '%' in url:
+                url = url.replace('%20', '_')
+                url = url.replace('%2C', ',')
+                url = url.replace('%28', '(')
+                url = url.replace('%29', ')')
+                url = url.replace('%21', '!')
+            resource[entity.get('text')] = {"dbpedia_id": url, "confidence": confidence, "wikidata_id": wikidata_url}
     return resource
+
+
+def spotlight_entity_parser(text):
+    responses = spotlight.annotate('http://deep-reasoning.cidse.dhcp.asu.edu:2222/rest/annotate',text)
+    resource = dict()
+    for response in responses:
+        json_data = response
+        url = json_data.get('URI','')
+        confidence = json_data.get('similarityScore', 0)
+        wikidata_url = dbpedia_wikidata_equivalent(url)
+        wikidata_url = wikidata_url[0][0].split('/')[-1]
+        dbpedia_url = url.split('/')[-1]
+        resource[json_data.get('surfaceForm','')] = {'dbpedia_id': dbpedia_url,'wikidata_id':wikidata_url, 'confidence':confidence}
+    return resource
+
 
 
 if __name__ == '__main__':
     ambiverse_resources = {'a': 'b'}
-    resource = entity_parser("Coursera is located in Mountain View.")
+    # resource = ambiverse_entity_parser("Jonas Salk attended Clark University.")
+    # print resource
+    # print(len(resource))
+    resource = spotlight_entity_parser('Jonas Salk attended Clark University.')
     print resource
+    print(len(resource))
 

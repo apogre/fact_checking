@@ -25,6 +25,15 @@ suffixes_dbpedia_2 = 'FILTER langMatches( lang(?rl), "EN" ) . ?v rdfs:label ?vl 
 suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) .'
 
 
+def dbpedia_wikidata_equivalent(dbpedia_url):
+    query = 'PREFIX owl:<http://www.w3.org/2002/07/owl#> PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> SELECT \
+    ?WikidataProp WHERE { <'+dbpedia_url+'>  owl:sameAs ?WikidataProp . FILTER (CONTAINS \
+    (str(?WikidataProp) , "wikidata.org")) .} '
+    result = sparql.query(sparql_dbpedia, query)
+    resources = [sparql.unpack_row(row_result) for row_result in result]
+    return resources
+
+
 def dbpedia_wikidata_mapping():
     resource_dict = dict()
     query = "PREFIX owl:<http://www.w3.org/2002/07/owl#> PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> SELECT \
@@ -53,6 +62,7 @@ def resource_extractor(entity):
     result = []
     query = 'PREFIX dbo: <http://dbpedia.org/ontology/> SELECT distinct ?uri ?label WHERE { ?uri rdfs:label ?label . \
     FILTER langMatches( lang(?label), "EN" ) . ?label bif:contains "' + entity + '" . }'
+    print query
     try:
         result = sparql.query(sparql_dbpedia, query)
     except:
@@ -91,8 +101,10 @@ def get_description(entity_type):
 
 def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-    { ?url2 <http://dbpedia.org/' + poi + '> ?url1 } . ' + q_part + \
+    { ?url1 <http://dbpedia.org/' + poi + '> ?url2 } . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
+
+    print q_ts
     result = sparql.query(sparql_dbpedia, q_ts)
     training_set = [sparql.unpack_row(row_result) for row_result in result]
     if not training_set:

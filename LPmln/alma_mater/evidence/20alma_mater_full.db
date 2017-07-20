@@ -1,0 +1,5 @@
+student(Alexander_Baykov,Dmitri_Mendeleev).
+employer(Saint_Petersburg_State_University,Alexander_Baykov).
+student(Q15081712,Dmitri_Mendeleev).
+educated_at(Saint_Petersburg_State_University,Q15081712).
+educated_at(Saint_Petersburg_State_University,Alexander_Baykov).

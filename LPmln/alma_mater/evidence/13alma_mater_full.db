@@ -1,0 +1,2 @@
+alma_mater(The_Queen's_College,_Oxford,Tim_Berners-Lee).
+is_part_of(University_of_Oxford,The_Queen's_College,_Oxford).

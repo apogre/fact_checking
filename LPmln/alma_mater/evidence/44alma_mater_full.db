@@ -1,0 +1,5 @@
+child(Aviva_Chomsky,Noam_Chomsky).
+employer(Harvard_University,Aviva_Chomsky).
+spouse(Carol_Chomsky,Noam_Chomsky).
+educated_at(Harvard_University,Carol_Chomsky).
+employer(Harvard_University,Carol_Chomsky).

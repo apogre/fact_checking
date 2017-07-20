@@ -88,7 +88,7 @@ def triples_extractor(sentence, named_entities):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--sentence", default='Coursera is located in Mountain View.')
+    parser.add_argument("-s", "--sentence", default='Priscilla Chan attended Harvard University.')
     args = parser.parse_args()
     sentence_lis = [args.sentence]
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]

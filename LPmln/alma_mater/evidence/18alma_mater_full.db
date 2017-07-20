@@ -1,0 +1,17 @@
+predecessor(Charles_Scott_Sherrington,Ernest_Rutherford).
+alma_mater(University_of_Cambridge,Charles_Scott_Sherrington).
+successor(Frederick_Gowland_Hopkins,Ernest_Rutherford).
+work_institution(University_of_Cambridge,Frederick_Gowland_Hopkins).
+doctoral_student(Henry_DeWolf_Smyth,Ernest_Rutherford).
+educated_at(University_of_Cambridge,Henry_DeWolf_Smyth).
+doctoral_student(Rafi_Muhammad_Chaudhry,Ernest_Rutherford).
+educated_at(University_of_Cambridge,Rafi_Muhammad_Chaudhry).
+doctoral_student(C._F._Powell,Ernest_Rutherford).
+educated_at(University_of_Cambridge,C._F._Powell).
+doctoral_advisor(J._J._Thomson,Ernest_Rutherford).
+educated_at(University_of_Cambridge,J._J._Thomson).
+doctoral_student(Yulii_Borisovich_Khariton,Ernest_Rutherford).
+educated_at(University_of_Cambridge,Yulii_Borisovich_Khariton).
+doctoral_student(Pyotr_Kapitsa,Ernest_Rutherford).
+educated_at(University_of_Cambridge,Pyotr_Kapitsa).
+employer(University_of_Cambridge,J._J._Thomson).

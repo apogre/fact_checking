@@ -1,0 +1,15 @@
+influenced(Werner_Heisenberg,Niels_Bohr).
+workplace(University_of_Copenhagen,Werner_Heisenberg).
+doctoral_advisor(Christian_Christiansen,Niels_Bohr).
+employer(University_of_Copenhagen,Christian_Christiansen).
+child(Aage_Niels_Bohr,Niels_Bohr).
+employer(University_of_Copenhagen,Aage_Niels_Bohr).
+sibling(Harald_Bohr,Niels_Bohr).
+educated_at(University_of_Copenhagen,Harald_Bohr).
+student_of(Christian_Christiansen,Niels_Bohr).
+educated_at(University_of_Copenhagen,Aage_Niels_Bohr).
+father(Christian_Bohr,Niels_Bohr).
+employer(University_of_Copenhagen,Christian_Bohr).
+child(Hans_Bohr,Niels_Bohr).
+employer(University_of_Copenhagen,Hans_Bohr).
+employer(University_of_Copenhagen,Harald_Bohr).

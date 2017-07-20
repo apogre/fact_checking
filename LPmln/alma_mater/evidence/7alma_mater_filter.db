@@ -1,0 +1,4 @@
+education(th,el).
+is_part_of(un,th).
+education(un1,el).
+is_part_of(un,un1).

@@ -1,0 +1,6 @@
+doctoral_advisor(ha,st).
+alma_mater(ha1,ha).
+work_institution(ha1,ha).
+doctoral_advisor(ha2,st).
+educated_at(ha1,ha2).
+employer(ha1,ha2).

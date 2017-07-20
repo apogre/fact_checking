@@ -1,0 +1,9 @@
+alma_mater(tr,st).
+sister_college(un,tr).
+is_part_of(un1,un).
+caption(st,un1).
+child(lu,st).
+educated_at(un,lu).
+sister_college(ox,tr).
+is_part_of(un1,ox).
+educated_at(ox,lu).

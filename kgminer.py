@@ -57,7 +57,6 @@ def write_to_kgminer(poi, q_part, resource_v, sentence_id, data_source):
 
 def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_threshold_ranked, triple_dict, resource_ids,\
                      sentence_id, data_source):
-    print resource_ids
     global load_encodings, nodes_id, edge_id
     if load_encodings:
         print "Loading Nodes & Edges Id"
@@ -166,7 +165,7 @@ def word2vec_dbpedia(train_ents, resource_v):
                 sim2 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j + 1])
                 # print resource_v[0], train_ents[j], sim1
                 # print resource_v[1], train_ents[j+1], sim2
-                if sim1 > 0.20 and sim2 > 0.20:
+                if sim1 > 0.15 and sim2 > 0.15:
                     sim1_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[1], 'DBPEDIA_ID/' + train_ents[j])
                     sim2_1 = model_wv.similarity('DBPEDIA_ID/' + resource_v[0], 'DBPEDIA_ID/' + train_ents[j + 1])
                     if sim1_1 > sim1 and sim2_1 > sim2:

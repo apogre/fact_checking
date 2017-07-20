@@ -1,0 +1,13 @@
+child(Donald_Trump_Jr.,Donald_Trump).
+alma_mater(University_of_Pennsylvania,Donald_Trump_Jr.).
+child(Tiffany_Trump,Donald_Trump).
+alma_mater(University_of_Pennsylvania,Tiffany_Trump).
+child(Ivanka_Trump,Donald_Trump).
+alma_mater(University_of_Pennsylvania,Ivanka_Trump).
+educated_at(University_of_Pennsylvania,Tiffany_Trump).
+educated_at(University_of_Pennsylvania,Ivanka_Trump).
+educated_at(The_Wharton_School,Donald_Trump).
+part_of(University_of_Pennsylvania,The_Wharton_School).
+educated_at(University_of_Pennsylvania,Donald_Trump_Jr.).
+country(United_States_of_America,University_of_Pennsylvania).
+head_of_government(Donald_Trump,United_States_of_America).

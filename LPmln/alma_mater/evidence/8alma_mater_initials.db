@@ -1,0 +1,10 @@
+relative(ra,ma).
+alma_mater(ha,ra).
+spouse(pr,ma).
+alma_mater(ha,pr).
+spouse(pr1,ma).
+educated_at(ha,pr1).
+sibling(ra,ma).
+educated_at(ha,ra).
+significant_person(du,ma).
+educated_at(ha,du).

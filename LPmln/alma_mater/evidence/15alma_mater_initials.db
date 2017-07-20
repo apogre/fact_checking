@@ -1,0 +1,13 @@
+child(do,do1).
+alma_mater(un,do).
+child(ti,do1).
+alma_mater(un,ti).
+child(iv,do1).
+alma_mater(un,iv).
+educated_at(un,ti).
+educated_at(un,iv).
+educated_at(th,do1).
+part_of(un,th).
+educated_at(un,do).
+country(un2,un).
+head_of_government(do1,un2).

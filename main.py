@@ -1,6 +1,6 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files, load_lpmln_resource
-from ambiverse_api import entity_parser
+from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
 from kb_query import get_entity_type, get_description, get_kgminer_predicates, resource_extractor
 from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data
 from kgminer import get_training_set, invoke_kgminer
@@ -122,15 +122,18 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         if sentence_id in ambiverse_resources.keys():
             resource = ambiverse_resources[sentence_id]
         else:
-            resource = entity_parser(sentence_lis[n])
+            resource = ambiverse_entity_parser(sentence_check)
             ambiverse_resources[sentence_id] = resource
             ambiverse_flag = True
+        print len(resource)
         if len(resource) < 2:
-            for entity_pair in triple_dict.values():
-                for entity in entity_pair[0]:
-                    if entity not in resource.keys():
-                        resource_ids = resource_extractor(entity)
-                        resource[entity] = resource_ids
+            # for entity_pair in triple_dict.values():
+            #     print "here"
+            #     for entity in entity_pair[0]:
+            #         if entity not in resource.keys():
+            #             resource_ids = resource_extractor(entity)
+            #             resource[entity] = resource_ids
+            resource = spotlight_entity_parser(sentence_check)
         print "Resource Extractor"
         print "=================="
         pprint.pprint(resource)
@@ -214,6 +217,8 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict, predicate_dict)
                 print relation_ent
+                print relation_ent_0
+                print relation_ent_2
                 if relation_ent:
                     # relation_ent += relation_ent_0
                     unique_predicates = [evidence[1] for evidence in relation_ent]
@@ -236,8 +241,8 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 if sorted_predicates:
                     evidence_writer(sorted_predicates, sentence_id, data_source)
                     # get_rules(predicate_of_interest)
-                    probability = inference(sentence_id, data_source)
-                    # probability = [1]
+                    # probability = inference(sentence_id, data_source)
+                    probability = [1]
                     print probability
                 else:
                     probability = 'Evidence Not Found'

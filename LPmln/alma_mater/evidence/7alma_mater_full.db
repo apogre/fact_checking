@@ -1,0 +1,4 @@
+education(The_Wharton_School,Elon_Musk).
+is_part_of(University_of_Pennsylvania,The_Wharton_School).
+education(University_of_Pennsylvania_School_of_Arts_and_Sciences,Elon_Musk).
+is_part_of(University_of_Pennsylvania,University_of_Pennsylvania_School_of_Arts_and_Sciences).

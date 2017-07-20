@@ -1,0 +1,8 @@
+doctoral_student(ma,ma1).
+educated_at(lu,ma).
+student(gu,ma1).
+educated_at(lu,gu).
+father(wi,ma1).
+employer(lu,wi).
+doctoral_student(gu,ma1).
+employer(lu,ma).

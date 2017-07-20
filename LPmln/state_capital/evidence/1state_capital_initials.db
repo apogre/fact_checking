@@ -16,7 +16,6 @@ is_part_of(mo2,mo1).
 state(al,mo2).
 legislature(al3,al).
 location(mo1,al3).
-<<<<<<< Updated upstream
 located_next_to_body_of_water(al4,mo1).
 settlement(al,al4).
 settlement(mo5,mo1).
@@ -27,15 +26,3 @@ contains_administrative_territorial_entity(mo5,al).
 capital(mo1,mo5).
 taoiseach(ka,al).
 work_location(mo1,ka).
-=======
-country(un,mo1).
-contains_administrative_territorial_entity(al,un).
-located_next_to_body_of_water(al4,mo1).
-settlement(al,al4).
-settlement(mo5,mo1).
-settlement(al,mo5).
-taoiseach(ka,al).
-work_location(mo1,ka).
-contains_administrative_territorial_entity(mo5,al).
-capital(mo1,mo5).
->>>>>>> Stashed changes

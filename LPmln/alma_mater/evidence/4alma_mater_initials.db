@@ -1,0 +1,4 @@
+president(ba,mi).
+alma_mater(ha,ba).
+spouse(ba,mi).
+educated_at(ha,ba).

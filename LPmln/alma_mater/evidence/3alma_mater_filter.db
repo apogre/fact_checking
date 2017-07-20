@@ -1,0 +1,3 @@
+spouse(mi,ba).
+alma_mater(ha,mi).
+educated_at(ha,mi).

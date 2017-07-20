@@ -1,0 +1,3 @@
+10 capital(R,V) :- head_of_government(T,V),work_location(R,T).
+29 capital(J,B) :- lowerhouse(A,B),location(J,A).
+29 capital(J,B) :- upperhouse(A,B),location(J,A).

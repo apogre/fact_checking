@@ -1,0 +1,5 @@
+child(av,no).
+employer(ha,av).
+spouse(ca,no).
+educated_at(ha,ca).
+employer(ha,ca).

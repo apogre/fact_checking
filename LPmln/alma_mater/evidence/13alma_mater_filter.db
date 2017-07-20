@@ -1,0 +1,2 @@
+alma_mater(th,ti).
+is_part_of(un,th).

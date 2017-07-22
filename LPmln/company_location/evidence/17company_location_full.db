@@ -1,12 +1,8 @@
-location(Minato,_Tokyo,Sony).
 headquarters_location(Tokyo,Sony_Interactive_Entertainment).
 located_in_the_administrative_territorial_entity(Tokyo,Shinagawa-ku).
 location_of_formation(Tokyo,Sony_Interactive_Entertainment).
-location_of_formation(Tokyo,Aiwa).
 location_of_formation(Shinagawa-ku,Sony).
 subsidiary(Sony_Interactive_Entertainment,Sony).
-contains_administrative_territorial_entity(Tokyo,esperonto).
-prefecture(Tokyo,Minato,_Tokyo).
 founded_by(Akio_Morita,Sony).
 founded_by(Masaru_Ibuka,Sony).
 foundation_place(Japan,Sony).
@@ -14,7 +10,5 @@ birth_place(Tokyo,Kazuo_Hirai).
 death_place(Tokyo,Akio_Morita).
 death_place(Tokyo,Masaru_Ibuka).
 capital(Tokyo,Japan).
-capital(Tokyo,esperonto).
 key_person(Kazuo_Hirai,Sony).
-follows(Aiwa,Sony).
-country(esperonto,Sony).
+

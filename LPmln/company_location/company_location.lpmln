@@ -1,4 +1,4 @@
-10 location(X,Y) :-  subsidiary(Z,Y) , location(X,Z) .
 10 location(X,Y) :-  subsidiary(Z,Y) , headquarters_location(X,Z) .
 10 location(X,Y) :-  subsidiary(Z,Y) , location_city(X,Z) .
-
+10 location(X,Y) :-  business_division(Z,Y) , headquarters_location(X,Z) .
+10 location(X,Y) :-  owner_of(Z,Y) , headquarters_location(X,Z) .

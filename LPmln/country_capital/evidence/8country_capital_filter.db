@@ -5,10 +5,10 @@ birth_place(ca1,ab).
 legislature(ho,eg).
 location(ca1,ho).
 located_in_the_administrative_territorial_entity(ca,ca1).
-country(eg,ca).
 located_in_the_administrative_territorial_entity(eg,ca).
 head_of_government(ab2,ca1).
 country_of_citizenship(eg,ab2).
+country(eg,ca).
 located_next_to_body_of_water(ni,ca1).
 country(eg,ni).
 contains_administrative_territorial_entity(ca,eg).
@@ -17,8 +17,3 @@ head_of_state(ab,eg).
 place_of_birth(ca1,ab).
 member_of(ar,eg).
 headquarters_location(ca1,ar).
-country(ca1,eg).
-capital_of(ca1,eg).
-capital(eg,ca1).
-link_from_a_wikipage_to_another_wikipage(ca1,eg).
-link_from_a_wikipage_to_another_wikipage(eg,ca1).

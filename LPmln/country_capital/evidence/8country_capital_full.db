@@ -5,10 +5,10 @@ birth_place(Cairo,Abdel_Fattah_el-Sisi).
 legislature(House_of_Representatives_(Egypt),Egypt).
 location(Cairo,House_of_Representatives_(Egypt)).
 located_in_the_administrative_territorial_entity(Cairo_Governorate,Cairo).
-country(Egypt,Cairo_Governorate).
 located_in_the_administrative_territorial_entity(Egypt,Cairo_Governorate).
 head_of_government(Abd_El_Azim_Wazir,Cairo).
 country_of_citizenship(Egypt,Abd_El_Azim_Wazir).
+country(Egypt,Cairo_Governorate).
 located_next_to_body_of_water(Nile,Cairo).
 country(Egypt,Nile).
 contains_administrative_territorial_entity(Cairo_Governorate,Egypt).
@@ -17,8 +17,3 @@ head_of_state(Abdel_Fattah_el-Sisi,Egypt).
 place_of_birth(Cairo,Abdel_Fattah_el-Sisi).
 member_of(Arab_League,Egypt).
 headquarters_location(Cairo,Arab_League).
-country(Cairo,Egypt).
-capital_of(Cairo,Egypt).
-capital(Egypt,Cairo).
-link_from_a_wikipage_to_another_wikipage(Cairo,Egypt).
-link_from_a_wikipage_to_another_wikipage(Egypt,Cairo).

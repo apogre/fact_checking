@@ -228,7 +228,6 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                     scored_predicates = [[unique_predicate, word2vec_score_dummy(unique_predicate, relation)] for unique_predicate \
                                          in unique_predicates]
                     predicate_dict = dict(scored_predicates)
-                    print predicate_dict
                     for ev in relation_ent:
                         ev.append(predicate_dict.get(ev[1], 0))
                     sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)

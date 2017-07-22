@@ -47,12 +47,14 @@ def spotlight_entity_parser(text):
     resource = dict()
     for response in responses:
         json_data = response
-        url = json_data.get('URI','')
-        confidence = json_data.get('similarityScore', 0)
-        wikidata_url = dbpedia_wikidata_equivalent(url)
-        wikidata_url = wikidata_url[0][0].split('/')[-1]
-        dbpedia_url = url.split('/')[-1]
-        resource[json_data.get('surfaceForm','')] = {'dbpedia_id': dbpedia_url,'wikidata_id':wikidata_url, 'confidence':confidence}
+        types = json_data.get('types','')
+        if types:
+            url = json_data.get('URI','')
+            confidence = json_data.get('similarityScore', 0)
+            wikidata_url = dbpedia_wikidata_equivalent(url)
+            wikidata_url = wikidata_url[0][0].split('/')[-1]
+            dbpedia_url = url.split('/')[-1]
+            resource[json_data.get('surfaceForm','')] = {'dbpedia_id': dbpedia_url,'wikidata_id':wikidata_url, 'confidence':confidence}
     return resource
 
 

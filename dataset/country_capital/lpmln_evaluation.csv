@@ -1,21 +1,2 @@
-"capital(ne, ka) 1.0","capital(ka, ba) 1.0","capital(ka, ki) 1.0",1,Kathmandu is the capital of Nepal.
-"capital(po, li) 1.0","capital(li, li2) 1.0","capital(li, ki) 1.0",2,Lisbon is the capital of Portugal.
-"capital(in, ne) 1.0","capital(ne, de) 1.0",3,New Delhi  is the capital of India.
-"capital(am, no) 1.0","capital(am, ki) 1.0","capital(ne, am) 1.0",4,Amsterdam is the capital of Netherlands.
-"capital(tu, is) 1.0","capital(is, ot) 1.0","capital(is, is1) 1.0","capital(is, ma) 1.0",5,Istanbul is the capital of Turkey.
-"capital(so, se) 1.0","capital(se, fi) 1.0",6,Seoul is the capital of South Korea.
-"capital(cu, ha) 1.0","capital(ha, ha1) 1.0",7,Havana is the capital of Cuba.
-"capital(eg, ca1) 1.0","capital(ca1, ca) 1.0",8,Cairo is the capital of Egypt.
-"capital(zi, ha) 1.0",9,Harare is the capital of Zimbabwe.
-"capital(ch, be) 1.0","capital(be, re) 1.0",10,Beijing is the capital of China.
-"capital(ky1, ky2) 1.0","capital(ky1, ky) 1.0",11,Kyoto is the capital of Japan.
-"capital(hi, hi1) 1.0",12,Hiroshima is the capital of Japan.
-"capital(na, ky) 1.0","capital(na, na1) 1.0",13,Nagasaki is the capital of Japan.
-"capital(ka, af) 1.0",16,Kabul is the capital of India.
-"capital(ma, sp) 1.0","capital(li, po) 1.0",19,Madrid is the capital of Portugal.
-"capital(lo, en) 1.0",20,Amsterdam is the capital of England.
-"capital(af, ka1) 1.0","capital(ka1, ka) 1.0",21,Kabul is the capital of Afghanistan.
-"capital(vi, au4) 1.0","capital(vi, au6) 1.0",22,Vienna is the capital of Austria.
-"capital(ba, dh) 1.0","capital(dh, dh1) 1.0","capital(dh, dh2) 1.0",23,Dhaka  is the capital of Bangladesh.
-"capital(to, ca) 1.0","capital(ot, na) 1.0","capital(ot, on) 1.0",25,Ottawa is the capital of Canada.
-"capital(qa, do) 1.0",30,Doha is the capital of Qatar.
+39,Madrid is the capital of England.,Evidence Not Found
+40,Amsterdam is the capital of Portugal.,Evidence Not Found

@@ -4,12 +4,12 @@ leader(na,in).
 residence(ne,na).
 legislature(pa,in).
 location(ne,pa).
-shares_border_with(ce,ne).
-country(in,ce).
-head_of_government(ar,ne).
-country_of_citizenship(in,ar).
 located_in_the_administrative_territorial_entity(de,ne).
 located_in_the_administrative_territorial_entity(in,de).
+head_of_government(ar,ne).
+country_of_citizenship(in,ar).
+shares_border_with(ce,ne).
+country(in,ce).
 located_next_to_body_of_water(ya,ne).
 country(in,ya).
 executive_body(go,in).
@@ -17,8 +17,3 @@ located_in_the_administrative_territorial_entity(ne,go).
 head_of_government(na,in).
 contains_administrative_territorial_entity(de,in).
 capital(ne,de).
-country(ne,in).
-capital_of(ne,in).
-capital(in,ne).
-link_from_a_wikipage_to_another_wikipage(ne,in).
-link_from_a_wikipage_to_another_wikipage(in,ne).

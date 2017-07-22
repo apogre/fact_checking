@@ -2,9 +2,9 @@ key_person(John_W._Thompson,Microsoft).
 before(Bill_Gates,John_W._Thompson).
 spouse(Melinda_Gates,Bill_Gates).
 employer(Microsoft,Melinda_Gates).
-subsidiary(Microsoft_Studios,Microsoft).
-founder(Bill_Gates,Microsoft_Studios).
 subsidiary(Microsoft_Store,Microsoft).
 founder(Bill_Gates,Microsoft_Store).
 business_division(Microsoft_Research,Microsoft).
 founder(Bill_Gates,Microsoft_Research).
+subsidiary(Microsoft_Studios,Microsoft).
+founder(Bill_Gates,Microsoft_Studios).

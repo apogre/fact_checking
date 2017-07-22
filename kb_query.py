@@ -210,7 +210,7 @@ def get_kgminer_predicates(type_set, triple_dict):
                                 q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'>\
                                  . ?url2 rdf:type <http://dbpedia.org/ontology/' + it2 + '> . {?url1 ?p ?url2 } UNION {?url2 ?p ?url1 } \
                                                             . FILTER(STRSTARTS(STR(?p), "http://dbpedia.org/")).' \
-                                                            '}'
+                                                            '} '
                         else:
                             q_pp = 'SELECT distinct ?p WHERE { ?url1 rdf:type <http://dbpedia.org/ontology/'+it1+'> . \
                             ?url2 rdf:type <http://dbpedia.org/ontology/'+it2+'> . ?url1 ?p ?url2 . \
@@ -386,8 +386,9 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, predicate_dict):
     else:
         for vals in q1_values:
             if 'Wikipage' not in vals[0] and 'Wikipage' not in vals[2]:
-                relations.append([kb, vals[0], vals[1], label[0]])
-                relations.append([kb, vals[2], label[1], vals[1]])
+                if 'diplomatic' not in vals[0] and 'diplomatic' not in vals[2]:
+                    relations.append([kb, vals[0], vals[1], label[0]])
+                    relations.append([kb, vals[2], label[1], vals[1]])
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
@@ -410,8 +411,9 @@ def relation_extractor_1hop(kb, id1, id2, label, relations, predicate_dict):
     else:
         for vals in q1_values_back:
             if 'Wikipage' not in vals[0] and 'Wikipage' not in vals[2]:
-                relations.append([kb, vals[0], vals[1], label[1]])
-                relations.append([kb, vals[2], label[0], vals[1]])
+                if 'diplomatic' not in vals[0] and 'diplomatic' not in vals[2]:
+                    relations.append([kb, vals[0], vals[1], label[1]])
+                    relations.append([kb, vals[2], label[0], vals[1]])
     return relations
 
 

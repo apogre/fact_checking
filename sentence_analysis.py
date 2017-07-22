@@ -6,6 +6,7 @@ from nltk import word_tokenize
 from StanfordOpenIEPython.main import stanford_ie
 import argparse
 from re import sub
+from config import aux_verb
 
 # stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
 # stanford_model_jar = str(os.environ['STANFORDTOOLSDIR'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
@@ -25,23 +26,9 @@ def triple_filter(ent, triples):
                 triple_dict[triple[1]] = [[triple[0], triple[2]]]
     else:
         for triple in triples:
-            key1 = [ent for ent in entity_set if ent in triple[0]]
-            key2 = [ent for ent in entity_set if ent in triple[2]]
-            if key1 and key2:
-                key1 = key1[0]
-                key2 = key2[0]
-                if triple[1] not in triple_dict.keys():
-                    triple_dict[triple[1]] = [[key1, key2]]
-                else:
-                    triple_list = [item for sublist in triple_dict[triple[1]] for item in sublist]
-                    if key1 in triple_list and key2 in triple_list:
-                        pass
-                    else:
-                        triple_dict[triple[1]].append([key1, key2])
-        if not triple_dict and len(entity_set) > 2:
-            for triple in triples:
-                key1 = [entity_set[0] for trip in triple if trip in entity_set[0]]
-                key2 = [entity_set[1] for trip in triple if trip in entity_set[1]]
+            if triple[1] not in aux_verb:
+                key1 = [ent for ent in entity_set if ent in triple[0]]
+                key2 = [ent for ent in entity_set if ent in triple[2]]
                 if key1 and key2:
                     key1 = key1[0]
                     key2 = key2[0]
@@ -53,6 +40,22 @@ def triple_filter(ent, triples):
                             pass
                         else:
                             triple_dict[triple[1]].append([key1, key2])
+        if not triple_dict and len(entity_set) > 2:
+            for triple in triples:
+                if triple[1] not in aux_verb:
+                    key1 = [entity_set[0] for trip in triple if trip in entity_set[0]]
+                    key2 = [entity_set[1] for trip in triple if trip in entity_set[1]]
+                    if key1 and key2:
+                        key1 = key1[0]
+                        key2 = key2[0]
+                        if triple[1] not in triple_dict.keys():
+                            triple_dict[triple[1]] = [[key1, key2]]
+                        else:
+                            triple_list = [item for sublist in triple_dict[triple[1]] for item in sublist]
+                            if key1 in triple_list and key2 in triple_list:
+                                pass
+                            else:
+                                triple_dict[triple[1]].append([key1, key2])
     return triple_dict
 
 

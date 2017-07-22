@@ -4,12 +4,12 @@ leader(Narendra_Modi,India).
 residence(New_Delhi,Narendra_Modi).
 legislature(Parliament_of_India,India).
 location(New_Delhi,Parliament_of_India).
-shares_border_with(Central_Delhi,New_Delhi).
-country(India,Central_Delhi).
-head_of_government(Arvind_Kejriwal,New_Delhi).
-country_of_citizenship(India,Arvind_Kejriwal).
 located_in_the_administrative_territorial_entity(Delhi,New_Delhi).
 located_in_the_administrative_territorial_entity(India,Delhi).
+head_of_government(Arvind_Kejriwal,New_Delhi).
+country_of_citizenship(India,Arvind_Kejriwal).
+shares_border_with(Central_Delhi,New_Delhi).
+country(India,Central_Delhi).
 located_next_to_body_of_water(Yamuna,New_Delhi).
 country(India,Yamuna).
 executive_body(Government_of_India,India).
@@ -17,8 +17,3 @@ located_in_the_administrative_territorial_entity(New_Delhi,Government_of_India).
 head_of_government(Narendra_Modi,India).
 contains_administrative_territorial_entity(Delhi,India).
 capital(New_Delhi,Delhi).
-country(New_Delhi,India).
-capital_of(New_Delhi,India).
-capital(India,New_Delhi).
-link_from_a_wikipage_to_another_wikipage(New_Delhi,India).
-link_from_a_wikipage_to_another_wikipage(India,New_Delhi).

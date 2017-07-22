@@ -1,6 +1,2 @@
 country(Japan,Kyoto).
-link_from_a_wikipage_to_another_wikipage(India,Japan).
-state_party(Japan,Kyoto).
-subdivision_type(List_of_sovereign_states,Kyoto).
-link_from_a_wikipage_to_another_wikipage(India,List_of_sovereign_states).
 diplomatic_relation(India,Japan).

@@ -4,7 +4,7 @@ spouse(me,bi).
 employer(mi,me).
 subsidiary(mi1,mi).
 founder(bi,mi1).
-subsidiary(mi2,mi).
+business_division(mi2,mi).
 founder(bi,mi2).
-business_division(mi3,mi).
+subsidiary(mi3,mi).
 founder(bi,mi3).

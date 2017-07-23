@@ -1,0 +1,4 @@
+10 capital(A,B) :- legislature(L,B), location(A,L).
+10 capital(A,B) :- central_bank(L,B), headquarters_location(A,L).
+10 capital(A,B) :- upper_house(L,B), location(A,L).
+10 capital(A,B) :- lower_house(L,B), location(A,L).

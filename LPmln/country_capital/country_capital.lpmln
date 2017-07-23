@@ -4,7 +4,7 @@
 339 capital(B,F)  :- location(A,F), jurisdiction(A,B).
 333 assembly(A,F) :- capital(B,F),  assembly(A,B).
 306 isPartOf(B,A)  :- capital(A,B).
-306 capital(A,B) :- is_part_of(B,A)  :- .
+306 capital(A,B) :- is_part_of(B,A) .
 247 capital(F,B) :-  country(A,F), garrison(A,B).
 199 country(B,A) :- capital(A,B).
 83 capital(A,B) :- largestCity(A,B).

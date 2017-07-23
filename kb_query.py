@@ -101,7 +101,7 @@ def get_description(entity_type):
 
 def kgminer_training_data(poi, q_part):
     q_ts = 'PREFIX dbo: <http://dbpedia.org/ontology/> select distinct ?url1 ?url2 where { \
-    { ?url1 <http://dbpedia.org/' + poi + '> ?url2 } . ' + q_part + \
+    { ?url2 <http://dbpedia.org/' + poi + '> ?url1 } . ' + q_part + \
            ' FILTER(?url1 != ?url2).} '
 
     print q_ts

@@ -1,0 +1,3 @@
+10 birth_place(S,E) :- birth_place(P,E), is_part_of(S,P).
+10 birth_place(S,E) :- birth_place(P,E), country(S,P).
+10 birth_place(S,E) :- birth_place(P,E), capital(S,P).

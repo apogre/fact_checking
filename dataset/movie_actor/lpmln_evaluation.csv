@@ -1,12 +1,30 @@
-"starring(fo, to) 0.999954602131","starring(el, fo) 0.999954602131",1,Tom Hanks starred in Forrest Gump.
-"starring(to, ge) 0.999954602131",2,George Clooney starred in Tomorrowland.
-"starring(ar, be) 0.999999997939",3,Ben Affleck starred in Argo.
-"starring(sc1, al) 0.999954602131",4,Al Pacino starred in Scarface.
-"starring(fi, br1) 0.999954602131",8,Brad Pitt starred in Fight Club.
-"starring(lu, sc) 0.999954602131",15,Scarlett Johansson starred in Lucy.
-"starring(no, ju) 0.999954602131",16,Julia Roberts starred in Notting Hill.
-"starring(en1, am) 0.999954602131",17,Amy Adams starred in Enchanted.
-"starring(bl, na) 0.999954602131","starring(be, bl) 0.999954602131",18,Natalie Portman starred in Black Swan.
-"starring(ha, ch) 0.999954602131",19,Charlize Theron starred in Hancock.
-"starring(ca1, ca) 0.999954602131",20,Cate Blanchett starred in Carol.
-"starring(kr, tw) 0.999954602131","starring(kr, th) 0.999954602131","starring(tw, kr) 0.999954602131",21,Kristen Stewart starred in Twilight.
+1,Tom Hanks starred in Forrest Gump.,[1]
+2,George Clooney starred in Tomorrowland.,[1]
+3,Ben Affleck starred in Argo.,[1]
+4,Al Pacino starred in Scarface.,[1]
+5,Johnny Depp starred in Sleepy Hollow.,[1]
+6,Matt Damon starred in Good Will Hunting.,Evidence Not Found
+7,Tom Cruise starred in Top Gun.,Evidence Not Found
+8,Brad Pitt starred in Fight Club.,[1]
+9,Christian Bale starred in American Psycho.,Evidence Not Found
+10,Leonardo DiCaprio starred in Titanic.,Evidence Not Found
+11,Samuel Jackson starred in Pulp Fiction.,[1]
+12,Jennifer Lawrence starred in American Psycho.,Evidence Not Found
+13,Sandra Bullock starred in Gravity.,Evidence Not Found
+14,Meryl Streep starred in Mamma Mia.,Evidence Not Found
+15,Scarlett Johansson starred in Lucy.,[1]
+16,Julia Roberts starred in Notting Hill.,[1]
+17,Amy Adams starred in Enchanted.,[1]
+18,Natalie Portman starred in Black Swan.,[1]
+19,Charlize Theron starred in Hancock.,[1]
+20,Cate Blanchett starred in Carol.,[1]
+21,Kristen Stewart starred in Twilight.,[1]
+22,Tom Hanks starred in Argo.,Evidence Not Found
+23,George Clooney starred in Twilight.,Evidence Not Found
+24,Ben Affleck starred in Forrest Gump.,Evidence Not Found
+25,Al Pacino starred in American Psycho.,Evidence Not Found
+26,Jennifer Lawrence starred in Scarface.,Evidence Not Found
+27,Sandra Bullock starred in Notting Hill.,Evidence Not Found
+28,Meryl Streep starred in Lucy.,Evidence Not Found
+29,Scarlett Johansson starred in Mamma Mia.,Evidence Not Found
+30,Julia Roberts starred in Gravity.,Evidence Not Found

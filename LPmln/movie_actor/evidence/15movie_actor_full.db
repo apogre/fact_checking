@@ -1,5 +1,3 @@
-studio(EuropaCorp,Lucy).
-link_from_a_wikipage_to_another_wikipage(Scarlett_Johansson,EuropaCorp).
 named_after(Lucy,Lucy).
 performer(Scarlett_Johansson,Lucy).
 cast_member(Lucy,Scarlett_Johansson).

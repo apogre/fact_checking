@@ -1,5 +1,5 @@
-character(be,tw).
-performer(kr,be).
 followed_by(th,tw).
 cast_member(kr,th).
+character(be,tw).
+performer(kr,be).
 cast_member(tw,kr).

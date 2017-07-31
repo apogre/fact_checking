@@ -1,13 +1,1 @@
-wikipage_disambiguates(sc,sc1).
-link_from_a_wikipage_to_another_wikipage(al,sc).
-wikipage_disambiguates(sc2,sc1).
-link_from_a_wikipage_to_another_wikipage(al,sc2).
-wikipage_disambiguates(sc3,sc1).
-link_from_a_wikipage_to_another_wikipage(al,sc3).
-wikipage_disambiguates(sc4,sc1).
-link_from_a_wikipage_to_another_wikipage(al,sc4).
-wikipage_disambiguates(sc5,sc1).
-link_from_a_wikipage_to_another_wikipage(al,sc5).
-wikipage_disambiguates(sc6,sc1).
-link_from_a_wikipage_to_another_wikipage(al,sc6).
-cast_member(sc1,al).
+cast_member(sc,al).

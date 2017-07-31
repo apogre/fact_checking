@@ -1,3 +1,5 @@
-headquarters_location(San_Ramon,Texaco).
-location_city(San_Ramon,Texaco).
 subsidiary(Texaco,Chevron).
+location_city(San_Ramon,Texaco).
+headquarter(San_Ramon,Texaco).
+headquarters_location(Chevron,San_Ramon).
+location(Chevron,San_Ramon).

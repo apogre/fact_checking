@@ -1,0 +1,7 @@
+award_received(in,pu).
+winner(sa,in).
+nominated_for(in,pu).
+award_received(ba,pu).
+winner(sa,ba).
+nominated_for(ba,pu).
+cast_member(pu,sa).

@@ -1,10 +1,4 @@
-spouse(be,na).
-link_from_a_wikipage_to_another_wikipage(bl,be).
-producer(mi,bl).
-link_from_a_wikipage_to_another_wikipage(na,mi).
-film_director(da,bl).
-link_from_a_wikipage_to_another_wikipage(na,da).
-choreographer(be,bl).
-spouse(na,be).
 cast_member(be,bl).
+spouse(na,be).
+choreographer(be,bl).
 cast_member(bl,na).

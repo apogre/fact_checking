@@ -1,0 +1,2 @@
+country(United_States_of_America,Santa_Fe).
+contains_administrative_territorial_entity(Wisconsin,United_States_of_America).

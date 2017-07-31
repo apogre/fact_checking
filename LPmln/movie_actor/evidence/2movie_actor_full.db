@@ -1,5 +1,1 @@
-story(Jeff_Jensen,Tomorrowland).
-link_from_a_wikipage_to_another_wikipage(George_Clooney,Jeff_Jensen).
-film_director(Brad_Bird,Tomorrowland).
-link_from_a_wikipage_to_another_wikipage(George_Clooney,Brad_Bird).
 cast_member(Tomorrowland,George_Clooney).

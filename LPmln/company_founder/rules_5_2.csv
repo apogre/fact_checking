@@ -1,0 +1,37 @@
+Loading files... 
+  Starting company_founder_full.tsv
+  Finished company_founder_full.tsv, still running: 0
+Loaded 12776 facts in 0.14 s using -66 MB
+Using HeadCoverage as pruning metric with minimum threshold 0.01
+Using recursivity limit 3
+Default mining assistant that defines support by counting support on both head variables
+No minimum threshold on standard confidence
+Filtering on PCA confidence with minimum threshold 0.1
+Constants in the arguments of relations are disabled
+Lossless (query refinement) heuristics enabled
+Starting the mining phase... Using 4 threads
+Rule	Head Coverage	Std Confidence	PCA Confidence	Positive Examples	Body size	PCA Body size	Functional variable	Std. Lower Bound	PCA Lower Bound	PCA Conf estimation
+?a  founded_by  ?b   => ?a  founder  ?b	0.75	0.6	1	3	5	3	?a	0.0	0.0	0.0
+?b  occupation  ?a   => ?a  founder  ?b	0.25	0.020408163	1	1	49	1	?a	0.0	0.0	0.0
+?a  key_person  ?b   => ?a  founder  ?b	0.25	0.071428571	0.25	1	14	4	?a	0.0	0.0	0.0
+?a  key_people  ?b   => ?a  founder  ?b	0.25	0.043478261	0.2	1	23	5	?a	0.0	0.0	0.0
+?b  occupation  ?a   => ?a  founded_by  ?b	0.6	0.06122449	0.15	3	49	20	?a	0.0	0.0	0.0
+?a  founder  ?b   => ?a  founded_by  ?b	0.6	0.75	1	3	4	3	?a	0.0	0.0	0.0
+?b  boards  ?a   => ?a  founded_by  ?b	0.2	0.111111111	0.111111111	1	9	9	?a	0.0	0.0	0.0
+?b  board  ?a   => ?a  founded_by  ?b	0.2	0.125	0.125	1	8	8	?a	0.0	0.0	0.0
+?a  key_people  ?b   => ?a  founded_by  ?b	0.4	0.086956522	0.222222222	2	23	9	?a	0.0	0.0	0.0
+?a  founders  ?b   => ?a  founded_by  ?b	0.4	0.5	1	2	4	2	?a	0.0	0.0	0.0
+?a  key_person  ?b   => ?a  founded_by  ?b	0.2	0.071428571	0.2	1	14	5	?a	0.0	0.0	0.0
+?b  board  ?a   => ?a  founders  ?b	0.25	0.125	0.5	1	8	2	?b	0.0	0.0	0.0
+?b  occupation  ?a   => ?a  founders  ?b	1	0.081632653	0.2	4	49	20	?b	0.0	0.0	0.0
+?b  boards  ?a   => ?a  founders  ?b	0.25	0.111111111	0.5	1	9	2	?b	0.0	0.0	0.0
+?a  key_people  ?b   => ?a  founders  ?b	0.25	0.043478261	0.5	1	23	2	?b	0.0	0.0	0.0
+?a  founded_by  ?b   => ?a  founders  ?b	0.5	0.4	0.666666667	2	5	3	?b	0.0	0.0	0.0
+?b  name  ?f  ?f  occupation  ?a   => ?a  founder  ?b	0.25	0.027027027	1	1	37	1	?a	0.0	0.0	0.0
+?a  key_person  ?f  ?b  name  ?f   => ?a  founder  ?b	0.25	0.333333333	1	1	3	1	?a	0.0	0.0	0.0
+?a  key_people  ?f  ?b  name  ?f   => ?a  founder  ?b	0.25	0.2	1	1	5	1	?a	0.0	0.0	0.0
+?a  founded_by  ?f  ?b  name  ?f   => ?a  founder  ?b	0.25	0.333333333	1	1	3	1	?a	0.0	0.0	0.0
+?a  founder  ?f  ?b  name  ?f   => ?a  founder  ?b	0.25	1	1	1	1	1	?a	0.0	0.0	0.0
+?b  display  ?f  ?a  founded_by  ?f   => ?a  founder  ?b	0.25	1	1	1	1	1	?a	0.0	0.0	0.0
+?b  display  ?f  ?a  founder  ?f   => ?a  founder  ?b	0.25	1	1	1	1	1	?a	0.0	0.0	0.0
+?b  birth_place  ?f  ?a  location_city  ?f   => ?a  founder  ?b	0.25	0.5	0.5	1	2	2	?a	0.0	0.0	0.0

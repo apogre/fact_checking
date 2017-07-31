@@ -1,11 +1,3 @@
-cinematography(Rodrigo_Prieto,Argo).
-link_from_a_wikipage_to_another_wikipage(Ben_Affleck,Rodrigo_Prieto).
-editing(William_Goldenberg,Argo).
-link_from_a_wikipage_to_another_wikipage(Ben_Affleck,William_Goldenberg).
-writer(Chris_Terrio,Argo).
-link_from_a_wikipage_to_another_wikipage(Ben_Affleck,Chris_Terrio).
-producer(Grant_Heslov,Argo).
-link_from_a_wikipage_to_another_wikipage(Ben_Affleck,Grant_Heslov).
 director(Argo,Ben_Affleck).
 producer(Argo,Ben_Affleck).
 cast_member(Argo,Ben_Affleck).

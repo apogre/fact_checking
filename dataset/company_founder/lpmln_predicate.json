@@ -1,1 +1,603 @@
-{"a": "b", "24": [["dbpedia", "founded by", "Mendel Rosenblum", "VMWare", 0], ["dbpedia", "spouse", "Diane Greene", "Mendel Rosenblum", 0]], "23": [["dbpedia", "before", "Dick Costolo", "Jack Dorsey", 0], ["dbpedia", "employer", "Twitter", "Dick Costolo", 0], ["dbpedia", "before", "Dick Costolo", "Jack Dorsey", 0], ["dbpedia", "occupation", "Twitter", "Dick Costolo", 0], ["dbpedia", "before", "Dick Costolo", "Jack Dorsey", 0], ["dbpedia", "title", "Twitter", "Dick Costolo", 0], ["dbpedia", "after", "Evan Williams (Internet entrepreneur)", "Jack Dorsey", 0], ["dbpedia", "board", "Twitter", "Evan Williams (Internet entrepreneur)", 0], ["dbpedia", "after", "Evan Williams (Internet entrepreneur)", "Jack Dorsey", 0], ["dbpedia", "title", "Twitter", "Evan Williams (Internet entrepreneur)", 0], ["dbpedia", "after", "Evan Williams (Internet entrepreneur)", "Jack Dorsey", 0], ["dbpedia", "known", "Twitter", "Evan Williams (Internet entrepreneur)", 0], ["dbpedia", "founded by", "Evan Williams (Internet entrepreneur)", "Twitter", 0], ["dbpedia", "before", "Jack Dorsey", "Evan Williams (Internet entrepreneur)", 0], ["wikidata", "operator", "Twitter, Inc.", "Twitter", 0], ["wikidata", "founded by", "Jack Dorsey", "Twitter, Inc.", 0], ["wikidata", "operator", "Twitter, Inc.", "Twitter", 0], ["wikidata", "chief executive officer", "Jack Dorsey", "Twitter, Inc.", 0]], "1": [["dbpedia", "key person", "John W. Thompson", "Microsoft", 0], ["dbpedia", "before", "Bill Gates", "John W. Thompson", 0], ["wikidata", "spouse", "Melinda Gates", "Bill Gates", 0], ["wikidata", "employer", "Microsoft", "Melinda Gates", 0], ["wikidata", "subsidiary", "Microsoft Store", "Microsoft", 0], ["wikidata", "founder", "Bill Gates", "Microsoft Store", 0], ["wikidata", "business division", "Microsoft Research", "Microsoft", 0], ["wikidata", "founder", "Bill Gates", "Microsoft Research", 0], ["wikidata", "subsidiary", "Microsoft Studios", "Microsoft", 0], ["wikidata", "founder", "Bill Gates", "Microsoft Studios", 0]], "3": [["dbpedia", "parent company", "Alphabet Inc.", "Google", 0], ["dbpedia", "key person", "Larry Page", "Alphabet Inc.", 0], ["dbpedia", "parent company", "Alphabet Inc.", "Google", 0], ["dbpedia", "founders", "Larry Page", "Alphabet Inc.", 0], ["wikidata", "product or material produced", "Google Search", "Google", 0], ["wikidata", "creator", "Larry Page", "Google Search", 0], ["wikidata", "parent organization", "Alphabet Inc.", "Google", 0], ["wikidata", "owned by", "Larry Page", "Alphabet Inc.", 0], ["wikidata", "product or material produced", "Google Search", "Google", 0], ["wikidata", "author", "Larry Page", "Google Search", 0], ["wikidata", "parent organization", "Alphabet Inc.", "Google", 0], ["wikidata", "founded by", "Larry Page", "Alphabet Inc.", 0], ["wikidata", "product or material produced", "Google Search", "Google", 0], ["wikidata", "founded by", "Larry Page", "Google Search", 0], ["wikidata", "parent organization", "Alphabet Inc.", "Google", 0], ["wikidata", "chief executive officer", "Larry Page", "Alphabet Inc.", 0]], "2": [["dbpedia", "before", "Gil Amelio", "Steve Jobs", 0], ["dbpedia", "known for", "Apple", "Gil Amelio", 0], ["dbpedia", "before", "Gil Amelio", "Steve Jobs", 0], ["dbpedia", "title", "Apple", "Gil Amelio", 0], ["dbpedia", "after", "Tim Cook", "Steve Jobs", 0], ["dbpedia", "employer", "Apple", "Tim Cook", 0]], "4": [["dbpedia", "parent company", "Alphabet Inc.", "Google", 0], ["dbpedia", "key person", "Sergey Brin", "Alphabet Inc.", 0], ["dbpedia", "parent company", "Alphabet Inc.", "Google", 0], ["dbpedia", "owner", "Sergey Brin", "Alphabet Inc.", 0], ["dbpedia", "parent company", "Alphabet Inc.", "Google", 0], ["dbpedia", "owning company", "Sergey Brin", "Alphabet Inc.", 0], ["dbpedia", "parent company", "Alphabet Inc.", "Google", 0], ["dbpedia", "founders", "Sergey Brin", "Alphabet Inc.", 0], ["wikidata", "website account on", "Blogger", "Sergey Brin", 0], ["wikidata", "owned by", "Google", "Blogger", 0], ["wikidata", "employer", "Alphabet Inc.", "Sergey Brin", 0], ["wikidata", "subsidiary", "Google", "Alphabet Inc.", 0], ["wikidata", "website account on", "Blogger", "Sergey Brin", 0], ["wikidata", "parent organization", "Google", "Blogger", 0], ["wikidata", "website account on", "Blogger", "Sergey Brin", 0], ["wikidata", "developer", "Google", "Blogger", 0], ["wikidata", "product or material produced", "Google Search", "Google", 0], ["wikidata", "creator", "Sergey Brin", "Google Search", 0], ["wikidata", "parent organization", "Alphabet Inc.", "Google", 0], ["wikidata", "owned by", "Sergey Brin", "Alphabet Inc.", 0], ["wikidata", "product or material produced", "Google Search", "Google", 0], ["wikidata", "author", "Sergey Brin", "Google Search", 0], ["wikidata", "parent organization", "Alphabet Inc.", "Google", 0], ["wikidata", "founded by", "Sergey Brin", "Alphabet Inc.", 0], ["wikidata", "product or material produced", "Google Search", "Google", 0], ["wikidata", "founded by", "Sergey Brin", "Google Search", 0]], "7": [["wikidata", "operator", "Facebook Inc.", "Facebook", 0], ["wikidata", "founded by", "Mark ZuckerBerg", "Facebook Inc.", 0], ["wikidata", "owned by", "Facebook Inc.", "Facebook", 0], ["wikidata", "owned by", "Mark ZuckerBerg", "Facebook Inc.", 0], ["wikidata", "operator", "Facebook Inc.", "Facebook", 0], ["wikidata", "chief executive officer", "Mark ZuckerBerg", "Facebook Inc.", 0], ["wikidata", "owned by", "Facebook Inc.", "Facebook", 0], ["wikidata", "founded by", "Mark ZuckerBerg", "Facebook Inc.", 0], ["wikidata", "owned by", "Facebook Inc.", "Facebook", 0], ["wikidata", "chief executive officer", "Mark ZuckerBerg", "Facebook Inc.", 0], ["wikidata", "author", "Dustin Moskovitz", "Facebook", 0], ["wikidata", "significant person", "Mark ZuckerBerg", "Dustin Moskovitz", 0], ["wikidata", "developer", "Dustin Moskovitz", "Facebook", 0], ["wikidata", "significant person", "Mark ZuckerBerg", "Dustin Moskovitz", 0], ["wikidata", "operator", "Facebook Inc.", "Facebook", 0], ["wikidata", "owned by", "Mark ZuckerBerg", "Facebook Inc.", 0]], "8": [["dbpedia", "known for", "SolarCity", "Elon Musk", 0], ["dbpedia", "type", "Tesla", "SolarCity", 0], ["wikidata", "subsidiary", "SolarCity", "Tesla", 0], ["wikidata", "chairperson", "Elon Musk", "SolarCity", 0]]}
+{
+  "a": "b",
+  "24": [
+    [
+      "dbpedia",
+      "founded by",
+      "Mendel Rosenblum",
+      "VMWare",
+      0
+    ],
+    [
+      "dbpedia",
+      "spouse",
+      "Diane Greene",
+      "Mendel Rosenblum",
+      0
+    ]
+  ],
+  "23": [
+    [
+      "dbpedia",
+      "before",
+      "Dick Costolo",
+      "Jack Dorsey",
+      0
+    ],
+    [
+      "dbpedia",
+      "employer",
+      "Twitter",
+      "Dick Costolo",
+      0
+    ],
+    [
+      "dbpedia",
+      "before",
+      "Dick Costolo",
+      "Jack Dorsey",
+      0
+    ],
+    [
+      "dbpedia",
+      "occupation",
+      "Twitter",
+      "Dick Costolo",
+      0
+    ],
+    [
+      "dbpedia",
+      "before",
+      "Dick Costolo",
+      "Jack Dorsey",
+      0
+    ],
+    [
+      "dbpedia",
+      "title",
+      "Twitter",
+      "Dick Costolo",
+      0
+    ],
+    [
+      "dbpedia",
+      "after",
+      "Evan Williams (Internet entrepreneur)",
+      "Jack Dorsey",
+      0
+    ],
+    [
+      "dbpedia",
+      "board",
+      "Twitter",
+      "Evan Williams (Internet entrepreneur)",
+      0
+    ],
+    [
+      "dbpedia",
+      "after",
+      "Evan Williams (Internet entrepreneur)",
+      "Jack Dorsey",
+      0
+    ],
+    [
+      "dbpedia",
+      "title",
+      "Twitter",
+      "Evan Williams (Internet entrepreneur)",
+      0
+    ],
+    [
+      "dbpedia",
+      "after",
+      "Evan Williams (Internet entrepreneur)",
+      "Jack Dorsey",
+      0
+    ],
+    [
+      "dbpedia",
+      "known",
+      "Twitter",
+      "Evan Williams (Internet entrepreneur)",
+      0
+    ],
+    [
+      "dbpedia",
+      "founded by",
+      "Evan Williams (Internet entrepreneur)",
+      "Twitter",
+      0
+    ],
+    [
+      "dbpedia",
+      "before",
+      "Jack Dorsey",
+      "Evan Williams (Internet entrepreneur)",
+      0
+    ],
+    [
+      "wikidata",
+      "operator",
+      "Twitter, Inc.",
+      "Twitter",
+      0
+    ],
+    [
+      "wikidata",
+      "founded by",
+      "Jack Dorsey",
+      "Twitter, Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "operator",
+      "Twitter, Inc.",
+      "Twitter",
+      0
+    ],
+    [
+      "wikidata",
+      "chief executive officer",
+      "Jack Dorsey",
+      "Twitter, Inc.",
+      0
+    ]
+  ],
+  "3": [
+    [
+      "dbpedia",
+      "parent company",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "dbpedia",
+      "key person",
+      "Larry Page",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "dbpedia",
+      "parent company",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "dbpedia",
+      "founders",
+      "Larry Page",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "product or material produced",
+      "Google Search",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "creator",
+      "Larry Page",
+      "Google Search",
+      0
+    ],
+    [
+      "wikidata",
+      "parent organization",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "owned by",
+      "Larry Page",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "product or material produced",
+      "Google Search",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "author",
+      "Larry Page",
+      "Google Search",
+      0
+    ],
+    [
+      "wikidata",
+      "parent organization",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "founded by",
+      "Larry Page",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "product or material produced",
+      "Google Search",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "founded by",
+      "Larry Page",
+      "Google Search",
+      0
+    ],
+    [
+      "wikidata",
+      "parent organization",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "chief executive officer",
+      "Larry Page",
+      "Alphabet Inc.",
+      0
+    ]
+  ],
+  "2": [
+    [
+      "dbpedia",
+      "before",
+      "Gil Amelio",
+      "Steve Jobs",
+      0
+    ],
+    [
+      "dbpedia",
+      "known for",
+      "Apple",
+      "Gil Amelio",
+      0
+    ],
+    [
+      "dbpedia",
+      "before",
+      "Gil Amelio",
+      "Steve Jobs",
+      0
+    ],
+    [
+      "dbpedia",
+      "title",
+      "Apple",
+      "Gil Amelio",
+      0
+    ],
+    [
+      "dbpedia",
+      "after",
+      "Tim Cook",
+      "Steve Jobs",
+      0
+    ],
+    [
+      "dbpedia",
+      "employer",
+      "Apple",
+      "Tim Cook",
+      0
+    ]
+  ],
+  "4": [
+    [
+      "dbpedia",
+      "parent company",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "dbpedia",
+      "key person",
+      "Sergey Brin",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "dbpedia",
+      "parent company",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "dbpedia",
+      "owner",
+      "Sergey Brin",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "dbpedia",
+      "parent company",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "dbpedia",
+      "owning company",
+      "Sergey Brin",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "dbpedia",
+      "parent company",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "dbpedia",
+      "founders",
+      "Sergey Brin",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "website account on",
+      "Blogger",
+      "Sergey Brin",
+      0
+    ],
+    [
+      "wikidata",
+      "owned by",
+      "Google",
+      "Blogger",
+      0
+    ],
+    [
+      "wikidata",
+      "employer",
+      "Alphabet Inc.",
+      "Sergey Brin",
+      0
+    ],
+    [
+      "wikidata",
+      "subsidiary",
+      "Google",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "website account on",
+      "Blogger",
+      "Sergey Brin",
+      0
+    ],
+    [
+      "wikidata",
+      "parent organization",
+      "Google",
+      "Blogger",
+      0
+    ],
+    [
+      "wikidata",
+      "website account on",
+      "Blogger",
+      "Sergey Brin",
+      0
+    ],
+    [
+      "wikidata",
+      "developer",
+      "Google",
+      "Blogger",
+      0
+    ],
+    [
+      "wikidata",
+      "product or material produced",
+      "Google Search",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "creator",
+      "Sergey Brin",
+      "Google Search",
+      0
+    ],
+    [
+      "wikidata",
+      "parent organization",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "owned by",
+      "Sergey Brin",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "product or material produced",
+      "Google Search",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "author",
+      "Sergey Brin",
+      "Google Search",
+      0
+    ],
+    [
+      "wikidata",
+      "parent organization",
+      "Alphabet Inc.",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "founded by",
+      "Sergey Brin",
+      "Alphabet Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "product or material produced",
+      "Google Search",
+      "Google",
+      0
+    ],
+    [
+      "wikidata",
+      "founded by",
+      "Sergey Brin",
+      "Google Search",
+      0
+    ]
+  ],
+  "7": [
+    [
+      "wikidata",
+      "operator",
+      "Facebook Inc.",
+      "Facebook",
+      0
+    ],
+    [
+      "wikidata",
+      "founded by",
+      "Mark ZuckerBerg",
+      "Facebook Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "owned by",
+      "Facebook Inc.",
+      "Facebook",
+      0
+    ],
+    [
+      "wikidata",
+      "owned by",
+      "Mark ZuckerBerg",
+      "Facebook Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "operator",
+      "Facebook Inc.",
+      "Facebook",
+      0
+    ],
+    [
+      "wikidata",
+      "chief executive officer",
+      "Mark ZuckerBerg",
+      "Facebook Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "owned by",
+      "Facebook Inc.",
+      "Facebook",
+      0
+    ],
+    [
+      "wikidata",
+      "founded by",
+      "Mark ZuckerBerg",
+      "Facebook Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "owned by",
+      "Facebook Inc.",
+      "Facebook",
+      0
+    ],
+    [
+      "wikidata",
+      "chief executive officer",
+      "Mark ZuckerBerg",
+      "Facebook Inc.",
+      0
+    ],
+    [
+      "wikidata",
+      "author",
+      "Dustin Moskovitz",
+      "Facebook",
+      0
+    ],
+    [
+      "wikidata",
+      "significant person",
+      "Mark ZuckerBerg",
+      "Dustin Moskovitz",
+      0
+    ],
+    [
+      "wikidata",
+      "developer",
+      "Dustin Moskovitz",
+      "Facebook",
+      0
+    ],
+    [
+      "wikidata",
+      "significant person",
+      "Mark ZuckerBerg",
+      "Dustin Moskovitz",
+      0
+    ],
+    [
+      "wikidata",
+      "operator",
+      "Facebook Inc.",
+      "Facebook",
+      0
+    ],
+    [
+      "wikidata",
+      "owned by",
+      "Mark ZuckerBerg",
+      "Facebook Inc.",
+      0
+    ]
+  ]
+}

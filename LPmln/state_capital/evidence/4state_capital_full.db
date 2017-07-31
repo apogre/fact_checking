@@ -1,9 +1,3 @@
-south(Chesterfield_County,_Virginia,Richmond).
-state(Virginia,Chesterfield_County,_Virginia).
-east(Henrico_County,_Virginia,Richmond).
-state(Virginia,Henrico_County,_Virginia).
-north(Henrico_County,_Virginia,Richmond).
-west(Henrico_County,_Virginia,Richmond).
 lowerhouse(Virginia_House_of_Delegates,Virginia).
 location(Richmond,Virginia_House_of_Delegates).
 senator(Tim_Kaine,Virginia).

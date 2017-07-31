@@ -36,13 +36,20 @@ def load_files(data_source):
     else:
         kgminer_output = {"a": "b"}
 
+    if path.isfile('dataset/' + data_source + '/kgminer_output_random.json'):
+        with open('dataset/' + data_source + '/kgminer_output_random.json') as json_data:
+            kgminer_output_random = json.load(json_data)
+    else:
+        kgminer_output_random = {"a": "b"}
+
     if path.isfile('dataset/' + data_source + '/lpmln_output.json'):
         with open('dataset/' + data_source + '/lpmln_output.json') as json_data:
             lpmln_output = json.load(json_data)
     else:
         lpmln_output = {"a": "b"}
 
-    return file_triples, ambiverse_resources, possible_predicate, kgminer_output, lpmln_predicate, lpmln_output
+    return file_triples, ambiverse_resources, possible_predicate, kgminer_output, lpmln_predicate, lpmln_output, \
+           kgminer_output_random
 
 
 def load_kgminer_resource():

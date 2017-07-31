@@ -1,5 +1,3 @@
-studio(eu,lu).
-link_from_a_wikipage_to_another_wikipage(sc,eu).
 named_after(lu,lu).
 performer(sc,lu).
 cast_member(lu,sc).

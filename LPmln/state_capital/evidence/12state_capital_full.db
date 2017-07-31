@@ -1,0 +1,17 @@
+lowerhouse(California_State_Assembly,California).
+location(Sacramento,California_State_Assembly).
+upperhouse(California_State_Senate,California).
+location(Sacramento,California_State_Senate).
+legislature(California_State_Legislature,California).
+location(Sacramento,California_State_Legislature).
+significant_event(Great_Flood_of_1862,Sacramento).
+located_on_terrain_feature(California,Great_Flood_of_1862).
+country(United_States_of_America,Sacramento).
+contains_administrative_territorial_entity(California,United_States_of_America).
+settlement(Sacramento_County,Sacramento).
+settlement(California,Sacramento_County).
+contains_administrative_territorial_entity(Sacramento_County,California).
+capital(Sacramento,Sacramento_County).
+contains_administrative_territorial_entity(Sacramento,Sacramento_County).
+taoiseach(Jerry_Brown,California).
+work_location(Sacramento,Jerry_Brown).

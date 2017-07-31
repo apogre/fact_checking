@@ -1,4 +1,9 @@
 id,sentence,label
-11,"Phoenix is the capital of Arizona.",T
-15,"Tucson is the capital of Arizona."
-16,"Denver is the capital of Arizona."
+15,"Tucson is the capital of Arizona.",F
+17,"Montgomery is the capital of Texas.",F
+19,"Salt Lake City is the capital of Virginia.",F
+21,"Santa Fe is the capital of Wisconsin.",F
+22,"Madison is the capital of New Mexico.",F
+23,"Albany is the capital of Alaska.",F
+24,"Juneau is the capital of New York.",F
+26,"Helena is the capital of Illinois.",F

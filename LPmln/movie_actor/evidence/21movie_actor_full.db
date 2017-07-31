@@ -1,5 +1,5 @@
-character(Bella_Swan,Twilight).
-performer(Kristen_Stewart,Bella_Swan).
 followed_by(The_Twilight_Saga:_New_Moon,Twilight).
 cast_member(Kristen_Stewart,The_Twilight_Saga:_New_Moon).
+character(Bella_Swan,Twilight).
+performer(Kristen_Stewart,Bella_Swan).
 cast_member(Twilight,Kristen_Stewart).

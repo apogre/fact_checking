@@ -1,0 +1,7 @@
+award_received(Independent_Spirit_Award_for_Best_Male_Lead,Pulp_Fiction).
+winner(Samuel_Jackson,Independent_Spirit_Award_for_Best_Male_Lead).
+nominated_for(Independent_Spirit_Award_for_Best_Male_Lead,Pulp_Fiction).
+award_received(BAFTA_Award_for_Best_Actor_in_a_Supporting_Role,Pulp_Fiction).
+winner(Samuel_Jackson,BAFTA_Award_for_Best_Actor_in_a_Supporting_Role).
+nominated_for(BAFTA_Award_for_Best_Actor_in_a_Supporting_Role,Pulp_Fiction).
+cast_member(Pulp_Fiction,Samuel_Jackson).

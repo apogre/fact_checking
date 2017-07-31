@@ -13,7 +13,7 @@ import argparse
 import sys
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, evidence_writer, inference, get_rules
+from lpmln import relation_extractor_triples, evidence_writer, inference, get_rules, amie_tsv
 from resource_writer import update_resources
 
 load_word2vec = True
@@ -90,8 +90,10 @@ def predicate_ranker(predicates, triple):
 
 
 def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
-                 lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source):
-    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output = load_files(data_source)
+                 lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source, kr, \
+                 kgminer_output_random_flag):
+    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output, \
+    kgminer_output_random = load_files(data_source)
     sentence_count = len(sentence_lis)
     executed_sentence = 0
     kgminer_true_count = 0
@@ -100,6 +102,7 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
     named_tags = sentence_tagger(sentence_list)
     kgminer_evaluation = []
     lpmln_evaluation = []
+    amie_training = []
     accuracy = []
     stored_query = dict()
     for n, ne in enumerate(named_tags):
@@ -163,41 +166,59 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         else:
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
         # print "Ranked Predicates"
-        print kgminer_predicate_ranked
+        # print kgminer_predicate_ranked
         if KGMiner:
             if kgminer_predicate_ranked:
                 kg_output = []
                 print "Link Prediction with KG_Miner"
-                if sentence_id not in kgminer_output.keys():
-                    if kgminer_predicate_ranked.values():
-                        # print kgminer_predicate_ranked
-                        kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
-                                                          triple_dict, resource, sentence_id, data_source)
+                print kr
+                if kr:
+                    if sentence_id not in kgminer_output_random.keys():
+                        kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full,
+                                                          type_ontology_full, \
+                                                          triple_dict, resource, sentence_id, data_source, kr)
                         if kgminer_status:
                             predicate_result = invoke_kgminer()
                             if predicate_result:
                                 kg_output = predicate_result.values()
-                                kgminer_output[sentence_id] = predicate_result
-                                kgminer_output_flag = True
+                                kgminer_output_random[sentence_id] = predicate_result
+                                kgminer_output_random_flag = True
                             else:
-                                print "kgminer failed"
-                        else:
-                            kg_output = [2]
+                                print "kgminer random failed"
                     else:
-                        kgminer_predicted_label = 'A'
+                        print kgminer_output_random[sentence_id]
+                        kg_output = kgminer_output[sentence_id].values()
                 else:
-                    print kgminer_output[sentence_id]
-                    kg_output = kgminer_output[sentence_id].values()
+                    if sentence_id not in kgminer_output.keys():
+                        if kgminer_predicate_ranked.values():
+                            # print kgminer_predicate_ranked
+                            kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full, type_ontology_full,\
+                                                              triple_dict, resource, sentence_id, data_source, kr)
+                            if kgminer_status:
+                                predicate_result = invoke_kgminer()
+                                if predicate_result:
+                                    kg_output = predicate_result.values()
+                                    kgminer_output[sentence_id] = predicate_result
+                                    kgminer_output_flag = True
+                                else:
+                                    print "kgminer failed"
+                            else:
+                                kg_output = [2]
+                        else:
+                            kgminer_predicted_label = 'A'
+                    else:
+                        print kgminer_output[sentence_id]
+                        kg_output = kgminer_output[sentence_id].values()
                 if kg_output:
                     kgminer_score = float(kg_output[0])
-                    if kgminer_score < 0.5:
+                    if kgminer_score <= 0.5:
                         kgminer_predicted_label = 'T'
-                    elif kgminer_score == 2:
-                        kgminer_predicted_label = 'N'
-                    else:
+                    elif kgminer_score > 0.5:
                         kgminer_predicted_label = 'F'
-            else:
-                kgminer_predicted_label = 'N'
+                    else:
+                        kgminer_predicted_label = 'N'
+                else:
+                    kgminer_predicted_label = 'N'
             if kgminer_predicted_label == 'N' or kgminer_predicted_label == 'A':
                 pre_kgminer += 1
             else:
@@ -212,15 +233,19 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 print "Loading DBpedia to Wikidata Mappings"
                 predicate_dict = load_lpmln_resource()
                 load_mappings = False
-
+            relation_ent, relation_ent_0, relation_ent_2, distance_one = relation_extractor_triples(resource,\
+                                                                                                    triple_dict)
+            amie_training.extend(distance_one)
             if sentence_id not in lpmln_predicate.keys():
                 sorted_predicates = []
-                relation_ent, relation_ent_0, relation_ent_2 = relation_extractor_triples(resource, triple_dict, predicate_dict)
+                relation_ent, relation_ent_0, relation_ent_2, distance_two = relation_extractor_triples(resource, triple_dict)
+                amie_training.extend(distance_two)
                 print relation_ent
                 print relation_ent_0
                 print relation_ent_2
+                # print distance_one
+                relation_ent += relation_ent_0
                 if relation_ent:
-                    # relation_ent += relation_ent_0
                     unique_predicates = [evidence[1] for evidence in relation_ent]
                     unique_predicates = list(set(unique_predicates))
                     print unique_predicates
@@ -249,19 +274,26 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 probability = lpmln_output[sentence_id]
             lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
             print probability
-
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
-                         lpmln_predicate, kgminer_output, lpmln_output_flag, data_source)
+                         lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
+                         kgminer_output_random)
+
+    amie_tsv(amie_training, data_source)
 
     if KGMiner:
         kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)
         accuracy.append([data_source, (sentence_count-executed_sentence), kgminer_true_count, executed_sentence, kgminer_accuracy])
         print accuracy
 
-    if kgminer_evaluation:
+    if kgminer_evaluation and kr:
         print kgminer_evaluation
         with open('dataset/'+ data_source + '/kgminer_evaluation.csv', 'wb') as csvfile:
+            datawriter = csv.writer(csvfile)
+            datawriter.writerows(kgminer_evaluation)
+    else:
+        print kgminer_evaluation
+        with open('dataset/' + data_source + '/kgminer_random_evaluation.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(kgminer_evaluation)
 
@@ -286,6 +318,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", default='sentences_test.csv')
     parser.add_argument("-k", "--kgminer", default=False)
+    parser.add_argument("-kr", "--kgminer_random", default=True)
     parser.add_argument("-l", "--lpmln", default=False)
     parser.add_argument("-t", "--test_data", default='sample_case')
     parser.add_argument("-s", "--sentence", default='')
@@ -311,6 +344,7 @@ if __name__ == "__main__":
             load_mappings = True
         else:
             load_mappings = False
-        fact_checker(sentences_list, id_list, true_label, load_mappings, triple_flag=False, ambiverse_flag=False,\
-                     kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False,\
-                     KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False, data_source=args.test_data)
+        fact_checker(sentences_list, id_list, true_label, load_mappings, triple_flag=False, ambiverse_flag=False, \
+                     kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False, \
+                     KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False, data_source=args.test_data, \
+                     kr=args.kgminer_random, kgminer_output_random_flag=False)

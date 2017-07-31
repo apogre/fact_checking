@@ -1,5 +1,1 @@
-story(je,to).
-link_from_a_wikipage_to_another_wikipage(ge,je).
-film_director(br,to).
-link_from_a_wikipage_to_another_wikipage(ge,br).
 cast_member(to,ge).

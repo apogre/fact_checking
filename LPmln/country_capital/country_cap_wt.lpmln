@@ -1,0 +1,5 @@
+1.0 is_in_the_administrative_territorial_entity(B,A) :- capital(A,B).
+0.99 contains_administrative_territorial_entity(A,B) :- capital(A,B).
+0.99 capital(B,F) :-  headquarter(A,F)  , legislature(A,B).
+0.99 capital(B,F)  :- location(A,F), legislature(A,B).
+0.99 assembly(A,F) :- capital(B,F),  assembly(A,B).

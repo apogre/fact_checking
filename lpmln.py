@@ -1,12 +1,13 @@
 import csv
 import sys
-from config import evidence_threshold, rule_threshold
+from config import evidence_threshold, rule_threshold, unwanted_predicates
 import subprocess
 import re
 from nltk.stem.wordnet import WordNetLemmatizer
 from ordered_set import OrderedSet
-from kb_query import relation_extractor_0hop, relation_extractor_1hop, relation_extractor_2hop
+from kb_query import relation_extractor_0hop, relation_extractor_1hop, relation_extractor_2hop, distance_one_query, distance_two_query
 from os import path, remove, mkdir
+from more_itertools import unique_everseen
 
 
 lemmatizer = WordNetLemmatizer()
@@ -22,10 +23,12 @@ def get_rules(poi, data_source):
                 print row['Rule'],   row['PCA Confidence']
 
 
-def relation_extractor_triples(resources, triples, predicate_dict):
+def relation_extractor_triples(resources, triples):
     relation = []
     relation_0 = []
     relation_2 = []
+    distance_two = []
+    unique_predicates = []
     for triple_k, triples_v in triples.iteritems():
         for triple_v in triples_v:
             item1_v = resources.get(triple_v[0])
@@ -37,13 +40,24 @@ def relation_extractor_triples(resources, triples, predicate_dict):
                 wikidata_id2 = item2_v.get('wikidata_id')
                 score1 = item1_v.get('confidence')
                 score2 = item2_v.get('confidence')
-                relation = relation_extractor_1hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation, predicate_dict)
-                relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, predicate_dict)
-                relation_0 = relation_extractor_0hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0)
-                relation_0 = relation_extractor_0hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0)
-                relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_2)
-                relation_2 = relation_extractor_2hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_2)
-    return relation, relation_0, relation_2
+                distance_two, unique_predicates = distance_two_query('dbpedia', dbpedia_id1, distance_two, unique_predicates)
+                # distance_one_query('wikidata', wikidata_id1,distance_one, unique_predicates)
+                distance_two, unique_predicates = distance_two_query('dbpedia', dbpedia_id2, distance_two, unique_predicates)
+
+                # distance_one_query('wikidata', wikidata_id2,distance_one, unique_predicates)
+                # print distance_one
+                # print len(distance_one)
+                # print unique_predicates
+                # print len(unique_predicates)
+                # print len(unique_predicates)- len(unwanted_predicates)
+                #
+                # relation = relation_extractor_1hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation, predicate_dict)
+                # relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, predicate_dict)
+                # relation_0 = relation_extractor_0hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0)
+                # relation_0 = relation_extractor_0hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0)
+                # relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_2)
+                # relation_2 = relation_extractor_2hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_2)
+    return relation, relation_0, relation_2, distance_two
 
 
 def inference(sentence_id, data_source):
@@ -125,3 +139,14 @@ def evidence_writer(sorted_predicates, sentence_id, data_source):
                         pass
 
 
+def amie_tsv(item_set, data_source):
+    with open('LPmln/' + data_source + '/' +data_source + '_full.tsv', 'wb') as csvfile:
+        datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='\t', skipinitialspace=True)
+        for i in item_set:
+            try:
+                datawriter.writerow(i)
+            except:
+                pass
+    with open('LPmln/' + data_source + '/' +data_source + '_full.tsv', 'r') as f, \
+            open('LPmln/' + data_source + '/' +data_source + '_unique.tsv', 'w') as out_file:
+        out_file.writelines(unique_everseen(f))

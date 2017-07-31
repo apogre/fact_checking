@@ -13,7 +13,7 @@ def json_serial(obj):
 
 def update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, kgminer_output_flag, \
                      file_triples, ambiverse_resources, possible_kgminer_predicate, lpmln_predicate, kgminer_output,\
-                     lpmln_output_flag, data_source):
+                     lpmln_output_flag, data_source, kgminer_random_output_flag, kgminer_output_random):
     if triple_flag:
         print "Updating Relation Triples"
         if path.isfile('dataset/' + data_source + '/triples_raw.json'):
@@ -48,6 +48,13 @@ def update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_
             remove('dataset/' + data_source + '/kgminer_output.json')
         with open('dataset/' + data_source + '/kgminer_output.json', 'w') as fp:
             json.dump(kgminer_output, fp, default=json_serial)
+
+    if kgminer_random_output_flag:
+        print "Updating KGMiner Random Output"
+        if path.isfile('dataset/' + data_source + '/kgminer_output_random.json'):
+            remove('dataset/' + data_source + '/kgminer_output_random.json')
+        with open('dataset/' + data_source + '/kgminer_output_random.json', 'w') as fp:
+            json.dump(kgminer_output_random, fp, default=json_serial)
 
     if lpmln_output_flag:
         print "Updating LPmln Output"

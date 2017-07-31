@@ -1,0 +1,12 @@
+
+7.3 spouse(A,B) :- spouse(B,A).
+
+0.8 spouse(A,B) :- child(C,A), child(C,B).
+
+0.4 spouse(A,B) :- parent(A,C), child(C,B).
+
+
+child(ma,ba).
+child(na,ba).
+child(ma,mi).
+child(na,mi).

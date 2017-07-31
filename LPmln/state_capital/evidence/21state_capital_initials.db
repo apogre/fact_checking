@@ -1,0 +1,2 @@
+country(un,sa).
+contains_administrative_territorial_entity(wi,un).

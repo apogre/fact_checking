@@ -1,7 +1,3 @@
-relation(Jim_Hanks,Tom_Hanks).
-link_from_a_wikipage_to_another_wikipage(Forrest_Gump,Jim_Hanks).
-film_director(Robert_Zemeckis,Forrest_Gump).
-link_from_a_wikipage_to_another_wikipage(Tom_Hanks,Robert_Zemeckis).
-cast_member(Elizabeth_Hanks,Forrest_Gump).
+starring(Elizabeth_Hanks,Forrest_Gump).
 father(Tom_Hanks,Elizabeth_Hanks).
 cast_member(Forrest_Gump,Tom_Hanks).

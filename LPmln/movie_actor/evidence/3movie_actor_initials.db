@@ -1,11 +1,3 @@
-cinematography(ro,ar).
-link_from_a_wikipage_to_another_wikipage(be,ro).
-editing(wi,ar).
-link_from_a_wikipage_to_another_wikipage(be,wi).
-writer(ch,ar).
-link_from_a_wikipage_to_another_wikipage(be,ch).
-producer(gr,ar).
-link_from_a_wikipage_to_another_wikipage(be,gr).
 director(ar,be).
 producer(ar,be).
 cast_member(ar,be).

@@ -22,11 +22,12 @@ def triple_filter(ent, triples):
     entity_set = [x[0].encode('utf-8') for x in ent]
     if len(entity_set) < 2:
         for triple in triples:
-            if entity_set[0] in triple:
-                triple_dict[triple[1]] = [[triple[0], triple[2]]]
+            if triple[1].encode('utf-8') not in aux_verb:
+                if entity_set[0] in triple:
+                    triple_dict[triple[1]] = [[triple[0], triple[2]]]
     else:
         for triple in triples:
-            if triple[1] not in aux_verb:
+            if triple[1].encode('utf-8') not in aux_verb:
                 key1 = [ent for ent in entity_set if ent in triple[0]]
                 key2 = [ent for ent in entity_set if ent in triple[2]]
                 if key1 and key2:
@@ -91,7 +92,7 @@ def triples_extractor(sentence, named_entities):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--sentence", default='Priscilla Chan attended Harvard University.')
+    parser.add_argument("-s", "--sentence", default='Jack Dorsey is the founder of Twitter.')
     args = parser.parse_args()
     sentence_lis = [args.sentence]
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]

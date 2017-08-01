@@ -3,8 +3,10 @@ from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
 from kb_query import get_entity_type, get_description, get_kgminer_predicates, resource_extractor
 from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data
-from kgminer import get_training_set, invoke_kgminer
+from kgminer import get_training_set, invoke_kgminer, get_perfect_training, poi_writer, entity_id_finder, train_data_csv, \
+    csv_writer
 from gensim.models import Word2Vec
+from shutil import copyfile
 from nltk import word_tokenize
 from os import environ, listdir, remove
 import operator
@@ -91,7 +93,7 @@ def predicate_ranker(predicates, triple):
 
 def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
                  lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source, kr, \
-                 kgminer_output_random_flag, kp):
+                 kgminer_output_random_flag, kp, kgminer_output_perfect_flag):
     file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output, \
     kgminer_output_random, kgminer_output_perfect = load_files(data_source)
     sentence_count = len(sentence_lis)
@@ -171,7 +173,6 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             if kgminer_predicate_ranked:
                 kg_output = []
                 print "Link Prediction with KG_Miner"
-                print kr
                 if kr:
                     if sentence_id not in kgminer_output_random.keys():
                         kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full,
@@ -187,23 +188,34 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                                 print "kgminer random failed"
                     else:
                         print kgminer_output_random[sentence_id]
-                        kg_output = kgminer_output[sentence_id].values()
+                        kg_output = kgminer_output_random[sentence_id].values()
                 elif kp:
                     if sentence_id not in kgminer_output_perfect.keys():
-                        kgminer_status = get_training_set(kgminer_predicate_ranked, type_resource_full,
-                                                          type_ontology_full, \
-                                                          triple_dict, resource, sentence_id, data_source, kr)
-                        if kgminer_status:
-                            predicate_result = invoke_kgminer()
-                            if predicate_result:
-                                kg_output = predicate_result.values()
-                                kgminer_output_random[sentence_id] = predicate_result
-                                kgminer_output_random_flag = True
-                            else:
-                                print "kgminer random failed"
+                        training_set, test_data, resource_v = get_perfect_training(data_source, resource, triple_dict)
+                        print resource_v
+                        predicate_set = kgminer_predicate_ranked.values()
+                        for predicate_of_interest in predicate_set[0][:10]:
+                            if None not in test_data and predicate_of_interest:
+                                poi = predicate_of_interest[0]
+                                print poi
+                                poi_writer(poi, sentence_id, data_source)
+                                node_ids = entity_id_finder(training_set)
+                                training_data, test_data = train_data_csv(training_set, node_ids, resource_v)
+                                csv_writer(training_data,
+                                           file_name=data_source + '/' + sentence_id + data_source + 'perfect_ids')
+                                copyfile(KGMiner_data + '/' + data_source + '/' + sentence_id + data_source +\
+                                         'perfect_ids.csv', KGMiner_data + '/' + 'training_data.csv')
+                                predicate_result = invoke_kgminer()
+                                if predicate_result:
+                                    kg_output = predicate_result.values()
+                                    kgminer_output_perfect[sentence_id] = predicate_result
+                                    kgminer_output_perfect_flag = True
+                                    break
+                                else:
+                                    print "kgminer random failed"
                     else:
-                        print kgminer_output_random[sentence_id]
-                        kg_output = kgminer_output[sentence_id].values()
+                        print kgminer_output_perfect[sentence_id]
+                        kg_output = kgminer_output_perfect[sentence_id].values()
                 else:
                     if sentence_id not in kgminer_output.keys():
                         if kgminer_predicate_ranked.values():
@@ -293,7 +305,7 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
-                         kgminer_output_random)
+                         kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect)
 
     amie_tsv(amie_training, data_source)
 
@@ -364,4 +376,5 @@ if __name__ == "__main__":
         fact_checker(sentences_list, id_list, true_label, load_mappings, triple_flag=False, ambiverse_flag=False, \
                      kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False, \
                      KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False, data_source=args.test_data, \
-                     kr=args.kgminer_random, kgminer_output_random_flag=False, kp=args.kgminer_perfect)
+                     kr=args.kgminer_random, kgminer_output_random_flag=False, kp=args.kgminer_perfect, \
+                     kgminer_output_perfect_flag = False)

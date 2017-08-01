@@ -88,7 +88,7 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 print test_data
                 predicate_set = predicate_ranked.values()
                 for predicate_of_interest in predicate_set[0][:10]:
-                    if None not in test_data and predicate_of_interest and kgminer_status == False:
+                    if None not in test_data and predicate_of_interest and kgminer_status is False:
                         poi = predicate_of_interest[0]
                         print poi
                         poi_writer(poi, sentence_id, data_source)
@@ -117,6 +117,27 @@ def get_training_set(predicate_ranked, resource_type_set_ranked, ontology_thresh
                 print "Ambiverse Error"
         return kgminer_status
     return False
+
+
+def get_perfect_training(data_source, resource_ids, triple_dict):
+    global load_encodings, nodes_id, edge_id
+    if load_encodings:
+        print "Loading Nodes & Edges Id"
+        nodes_id, edge_id = load_kgminer_resource()
+        load_encodings = False
+    res = []
+    for triples_k, triples_v in triple_dict.iteritems():
+        for triple_v in triples_v:
+            resource_v = [resource_ids.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
+            test_data = get_test_data(resource_v)
+            csv_writer([test_data], file_name='test_data')
+    print test_data
+    with open(KGMiner_data + '/' + data_source + '/perfect_' + data_source + '.csv', 'rb') as csvfile:
+        rows = csv.reader(csvfile)
+        for row in rows:
+            res.append(row)
+        training_set = sum(res, [])
+    return training_set, test_data, resource_v
 
 
 def get_test_data(resource_v):

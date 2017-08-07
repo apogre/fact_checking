@@ -261,28 +261,29 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 print "Loading DBpedia to Wikidata Mappings"
                 predicate_dict = load_lpmln_resource()
                 load_mappings = False
-            relation_ent, relation_ent_0, relation_ent_2, distance_one = relation_extractor_triples(resource,\
-                                                                                                    triple_dict)
-            amie_training.extend(distance_one)
+            # relation_ent, relation_ent_0, relation_ent_2, distance_one = relation_extractor_triples(resource,\
+            #                                                                                         triple_dict)
+            # amie_training.extend(distance_one)
             if sentence_id not in lpmln_predicate.keys():
                 sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2, distance_two = relation_extractor_triples(resource, triple_dict)
-                amie_training.extend(distance_two)
-                print relation_ent
-                print relation_ent_0
-                print relation_ent_2
-                # print distance_one
-                relation_ent += relation_ent_0
-                if relation_ent:
-                    unique_predicates = [evidence[1] for evidence in relation_ent]
-                    unique_predicates = list(set(unique_predicates))
-                    print unique_predicates
-                    relation = triple_dict.keys()[0]
-                    scored_predicates = [[unique_predicate, word2vec_score_dummy(unique_predicate, relation)] for unique_predicate \
-                                         in unique_predicates]
-                    predicate_dict = dict(scored_predicates)
-                    for ev in relation_ent:
-                        ev.append(predicate_dict.get(ev[1], 0))
+                # amie_training.extend(distance_two)
+                print distance_two
+                # relation_ent += relation_ent_0
+                if distance_two:
+                    for evidence in distance_two:
+                        if evidence[1] in rule_predicates:
+
+                    # unique_predicates = [evidence[1] for evidence in distance_two]
+                    # unique_predicates = list(set(unique_predicates))
+                    # print unique_predicates
+                    sys.exit(0)
+                    # relation = triple_dict.keys()[0]
+                    # scored_predicates = [[unique_predicate, word2vec_score_dummy(unique_predicate, relation)] for unique_predicate \
+                    #                      in unique_predicates]
+                    # predicate_dict = dict(scored_predicates)
+                    # for ev in relation_ent:
+                    #     ev.append(predicate_dict.get(ev[1], 0))
                     sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
                     lpmln_predicate[sentence_id] = sorted_predicates
                     lpmln_predicate_flag = True
@@ -307,7 +308,7 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
                          kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect)
 
-    amie_tsv(amie_training, data_source)
+    # amie_tsv(amie_training, data_source)
 
     if KGMiner:
         kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)

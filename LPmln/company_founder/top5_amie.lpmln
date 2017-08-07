@@ -1,0 +1,9 @@
+0.425531915 founders(A,B) :- founders(A,F), name(B,F) .
+
+0.425531915 founders(A,B) :- founders(A,F) , name(F,B).
+
+0.361702128 founders(A,B) :- founded_by(A,B) .
+
+0.255319149 founders(A,B) :- founded_by(A,F), name(B,F). 
+
+0.255319149 founders(A,B) :- founded_by(A,F), name(F,B).

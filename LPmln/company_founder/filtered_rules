@@ -1,0 +1,10 @@
+?a  founders  ?f  ?b  name  ?f   => ?a  founders  ?b	0.425531915
+?a  founders  ?f  ?f  name  ?b   => ?a  founders  ?b	0.425531915
+?a  founded_by  ?b   => ?a  founders  ?b	0.361702128
+?a  founded_by  ?f  ?b  name  ?f   => ?a  founders  ?b	0.255319149
+?a  founded_by  ?f  ?f  name  ?b   => ?a  founders  ?b	0.255319149
+?b  known_for  ?a   => ?a  founders  ?b	0.191489362
+?a  key_person  ?b   => ?a  founders  ?b	0.170212766
+?a  key_people  ?b   => ?a  founders  ?b	0.170212766
+?a  founded_by  ?b  ?b  known_for  ?a   => ?a  founders  ?b	0.127659574
+?a  key_person  ?f  ?b  name  ?f   => ?a  founders  ?b	0.127659574

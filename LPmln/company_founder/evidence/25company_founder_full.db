@@ -1,0 +1,9 @@
+name(San_Francisco,San_Francisco,_California).
+name(University_of_California,_Los_Angeles,University_of_California,_Los_Angeles).
+name(Los_Angeles,Old_Los_Angeles).
+known_for(Travis_Kalanick,Uber_(company)).
+name(California,SubA).
+founders(Ubereats,Travis_Kalanick).
+known_for(David_Krane,Uber_(company)).
+known_for(Garrett_Camp,Innovation,_entrepreneurship).
+founders(Uber_(company),Travis_Kalanick).

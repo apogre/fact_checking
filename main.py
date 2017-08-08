@@ -2,7 +2,7 @@ from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
 from kb_query import get_entity_type, get_description, get_kgminer_predicates, resource_extractor
-from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data
+from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, rule_predicates
 from kgminer import get_training_set, invoke_kgminer, get_perfect_training, poi_writer, entity_id_finder, train_data_csv, \
     csv_writer
 from gensim.models import Word2Vec
@@ -15,7 +15,7 @@ import argparse
 import sys
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, evidence_writer, inference, get_rules, amie_tsv
+from lpmln import relation_extractor_triples, evidence_writer, inference, get_rules, amie_tsv, evidence_writer1
 from resource_writer import update_resources
 
 load_word2vec = True
@@ -265,44 +265,48 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             #                                                                                         triple_dict)
             # amie_training.extend(distance_one)
             if sentence_id not in lpmln_predicate.keys():
+                filtered_evidence = []
                 sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2, distance_two = relation_extractor_triples(resource, triple_dict)
                 # amie_training.extend(distance_two)
-                print distance_two
+                # print distance_two
                 # relation_ent += relation_ent_0
                 if distance_two:
                     for evidence in distance_two:
                         if evidence[1] in rule_predicates:
-
+                            filtered_evidence.append(evidence)
+                    abc = dict((x[0], x) for x in filtered_evidence).values()
+                    # print abc
+                    evidence_writer1(abc, sentence_id, data_source)
                     # unique_predicates = [evidence[1] for evidence in distance_two]
                     # unique_predicates = list(set(unique_predicates))
                     # print unique_predicates
-                    sys.exit(0)
+                    # sys.exit(0)
                     # relation = triple_dict.keys()[0]
                     # scored_predicates = [[unique_predicate, word2vec_score_dummy(unique_predicate, relation)] for unique_predicate \
                     #                      in unique_predicates]
                     # predicate_dict = dict(scored_predicates)
                     # for ev in relation_ent:
                     #     ev.append(predicate_dict.get(ev[1], 0))
-                    sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
-                    lpmln_predicate[sentence_id] = sorted_predicates
-                    lpmln_predicate_flag = True
-            else:
-                sorted_predicates = lpmln_predicate.get(sentence_id, {})
-            print sorted_predicates
-            if sentence_id not in lpmln_output.keys():
-                if sorted_predicates:
-                    evidence_writer(sorted_predicates, sentence_id, data_source)
-                    # get_rules(predicate_of_interest)
-                    # probability = inference(sentence_id, data_source)
-                    probability = [1]
-                    print probability
-                else:
-                    probability = 'Evidence Not Found'
-            else:
-                probability = lpmln_output[sentence_id]
-            lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
-            print probability
+            #         sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
+            #         lpmln_predicate[sentence_id] = sorted_predicates
+            #         lpmln_predicate_flag = True
+            # else:
+            #     sorted_predicates = lpmln_predicate.get(sentence_id, {})
+            # print sorted_predicates
+            # if sentence_id not in lpmln_output.keys():
+            #     if sorted_predicates:
+            #         # evidence_writer(sorted_predicates, sentence_id, data_source)
+            #         # get_rules(predicate_of_interest)
+            #         # probability = inference(sentence_id, data_source)
+            #         probability = [1]
+            #         print probability
+            #     else:
+            #         probability = 'Evidence Not Found'
+            # else:
+            #     probability = lpmln_output[sentence_id]
+            # lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
+            # print probability
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \

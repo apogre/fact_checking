@@ -4,6 +4,9 @@ unwanted_predicates = [u'thumbnail', u'person function', u'c',u'b',u's',u'n',u'v
                        u'signature alt', u'species', u'voy', u'wikt', u'Guests', u'align', u'image', u'image caption',\
                        u'image size', u'logo', u'logo size']
 
+rule_predicates = ['founders', 'name', 'subsid', 'key_people', 'known_for', 'birth_place', \
+                   'foundation_place']
+
 rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4
 evidence_threshold = 0

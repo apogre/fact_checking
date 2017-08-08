@@ -1,0 +1,16 @@
+known_for(Martin_Eberhard,Tesla_Motors).
+known_for(Elon_Musk,Tesla_Motors).
+birth_place(MacKenzie_Bezos,San_Francisco,_California,_US).
+name(Palo_Alto,_California,Palo_Alto).
+name(Albuquerque,_New_Mexico,Albuquerque,_New_Mexico).
+birth_place(Jeff_Bezos,Albuquerque,_New_Mexico).
+key_people(@WalmartLabs,Jeff_Bezos).
+founders(Tesla_Motors,JB_Straubel).
+founders(SolarCity,Elon_Musk).
+name(Princeton_University,Princeton_University).
+subsid(Amazon.com,a2z,_A9.com,_Amazon_Web_Services,_Alexa_Internet,_Audible.com,_comiXology,_Digital_Photography_Review,_Goodreads,_Internet_Movie_Database,_Junglee.com,_Twitch,_Zappos).
+key_people(SpaceX,Elon_Musk).
+known_for(JB_Straubel,Tesla_Motors).
+name(Car,Car).
+known_for(Fred_Hiatt,The_Washington_Post).
+known_for(Franz_von_Holzhausen,Tesla_Model_S).

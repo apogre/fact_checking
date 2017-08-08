@@ -1,5 +1,0 @@
-before(gi,st).
-known_for(ap,gi).
-title(ap,gi).
-after(ti,st).
-employer(ap,ti).

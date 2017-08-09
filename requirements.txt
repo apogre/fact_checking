@@ -6,4 +6,5 @@ pandas
 ftfy==4.4.2
 gensim
 ordered_set
-spotlight
+pyspotlight
+more_itertools

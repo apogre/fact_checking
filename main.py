@@ -275,9 +275,9 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                     for evidence in distance_two:
                         if evidence[1] in rule_predicates:
                             filtered_evidence.append(evidence)
-                    abc = dict((x[0], x) for x in filtered_evidence).values()
+                    sorted_predicates = dict((x[0], x) for x in filtered_evidence).values()
                     # print abc
-                    evidence_writer1(abc, sentence_id, data_source)
+                    evidence_writer1(sorted_predicates, sentence_id, data_source)
                     # unique_predicates = [evidence[1] for evidence in distance_two]
                     # unique_predicates = list(set(unique_predicates))
                     # print unique_predicates
@@ -289,24 +289,19 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                     # for ev in relation_ent:
                     #     ev.append(predicate_dict.get(ev[1], 0))
             #         sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
-            #         lpmln_predicate[sentence_id] = sorted_predicates
-            #         lpmln_predicate_flag = True
-            # else:
-            #     sorted_predicates = lpmln_predicate.get(sentence_id, {})
-            # print sorted_predicates
-            # if sentence_id not in lpmln_output.keys():
-            #     if sorted_predicates:
-            #         # evidence_writer(sorted_predicates, sentence_id, data_source)
+                    lpmln_predicate[sentence_id] = sorted_predicates
+                    lpmln_predicate_flag = True
+            else:
+                sorted_predicates = lpmln_predicate.get(sentence_id, {})
+            print sorted_predicates
+            if sentence_id not in lpmln_output.keys():
             #         # get_rules(predicate_of_interest)
-            #         # probability = inference(sentence_id, data_source)
+                probability = inference(sentence_id, data_source)
             #         probability = [1]
-            #         print probability
-            #     else:
-            #         probability = 'Evidence Not Found'
-            # else:
-            #     probability = lpmln_output[sentence_id]
-            # lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
-            # print probability
+            else:
+                probability = lpmln_output[sentence_id]
+            lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
+            print probability
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \

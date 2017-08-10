@@ -268,40 +268,27 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 filtered_evidence = []
                 sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2, distance_two = relation_extractor_triples(resource, triple_dict)
-                # amie_training.extend(distance_two)
-                # print distance_two
-                # relation_ent += relation_ent_0
                 if distance_two:
                     for evidence in distance_two:
-                        if evidence[1] in rule_predicates:
-                            filtered_evidence.append(evidence)
+                        # if evidence[1] in rule_predicates:
+                        filtered_evidence.append(evidence)
                     sorted_predicates = dict((x[0], x) for x in filtered_evidence).values()
-                    # print abc
                     evidence_writer1(sorted_predicates, sentence_id, data_source)
-                    # unique_predicates = [evidence[1] for evidence in distance_two]
-                    # unique_predicates = list(set(unique_predicates))
-                    # print unique_predicates
-                    # sys.exit(0)
-                    # relation = triple_dict.keys()[0]
-                    # scored_predicates = [[unique_predicate, word2vec_score_dummy(unique_predicate, relation)] for unique_predicate \
-                    #                      in unique_predicates]
-                    # predicate_dict = dict(scored_predicates)
-                    # for ev in relation_ent:
-                    #     ev.append(predicate_dict.get(ev[1], 0))
-            #         sorted_predicates = sorted(relation_ent, key=operator.itemgetter(4), reverse=True)
+                    sys.exit(0)
                     lpmln_predicate[sentence_id] = sorted_predicates
                     lpmln_predicate_flag = True
             else:
+                print "Loading Stored Evidence"
                 sorted_predicates = lpmln_predicate.get(sentence_id, {})
             print sorted_predicates
-            if sentence_id not in lpmln_output.keys():
-            #         # get_rules(predicate_of_interest)
-                probability = inference(sentence_id, data_source)
-            #         probability = [1]
-            else:
-                probability = lpmln_output[sentence_id]
-            lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
-            print probability
+        #     if sentence_id not in lpmln_output.keys():
+        #     #         # get_rules(predicate_of_interest)
+        #         probability = inference(sentence_id, data_source)
+        #     #         probability = [1]
+        #     else:
+        #         probability = lpmln_output[sentence_id]
+        #     lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
+        #     print probability
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \

@@ -86,26 +86,22 @@ def distance_one_query(kb, id1, distance_one, unique_predicates):
 
 
 def distance_two_query(kb, id1, distance_two, unique_predicates):
+    print "Distance Two Query"
     if kb == 'wikidata':
         sparql_endpoint = sparql_wikidata
         query = (prefixes_wikidata+' SELECT distinct ?propLabel ?id2Label WHERE { entity:'+id1+' ?p ?id2 . '+ suffixes_wikidata_0 \
                  + ' }')
         query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?id2Label WHERE { ?id2 ?p entity:'+id1 + ' . ' + \
-                      suffixes_wikidata_0 + 'FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), \
-                      "abstract","i")) . }')
+                      suffixes_wikidata_0)
     if kb == 'dbpedia':
         sparql_endpoint = sparql_dbpedia
         # if ',' in id1:
         query = (prefixes_dbpedia + ' SELECT distinct ?pl ?id2 ?pl1 ?id3 WHERE { <http://dbpedia.org/resource/' + \
                  id1 + '> ?p ?id2 . ?id2 ?p1 ?id3 . ' + suffixes_dbpedia_0 + ' ?p1 rdfs:label ?pl1 . \
-                 FILTER langMatches( lang(?pl1), "EN" ) . FILTER (!regex(str(?pl1), "Same","i")) .  \
-                 FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), "abstract","i")) . \
-                 FILTER (!regex(str(?pl1), "Wikipage","i")) . FILTER (!regex(str(?pl1), "abstract","i")) . }')
+                 FILTER langMatches( lang(?pl1), "EN" ) . }')
         query_back = (prefixes_dbpedia + ' SELECT distinct ?pl ?id2 ?pl1 ?id3 WHERE { \
         ?id3 ?p1 ?id2 . ?id2 ?p <http://dbpedia.org/resource/' + id1 + '> . ' + suffixes_dbpedia_0 + ' ?p1 rdfs:label ?pl1 .\
-        FILTER langMatches( lang(?pl1), "EN" ) . FILTER (!regex(str(?pl1), "Same","i")) .  \
-        FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), "abstract","i")) . \
-        FILTER (!regex(str(?pl1), "Wikipage","i")) . FILTER (!regex(str(?pl1), "abstract","i")) .  }')
+        FILTER langMatches( lang(?pl1), "EN" ) . }')
         # else:
         #     query = (prefixes_dbpedia+' SELECT distinct ?pl ?id2 WHERE { entity:'+id1+' ?p  ?id2 . ' + suffixes_dbpedia_0 + \
         #              ' FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), "abstract","i")) . }')

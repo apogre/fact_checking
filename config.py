@@ -15,4 +15,7 @@ rule_threshold = 0.15
 sparql_dbpedia_local = 'http://10.218.108.227:8890/sparql'
 sparql_dbpedia_on = 'http://10.218.108.227:8890/sparql'
 sparql_dbpedia = 'http://10.218.108.227:8890/sparql'
+# sparql_dbpedia_local = 'http://dbpedia.org/sparql'
+# sparql_dbpedia_on = 'http://dbpedia.org/sparql'
+# sparql_dbpedia = 'http://dbpedia.org/sparql'
 sparql_wikidata = 'https://query.wikidata.org/sparql'

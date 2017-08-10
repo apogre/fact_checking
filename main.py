@@ -266,21 +266,18 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             # amie_training.extend(distance_one)
             if sentence_id not in lpmln_predicate.keys():
                 filtered_evidence = []
-                sorted_predicates = []
                 relation_ent, relation_ent_0, relation_ent_2, distance_two = relation_extractor_triples(resource, triple_dict)
                 if distance_two:
                     for evidence in distance_two:
-                        # if evidence[1] in rule_predicates:
-                        filtered_evidence.append(evidence)
-                    sorted_predicates = dict((x[0], x) for x in filtered_evidence).values()
-                    evidence_writer1(sorted_predicates, sentence_id, data_source)
-                    sys.exit(0)
-                    lpmln_predicate[sentence_id] = sorted_predicates
+                        if evidence[1] in rule_predicates:
+                            filtered_evidence.append(evidence)
+                    item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
+                    lpmln_predicate[sentence_id] = list(item_set)
                     lpmln_predicate_flag = True
             else:
                 print "Loading Stored Evidence"
-                sorted_predicates = lpmln_predicate.get(sentence_id, {})
-            print sorted_predicates
+                item_set = lpmln_predicate.get(sentence_id, {})
+            print item_set
         #     if sentence_id not in lpmln_output.keys():
         #     #         # get_rules(predicate_of_interest)
         #         probability = inference(sentence_id, data_source)

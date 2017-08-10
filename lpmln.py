@@ -84,7 +84,6 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
     maps_set = []
     count = 1
     for evidence in filtered_evidence:
-        print evidence
         if evidence[0] not in entity_mapping.keys():
             if evidence[0][:2] not in maps_set:
                 entity_mapping[evidence[0]] = evidence[0][:2]
@@ -94,7 +93,6 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
                 maps_set.append(str(evidence[0][:2]) + str(count))
                 count += 1
         if evidence[2] not in entity_mapping.keys():
-            if isinstance(evidence[2], basestring) > 1:
                 if evidence[2][:2] not in maps_set:
                     entity_mapping[evidence[2]] = evidence[2][:2]
                     maps_set.append(evidence[2][:2])
@@ -102,16 +100,13 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
                     entity_mapping[evidence[2]] = str(evidence[2][:2]) + str(count)
                     maps_set.append(str(evidence[2][:2]) + str(count))
                     count += 1
-            else:
-                entity_mapping[evidence[2]] = evidence[2]
-                maps_set.append(evidence[2])
         rel_set = [r.replace(' ', '_') if isinstance(r, basestring) else str(r) for r in evidence]
-        print rel_set
         # item_set.add(lemmatizer.lemmatize(rel_set[1].lower()) + '(' + rel_set[0] + ',' + rel_set[2] + ').')
         item_set.add(rel_set[1].lower() + '(' + rel_set[0] + ',' + rel_set[2] + ').')
         item_set_initials.add(rel_set[1].lower() + '(' + entity_mapping.get(evidence[0], '').lower() + \
-                              ',' + entity_mapping.get(str(evidence[2]), '').lower() + ').')
-    print item_set
+                              ',' + entity_mapping.get(evidence[2], '').lower() + ').')
+    # print item_set
+    # sys.exit()
     if not path.isdir('LPmln/' + data_source):
         mkdir('LPmln/' + data_source)
         mkdir('LPmln/' + data_source + '/evidence/')
@@ -128,13 +123,14 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
         # datawriter.writerows([[i] for i in item_set_initials])
         for i in item_set_initials:
             try:
-                if '&' not in i:
+                if '&' not in i and '*' not in i:
                     datawriter.writerow([i])
             except:
                 pass
     inv_map = {v: k for k, v in entity_mapping.iteritems()}
     with open('LPmln/' + data_source + '/evidence/' + sentence_id + '_mappings.json', 'wb') as fp:
         json.dump(inv_map, fp, default=json_serial)
+    return item_set
 
 
 def evidence_writer(sorted_predicates, sentence_id, data_source):

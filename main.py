@@ -169,6 +169,9 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
         # print "Ranked Predicates"
         # print kgminer_predicate_ranked
+        for triples_k, triples_v in triple_dict.iteritems():
+            for triple_v in triples_v:
+                resource_v = [resource.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
         if KGMiner:
             if kgminer_predicate_ranked:
                 kg_output = []
@@ -270,7 +273,8 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 if distance_two:
                     for evidence in distance_two:
                         if evidence[1] in rule_predicates:
-                            filtered_evidence.append(evidence)
+                            if evidence[0] in resource_v or evidence[2] in resource_v:
+                                filtered_evidence.append(evidence)
                     item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
                     lpmln_predicate[sentence_id] = list(item_set)
                     lpmln_predicate_flag = True

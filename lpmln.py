@@ -103,10 +103,9 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
         rel_set = [r.replace(' ', '_') if isinstance(r, basestring) else str(r) for r in evidence]
         # item_set.add(lemmatizer.lemmatize(rel_set[1].lower()) + '(' + rel_set[0] + ',' + rel_set[2] + ').')
         item_set.add(rel_set[1].lower() + '(' + rel_set[0] + ',' + rel_set[2] + ').')
-        item_set_initials.add(rel_set[1].lower() + '(' + entity_mapping.get(evidence[0], '').lower() + \
-                              ',' + entity_mapping.get(evidence[2], '').lower() + ').')
-    # print item_set
-    # sys.exit()
+        item_set_initials.add(rel_set[1].lower() + '("' + entity_mapping.get(evidence[0], '').lower() + \
+                              '","' + entity_mapping.get(evidence[2], '').lower() + '").')
+    # print item_set_initials
     if not path.isdir('LPmln/' + data_source):
         mkdir('LPmln/' + data_source)
         mkdir('LPmln/' + data_source + '/evidence/')
@@ -119,14 +118,16 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
                 pass
 
     with open('LPmln/' + data_source + '/evidence/' + sentence_id + data_source + '_initials.db', 'wb') as csvfile:
-        datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter=' ', skipinitialspace=True)
+        datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='|', skipinitialspace=True)
         # datawriter.writerows([[i] for i in item_set_initials])
         for i in item_set_initials:
-            try:
-                if '&' not in i and '*' not in i:
-                    datawriter.writerow([i])
-            except:
-                pass
+            # try:
+            if '&' not in i and '*' not in i:
+                datawriter.writerow([i])
+                print i
+            # except:
+            #     pass
+    sys.exit()
     inv_map = {v: k for k, v in entity_mapping.iteritems()}
     with open('LPmln/' + data_source + '/evidence/' + sentence_id + '_mappings.json', 'wb') as fp:
         json.dump(inv_map, fp, default=json_serial)

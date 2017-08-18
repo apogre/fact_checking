@@ -1,9 +1,9 @@
-0.41 founders(A,B) :- founders(E,B), name(E,A) .
+0.4 founders(A,B) :- founders(E,B), name(E,A) .
 
-0.38 founders(A,B) :- subsid(E,A) , key_people(E,B).
+0.3 founders(A,B) :- subsid(E,A) , key_people(E,B).
 
-0.34 founders(A,B) :- known_for(B,A) .
+0.3 founders(A,B) :- known_for(B,A) .
 
-0.28 founders(A,B) :- birth_place(B,F), foundation_place(A,F). 
+0.2 founders(A,B) :- birth_place(B,F), foundation_place(A,F). 
 
-0.27 founders(A,B) :- known_for(E,A), name(E,B).
+0.2 founders(A,B) :- known_for(E,A), name(E,B).

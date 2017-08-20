@@ -12,7 +12,6 @@ founders(ca,go).
 key_people(go1,la).
 key_people(al,la).
 key_people(pl,la).
-founders(go,la).
 founders(al,la).
 founders(x_,la).
 name(la,la2).

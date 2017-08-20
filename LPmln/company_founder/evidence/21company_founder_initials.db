@@ -5,6 +5,5 @@ foundation_place(am,un).
 foundation_place(am,wa).
 foundation_place(am,se).
 subsid(am,a2).
-key_people(@w,je).
 name(je,je).
 birth_place(je,al2).

@@ -10,7 +10,6 @@ foundation_place(mi,un).
 foundation_place(mi,ne).
 foundation_place(mi,al).
 subsid(mi,li).
-founders(mi,bi).
 founders(mi,pa).
 founders(bi2,bi).
 key_people(ca,bi).

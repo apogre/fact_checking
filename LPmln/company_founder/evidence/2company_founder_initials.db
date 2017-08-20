@@ -10,7 +10,6 @@ subsid(ap,fi).
 subsid(ap,an).
 subsid(ap,br).
 subsid(ap,be).
-founders(ap,st).
 founders(ap,st1).
 founders(ap,ro).
 birth_place(st,ca).

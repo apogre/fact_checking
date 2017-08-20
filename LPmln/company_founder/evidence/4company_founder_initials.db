@@ -7,7 +7,6 @@ name(go,go2).
 key_people(go,su).
 foundation_place(go,me).
 subsid(go,li).
-founders(go,se).
 founders(go,la).
 key_people(go3,se).
 key_people(al,se).

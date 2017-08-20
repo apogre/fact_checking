@@ -3,7 +3,6 @@ birth_place(el,pr).
 birth_place(el,ga).
 known_for(el,te).
 name(te,te).
-founders(te,el).
 founders(te,ma).
 founders(te,jb).
 known_for(el,sp).

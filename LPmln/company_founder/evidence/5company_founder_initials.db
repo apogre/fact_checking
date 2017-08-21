@@ -8,7 +8,6 @@ known_for(gi,ap).
 known_for(ar2,ap).
 known_for(mi3,ap).
 known_for(bo,ap).
-founders(ap,st).
 key_people(ap,ar).
 key_people(ap,ti).
 key_people(ap,jo).

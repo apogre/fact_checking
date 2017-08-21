@@ -7,7 +7,6 @@ key_people(al,la).
 key_people(pl,la).
 founders(go1,la).
 founders(al,la).
-founders(x_,la).
 known_for(ar,ap).
 key_people(ap,ar).
 key_people(ap,ti).

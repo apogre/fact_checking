@@ -1,1 +1,27 @@
-{"St5": "Steve_Jobs", "Lu": "Luca_Maestri", "Ti": "Tim_Cook", "Ro": "Ronald_Wayne", "Sa": "San_Jose,_California", "Be": "Beats_Electronics", "Ar2": "Arthur_Rock", "Bo": "Bob_Mansfield", "Jo": "Jonathan_Ive", "Br": "Braeburn_Capital", "Fi": "FileMaker_Inc.", "Sa4": "San_Jose,_California,_United_States", "Mi": "Mike_Markkula", "St": "Steve_Wozniak", "Un": "United_States", "Je": "Jeff_Williams_(Apple)", "Mi1": "Michael_Spindler", "Mi3": "Michael_Scott_(Apple)", "Co": "Co-Founder_of_Apple_Inc.", "Ca": "California", "An": "Anobit", "Ap": "Apple_Inc.", "Ar": "Arthur_D._Levinson", "Cu": "Cupertino,_California", "Gi": "Gil_Amelio"}
+{
+  "St5": "Steve_Jobs",
+  "Lu": "Luca_Maestri",
+  "Ti": "Tim_Cook",
+  "Ro": "Ronald_Wayne",
+  "Sa": "San_Jose,_California",
+  "Be": "Beats_Electronics",
+  "Ar2": "Arthur_Rock",
+  "Bo": "Bob_Mansfield",
+  "Jo": "Jonathan_Ive",
+  "Br": "Braeburn_Capital",
+  "Fi": "FileMaker_Inc.",
+  "Sa4": "San_Jose,_California,_United_States",
+  "Mi": "Mike_Markkula",
+  "St": "Steve_Wozniak",
+  "Un": "United_States",
+  "Je": "Jeff_Williams_(Apple)",
+  "Mi1": "Michael_Spindler",
+  "Mi3": "Michael_Scott_(Apple)",
+  "Co": "Co-Founder_of_Apple_Inc.",
+  "Ca": "California",
+  "An": "Anobit",
+  "Ap": "Apple_Inc.",
+  "Ar": "Arthur_D._Levinson",
+  "Cu": "Cupertino,_California",
+  "Gi": "Gil_Amelio"
+}

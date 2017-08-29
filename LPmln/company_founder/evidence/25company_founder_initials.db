@@ -4,7 +4,6 @@ birth_place(tr,lo).
 known_for(tr,ub).
 name(ub,ub1).
 key_people(ub,tr).
-founders(ub,tr).
 founders(ub,ga).
 known_for(da,ub).
 name(tr,tr).

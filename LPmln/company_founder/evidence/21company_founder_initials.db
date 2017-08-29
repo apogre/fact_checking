@@ -4,6 +4,4 @@ key_people(am,je).
 foundation_place(am,un).
 foundation_place(am,wa).
 foundation_place(am,se).
-subsid(am,a2).
 name(je,je).
-birth_place(je,al2).

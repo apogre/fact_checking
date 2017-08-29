@@ -27,6 +27,7 @@ suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) 
 
 
 def distance_one_query(kb, id1, distance_one, unique_predicates):
+    print "Distance One Query"
     if kb == 'wikidata':
         sparql_endpoint = sparql_wikidata
         query = (prefixes_wikidata+' SELECT distinct ?propLabel ?id2Label WHERE { entity:'+id1+' ?p ?id2 . '+ suffixes_wikidata_0 \
@@ -168,6 +169,105 @@ def distance_two_query(kb, id1, distance_two, unique_predicates):
                     [vals[3].split('/')[-1].replace(' ', '_'), vals_2, vals[1].split('/')[-1].replace(' ', '_')])
     return distance_two, unique_predicates
 
+
+def distance_three_query(kb, id1, distance_two, unique_predicates):
+    print "Distance Three Query"
+    if kb == 'wikidata':
+        sparql_endpoint = sparql_wikidata
+        query = (prefixes_wikidata+' SELECT distinct ?propLabel ?id2Label WHERE { entity:'+id1+' ?p ?id2 . '+ suffixes_wikidata_0 \
+                 + ' }')
+        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?id2Label WHERE { ?id2 ?p entity:'+id1 + ' . ' + \
+                      suffixes_wikidata_0)
+    if kb == 'dbpedia':
+        sparql_endpoint = sparql_dbpedia
+        # if ',' in id1:
+        query = prefixes_dbpedia + ' SELECT distinct ?pl ?id2 ?pl1 ?id3 ?pl2 ?id4 WHERE { \
+        <http://dbpedia.org/resource/'+ id1 + '> ?p ?id2 . ?id2 ?p1 ?id3 . ?id3 ?p2 ?id4 .' + suffixes_dbpedia_0 + ' \
+        ?p1 rdfs:label ?pl1 . FILTER langMatches( lang(?pl1), "EN" ) . ?p2 rdfs:label ?pl2 . FILTER langMatches( lang(?pl2), "EN" ) .  }'
+        query_back = (prefixes_dbpedia + ' SELECT distinct ?pl ?id2 ?pl1 ?id3 ?pl2 ?id4 WHERE { \
+        ?id4 ?p2 ?id3 . ?id3 ?p1 ?id2 . ?id2 ?p <http://dbpedia.org/resource/' + id1 + '> . ' + suffixes_dbpedia_0 + ' \
+        ?p1 rdfs:label ?pl1 . FILTER langMatches( lang(?pl1), "EN" ) . ?p2 rdfs:label ?pl2 . FILTER langMatches( lang(?pl2), "EN" }')
+    print query
+    print query_back
+    try:
+        result = sparql.query(sparql_endpoint, query)
+        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+    except:
+        q1_values = []
+        pass
+    if q1_values:
+        print len(q1_values)
+        for vals in q1_values:
+            if vals[0] not in unique_predicates:
+                unique_predicates.append(vals[0])
+            if vals[0] not in unwanted_predicates:
+                vals_0 = vals[0].replace(' ', '_')
+                if not isinstance(vals[1], basestring):
+                    distance_two.append([id1, vals_0, vals[1]])
+                else:
+                    distance_two.append([id1, vals_0, vals[1].split('/')[-1].replace(' ', '_')])
+            if vals[2] not in unique_predicates:
+                unique_predicates.append(vals[2])
+            if vals[2] not in unwanted_predicates:
+                vals_2 = vals[2].replace(' ', '_')
+                if not isinstance(vals[3], basestring) and not isinstance(vals[1], basestring):
+                    distance_two.append([vals[1], vals_2, vals[3]])
+                elif isinstance(vals[3], basestring) and not isinstance(vals[1], basestring):
+                    distance_two.append([vals[1], vals_2, vals[3].split('/')[-1].replace(' ', '_')])
+                elif not isinstance(vals[3], basestring) and isinstance(vals[1], basestring):
+                    distance_two.append([vals[1].split('/')[-1].replace(' ', '_'), vals_2, vals[3]])
+                else:
+                    distance_two.append([vals[1].split('/')[-1].replace(' ', '_'), vals_2, vals[3].split('/')[-1].replace(' ', '_')])
+            if vals[4] not in unwanted_predicates:
+                vals_4 = vals[4].replace(' ', '_')
+                if not isinstance(vals[3], basestring) and not isinstance(vals[5], basestring):
+                    distance_two.append([vals[3], vals_4, vals[5]])
+                elif isinstance(vals[5], basestring) and not isinstance(vals[3], basestring):
+                    distance_two.append([vals[3], vals_4, vals[5].split('/')[-1].replace(' ', '_')])
+                elif not isinstance(vals[5], basestring) and isinstance(vals[3], basestring):
+                    distance_two.append([vals[3].split('/')[-1].replace(' ', '_'), vals_4, vals[5]])
+                else:
+                    distance_two.append([vals[3].split('/')[-1].replace(' ', '_'), vals_4, vals[5].split('/')[-1].replace(' ', '_')])
+    try:
+        result_back = sparql.query(sparql_endpoint, query_back)
+        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+    except:
+        q1_values_back = []
+    print len(q1_values_back)
+    for vals in q1_values_back:
+        if vals[0] not in unique_predicates:
+            unique_predicates.append(vals[0])
+        if vals[0] not in unwanted_predicates:
+            vals_0 = vals[0].replace(' ', '_')
+            if not isinstance(vals[1], basestring):
+                distance_two.append([vals[1], vals_0, id1])
+            else:
+                distance_two.append([vals[1].split('/')[-1].replace(' ', '_'), vals_0, id1])
+        if vals[2] not in unique_predicates:
+            unique_predicates.append(vals[2])
+        if vals[2] not in unwanted_predicates:
+            vals_2 = vals[2].replace(' ', '_')
+            if not isinstance(vals[3], basestring) and not isinstance(vals[1], basestring):
+                distance_two.append([vals[3], vals_2, vals[1]])
+            elif not isinstance(vals[3], basestring) and isinstance(vals[1], basestring):
+                distance_two.append([vals[3], vals_2, vals[1].split('/')[-1].replace(' ', '_')])
+            elif not isinstance(vals[1], basestring) and isinstance(vals[3], basestring):
+                distance_two.append([vals[3].split('/')[-1].replace(' ', '_'), vals_2, vals[1]])
+            else:
+                distance_two.append(
+                    [vals[3].split('/')[-1].replace(' ', '_'), vals_2, vals[1].split('/')[-1].replace(' ', '_')])
+        if vals[4] not in unwanted_predicates:
+            vals_4 = vals[4].replace(' ', '_')
+            if not isinstance(vals[3], basestring) and not isinstance(vals[5], basestring):
+                distance_two.append([vals[5], vals_4, vals[3]])
+            elif not isinstance(vals[3], basestring) and isinstance(vals[5], basestring):
+                distance_two.append([vals[5], vals_4, vals[3].split('/')[-1].replace(' ', '_')])
+            elif not isinstance(vals[5], basestring) and isinstance(vals[3], basestring):
+                distance_two.append([vals[5].split('/')[-1].replace(' ', '_'), vals_4, vals[3]])
+            else:
+                distance_two.append(
+                    [vals[5].split('/')[-1].replace(' ', '_'), vals_4, vals[3].split('/')[-1].replace(' ', '_')])
+    return distance_two, unique_predicates
 
 
 def dbpedia_wikidata_equivalent(dbpedia_url):

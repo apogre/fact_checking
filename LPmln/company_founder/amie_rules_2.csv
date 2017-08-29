@@ -1,0 +1,174 @@
+Rule	Head Coverage	Std Confidence	PCA Confidence	Positive Examples	Body size	PCA Body size	Functional variable	Std. Lower Bound	PCA Lower Bound	PCA Conf estimation
+?a  traded_as  ?b   => ?a  founders  ?b	0.021276596	0.037037037	1	1	27	1	?b	0	0	0
+?b  known_for  ?a  ?a  owning_company  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?b  known_for  ?a  ?a  owner  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?b  known_for  ?a  ?b  salary  ?a   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  key_person  ?b  ?b  salary  ?a   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  founded_by  ?b  ?b  salary  ?a   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  owner  ?b  ?b  salary  ?a   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  owning_company  ?b  ?b  salary  ?a   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?b  board  ?a  ?a  founded_by  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?b  board  ?a  ?a  key_people  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?b  boards  ?a  ?a  key_people  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?b  boards  ?a  ?a  founded_by  ?b   => ?a  founders  ?b	0.021276596	0.333333333	1	1	3	1	?b	0	0	0
+?a  key_people  ?b  ?a  products  ?b   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?a  key_people  ?b  ?a  parent  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  industry  ?b  ?a  key_people  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  key_people  ?b  ?a  services  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  key_people  ?b  ?a  subsid  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  key_person  ?b  ?a  owning_company  ?b   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?a  key_person  ?b  ?a  owner  ?b   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?a  industry  ?b  ?a  parent  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  founded_by  ?b  ?a  owner  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  founded_by  ?b  ?a  owning_company  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  parent  ?b  ?a  products  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  products  ?b  ?a  subsid  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  services  ?b  ?a  subsid  ?b   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?b  alma_mater  ?f  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.5	1	1	2	1	?b	0	0	0
+?b  occupation  ?f  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.058823529	1	1	17	1	?b	0	0	0
+?b  occupation  ?f  ?a  subsidiary  ?f   => ?a  founders  ?b	0.021276596	0.142857143	1	1	7	1	?b	0	0	0
+?b  known_for  ?f  ?a  products  ?f   => ?a  founders  ?b	0.021276596	0.083333333	1	1	12	1	?b	0	0	0
+?b  children  ?f  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?a  key_person  ?f  ?b  relatives  ?f   => ?a  founders  ?b	0.021276596	0.333333333	1	1	3	1	?b	0	0	0
+?a  founded_by  ?f  ?b  relatives  ?f   => ?a  founders  ?b	0.021276596	0.2	1	1	5	1	?b	0	0	0
+?b  education  ?f  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.5	1	1	2	1	?b	0	0	0
+?b  active_years_start_year  ?f  ?a  founding_year  ?f   => ?a  founders  ?b	0.021276596	0.25	1	1	4	1	?b	0	0	0
+?b  boards  ?f  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.142857143	1	1	7	1	?b	0	0	0
+?b  relatives  ?f  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.333333333	1	1	3	1	?b	0	0	0
+?f  children  ?b  ?a  founders  ?f   => ?a  founders  ?b	0.021276596	0.090909091	1	1	11	1	?b	0	0	0
+?f  education  ?b  ?a  founders  ?f   => ?a  founders  ?b	0.021276596	0.111111111	1	1	9	1	?b	0	0	0
+?f  boards  ?b  ?a  founders  ?f   => ?a  founders  ?b	0.021276596	0.142857143	1	1	7	1	?b	0	0	0
+?f  awards  ?b  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.2	1	1	5	1	?b	0	0	0
+?a  founders  ?f  ?f  occupation  ?b   => ?a  founders  ?b	0.021276596	0.011363636	1	1	88	1	?b	0	0	0
+?f  alma_mater  ?b  ?a  founders  ?f   => ?a  founders  ?b	0.021276596	0.027777778	1	1	36	1	?b	0	0	0
+?f  alma_mater  ?b  ?a  founded_by  ?f   => ?a  founders  ?b	0.021276596	0.02173913	1	1	46	1	?b	0	0	0
+?f  founders  ?b  ?a  products  ?f   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?f  dimensions  ?b  ?a  products  ?f   => ?a  founders  ?b	0.021276596	0.008264463	1	1	121	1	?b	0	0	0
+?f  founded_by  ?b  ?a  products  ?f   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?f  key_person  ?b  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.066666667	1	1	15	1	?b	0	0	0
+?f  industry  ?b  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.076923077	1	1	13	1	?b	0	0	0
+?f  key_people  ?b  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.055555556	1	1	18	1	?b	0	0	0
+?f  founders  ?b  ?a  product  ?f   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?f  founded_by  ?b  ?a  product  ?f   => ?a  founders  ?b	0.021276596	0.333333333	1	1	3	1	?b	0	0	0
+?f  chairman  ?b  ?a  subsidiary  ?f   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?f  owner  ?b  ?a  subsidiary  ?f   => ?a  founders  ?b	0.021276596	0.2	1	1	5	1	?b	0	0	0
+?a  owning_company  ?f  ?f  relatives  ?b   => ?a  founders  ?b	0.021276596	0.333333333	1	1	3	1	?b	0	0	0
+?f  key_person  ?b  ?a  predecessor  ?f   => ?a  founders  ?b	0.021276596	0.5	1	1	2	1	?b	0	0	0
+?f  founded_by  ?b  ?a  predecessor  ?f   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?f  founders  ?b  ?a  trading_name  ?f   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?f  founded_by  ?b  ?a  trading_name  ?f   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?e  key_people  ?b  ?e  owner  ?a   => ?a  founders  ?b	0.042553191	0.117647059	1	2	17	2	?b	0	0	0
+?e  founders  ?b  ?e  trading_name  ?a   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?e  founded_by  ?b  ?e  trading_name  ?a   => ?a  founders  ?b	0.021276596	1	1	1	1	1	?b	0	0	0
+?e  notable_student  ?b  ?e  workplaces  ?a   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?e  notable_students  ?b  ?e  workplaces  ?a   => ?a  founders  ?b	0.042553191	1	1	2	2	2	?b	0	0	0
+?e  ceo  ?b  ?e  owner  ?a   => ?a  founders  ?b	0.021276596	0.5	1	1	2	1	?b	0	0	0
+?e  designer  ?b  ?e  developer  ?a   => ?a  founders  ?b	0.021276596	0.058823529	1	1	17	1	?b	0	0	0
+?a  founded_by  ?b  ?b  known_for  ?a   => ?a  founders  ?b	0.127659574	0.6	0.857142857	6	10	7	?b	0	0	0
+?a  key_person  ?b  ?b  known_for  ?a   => ?a  founders  ?b	0.106382979	0.5	0.833333333	5	10	6	?b	0	0	0
+?a  founded_by  ?b   => ?a  founders  ?b	0.361702128	0.253731343	0.80952381	17	67	21	?b	0	0	0
+?a  industry  ?b   => ?a  founders  ?b	0.042553191	0.026315789	0.666666667	2	76	3	?b	0	0	0
+?b  corporate  ?f  ?a  products  ?f   => ?a  founders  ?b	0.042553191	0.5	0.666666667	2	4	3	?b	0	0	0
+?a  founders  ?f  ?f  spouse  ?b   => ?a  founders  ?b	0.085106383	0.078431373	0.666666667	4	51	6	?b	0	0	0
+?a  founders  ?f  ?f  relatives  ?b   => ?a  founders  ?b	0.042553191	0.25	0.666666667	2	8	3	?b	0	0	0
+?f  founders  ?b  ?a  predecessor  ?f   => ?a  founders  ?b	0.042553191	0.666666667	0.666666667	2	3	3	?b	0	0	0
+?a  products  ?b   => ?a  founders  ?b	0.063829787	0.028571429	0.6	3	105	5	?b	0	0	0
+?a  key_people  ?b   => ?a  founders  ?b	0.170212766	0.066666667	0.5	8	120	16	?b	0	0	0
+?a  subsid  ?b   => ?a  founders  ?b	0.021276596	0.03030303	0.5	1	33	2	?b	0	0	0
+?a  services  ?b   => ?a  founders  ?b	0.021276596	0.029411765	0.5	1	34	2	?b	0	0	0
+?b  board  ?a  ?b  occupation  ?a   => ?a  founders  ?b	0.021276596	0.5	0.5	1	2	2	?b	0	0	0
+?b  boards  ?a  ?b  occupation  ?a   => ?a  founders  ?b	0.021276596	0.333333333	0.5	1	3	2	?b	0	0	0
+?b  alma_mater  ?f  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.25	0.5	1	4	2	?b	0	0	0
+?b  alma_mater  ?f  ?a  services  ?f   => ?a  founders  ?b	0.021276596	0.25	0.5	1	4	2	?b	0	0	0
+?a  key_people  ?f  ?b  occupation  ?f   => ?a  founders  ?b	0.021276596	0.5	0.5	1	2	2	?b	0	0	0
+?b  occupation  ?f  ?a  services  ?f   => ?a  founders  ?b	0.021276596	0.333333333	0.5	1	3	2	?b	0	0	0
+?b  known_for  ?f  ?a  product  ?f   => ?a  founders  ?b	0.021276596	0.011627907	0.5	1	86	2	?b	0	0	0
+?b  known_for  ?f  ?a  predecessor  ?f   => ?a  founders  ?b	0.021276596	0.090909091	0.5	1	11	2	?b	0	0	0
+?b  children  ?f  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.142857143	0.5	1	7	2	?b	0	0	0
+?b  children  ?f  ?a  services  ?f   => ?a  founders  ?b	0.021276596	0.5	0.5	1	2	2	?b	0	0	0
+?b  spouse  ?f  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.333333333	0.5	1	3	2	?b	0	0	0
+?b  spouse  ?f  ?a  traded_as  ?f   => ?a  founders  ?b	0.021276596	0.333333333	0.5	1	3	2	?b	0	0	0
+?a  key_people  ?f  ?b  relatives  ?f   => ?a  founders  ?b	0.021276596	0.166666667	0.5	1	6	2	?b	0	0	0
+?b  relatives  ?f  ?a  services  ?f   => ?a  founders  ?b	0.021276596	0.166666667	0.5	1	6	2	?b	0	0	0
+?b  education  ?f  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.25	0.5	1	4	2	?b	0	0	0
+?b  education  ?f  ?a  services  ?f   => ?a  founders  ?b	0.021276596	0.25	0.5	1	4	2	?b	0	0	0
+?b  boards  ?f  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.166666667	0.5	1	6	2	?b	0	0	0
+?b  boards  ?f  ?a  services  ?f   => ?a  founders  ?b	0.021276596	0.166666667	0.5	1	6	2	?b	0	0	0
+?b  after  ?f  ?a  key_person  ?f   => ?a  founders  ?b	0.021276596	0.083333333	0.5	1	12	2	?b	0	0	0
+?b  after  ?f  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.1	0.5	1	10	2	?b	0	0	0
+?f  alma_mater  ?b  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.015625	0.5	1	64	2	?b	0	0	0
+?f  children  ?b  ?a  founded_by  ?f   => ?a  founders  ?b	0.021276596	0.055555556	0.5	1	18	2	?b	0	0	0
+?a  founded_by  ?f  ?f  occupation  ?b   => ?a  founders  ?b	0.021276596	0.006993007	0.5	1	143	2	?b	0	0	0
+?f  founded_by  ?b  ?a  subsid  ?f   => ?a  founders  ?b	0.042553191	0.222222222	0.5	2	9	4	?b	0	0	0
+?f  alma_mater  ?b  ?a  key_person  ?f   => ?a  founders  ?b	0.021276596	0.018867925	0.5	1	53	2	?b	0	0	0
+?f  dimensions  ?b  ?a  product  ?f   => ?a  founders  ?b	0.021276596	0.002849003	0.5	1	351	2	?b	0	0	0
+?a  key_person  ?b   => ?a  founders  ?b	0.170212766	0.079207921	0.470588235	8	101	17	?b	0	0	0
+?e  founders  ?b  ?e  predecessor  ?a   => ?a  founders  ?b	0.042553191	0.4	0.4	2	5	5	?b	0	0	0
+?b  known_for  ?f  ?a  subsid  ?f   => ?a  founders  ?b	0.021276596	0.071428571	0.333333333	1	14	3	?b	0	0	0
+?a  founders  ?f  ?b  relatives  ?f   => ?a  founders  ?b	0.042553191	0.125	0.333333333	2	16	6	?b	0	0	0
+?a  width  ?f  ?b  width  ?f   => ?a  founders  ?b	0.021276596	0.012820513	0.333333333	1	78	3	?b	0	0	0
+?a  founded_by  ?f  ?f  spouse  ?b   => ?a  founders  ?b	0.042553191	0.032258065	0.333333333	2	62	6	?b	0	0	0
+?f  education  ?b  ?a  founded_by  ?f   => ?a  founders  ?b	0.021276596	0.058823529	0.333333333	1	17	3	?b	0	0	0
+?a  founded_by  ?f  ?f  relatives  ?b   => ?a  founders  ?b	0.021276596	0.071428571	0.333333333	1	14	3	?b	0	0	0
+?f  before  ?b  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.142857143	0.333333333	1	7	3	?b	0	0	0
+?a  owning_company  ?f  ?f  spouse  ?b   => ?a  founders  ?b	0.021276596	0.076923077	0.333333333	1	13	3	?b	0	0	0
+?e  key_people  ?b  ?e  predecessor  ?a   => ?a  founders  ?b	0.021276596	0.052631579	0.333333333	1	19	3	?b	0	0	0
+?a  founders  ?f  ?b  spouse  ?f   => ?a  founders  ?b	0.085106383	0.153846154	0.307692308	4	26	13	?b	0	0	0
+?b  birth_place  ?f  ?a  headquarters  ?f   => ?a  founders  ?b	0.063829787	0.1	0.3	3	30	10	?b	0	0	0
+?f  founders  ?b  ?a  subsid  ?f   => ?a  founders  ?b	0.063829787	0.3	0.3	3	10	10	?b	0	0	0
+?b  known_for  ?a   => ?a  founders  ?b	0.191489362	0.055214724	0.264705882	9	163	34	?b	0	0	0
+?b  board  ?a   => ?a  founders  ?b	0.021276596	0.03030303	0.25	1	33	4	?b	0	0	0
+?b  employer  ?a   => ?a  founders  ?b	0.021276596	0.011235955	0.25	1	89	4	?b	0	0	0
+?a  services  ?f  ?b  spouse  ?f   => ?a  founders  ?b	0.021276596	0.166666667	0.25	1	6	4	?b	0	0	0
+?f  boards  ?b  ?a  key_people  ?f   => ?a  founders  ?b	0.021276596	0.037037037	0.25	1	27	4	?b	0	0	0
+?f  audio  ?b  ?a  products  ?f   => ?a  founders  ?b	0.021276596	0.076923077	0.25	1	13	4	?b	0	0	0
+?f  boards  ?b  ?a  founded_by  ?f   => ?a  founders  ?b	0.021276596	0.055555556	0.25	1	18	4	?b	0	0	0
+?a  key_person  ?f  ?f  relatives  ?b   => ?a  founders  ?b	0.021276596	0.066666667	0.25	1	15	4	?b	0	0	0
+?a  products  ?f  ?f  service  ?b   => ?a  founders  ?b	0.021276596	0.03125	0.25	1	32	4	?b	0	0	0
+?a  owner  ?f  ?f  spouse  ?b   => ?a  founders  ?b	0.021276596	0.043478261	0.25	1	23	4	?b	0	0	0
+?e  salary  ?a  ?e  spouse  ?b   => ?a  founders  ?b	0.021276596	0.019607843	0.25	1	51	4	?b	0	0	0
+?b  salary  ?a   => ?a  founders  ?b	0.021276596	0.066666667	0.2	1	15	5	?b	0	0	0
+?b  boards  ?a   => ?a  founders  ?b	0.021276596	0.026315789	0.2	1	38	5	?b	0	0	0
+?b  alma_mater  ?f  ?a  products  ?f   => ?a  founders  ?b	0.021276596	0.1	0.2	1	10	5	?b	0	0	0
+?b  alma_mater  ?f  ?a  founders  ?f   => ?a  founders  ?b	0.021276596	0.1	0.2	1	10	5	?b	0	0	0
+?a  founders  ?f  ?b  occupation  ?f   => ?a  founders  ?b	0.021276596	0.0625	0.2	1	16	5	?b	0	0	0
+?b  children  ?f  ?a  products  ?f   => ?a  founders  ?b	0.021276596	0.2	0.2	1	5	5	?b	0	0	0
+?b  children  ?f  ?a  founders  ?f   => ?a  founders  ?b	0.021276596	0.111111111	0.2	1	9	5	?b	0	0	0
+?b  occupation  ?f  ?a  products  ?f   => ?a  founders  ?b	0.021276596	0.090909091	0.2	1	11	5	?b	0	0	0
+?a  products  ?f  ?b  relatives  ?f   => ?a  founders  ?b	0.021276596	0.066666667	0.2	1	15	5	?b	0	0	0
+?b  education  ?f  ?a  products  ?f   => ?a  founders  ?b	0.021276596	0.1	0.2	1	10	5	?b	0	0	0
+?b  education  ?f  ?a  founders  ?f   => ?a  founders  ?b	0.021276596	0.1	0.2	1	10	5	?b	0	0	0
+?b  boards  ?f  ?a  founders  ?f   => ?a  founders  ?b	0.021276596	0.058823529	0.2	1	17	5	?b	0	0	0
+?b  boards  ?f  ?a  products  ?f   => ?a  founders  ?b	0.021276596	0.066666667	0.2	1	15	5	?b	0	0	0
+?b  death_place  ?f  ?a  foundation_place  ?f   => ?a  founders  ?b	0.021276596	0.166666667	0.2	1	6	5	?b	0	0	0
+?a  key_person  ?f  ?f  spouse  ?b   => ?a  founders  ?b	0.021276596	0.015625	0.2	1	64	5	?b	0	0	0
+?f  before  ?b  ?a  key_person  ?f   => ?a  founders  ?b	0.021276596	0.1	0.2	1	10	5	?b	0	0	0
+?a  owning_company  ?b   => ?a  founders  ?b	0.042553191	0.047619048	0.181818182	2	42	11	?b	0	0	0
+?a  key_people  ?f  ?b  spouse  ?f   => ?a  founders  ?b	0.021276596	0.038461538	0.166666667	1	26	6	?b	0	0	0
+?a  corporate  ?f  ?b  corporate  ?f   => ?a  founders  ?b	0.042553191	0.125	0.166666667	2	16	12	?b	0	0	0
+?a  products  ?f  ?f  related  ?b   => ?a  founders  ?b	0.021276596	0.047619048	0.166666667	1	21	6	?b	0	0	0
+?f  boards  ?b  ?a  key_person  ?f   => ?a  founders  ?b	0.021276596	0.035714286	0.166666667	1	28	6	?b	0	0	0
+?e  before  ?b  ?e  occupation  ?a   => ?a  founders  ?b	0.021276596	0.027027027	0.166666667	1	37	6	?b	0	0	0
+?e  developer  ?a  ?e  developer  ?b   => ?a  founders  ?b	0.042553191	0.018181818	0.166666667	2	110	12	?b	0	0	0
+?b  known_for  ?f  ?f  product  ?a   => ?a  founders  ?b	0.021276596	0.008849558	0.142857143	1	113	7	?b	0	0	0
+?b  death_place  ?f  ?a  location_city  ?f   => ?a  founders  ?b	0.021276596	0.111111111	0.142857143	1	9	7	?b	0	0	0
+?e  key_people  ?b  ?e  subsid  ?a   => ?a  founders  ?b	0.106382979	0.046296296	0.131578947	5	108	38	?b	0	0	0
+?e  education  ?b  ?e  occupation  ?a   => ?a  founders  ?b	0.042553191	0.018518519	0.117647059	2	108	17	?b	0	0	0
+?e  known_for  ?a  ?e  spouse  ?b   => ?a  founders  ?b	0.021276596	0.011235955	0.111111111	1	89	9	?b	0	0	0
+?b  birth_place  ?f  ?a  foundation_place  ?f   => ?a  founders  ?b	0.063829787	0.038961039	0.107142857	3	77	28	?b	0	0	0
+?a  products  ?f  ?b  spouse  ?f   => ?a  founders  ?b	0.021276596	0.066666667	0.1	1	15	10	?b	0	0	0
+Loading files... 										
+  Starting company_founder_unique_2.tsv										
+  Finished company_founder_unique_2.tsv, still running: 0										
+Loaded 57573 facts in 0.19 s using -112 MB										
+Using HeadCoverage as pruning metric with minimum threshold 0.01										
+Using recursivity limit 3										
+Default mining assistant that defines support by counting support on both head variables										
+No minimum threshold on standard confidence										
+Filtering on PCA confidence with minimum threshold 0.1										
+Constants in the arguments of relations are disabled										
+Lossless (query refinement) heuristics enabled										
+Starting the mining phase... Using 4 threads										
+Mining done in 0.57 s										
+Total time 0.76 s										
+158 rules mined.										

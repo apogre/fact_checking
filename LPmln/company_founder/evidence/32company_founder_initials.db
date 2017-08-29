@@ -1,0 +1,12 @@
+birth_place(bi,un).
+birth_place(bi,wa).
+birth_place(bi,se).
+key_people(mi,bi).
+founders(mi,bi).
+founders(bi1,bi).
+key_people(ca,bi).
+name(ch,ch).
+key_people(ch,jo).
+subsid(z_,ch).
+birth_date(bi,1995).
+founding_date(ch,1879).

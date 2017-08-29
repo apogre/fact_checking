@@ -5,7 +5,7 @@ import subprocess
 import re
 from nltk.stem.wordnet import WordNetLemmatizer
 from ordered_set import OrderedSet
-from kb_query import relation_extractor_0hop, relation_extractor_1hop, relation_extractor_2hop, distance_one_query, distance_two_query
+from kb_query import distance_three_query, distance_one_query, distance_two_query
 from os import path, remove, mkdir
 from more_itertools import unique_everseen
 import json
@@ -25,9 +25,8 @@ def get_rules(poi, data_source):
 
 
 def relation_extractor_triples(resources, triples):
-    relation = []
-    relation_0 = []
-    relation_2 = []
+    distance_three = []
+    distance_one = []
     distance_two = []
     unique_predicates = []
     for triple_k, triples_v in triples.iteritems():
@@ -37,28 +36,21 @@ def relation_extractor_triples(resources, triples):
             if item1_v and item2_v:
                 dbpedia_id1 = item1_v.get('dbpedia_id')
                 dbpedia_id2 = item2_v.get('dbpedia_id')
-                wikidata_id1 = item1_v.get('wikidata_id')
-                wikidata_id2 = item2_v.get('wikidata_id')
+                # wikidata_id1 = item1_v.get('wikidata_id')
+                # wikidata_id2 = item2_v.get('wikidata_id')
                 score1 = item1_v.get('confidence')
                 score2 = item2_v.get('confidence')
-                distance_two, unique_predicates = distance_two_query('dbpedia', dbpedia_id1, distance_two, unique_predicates)
-                # distance_one_query('wikidata', wikidata_id1,distance_one, unique_predicates)
-                distance_two, unique_predicates = distance_two_query('dbpedia', dbpedia_id2, distance_two, unique_predicates)
-
-                # distance_one_query('wikidata', wikidata_id2,distance_one, unique_predicates)
-                # print distance_one
-                # print len(distance_one)
-                # print unique_predicates
-                # print len(unique_predicates)
-                # print len(unique_predicates)- len(unwanted_predicates)
-                #
-                # relation = relation_extractor_1hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation, predicate_dict)
-                # relation = relation_extractor_1hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation, predicate_dict)
-                # relation_0 = relation_extractor_0hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_0)
-                # relation_0 = relation_extractor_0hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_0)
-                # relation_2 = relation_extractor_2hop('wikidata', wikidata_id1, wikidata_id2, triple_v, relation_2)
-                # relation_2 = relation_extractor_2hop('dbpedia', dbpedia_id1, dbpedia_id2, triple_v, relation_2)
-    return relation, relation_0, relation_2, distance_two
+                # distance_one, unique_predicates = distance_one_query('dbpedia', dbpedia_id1, distance_one,
+                #                                                      unique_predicates)
+                # distance_one, unique_predicates = distance_one_query('dbpedia', dbpedia_id2, distance_one,
+                #                                                      unique_predicates)
+                # distance_two, unique_predicates = distance_two_query('dbpedia', dbpedia_id1, distance_two, unique_predicates)
+                # distance_two, unique_predicates = distance_two_query('dbpedia', dbpedia_id2, distance_two, unique_predicates)
+                distance_three, unique_predicates = distance_three_query('dbpedia', dbpedia_id1, distance_three,
+                                                                     unique_predicates)
+                distance_three, unique_predicates = distance_three_query('dbpedia', dbpedia_id2, distance_three,
+                                                                     unique_predicates)
+    return distance_one, distance_two, distance_three
 
 
 def inference(sentence_id, data_source):
@@ -84,6 +76,7 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
     maps_set = []
     count = 1
     for evidence in filtered_evidence:
+        print evidence
         if evidence[0] not in entity_mapping.keys():
             if evidence[0][:2] not in maps_set:
                 entity_mapping[evidence[0]] = evidence[0][:2]
@@ -198,13 +191,13 @@ def evidence_writer(sorted_predicates, sentence_id, data_source):
 
 
 def amie_tsv(item_set, data_source):
-    with open('LPmln/' + data_source + '/' +data_source + '_full.tsv', 'wb') as csvfile:
+    with open('LPmln/' + data_source + '/' +data_source + '_full_3.tsv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='\t', skipinitialspace=True)
         for i in item_set:
             try:
                 datawriter.writerow(i)
             except:
                 pass
-    with open('LPmln/' + data_source + '/' +data_source + '_full.tsv', 'r') as f, \
-            open('LPmln/' + data_source + '/' +data_source + '_unique.tsv', 'w') as out_file:
+    with open('LPmln/' + data_source + '/' +data_source + '_full_3.tsv', 'r') as f, \
+            open('LPmln/' + data_source + '/' +data_source + '_unique_3.tsv', 'w') as out_file:
         out_file.writelines(unique_everseen(f))

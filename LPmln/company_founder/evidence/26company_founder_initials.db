@@ -1,6 +1,5 @@
 birth_place(je,al).
 key_people(am,je).
-key_people(@w,je).
 known_for(el,te).
 known_for(jb,te).
 known_for(ma,te).

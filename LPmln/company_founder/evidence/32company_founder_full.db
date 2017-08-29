@@ -1,0 +1,12 @@
+birth_place(Bill_Gates,United_States).
+birth_place(Bill_Gates,Washington_(state)).
+birth_place(Bill_Gates,Seattle).
+key_people(Microsoft,Bill_Gates).
+founders(Microsoft,Bill_Gates).
+founders(Bill_&_Melinda_Gates_Foundation,Bill_Gates).
+key_people(Cascade_Investment,Bill_Gates).
+name(Chevron_Corporation,Chevron_Corporation).
+key_people(Chevron_Corporation,John_S._Watson).
+subsid(Z_Energy,Chevron_Corporation).
+birth_date(Bill_Gates,'1995').
+founding_date(Chevron,'1879')

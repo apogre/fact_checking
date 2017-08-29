@@ -143,31 +143,31 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         print "=================="
         pprint.pprint(resource)
         # get poi
-        type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
-        print type_ontology, type_resource, type_ontology_full, type_resource_full
-        if sentence_id not in possible_kgminer_predicate.keys():
-            vals = sum(type_ontology.values(), [])
-            relation = triple_dict.keys()
-            print vals, relation
-            if len(vals) > 1:
-                if str(relation[0] + vals[0] + vals[1]) not in stored_query.keys():
-                    kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
-                    print kgminer_predicates
-                    if kgminer_predicates:
-                        kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
-                        if kgminer_predicate_ranked.values():
-                            possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
-                            kgminer_predicate_flag = True
-                            stored_query[str(relation[0] + vals[0] + vals[1])] = kgminer_predicate_ranked
-                            stored_query[str(relation[0] + vals[1] + vals[0])] = kgminer_predicate_ranked
-                else:
-                    print "Using Stored Predicate"
-                    kgminer_predicate_ranked = stored_query[str(relation[0] + vals[0] + vals[1])]
-                    possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
-                    kgminer_predicate_flag = True
-        else:
-            kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
-        # print "Ranked Predicates"
+        # type_ontology, type_resource, type_ontology_full, type_resource_full = get_entity_type(resource, triple_dict)
+        # print type_ontology, type_resource, type_ontology_full, type_resource_full
+        # if sentence_id not in possible_kgminer_predicate.keys():
+        #     vals = sum(type_ontology.values(), [])
+        #     relation = triple_dict.keys()
+        #     print vals, relation
+        #     if len(vals) > 1:
+        #         if str(relation[0] + vals[0] + vals[1]) not in stored_query.keys():
+        #             kgminer_predicates = get_kgminer_predicates(type_ontology, triple_dict)
+        #             print kgminer_predicates
+        #             if kgminer_predicates:
+        #                 kgminer_predicate_ranked, kgminer_predicate_threshold = predicate_ranker(kgminer_predicates, triple_dict)
+        #                 if kgminer_predicate_ranked.values():
+        #                     possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+        #                     kgminer_predicate_flag = True
+        #                     stored_query[str(relation[0] + vals[0] + vals[1])] = kgminer_predicate_ranked
+        #                     stored_query[str(relation[0] + vals[1] + vals[0])] = kgminer_predicate_ranked
+        #         else:
+        #             print "Using Stored Predicate"
+        #             kgminer_predicate_ranked = stored_query[str(relation[0] + vals[0] + vals[1])]
+        #             possible_kgminer_predicate[sentence_id] = kgminer_predicate_ranked
+        #             kgminer_predicate_flag = True
+        # else:
+        #     kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
+        # # print "Ranked Predicates"
         # print kgminer_predicate_ranked
         for triples_k, triples_v in triple_dict.iteritems():
             for triple_v in triples_v:
@@ -261,41 +261,40 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         if lpmln:
             print "Executing LPMLN"
             if load_mappings:
-                print "Loading DBpedia to Wikidata Mappings"
-                predicate_dict = load_lpmln_resource()
-                load_mappings = False
-            # relation_ent, relation_ent_0, relation_ent_2, distance_one = relation_extractor_triples(resource,\
-            #                                                                                         triple_dict)
-            # amie_training.extend(distance_one)
-            if sentence_id not in lpmln_predicate.keys():
-                filtered_evidence = []
-                relation_ent, relation_ent_0, relation_ent_2, distance_two = relation_extractor_triples(resource, triple_dict)
-                if distance_two:
-                    for evidence in distance_two:
-                        if evidence[1] in rule_predicates:
-                            if evidence[0] in resource_v or evidence[2] in resource_v:
-                                filtered_evidence.append(evidence)
-                    item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
-                    lpmln_predicate[sentence_id] = list(item_set)
-                    lpmln_predicate_flag = True
-            else:
-                print "Loading Stored Evidence"
-                item_set = lpmln_predicate.get(sentence_id, {})
-            print item_set
-        #     if sentence_id not in lpmln_output.keys():
-        #     #         # get_rules(predicate_of_interest)
-        #         probability = inference(sentence_id, data_source)
-        #     #         probability = [1]
+                # print "Loading DBpedia to Wikidata Mappings"
+                # predicate_dict = load_lpmln_resource()
+                # load_mappings = False
+                distance_one, distance_two, distance_three = relation_extractor_triples(resource, triple_dict)
+            amie_training.extend(distance_three)
+        #     if sentence_id not in lpmln_predicate.keys():
+        #         filtered_evidence = []
+        #         distance_one, distance_two, distance_three = relation_extractor_triples(resource, triple_dict)
+        #         if distance_two:
+        #             for evidence in distance_two:
+        #                 if evidence[1] in rule_predicates:
+        #                     if evidence[0] in resource_v or evidence[2] in resource_v:
+        #                         filtered_evidence.append(evidence)
+        #             item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
+        #             lpmln_predicate[sentence_id] = list(item_set)
+        #             lpmln_predicate_flag = True
         #     else:
-        #         probability = lpmln_output[sentence_id]
-        #     lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
-        #     print probability
-        update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
-                         kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
-                         lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
-                         kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect)
+        #         print "Loading Stored Evidence"
+        #         item_set = lpmln_predicate.get(sentence_id, {})
+        #     print item_set
+        # #     if sentence_id not in lpmln_output.keys():
+        # #     #         # get_rules(predicate_of_interest)
+        # #         probability = inference(sentence_id, data_source)
+        # #     #         probability = [1]
+        # #     else:
+        # #         probability = lpmln_output[sentence_id]
+        # #     lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
+        # #     print probability
+        # update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
+        #                  kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
+        #                  lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
+        #                  kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect)
 
-    # amie_tsv(amie_training, data_source)
+    amie_tsv(amie_training, data_source)
 
     if KGMiner:
         kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)

@@ -191,13 +191,13 @@ def evidence_writer(sorted_predicates, sentence_id, data_source):
 
 
 def amie_tsv(item_set, data_source):
-    with open('LPmln/' + data_source + '/' +data_source + '_full_3.tsv', 'wb') as csvfile:
+    with open('LPmln/' + data_source + '/' +data_source + '_founders_all.tsv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='\t', skipinitialspace=True)
         for i in item_set:
             try:
                 datawriter.writerow(i)
             except:
                 pass
-    with open('LPmln/' + data_source + '/' +data_source + '_full_3.tsv', 'r') as f, \
-            open('LPmln/' + data_source + '/' +data_source + '_unique_3.tsv', 'w') as out_file:
+    with open('LPmln/' + data_source + '/' +data_source + '_founders_all.tsv', 'r') as f, \
+            open('LPmln/' + data_source + '/' + data_source + '_founders_unique_all.tsv', 'w') as out_file:
         out_file.writelines(unique_everseen(f))

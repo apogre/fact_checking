@@ -26,6 +26,18 @@ suffixes_dbpedia_2 = 'FILTER langMatches( lang(?rl), "EN" ) . ?v rdfs:label ?vl 
 suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) .'
 
 
+def all_relations_query(predicate):
+    query = 'select ?a ?b where {?a <http://dbpedia.org/property/' + predicate + '> ?b. ?b rdf:type \
+    <http://dbpedia.org/ontology/Person> .}'
+    sparql_endpoint = sparql_dbpedia
+    try:
+        result = sparql.query(sparql_endpoint, query)
+        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+    except:
+        q1_values = []
+    return q1_values
+
+
 def distance_one_query(kb, id1, distance_one, unique_predicates):
     print "Distance One Query"
     if kb == 'wikidata':
@@ -183,10 +195,12 @@ def distance_three_query(kb, id1, distance_two, unique_predicates):
         # if ',' in id1:
         query = prefixes_dbpedia + ' SELECT distinct ?pl ?id2 ?pl1 ?id3 ?pl2 ?id4 WHERE { \
         <http://dbpedia.org/resource/'+ id1 + '> ?p ?id2 . ?id2 ?p1 ?id3 . ?id3 ?p2 ?id4 .' + suffixes_dbpedia_0 + ' \
-        ?p1 rdfs:label ?pl1 . FILTER langMatches( lang(?pl1), "EN" ) . ?p2 rdfs:label ?pl2 . FILTER langMatches( lang(?pl2), "EN" ) .  }'
+        ?p1 rdfs:label ?pl1 . FILTER langMatches( lang(?pl1), "EN" ) . ?p2 rdfs:label ?pl2 . \
+        FILTER langMatches( lang(?pl2), "EN" ) .  }'
         query_back = (prefixes_dbpedia + ' SELECT distinct ?pl ?id2 ?pl1 ?id3 ?pl2 ?id4 WHERE { \
         ?id4 ?p2 ?id3 . ?id3 ?p1 ?id2 . ?id2 ?p <http://dbpedia.org/resource/' + id1 + '> . ' + suffixes_dbpedia_0 + ' \
-        ?p1 rdfs:label ?pl1 . FILTER langMatches( lang(?pl1), "EN" ) . ?p2 rdfs:label ?pl2 . FILTER langMatches( lang(?pl2), "EN" }')
+        ?p1 rdfs:label ?pl1 . FILTER langMatches( lang(?pl1), "EN" ) . ?p2 rdfs:label ?pl2 . \
+        FILTER langMatches( lang(?pl2), "EN"). }')
     print query
     print query_back
     try:
@@ -486,180 +500,6 @@ def predicate_finder(triple_dict):
             p_values = [sparql.unpack_row(row) for row in predicate_result]
         pval_list.append(p_values)
     return pval_list
-
-
-def relation_extractor_0hop(kb, id1, id2, label, relations):
-    if kb == 'wikidata':
-        sparql_endpoint = sparql_wikidata
-        query = (prefixes_wikidata+' SELECT distinct ?propLabel WHERE { entity:'+id1+' ?p entity:'+id2+' . '+\
-                 suffixes_wikidata_0+'}')
-        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel WHERE { entity:' +id2+ ' ?p entity:'+id1 + ' . '\
-                      +suffixes_wikidata_0+ '}')
-    if kb == 'dbpedia':
-        sparql_endpoint = sparql_dbpedia
-        if ',' in id1 or ',' in id2:
-            query = (prefixes_dbpedia + ' SELECT distinct ?pl WHERE { <http://dbpedia.org/resource/' + id1 + '> ?p \
-             <http://dbpedia.org/resource/' + id2 + '> . ' + suffixes_dbpedia_0 + '}')
-            query_back = (prefixes_dbpedia + ' SELECT distinct ?pl WHERE {<http://dbpedia.org/resource/' + id2 + '> ?p \
-            <http://dbpedia.org/resource/' + id1 + '> . ' + suffixes_dbpedia_0 + '}')
-        else:
-            query = (prefixes_dbpedia+' SELECT distinct ?pl WHERE { entity:'+id1+' ?p  entity:'+id2+' . ' +\
-                     suffixes_dbpedia_0+'}')
-            query_back = (prefixes_dbpedia+' SELECT distinct ?pl WHERE {entity:'+id2+' ?p entity:'+id1+' . '\
-                          +suffixes_dbpedia_0+ '}')
-    # print query
-    # print query_back
-    try:
-        result = sparql.query(sparql_endpoint, query)
-        q1_values = [sparql.unpack_row(row_result) for row_result in result]
-    except:
-        q1_values = []
-        pass
-    if q1_values:
-        for vals in q1_values:
-            if vals[0] != 'Link from a Wikipage to another Wikipage':
-                if 'birth' not in vals[0]:
-                    relations.append([kb, vals[0], label[0], label[1]])
-    try:
-        result_back = sparql.query(sparql_endpoint, query_back)
-        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
-    except:
-        q1_values_back = []
-    for vals in q1_values_back:
-        if vals[0] != 'Link from a Wikipage to another Wikipage':
-            if 'birth' not in vals[0]:
-                relations.append([kb, vals[0], label[1], label[0]])
-    return relations
-
-
-def relation_extractor_2hop(kb, id1, id2, label, relations):
-    if kb == 'wikidata':
-        sparql_endpoint = sparql_wikidata
-
-        query = (prefixes_wikidata+' SELECT distinct ?propLabel ?vLabel ?prop1Label ?v1Label ?prop2Label WHERE { \
-        entity:'+id1+' ?p ?v . ?v ?r ?v1 . ?v1 ?q entity:'+id2+' .  FILTER(entity:'+id1+' != ?v1) . \
-        FILTER(entity:'+id1+' != ?v) . FILTER(entity:'+id2+' != ?v) . FILTER(entity:'+id2+' != ?v1) . '+\
-                 suffixes_wikidata_2+'}')
-
-        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?vLabel ?prop1Label ?v1Label ?prop2Label WHERE \
-        { entity:' + id2 + ' ?p ?v . ?v ?r ?v1 . ?v1 ?q entity:' + id1 + ' . FILTER(entity:'+id2+' != ?v1) . \
-        FILTER(entity:'+id1+' != ?v) . FILTER(entity:'+id1+' != ?v1) . FILTER(entity:'+id2+' != ?v) . '+\
-                      suffixes_wikidata_2 + '}')
-    if kb == 'dbpedia':
-        sparql_endpoint = sparql_dbpedia
-
-        query = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?rl ?vl1 ?ql WHERE { <http://dbpedia.org/resource/'+id1+'> \
-        ?p ?v . ?v ?r ?v1 . ?v1 ?q <http://dbpedia.org/resource/'+id2+'> . FILTER(<http://dbpedia.org/resource/'+id1+'>\
-         != ?v1) . FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) . FILTER(<http://dbpedia.org/resource/'+id1+'> \
-         != ?v). FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v1).' + suffixes_dbpedia_2+'. FILTER(?vl != "Link \
-         from a Wikipage to another Wikipage") . FILTER(?vl1 != "Link from a Wikipage to another Wikipage") . }')
-
-        query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?rl ?vl1 ?ql WHERE {\
-        <http://dbpedia.org/resource/'+id2+'> ?p ?v . ?v ?r ?v1 . ?v1 ?q <http://dbpedia.org/resource/'+id1+'> . \
-        FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v1). FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) . \
-        FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v1) .'+\
-                      suffixes_dbpedia_2+ '. FILTER(?vl != "Link from a Wikipage to another Wikipage") . FILTER(?vl1 !=\
-                       "Link from a Wikipage to another Wikipage") . }')
-    # print query_back
-    # print query
-    try:
-        result = sparql.query(sparql_endpoint, query)
-        q1_values = [sparql.unpack_row(row_result) for row_result in result]
-    except:
-        q1_values = []
-    if q1_values:
-        for vals in q1_values:
-            if vals[0] != 'Link from a Wikipage to another Wikipage' and vals[2] != \
-                    'Link from a Wikipage to another Wikipage' and vals[4] != 'Link from a Wikipage to another Wikipage':
-                relations.append((kb, vals[0], vals[1], label[0]))
-                relations.append((kb, vals[2], vals[3], vals[1]))
-                relations.append((kb, vals[4], label[1], vals[3]))
-    try:
-        result_back = sparql.query(sparql_endpoint, query_back)
-        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
-    except:
-        q1_values_back = []
-    if q1_values_back:
-        for vals in q1_values_back:
-            if vals[0] != 'Link from a Wikipage to another Wikipage' and vals[2] != \
-                    'Link from a Wikipage to another Wikipage' and vals[4] != 'Link from a Wikipage to another Wikipage':
-                relations.append((kb, vals[0], vals[1], label[1]))
-                relations.append((kb, vals[2], vals[3], vals[1]))
-                relations.append((kb, vals[4], label[0], vals[3]))
-    return relations
-
-
-def relation_extractor_1hop(kb, id1, id2, label, relations, predicate_dict):
-    if kb == 'wikidata':
-        sparql_endpoint = sparql_wikidata
-        query = (prefixes_wikidata+' SELECT distinct ?propLabel ?vLabel ?prop1Label ?prop ?prop1 WHERE { entity:'+id1+' ?p ?v . \
-        ?v ?q entity:'+id2+' . FILTER(entity:'+id1+' != ?v) . FILTER(entity:'+id2+' != ?v) . '+suffixes_wikidata+'}')
-
-        query_back = (prefixes_wikidata + ' SELECT distinct ?propLabel ?vLabel ?prop1Label ?prop ?prop1 '
-                                          'WHERE { entity:' + id2 + ' \
-        ?p ?v . ?v ?q entity:' + id1 + ' .  FILTER(entity:'+id1+' != ?v) .  FILTER(entity:'+id2+' != ?v) . ' +\
-                      suffixes_wikidata + '}')
-    if kb == 'dbpedia':
-        sparql_endpoint = sparql_dbpedia
-        query = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE { <http://dbpedia.org/resource/'+id1+'> ?p ?v . \
-        ?v ?q <http://dbpedia.org/resource/'+id2+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
-        FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+'}')
-        query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?vl ?ql WHERE {<http://dbpedia.org/resource/'+id2+'> ?p ?v\
-         . ?v ?q <http://dbpedia.org/resource/'+id1+'> . FILTER(<http://dbpedia.org/resource/'+id1+'> != ?v) . \
-         FILTER(<http://dbpedia.org/resource/'+id2+'> != ?v) .' + suffixes_dbpedia+ '}')
-    try:
-        result = sparql.query(sparql_endpoint, query)
-        q1_values = [sparql.unpack_row(row_result) for row_result in result]
-    except:
-        q1_values = []
-        pass
-
-    if kb == 'wikidata':
-        for vals in q1_values:
-            vals_0 = vals[3].split('/')[-1]
-            vals_2 = vals[4].split('/')[-1]
-            vals_0_equivalent = predicate_dict.get(vals_0,'')
-            vals_2_equivalent = predicate_dict.get(vals_2,'')
-            if vals_0_equivalent:
-                relations.append([kb, vals_0_equivalent, vals[1], label[0]])
-            else:
-                relations.append([kb, vals[0], vals[1], label[0]])
-            if vals_2_equivalent:
-                relations.append([kb, vals_2_equivalent, label[1], vals[1]])
-            else:
-                relations.append([kb, vals[2], label[1], vals[1]])
-    else:
-        for vals in q1_values:
-            if 'Wikipage' not in vals[0] and 'Wikipage' not in vals[2]:
-                if 'diplomatic' not in vals[0] and 'diplomatic' not in vals[2]:
-                    relations.append([kb, vals[0], vals[1], label[0]])
-                    relations.append([kb, vals[2], label[1], vals[1]])
-    try:
-        result_back = sparql.query(sparql_endpoint, query_back)
-        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
-    except:
-        q1_values_back = []
-    if kb == 'wikidata':
-        for vals in q1_values_back:
-            vals_0 = vals[3].split('/')[-1]
-            vals_2 = vals[4].split('/')[-1]
-            vals_0_equivalent = predicate_dict.get(vals_0,'')
-            vals_2_equivalent = predicate_dict.get(vals_2,'')
-            if vals_0_equivalent:
-                relations.append([kb, vals_0_equivalent, vals[1], label[1]])
-            else:
-                relations.append([kb, vals[0], vals[1], label[1]])
-            if vals_2_equivalent:
-                relations.append([kb, vals_2_equivalent, label[0], vals[1]])
-            else:
-                relations.append([kb, vals[2], label[0], vals[1]])
-    else:
-        for vals in q1_values_back:
-            if 'Wikipage' not in vals[0] and 'Wikipage' not in vals[2]:
-                if 'diplomatic' not in vals[0] and 'diplomatic' not in vals[2]:
-                    relations.append([kb, vals[0], vals[1], label[1]])
-                    relations.append([kb, vals[2], label[0], vals[1]])
-    return relations
 
 
 if __name__ == '__main__':

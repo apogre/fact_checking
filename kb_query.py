@@ -201,8 +201,8 @@ def distance_three_query(kb, id1, distance_two, unique_predicates):
         ?id4 ?p2 ?id3 . ?id3 ?p1 ?id2 . ?id2 ?p <http://dbpedia.org/resource/' + id1 + '> . ' + suffixes_dbpedia_0 + ' \
         ?p1 rdfs:label ?pl1 . FILTER langMatches( lang(?pl1), "EN" ) . ?p2 rdfs:label ?pl2 . \
         FILTER langMatches( lang(?pl2), "EN"). }')
-    print query
-    print query_back
+    # print query
+    # print query_back
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -247,7 +247,7 @@ def distance_three_query(kb, id1, distance_two, unique_predicates):
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
     except:
         q1_values_back = []
-    print len(q1_values_back)
+    # print len(q1_values_back)
     for vals in q1_values_back:
         if vals[0] not in unique_predicates:
             unique_predicates.append(vals[0])

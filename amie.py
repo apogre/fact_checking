@@ -14,7 +14,8 @@ if __name__ == '__main__':
 
     data = set([entity.split('/')[-1] for entity in entity_pairs])
     data = list(data)
-    for ent in data:
+    for i,ent in enumerate(data):
+        print i
         distance_three, unique_predicates = distance_three_query('dbpedia', ent, distance_three,unique_predicates)
         amie_training.extend(distance_three)
 

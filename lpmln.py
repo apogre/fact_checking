@@ -95,7 +95,7 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
                     count += 1
         rel_set = [r.replace(' ', '_') if isinstance(r, basestring) else str(r) for r in evidence]
         # item_set.add(lemmatizer.lemmatize(rel_set[1].lower()) + '(' + rel_set[0] + ',' + rel_set[2] + ').')
-        item_set.add(rel_set[1].lower() + '(' + rel_set[0] + ',' + rel_set[2] + ').')
+        item_set.add(rel_set[1].lower() + '("' + rel_set[0] + '","' + rel_set[2] + '").')
         item_set_initials.add(rel_set[1].lower() + '(' + entity_mapping.get(evidence[0], '').lower() + \
                               ',' + entity_mapping.get(evidence[2], '').lower() + ').')
     # print item_set_initials

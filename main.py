@@ -261,40 +261,40 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         if lpmln:
             print "Executing LPMLN"
             if load_mappings:
-                # print "Loading DBpedia to Wikidata Mappings"
-                # predicate_dict = load_lpmln_resource()
-                # load_mappings = False
+                print "Loading DBpedia to Wikidata Mappings"
+                predicate_dict = load_lpmln_resource()
+                load_mappings = False
+                # distance_one, distance_two, distance_three = relation_extractor_triples(resource, triple_dict)
+            # amie_training.extend(distance_three)
+            if sentence_id not in lpmln_predicate.keys():
+                filtered_evidence = []
                 distance_one, distance_two, distance_three = relation_extractor_triples(resource, triple_dict)
-            amie_training.extend(distance_three)
-        #     if sentence_id not in lpmln_predicate.keys():
-        #         filtered_evidence = []
-        #         distance_one, distance_two, distance_three = relation_extractor_triples(resource, triple_dict)
-        #         if distance_two:
-        #             for evidence in distance_two:
-        #                 if evidence[1] in rule_predicates:
-        #                     if evidence[0] in resource_v or evidence[2] in resource_v:
-        #                         filtered_evidence.append(evidence)
-        #             item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
-        #             lpmln_predicate[sentence_id] = list(item_set)
-        #             lpmln_predicate_flag = True
+                if distance_two:
+                    for evidence in distance_two:
+                        if evidence[1] in rule_predicates:
+                            if evidence[0] in resource_v or evidence[2] in resource_v:
+                                filtered_evidence.append(evidence)
+                    item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
+                    lpmln_predicate[sentence_id] = list(item_set)
+                    lpmln_predicate_flag = True
+            else:
+                print "Loading Stored Evidence"
+                item_set = lpmln_predicate.get(sentence_id, {})
+            print item_set
+        #     if sentence_id not in lpmln_output.keys():
+        #     #         # get_rules(predicate_of_interest)
+        #         probability = inference(sentence_id, data_source)
+        #     #         probability = [1]
         #     else:
-        #         print "Loading Stored Evidence"
-        #         item_set = lpmln_predicate.get(sentence_id, {})
-        #     print item_set
-        # #     if sentence_id not in lpmln_output.keys():
-        # #     #         # get_rules(predicate_of_interest)
-        # #         probability = inference(sentence_id, data_source)
-        # #     #         probability = [1]
-        # #     else:
-        # #         probability = lpmln_output[sentence_id]
-        # #     lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
-        # #     print probability
-        # update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
-        #                  kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
-        #                  lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
-        #                  kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect)
+        #         probability = lpmln_output[sentence_id]
+        #     lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
+        #     print probability
+        update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
+                         kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
+                         lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
+                         kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect)
 
-    amie_tsv(amie_training, data_source)
+    # amie_tsv(amie_training, data_source)
 
     if KGMiner:
         kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)

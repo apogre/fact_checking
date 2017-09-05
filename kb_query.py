@@ -28,8 +28,9 @@ suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) 
 
 def all_relations_query(predicate):
     query = 'select ?a ?b where {?a <http://dbpedia.org/property/' + predicate + '> ?b. ?b rdf:type \
-    <http://dbpedia.org/ontology/Person> .}'
+    <http://dbpedia.org/ontology/Person> . } LIMIT 100'
     sparql_endpoint = sparql_dbpedia
+    print query
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]

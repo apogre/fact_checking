@@ -28,9 +28,10 @@ suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) 
 
 def all_relations_query(predicate):
     query = 'select ?a ?b where {?a <http://dbpedia.org/property/' + predicate + '> ?b. ?b rdf:type \
-    <http://dbpedia.org/ontology/Person> . } LIMIT 100'
+    <http://dbpedia.org/ontology/Person> . ?a rdf:type <http://dbpedia.org/ontology/Company> .}'
     sparql_endpoint = sparql_dbpedia
     print query
+    sys.exit()
     try:
         result = sparql.query(sparql_endpoint, query)
         q1_values = [sparql.unpack_row(row_result) for row_result in result]
@@ -184,7 +185,7 @@ def distance_two_query(kb, id1, distance_two, unique_predicates):
 
 
 def distance_three_query(kb, id1, distance_two, unique_predicates):
-    print "Distance Three Query"
+    print id1
     if kb == 'wikidata':
         sparql_endpoint = sparql_wikidata
         query = (prefixes_wikidata+' SELECT distinct ?propLabel ?id2Label WHERE { entity:'+id1+' ?p ?id2 . '+ suffixes_wikidata_0 \
@@ -211,7 +212,7 @@ def distance_three_query(kb, id1, distance_two, unique_predicates):
         q1_values = []
         pass
     if q1_values:
-        print len(q1_values)
+        # print len(q1_values)
         for vals in q1_values:
             if vals[0] not in unique_predicates:
                 unique_predicates.append(vals[0])

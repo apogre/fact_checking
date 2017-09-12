@@ -191,13 +191,18 @@ def evidence_writer(sorted_predicates, sentence_id, data_source):
 
 
 def amie_tsv(item_set, data_source):
-    with open('LPmln/' + data_source + '/' +data_source + '_founders_all.tsv', 'wb') as csvfile:
+    with open('/media/apradhan/DATA/' +data_source + '_founders_all.tsv', 'ab') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='\t', skipinitialspace=True)
         for i in item_set:
             try:
-                datawriter.writerow(i)
+                if 'Text_used_to_link_from_a_Wikipage_to_another_Wikipage' not in i and \
+                                'Link_from_a_Wikipage_to_an_external_page' not in i and 'Wikipage_disambiguates' not in i:
+                    datawriter.writerow(i)
             except:
                 pass
-    with open('LPmln/' + data_source + '/' +data_source + '_founders_all.tsv', 'r') as f, \
-            open('LPmln/' + data_source + '/' + data_source + '_founders_unique_all.tsv', 'w') as out_file:
+
+
+def amie_tsv_unique(data_source):
+    with open('/media/apradhan/DATA/' +data_source + '_founders_all.tsv', 'r') as f, \
+            open('/media/apradhan/DATA/' + data_source + '_founders_unique_full.tsv', 'wb') as out_file:
         out_file.writelines(unique_everseen(f))

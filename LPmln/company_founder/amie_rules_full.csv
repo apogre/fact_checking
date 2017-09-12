@@ -1,0 +1,109 @@
+Loading files... 
+  Starting company_founder_founders_unique_full.tsv
+  Finished company_founder_founders_unique_full.tsv, still running: 0
+Loaded 783515 facts in 5.53 s using 447 MB
+Using HeadCoverage as pruning metric with minimum threshold 0.01
+Using recursivity limit 3
+Default mining assistant that defines support by counting support on both head variables
+No minimum threshold on standard confidence
+Filtering on PCA confidence with minimum threshold 0.1
+Constants in the arguments of relations are disabled
+Lossless (query refinement) heuristics enabled
+Starting the mining phase... Using 4 threads
+Rule	Head Coverage	Std Confidence	PCA Confidence	Positive Examples	Body size	PCA Body size	Functional variable	Std. Lower Bound	PCA Lower Bound	PCA Conf estimation
+?b  employer  ?a   => ?a  founders  ?b	0.022304833	0.02189781	0.52173913	12	548	23	?b	0.0	0.0	0.0
+?b  known_for  ?a   => ?a  founders  ?b	0.076208178	0.028571429	0.254658385	41	1435	161	?b	0.0	0.0	0.0
+?a  key_person  ?b   => ?a  founders  ?b	0.117100372	0.074292453	0.35	63	848	180	?b	0.0	0.0	0.0
+?a  key_people  ?b   => ?a  founders  ?b	0.089219331	0.050632911	0.403361345	48	948	119	?b	0.0	0.0	0.0
+?a  founded_by  ?b   => ?a  founders  ?b	0.172862454	0.19214876	0.574074074	93	484	162	?b	0.0	0.0	0.0
+?a  staff  ?b   => ?a  founders  ?b	0.011152416	0.033519553	0.375	6	179	16	?b	0.0	0.0	0.0
+?a  owning_company  ?b   => ?a  founders  ?b	0.016728625	0.013931889	0.36	9	646	25	?b	0.0	0.0	0.0
+?a  founded_by  ?b  ?b  known_for  ?a   => ?a  founders  ?b	0.029739777	0.444444444	0.761904762	16	36	21	?b	0.0	0.0	0.0
+?a  key_person  ?b  ?b  known_for  ?a   => ?a  founders  ?b	0.020446097	0.297297297	0.846153846	11	37	13	?b	0.0	0.0	0.0
+?a  founded_by  ?b  ?b  occupation  ?a   => ?a  founders  ?b	0.037174721	0.476190476	0.666666667	20	42	30	?b	0.0	0.0	0.0
+?a  key_person  ?b  ?b  occupation  ?a   => ?a  founders  ?b	0.026022305	0.166666667	0.736842105	14	84	19	?b	0.0	0.0	0.0
+?a  founded_by  ?b  ?a  key_person  ?b   => ?a  founders  ?b	0.048327138	0.366197183	0.722222222	26	71	36	?b	0.0	0.0	0.0
+?a  key_people  ?b  ?b  occupation  ?a   => ?a  founders  ?b	0.018587361	0.166666667	0.666666667	10	60	15	?b	0.0	0.0	0.0
+?a  founded_by  ?b  ?a  key_people  ?b   => ?a  founders  ?b	0.026022305	0.388888889	0.736842105	14	36	19	?b	0.0	0.0	0.0
+?a  founded_by  ?b  ?a  owning_company  ?b   => ?a  founders  ?b	0.011152416	0.333333333	0.666666667	6	18	9	?b	0.0	0.0	0.0
+?a  founded_by  ?b  ?a  owner  ?b   => ?a  founders  ?b	0.013011152	0.35	0.7	7	20	10	?b	0.0	0.0	0.0
+?a  key_person  ?b  ?a  owning_company  ?b   => ?a  founders  ?b	0.013011152	0.538461538	1	7	13	7	?b	0.0	0.0	0.0
+?a  key_person  ?b  ?a  owner  ?b   => ?a  founders  ?b	0.014869888	0.421052632	0.888888889	8	19	9	?b	0.0	0.0	0.0
+?f  employer  ?a  ?b  name  ?f   => ?a  founders  ?b	0.013011152	0.155555556	0.583333333	7	45	12	?b	0.0	0.0	0.0
+?a  founders  ?f  ?b  name  ?f   => ?a  founders  ?b	0.308550186	0.887700535	1	166	187	166	?b	0.0	0.0	0.0
+?a  founded_by  ?f  ?b  name  ?f   => ?a  founders  ?b	0.094795539	0.337748344	0.662337662	51	151	77	?b	0.0	0.0	0.0
+?f  known_for  ?a  ?b  name  ?f   => ?a  founders  ?b	0.053903346	0.107806691	0.273584906	29	269	106	?b	0.0	0.0	0.0
+?a  key_people  ?f  ?b  name  ?f   => ?a  founders  ?b	0.05204461	0.155555556	0.49122807	28	180	57	?b	0.0	0.0	0.0
+?b  name  ?f  ?a  owning_company  ?f   => ?a  founders  ?b	0.013011152	0.046357616	0.5	7	151	14	?b	0.0	0.0	0.0
+?b  name  ?f  ?a  owner  ?f   => ?a  founders  ?b	0.014869888	0.022535211	0.19047619	8	355	42	?b	0.0	0.0	0.0
+?a  key_person  ?f  ?b  name  ?f   => ?a  founders  ?b	0.07063197	0.177570093	0.527777778	38	214	72	?b	0.0	0.0	0.0
+?a  founders  ?f  ?b  spouse  ?f   => ?a  founders  ?b	0.031598513	0.103030303	0.485714286	17	165	35	?b	0.0	0.0	0.0
+?b  birth_name  ?f  ?a  founders  ?f   => ?a  founders  ?b	0.011152416	1	1	6	6	6	?b	0.0	0.0	0.0
+?f  name  ?a  ?b  occupation  ?f   => ?a  founders  ?b	0.018587361	0.030674847	0.185185185	10	326	54	?b	0.0	0.0	0.0
+?a  founded_by  ?f  ?b  spouse  ?f   => ?a  founders  ?b	0.014869888	0.094117647	0.470588235	8	85	17	?b	0.0	0.0	0.0
+?a  name  ?f  ?b  occupation  ?f   => ?a  founders  ?b	0.024163569	0.078313253	0.433333333	13	166	30	?b	0.0	0.0	0.0
+?b  known_for  ?f  ?f  name  ?a   => ?a  founders  ?b	0.031598513	0.0651341	0.293103448	17	261	58	?b	0.0	0.0	0.0
+?b  known_for  ?f  ?a  name  ?f   => ?a  founders  ?b	0.031598513	0.083743842	0.414634146	17	203	41	?b	0.0	0.0	0.0
+?a  founders  ?f  ?b  relatives  ?f   => ?a  founders  ?b	0.020446097	0.171875	0.392857143	11	64	28	?b	0.0	0.0	0.0
+?a  founded_by  ?f  ?b  relatives  ?f   => ?a  founders  ?b	0.011152416	0.230769231	0.857142857	6	26	7	?b	0.0	0.0	0.0
+?b  child  ?f  ?a  key_people  ?f   => ?a  founders  ?b	0.011152416	0.146341463	0.5	6	41	12	?b	0.0	0.0	0.0
+?a  founders  ?f  ?b  relative  ?f   => ?a  founders  ?b	0.018587361	0.344827586	1	10	29	10	?b	0.0	0.0	0.0
+?b  display  ?f  ?a  founders  ?f   => ?a  founders  ?b	0.014869888	1	1	8	8	8	?b	0.0	0.0	0.0
+?f  founders  ?b  ?a  name  ?f   => ?a  founders  ?b	0.165427509	0.89	0.89	89	100	100	?b	0.0	0.0	0.0
+?b  commons  ?f  ?a  founders  ?f   => ?a  founders  ?b	0.014869888	1	1	8	8	8	?b	0.0	0.0	0.0
+?f  founded_by  ?b  ?a  name  ?f   => ?a  founders  ?b	0.031598513	0.173469388	0.68	17	98	25	?b	0.0	0.0	0.0
+?f  key_person  ?b  ?a  name  ?f   => ?a  founders  ?b	0.035315985	0.090047393	0.487179487	19	211	39	?b	0.0	0.0	0.0
+?f  key_people  ?b  ?a  name  ?f   => ?a  founders  ?b	0.026022305	0.04516129	0.5	14	310	28	?b	0.0	0.0	0.0
+?a  founders  ?f  ?f  spouse  ?b   => ?a  founders  ?b	0.031598513	0.064638783	0.85	17	263	20	?b	0.0	0.0	0.0
+?a  founders  ?f  ?f  relatives  ?b   => ?a  founders  ?b	0.027881041	0.333333333	0.833333333	15	45	18	?b	0.0	0.0	0.0
+?a  founders  ?f  ?f  relative  ?b   => ?a  founders  ?b	0.022304833	0.52173913	1	12	23	12	?b	0.0	0.0	0.0
+?f  display  ?b  ?a  founders  ?f   => ?a  founders  ?b	0.014869888	1	1	8	8	8	?b	0.0	0.0	0.0
+?f  commons  ?b  ?a  founders  ?f   => ?a  founders  ?b	0.014869888	0.888888889	1	8	9	8	?b	0.0	0.0	0.0
+?a  founders  ?f  ?f  name  ?b   => ?a  founders  ?b	0.308550186	0.626415094	1	166	265	166	?b	0.0	0.0	0.0
+?f  birth_name  ?b  ?a  founders  ?f   => ?a  founders  ?b	0.011152416	0.06	1	6	100	6	?b	0.0	0.0	0.0
+?f  founders  ?b  ?a  founders  ?f   => ?a  founders  ?b	0.013011152	0.7	0.7	7	10	10	?b	0.0	0.0	0.0
+?f  founders  ?b  ?a  key_person  ?f   => ?a  founders  ?b	0.011152416	0.666666667	0.666666667	6	9	9	?b	0.0	0.0	0.0
+?a  key_person  ?f  ?f  name  ?b   => ?a  founders  ?b	0.07063197	0.120634921	0.535211268	38	315	71	?b	0.0	0.0	0.0
+?a  key_people  ?f  ?f  name  ?b   => ?a  founders  ?b	0.046468401	0.096525097	0.471698113	25	259	53	?b	0.0	0.0	0.0
+?a  founded_by  ?f  ?f  name  ?b   => ?a  founders  ?b	0.094795539	0.26984127	0.662337662	51	189	77	?b	0.0	0.0	0.0
+?a  founded_by  ?f  ?f  spouse  ?b   => ?a  founders  ?b	0.016728625	0.026392962	0.473684211	9	341	19	?b	0.0	0.0	0.0
+?a  founded_by  ?f  ?f  relatives  ?b   => ?a  founders  ?b	0.014869888	0.142857143	0.666666667	8	56	12	?b	0.0	0.0	0.0
+?a  founded_by  ?f  ?f  relative  ?b   => ?a  founders  ?b	0.011152416	0.260869565	1	6	23	6	?b	0.0	0.0	0.0
+?f  name  ?b  ?a  owner  ?f   => ?a  founders  ?b	0.014869888	0.008743169	0.19047619	8	915	42	?b	0.0	0.0	0.0
+?a  key_people  ?f  ?f  parents  ?b   => ?a  founders  ?b	0.011152416	0.070588235	0.666666667	6	85	9	?b	0.0	0.0	0.0
+?f  name  ?b  ?a  owning_company  ?f   => ?a  founders  ?b	0.013011152	0.020467836	0.5	7	342	14	?b	0.0	0.0	0.0
+?f  founders  ?b  ?a  long_name  ?f   => ?a  founders  ?b	0.040892193	1	1	22	22	22	?b	0.0	0.0	0.0
+?f  founders  ?b  ?a  short_name  ?f   => ?a  founders  ?b	0.018587361	1	1	10	10	10	?b	0.0	0.0	0.0
+?f  founders  ?b  ?a  trading_name  ?f   => ?a  founders  ?b	0.018587361	1	1	10	10	10	?b	0.0	0.0	0.0
+?e  known_for  ?a  ?e  name  ?b   => ?a  founders  ?b	0.053903346	0.064159292	0.268518519	29	452	108	?b	0.0	0.0	0.0
+?f  founders  ?b  ?a  subsid  ?f   => ?a  founders  ?b	0.013011152	0.134615385	0.134615385	7	52	52	?b	0.0	0.0	0.0
+?e  employer  ?a  ?e  name  ?b   => ?a  founders  ?b	0.013011152	0.08045977	0.636363636	7	87	11	?b	0.0	0.0	0.0
+?e  founded_by  ?b  ?e  name  ?a   => ?a  founders  ?b	0.031598513	0.071428571	0.226666667	17	238	75	?b	0.0	0.0	0.0
+?e  founded_by  ?b  ?e  parent_company  ?a   => ?a  founders  ?b	0.011152416	0.0375	0.127659574	6	160	47	?b	0.0	0.0	0.0
+?e  key_people  ?b  ?e  name  ?a   => ?a  founders  ?b	0.026022305	0.018324607	0.208955224	14	764	67	?b	0.0	0.0	0.0
+?e  founders  ?b  ?e  name  ?a   => ?a  founders  ?b	0.165427509	0.363265306	0.363265306	89	245	245	?b	0.0	0.0	0.0
+?e  founders  ?b  ?e  long_name  ?a   => ?a  founders  ?b	0.040892193	0.511627907	0.511627907	22	43	43	?b	0.0	0.0	0.0
+?e  founders  ?b  ?e  trading_name  ?a   => ?a  founders  ?b	0.018587361	1	1	10	10	10	?b	0.0	0.0	0.0
+?e  founders  ?b  ?e  short_name  ?a   => ?a  founders  ?b	0.018587361	0.322580645	0.322580645	10	31	31	?b	0.0	0.0	0.0
+?e  key_person  ?b  ?e  name  ?a   => ?a  founders  ?b	0.031598513	0.032755299	0.175257732	17	519	97	?b	0.0	0.0	0.0
+?e  producer  ?b  ?e  studio  ?a   => ?a  founders  ?b	0.072490706	0.1625	0.333333333	39	240	117	?b	0.0	0.0	0.0
+?e  company  ?a  ?e  producer  ?b   => ?a  founders  ?b	0.022304833	0.131868132	0.461538462	12	91	26	?b	0.0	0.0	0.0
+?e  label  ?a  ?e  producer  ?b   => ?a  founders  ?b	0.016728625	0.02425876	0.321428571	9	371	28	?b	0.0	0.0	0.0
+?e  producer  ?b  ?e  production_companies  ?a   => ?a  founders  ?b	0.016728625	0.214285714	0.375	9	42	24	?b	0.0	0.0	0.0
+?e  producer  ?b  ?e  record_label  ?a   => ?a  founders  ?b	0.011152416	0.018404908	0.25	6	326	24	?b	0.0	0.0	0.0
+?e  starring  ?b  ?e  studio  ?a   => ?a  founders  ?b	0.011152416	0.018072289	0.181818182	6	332	33	?b	0.0	0.0	0.0
+?e  company  ?a  ?e  creator  ?b   => ?a  founders  ?b	0.016728625	0.07826087	0.25	9	115	36	?b	0.0	0.0	0.0
+?e  founder  ?b  ?e  parent  ?a   => ?a  founders  ?b	0.016728625	0.04368932	0.290322581	9	206	31	?b	0.0	0.0	0.0
+?e  founder  ?b  ?e  parent_company  ?a   => ?a  founders  ?b	0.011152416	0.03125	0.230769231	6	192	26	?b	0.0	0.0	0.0
+?e  studio  ?a  ?e  writer  ?b   => ?a  founders  ?b	0.018587361	0.064935065	0.344827586	10	154	29	?b	0.0	0.0	0.0
+?e  film_director  ?b  ?e  studio  ?a   => ?a  founders  ?b	0.022304833	0.084507042	0.266666667	12	142	45	?b	0.0	0.0	0.0
+?e  company  ?a  ?e  executive_producer  ?b   => ?a  founders  ?b	0.039033457	0.126506024	0.308823529	21	166	68	?b	0.0	0.0	0.0
+?e  company  ?a  ?e  developer  ?b   => ?a  founders  ?b	0.014869888	0.2	0.444444444	8	40	18	?b	0.0	0.0	0.0
+?e  company  ?a  ?e  creator_(agent)  ?b   => ?a  founders  ?b	0.014869888	0.076923077	0.258064516	8	104	31	?b	0.0	0.0	0.0
+?e  director  ?b  ?e  studio  ?a   => ?a  founders  ?b	0.029739777	0.098765432	0.285714286	16	162	56	?b	0.0	0.0	0.0
+?e  constructor  ?a  ?e  designer  ?b   => ?a  founders  ?b	0.011152416	0.09375	0.375	6	64	16	?b	0.0	0.0	0.0
+?e  designer  ?b  ?e  developer  ?a   => ?a  founders  ?b	0.011152416	0.042253521	0.545454545	6	142	11	?b	0.0	0.0	0.0
+Mining done in 1.43 s
+Total time 6.96 s
+93 rules mined.
+?e  founders  ?b  ?e  publisher  ?a   => ?a  founders  ?b	0.011152416	∞	∞	6	0	0	?b	0.0	0.0	0.0

@@ -275,13 +275,11 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                             if evidence[0] in resource_v or evidence[2] in resource_v:
                                 filtered_evidence.append(evidence)
                     item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
-                    sys.exit(0)
                     lpmln_predicate[sentence_id] = list(item_set)
                     lpmln_predicate_flag = True
             else:
                 print "Loading Stored Evidence"
                 item_set = lpmln_predicate.get(sentence_id, {})
-            print item_set
         #     if sentence_id not in lpmln_output.keys():
         #     #         # get_rules(predicate_of_interest)
         #         probability = inference(sentence_id, data_source)

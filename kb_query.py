@@ -40,7 +40,7 @@ def all_relations_query(predicate):
     return q1_values
 
 
-def distance_one_query(kb, id1, distance_one, unique_predicates):
+def distance_one_query(kb, id1, distance_one):
     print "Distance One Query"
     if kb == 'wikidata':
         sparql_endpoint = sparql_wikidata
@@ -74,8 +74,6 @@ def distance_one_query(kb, id1, distance_one, unique_predicates):
     if q1_values:
         print len(q1_values)
         for vals in q1_values:
-            if vals[0] not in unique_predicates:
-                unique_predicates.append(vals[0])
             if vals[0] not in unwanted_predicates:
                 vals_0 = vals[0].replace(' ', '_')
                 if not isinstance(vals[1], basestring):
@@ -89,15 +87,13 @@ def distance_one_query(kb, id1, distance_one, unique_predicates):
         q1_values_back = []
     print len(q1_values_back)
     for vals in q1_values_back:
-        if vals[0] not in unique_predicates:
-            unique_predicates.append(vals[0])
         if vals[0] not in unwanted_predicates:
             vals_0 = vals[0].replace(' ', '_')
             if not isinstance(vals[1], basestring):
                 distance_one.append([vals[1], vals_0, id1])
             else:
                 distance_one.append([vals[1].split('/')[-1].replace(' ', '_'), vals_0, id1])
-    return distance_one, unique_predicates
+    return distance_one
 
 
 def distance_two_query(kb, id1, distance_two, unique_predicates):

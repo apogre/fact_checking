@@ -1,7 +1,7 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
-from kb_query import get_entity_type, get_description, get_kgminer_predicates, resource_extractor
+from kb_query import get_description, distance_one_query
 from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, rule_predicates
 from kgminer import get_training_set, invoke_kgminer, get_perfect_training, poi_writer, entity_id_finder, train_data_csv, \
     csv_writer
@@ -15,7 +15,7 @@ import argparse
 import sys
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, evidence_writer, inference, get_rules, amie_tsv, evidence_writer1
+from lpmln import relation_extractor_triples, inference, get_rules, amie_tsv, evidence_writer1
 from resource_writer import update_resources
 
 load_word2vec = True
@@ -264,17 +264,18 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 print "Loading DBpedia to Wikidata Mappings"
                 predicate_dict = load_lpmln_resource()
                 load_mappings = False
-                # distance_one, distance_two, distance_three = relation_extractor_triples(resource, triple_dict)
-            # amie_training.extend(distance_three)
             if sentence_id not in lpmln_predicate.keys():
+                distance_one = []
                 filtered_evidence = []
-                distance_one, distance_two, distance_three = relation_extractor_triples(resource, triple_dict)
-                if distance_two:
-                    for evidence in distance_two:
+                for entity in resource_v:
+                    distance_one = distance_one_query('dbpedia', entity, distance_one)
+                if distance_one:
+                    for evidence in distance_one:
                         if evidence[1] in rule_predicates:
                             if evidence[0] in resource_v or evidence[2] in resource_v:
                                 filtered_evidence.append(evidence)
                     item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
+                    sys.exit(0)
                     lpmln_predicate[sentence_id] = list(item_set)
                     lpmln_predicate_flag = True
             else:

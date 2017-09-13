@@ -1,4 +1,4 @@
-founders(A,B) :- founders(E,B), publisher(E,A) .
+founders(A,B) :- founders(F,B), publisher(F,A) .
 
 founders(A,B) :- owning_company(A,B) , key_person(A,B).
 
@@ -30,9 +30,11 @@ founders(A,B) :- founders(F,B), short_name(A,F).
 
 founders(A,B) :- founders(F,B), trading_name(A,F).
 
-founders(A,B) :- founders(E,B), trading_name(E,A).
+founders(A,B) :- founders(F,B), trading_name(F,A).
 
-2.09 founders(A,B) :- founders(F,B), name(A,F).
+2.09 pf1(A,B,F).
+
+founders(A,B) :- founders(F,B), name(A,F), pf1(A,B,F).
 
 2.07 founders(A,B) :- key_person(A,B), owner(A,B).
 

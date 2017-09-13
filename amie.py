@@ -11,6 +11,9 @@ def get_training_data(predicate):
 if __name__ == '__main__':
     distance_three, unique_predicates = [], []
     entity_pairs = get_training_data('founders')
+    entity_names = [entity[0].split('/')[-1] for entity in entity_pairs]
+    print entity_names
+    sys.exit()
     entity_pairs = sum(entity_pairs, [])
 
     data = set([entity.split('/')[-1] for entity in entity_pairs])

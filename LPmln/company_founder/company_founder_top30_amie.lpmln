@@ -32,30 +32,54 @@ founders(A,B) :- founders(F,B), trading_name(A,F).
 
 founders(A,B) :- founders(F,B), trading_name(F,A).
 
-2.09 pf1(A,B,F).
+0.89 pf1.
 
-founders(A,B) :- founders(F,B), name(A,F), pf1(A,B,F).
+founders(A,B) :- founders(F,B), name(A,F), pf1.
 
-2.07 founders(A,B) :- key_person(A,B), owner(A,B).
+0.88 pf2.
 
-1.79 founders(A,B) :- founded_by(A,F), relatives(B,F).
+founders(A,B) :- key_person(A,B), owner(A,B), pf2.
 
-1.73 founders(A,B) :- founders(A,F), spouse(F,B).
+0.85 pf3.
 
-1.70 founders(A,B) :- key_person(A,B), known_for(B,A).
+founders(A,B) :- founded_by(A,F), relatives(B,F), pf3.
 
-1.60 founders(A,B) :- founders(A,F),  relatives(F,B).
+0.85 pf4.
 
-1.16 founders(A,B) :- founded_by(A,B),  known_for(B,A).
+founders(A,B) :- founders(A,F), spouse(F,B), pf4.
 
-1.02 founders(A,B) :- key_person(A,B), occupation(B,A).
+0.84 pf5.
 
-1.02 founders(A,B) :- founded_by(A,B), key_people(A,B).
+founders(A,B) :- key_person(A,B), known_for(B,A), pf5.
 
-0.95 founders(A,B) :- founded_by(A,B), key_person(A,B).
+0.83 pf6.
 
-0.84 founders(A,B) :- founded_by(A,B), owner(A,B).
+founders(A,B) :- founders(A,F),  relatives(F,B), pf6.
 
-0.84 founders(A,B) :- founders(F,B), founders(A,F).
+0.76 pf7.
 
-0.75 founders(A,B) :- founded_by(F,B), name(A,F).
+founders(A,B) :- founded_by(A,B),  known_for(B,A), pf7.
+
+0.73 pf8.
+
+founders(A,B) :- key_person(A,B), occupation(B,A), pf8.
+
+0.73 pf9.
+
+founders(A,B) :- founded_by(A,B), key_people(A,B), pf9.
+
+0.72 pf10.
+
+founders(A,B) :- founded_by(A,B), key_person(A,B), pf10.
+
+0.70 pf11.
+
+founders(A,B) :- founded_by(A,B), owner(A,B), pf11.
+
+0.70 pf12.
+
+founders(A,B) :- founders(F,B), founders(A,F), pf12.
+
+0.68 pf13.
+
+founders(A,B) :- founded_by(F,B), name(A,F), pf13.

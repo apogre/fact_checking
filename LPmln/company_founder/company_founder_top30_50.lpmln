@@ -83,3 +83,15 @@ founders(A,B) :- founders(F,B), founders(A,F), pf12.
 0.75 pf13.
 
 founders(A,B) :- founded_by(F,B), name(A,F), pf13.
+
+0.69 pf14.
+
+founders(A,B) :- founded_by(A,B)  ,  occupation(B,A), pf14.
+
+0.69 pf15.
+
+founders(A,B) :- key_people(A,B)  ,  occupation(B,A), pf15.
+
+0.69 pf16.
+
+founders(A,B) :- founded_by(A,B) ,  owning_company(A,B), pf16.

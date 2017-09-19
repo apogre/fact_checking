@@ -22,3 +22,6 @@ occupation("Mark_Ghuneim","Twitter").
 known_for("Ivy_Bean","Twitter").
 known_for("Brianna_Wu","Twitter").
 known_for("Sean_Tejaratchi","Twitter").
+employer("Dick_Costolo","Twitter").
+employer("Ali_Rowghani","Twitter").
+employer("Anthony_Noto","Twitter").

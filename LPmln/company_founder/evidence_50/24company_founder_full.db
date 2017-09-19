@@ -2,8 +2,6 @@ name("Diane_Greene","Diane_Greene").
 name("Diane_Greene","Greene,_Diane").
 occupation("Diane_Greene","Google").
 occupation("Diane_Greene","Intuit").
-occupation("Diane_Greene","*_Director_of").
-occupation("Diane_Greene","*_Senior_Vice_President_at").
 occupation("Diane_Greene","Diane_Greene__1").
 founded_by("VMware","Diane_Greene").
 name("VMware","VMware_Inc.").
@@ -18,3 +16,4 @@ founded_by("VMware","Edouard_Bugnion").
 founded_by("VMware","Mendel_Rosenblum").
 owner("VMDK","VMware").
 subsid("EMC_Corporation","VMware").
+employer("Paul_Maritz","VMware").

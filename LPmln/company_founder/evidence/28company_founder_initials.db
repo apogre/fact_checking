@@ -1,8 +1,0 @@
-birth_place(go,ca).
-birth_place(go,sa).
-known_for(go,in).
-known_for(go,mo).
-known_for(go,go1).
-subsid(tw,vi).
-known_for(br,tw).
-known_for(se,tw).

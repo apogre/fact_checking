@@ -17,6 +17,12 @@ owner("Vuzix","Intel").
 owner("Intel_Open_Port","Intel").
 owning_company("Trinigy","Intel").
 owning_company("Havok_(company)","Intel").
+designer("Cilk","Intel").
+designer("X86","Intel").
+designer("Thunderbolt_(interface)","Intel").
+designer("Intel_i860","Intel").
+designer("Silicon_Photonics_Link","Intel").
+designer("Hella_Zippy","Intel").
 founded_by("Trusted_Computing_Group","Intel").
 founded_by("Dossia","Intel").
 occupation("Andrew_Grove","Intel").
@@ -30,3 +36,6 @@ occupation("Avram_Miller","Intel").
 occupation("Kimberly_Stevenson","Intel").
 known_for("Arthur_Rock","Intel").
 known_for("Andrew_Grove","Intel").
+employer("Paul_Maritz","Intel").
+employer("Hans_Peter_Anvin","Intel").
+employer("Rajiv_Goel","Intel").

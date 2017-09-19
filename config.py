@@ -4,9 +4,9 @@ unwanted_predicates = [u'thumbnail', u'person function', u'c',u'b',u's',u'n',u'v
                        u'signature alt', u'species', u'voy', u'wikt', u'Guests', u'align', u'image', u'image caption',\
                        u'image size', u'logo', u'logo size']
 
-rule_predicates = ['birth_name', 'birth_place','commons' ,'display','foundation_place','founded_by', 'founders',\
-                   'key_person', 'key_people', 'known_for', 'long_name', 'name','occupation','owner', 'owning_company',\
-                   'publisher','relatives', 'relative','short_name', 'subsid',  'trading_name']
+rule_predicates = ['birth_name','commons', 'designer', 'display', 'employer', 'foundation_place','founded_by', 'founders',\
+                   'key_person', 'parents', 'key_people', 'known_for', 'long_name', 'name','occupation','owner', 'owning_company'
+                   ,'relatives', 'relative','short_name', 'subsid',  'trading_name']
 
 rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4

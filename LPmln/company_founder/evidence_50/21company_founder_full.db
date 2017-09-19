@@ -1,12 +1,8 @@
 name("Jeff_Bezos","Jeff_Bezos").
-birth_place("Jeff_Bezos","Albuquerque,_New_Mexico,_U.S.").
 birth_name("Jeff_Bezos","Jeffrey_Preston_Jorgensen").
-birth_place("Jeff_Bezos","Albuquerque,_New_Mexico").
 occupation("Jeff_Bezos","Founder,_Chairman_&_CEO_of_Amazon.com").
 occupation("Jeff_Bezos","Amazon.com").
 occupation("Jeff_Bezos","Jeff_Bezos__1").
-publisher("0190-8286","Jeff_Bezos").
-publisher("","Jeff_Bezos").
 owner("The_Washington_Post","Jeff_Bezos").
 key_person("Amazon.com","Jeff_Bezos").
 key_person("Blue_Origin","Jeff_Bezos").
@@ -41,6 +37,7 @@ owner("Amazon_Tower_II","Amazon.com").
 owner("Ciceksepeti.com","Amazon.com").
 owning_company("Zappos","Amazon.com").
 owning_company("Endless.com","Amazon.com").
-publisher("The_Wee_Fellas","Amazon.com").
-publisher("Performing_in_The_Zone","Amazon.com").
 occupation("Larry_Kirshbaum","Amazon.com").
+employer("Col_Needham","Amazon.com").
+employer("Sara_Nelson","Amazon.com").
+employer("Tim_Bray","Amazon.com").

@@ -2,9 +2,8 @@ name("Elon_Musk","Elon_Musk").
 relatives("Elon_Musk","Kimbal_Musk").
 relatives("Elon_Musk","Tosca_Musk").
 birth_name("Elon_Musk","Elon_Reeve_Musk").
-birth_place("Elon_Musk","South_Africa").
-birth_place("Elon_Musk","Pretoria").
-birth_place("Elon_Musk","Gauteng").
+parents("Elon_Musk","Maye_Musk").
+parents("Elon_Musk","Errol_Musk").
 known_for("Elon_Musk","Tesla_Motors").
 known_for("Elon_Musk","SpaceX").
 known_for("Elon_Musk","PayPal").
@@ -32,10 +31,6 @@ founded_by("Tesla_Motors","Martin_Eberhard").
 founded_by("Tesla_Motors","JB_Straubel").
 founders("Tesla_Motors","Martin_Eberhard").
 founders("Tesla_Motors","JB_Straubel").
-founders("Tesla_Motors","*_Ian_Wright").
-publisher("specs#specs-2","Tesla_Motors").
-publisher("well_to_wheel.php","Tesla_Motors").
-publisher("?p=73","Tesla_Motors").
 owner("Tesla_Factory","Tesla_Motors").
 owner("Gigafactory_1","Tesla_Motors").
 owning_company("Tesla_Factory","Tesla_Motors").

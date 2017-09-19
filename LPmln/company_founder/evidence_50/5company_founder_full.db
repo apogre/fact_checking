@@ -6,5 +6,6 @@ occupation("Steve_Wozniak","Electronic_engineering").
 occupation("Steve_Wozniak","Electrical_engineering").
 occupation("Steve_Wozniak","Steve_Wozniak__1").
 key_person("Fusion-io","Steve_Wozniak").
+designer("Breakout_(video_game)","Steve_Wozniak").
 founded_by("Apple_Inc.","Steve_Wozniak").
 founders("US_Festival","Steve_Wozniak").

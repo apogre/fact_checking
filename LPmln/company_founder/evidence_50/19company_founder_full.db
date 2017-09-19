@@ -2,6 +2,8 @@ name("Elon_Musk","Elon_Musk").
 relatives("Elon_Musk","Kimbal_Musk").
 relatives("Elon_Musk","Tosca_Musk").
 birth_name("Elon_Musk","Elon_Reeve_Musk").
+parents("Elon_Musk","Maye_Musk").
+parents("Elon_Musk","Errol_Musk").
 known_for("Elon_Musk","Tesla_Motors").
 known_for("Elon_Musk","SpaceX").
 known_for("Elon_Musk","PayPal").
@@ -21,11 +23,3 @@ founded_by("Tesla_Motors","Elon_Musk").
 founded_by("SpaceX","Elon_Musk").
 founders("Tesla_Motors","Elon_Musk").
 founders("SolarCity","Elon_Musk").
-name("SpaceX","SpaceX").
-key_person("SpaceX","Gwynne_Shotwell").
-key_person("SpaceX","Tom_Mueller").
-key_people("SpaceX","Gwynne_Shotwell").
-key_people("SpaceX","Tom_Mueller").
-publisher("updates_archive.php?page=121007","SpaceX").
-publisher("falcon1.php#engine_reliability","SpaceX").
-owner("SpaceX_reusable_launch_system_development_program","SpaceX").

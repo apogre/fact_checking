@@ -83,3 +83,67 @@ founders(A,B) :- founders(F,B), founders(A,F), pf12.
 0.75 pf13.
 
 founders(A,B) :- founded_by(F,B), name(A,F), pf13.
+
+0.69 pf14.
+
+founders(A,B) :- founded_by(A,B)  ,  occupation(B,A), pf14.
+
+0.69 pf15.
+
+founders(A,B) :- key_people(A,B)  ,  occupation(B,A), pf15.
+
+0.69 pf16.
+
+founders(A,B) :- founded_by(A,B) ,  owning_company(A,B), pf16.
+
+0.69 pf17.
+
+founders(A,B) :- founders(F,B)  ,  key_person(A,F), pf17.
+
+0.69 pf18.
+
+founders(A,B) :- founded_by(A,F)  ,  relatives(F,B), pf18.
+
+0.69 pf19.
+
+founders(A,B) :- key_people(A,F)  ,  parents(F,B), pf19.
+
+0.67 pf20.
+
+founders(A,B) :- founded_by(A,F) ,name(B,F), pf20.
+
+0.67 pf21.
+
+founders(A,B) :- founded_by(A,F),  name(F,B), pf21.
+
+0.55 pf22.
+
+founders(A,B) :- employer(E,A) ,  name(E,B), pf22.
+
+0.33 pf23.
+
+founders(A,B) :- employer(F,A)  ,name(B,F), pf23.
+
+0.29 pf24.
+
+founders(A,B) :- founded_by(A,B), pf24.
+
+0.18 pf25.
+
+founders(A,B) :- designer(E,B) ,  developer(E,A), pf25.
+
+0.14 pf26.
+
+founders(A,B) :- key_person(A,F)  ,  name(F,B), pf26.
+
+0.11 pf27.
+
+founders(A,B) :- key_person(A,F)  ,name(B,F) , pf27.
+
+0.08 pf28.
+
+founders(A,B) :- employer(B,A), pf28.
+
+0.04 pf29.
+
+founders(A,B) :- founders(B,E)  , long_name(E,A), pf29.

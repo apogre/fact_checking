@@ -1,11 +1,7 @@
 name("Elon_Musk","Elon_Musk").
-birth_place("Elon_Musk","Pretoria,_Transvaal,_South_Africa").
 relatives("Elon_Musk","Kimbal_Musk").
 relatives("Elon_Musk","Tosca_Musk").
 birth_name("Elon_Musk","Elon_Reeve_Musk").
-birth_place("Elon_Musk","South_Africa").
-birth_place("Elon_Musk","Pretoria").
-birth_place("Elon_Musk","Gauteng").
 known_for("Elon_Musk","Tesla_Motors").
 known_for("Elon_Musk","SpaceX").
 known_for("Elon_Musk","PayPal").

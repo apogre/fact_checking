@@ -1,8 +1,0 @@
-birth_place(je,al).
-key_people(am,je).
-known_for(el,te).
-known_for(jb,te).
-known_for(ma,te).
-founders(te,el).
-founders(te,ma).
-founders(te,jb).

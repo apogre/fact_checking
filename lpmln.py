@@ -77,9 +77,9 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
 
     if not path.isdir('LPmln/' + data_source):
         mkdir('LPmln/' + data_source)
-        mkdir('LPmln/' + data_source + '/evidence/')
+        mkdir('LPmln/' + data_source + '/evidence_50/')
 
-    with open('LPmln/' + data_source + '/evidence/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
+    with open('LPmln/' + data_source + '/evidence_50/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
         for i in item_set:
             if '*' not in i:
                 try:
@@ -90,7 +90,7 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source):
 
 
 def amie_tsv(item_set, data_source):
-    with open('/media/apradhan/DATA/' +data_source + '_founders_all.tsv', 'ab') as csvfile:
+    with open('/media/apradhan/DATA/' +data_source + '_founders_negative_all.tsv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='\t', skipinitialspace=True)
         for i in item_set:
             try:
@@ -102,6 +102,18 @@ def amie_tsv(item_set, data_source):
 
 
 def amie_tsv_unique(data_source):
-    with open('/media/apradhan/DATA/' +data_source + '_founders_all.tsv', 'r') as f, \
-            open('/media/apradhan/DATA/' + data_source + '_founders_unique_full.tsv', 'wb') as out_file:
+    with open('/media/apradhan/DATA/' +data_source + '_founders_negative_all.tsv', 'r') as f, \
+            open('/media/apradhan/DATA/' + data_source + '_founders_unique_negative_full.tsv', 'wb') as out_file:
         out_file.writelines(unique_everseen(f))
+
+
+def amie_negative_tsv(item_set, data_source):
+    with open('/media/apradhan/DATA/' +data_source + 'negative_all.tsv', 'wb') as csvfile:
+        datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='\t', skipinitialspace=True)
+        for i in item_set:
+            j = [entity.split('/')[-1] for entity in i]
+            print j
+            try:
+               datawriter.writerow(j)
+            except:
+                pass

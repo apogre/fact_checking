@@ -1,4 +1,7 @@
 name("Bill_Gates","Bill_Gates").
+birth_name("Bill_Gates","William_Henry_Gates_III").
+parents("Bill_Gates","William_H._Gates,_Sr.").
+parents("Bill_Gates","Mary_Maxwell_Gates").
 occupation("Bill_Gates","Technology_Advisor_of_Microsoft").
 occupation("Bill_Gates","Co-Chair_of_the_Bill_&_Melinda_Gates_Foundation").
 occupation("Bill_Gates","CEO_of_Cascade_Investment").
@@ -21,6 +24,7 @@ key_people("Cascade_Investment","Bill_Gates").
 owning_company("Corbis","Bill_Gates").
 owning_company("GAMCO_Investors","Bill_Gates").
 owning_company("NEOS_GeoSolutions","Bill_Gates").
+designer("Color_BASIC","Bill_Gates").
 founded_by("Microsoft","Bill_Gates").
 founded_by("Cascade_Investment","Bill_Gates").
 founders("Bill_&_Melinda_Gates_Foundation","Bill_Gates").
@@ -162,6 +166,14 @@ owning_company("Xbox_Entertainment_Studios","Microsoft").
 owning_company("Launchworks","Microsoft").
 owning_company("MGS_Mobile_Gaming","Microsoft").
 owning_company("MSN_(internet_service_provider)","Microsoft").
+designer("C_Sharp_(programming_language)","Microsoft").
+designer("Microsoft_BASIC","Microsoft").
+designer("Visual_Basic_.NET","Microsoft").
+designer("TypeScript","Microsoft").
+designer("Abstract_State_Machine_Language","Microsoft").
+designer("Language_Integrated_Query","Microsoft").
+designer("Bus_mouse","Microsoft").
+designer("Samples_of_sans_serif_typefaces","Microsoft").
 known_for("Ray_Ozzie","Microsoft").
 known_for("Vincent_Connare","Microsoft").
 known_for("Lara_Stein","Microsoft").
@@ -188,3 +200,11 @@ known_for("Bob_Wallace","Microsoft").
 known_for("Steven_Sinofsky","Microsoft").
 known_for("Mark_Zbikowski","Microsoft").
 known_for("Marlin_Eller","Microsoft").
+employer("Satya_Nadella","Microsoft").
+employer("Anders_Hejlsberg","Microsoft").
+employer("Jim_Gray_(computer_scientist)","Microsoft").
+employer("Paul_Maritz","Microsoft").
+employer("Harry_Shum","Microsoft").
+employer("Ellen_Spertus","Microsoft").
+employer("Julie_Larson-Green","Microsoft").
+employer("Dean_Hachamovitch","Microsoft").

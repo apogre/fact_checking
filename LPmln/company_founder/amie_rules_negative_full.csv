@@ -1,0 +1,27 @@
+Rule,Head Coverage,Std Confidence,PCA Confidence,Positive Examples,Body size,PCA Body size,Functional variable,Std. Lower Bound,PCA Lower Bound,PCA Conf estimation
+?b  known_for  ?a   => ?a  notfounders  ?b,0.022149837,0.014997794,0.242857143,34,2267,140,?a,0,0,0
+?b  employer  ?a   => ?a  notfounders  ?b,0.014332248,0.024096386,0.154929577,22,913,142,?a,0,0,0
+?a  key_person  ?b   => ?a  notfounders  ?b,0.168729642,0.13002008,0.438240271,259,1992,591,?a,0,0,0
+?b  occupation  ?a   => ?a  notfounders  ?b,0.031921824,0.009250519,0.273743017,49,5297,179,?a,0,0,0
+?a  founded_by  ?b   => ?a  notfounders  ?b,0.086644951,0.121350365,0.521568627,133,1096,255,?a,0,0,0
+?a  founder  ?b   => ?a  notfounders  ?b,0.085993485,0.085436893,0.61971831,132,1545,213,?a,0,0,0
+?a  key_people  ?b   => ?a  notfounders  ?b,0.118566775,0.085285848,0.336414048,182,2134,541,?a,0,0,0
+?a  staff  ?b   => ?a  notfounders  ?b,0.043648208,0.258687259,0.609090909,67,259,110,?a,0,0,0
+?a  location  ?b   => ?a  notfounders  ?b,0.026710098,0.007214499,0.150735294,41,5683,272,?a,0,0,0
+?a  location_country  ?b   => ?a  notfounders  ?b,0.092508143,0.211624441,0.594142259,142,671,239,?a,0,0,0
+?a  Location  ?b   => ?a  notfounders  ?b,0.050162866,0.002235967,0.16008316,77,34437,481,?a,0,0,0
+?a  director  ?b   => ?a  notfounders  ?b,0.041042345,0.021724138,0.520661157,63,2900,121,?a,0,0,0
+?a  producer  ?b   => ?a  notfounders  ?b,0.025407166,0.001620274,0.378640777,39,24070,103,?a,0,0,0
+?a  Drivers  ?b   => ?a  notfounders  ?b,0.018241042,0.041297935,0.146596859,28,678,191,?a,0,0,0
+?a  film_director  ?b   => ?a  notfounders  ?b,0.022801303,0.014919011,0.53030303,35,2346,66,?a,0,0,0
+?a  country  ?b   => ?a  notfounders  ?b,0.024104235,0.004279436,0.406593407,37,8646,91,?a,0,0,0
+?a  foundation_place  ?b   => ?a  notfounders  ?b,0.017589577,0.049632353,0.15,27,544,180,?a,0,0,0
+?a  hq_location_country  ?b   => ?a  notfounders  ?b,0.014983713,0.365079365,0.638888889,23,63,36,?a,0,0,0
+?a  owner  ?b   => ?a  notfounders  ?b,0.0247557,0.009241245,0.215909091,38,4112,176,?a,0,0,0
+?a  area_served  ?b   => ?a  notfounders  ?b,0.011726384,0.028481013,0.133333333,18,632,135,?a,0,0,0
+?a  writer  ?b   => ?a  notfounders  ?b,0.014983713,0.001251973,0.239583333,23,18371,96,?a,0,0,0
+?a  foundation  ?b   => ?a  notfounders  ?b,0.016286645,0.021968366,0.117370892,25,1138,213,?a,0,0,0
+?a  owning_company  ?b   => ?a  notfounders  ?b,0.013680782,0.016908213,0.233333333,21,1242,90,?a,0,0,0
+Mining done in 1.43 s,,,,,,,,,,
+Total time 7.54 s,,,,,,,,,,
+23 rules mined.,,,,,,,,,,

@@ -26,7 +26,7 @@ suffixes_dbpedia_2 = 'FILTER langMatches( lang(?rl), "EN" ) . ?v rdfs:label ?vl 
 suffixes_dbpedia_0 = '?p rdfs:label ?pl . FILTER langMatches( lang(?pl), "EN" ) .'
 
 
-def all_relations_query(predicate):
+def positive_relations(predicate):
     query = 'select distinct ?a where {?a <http://dbpedia.org/property/' + predicate + '> ?b. ?b rdf:type \
     <http://dbpedia.org/ontology/Person> . ?a rdf:type <http://dbpedia.org/ontology/Company> .}'
     sparql_endpoint = sparql_dbpedia
@@ -38,6 +38,23 @@ def all_relations_query(predicate):
         q1_values = []
     return q1_values
 
+
+def negative_relations(predicate):
+    query = "SELECT DISTINCT ?subject <notfounders> ?object WHERE { ?object <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> \
+    <http://dbpedia.org/ontology/Person>. ?subject <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> \
+    <http://dbpedia.org/ontology/Company>. {{?subject ?targetRelation ?realObject.} UNION  \
+    {?realSubject ?targetRelation ?object.}} ?subject ?otherRelation ?object. \
+    FILTER (?targetRelation = <http://dbpedia.org/property/"+predicate+">) \
+    FILTER (?otherRelation != <http://dbpedia.org/property/"+predicate+">) \
+    FILTER NOT EXISTS {?subject <http://dbpedia.org/property/"+predicate+"> ?object.} }"
+    sparql_endpoint = sparql_dbpedia
+    print query
+    try:
+        result = sparql.query(sparql_endpoint, query)
+        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+    except:
+        q1_values = []
+    return q1_values
 
 def distance_one_query(kb, id1, distance_one):
     print "Distance One Query"

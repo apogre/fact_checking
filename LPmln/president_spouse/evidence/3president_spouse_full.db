@@ -1,6 +1,0 @@
-child(Barron_Trump,Donald_Trump).
-mother(Melania_Trump,Barron_Trump).
-child(Barron_Trump,Melania_Trump).
-father(Donald_Trump,Barron_Trump).
-country_of_citizenship(United_States_of_America,Melania_Trump).
-head_of_government(Donald_Trump,United_States_of_America).

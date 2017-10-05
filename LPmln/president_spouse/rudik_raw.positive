@@ -1,0 +1,7 @@
+2017-10-04 16:11:25 asu.edu.neg_rule_miner.ClientTest [INFO] http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & >(v0,v0) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v0)
+2017-10-04 16:11:25 asu.edu.neg_rule_miner.ClientTest [INFO] http://dbpedia.org/ontology/activeYearsEndYear(object,v0) & >(v0,v0) & http://dbpedia.org/ontology/deathYear(subject,v0)
+2017-10-04 16:11:25 asu.edu.neg_rule_miner.ClientTest [INFO] http://dbpedia.org/ontology/spouse(object,subject)
+2017-10-04 16:11:25 asu.edu.neg_rule_miner.ClientTest [INFO] http://dbpedia.org/ontology/deathYear(object,v0) & >(v0,v0) & http://dbpedia.org/ontology/activeYearsEndYear(subject,v0)
+2017-10-04 16:11:25 asu.edu.neg_rule_miner.ClientTest [INFO] http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & >(v0,v0) & http://dbpedia.org/ontology/activeYearsStartYear(subject,v0)
+2017-10-04 16:11:25 asu.edu.neg_rule_miner.ClientTest [INFO] http://dbpedia.org/ontology/birthYear(object,v0) & >(v0,v0) & http://dbpedia.org/ontology/birthYear(subject,v0)
+2017-10-04 16:11:25 asu.edu.neg_rule_miner.ClientTest [INFO] http://dbpedia.org/ontology/deathYear(object,v0) & <(v0,v0) & http://dbpedia.org/ontology/deathYear(subject,v0)

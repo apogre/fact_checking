@@ -1,6 +1,0 @@
-child(ba,do).
-mother(me,ba).
-child(ba,me).
-father(do,ba).
-country_of_citizenship(un,me).
-head_of_government(do,un).

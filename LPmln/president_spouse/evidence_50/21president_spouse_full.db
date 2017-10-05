@@ -1,0 +1,76 @@
+-spouse(A,B) :- spouse(A,F), parent(B,F) ,predecessor(B,A).
+-spouse(A,B) :- successor(A,B) , successor(A,F).
+-spouse(A,B) :- parent(A,B).
+-spouse(A,B) :- spouse(A,F) , parent(B,F) , parent(B,A).
+spouse(A,F) :- child(A,B), child(F,B) .
+spouse(A,B) :- spouse(B,A).
+spouse(F,A) :- child(A,B), child(F,B).
+spouse(A,F) :- child(A,B) ,relation(B,F).
+spouse(F,A) :- child(A,B) , relation(B,F) .
+spouse(F,A) :- child(A,B) , relative(B,F) .
+spouse(A,F) :- child(A,B) , relative(B,F) .
+spouse(A,F) :- child(A,B) , parent(B,F) .
+spouse(F,A) :- child(A,B) , parent(B,F) .
+spouse(A,B) :- relative(A,B).
+spouse(A,B) :- partner(A,B) .
+spouse(E,A) :- placeOfBurial(A,B) , deathPlace(E,B).
+spouse(E,A) :- placeOfBurial(A,B) , birthPlace(E,B) .
+
+birthplace("George_W._Bush","New_Haven,_Connecticut").
+child("George_W._Bush","Barbara_Bush_(born_1981)").
+child("George_W._Bush","Jenna_Bush_Hager").
+relation("George_W._Bush","Bush_family").
+spouse("George_W._Bush","Laura_Bush").
+successor("George_W._Bush","Barack_Obama").
+successor("George_W._Bush","Rick_Perry").
+predecessor("George_W._Bush","Ann_Richards").
+predecessor("George_W._Bush","Bill_Clinton").
+child("George_H._W._Bush","George_W._Bush").
+child("Barbara_Bush","George_W._Bush").
+parent("Barbara_Bush_(born_1981)","George_W._Bush").
+parent("Jenna_Bush_Hager","George_W._Bush").
+predecessor("Rick_Perry","George_W._Bush").
+relation("Anne_Hutchinson","George_W._Bush").
+relation("Samuel_P._Bush","George_W._Bush").
+relation("Jonathan_Bush","George_W._Bush").
+relative("Nancy_Walker_Bush_Ellis","George_W._Bush").
+relative("David_Davis_Walker","George_W._Bush").
+relative("Dorothy_Bush_Koch","George_W._Bush").
+relative("Alexander_Ellis_III","George_W._Bush").
+relative("Jonathan_S._Bush","George_W._Bush").
+relative("William_H._T._Bush","George_W._Bush").
+relative("John_Prescott_Ellis","George_W._Bush").
+relative("George_Herbert_Walker,_Jr.","George_W._Bush").
+successor("Bill_Clinton","George_W._Bush").
+successor("Ann_Richards","George_W._Bush").
+predecessor("Barack_Obama","George_W._Bush").
+birthyear("George_W._Bush","1946").
+parent("Barbara_Pierce_Bush","George_W._Bush").
+relation("Billy_Bush","George_W._Bush").
+relation("George_P._Bush","George_W._Bush").
+relation("Columba_Bush","George_W._Bush").
+successor("Presidency_of_Bill_Clinton","George_W._Bush").
+birthplace("Hillary_Clinton","Chicago").
+child("Hillary_Clinton","Chelsea_Clinton").
+predecessor("Hillary_Clinton","Gay_Daniels_White").
+predecessor("Hillary_Clinton","Barbara_Bush").
+predecessor("Hillary_Clinton","Condoleezza_Rice").
+predecessor("Hillary_Clinton","Daniel_Patrick_Moynihan").
+successor("Hillary_Clinton","Gay_Daniels_White").
+successor("Hillary_Clinton","Kirsten_Gillibrand").
+successor("Hillary_Clinton","Laura_Bush").
+successor("Hillary_Clinton","John_Kerry").
+successor("Hillary_Clinton","Betty_Tucker").
+child("Dorothy_Howell_Rodham","Hillary_Clinton").
+child("Hugh_E._Rodham","Hillary_Clinton").
+parent("Chelsea_Clinton","Hillary_Clinton").
+predecessor("Kirsten_Gillibrand","Hillary_Clinton").
+predecessor("Laura_Bush","Hillary_Clinton").
+predecessor("John_Kerry","Hillary_Clinton").
+relative("Jeff_Dwire","Hillary_Clinton").
+relative("Roger_Clinton_Sr.","Hillary_Clinton").
+relative("Marc_Mezvinsky","Hillary_Clinton").
+successor("Barbara_Bush","Hillary_Clinton").
+successor("Condoleezza_Rice","Hillary_Clinton").
+successor("William_Joseph_Burns","Hillary_Clinton").
+successor("Daniel_Patrick_Moynihan","Hillary_Clinton").

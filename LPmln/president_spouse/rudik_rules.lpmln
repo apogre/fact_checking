@@ -1,0 +1,2 @@
+spouse(B,A) :- parent(C,B), parent(C,A).
+

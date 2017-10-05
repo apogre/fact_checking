@@ -1,0 +1,17 @@
+birthplace("Bill_Gates","Seattle").
+activeyearsstartyear("Bill_Gates","1975").
+birthyear("Bill_Gates","1955").
+parent("Bill_Gates","Mary_Maxwell_Gates").
+parent("Bill_Gates","William_H._Gates,_Sr.").
+spouse("Bill_Gates","Melinda_Gates").
+child("Mary_Maxwell_Gates","Bill_Gates").
+child("William_H._Gates_Sr.","Bill_Gates").
+spouse("Melinda_Gates","Bill_Gates").
+birthplace("Bill_Gates","United_States").
+birthplace("Bill_Gates","Washington_(state)").
+child("William_H._Gates,_Sr.","Bill_Gates").
+birthplace("Melinda_Gates","Dallas").
+birthplace("Melinda_Gates","Dallas,_Texas").
+birthyear("Melinda_Gates","1964").
+birthplace("Melinda_Gates","Texas").
+birthplace("Melinda_Gates","United_States").

@@ -1,8 +1,0 @@
-president(wa,gr).
-successor(ca,wa).
-vice_president(ca,wa).
-child(jo,gr).
-parent(ca,jo).
-successor(ca1,gr).
-president(ca,ca1).
-father(ca,jo).

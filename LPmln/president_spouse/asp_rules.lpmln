@@ -1,0 +1,25 @@
+child(A,B) :- childY(F,B), spouse(A,F).
+
+spouse(A,B) :- spouse(B,A).
+
+child(A,B) :- child(F,B), spouse(F,A).
+
+child(A,B) :- relation(B,F), spouse(A,F).
+
+child(A,B) :- relation(B,F), spouse(F,A).
+
+child(A,B) :- relative(B,F), spouse(F,A).
+
+child(A,B) :- relative(B,F), spouse(A,F).
+
+child(A,B) :- parent(B,F), spouse(A,F).
+
+child(A,B) :- parent(B,F), spouse(F,A).
+
+relative(A,B) :- spouse(A,B).
+
+partner(A,B) :- spouse(A,B).
+
+placeOfBurial(A,B) :- deathPlace(E,B), spouse(E,A).
+
+placeOfBurial(A,B) :- birthPlace(E,B), spouse(E,A).

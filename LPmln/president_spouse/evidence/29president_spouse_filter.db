@@ -1,4 +1,0 @@
-president(ge,ge1).
-spouse(be,ge).
-successor(ro,be).
-after(ge1,ro).

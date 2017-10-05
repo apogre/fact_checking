@@ -1,0 +1,61 @@
+-spouse(A,B) :- spouse(A,F), parent(B,F) ,predecessor(B,A).
+-spouse(A,B) :- successor(A,B) , successor(A,F).
+-spouse(A,B) :- parent(A,B).
+-spouse(A,B) :- spouse(A,F) , parent(B,F) , parent(B,A).
+spouse(A,F) :- child(A,B), child(F,B) .
+spouse(A,B) :- spouse(B,A).
+spouse(F,A) :- child(A,B), child(F,B).
+spouse(A,F) :- child(A,B) ,relation(B,F).
+spouse(F,A) :- child(A,B) , relation(B,F) .
+spouse(F,A) :- child(A,B) , relative(B,F) .
+spouse(A,F) :- child(A,B) , relative(B,F) .
+spouse(A,F) :- child(A,B) , parent(B,F) .
+spouse(F,A) :- child(A,B) , parent(B,F) .
+spouse(A,B) :- relative(A,B).
+spouse(A,B) :- partner(A,B) .
+spouse(E,A) :- placeOfBurial(A,B) , deathPlace(E,B).
+spouse(E,A) :- placeOfBurial(A,B) , birthPlace(E,B) .
+
+
+birthplace("Bill_Clinton","Hope,_Arkansas").
+child("Bill_Clinton","Chelsea_Clinton").
+successor("Bill_Clinton","George_W._Bush").
+successor("Bill_Clinton","Frank_D._White").
+successor("Bill_Clinton","Jim_Guy_Tucker").
+successor("Bill_Clinton","Steve_Clark_(Arkansas_politician)").
+predecessor("Bill_Clinton","George_H._W._Bush").
+predecessor("Bill_Clinton","Frank_D._White").
+predecessor("Bill_Clinton","Jim_Guy_Tucker").
+predecessor("Bill_Clinton","Joe_Purcell").
+child("Virginia_Clinton_Kelley","Bill_Clinton").
+child("Jeff_Dwire","Bill_Clinton").
+child("Roger_Clinton_Sr.","Bill_Clinton").
+parent("Chelsea_Clinton","Bill_Clinton").
+relative("Roger_Clinton_Jr.","Bill_Clinton").
+relative("Marc_Mezvinsky","Bill_Clinton").
+successor("George_H._W._Bush","Bill_Clinton").
+successor("Frank_D._White","Bill_Clinton").
+successor("Jim_Guy_Tucker","Bill_Clinton").
+successor("Joe_Purcell","Bill_Clinton").
+predecessor("George_W._Bush","Bill_Clinton").
+predecessor("Frank_D._White","Bill_Clinton").
+predecessor("Jim_Guy_Tucker","Bill_Clinton").
+birthplace("Bill_Clinton","United_States").
+birthyear("Bill_Clinton","1946").
+relation("Bill_Clinton","Roger_Clinton,_Jr.").
+child("Roger_Clinton,_Sr.","Bill_Clinton").
+relative("Roger_Clinton,_Jr.","Bill_Clinton").
+birthplace("Hillary_Rodham_Clinton","Illinois").
+birthplace("Hillary_Rodham_Clinton","United_States").
+birthplace("Hillary_Rodham_Clinton","Chicago").
+birthyear("Hillary_Rodham_Clinton","1947").
+child("Hillary_Rodham_Clinton","Chelsea_Clinton").
+successor("Hillary_Rodham_Clinton","John_Kerry").
+successor("Hillary_Rodham_Clinton","Kirsten_Gillibrand").
+successor("Hillary_Rodham_Clinton","Laura_Bush").
+child("Hugh_E._Rodham","Hillary_Rodham_Clinton").
+child("Dorothy_Howell_Rodham","Hillary_Rodham_Clinton").
+parent("Chelsea_Clinton","Hillary_Rodham_Clinton").
+relative("Jeff_Dwire","Hillary_Rodham_Clinton").
+relative("Roger_Clinton,_Sr.","Hillary_Rodham_Clinton").
+successor("Condoleezza_Rice","Hillary_Rodham_Clinton").

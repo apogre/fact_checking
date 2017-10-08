@@ -78,11 +78,33 @@ def clingo_map(sentence_id, data_source, resource_v):
                                                                                              '/', evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
-    sys.exit(0)
     text = open('LPmln/' +data_source + '/' + 'clingo_result.txt', 'r')
     f = text.read()
     text.close()
-    probs = re.findall("(\w+\(\'[\s\S].+)",f)
+    probs = re.findall("(\w+\([\s\S]+\"\))",f)
+    print probs
+    if probs:
+        probs = probs[0].split(' ')
+        probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
+        probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p]
+    else:
+        probs = []
+        probs_test = []
+    return probs, probs_test
+
+
+def inference_hard(sentence_id, data_source, resource_v):
+    print "LPMLN Hard Inference"
+    evidence_source = 'LPmln/' + data_source + '/new_evidence/' + sentence_id + data_source
+    cmd = "lpmln2asp -i {0}new_rules/amie_hard.lpmln -q spouse -e {1}_full.db -r {0}hard_result.txt".format(
+        'LPmln/' + data_source + \
+        '/', evidence_source)
+    print cmd
+    subprocess.call(cmd, shell=True)
+    text = open('LPmln/' + data_source + '/' + 'hard_result.txt', 'r')
+    f = text.read()
+    text.close()
+    probs = re.findall("(\w+\(\'[\s\S].+)", f)
     probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
     probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p]
     return probs, probs_test

@@ -15,7 +15,7 @@ import argparse
 import sys
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, inference, get_rules, amie_tsv, evidence_writer1, clingo_map
+from lpmln import relation_extractor_triples, inference, inference_hard, amie_tsv, evidence_writer1, clingo_map
 from resource_writer import update_resources
 
 load_word2vec = True
@@ -288,11 +288,13 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             if sentence_id not in lpmln_output.keys():
         #     #         # get_rules(predicate_of_interest)
                 probability, prob_test = inference(sentence_id, data_source,resource_v)
-                answer_set = clingo_map(sentence_id, data_source,resource_v)
+                answer_set,answer_test = clingo_map(sentence_id, data_source,resource_v)
+                hard_prob, hard_prob_test = inference_hard(sentence_id, data_source,resource_v)
         #     #         probability = [1]
             else:
                 probability,prob_test = lpmln_output[sentence_id]
-            lpmln_evaluation.append([sentence_id, sentence_check,str(prob_test), str(probability)])
+            lpmln_evaluation.append([sentence_id, sentence_check,str(prob_test),str(answer_test), \
+                                     str(hard_prob_test),str(probability),str(answer_set),str(hard_prob)])
             # print lpmln_evaluation
             print probability
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \

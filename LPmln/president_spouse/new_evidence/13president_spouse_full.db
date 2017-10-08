@@ -1,0 +1,13 @@
+deathplace("Herbert_Hoover","New_York_City").
+birthplace("Herbert_Hoover","West_Branch,_Iowa").
+child("Herbert_Hoover","Allan_Hoover").
+child("Herbert_Hoover","Herbert_Hoover_Jr.").
+restingplace("Herbert_Hoover","Herbert_Hoover_Presidential_Library_and_Museum").
+restingplace("Herbert_Hoover","West_Branch,_Iowa").
+restingplace("Herbert_Hoover","Iowa").
+deathplace("Lou_Henry_Hoover","New_York_City").
+deathplace("Lou_Henry_Hoover","New_York_(state)").
+birthplace("Lou_Henry_Hoover","Waterloo,_Iowa").
+birthplace("Lou_Henry_Hoover","Iowa").
+child("Lou_Henry_Hoover","Allan_Hoover").
+child("Lou_Henry_Hoover","Herbert_Hoover,_Jr.").

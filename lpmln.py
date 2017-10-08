@@ -53,33 +53,56 @@ def relation_extractor_triples(resources, triples):
     return distance_one, distance_two, distance_three
 
 
-def inference(sentence_id, data_source):
+def inference(sentence_id, data_source, resource_v):
     print "LPMLN Inference"
     if path.isfile('LPmln/' +data_source + '/' + data_source + '_result.txt'):
         remove('LPmln/' +data_source + '/' + data_source + '_result.txt')
-    evidence_source = 'LPmln/' + data_source + '/evidence/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}_top5_amie.lpmln -q founders -all -e {1}_initials.db -r {0}_result.txt ".format('LPmln/' +data_source +\
-                                                                                             '/' + data_source, evidence_source)
+    evidence_source = 'LPmln/' + data_source + '/new_evidence/' + sentence_id + data_source
+    cmd = "lpmln2asp -i {0}new_rules/amie_confidence.lpmln -q spouse -e {1}_full.db -r {0}result.txt ".format('LPmln/' +data_source +\
+                                                                                             '/', evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
-    text = open('LPmln/' +data_source + '/' + data_source + '_result.txt', 'r')
+    text = open('LPmln/' +data_source + '/' + 'result.txt', 'r')
     f = text.read()
     text.close()
-    probs = re.findall("(\w+\(\w+\,\s\w+\)\s\d+\.\d+)",f)
-    return probs
+    probs = re.findall("(\w+\(\'[\s\S].+)",f)
+    probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
+    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p]
+    return probs, probs_test
 
 
-def evidence_writer1(filtered_evidence, sentence_id, data_source):
+def clingo_map(sentence_id, data_source, resource_v):
+    print "Clingo"
+    evidence_source = 'LPmln/' + data_source + '/new_evidence/' + sentence_id + data_source
+    cmd = "clingo {0}new_rules/amie_hard.lpmln {1}_full.db > {0}clingo_result.txt ".format('LPmln/' +data_source +\
+                                                                                             '/', evidence_source)
+    print cmd
+    subprocess.call(cmd, shell=True)
+    sys.exit(0)
+    text = open('LPmln/' +data_source + '/' + 'clingo_result.txt', 'r')
+    f = text.read()
+    text.close()
+    probs = re.findall("(\w+\(\'[\s\S].+)",f)
+    probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
+    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p]
+    return probs, probs_test
+
+
+def evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v):
     item_set = OrderedSet()
+    print resource_v
     for evidence in filtered_evidence:
-        rel_set = [r.replace(' ', '_') if isinstance(r, basestring) else str(r) for r in evidence]
-        item_set.add(rel_set[1].lower() + '("' + rel_set[0] + '","' + rel_set[2] + '").')
+        rel_set = [r for r in evidence]
+        if rel_set[0] in resource_v and rel_set[2] in resource_v and rel_set[1] == 'spouse':
+            pass
+        else:
+            item_set.add(rel_set[1].lower() + '("' + rel_set[0] + '","' + rel_set[2] + '").')
 
     if not path.isdir('LPmln/' + data_source):
         mkdir('LPmln/' + data_source)
-        mkdir('LPmln/' + data_source + '/evidence_50/')
+        mkdir('LPmln/' + data_source + '/new_evidence/')
 
-    with open('LPmln/' + data_source + '/evidence_50/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
+    with open('LPmln/' + data_source + '/new_evidence/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
         for i in item_set:
             if '*' not in i:
                 try:

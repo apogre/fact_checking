@@ -1,0 +1,16 @@
+deathplace("Woodrow_Wilson","Washington,_D.C.").
+birthplace("Woodrow_Wilson","Staunton,_Virginia").
+child("Woodrow_Wilson","Jessie_Woodrow_Wilson_Sayre").
+child("Woodrow_Wilson","Eleanor_Wilson_McAdoo").
+child("Woodrow_Wilson","Margaret_Woodrow_Wilson").
+restingplace("Woodrow_Wilson","Washington_National_Cathedral").
+spouse("Woodrow_Wilson","Ellen_Axson_Wilson").
+child("Joseph_Ruggles_Wilson","Woodrow_Wilson").
+parent("Jessie_Woodrow_Wilson_Sayre","Woodrow_Wilson").
+parent("Eleanor_Wilson_McAdoo","Woodrow_Wilson").
+spouse("Ellen_Axson_Wilson","Woodrow_Wilson").
+deathplace("Edith_Wilson","United_States").
+deathplace("Edith_Wilson","Washington,_D.C.").
+birthplace("Edith_Wilson","Virginia").
+birthplace("Edith_Wilson","United_States").
+birthplace("Edith_Wilson","Wytheville,_Virginia").

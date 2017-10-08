@@ -4,19 +4,22 @@ unwanted_predicates = [u'thumbnail', u'person function', u'c',u'b',u's',u'n',u'v
                        u'signature alt', u'species', u'voy', u'wikt', u'Guests', u'align', u'image', u'image caption',\
                        u'image size', u'logo', u'logo size']
 
-rule_predicates = ['birth_name','commons', 'designer', 'display', 'employer', 'foundation_place','founded_by', 'founders',\
-                   'key_person', 'parents', 'key_people', 'known_for', 'long_name', 'name','occupation','owner', 'owning_company'
-                   ,'relatives', 'relative','short_name', 'subsid',  'trading_name']
+# rule_predicates = ['birth_name','birth_year','commons', 'designer', 'display', 'employer', 'foundation_place','founded_by', 'founders',\
+#                    'founding_year','key_person', 'parents', 'key_people', 'known_for', 'long_name', 'name','occupation','owner', 'owning_company'
+#                    ,'parents','relatives', 'relative','short_name','spouse' 'subsid',  'trading_name']
 
+# rule_predicates = ['activeYearsStartYear','activeYearsEndYear','birthYear','birthPlace','child','deathPlace','deathYear','parent','predecessor','partner','placeOfBurial','relation','relative','spouse','successor']
+
+rule_predicates = ['birthPlace','child','deathPlace','spouse','parent','partner','placeOfBurial','restingPlace','relation','relative',]
 rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4
 evidence_threshold = 0
 rule_threshold = 0.15
-
-sparql_dbpedia_local = 'http://10.218.108.227:8890/sparql'
-sparql_dbpedia_on = 'http://10.218.108.227:8890/sparql'
-sparql_dbpedia = 'http://10.218.108.227:8890/sparql'
-# sparql_dbpedia_local = 'http://dbpedia.org/sparql'
-# sparql_dbpedia_on = 'http://dbpedia.org/sparql'
-# sparql_dbpedia = 'http://dbpedia.org/sparql'
+#
+# sparql_dbpedia_local_v = 'http://10.218.105.56:8890/sparql'
+# sparql_dbpedia_on_v = 'http://10.218.105.56:8890/sparql'
+# sparql_dbpedia_v = 'http://10.218.105.56:8890/sparql'
+sparql_dbpedia_local = 'http://dbpedia.org/sparql'
+sparql_dbpedia_on = 'http://dbpedia.org/sparql'
+sparql_dbpedia = 'http://dbpedia.org/sparql'
 sparql_wikidata = 'https://query.wikidata.org/sparql'

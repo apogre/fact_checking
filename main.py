@@ -1,7 +1,7 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
-from kb_query import get_description, distance_one_query
+from kb_query import get_description, distance_one_query, distance_one_query_local
 from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, rule_predicates
 from kgminer import get_training_set, invoke_kgminer, get_perfect_training, poi_writer, entity_id_finder, train_data_csv, \
     csv_writer
@@ -15,7 +15,7 @@ import argparse
 import sys
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, inference, get_rules, amie_tsv, evidence_writer1
+from lpmln import relation_extractor_triples, inference, get_rules, amie_tsv, evidence_writer1, clingo_map
 from resource_writer import update_resources
 
 load_word2vec = True
@@ -269,25 +269,32 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 filtered_evidence = []
                 for entity in resource_v:
                     distance_one = distance_one_query('dbpedia', entity, distance_one)
+                    # print distance_one
+
+                    # distance_one_local = distance_one_query_local('dbpedia', entity, distance_one)
+                    # print distance_one_local
+                    # distance_one = distance_one+distance_one_local
                 if distance_one:
                     for evidence in distance_one:
                         if evidence[1] in rule_predicates:
                             if evidence[0] in resource_v or evidence[2] in resource_v:
                                 filtered_evidence.append(evidence)
-                    item_set = evidence_writer1(filtered_evidence, sentence_id, data_source)
+                    item_set = evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v)
                     lpmln_predicate[sentence_id] = list(item_set)
                     lpmln_predicate_flag = True
             else:
                 print "Loading Stored Evidence"
                 item_set = lpmln_predicate.get(sentence_id, {})
-        #     if sentence_id not in lpmln_output.keys():
+            if sentence_id not in lpmln_output.keys():
         #     #         # get_rules(predicate_of_interest)
-        #         probability = inference(sentence_id, data_source)
+                probability, prob_test = inference(sentence_id, data_source,resource_v)
+                answer_set = clingo_map(sentence_id, data_source,resource_v)
         #     #         probability = [1]
-        #     else:
-        #         probability = lpmln_output[sentence_id]
-        #     lpmln_evaluation.append([sentence_id, sentence_check, str(probability)])
-        #     print probability
+            else:
+                probability,prob_test = lpmln_output[sentence_id]
+            lpmln_evaluation.append([sentence_id, sentence_check,str(prob_test), str(probability)])
+            # print lpmln_evaluation
+            print probability
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \

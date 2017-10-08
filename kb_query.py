@@ -56,6 +56,7 @@ def negative_relations(predicate):
         q1_values = []
     return q1_values
 
+
 def distance_one_query(kb, id1, distance_one):
     print "Distance One Query"
     if kb == 'wikidata':
@@ -67,18 +68,13 @@ def distance_one_query(kb, id1, distance_one):
                       "abstract","i")) . }')
     if kb == 'dbpedia':
         sparql_endpoint = sparql_dbpedia
-        if ',' in id1:
-            query = (prefixes_dbpedia + ' SELECT distinct ?pl ?id2 WHERE { <http://dbpedia.org/resource/' + id1 + '> ?p ?id2\
-             . ' + suffixes_dbpedia_0 + ' FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), \
-             "abstract","i")) . }')
-            query_back = (prefixes_dbpedia + ' SELECT distinct ?pl ?id2 WHERE { ?id2 ?p <http://dbpedia.org/resource/' + id1\
-                          + '> . ' + suffixes_dbpedia_0 + ' FILTER (!regex(str(?pl), "Wikipage","i")) . \
-                          FILTER (!regex(str(?pl), "abstract","i")) .  }')
-        else:
-            query = (prefixes_dbpedia+' SELECT distinct ?pl ?id2 WHERE { entity:'+id1+' ?p  ?id2 . ' + suffixes_dbpedia_0 + \
-                     ' FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), "abstract","i")) . }')
-            query_back = (prefixes_dbpedia+' SELECT distinct ?pl ?id2 WHERE { ?id2 ?p entity:'+id1+' . ' + suffixes_dbpedia_0\
-                          + ' FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), "abstract","i")) .  }')
+        query = (prefixes_dbpedia + ' SELECT distinct ?p ?id2 WHERE { <http://dbpedia.org/resource/' + id1 + '> ?p ?id2\
+         . ' + suffixes_dbpedia_0 + ' FILTER (!regex(str(?pl), "Wikipage","i")) . FILTER (!regex(str(?pl), \
+         "abstract","i")) . }')
+        query_back = (prefixes_dbpedia + ' SELECT distinct ?p ?id2 WHERE { ?id2 ?p <http://dbpedia.org/resource/' + id1\
+                      + '> . ' + suffixes_dbpedia_0 + ' FILTER (!regex(str(?pl), "Wikipage","i")) . \
+                      FILTER (!regex(str(?pl), "abstract","i")) .  }')
+
     print query
     print query_back
     try:
@@ -90,12 +86,12 @@ def distance_one_query(kb, id1, distance_one):
     if q1_values:
         print len(q1_values)
         for vals in q1_values:
-            if vals[0] not in unwanted_predicates:
-                vals_0 = vals[0].replace(' ', '_')
+            vals_0 = vals[0].split('/')[-1]
+            if vals_0 not in unwanted_predicates:
                 if not isinstance(vals[1], basestring):
                     distance_one.append([id1, vals_0, vals[1]])
                 else:
-                    distance_one.append([id1, vals_0, vals[1].split('/')[-1].replace(' ', '_')])
+                    distance_one.append([id1, vals_0, vals[1].split('/')[-1]])
     try:
         result_back = sparql.query(sparql_endpoint, query_back)
         q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
@@ -103,13 +99,53 @@ def distance_one_query(kb, id1, distance_one):
         q1_values_back = []
     print len(q1_values_back)
     for vals in q1_values_back:
-        if vals[0] not in unwanted_predicates:
-            vals_0 = vals[0].replace(' ', '_')
+        vals_0 = vals[0].split('/')[-1]
+        if vals_0 not in unwanted_predicates:
             if not isinstance(vals[1], basestring):
                 distance_one.append([vals[1], vals_0, id1])
             else:
-                distance_one.append([vals[1].split('/')[-1].replace(' ', '_'), vals_0, id1])
+                distance_one.append([vals[1].split('/')[-1], vals_0, id1])
     return distance_one
+
+
+def distance_one_query_local(kb, id1, distance_one):
+    print "Distance One Query Local"
+    if kb == 'dbpedia':
+        sparql_endpoint = sparql_dbpedia_v
+        query = (' SELECT distinct ?p ?id2 WHERE { <http://dbpedia.org/resource/'+id1+'> ?p  ?id2 . }')
+        query_back = (' SELECT distinct ?p ?id2 WHERE { ?id2 ?p <http://dbpedia.org/resource/'+id1+'> .}')
+    print query
+    print query_back
+    try:
+        result = sparql.query(sparql_endpoint, query)
+        q1_values = [sparql.unpack_row(row_result) for row_result in result]
+    except:
+        q1_values = []
+        pass
+    if q1_values:
+        print len(q1_values)
+        for vals in q1_values:
+            vals_0 = vals[0].split('/')[-1]
+            if vals_0 not in unwanted_predicates:
+                if not isinstance(vals[1], basestring):
+                    distance_one.append([id1, vals_0, vals[1]])
+                else:
+                    distance_one.append([id1, vals_0, vals[1].split('/')[-1]])
+    try:
+        result_back = sparql.query(sparql_endpoint, query_back)
+        q1_values_back = [sparql.unpack_row(row_result) for row_result in result_back]
+    except:
+        q1_values_back = []
+    print len(q1_values_back)
+    for vals in q1_values_back:
+        vals_0 = vals[0].split('/')[-1]
+        if vals_0 not in unwanted_predicates:
+            if not isinstance(vals[1], basestring):
+                distance_one.append([vals[1], vals_0, id1])
+            else:
+                distance_one.append([vals[1].split('/')[-1], vals_0, id1])
+    return distance_one
+
 
 
 def distance_two_query(kb, id1, distance_two, unique_predicates):

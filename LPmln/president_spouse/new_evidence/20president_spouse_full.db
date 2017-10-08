@@ -1,0 +1,17 @@
+birthplace("Bill_Clinton","Hope,_Arkansas").
+child("Bill_Clinton","Chelsea_Clinton").
+spouse("Bill_Clinton","Hillary_Clinton").
+child("Virginia_Clinton_Kelley","Bill_Clinton").
+child("Jeff_Dwire","Bill_Clinton").
+child("Roger_Clinton_Sr.","Bill_Clinton").
+parent("Chelsea_Clinton","Bill_Clinton").
+relative("Roger_Clinton_Jr.","Bill_Clinton").
+relative("Marc_Mezvinsky","Bill_Clinton").
+spouse("Hillary_Clinton","Bill_Clinton").
+birthplace("Laura_Bush","Midland,_Texas").
+child("Laura_Bush","Jenna_Bush_Hager").
+child("Laura_Bush","Barbara_Pierce_Bush").
+spouse("Laura_Bush","George_W._Bush").
+parent("Barbara_Bush_(born_1981)","Laura_Bush").
+parent("Jenna_Bush_Hager","Laura_Bush").
+spouse("George_W._Bush","Laura_Bush").

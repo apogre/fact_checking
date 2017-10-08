@@ -1,0 +1,16 @@
+birthplace("Bill_Clinton","Hope,_Arkansas").
+child("Bill_Clinton","Chelsea_Clinton").
+child("Virginia_Clinton_Kelley","Bill_Clinton").
+child("Jeff_Dwire","Bill_Clinton").
+child("Roger_Clinton_Sr.","Bill_Clinton").
+parent("Chelsea_Clinton","Bill_Clinton").
+relative("Roger_Clinton_Jr.","Bill_Clinton").
+relative("Marc_Mezvinsky","Bill_Clinton").
+birthplace("Hillary_Clinton","Chicago").
+child("Hillary_Clinton","Chelsea_Clinton").
+child("Dorothy_Howell_Rodham","Hillary_Clinton").
+child("Hugh_E._Rodham","Hillary_Clinton").
+parent("Chelsea_Clinton","Hillary_Clinton").
+relative("Jeff_Dwire","Hillary_Clinton").
+relative("Roger_Clinton_Sr.","Hillary_Clinton").
+relative("Marc_Mezvinsky","Hillary_Clinton").

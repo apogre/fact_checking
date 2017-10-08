@@ -1,0 +1,17 @@
+deathplace("Harry_S._Truman","Kansas_City,_Missouri").
+birthplace("Harry_S._Truman","Lamar,_Missouri").
+child("Harry_S._Truman","Margaret_Truman").
+restingplace("Harry_S._Truman","Independence,_Missouri").
+restingplace("Harry_S._Truman","Harry_S._Truman_Presidential_Library_and_Museum").
+child("Martha_Ellen_Young_Truman","Harry_S._Truman").
+relation("Louis_W._Truman","Harry_S._Truman").
+relation("Ralph_E._Truman","Harry_S._Truman").
+relative("Clifton_Daniel","Harry_S._Truman").
+deathplace("Bess_Truman","United_States").
+deathplace("Bess_Truman","Missouri").
+deathplace("Bess_Truman","Independence,_Missouri").
+birthplace("Bess_Truman","United_States").
+birthplace("Bess_Truman","Missouri").
+birthplace("Bess_Truman","Independence,_Missouri").
+child("Bess_Truman","Margaret_Truman").
+relative("Clifton_Daniel","Bess_Truman").

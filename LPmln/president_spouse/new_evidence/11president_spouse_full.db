@@ -1,0 +1,9 @@
+deathplace("Warren_G._Harding","San_Francisco").
+birthplace("Warren_G._Harding","Blooming_Grove,_Ohio").
+child("Warren_G._Harding","Elizabeth_Ann_Blaesing").
+restingplace("Warren_G._Harding","Marion,_Ohio").
+restingplace("Warren_G._Harding","Harding_Tomb").
+parent("Elizabeth_Ann_Blaesing","Warren_G._Harding").
+deathplace("Florence_Harding","Marion,_Ohio").
+deathplace("Florence_Harding","Marion, Ohio, U.S.").
+birthplace("Florence_Harding","Marion,_Ohio").

@@ -1,0 +1,12 @@
+deathplace("Calvin_Coolidge","Northampton,_Massachusetts").
+birthplace("Calvin_Coolidge","Plymouth_Notch,_Vermont").
+child("Calvin_Coolidge","John_Coolidge").
+restingplace("Calvin_Coolidge","Vermont").
+restingplace("Calvin_Coolidge","Plymouth_Notch_Cemetery").
+parent("John_Coolidge","Calvin_Coolidge").
+deathplace("Grace_Coolidge","Northampton,_Massachusetts").
+deathplace("Grace_Coolidge","Massachusetts").
+deathplace("Grace_Coolidge","Plymouth,_Vermont").
+birthplace("Grace_Coolidge","Vermont").
+birthplace("Grace_Coolidge","Burlington,_Vermont").
+child("Grace_Coolidge","John_Coolidge").

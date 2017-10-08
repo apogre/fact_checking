@@ -1,0 +1,7 @@
+birthplace("Bill_Gates","Seattle").
+parent("Bill_Gates","Mary_Maxwell_Gates").
+parent("Bill_Gates","William_H._Gates,_Sr.").
+child("Mary_Maxwell_Gates","Bill_Gates").
+child("William_H._Gates_Sr.","Bill_Gates").
+birthplace("Melinda_Gates","Dallas").
+birthplace("Melinda_Gates","Dallas,_Texas").

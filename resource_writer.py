@@ -14,7 +14,7 @@ def json_serial(obj):
 def update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, kgminer_output_flag, \
                      file_triples, ambiverse_resources, possible_kgminer_predicate, lpmln_predicate, kgminer_output,\
                      lpmln_output_flag, data_source, kgminer_random_output_flag, kgminer_output_random,\
-                     kgminer_perfect_output_flag, kgminer_output_perfect):
+                     kgminer_perfect_output_flag, kgminer_output_perfect, top_k):
     if triple_flag:
         print "Updating Relation Triples"
         if path.isfile('dataset/' + data_source + '/triples_raw.json'):
@@ -38,9 +38,9 @@ def update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_
 
     if lpmln_predicate_flag:
         print "Updating LPmln Predicate List"
-        if path.isfile('dataset/' + data_source + 'lpmln_predicate.json'):
-            remove('dataset/' + data_source + 'lpmln_predicate.json')
-        with open('dataset/' + data_source + '/lpmln_predicate.json', 'w') as fp:
+        if path.isfile('dataset/' + data_source + 'lpmln_predicate_top'+top_k+'.json'):
+            remove('dataset/' + data_source + 'lpmln_predicate_top'+top_k+'.json')
+        with open('dataset/' + data_source + '/lpmln_predicate_top'+top_k+'.json', 'w') as fp:
             json.dump(lpmln_predicate, fp, default=json_serial)
 
     if kgminer_output_flag:

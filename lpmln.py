@@ -53,12 +53,12 @@ def relation_extractor_triples(resources, triples):
     return distance_one, distance_two, distance_three
 
 
-def inference(sentence_id, data_source, resource_v):
+def inference(sentence_id, data_source, resource_v, top_k):
     print "LPMLN Inference"
     if path.isfile('LPmln/' +data_source + '/' + data_source + '_result.txt'):
         remove('LPmln/' +data_source + '/' + data_source + '_result.txt')
-    evidence_source = 'LPmln/' + data_source + '/new_evidence/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}new_rules/amie_confidence.lpmln -q spouse -e {1}_full.db -r {0}result.txt ".format('LPmln/' +data_source +\
+    evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
+    cmd = "lpmln2asp -i {0}new_rules/amie_confidence_top5.lpmln -q capital -e {1}_full.db -r {0}result.txt ".format('LPmln/' +data_source +\
                                                                                              '/', evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
@@ -71,10 +71,10 @@ def inference(sentence_id, data_source, resource_v):
     return probs, probs_test
 
 
-def clingo_map(sentence_id, data_source, resource_v):
+def clingo_map(sentence_id, data_source, resource_v,top_k):
     print "Clingo"
-    evidence_source = 'LPmln/' + data_source + '/new_evidence/' + sentence_id + data_source
-    cmd = "clingo {0}new_rules/amie_hard.lpmln {1}_full.db > {0}clingo_result.txt ".format('LPmln/' +data_source +\
+    evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
+    cmd = "clingo {0}new_rules/amie_hard_top5.lpmln {1}_full.db > {0}clingo_result.txt ".format('LPmln/' +data_source +\
                                                                                              '/', evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
@@ -93,10 +93,10 @@ def clingo_map(sentence_id, data_source, resource_v):
     return probs, probs_test
 
 
-def inference_hard(sentence_id, data_source, resource_v):
+def inference_hard(sentence_id, data_source, resource_v,top_k):
     print "LPMLN Hard Inference"
-    evidence_source = 'LPmln/' + data_source + '/new_evidence/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}new_rules/amie_hard.lpmln -q spouse -e {1}_full.db -r {0}hard_result.txt".format(
+    evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
+    cmd = "lpmln2asp -i {0}new_rules/amie_hard_top5.lpmln -q capital -e {1}_full.db -r {0}hard_result.txt".format(
         'LPmln/' + data_source + \
         '/', evidence_source)
     print cmd
@@ -110,21 +110,16 @@ def inference_hard(sentence_id, data_source, resource_v):
     return probs, probs_test
 
 
-def evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v):
+def evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v,top_k):
     item_set = OrderedSet()
     print resource_v
     for evidence in filtered_evidence:
         rel_set = [r for r in evidence]
-        if rel_set[0] in resource_v and rel_set[2] in resource_v and rel_set[1] == 'spouse':
+        if rel_set[0] in resource_v and rel_set[2] in resource_v and rel_set[1] == 'capital':
             pass
         else:
-            item_set.add(rel_set[1].lower() + '("' + rel_set[0] + '","' + rel_set[2] + '").')
-
-    if not path.isdir('LPmln/' + data_source):
-        mkdir('LPmln/' + data_source)
-        mkdir('LPmln/' + data_source + '/new_evidence/')
-
-    with open('LPmln/' + data_source + '/new_evidence/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
+            item_set.add(rel_set[1] + '("' + rel_set[0] + '","' + rel_set[2] + '").')
+    with open('LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
         for i in item_set:
             if '*' not in i:
                 try:
@@ -132,6 +127,18 @@ def evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v):
                 except:
                     pass
     return item_set
+
+
+def get_rule_predicates(data_source,top_k):
+    text = open('LPmln/' + data_source + '/new_rules/amie_hard_top'+top_k+'.lpmln', 'r')
+    f = text.read()
+    text.close()
+    probs = re.findall("(\w+\()", f)
+    probs = list(set(probs))
+    predicates = [p.replace('(','') for p in probs]
+    print predicates
+    return predicates
+
 
 
 def amie_tsv(item_set, data_source):

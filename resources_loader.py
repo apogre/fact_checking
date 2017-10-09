@@ -5,7 +5,7 @@ from resource_writer import json_serial
 from kb_query import dbpedia_wikidata_mapping
 
 
-def load_files(data_source):
+def load_files(data_source, top_k):
     if path.isfile('dataset/'+data_source+'/triples_raw.json'):
         with open('dataset/'+data_source+'/triples_raw.json') as json_data:
             file_triples = json.load(json_data)
@@ -24,8 +24,8 @@ def load_files(data_source):
     else:
         possible_predicate = {"a": "b"}
 
-    if path.isfile('dataset/' + data_source + '/lpmln_predicate.json'):
-        with open('dataset/' + data_source + '/lpmln_predicate.json') as json_data:
+    if path.isfile('dataset/' + data_source + '/lpmln_predicate_top'+top_k+'.json'):
+        with open('dataset/' + data_source + '/lpmln_predicate_top'+top_k+'.json') as json_data:
             lpmln_predicate = json.load(json_data)
     else:
         lpmln_predicate = {"a": "b"}

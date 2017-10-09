@@ -2,7 +2,7 @@ from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
 from kb_query import get_description, distance_one_query, distance_one_query_local
-from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, rule_predicates
+from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, rule_predicates, top_k
 from kgminer import get_training_set, invoke_kgminer, get_perfect_training, poi_writer, entity_id_finder, train_data_csv, \
     csv_writer
 from gensim.models import Word2Vec
@@ -15,7 +15,7 @@ import argparse
 import sys
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, inference, inference_hard, amie_tsv, evidence_writer1, clingo_map
+from lpmln import relation_extractor_triples, inference, inference_hard, amie_tsv, evidence_writer1, clingo_map, get_rule_predicates
 from resource_writer import update_resources
 
 load_word2vec = True
@@ -95,7 +95,7 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                  lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source, kr, \
                  kgminer_output_random_flag, kp, kgminer_output_perfect_flag):
     file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output, \
-    kgminer_output_random, kgminer_output_perfect = load_files(data_source)
+    kgminer_output_random, kgminer_output_perfect = load_files(data_source,top_k)
     sentence_count = len(sentence_lis)
     executed_sentence = 0
     kgminer_true_count = 0
@@ -264,6 +264,7 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 print "Loading DBpedia to Wikidata Mappings"
                 predicate_dict = load_lpmln_resource()
                 load_mappings = False
+            rule_predicates = get_rule_predicates(data_source, top_k)
             if sentence_id not in lpmln_predicate.keys():
                 distance_one = []
                 filtered_evidence = []
@@ -279,7 +280,7 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                         if evidence[1] in rule_predicates:
                             if evidence[0] in resource_v or evidence[2] in resource_v:
                                 filtered_evidence.append(evidence)
-                    item_set = evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v)
+                    item_set = evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v, top_k)
                     lpmln_predicate[sentence_id] = list(item_set)
                     lpmln_predicate_flag = True
             else:
@@ -287,20 +288,20 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 item_set = lpmln_predicate.get(sentence_id, {})
             if sentence_id not in lpmln_output.keys():
         #     #         # get_rules(predicate_of_interest)
-                probability, prob_test = inference(sentence_id, data_source,resource_v)
-                answer_set,answer_test = clingo_map(sentence_id, data_source,resource_v)
-                hard_prob, hard_prob_test = inference_hard(sentence_id, data_source,resource_v)
+                probability, prob_test = inference(sentence_id, data_source,resource_v,top_k)
+                answer_set,answer_test = clingo_map(sentence_id, data_source,resource_v,top_k)
+                hard_prob, hard_prob_test = inference_hard(sentence_id, data_source,resource_v,top_k)
         #     #         probability = [1]
             else:
                 probability,prob_test = lpmln_output[sentence_id]
             lpmln_evaluation.append([sentence_id, sentence_check,str(prob_test),str(answer_test), \
                                      str(hard_prob_test),str(probability),str(answer_set),str(hard_prob)])
             # print lpmln_evaluation
-            print probability
+            # print probability
         update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
                          kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
                          lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
-                         kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect)
+                         kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect, top_k)
 
     # amie_tsv(amie_training, data_source)
 
@@ -322,7 +323,7 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
 
     if lpmln_evaluation:
         print lpmln_evaluation
-        with open('dataset/' + data_source + '/lpmln_evaluation.csv', 'wb') as csvfile:
+        with open('dataset/' + data_source + '/lpmln_evaluation_top'+top_k+'.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)
 

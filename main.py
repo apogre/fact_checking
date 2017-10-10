@@ -169,8 +169,10 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         #     kgminer_predicate_ranked = possible_kgminer_predicate[sentence_id]
         # # print "Ranked Predicates"
         # print kgminer_predicate_ranked
+        print resource
         for triples_k, triples_v in triple_dict.iteritems():
             for triple_v in triples_v:
+                print triple_v
                 resource_v = [resource.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
         if KGMiner:
             if kgminer_predicate_ranked:

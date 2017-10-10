@@ -43,7 +43,7 @@ def ambiverse_entity_parser(text):
 
 
 def spotlight_entity_parser(text):
-    responses = spotlight.annotate('http://deep-reasoning.cidse.dhcp.asu.edu:2222/rest/annotate',text)
+    responses = spotlight.annotate('http://localhost:2222/rest/annotate',text)
     resource = dict()
     for response in responses:
         json_data = response

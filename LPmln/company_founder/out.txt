@@ -1,0 +1,105 @@
+unsat(0,"a",A,B) :- owning_company(A,B) , key_person(A,B),not founders(A,B).
+founders(A,B):- owning_company(A,B) , key_person(A,B), not unsat(0,"a",A,B).
+:~unsat(0,"a",A,B). [1@1,0,A,B]
+unsat(1,"a",A,B,F) :- founders(A,F), name(B,F),not founders(A,B).
+founders(A,B):- founders(A,F), name(B,F), not unsat(1,"a",A,B,F).
+:~unsat(1,"a",A,B,F). [1@1,1,A,B,F]
+unsat(2,"a",A,B,F) :- founders(A,F), birth_name(B,F),not founders(A,B).
+founders(A,B):- founders(A,F), birth_name(B,F), not unsat(2,"a",A,B,F).
+:~unsat(2,"a",A,B,F). [1@1,2,A,B,F]
+unsat(3,"a",A,B,F) :- founders(A,F),  relative(B,F),not founders(A,B).
+founders(A,B):- founders(A,F),  relative(B,F), not unsat(3,"a",A,B,F).
+:~unsat(3,"a",A,B,F). [1@1,3,A,B,F]
+unsat(4,"a",A,B,F) :- founders(A,F),  display(B,F),not founders(A,B).
+founders(A,B):- founders(A,F),  display(B,F), not unsat(4,"a",A,B,F).
+:~unsat(4,"a",A,B,F). [1@1,4,A,B,F]
+unsat(5,"a",A,B,F) :- founders(A,F),  commons(B,F),not founders(A,B).
+founders(A,B):- founders(A,F),  commons(B,F), not unsat(5,"a",A,B,F).
+:~unsat(5,"a",A,B,F). [1@1,5,A,B,F]
+unsat(6,"a",A,B,F) :- founders(A,F),  relative(F,B),not founders(A,B).
+founders(A,B):- founders(A,F),  relative(F,B), not unsat(6,"a",A,B,F).
+:~unsat(6,"a",A,B,F). [1@1,6,A,B,F]
+unsat(7,"a",A,B,F) :- founders(A,F),  display(F,B),not founders(A,B).
+founders(A,B):- founders(A,F),  display(F,B), not unsat(7,"a",A,B,F).
+:~unsat(7,"a",A,B,F). [1@1,7,A,B,F]
+unsat(8,"a",A,B,F) :- founders(A,F),  commons(F,B),not founders(A,B).
+founders(A,B):- founders(A,F),  commons(F,B), not unsat(8,"a",A,B,F).
+:~unsat(8,"a",A,B,F). [1@1,8,A,B,F]
+unsat(9,"a",A,B,F) :- founders(A,F), name(F,B),not founders(A,B).
+founders(A,B):- founders(A,F), name(F,B), not unsat(9,"a",A,B,F).
+:~unsat(9,"a",A,B,F). [1@1,9,A,B,F]
+unsat(10,"a",A,B,F) :- founders(A,F), birth_name(F,B),not founders(A,B).
+founders(A,B):- founders(A,F), birth_name(F,B), not unsat(10,"a",A,B,F).
+:~unsat(10,"a",A,B,F). [1@1,10,A,B,F]
+unsat(11,"a",A,B,F) :- founders(A,F),  relative(F,B),not founders(A,B).
+founders(A,B):- founders(A,F),  relative(F,B), not unsat(11,"a",A,B,F).
+:~unsat(11,"a",A,B,F). [1@1,11,A,B,F]
+unsat(12,"a",A,B,F) :- founders(F,B), long_name(A,F),not founders(A,B).
+founders(A,B):- founders(F,B), long_name(A,F), not unsat(12,"a",A,B,F).
+:~unsat(12,"a",A,B,F). [1@1,12,A,B,F]
+unsat(13,"a",A,B,F) :- founders(F,B), short_name(A,F),not founders(A,B).
+founders(A,B):- founders(F,B), short_name(A,F), not unsat(13,"a",A,B,F).
+:~unsat(13,"a",A,B,F). [1@1,13,A,B,F]
+unsat(14,"a",A,B,F) :- founders(F,B), trading_name(A,F),not founders(A,B).
+founders(A,B):- founders(F,B), trading_name(A,F), not unsat(14,"a",A,B,F).
+:~unsat(14,"a",A,B,F). [1@1,14,A,B,F]
+unsat(15,"a",A,B,F) :- founders(F,B), trading_name(F,A),not founders(A,B).
+founders(A,B):- founders(F,B), trading_name(F,A), not unsat(15,"a",A,B,F).
+:~unsat(15,"a",A,B,F). [1@1,15,A,B,F]
+unsat(16,"a",A,B,F) :- founders(F,B), name(A,F),not founders(A,B).
+founders(A,B):- founders(F,B), name(A,F), not unsat(16,"a",A,B,F).
+:~unsat(16,"a",A,B,F). [1@1,16,A,B,F]
+unsat(17,"a",A,B) :- key_person(A,B), owner(A,B),not founders(A,B).
+founders(A,B):- key_person(A,B), owner(A,B), not unsat(17,"a",A,B).
+:~unsat(17,"a",A,B). [1@1,17,A,B]
+unsat(18,"a",A,B,F) :- founded_by(A,F), relatives(B,F),not founders(A,B).
+founders(A,B):- founded_by(A,F), relatives(B,F), not unsat(18,"a",A,B,F).
+:~unsat(18,"a",A,B,F). [1@1,18,A,B,F]
+unsat(19,"a",A,B,F) :- founders(A,F), spouse(F,B),not founders(A,B).
+founders(A,B):- founders(A,F), spouse(F,B), not unsat(19,"a",A,B,F).
+:~unsat(19,"a",A,B,F). [1@1,19,A,B,F]
+unsat(20,"a",A,B) :- key_person(A,B), known_for(B,A),not founders(A,B).
+founders(A,B):- key_person(A,B), known_for(B,A), not unsat(20,"a",A,B).
+:~unsat(20,"a",A,B). [1@1,20,A,B]
+unsat(21,"a",A,B,F) :- founders(A,F),  relatives(F,B),not founders(A,B).
+founders(A,B):- founders(A,F),  relatives(F,B), not unsat(21,"a",A,B,F).
+:~unsat(21,"a",A,B,F). [1@1,21,A,B,F]
+unsat(22,"a",A,B) :- founded_by(A,B),  known_for(B,A),not founders(A,B).
+founders(A,B):- founded_by(A,B),  known_for(B,A), not unsat(22,"a",A,B).
+:~unsat(22,"a",A,B). [1@1,22,A,B]
+unsat(23,"a",A,B) :- key_person(A,B), occupation(B,A),not founders(A,B).
+founders(A,B):- key_person(A,B), occupation(B,A), not unsat(23,"a",A,B).
+:~unsat(23,"a",A,B). [1@1,23,A,B]
+unsat(24,"a",A,B) :- founded_by(A,B), key_people(A,B),not founders(A,B).
+founders(A,B):- founded_by(A,B), key_people(A,B), not unsat(24,"a",A,B).
+:~unsat(24,"a",A,B). [1@1,24,A,B]
+unsat(25,"a",A,B) :- founded_by(A,B), key_person(A,B),not founders(A,B).
+founders(A,B):- founded_by(A,B), key_person(A,B), not unsat(25,"a",A,B).
+:~unsat(25,"a",A,B). [1@1,25,A,B]
+unsat(26,"a",A,B) :- founded_by(A,B), owner(A,B),not founders(A,B).
+founders(A,B):- founded_by(A,B), owner(A,B), not unsat(26,"a",A,B).
+:~unsat(26,"a",A,B). [1@1,26,A,B]
+unsat(27,"a",A,B,F) :- founders(F,B), founders(A,F),not founders(A,B).
+founders(A,B):- founders(F,B), founders(A,F), not unsat(27,"a",A,B,F).
+:~unsat(27,"a",A,B,F). [1@1,27,A,B,F]
+unsat(28,"a",A,B,F) :- founded_by(F,B), name(A,F),not founders(A,B).
+founders(A,B):- founded_by(F,B), name(A,F), not unsat(28,"a",A,B,F).
+:~unsat(28,"a",A,B,F). [1@1,28,A,B,F]
+unsat(29,"a",A,B) :- founded_by(A,B)  ,  occupation(B,A),not founders(A,B).
+founders(A,B):- founded_by(A,B)  ,  occupation(B,A), not unsat(29,"a",A,B).
+:~unsat(29,"a",A,B). [1@1,29,A,B]
+unsat(30,"a",A,B) :- key_people(A,B)  ,  occupation(B,A),not founders(A,B).
+founders(A,B):- key_people(A,B)  ,  occupation(B,A), not unsat(30,"a",A,B).
+:~unsat(30,"a",A,B). [1@1,30,A,B]
+unsat(31,"a",A,B) :- founded_by(A,B) ,  owning_company(A,B),not founders(A,B).
+founders(A,B):- founded_by(A,B) ,  owning_company(A,B), not unsat(31,"a",A,B).
+:~unsat(31,"a",A,B). [1@1,31,A,B]
+unsat(32,"a",A,B,F) :- founders(F,B)  ,  key_person(A,F),not founders(A,B).
+founders(A,B):- founders(F,B)  ,  key_person(A,F), not unsat(32,"a",A,B,F).
+:~unsat(32,"a",A,B,F). [1@1,32,A,B,F]
+unsat(33,"a",A,B,F) :- founded_by(A,F)  ,  relatives(F,B),not founders(A,B).
+founders(A,B):- founded_by(A,F)  ,  relatives(F,B), not unsat(33,"a",A,B,F).
+:~unsat(33,"a",A,B,F). [1@1,33,A,B,F]
+unsat(34,"a",A,B,F) :- key_people(A,F)  ,  parents(F,B),not founders(A,B).
+founders(A,B):- key_people(A,F)  ,  parents(F,B), not unsat(34,"a",A,B,F).
+:~unsat(34,"a",A,B,F). [1@1,34,A,B,F]

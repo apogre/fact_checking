@@ -1,0 +1,13 @@
+birth_name("Steve_Jobs","Steven_Paul_Jobs").
+birth_year("Steve_Jobs","1955").
+known_for("Steve_Jobs","Microcomputer_revolution").
+occupation("Steve_Jobs","Steve_Jobs__1").
+occupation("Steve_Jobs","Apple_Inc.").
+occupation("Steve_Jobs","NeXT").
+occupation("Steve_Jobs","Pixar").
+relative("Steve_Jobs","Mona_Simpson").
+founded_by("NeXT","Steve_Jobs").
+key_person("NeXT","Steve_Jobs").
+known_for("Daniel_Kottke","Steve_Jobs").
+relative("Mona_Simpson","Steve_Jobs").
+relative("Lisa_Brennan-Jobs","Steve_Jobs").

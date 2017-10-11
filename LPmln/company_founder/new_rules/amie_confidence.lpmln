@@ -1,0 +1,27 @@
+1 foundedBy(A,F) :- foundedBy(B,F),  alumni(A,B).	1
+0.7 foundedBy(A,B) :- chiefEditor(A,B.
+0.5 foundedBy(B,A) :- employer(A,B).
+0.5 foundedBy(B,A) :-  knownFor(A,B).
+0.4 foundedBy(B,A) :-  foundedBy(A,B).
+0.3 foundedBy(A,B) :- keyPerson(A,B).
+0.3 foundedBy(B,F) :- designer(A,F), gameArtist(A,B).
+0.3 foundedBy(E,B) :- company(A,E), executiveProducer(A,B).
+0.3 foundedBy(A,B) :- knownFor(B,A).
+0.3 foundedBy(A,B) :- recordLabel(B,A).
+0.3 foundedBy(A,B) :- owningCompany(B,A).
+0.2 foundedBy(F,B) :- designer(A,B), developer(A,F).
+0.1 foundedBy(A,B) :- owningCompany(A,B).
+
+a  foundedBy  f  b  foundedBy  f   = a  subsidiary  b	0.160606061
+0.1 foundedBy(A,F) :- foundedBy(B,F), executiveProducer(A,B).
+
+f  foundedBy  b  a  manufacturer  f   = a  designer  b	0.12967581
+a  owner  b   = a  foundedBy  b	0.087445042
+b  foundedBy  a   = a  board  b	0.0859375
+a  keyPerson  b   = a  foundedBy  b	0.082578205
+f  foundedBy  b  a  manufacturer  f   = a  designCompany  b	0.07946027
+b  occupation  a   = a  foundedBy  b	0.055190858
+a  foundedBy  f  b  foundedBy  f   = a  parentCompany  b	0.05323654
+a  developer  f  f  foundedBy  b   = a  gameArtist  b	0.043103448
+b  foundedBy  f  a  keyPerson  f   = a  subsidiary  b	0.005748044
+a  foundedBy  f  b  keyPerson  f   = a  subsidiary  b	0.003290059

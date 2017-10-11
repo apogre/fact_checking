@@ -1,0 +1,23 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=founders LPmln/company_founder/evidence_50/1company_founder_full.db 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_checking/out.txt ...
+Solving...
+
+
+
+
+founders('Microsoft', 'Paul_Allen') 1.0
+founders('Bill_&_Melinda_Gates_Foundation', 'Bill_Gates') 1.0
+founders('Bill_&_Melinda_Gates_Foundation', 'List_of_Scouts') 0.73105857863
+founders('Bill_&_Melinda_Gates_Foundation', 'William_Henry_Gates_III') 0.73105857863
+
+
+OPTIMUM FOUND
+
+Models       : 4     
+  Optimum    : yes
+Calls        : 1
+Time         : 0.167s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.150s

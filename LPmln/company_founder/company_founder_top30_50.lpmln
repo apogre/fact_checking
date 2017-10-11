@@ -1,5 +1,3 @@
-founders(A,B) :- founders(F,B), publisher(F,A) .
-
 founders(A,B) :- owning_company(A,B) , key_person(A,B).
 
 founders(A,B) :- founders(A,F), name(B,F).
@@ -95,3 +93,15 @@ founders(A,B) :- key_people(A,B)  ,  occupation(B,A), pf15.
 0.69 pf16.
 
 founders(A,B) :- founded_by(A,B) ,  owning_company(A,B), pf16.
+
+0.69 pf17.
+
+founders(A,B) :- founders(F,B)  ,  key_person(A,F), pf17.
+
+0.69 pf18.
+
+founders(A,B) :- founded_by(A,F)  ,  relatives(F,B), pf18.
+
+0.69 pf19.
+
+founders(A,B) :- key_people(A,F)  ,  parents(F,B), pf19.

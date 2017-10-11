@@ -1,0 +1,13 @@
+birth_year("Diane_Greene","1955").
+occupation("Diane_Greene","Intuit").
+occupation("Diane_Greene","Google").
+occupation("Diane_Greene","Diane_Greene__1").
+founded_by("VMware","Diane_Greene").
+founded_by("VMware","Mendel_Rosenblum").
+founded_by("VMware","Edouard_Bugnion").
+key_people("VMware","Joseph_M._Tucci").
+key_people("VMware","Pat_Gelsinger").
+key_people("VMware","Carl_M._Eschenbach").
+employer("Paul_Maritz","VMware").
+known_for("Edouard_Bugnion","VMware").
+owner("VMDK","VMware").

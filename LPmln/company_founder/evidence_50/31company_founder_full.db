@@ -13,3 +13,14 @@ owner("Corbis","Bill_Gates").
 owning_company("Corbis","Bill_Gates").
 founders("Microsoft","Bill_Gates").
 founders("Bill_&_Melinda_Gates_Foundation","Bill_Gates").
+name("Chevron_Corporation","Chevron_Corporation").
+founding_year("Chevron_Corporation","1879").
+founding_year("Chevron_Corporation","1984").
+key_person("Chevron_Corporation","John_S._Watson_(Chevron)").
+occupation("David_J._O'Reilly","Chevron_Corporation").
+occupation("John_S._Watson_(Chevron)","Chevron_Corporation").
+owner("1500_Louisiana_Street","Chevron_Corporation").
+owner("Chevron_Richmond_Refinery","Chevron_Corporation").
+owner("Kurnell_Refinery","Chevron_Corporation").
+owner("Burnaby_Refinery","Chevron_Corporation").
+owner("Gorgon_gas_project","Chevron_Corporation").

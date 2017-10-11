@@ -18,3 +18,17 @@ owner("Wet_Nellie","Elon_Musk").
 relative("Tosca_Musk","Elon_Musk").
 relative("Kimbal_Musk","Elon_Musk").
 founders("Tesla_Motors","Elon_Musk").
+founded_by("PayPal","Luke_Nosek").
+founded_by("PayPal","Max_Levchin").
+founded_by("PayPal","Peter_Thiel").
+founded_by("PayPal","Ken_Howery").
+key_people("PayPal","John_Donahoe").
+key_people("PayPal","Dan_Schulman").
+employer("Douglas_Crockford","PayPal").
+known_for("Keith_Rabois","PayPal").
+known_for("Roelof_Botha","PayPal").
+occupation("John_Donahoe","PayPal").
+occupation("Dan_Schulman","PayPal").
+occupation("Peter_Thiel","PayPal").
+owner("PayPal_Credit","PayPal").
+owning_company("PayPal_Credit","PayPal").

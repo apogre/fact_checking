@@ -17,4 +17,16 @@ key_person("Tesla_Motors","Elon_Musk").
 owner("Wet_Nellie","Elon_Musk").
 relative("Tosca_Musk","Elon_Musk").
 relative("Kimbal_Musk","Elon_Musk").
-founders("Tesla_Motors","Elon_Musk").
+key_person("Tesla_Motors","JB_Straubel").
+founders("Tesla_Motors","JB_Straubel").
+founders("Tesla_Motors","Martin_Eberhard").
+owner("Tesla_Motors","Elon_Musk").
+designer("Tesla_Roadster","Tesla_Motors").
+known_for("JB_Straubel","Tesla_Motors").
+known_for("Martin_Eberhard","Tesla_Motors").
+occupation("Arnnon_Geshuri","Tesla_Motors").
+occupation("Franz_von_Holzhausen","Tesla_Motors").
+occupation("Jim_Keller_(engineer)","Tesla_Motors").
+owner("Tesla_Factory","Tesla_Motors").
+owning_company("Tesla_Factory","Tesla_Motors").
+owner("Gigafactory_1","Tesla_Motors").

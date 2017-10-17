@@ -1,0 +1,7 @@
+timeZone("Lyon","CET").
+capital("Kingdom_of_the_Burgundians","Lyon").
+region("Coussin_de_Lyon","Lyon").
+region("Cervelle_de_canut","Lyon").
+capital("France","Paris").
+largestCity("France","Capital_city").
+timeZone("France","CET").

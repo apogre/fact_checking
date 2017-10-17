@@ -1,5 +1,0 @@
-located_in_the_administrative_territorial_entity(United_States_of_America,Arizona).
-diplomatic_relation(Vietnam,United_States_of_America).
-country(United_States_of_America,Arizona).
-diplomatic_relation(United_States_of_America,Vietnam).
-contains_administrative_territorial_entity(Arizona,United_States_of_America).

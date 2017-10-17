@@ -1,0 +1,14 @@
+capital("Province_of_Canada","Ottawa").
+district("St._Matthew's_Anglican_Church_(Ottawa)","Ottawa").
+district("Jock_River","Ottawa").
+municipality("Carp_River_(Ottawa)","Ottawa").
+district("Hindu_Temple_of_Ottawa-Carleton","Ottawa").
+district("Vishva_Shakti_Durga_Mandir","Ottawa").
+municipality("List_of_historic_places_in_Ottawa","Ottawa").
+municipality("Beit_Tikvah_of_Ottawa","Ottawa").
+municipality("Machzikei_Hadas","Ottawa").
+municipality("Or_Haneshamah","Ottawa").
+municipality("Adath_Shalom_(Ottawa)","Ottawa").
+municipality("Temple_Israel_(Ottawa)","Ottawa").
+municipality("Young_Israel_of_Ottawa","Ottawa").
+largestCity("Canada","Toronto").

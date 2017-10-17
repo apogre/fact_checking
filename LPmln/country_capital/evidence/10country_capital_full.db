@@ -1,8 +1,0 @@
-leader(Xi_Jinping,China).
-birth_place(Beijing,Xi_Jinping).
-legislature(National_People's_Congress,China).
-location(Beijing,National_People's_Congress).
-central_bank(People's_Bank_of_China,China).
-headquarters_location(Beijing,People's_Bank_of_China).
-highest_judicial_authority(Supreme_People's_Procuratorate,China).
-headquarters_location(Beijing,Supreme_People's_Procuratorate).

@@ -1,0 +1,6 @@
+capital("Kyoto_Prefecture","Kyoto").
+capital("Ashikaga_shogunate","Kyoto").
+placeOfBurial("Emperor_Go-Fushimi","Kyoto").
+placeOfBurial("Emperor_Fushimi","Kyoto").
+capital("Japan","Tokyo").
+largestCity("Japan","capital").

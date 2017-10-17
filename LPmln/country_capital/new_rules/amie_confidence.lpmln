@@ -1,0 +1,34 @@
+0.6 capital(C,B) :- district(A,C), municipality(A,B).
+0.4 capital(A,B) :- largestCity(A,B).
+0.3 capital(C,B) :- premierePlace(A,C), premierePlace(A,B).
+0.2 capital(C,B) :- federalState(A,C), administrativeDistrict(A,B).
+0.2 capital(C,B) :- placeOfBurial(A,C), placeOfBurial(A,B).
+0.1 capital(C,B) :- timeZone(A,C), municipality(A,B).
+0.1 capital(C,B) :- daylightSavingTimeZone(A,C), municipality(A,B).
+0.1 capital(C,B) :- billed(A,C), billed(A,B).
+0.1 capital(C,B) :- region(A,C), municipality(A,B).
+0.1 capital(B,C) :- administrativeDistrict(A,C), federalState(A,B).
+0.1 capital(C,B) :- birthPlace(A,C), placeOfBurial(A,B).
+0.09 capital(B,C) :- headquarter(A,C), jurisdiction(A,B).
+0.09 capital(B,C) :- location(A,C), jurisdiction(A,B).
+0.08 capital(C,B) :- deathPlace(A,C), placeOfBurial(A,B).
+0.07 capital(C,B) :- assembly(A,C), assembly(A,B).
+0.07 capital(C,B) :- state(A,C), municipality(A,B).
+0.06 capital(B,C) :- billed(A,C), billed(A,B).
+0.06 capital(B,C) :- assembly(A,C), assembly(A,B).
+0.06 capital(C,B) :- country(A,C), garrison(A,B).
+0.06 capital(C,B) :- birthPlace(A,C), billed(A,B).
+0.06 capital(B,C) :- birthPlace(A,C), sportCountry(A,B).
+0.05 capital(A,C) :- highestState(B,C), governmentRegion(A,B).
+0.04 capital(B,C) :- birthPlace(A,C), billed(A,B).
+0.02 capital(B,C) :- placeOfBurial(A,C), placeOfBurial(A,B).
+0.02 capital(B,C) :- premierePlace(A,C), premierePlace(A,B).
+0.01 capital(B,C) :- headquarter(A,C), nationalAffiliation(A,B).
+0.01 capital(C,B) :- country(A,C), federalState(A,B).
+0.01 capital(B,C) :- deathPlace(A,C), placeOfBurial(A,B).
+0.01 capital(A,B) :- isPartOf(B,A).
+0.01 capital(C,B) :- headquarter(A,C), destination(A,B).
+0.01 capital(C,B) :- state(A,C), countySeat(A,B).
+0.01 capital(C,B) :- deathPlace(A,C), majorShrine(A,B).
+0.01 capital(A,B) :- country(B,A).
+0.01 capital(C,B) :- birthPlace(A,C), majorShrine(A,B).

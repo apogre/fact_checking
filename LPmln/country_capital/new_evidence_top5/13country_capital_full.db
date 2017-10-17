@@ -1,0 +1,3 @@
+capital("Nagasaki_Prefecture","Nagasaki").
+capital("Japan","Tokyo").
+largestCity("Japan","capital").

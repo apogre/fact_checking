@@ -1,0 +1,12 @@
+capital("Germany","Berlin").
+largestCity("Germany","Capital_city").
+timeZone("Germany","CET").
+billed("Konnor_(wrestler)","Germany").
+billed("Wesna","Germany").
+billed("Alex_Wright","Germany").
+billed("Jessicka_Havok","Germany").
+billed("Achim_Albrecht__Achim_Albrecht__1","Germany").
+billed("Boris_Malenko","Germany").
+billed("Karl_Gotch","Germany").
+billed("Killer_Karl_Krupp","Germany").
+billed("Axel_Tischer","Germany").

@@ -1,0 +1,5 @@
+capital("Arizona","Phoenix,_Arizona").
+largestCity("Arizona","Capital_city").
+district("Coyote_Mountains_Wilderness_(Arizona)","Arizona").
+capital("Vietnam","Hanoi").
+largestCity("Vietnam","Ho_Chi_Minh_City").

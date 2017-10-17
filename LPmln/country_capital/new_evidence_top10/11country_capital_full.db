@@ -1,0 +1,10 @@
+timeZone("Kyoto","Japan_Standard_Time").
+billed("Shinsuke_Nakamura","Kyoto").
+capital("Kyoto_Prefecture","Kyoto").
+capital("Ashikaga_shogunate","Kyoto").
+placeOfBurial("Emperor_Go-Fushimi","Kyoto").
+placeOfBurial("Emperor_Fushimi","Kyoto").
+region("Mitarashi_dango","Kyoto").
+capital("Japan","Tokyo").
+timeZone("Japan","Japan_Standard_Time").
+largestCity("Japan","capital").

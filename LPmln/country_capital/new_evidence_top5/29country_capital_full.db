@@ -1,0 +1,4 @@
+capital("Interim_Government_of_Iran","Tehran").
+capital("Qajar_dynasty","Tehran").
+capital("Pahlavi_dynasty","Tehran").
+largestCity("Iran","capital").

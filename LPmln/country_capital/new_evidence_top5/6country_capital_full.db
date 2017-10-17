@@ -1,0 +1,11 @@
+capital("People's_Republic_of_Korea","Seoul").
+capital("Supreme_Council_for_National_Reconstruction","Seoul").
+capital("Joseon","Seoul").
+capital("Korean_Empire","Seoul").
+capital("Provisional_Government_of_the_Republic_of_Korea","Seoul").
+capital("First_Republic_of_South_Korea","Seoul").
+placeOfBurial("Gyeongjong_of_Joseon","Seoul").
+placeOfBurial("Heonjong_of_Joseon","Seoul").
+placeOfBurial("Sunjo_of_Joseon","Seoul").
+largestCity("South_Korea","capital").
+placeOfBurial("Heonjong_of_Joseon","South_Korea").

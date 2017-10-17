@@ -1,0 +1,6 @@
+capital("Bengal_Subah","Dhaka").
+largestCity("Bangladesh","Dhaka").
+placeOfBurial("Khwaja_Habibullah","Dhaka").
+placeOfBurial("Khwaja_Salimullah","Dhaka").
+district("Aeronautical_Institute_of_Bangladesh","Dhaka").
+district("Women_Teachers_Training_College","Dhaka").

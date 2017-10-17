@@ -1,0 +1,6 @@
+capital("Colony_of_Fiji","Suva").
+capital("Fiji","Suva").
+capital("British_Western_Pacific_Territories","Suva").
+largestCity("Fiji","Suva").
+largestCity("Viti_Levu","Suva").
+region("Suva_Adventist_College","Suva").

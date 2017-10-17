@@ -1,5 +1,0 @@
-is_part_of(North_Holland,Amsterdam).
-country(Netherlands,North_Holland).
-headquarter(Netherlands,Royal_Netherlands_Meteorological_Institute).
-location(Netherlands,Royal_Netherlands_Meteorological_Institute).
-country(Netherlands,Amsterdam).

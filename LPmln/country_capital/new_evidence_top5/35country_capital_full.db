@@ -1,0 +1,3 @@
+capital("Kingdom_of_the_Burgundians","Lyon").
+capital("Japan","Tokyo").
+largestCity("Japan","capital").

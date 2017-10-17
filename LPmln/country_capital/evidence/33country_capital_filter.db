@@ -1,4 +1,0 @@
-sister_city(va,na).
-country(fr,va).
-country(ja,na).
-diplomatic_relation(fr,ja).

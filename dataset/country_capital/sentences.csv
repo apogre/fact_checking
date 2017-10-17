@@ -3,7 +3,6 @@ id,sentence,label
 2,"Lisbon is the capital of Portugal.",T
 3,"New Delhi  is the capital of India.",T
 4,"Amsterdam is the capital of Netherlands.",T
-5,"Istanbul is the capital of Turkey.",T
 6,"Seoul is the capital of South Korea.",T
 7,"Havana is the capital of Cuba.",T
 8,"Cairo is the capital of Egypt.",T
@@ -19,6 +18,7 @@ id,sentence,label
 28,"Berlin is the capital of Germany.",T
 29,"Tehran is the capital of Iran.",T
 30,"Doha is the capital of Qatar.",T
+5,"Istanbul is the capital of Turkey.",F
 11,"Kyoto is the capital of Japan.",F
 12,"Hiroshima is the capital of Japan.",F
 13,"Nagasaki is the capital of Japan.",F

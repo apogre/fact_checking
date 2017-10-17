@@ -1,0 +1,9 @@
+capital("Shun_dynasty","Beijing").
+capital("Qing_dynasty","Beijing").
+capital("Ming_dynasty","Beijing").
+capital("Yan_(Five_Dynasties_period)","Beijing").
+premierePlace("Longxugou_(play)","Beijing").
+premierePlace("Peaches_and_Plums_in_the_Spring_Wind","Beijing").
+premierePlace("Teahouse_(play)","Beijing").
+premierePlace("Rhinoceros_in_Love","Beijing").
+largestCity("China","Shanghai").

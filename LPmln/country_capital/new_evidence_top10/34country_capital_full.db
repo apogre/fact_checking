@@ -1,0 +1,7 @@
+timeZone("Vatican_City","Central_European_Time").
+capital("Vatican_City","Vatican City").
+capital("Prisoner_in_the_Vatican","Vatican_City").
+region("Coppa_Sergio_Valci","Vatican_City").
+capital("Japan","Tokyo").
+timeZone("Japan","Japan_Standard_Time").
+largestCity("Japan","capital").

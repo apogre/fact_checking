@@ -1,4 +1,0 @@
-sister_city(Yokohama,Lyon).
-country(Japan,Yokohama).
-country(France,Lyon).
-diplomatic_relation(Japan,France).

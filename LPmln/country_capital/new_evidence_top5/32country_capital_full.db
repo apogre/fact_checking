@@ -1,0 +1,3 @@
+capital("Hiroshima_Prefecture","Hiroshima").
+capital("Italy","Rome").
+largestCity("Italy","capital").

@@ -1,0 +1,5 @@
+timeZone("Nagasaki","Japan_Standard_Time").
+capital("Nagasaki_Prefecture","Nagasaki").
+capital("France","Paris").
+largestCity("France","Capital_city").
+timeZone("France","CET").

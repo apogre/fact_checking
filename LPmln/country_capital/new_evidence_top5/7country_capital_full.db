@@ -1,0 +1,5 @@
+capital("Second_Occupation_of_Cuba","Havana").
+capital("United_States_Military_Government_in_Cuba","Havana").
+capital("Captaincy_General_of_Cuba","Havana").
+largestCity("Geography_of_Cuba","Havana").
+largestCity("Cuba","capital").

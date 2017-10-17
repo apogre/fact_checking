@@ -1,0 +1,11 @@
+timeZone("Harare","Central_Africa_Time").
+capital("Rhodesia","Harare").
+capital("Zimbabwe_Rhodesia","Harare").
+capital("Southern_Rhodesia","Harare").
+capital("Federation_of_Rhodesia_and_Nyasaland","Harare").
+capital("Company_rule_in_Rhodesia","Harare").
+largestCity("Zimbabwe","Harare").
+region("Emmanuel_Chiroto","Harare").
+region("Muchadeyi_Masunda","Harare").
+timeZone("Zimbabwe","Central_Africa_Time").
+region("Southern_Bantu_languages","Zimbabwe").

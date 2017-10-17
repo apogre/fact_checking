@@ -1,0 +1,4 @@
+capital("Vatican_City","Vatican City").
+capital("Prisoner_in_the_Vatican","Vatican_City").
+capital("Italy","Rome").
+largestCity("Italy","capital").

@@ -1,5 +1,0 @@
-capital_of(Afghanistan,Kabul).
-diplomatic_relation(Japan,Afghanistan).
-country(Afghanistan,Kabul).
-diplomatic_relation(Afghanistan,Japan).
-capital(Kabul,Afghanistan).

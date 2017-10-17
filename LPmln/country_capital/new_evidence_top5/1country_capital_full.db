@@ -1,0 +1,5 @@
+capital("Kingdom_of_Nepal","Kathmandu").
+premierePlace("Agniko_Katha","Kathmandu").
+district("Pashupatinath_Temple","Kathmandu").
+district("Ashok_Binayak_Temple","Kathmandu").
+largestCity("Nepal","capital").

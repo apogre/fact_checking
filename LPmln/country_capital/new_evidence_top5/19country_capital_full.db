@@ -1,0 +1,14 @@
+capital("Spain","Madrid").
+capital("Habsburg_Spain","Madrid").
+capital("Trienio_Liberal","Madrid").
+capital("Enlightenment_in_Spain","Madrid").
+capital("Restoration_(Spain)","Madrid").
+capital("Spanish_Empire","Madrid").
+capital("Francoist_Spain","Madrid").
+capital("Crown_of_Castile","Madrid").
+capital("First_Spanish_Republic","Madrid").
+capital("Second_Spanish_Republic","Madrid").
+capital("Kingdom_of_Spain_under_Joseph_Bonaparte","Madrid").
+premierePlace("Golgota_Picnic","Madrid").
+capital("Portugal","[Lisbon]]").
+largestCity("Portugal","capital").

@@ -1,0 +1,6 @@
+timeZone("Hiroshima","Japan_Standard_Time").
+billed("Professor_Tanaka","Hiroshima").
+capital("Hiroshima_Prefecture","Hiroshima").
+capital("Japan","Tokyo").
+timeZone("Japan","Japan_Standard_Time").
+largestCity("Japan","capital").

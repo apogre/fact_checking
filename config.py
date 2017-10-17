@@ -12,13 +12,14 @@ unwanted_predicates = [u'thumbnail', u'person function', u'c',u'b',u's',u'n',u'v
 #spouse
 # rule_predicates = ['birthPlace','child','deathPlace','spouse','parent','partner','placeOfBurial','restingPlace','relation','relative',]
 
-rule_predicates = ['birthPlace','child','deathPlace','spouse','parent','partner','placeOfBurial','restingPlace','relation','relative',]
+# rule_predicates = ['birthPlace','child','deathPlace','spouse','parent','partner','placeOfBurial','restingPlace','relation','relative',]
 
 rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4
 evidence_threshold = 0
 rule_threshold = 0.15
-top_k = str(5)
+top_k = str(15)
+predicate = 'capital'
 #
 # sparql_dbpedia_local_v = 'http://10.218.105.56:8890/sparql'
 # sparql_dbpedia_on_v = 'http://10.218.105.56:8890/sparql'

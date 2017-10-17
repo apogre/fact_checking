@@ -53,13 +53,12 @@ def relation_extractor_triples(resources, triples):
     return distance_one, distance_two, distance_three
 
 
-def inference(sentence_id, data_source, resource_v, top_k):
+def inference(sentence_id, data_source, resource_v, top_k, predicate):
     print "LPMLN Inference"
     if path.isfile('LPmln/' +data_source + '/' + data_source + '_result.txt'):
         remove('LPmln/' +data_source + '/' + data_source + '_result.txt')
     evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}new_rules/amie_confidence_top5.lpmln -q capital -e {1}_full.db -r {0}result.txt ".format('LPmln/' +data_source +\
-                                                                                             '/', evidence_source)
+    cmd = "lpmln2asp -i {0}new_rules/amie_confidence_top{2}.lpmln -q {3} -e {1}_full.db -r {0}result.txt ".format('LPmln/' +data_source + '/', evidence_source,top_k, predicate)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' +data_source + '/' + 'result.txt', 'r')
@@ -67,38 +66,37 @@ def inference(sentence_id, data_source, resource_v, top_k):
     text.close()
     probs = re.findall("(\w+\(\'[\s\S].+)",f)
     probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p]
+    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
     return probs, probs_test
 
 
-def clingo_map(sentence_id, data_source, resource_v,top_k):
+def clingo_map(sentence_id, data_source, resource_v,top_k, predicate):
     print "Clingo"
     evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "clingo {0}new_rules/amie_hard_top5.lpmln {1}_full.db > {0}clingo_result.txt ".format('LPmln/' +data_source +\
-                                                                                             '/', evidence_source)
+    cmd = "clingo {0}new_rules/amie_hard_top{1}.lpmln {2}_full.db > {0}clingo_result.txt ".format('LPmln/' +data_source +\
+                                                                                             '/', top_k,evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' +data_source + '/' + 'clingo_result.txt', 'r')
     f = text.read()
     text.close()
     probs = re.findall("(\w+\([\s\S]+\"\))",f)
-    print probs
+    # print probs
     if probs:
         probs = probs[0].split(' ')
         probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-        probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p]
+        probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
     else:
         probs = []
         probs_test = []
     return probs, probs_test
 
 
-def inference_hard(sentence_id, data_source, resource_v,top_k):
+def inference_hard(sentence_id, data_source, resource_v,top_k, predicate):
     print "LPMLN Hard Inference"
     evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}new_rules/amie_hard_top5.lpmln -q capital -e {1}_full.db -r {0}hard_result.txt".format(
-        'LPmln/' + data_source + \
-        '/', evidence_source)
+    cmd = "lpmln2asp -i {0}new_rules/amie_hard_top{2}.lpmln -q {3} -e {1}_full.db -r {0}hard_result.txt".format(
+        'LPmln/' + data_source + '/', evidence_source, top_k,predicate)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' + data_source + '/' + 'hard_result.txt', 'r')
@@ -106,16 +104,16 @@ def inference_hard(sentence_id, data_source, resource_v,top_k):
     text.close()
     probs = re.findall("(\w+\(\'[\s\S].+)", f)
     probs = [p for p in probs if resource_v[1] in p or resource_v[0] in p]
-    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p]
+    probs_test = [p for p in probs if resource_v[1] in p and resource_v[0] in p and predicate in p]
     return probs, probs_test
 
 
-def evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v,top_k):
+def evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v,top_k, predicate):
     item_set = OrderedSet()
     print resource_v
     for evidence in filtered_evidence:
         rel_set = [r for r in evidence]
-        if rel_set[0] in resource_v and rel_set[2] in resource_v and rel_set[1] == 'capital':
+        if rel_set[0] in resource_v and rel_set[2] in resource_v and rel_set[1] == predicate:
             pass
         else:
             item_set.add(rel_set[1] + '("' + rel_set[0] + '","' + rel_set[2] + '").')
@@ -136,7 +134,6 @@ def get_rule_predicates(data_source,top_k):
     probs = re.findall("(\w+\()", f)
     probs = list(set(probs))
     predicates = [p.replace('(','') for p in probs]
-    print predicates
     return predicates
 
 

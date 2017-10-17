@@ -1,0 +1,8 @@
+timeZone("Istanbul","Eastern_European_Time").
+timeZone("Istanbul","Eastern_European_Summer_Time").
+capital("Ottoman_Empire","Istanbul").
+largestCity("Turkey","Istanbul").
+region("Taksim_German_Hospital","Istanbul").
+region("Kemal_Cenap_Berksoy","Istanbul").
+capital("Turkey","Ankara").
+billed("Duncan_C._Ross","Turkey").

@@ -1,0 +1,6 @@
+capital("Rhodesia","Harare").
+capital("Zimbabwe_Rhodesia","Harare").
+capital("Southern_Rhodesia","Harare").
+capital("Federation_of_Rhodesia_and_Nyasaland","Harare").
+capital("Company_rule_in_Rhodesia","Harare").
+largestCity("Zimbabwe","Harare").

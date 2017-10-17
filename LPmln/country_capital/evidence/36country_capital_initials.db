@@ -1,5 +1,0 @@
-capital_of(af,ka).
-diplomatic_relation(ja,af).
-country(af,ka).
-diplomatic_relation(af,ja).
-capital(ka,af).

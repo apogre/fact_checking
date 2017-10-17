@@ -1,0 +1,13 @@
+timeZone("Amsterdam","Central_European_Summer_Time").
+timeZone("Amsterdam","Central_European_Time").
+capital("United_Kingdom_of_the_Netherlands","Amsterdam").
+capital("Netherlands-Indonesian_Union","Amsterdam").
+capital("Netherlands","Amsterdam").
+capital("Dutch_Republic","Amsterdam").
+capital("Dutch_government-in-exile","Amsterdam").
+capital("Kingdom_of_Holland","Amsterdam").
+capital("Kingdom_of_the_Netherlands","Amsterdam").
+capital("Reichskommissariat_Niederlande","Amsterdam").
+capital("Sovereign_Principality_of_the_United_Netherlands","Amsterdam").
+capital("England","London").
+largestCity("England","capital").

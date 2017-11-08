@@ -139,20 +139,19 @@ def get_rule_predicates(data_source,top_k):
 
 
 def amie_tsv(item_set, data_source):
-    with open('/media/apradhan/DATA/' +data_source + '_founders_negative_all.tsv', 'wb') as csvfile:
+    with open('/media/apradhan/DATA/' +data_source + '/test_neg.tsv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='\t', skipinitialspace=True)
         for i in item_set:
             try:
-                if 'Text_used_to_link_from_a_Wikipage_to_another_Wikipage' not in i and \
-                                'Link_from_a_Wikipage_to_an_external_page' not in i and 'Wikipage_disambiguates' not in i:
-                    datawriter.writerow(i)
+                datawriter.writerow(i)
             except:
                 pass
+    # amie_tsv_unique(data_source)
 
 
 def amie_tsv_unique(data_source):
-    with open('/media/apradhan/DATA/' +data_source + '_founders_negative_all.tsv', 'r') as f, \
-            open('/media/apradhan/DATA/' + data_source + '_founders_unique_negative_full.tsv', 'wb') as out_file:
+    with open('/media/apradhan/DATA/' +data_source + '/founders_ntn.tsv', 'r') as f, \
+            open('/media/apradhan/DATA/' + data_source + '/founders_unique_ntn.tsv', 'wb') as out_file:
         out_file.writelines(unique_everseen(f))
 
 

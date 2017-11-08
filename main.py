@@ -110,6 +110,11 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
     entity_set = []
     distance_three = []
     filtered_evidence = []
+    with open('person.txt') as f:
+        person = f.readlines()
+    # you may also want to remove whitespace characters like `\n` at the end of each line
+    person = [x.strip() for x in person]
+    person_ind = []
     for n, ne in enumerate(named_tags):
         kgminer_predicate_ranked = dict()
         sentence_id = id_list[n]
@@ -134,14 +139,14 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             ambiverse_resources[sentence_id] = resource
             ambiverse_flag = True
         print len(resource)
-        if len(resource) < 2:
-            # for entity_pair in triple_dict.values():
-            #     print "here"
-            #     for entity in entity_pair[0]:
-            #         if entity not in resource.keys():
-            #             resource_ids = resource_extractor(entity)
-            #             resource[entity] = resource_ids
-            resource = spotlight_entity_parser(sentence_check)
+        # if len(resource) < 2:
+        #     # for entity_pair in triple_dict.values():
+        #     #     print "here"
+        #     #     for entity in entity_pair[0]:
+        #     #         if entity not in resource.keys():
+        #     #             resource_ids = resource_extractor(entity)
+        #     #             resource[entity] = resource_ids
+        #     resource = spotlight_entity_parser(sentence_check)
         print "Resource Extractor"
         print "=================="
         pprint.pprint(resource)
@@ -177,6 +182,13 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             for triple_v in triples_v:
                 print triple_v
                 resource_v = [resource.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
+                if resource_v[0] not in person:
+                    person.append(resource_v[0])
+                if resource_v[1] not in person:
+                    person.append(resource_v[1])
+                person_ind.append(resource_v[0])
+        print person
+        print person_ind
         if KGMiner:
             if kgminer_predicate_ranked:
                 kg_output = []
@@ -326,9 +338,13 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         #                  kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
         #                  lpmln_predicate, kgminer_output, lpmln_output_flag, data_source, kgminer_output_random_flag, \
         #                  kgminer_output_random, kgminer_output_perfect_flag, kgminer_output_perfect, top_k)
-    amie_tsv(filtered_evidence, data_source)
+    # amie_tsv(filtered_evidence, data_source)
 
     # amie_tsv(amie_training, data_source)
+    print len(person)
+    with open('person.txt', 'wb') as personwriter:
+        for per in person:
+            personwriter.write(per+'\n')
 
     if KGMiner:
         kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)

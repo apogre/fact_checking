@@ -28,10 +28,10 @@
       "wikidata_id": "Q684011",
       "dbpedia_id": "Suva"
     },
-    "Fizi": {
+    "Fiji": {
       "confidence": 1.0,
       "wikidata_id": "Q1006022",
-      "dbpedia_id": "Fizi_Territory"
+      "dbpedia_id": "Fiji"
     }
   },
   "27": {
@@ -42,7 +42,7 @@
     },
     "France": {
       "confidence": 0.3469997705640824,
-      "dbpedia_id": "Paris",
+      "dbpedia_id": "France",
       "wikidata_id": "Q90"
     }
   },

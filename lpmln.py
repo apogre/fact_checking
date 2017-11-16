@@ -139,7 +139,7 @@ def get_rule_predicates(data_source,top_k):
 
 
 def amie_tsv(item_set, data_source):
-    with open('/media/apradhan/DATA/' +data_source + '/test_neg.tsv', 'wb') as csvfile:
+    with open('/media/apradhan/DATA/' +data_source + '/test_comb_label.tsv', 'wb') as csvfile:
         datawriter = csv.writer(csvfile, quoting=csv.QUOTE_NONE, delimiter='\t', skipinitialspace=True)
         for i in item_set:
             try:
@@ -150,8 +150,8 @@ def amie_tsv(item_set, data_source):
 
 
 def amie_tsv_unique(data_source):
-    with open('/media/apradhan/DATA/' +data_source + '/founders_ntn.tsv', 'r') as f, \
-            open('/media/apradhan/DATA/' + data_source + '/founders_unique_ntn.tsv', 'wb') as out_file:
+    with open('/media/apradhan/DATA/' +data_source + '/related_person_4th.tsv', 'r') as f, \
+            open('/media/apradhan/DATA/' + data_source + '/related_person_4th_unique.tsv', 'wb') as out_file:
         out_file.writelines(unique_everseen(f))
 
 

@@ -543,16 +543,19 @@ def get_all_entity(predicate):
     sys.exit(0)
 
 
-def get_all_person():
-    q_ts = 'PREFIX foaf:  <http://xmlns.com/foaf/0.1/> PREFIX dbo:  <http://dbpedia.org/ontology/> select ?url1 ?url2\
-     ?url3 ?url4 ?url5 ?url6 ?url7 ?url8 ?url9 ?url10 ?url11 ?url12 ?url13 ?url14 where  { ?url1 rdf:type dbo:Person .\
-      ?url1 dbo:birthPlace ?url6 . ?url1 foaf:gender ?url2 . optional {?url1 dbo:nationality ?url3 . ?url1 dbo:deathPlace\
-       ?url5 . ?url1 dbo:spouse ?url4 . ?url1 dbo:profession ?url4 . ?url1 dbo:location ?url7 . ?url1 dbo:institution ?url8 .\
-        ?url1 dbo:deathCause ?url9 . ?url1 dbo:religion ?url10 . ?url1 dbo:parent ?url11 . ?url1 dbo:child ?url12 .\
-         ?url1 dbo:ethnicity ?url13 . ?url1 dbo:spouse ?url14 . } }'
-    print q_ts
+def get_all_person(pers):
+    per = '<http://dbpedia.org/resource/'+pers+'>'
+    q_ts = 'PREFIX foaf:  <http://xmlns.com/foaf/0.1/> PREFIX dbo:  <http://dbpedia.org/ontology/> \
+    PREFIX dbp: <http://dbpedia.org/property/> select '+per+'  ?url2 ?url3 ?url4 ?url5 ?url6 ?url7 ?url8 ?url9 ?url10 ?url11\
+     ?url12 ?url13 ?url14 where  { ' +per+'  dbo:birthPlace ?url6 .  '+per+'  foaf:gender ?url2 . optional { '+per+' \
+      dbp:nationality ?url3} . optional { '+per+'  dbo:deathPlace ?url5 }. \
+      optional {   '+per+'  dbo:profession ?url4 }. optional { '+per+'  dbo:residence ?url7} . optional { '+per+'  dbo:almaMater \
+      ?url8 }. optional { '+per+'  dbo:deathCause ?url9 }. optional { '+per+'  dbo:religion ?url10 } .  optional { '+per+'  dbo:parent ?url11} \
+      . optional { '+per+'  dbo:child ?url12} . optional { '+per+'  dbo:ethnicity ?url13} .  optional { '+per+' dbo:spouse ?url14} .  }'
+    # print q_ts
     result = sparql.query(sparql_dbpedia, q_ts)
     training_set = [sparql.unpack_row(row_result) for row_result in result]
+    print training_set
     return training_set
 
 

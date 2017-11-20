@@ -1,0 +1,7 @@
+child("Herbert_Hoover","Allan_Hoover").
+child("Herbert_Hoover","Herbert_Hoover_Jr.").
+restingPlace("Herbert_Hoover","Herbert_Hoover_Presidential_Library_and_Museum").
+restingPlace("Herbert_Hoover","West_Branch,_Iowa").
+restingPlace("Herbert_Hoover","Iowa").
+child("Lou_Henry_Hoover","Allan_Hoover").
+child("Lou_Henry_Hoover","Herbert_Hoover,_Jr.").

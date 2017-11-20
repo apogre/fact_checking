@@ -1,0 +1,27 @@
+child("Gerald_Ford","Susan_Ford").
+child("Gerald_Ford","Steven_Ford").
+child("Gerald_Ford","Michael_Gerald_Ford").
+child("Gerald_Ford","John_Gardner_Ford").
+spouse("Gerald_Ford","Betty_Ford").
+spouse("Gerald_Ford","United_States_House_elections,_1948").
+restingPlace("Gerald_Ford","Gerald_R._Ford_Museum").
+restingPlace("Gerald_Ford","Grand Rapids, Michigan, U.S.").
+child("Dorothy_Ayer_Gardner_Ford","Gerald_Ford").
+child("Leslie_Lynch_King_Sr.","Gerald_Ford").
+parent("Susan_Ford","Gerald_Ford").
+parent("Steven_Ford","Gerald_Ford").
+parent("Michael_Gerald_Ford","Gerald_Ford").
+relation("Charles_Henry_King","Gerald_Ford").
+spouse("Betty_Ford","Gerald_Ford").
+child("Barbara_Bush","Dorothy_Bush_Koch").
+child("Barbara_Bush","George_W._Bush").
+child("Barbara_Bush","Jeb_Bush").
+child("Barbara_Bush","Neil_Bush").
+child("Barbara_Bush","Marvin_Bush").
+spouse("Barbara_Bush","George_H._W._Bush").
+child("Marvin_Pierce","Barbara_Bush").
+parent("Dorothy_Bush_Koch","Barbara_Bush").
+parent("Neil_Bush","Barbara_Bush").
+parent("Marvin_Bush","Barbara_Bush").
+relation("Jenna_Bush_Hager","Barbara_Bush").
+spouse("George_H._W._Bush","Barbara_Bush").

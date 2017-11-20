@@ -1,0 +1,12 @@
+child("Lyndon_B._Johnson","Luci_Baines_Johnson").
+child("Lyndon_B._Johnson","Lynda_Bird_Johnson_Robb").
+restingPlace("Lyndon_B._Johnson","Lyndon_B._Johnson_National_Historical_Park").
+restingPlace("Lyndon_B._Johnson","Texas").
+child("Samuel_Ealy_Johnson_Jr.","Lyndon_B._Johnson").
+parent("Luci_Baines_Johnson","Lyndon_B._Johnson").
+relation("George_Washington_Baines","Lyndon_B._Johnson").
+relation("Chuck_Robb","Lyndon_B._Johnson").
+child("Lady_Bird_Johnson","Luci_Baines_Johnson").
+child("Lady_Bird_Johnson","Lynda_Bird_Johnson_Robb").
+parent("Luci_Baines_Johnson","Lady_Bird_Johnson").
+relation("Samuel_Ealy_Johnson_Jr.","Lady_Bird_Johnson").

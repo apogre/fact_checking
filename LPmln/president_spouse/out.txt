@@ -1,9 +1,13 @@
-unsat(0,"54.000000") :- child(f,a), child(f,b),not spouse(a,b) .
-spouse(a,b) :- child(f,a), child(f,b), not unsat(0,"54.000000").
-:~unsat(0,"54.000000"). [54000@0,0]
-unsat(1,"a") :- not child(ma,ba).
-child(ma,ba) :- not unsat(1,"a").
-:~ unsat(1,"a"). [1@1,1]
-unsat(2,"a") :- not child(ma,mi).
-child(ma,mi) :- not unsat(2,"a").
-:~ unsat(2,"a"). [1@1,2]
+spouse(A,B) :- spouse(B,A).
+spouse(A,C) :- child(A,B) , parent(B,C) .
+spouse(A,C) :- child(A,B) , child(C,B).
+spouse(C,A) :- placeOfBurial(A,B) , restingPlace(C,B) .
+spouse(A,C) :- child(A,B), relation(B,C) .
+spouse(C,A) :- child(A,B) ,parent(B,C).
+spouse(C,A) :- child(A,B) , relation(B,C).
+spouse(A,C) :- child(A,B), relative(B,C).
+spouse(C,A) :- child(A,B) ,child(C,B).
+spouse(C,A) :- child(A,B), relative(B,C).
+spouse(C,A) :- placeOfBurial(A,B) ,deathPlace(C,B).
+spouse(B,A) :- partner(A,B).
+spouse(C,A) :- placeOfBurial(A,B), birthPlace(C,B).

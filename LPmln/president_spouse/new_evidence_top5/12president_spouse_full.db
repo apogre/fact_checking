@@ -1,0 +1,5 @@
+child("Calvin_Coolidge","John_Coolidge").
+restingPlace("Calvin_Coolidge","Vermont").
+restingPlace("Calvin_Coolidge","Plymouth_Notch_Cemetery").
+parent("John_Coolidge","Calvin_Coolidge").
+child("Grace_Coolidge","John_Coolidge").

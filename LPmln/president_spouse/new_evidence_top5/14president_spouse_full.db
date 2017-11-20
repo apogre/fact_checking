@@ -1,0 +1,7 @@
+child("Harry_S._Truman","Margaret_Truman").
+restingPlace("Harry_S._Truman","Independence,_Missouri").
+restingPlace("Harry_S._Truman","Harry_S._Truman_Presidential_Library_and_Museum").
+child("Martha_Ellen_Young_Truman","Harry_S._Truman").
+relation("Louis_W._Truman","Harry_S._Truman").
+relation("Ralph_E._Truman","Harry_S._Truman").
+child("Bess_Truman","Margaret_Truman").

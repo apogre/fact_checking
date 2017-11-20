@@ -1,0 +1,36 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=spouse LPmln/president_spouse/new_evidence/1president_spouse_full.db 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_checking/out.txt ...
+Solving...
+
+
+
+
+spouse('Virginia_Clinton_Kelley', 'Roger_Clinton_Sr.') 0.754616868301
+spouse('Bill_Clinton', 'Hillary_Clinton') 0.918630965153
+spouse('Hillary_Clinton', 'Hillary_Clinton') 0.8581489351
+spouse('Bill_Clinton', 'Bill_Clinton') 0.8581489351
+spouse('Dorothy_Howell_Rodham', 'Dorothy_Howell_Rodham') 0.689974481128
+spouse('Hillary_Clinton', 'Bill_Clinton') 0.918630965153
+spouse('Hugh_E._Rodham', 'Dorothy_Howell_Rodham') 0.754616868301
+spouse('Hugh_E._Rodham', 'Hugh_E._Rodham') 0.689974481128
+spouse('Dorothy_Howell_Rodham', 'Hugh_E._Rodham') 0.754616868301
+spouse('Virginia_Clinton_Kelley', 'Jeff_Dwire') 0.754616868301
+spouse('Roger_Clinton_Sr.', 'Virginia_Clinton_Kelley') 0.754616868301
+spouse('Roger_Clinton_Sr.', 'Roger_Clinton_Sr.') 0.689974481128
+spouse('Jeff_Dwire', 'Roger_Clinton_Sr.') 0.754616868301
+spouse('Jeff_Dwire', 'Virginia_Clinton_Kelley') 0.754616868301
+spouse('Jeff_Dwire', 'Jeff_Dwire') 0.689974481128
+spouse('Roger_Clinton_Sr.', 'Jeff_Dwire') 0.754616868301
+spouse('Virginia_Clinton_Kelley', 'Virginia_Clinton_Kelley') 0.689974481128
+
+
+OPTIMUM FOUND
+
+Models       : 131072
+  Optimum    : yes
+Calls        : 1
+Time         : 6.154s (Solving: 5.99s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 6.140s

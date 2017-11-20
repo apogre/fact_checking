@@ -1,0 +1,9 @@
+child("Bill_Clinton","Chelsea_Clinton").
+child("Virginia_Clinton_Kelley","Bill_Clinton").
+child("Jeff_Dwire","Bill_Clinton").
+child("Roger_Clinton_Sr.","Bill_Clinton").
+parent("Chelsea_Clinton","Bill_Clinton").
+child("Hillary_Clinton","Chelsea_Clinton").
+child("Dorothy_Howell_Rodham","Hillary_Clinton").
+child("Hugh_E._Rodham","Hillary_Clinton").
+parent("Chelsea_Clinton","Hillary_Clinton").

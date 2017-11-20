@@ -1,0 +1,19 @@
+child("Ronald_Reagan","Ron_Reagan").
+child("Ronald_Reagan","Maureen_Reagan").
+child("Ronald_Reagan","Michael_Reagan").
+child("Ronald_Reagan","Patti_Davis").
+relation("Ronald_Reagan","Neil_Reagan").
+spouse("Ronald_Reagan","Nancy_Reagan").
+spouse("Ronald_Reagan","Jane_Wyman").
+restingPlace("Ronald_Reagan","Reagan Library, Simi Valley, California, U.S.").
+child("Jack_Reagan","Ronald_Reagan").
+child("Nelle_Wilson_Reagan","Ronald_Reagan").
+parent("Ron_Reagan","Ronald_Reagan").
+parent("Maureen_Reagan","Ronald_Reagan").
+parent("Michael_Reagan","Ronald_Reagan").
+parent("Patti_Davis","Ronald_Reagan").
+relation("Neil_Reagan","Ronald_Reagan").
+spouse("Nancy_Reagan","Ronald_Reagan").
+spouse("Jane_Wyman","Ronald_Reagan").
+spouse("Melania_Trump","Donald_Trump").
+spouse("Donald_Trump","Melania_Trump").

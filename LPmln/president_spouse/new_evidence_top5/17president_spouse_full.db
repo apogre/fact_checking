@@ -1,0 +1,20 @@
+child("Gerald_Ford","Susan_Ford").
+child("Gerald_Ford","Steven_Ford").
+child("Gerald_Ford","Michael_Gerald_Ford").
+child("Gerald_Ford","John_Gardner_Ford").
+spouse("Gerald_Ford","United_States_House_elections,_1948").
+restingPlace("Gerald_Ford","Gerald_R._Ford_Museum").
+restingPlace("Gerald_Ford","Grand Rapids, Michigan, U.S.").
+child("Dorothy_Ayer_Gardner_Ford","Gerald_Ford").
+child("Leslie_Lynch_King_Sr.","Gerald_Ford").
+parent("Susan_Ford","Gerald_Ford").
+parent("Steven_Ford","Gerald_Ford").
+parent("Michael_Gerald_Ford","Gerald_Ford").
+relation("Charles_Henry_King","Gerald_Ford").
+child("Betty_Ford","Susan_Ford").
+child("Betty_Ford","Steven_Ford").
+child("Betty_Ford","Michael_Gerald_Ford").
+child("Betty_Ford","John_Gardner_Ford").
+parent("Susan_Ford","Betty_Ford").
+parent("Steven_Ford","Betty_Ford").
+parent("Michael_Gerald_Ford","Betty_Ford").

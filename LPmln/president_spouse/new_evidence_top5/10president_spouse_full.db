@@ -1,0 +1,9 @@
+child("Woodrow_Wilson","Jessie_Woodrow_Wilson_Sayre").
+child("Woodrow_Wilson","Eleanor_Wilson_McAdoo").
+child("Woodrow_Wilson","Margaret_Woodrow_Wilson").
+restingPlace("Woodrow_Wilson","Washington_National_Cathedral").
+spouse("Woodrow_Wilson","Ellen_Axson_Wilson").
+child("Joseph_Ruggles_Wilson","Woodrow_Wilson").
+parent("Jessie_Woodrow_Wilson_Sayre","Woodrow_Wilson").
+parent("Eleanor_Wilson_McAdoo","Woodrow_Wilson").
+spouse("Ellen_Axson_Wilson","Woodrow_Wilson").

@@ -1,0 +1,10 @@
+child("Barack_Obama_Sr.","Barack_Obama").
+child("Ann_Dunham","Barack_Obama").
+child("Lolo_Soetoro","Barack_Obama").
+relation("Stanley_Armour_Dunham","Barack_Obama").
+relation("Maya_Soetoro-Ng","Barack_Obama").
+relation("Marian_Shields_Robinson","Barack_Obama").
+relation("Charles_T._Payne","Barack_Obama").
+child("Marian_Shields_Robinson","Michelle_Obama").
+spouse("United_States_Senate_career_of_Barack_Obama","Michelle_Obama").
+spouse("Illinois_Senate_career_of_Barack_Obama","Michelle_Obama").

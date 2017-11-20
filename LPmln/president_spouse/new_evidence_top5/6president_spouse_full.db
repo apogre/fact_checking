@@ -1,0 +1,15 @@
+child("Richard_Nixon","Julie_Nixon_Eisenhower").
+child("Richard_Nixon","Tricia_Nixon_Cox").
+restingPlace("Richard_Nixon","Richard_Nixon_Presidential_Library_and_Museum").
+restingPlace("Richard_Nixon","Yorba Linda, California, U.S.").
+child("Francis_A._Nixon","Richard_Nixon").
+child("Hannah_Milhous_Nixon","Richard_Nixon").
+parent("Julie_Nixon_Eisenhower","Richard_Nixon").
+parent("Tricia_Nixon_Cox","Richard_Nixon").
+relation("David_Eisenhower","Richard_Nixon").
+child("Pat_Nixon","Julie_Nixon_Eisenhower").
+child("Pat_Nixon","Tricia_Nixon_Cox").
+restingPlace("Pat_Nixon","Yorba_Linda,_California").
+restingPlace("Pat_Nixon","Richard_Nixon_Presidential_Library_and_Museum").
+parent("Julie_Nixon_Eisenhower","Pat_Nixon").
+parent("Tricia_Nixon_Cox","Pat_Nixon").

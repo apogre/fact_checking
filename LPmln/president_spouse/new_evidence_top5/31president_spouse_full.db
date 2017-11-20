@@ -1,0 +1,17 @@
+child("Abraham_Lincoln","Robert_Todd_Lincoln").
+child("Abraham_Lincoln","Tad_Lincoln").
+child("Abraham_Lincoln","Edward_Baker_Lincoln").
+child("Abraham_Lincoln","William_Wallace_Lincoln").
+restingPlace("Abraham_Lincoln","Springfield,_Illinois").
+restingPlace("Abraham_Lincoln","Oak_Ridge_Cemetery").
+restingPlace("Abraham_Lincoln","Lincoln_Tomb").
+spouse("Abraham_Lincoln","Mary_Todd_Lincoln").
+child("Thomas_Lincoln","Abraham_Lincoln").
+child("Nancy_Lincoln","Abraham_Lincoln").
+parent("Tad_Lincoln","Abraham_Lincoln").
+parent("William_Wallace_Lincoln","Abraham_Lincoln").
+relation("Jessie_Harlan_Lincoln","Abraham_Lincoln").
+spouse("Mary_Todd_Lincoln","Abraham_Lincoln").
+child("Bess_Truman","Margaret_Truman").
+spouse("Bess_Truman","Harry_S._Truman").
+spouse("Harry_S._Truman","Bess_Truman").

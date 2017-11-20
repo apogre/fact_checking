@@ -1,0 +1,10 @@
+child("Dwight_D._Eisenhower","Doud_Eisenhower").
+child("Dwight_D._Eisenhower","John_Eisenhower").
+restingPlace("Dwight_D._Eisenhower","Eisenhower_Presidential_Center").
+parent("Doud_Eisenhower","Dwight_D._Eisenhower").
+relation("David_Eisenhower","Dwight_D._Eisenhower").
+child("Mamie_Eisenhower","Doud_Eisenhower").
+child("Mamie_Eisenhower","John_Eisenhower").
+child("Elivera_M._Doud","Mamie_Eisenhower").
+parent("Doud_Eisenhower","Mamie_Eisenhower").
+relation("David_Eisenhower","Mamie_Eisenhower").

@@ -1,0 +1,9 @@
+child("William_Howard_Taft","Charles_Phelps_Taft_II").
+child("William_Howard_Taft","Robert_A._Taft").
+child("William_Howard_Taft","Helen_Taft_Manning").
+restingPlace("William_Howard_Taft","Arlington_National_Cemetery").
+child("Alphonso_Taft","William_Howard_Taft").
+relation("William_Howard_Taft_III","William_Howard_Taft").
+child("Helen_Herron_Taft","Charles_Phelps_Taft_II").
+child("Helen_Herron_Taft","Robert_A._Taft").
+child("Helen_Herron_Taft","Helen_Taft_Manning").

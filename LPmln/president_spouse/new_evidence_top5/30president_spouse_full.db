@@ -1,0 +1,16 @@
+child("Harry_S._Truman","Margaret_Truman").
+restingPlace("Harry_S._Truman","Independence,_Missouri").
+restingPlace("Harry_S._Truman","Harry_S._Truman_Presidential_Library_and_Museum").
+spouse("Harry_S._Truman","Bess_Truman").
+child("Martha_Ellen_Young_Truman","Harry_S._Truman").
+relation("Louis_W._Truman","Harry_S._Truman").
+relation("Ralph_E._Truman","Harry_S._Truman").
+spouse("Bess_Truman","Harry_S._Truman").
+child("Mary_Todd_Lincoln","Robert_Todd_Lincoln").
+child("Mary_Todd_Lincoln","Tad_Lincoln").
+child("Mary_Todd_Lincoln","Edward_Baker_Lincoln").
+child("Mary_Todd_Lincoln","William_Wallace_Lincoln").
+spouse("Mary_Todd_Lincoln","Abraham_Lincoln").
+parent("Tad_Lincoln","Mary_Todd_Lincoln").
+parent("William_Wallace_Lincoln","Mary_Todd_Lincoln").
+spouse("Abraham_Lincoln","Mary_Todd_Lincoln").

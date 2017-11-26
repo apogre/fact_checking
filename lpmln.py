@@ -58,7 +58,8 @@ def inference(sentence_id, data_source, resource_v, top_k, predicate):
     if path.isfile('LPmln/' +data_source + '/' + data_source + '_result.txt'):
         remove('LPmln/' +data_source + '/' + data_source + '_result.txt')
     evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}new_rules/amie_confidence_top{2}.lpmln -q {3} -e {1}_full.db -r {0}result.txt ".format('LPmln/' +data_source + '/', evidence_source,top_k, predicate)
+    cmd = "lpmln2asp -i {0}new_rules/amie_confidence_top{2}.lpmln -q {3} -e {1}_full.db -r {0}result.txt\
+     ".format('LPmln/' +data_source + '/', evidence_source,top_k, predicate)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' +data_source + '/' + 'result.txt', 'r')
@@ -108,32 +109,41 @@ def inference_hard(sentence_id, data_source, resource_v,top_k, predicate):
     return probs, probs_test
 
 
-def evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v,top_k, predicate):
+def evidence_writer(filtered_evidence, sentence_id, data_source, resource_v, top_k, predicate):
+    rule_predicates = get_rule_predicates(data_source, top_k, predicate)
+    print rule_predicates
     item_set = OrderedSet()
     print resource_v
     for evidence in filtered_evidence:
-        rel_set = [r for r in evidence]
-        if rel_set[0] in resource_v and rel_set[2] in resource_v and rel_set[1] == predicate:
-            pass
-        else:
-            item_set.add(rel_set[1] + '("' + rel_set[0] + '","' + rel_set[2] + '").')
-    with open('LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source + '_full.db', 'wb') as csvfile:
+        if evidence[1] in rule_predicates:
+            if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == predicate:
+                pass
+            else:
+                try:
+                    item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
+                except:
+                    pass
+    with open('LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source + '_full.txt', 'wb') as csvfile:
         for i in item_set:
             if '*' not in i:
                 try:
                     csvfile.write(i+'\n')
                 except:
                     pass
+
+    with open('LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source + '_full.txt', 'r') as f, \
+            open('LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source + '_full_unique.txt', 'wb') as out_file:
+        out_file.writelines(unique_everseen(f))
     return item_set
 
 
-def get_rule_predicates(data_source,top_k):
-    text = open('LPmln/' + data_source + '/new_rules/amie_hard_top'+top_k+'.lpmln', 'r')
+def get_rule_predicates(data_source, top_k, predicate):
+    text = open('LPmln/' + data_source + '/rudik_rules/'+predicate+'_all', 'r')
     f = text.read()
     text.close()
     probs = re.findall("(\w+\()", f)
     probs = list(set(probs))
-    predicates = [p.replace('(','') for p in probs]
+    predicates = [p.replace('(', '') for p in probs]
     return predicates
 
 

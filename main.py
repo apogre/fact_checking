@@ -15,7 +15,7 @@ import argparse
 import sys
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, inference, inference_hard, amie_tsv, evidence_writer1, clingo_map, get_rule_predicates
+from lpmln import relation_extractor_triples, inference, inference_hard, amie_tsv, evidence_writer, clingo_map, get_rule_predicates
 from resource_writer import update_resources
 
 load_word2vec = True
@@ -108,13 +108,6 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
     accuracy = []
     stored_query = dict()
     entity_set = []
-    distance_three = []
-    filtered_evidence = []
-    with open('person.txt') as f:
-        person = f.readlines()
-    # you may also want to remove whitespace characters like `\n` at the end of each line
-    person = [x.strip() for x in person]
-    person_ind = []
     for n, ne in enumerate(named_tags):
         kgminer_predicate_ranked = dict()
         sentence_id = id_list[n]
@@ -139,14 +132,6 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             ambiverse_resources[sentence_id] = resource
             ambiverse_flag = True
         print len(resource)
-        # if len(resource) < 2:
-        #     # for entity_pair in triple_dict.values():
-        #     #     print "here"
-        #     #     for entity in entity_pair[0]:
-        #     #         if entity not in resource.keys():
-        #     #             resource_ids = resource_extractor(entity)
-        #     #             resource[entity] = resource_ids
-        #     resource = spotlight_entity_parser(sentence_check)
         print "Resource Extractor"
         print "=================="
         pprint.pprint(resource)
@@ -178,17 +163,11 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         # # print "Ranked Predicates"
         # print kgminer_predicate_ranked
         print resource
+
         for triples_k, triples_v in triple_dict.iteritems():
             for triple_v in triples_v:
-                print triple_v
                 resource_v = [resource.get(trip_v).get('dbpedia_id') for trip_v in triple_v]
-                if resource_v[0] not in person:
-                    person.append(resource_v[0])
-                if resource_v[1] not in person:
-                    person.append(resource_v[1])
-                person_ind.append(resource_v[0])
-        print person
-        print person_ind
+
         if KGMiner:
             if kgminer_predicate_ranked:
                 kg_output = []
@@ -277,51 +256,19 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
 
         if lpmln:
             print "Executing LPMLN"
-            # if load_mappings:
-            #     print "Loading DBpedia to Wikidata Mappings"
-            #     predicate_dict = load_lpmln_resource()
-            #     load_mappings = False
-            # rule_predicates = get_rule_predicates(data_source, top_k)
-            rule_predicates = ["founders","nationality","deathPlace","birthPlace", "almaMater","parent","child","spouse"]
-
-            #prepare ntn training
-
-            for entity in resource_v:
-                print entity
-                if entity not in entity_set:
-                    distance_three = distance_one_query('dbpedia', entity, distance_three)
-                    for evidence in distance_three:
-                        if evidence[1] in rule_predicates:
-                            filtered_evidence.append(evidence)
-                    entity_set.append(entity)
-                else:
-                    pass
-
-            print len(filtered_evidence)
-            # sys.exit(0)
-
-        #     print rule_predicates
-        #     if sentence_id not in lpmln_predicate.keys():
-        #         distance_one = []
-        #         filtered_evidence = []
-        #         for entity in resource_v:
-        #             distance_one = distance_one_query('dbpedia', entity, distance_one)
-        #             # print distance_one
-        #
-        #             # distance_one_local = distance_one_query_local('dbpedia', entity, distance_one)
-        #             # print distance_one_local
-        #             # distance_one = distance_one+distance_one_local
-        #         if distance_one:
-        #             for evidence in distance_one:
-        #                 if evidence[1] in rule_predicates:
-        #                     if evidence[0] in resource_v or evidence[2] in resource_v:
-        #                         filtered_evidence.append(evidence)
-        #             item_set = evidence_writer1(filtered_evidence, sentence_id, data_source,resource_v, top_k, predicate)
-        #             lpmln_predicate[sentence_id] = list(item_set)
-        #             lpmln_predicate_flag = True
-        #     else:
-        #         print "Loading Stored Evidence"
-        #         item_set = lpmln_predicate.get(sentence_id, {})
+            if sentence_id not in lpmln_predicate.keys():
+                distance_three = []
+                for entity in resource_v:
+                    print entity
+                    distance_three = distance_three_query(entity, distance_three)
+                print len(distance_three)
+                if distance_three:
+                    item_set = evidence_writer(distance_three, sentence_id, data_source, resource_v, top_k, predicate)
+                    lpmln_predicate[sentence_id] = list(item_set)
+                    lpmln_predicate_flag = True
+            else:
+                print "Loading Stored Evidence"
+                item_set = lpmln_predicate.get(sentence_id, {})
         #     if sentence_id not in lpmln_output.keys():
         # #     #         # get_rules(predicate_of_interest)
         #         probability, prob_test = inference(sentence_id, data_source,resource_v,top_k, predicate)
@@ -341,10 +288,6 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
     # amie_tsv(filtered_evidence, data_source)
 
     # amie_tsv(amie_training, data_source)
-    print len(person)
-    with open('person.txt', 'wb') as personwriter:
-        for per in person:
-            personwriter.write(per+'\n')
 
     if KGMiner:
         kgminer_accuracy = float(kgminer_true_count)/float(executed_sentence)

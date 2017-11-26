@@ -84,7 +84,7 @@ def triples_extractor(sentence, named_entities):
     with open('sentences.txt', 'a') as text:
         text.write(sentence)
     triples_raw = stanford_ie("sentences.txt", verbose=False)
-    print triples_raw
+    # print triples_raw
     triples = [[trip.lstrip() for trip in triple] for triple in triples_raw]
     triple_dict = triple_filter(named_entities, triples)
     return triple_dict
@@ -92,19 +92,19 @@ def triples_extractor(sentence, named_entities):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-s", "--sentence", default='Jack Dorsey is the founder of Twitter.')
+    parser.add_argument("-s", "--sentence", default='Bill Gates is married to Melinda Gates.')
     args = parser.parse_args()
     sentence_lis = [args.sentence]
     sentence_list = [word_tokenize(sent) for sent in sentence_lis]
-    print sentence_list
+    # print sentence_list
     named_tags = sentence_tagger(sentence_list)
-    print named_tags
+    # print named_tags
     for ne in named_tags:
         sentence_check = sentence_lis[0]
         print sentence_check
         named_entities = get_nodes(ne)
-        print named_entities
+        # print named_entities
         entity_dict = dict(named_entities)
-        print "NER: "+str(entity_dict)
+        # print "NER: "+str(entity_dict)
         triple_dict = triples_extractor(sentence_check, named_entities)
         print "Relation Triples: "+str(triple_dict)

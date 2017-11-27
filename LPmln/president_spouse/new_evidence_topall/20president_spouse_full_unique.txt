@@ -399,3 +399,4 @@ relative("Roger_Clinton,_Sr.","Hillary_Rodham_Clinton").
 religion("Ed_Bethune","Methodism").
 spouse("Roger_Clinton,_Sr.","Virginia_Clinton_Kelley").
 successor("Ray_Thornton","Jim_Guy_Tucker").
+birthPlace("Laura_Bush","Midland,_Texas").

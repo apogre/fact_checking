@@ -1,0 +1,5 @@
+birthPlace("Lyndon_B._Johnson","Texas").
+deathPlace("Lyndon_B._Johnson","Texas").
+birthPlace("Lady_Bird_Johnson","Texas").
+deathPlace("Lady_Bird_Johnson","Texas").
+deathPlace("Lady_Bird_Johnson","West_Lake_Hills,_Texas").

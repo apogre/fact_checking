@@ -1,0 +1,9 @@
+birthPlace("George_W._Bush","New_Haven,_Connecticut").
+activeYearsStartDate("Toni_Harp","2014-01-01").
+birthDate("Toni_Harp","1949").
+birthPlace("Toni_Harp","San_Francisco").
+birthYear("Toni_Harp","1949").
+office("Toni_Harp","Connecticut_State_Senator").
+orderInOffice("Toni_Harp","50th_Mayor_of_New_Haven,_Connecticut").
+party("Toni_Harp","Democratic_Party_(United_States)").
+successor("Toni_Harp","Gary_Holder-Winfield").

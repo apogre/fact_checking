@@ -1,0 +1,7 @@
+deathPlace("Gerald_Ford","Rancho_Mirage,_California").
+birthPlace("Gerald_Ford","Omaha,_Nebraska").
+birthDate("Jean_Stothert","1950-02-07").
+birthPlace("Jean_Stothert","Wood_River,_Illinois").
+birthYear("Jean_Stothert","1950").
+birthPlace("Barbara_Bush","Flushing,_Queens").
+birthPlace("Barbara_Bush","New_York").

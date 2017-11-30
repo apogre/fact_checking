@@ -1,21 +1,28 @@
+deathPlace("Ronald_Reagan","Bel_Air,_Los_Angeles").
+birthPlace("Ronald_Reagan","Tampico,_Illinois").
+child("Ronald_Reagan","Ron_Reagan").
+child("Ronald_Reagan","Maureen_Reagan").
+child("Ronald_Reagan","Michael_Reagan").
+child("Ronald_Reagan","Patti_Davis").
+office("Ronald_Reagan","President of theScreen Actors Guild").
+orderInOffice("Ronald_Reagan","33rd Governor of California").
+orderInOffice("Ronald_Reagan","40th President of the United States").
+party("Ronald_Reagan","Republican_Party_(United_States)").
+religion("Ronald_Reagan","Presbyterianism").
+spouse("Ronald_Reagan","Jane_Wyman").
+successor("Ronald_Reagan","George_H._W._Bush").
+successor("Ronald_Reagan","Walter_Pidgeon").
+successor("Ronald_Reagan","George_Chandler").
+successor("Ronald_Reagan","Jerry_Brown").
+vicePresident("Ronald_Reagan","George_H._W._Bush").
+predecessor("Ronald_Reagan","Jimmy_Carter").
+predecessor("Ronald_Reagan","Howard_Keel").
+predecessor("Ronald_Reagan","Robert_Montgomery_(actor)").
+predecessor("Ronald_Reagan","Pat_Brown").
+restingPlace("Ronald_Reagan","Reagan Library, Simi Valley, California, U.S.").
 deathPlace("Ronald_Reagan","California").
 birthPlace("Ronald_Reagan","Illinois").
 deathPlace("Ronald_Reagan","Los_Angeles").
-birthPlace("Ronald_Reagan","Tampico,_Illinois").
-activeYearsEndDate("Eric_Garcetti","2012-01-12").
-activeYearsEndDate("Eric_Garcetti","2013-07-01").
-activeYearsEndDate("Mike_Feuer","2001-07-01").
-activeYearsEndDate("Mike_Feuer","2012-11-30").
-activeYearsStartDate("Eric_Garcetti","2001-07-01").
-activeYearsStartDate("Eric_Garcetti","2006-01-01").
-activeYearsStartDate("Eric_Garcetti","2013-07-01").
-activeYearsStartDate("Mike_Feuer","1994-07-01").
-activeYearsStartDate("Mike_Feuer","2006-12-04").
-activeYearsStartDate("Mike_Feuer","2013-07-01").
-activeYearsStartDate("Ron_Galperin","2013-07-01").
-birthDate("Eric_Garcetti","1971-02-04").
-birthDate("Mike_Feuer","1958-05-14").
-birthDate("Ron_Galperin","1963-08-01").
 birthPlace("Eric_Garcetti","Los_Angeles").
 birthPlace("Mike_Feuer","California").
 birthPlace("Mike_Feuer","San_Bernardino,_California").
@@ -41,4 +48,21 @@ successor("Eric_Garcetti","Herb_Wesson").
 successor("Eric_Garcetti","Mitch_O'Farrell").
 successor("Mike_Feuer","Jack_Weiss").
 successor("Mike_Feuer","Brian_Nestande").
+deathPlace("Nancy_Reagan","Bel_Air,_Los_Angeles").
+birthPlace("Nancy_Reagan","New_York_City").
+child("Nancy_Reagan","Ron_Reagan").
+child("Nancy_Reagan","Maureen_Reagan").
+child("Nancy_Reagan","Michael_Reagan").
+child("Nancy_Reagan","Patti_Davis").
+office("Nancy_Reagan","First Lady of California").
+office("Nancy_Reagan","First Lady of the United States").
+party("Nancy_Reagan","Republican_Party_(United_States)").
+predecessor("Nancy_Reagan","Rosalynn_Carter").
+predecessor("Nancy_Reagan","Bernice_Layne_Brown").
+religion("Nancy_Reagan","Presbyterianism").
+spouse("Nancy_Reagan","Ronald_Reagan").
+successor("Nancy_Reagan","Gloria_Deukmejian").
+successor("Nancy_Reagan","Barbara_Bush").
+restingPlace("Nancy_Reagan","Ronald_Reagan_Presidential_Library").
+restingPlace("Nancy_Reagan","Simi_Valley,_California").
 birthPlace("Nancy_Reagan","New_York").

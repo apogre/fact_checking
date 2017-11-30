@@ -14,5 +14,5 @@ rule_threshold = 0.15
 top_k = str('all')
 predicate = 'spouse'
 #
-# sparql_dbpedia = 'http://dbpedia.org/sparql'
+sparql_dbpedia_api = 'http://dbpedia.org/sparql'
 sparql_dbpedia = 'http://10.218.105.56:8890/sparql'

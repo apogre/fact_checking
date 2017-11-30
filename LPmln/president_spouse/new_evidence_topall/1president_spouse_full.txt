@@ -1,9 +1,21 @@
 birthPlace("Bill_Clinton","Hope,_Arkansas").
-birthPlace("Bill_Clinton","United_States").
 child("Bill_Clinton","Chelsea_Clinton").
+office("Bill_Clinton","50thAttorney General of Arkansas").
+orderInOffice("Bill_Clinton","40th and 42ndGovernor of Arkansas").
+orderInOffice("Bill_Clinton","42nd President of the United States").
+party("Bill_Clinton","Democratic_Party_(United_States)").
+religion("Bill_Clinton","Baptists").
+spouse("Bill_Clinton","Hillary_Clinton").
+successor("Bill_Clinton","George_W._Bush").
 successor("Bill_Clinton","Frank_D._White").
 successor("Bill_Clinton","Jim_Guy_Tucker").
-party("Bill_Clinton","Democratic_Party_(United_States)").
+successor("Bill_Clinton","Steve_Clark_(Arkansas_politician)").
+vicePresident("Bill_Clinton","Al_Gore").
+predecessor("Bill_Clinton","George_H._W._Bush").
+predecessor("Bill_Clinton","Frank_D._White").
+predecessor("Bill_Clinton","Jim Guy Tucker").
+predecessor("Bill_Clinton","Joe Purcell").
+birthPlace("Bill_Clinton","United_States").
 birthPlace("Joe_Purcell","Arkansas").
 deathPlace("Joe_Purcell","Arkansas").
 birthPlace("Joe_Purcell","Bradley_County,_Arkansas").
@@ -12,7 +24,6 @@ birthPlace("Winston_Bryant","Malvern,_Arkansas").
 deathPlace("Joe_Purcell","Saline_County,_Arkansas").
 birthPlace("Frank_D._White","Texas").
 birthPlace("Frank_D._White","Texarkana,_Texas").
-religion("Bill_Clinton","Baptists").
 birthPlace("Joe_Purcell","United_States").
 parent("Roger_Clinton,_Jr.","Virginia_Clinton_Kelley").
 birthPlace("Chelsea_Clinton","Little_Rock,_Arkansas").
@@ -36,9 +47,6 @@ orderInOffice("Bill_Clinton","President_of_the_United_States").
 party("Virginia_Clinton_Kelley","Democratic_Party_(United_States)").
 religion("Virginia_Clinton_Kelley","Baptists").
 restingPlace("Virginia_Clinton_Kelley","Hope,_Arkansas").
-successor("Bill_Clinton","George_W._Bush").
-successor("Bill_Clinton","Steve_Clark_(Arkansas_politician)").
-vicePresident("Bill_Clinton","Al_Gore").
 parent("Chelsea_Clinton","Bill_Clinton").
 relative("Roger_Clinton,_Jr.","Bill_Clinton").
 successor("Frank_D._White","Bill_Clinton").

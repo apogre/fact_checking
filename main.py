@@ -1,7 +1,7 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
-from kb_query import get_description, distance_one_query, distance_one_query_local, distance_three_query
+from kb_query import get_description, distance_one_query, distance_three_query
 from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, top_k, predicate
 from kgminer import get_training_set, invoke_kgminer, get_perfect_training, poi_writer, entity_id_finder, train_data_csv, \
     csv_writer
@@ -260,7 +260,9 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
                 distance_three = []
                 for entity in resource_v:
                     print entity
+                    distance_three = distance_one_query(entity, distance_three)
                     distance_three = distance_three_query(entity, distance_three)
+                print "-------"
                 print len(distance_three)
                 if distance_three:
                     item_set = evidence_writer(distance_three, sentence_id, data_source, resource_v, top_k, predicate)
@@ -269,16 +271,16 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             else:
                 print "Loading Stored Evidence"
                 item_set = lpmln_predicate.get(sentence_id, {})
-        #     if sentence_id not in lpmln_output.keys():
-        # #     #         # get_rules(predicate_of_interest)
-        #         probability, prob_test = inference(sentence_id, data_source,resource_v,top_k, predicate)
-        #         answer_set,answer_test = clingo_map(sentence_id, data_source,resource_v,top_k, predicate)
-        #         hard_prob, hard_prob_test = inference_hard(sentence_id, data_source,resource_v,top_k,predicate)
+            if sentence_id not in lpmln_output.keys():
+                # probability, prob_test = inference(sentence_id, data_source,resource_v,top_k, predicate)
+                answer_set,answer_test = clingo_map(sentence_id, data_source,resource_v,top_k, predicate)
+                hard_prob, hard_prob_test = inference_hard(sentence_id, data_source,resource_v,top_k,predicate)
         # #     #         probability = [1]
         #     else:
         #         probability,prob_test = lpmln_output[sentence_id]
-        #     lpmln_evaluation.append([sentence_id, sentence_check,str(prob_test),str(answer_test), \
-        #                              str(hard_prob_test),str(probability),str(answer_set),str(hard_prob)])
+            lpmln_evaluation.append([sentence_id, sentence_check, str(hard_prob_test), str(hard_prob), str(hard_prob_test), str(hard_prob)])
+                                        # ,str(prob_test),str(answer_test), \
+                                     # str(hard_prob_test),str(probability),str(answer_set),str(hard_prob)])
         #     # print lpmln_evaluation
         #     # print probability
         # update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
@@ -306,7 +308,7 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             datawriter.writerows(kgminer_evaluation)
 
     if lpmln_evaluation:
-        with open('dataset/' + data_source + '/lpmln_evaluation_top'+top_k+'.csv', 'wb') as csvfile:
+        with open('dataset/' + data_source + '/lpmln_spouse'+top_k+'.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)
 

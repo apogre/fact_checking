@@ -1,5 +1,16 @@
 birthPlace("George_W._Bush","New_Haven,_Connecticut").
-activeYearsStartDate("Toni_Harp","2014-01-01").
+child("George_W._Bush","Barbara_Bush_(born_1981)").
+child("George_W._Bush","Jenna_Bush_Hager").
+orderInOffice("George_W._Bush","43rd President of the United States").
+orderInOffice("George_W._Bush","46th Governor of Texas").
+party("George_W._Bush","Republican_Party_(United_States)").
+religion("George_W._Bush","Anglicanism").
+religion("George_W._Bush","Methodism").
+successor("George_W._Bush","Barack_Obama").
+successor("George_W._Bush","Rick_Perry").
+vicePresident("George_W._Bush","Dick_Cheney").
+predecessor("George_W._Bush","Ann_Richards").
+predecessor("George_W._Bush","Bill_Clinton").
 birthDate("Toni_Harp","1949").
 birthPlace("Toni_Harp","San_Francisco").
 birthYear("Toni_Harp","1949").
@@ -8,3 +19,14 @@ orderInOffice("Toni_Harp","50th_Mayor_of_New_Haven,_Connecticut").
 party("Toni_Harp","Democratic_Party_(United_States)").
 successor("Toni_Harp","Gary_Holder-Winfield").
 birthPlace("Laura_Bush","Midland,_Texas").
+child("Laura_Bush","Jenna_Bush_Hager").
+child("Laura_Bush","Barbara_Pierce_Bush").
+office("Laura_Bush","First Lady of Texas").
+office("Laura_Bush","First Lady of the United States").
+party("Laura_Bush","Republican_Party_(United_States)").
+predecessor("Laura_Bush","Rita_Crocker_Clements").
+predecessor("Laura_Bush","Hillary_Clinton").
+religion("Laura_Bush","United_Methodist_Church").
+spouse("Laura_Bush","George_W._Bush").
+successor("Laura_Bush","Michelle_Obama").
+successor("Laura_Bush","Anita_Thigpen_Perry").

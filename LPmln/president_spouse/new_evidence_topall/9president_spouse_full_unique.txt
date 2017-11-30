@@ -1,11 +1,16 @@
-birthPlace("Barack_Obama","United_States").
-birthPlace("Barack_Obama","Honolulu").
 birthPlace("Barack_Obama","Hawaii").
-birthDate("John_Roberts","1955-01-27").
-birthDate("Kirk_Caldwell","1952-09-04").
-birthDate("Barack_Obama","1961-08-04").
-birthDate("Joe_Biden","1942-11-20").
-birthDate("John_Boehner","1949-11-17").
+birthPlace("Barack_Obama","Honolulu").
+birthPlace("Barack_Obama","Kapiolani_Medical_Center_for_Women_and_Children").
+orderInOffice("Barack_Obama","44th President of the United States").
+party("Barack_Obama","Democratic_Party_(United_States)").
+religion("Barack_Obama","Protestantism").
+successor("Barack_Obama","Kwame_Raoul").
+successor("Barack_Obama","Roland_Burris").
+vicePresident("Barack_Obama","Joe_Biden").
+predecessor("Barack_Obama","Alice_Palmer_(politician)").
+predecessor("Barack_Obama","Peter_Fitzgerald_(politician)").
+predecessor("Barack_Obama","George_W._Bush").
+birthPlace("Barack_Obama","United_States").
 birthPlace("John_Roberts","United_States").
 birthPlace("John_Roberts","New_York").
 birthPlace("John_Roberts","Buffalo,_New_York").
@@ -25,8 +30,12 @@ religion("John_Roberts","Catholic_Church").
 religion("English_American","Christianity").
 religion("English_American","Mormonism").
 birthPlace("Michelle_Obama","Chicago").
-birthDate("Susana_Mendoza","1972-05-13").
-birthDate("Rahm_Emanuel","1959-11-29").
+birthPlace("Michelle_Obama","Illinois").
+office("Michelle_Obama","First Lady of the United States").
+party("Michelle_Obama","Democratic_Party_(United_States)").
+predecessor("Michelle_Obama","Laura_Bush").
+religion("Michelle_Obama","Protestantism").
+spouse("Michelle_Obama","Barack_Obama").
 birthPlace("Susana_Mendoza","Chicago").
 birthPlace("Rahm_Emanuel","Chicago").
 birthYear("Susana_Mendoza","1972").

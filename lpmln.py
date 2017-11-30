@@ -74,7 +74,7 @@ def inference(sentence_id, data_source, resource_v, top_k, predicate):
 def clingo_map(sentence_id, data_source, resource_v,top_k, predicate):
     print "Clingo"
     evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "clingo {0}new_rules/amie_hard_top{1}.lpmln {2}_full.db > {0}clingo_result.txt ".format('LPmln/' +data_source +\
+    cmd = "clingo {0}rudik_rules/spouse_all {2}_full_unique.txt > {0}clingo_result.txt ".format('LPmln/' +data_source +\
                                                                                              '/', top_k,evidence_source)
     print cmd
     subprocess.call(cmd, shell=True)
@@ -96,7 +96,7 @@ def clingo_map(sentence_id, data_source, resource_v,top_k, predicate):
 def inference_hard(sentence_id, data_source, resource_v,top_k, predicate):
     print "LPMLN Hard Inference"
     evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}new_rules/amie_hard_top{2}.lpmln -q {3} -e {1}_full.db -r {0}hard_result.txt".format(
+    cmd = "lpmln2asp -i {0}rudik_rules/spouse_all -q {3} -e {1}_full_unique.txt -r {0}hard_result.txt".format(
         'LPmln/' + data_source + '/', evidence_source, top_k,predicate)
     print cmd
     subprocess.call(cmd, shell=True)

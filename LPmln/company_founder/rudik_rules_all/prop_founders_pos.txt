@@ -1,0 +1,28 @@
+http://dbpedia.org/ontology/bandMember(v0,object) & http://dbpedia.org/ontology/hometown(v0,v1) & http://dbpedia.org/ontology/location(subject,v1)
+http://dbpedia.org/ontology/employer(http://dbpedia.org/resource/Milène_Larsson,http://dbpedia.org/resource/Vice_Media) & http://dbpedia.org/ontology/citizenship(http://dbpedia.org/resource/Milène_Larsson,http://dbpedia.org/resource/United_States) & http://dbpedia.org/ontology/residence(object,http://dbpedia.org/resource/United_States)
+http://dbpedia.org/ontology/residence(object,v0) & http://dbpedia.org/ontology/location(v1,v0) & http://dbpedia.org/ontology/subsidiary(v1,subject)
+http://dbpedia.org/ontology/genre(subject,v0) & http://dbpedia.org/ontology/genre(http://dbpedia.org/resource/God_Is_in_the_T.V.,v0) & http://dbpedia.org/ontology/director(http://dbpedia.org/resource/God_Is_in_the_T.V.,object)
+http://dbpedia.org/ontology/bandMember(v0,object) & http://dbpedia.org/ontology/hometown(v0,v1) & http://dbpedia.org/ontology/location(subject,v1),-0.04286
+http://dbpedia.org/ontology/employer(http://dbpedia.org/resource/Milène_Larsson,http://dbpedia.org/resource/Vice_Media) & http://dbpedia.org/ontology/citizenship(http://dbpedia.org/resource/Milène_Larsson,http://dbpedia.org/resource/United_States) & http://dbpedia.org/ontology/residence(object,http://dbpedia.org/resource/United_States),null
+http://dbpedia.org/ontology/genre(subject,v0) & http://dbpedia.org/ontology/genre(http://dbpedia.org/resource/God_Is_in_the_T.V.,v0) & http://dbpedia.org/ontology/director(http://dbpedia.org/resource/God_Is_in_the_T.V.,object),null
+http://dbpedia.org/ontology/associatedBand(object,v0) & http://dbpedia.org/ontology/hometown(v0,v1) & http://dbpedia.org/ontology/location(subject,v1),0.00000
+http://dbpedia.org/ontology/associatedMusicalArtist(object,v0) & http://dbpedia.org/ontology/hometown(v0,v1) & http://dbpedia.org/ontology/location(subject,v1),0.00000
+http://dbpedia.org/ontology/associatedBand(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/recordLabel(v1,subject),0.02414
+http://dbpedia.org/ontology/recordLabel(v0,subject) & http://dbpedia.org/ontology/bandMember(v0,object),0.02414
+http://dbpedia.org/ontology/associatedMusicalArtist(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/recordLabel(v1,subject),0.02414
+http://dbpedia.org/ontology/recordLabel(v0,subject) & http://dbpedia.org/ontology/associatedMusicalArtist(object,v0) & http://dbpedia.org/ontology/bandMember(v0,object),0.01207
+http://dbpedia.org/ontology/recordLabel(v0,subject) & http://dbpedia.org/ontology/associatedBand(object,v0) & http://dbpedia.org/ontology/bandMember(v0,object),0.01207
+http://dbpedia.org/ontology/director(http://dbpedia.org/resource/God_Is_in_the_T.V.,object) & http://dbpedia.org/ontology/genre(http://dbpedia.org/resource/God_Is_in_the_T.V.,v1) & http://dbpedia.org/ontology/genre(subject,v1),null
+http://dbpedia.org/ontology/recordLabel(v0,subject) & http://dbpedia.org/ontology/genre(v0,v1) & http://dbpedia.org/ontology/genre(object,v1),0.04828
+http://dbpedia.org/ontology/associatedBand(object,v0) & http://dbpedia.org/ontology/musicalBand(v1,v0) & http://dbpedia.org/ontology/recordLabel(v1,subject),0.01207
+http://dbpedia.org/ontology/associatedMusicalArtist(object,v0) & http://dbpedia.org/ontology/musicalArtist(v1,v0) & http://dbpedia.org/ontology/recordLabel(v1,subject),0.01207
+http://dbpedia.org/ontology/residence(object,v0) & http://dbpedia.org/ontology/location(v1,v0) & http://dbpedia.org/ontology/subsidiary(v1,subject),-0.02857
+http://dbpedia.org/ontology/recordLabel(v0,subject) & http://dbpedia.org/ontology/associatedMusicalArtist(object,v0),0.02414
+http://dbpedia.org/ontology/associatedBand(object,v0) & http://dbpedia.org/ontology/musicalArtist(v1,v0) & http://dbpedia.org/ontology/recordLabel(v1,subject),0.01207
+http://dbpedia.org/ontology/genre(object,v0) & http://dbpedia.org/ontology/genre(v1,v0) & http://dbpedia.org/ontology/recordLabel(v1,subject),0.04828
+http://dbpedia.org/ontology/recordLabel(v0,subject) & http://dbpedia.org/ontology/associatedBand(object,v0) & http://dbpedia.org/ontology/associatedMusicalArtist(object,v0),0.02414
+http://dbpedia.org/ontology/subsidiary(v0,subject) & http://dbpedia.org/ontology/location(v0,v1) & http://dbpedia.org/ontology/residence(object,v1),0.00000
+http://dbpedia.org/ontology/residence(object,http://dbpedia.org/resource/United_States) & http://dbpedia.org/ontology/citizenship(http://dbpedia.org/resource/Milène_Larsson,http://dbpedia.org/resource/United_States) & http://dbpedia.org/ontology/employer(http://dbpedia.org/resource/Milène_Larsson,subject),null
+http://dbpedia.org/ontology/country(subject,http://dbpedia.org/resource/United_States) & http://dbpedia.org/ontology/residence(object,http://dbpedia.org/resource/United_States),null
+http://dbpedia.org/ontology/recordLabel(v0,subject) & http://dbpedia.org/ontology/associatedBand(object,v0),0.02414
+http://dbpedia.org/ontology/associatedMusicalArtist(object,v0) & http://dbpedia.org/ontology/musicalBand(v1,v0) & http://dbpedia.org/ontology/recordLabel(v1,subject),0.33571

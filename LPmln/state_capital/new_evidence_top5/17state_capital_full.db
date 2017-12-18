@@ -1,0 +1,8 @@
+capital("Alabama","Montgomery,_Alabama").
+largestCity("Montgomery_County,_Alabama","Montgomery,_Alabama").
+capital("Alabama_in_the_American_Civil_War","Montgomery,_Alabama").
+largestCity("Montgomery_metropolitan_area","Montgomery,_Alabama").
+capital("Texas","Austin,_Texas").
+largestCity("Texas","Houston").
+capital("Government_of_Free_Vietnam","Texas").
+premierePlace("Yajnaseni_(play)","Texas").

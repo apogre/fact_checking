@@ -1,0 +1,7 @@
+capital("Colorado","Denver").
+capital("Colorado_Territory","Denver").
+premierePlace("The_Laramie_Project","Denver").
+premierePlace("The_Dead_Guy","Denver").
+capital("Arizona","Phoenix,_Arizona").
+largestCity("Arizona","Capital_city").
+district("Coyote_Mountains_Wilderness_(Arizona)","Arizona").

@@ -1,0 +1,4 @@
+ capital(A,B) :- isPartOf(B,A).
+ capital(A,B) :- country(B,A).
+ capital(C,B) :- country(A,C), garrison(A,B).
+capital(A,B) :- largestCity(A,B).

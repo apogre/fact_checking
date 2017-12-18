@@ -24,12 +24,6 @@ def load_files(data_source, top_k):
     else:
         possible_predicate = {"a": "b"}
 
-    if path.isfile('dataset/' + data_source + '/lpmln_predicate_top'+top_k+'.json'):
-        with open('dataset/' + data_source + '/lpmln_predicate_top'+top_k+'.json') as json_data:
-            lpmln_predicate = json.load(json_data)
-    else:
-        lpmln_predicate = {"a": "b"}
-
     if path.isfile('dataset/' + data_source + '/kgminer_output.json'):
         with open('dataset/' + data_source + '/kgminer_output.json') as json_data:
             kgminer_output = json.load(json_data)
@@ -54,7 +48,7 @@ def load_files(data_source, top_k):
     else:
         lpmln_output = {"a": "b"}
 
-    return file_triples, ambiverse_resources, possible_predicate, kgminer_output, lpmln_predicate, lpmln_output, \
+    return file_triples, ambiverse_resources, possible_predicate, kgminer_output, lpmln_output, \
            kgminer_output_random, kgminer_output_perfect
 
 

@@ -1,0 +1,17 @@
+birthPlace("Travis_Kalanick","Los_Angeles").
+occupation("Travis_Kalanick","Entrepreneur").
+occupation("Travis_Kalanick","Travis_Kalanick__1").
+residence("Travis_Kalanick","San_Francisco").
+country("University_of_California,_Los_Angeles","United States").
+founders("Uber_(company)","Alexander Hank Garrett Camp").
+location("Los_Angeles","Los Angeles").
+country("San_Francisco","United_States").
+isPartOf("Los_Angeles","California").
+isPartOf("Los_Angeles","Los_Angeles_County,_California").
+isPartOf("Los_Angeles","Los_Angeles_metropolitan_area").
+isPartOf("Los_Angeles","Greater_Los_Angeles_Area").
+isPartOf("San_Francisco","California").
+keyPerson("Uber_(company)","Travis_Kalanick").
+keyPerson("Uber_(company)","Ryan_Graves").
+locationCity("Uber_(company)","California").
+locationCity("Uber_(company)","San_Francisco").

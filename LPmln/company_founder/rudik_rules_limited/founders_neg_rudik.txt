@@ -1,0 +1,7 @@
+http://dbpedia.org/ontology/keyPerson(subject,object) & http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/foundedBy(v0,object)
+http://dbpedia.org/ontology/location(subject,v0) & http://dbpedia.org/ontology/locationCity(v1,v0) & http://dbpedia.org/ontology/keyPerson(v1,object)
+http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/owningCompany(v1,v0) & http://dbpedia.org/ontology/parentCompany(subject,v1)
+http://dbpedia.org/ontology/numberOfEmployees(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1)
+http://dbpedia.org/ontology/occupation(object,v0) & http://dbpedia.org/ontology/location(v0,v1) & http://dbpedia.org/ontology/location(subject,v1)
+http://dbpedia.org/ontology/occupation(object,v0) & http://dbpedia.org/ontology/parentCompany(subject,v0)
+http://dbpedia.org/ontology/keyPerson(subject,object) & http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/keyPerson(v0,v0)

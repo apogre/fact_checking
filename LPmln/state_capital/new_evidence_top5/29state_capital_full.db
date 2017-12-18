@@ -1,0 +1,5 @@
+capital("Arkansas","Little_Rock,_Arkansas").
+largestCity("Pulaski_County,_Arkansas","Little_Rock,_Arkansas").
+capital("Connecticut","Hartford,_Connecticut").
+largestCity("Connecticut","Bridgeport,_Connecticut").
+district("Noyes_Barber","Connecticut").

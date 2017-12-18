@@ -1,0 +1,6 @@
+timeZone("Juneau,_Alaska","Alaska_Standard_Time").
+timeZone("Juneau,_Alaska","Alaska_Daylight_Time").
+capital("Alaska","Juneau,_Alaska").
+district("Eagle_River_(Favorite_Channel)","Juneau,_Alaska").
+region("Bartlett_Regional_Hospital","Juneau,_Alaska").
+timeZone("New_York_City","Eastern_Time_Zone").

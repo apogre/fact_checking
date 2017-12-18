@@ -1,0 +1,7 @@
+capital("Scotland","Edinburgh").
+largestCity("Scotland","Glasgow").
+billed("Drew_Galloway","Scotland").
+billed("Frank_Hoy","Scotland").
+billed("Nikki_Cross","Scotland").
+billed("Joe_Hendry_(wrestler)","Scotland").
+timeZone("New_York_City","Eastern_Time_Zone").

@@ -1,0 +1,4 @@
+capital("Arizona_Territory","Phoenix,_Arizona").
+largestCity("Maricopa_County,_Arizona","Phoenix,_Arizona").
+largestCity("Arizona","Capital_city").
+district("Coyote_Mountains_Wilderness_(Arizona)","Arizona").

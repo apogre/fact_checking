@@ -1,7 +1,7 @@
 from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
 from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
-from kb_query import get_description, distance_one_query, distance_three_query
+from kb_query import get_description, distance_one_query, distance_three_query, distance_two_query
 from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, top_k, predicate
 from kgminer import get_training_set, invoke_kgminer, get_perfect_training, poi_writer, entity_id_finder, train_data_csv, \
     csv_writer
@@ -15,15 +15,11 @@ import argparse
 import sys
 import pprint
 import numpy as np
-from lpmln import relation_extractor_triples, inference, inference_hard, amie_tsv, evidence_writer, clingo_map, get_rule_predicates
+from lpmln import relation_extractor_triples, inference, inference_hard, amie_tsv, evidence_writer, clingo_map, get_rule_predicates, inference_hard_not
 from resource_writer import update_resources
 
 load_word2vec = True
 model_wv_g = None
-
-
-def word2vec_score_dummy(rel,triple):
-    return 0
 
 
 def word2vec_score(rel, triple_k):
@@ -92,9 +88,9 @@ def predicate_ranker(predicates, triple):
 
 
 def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag, ambiverse_flag, kgminer_predicate_flag, \
-                 lpmln_predicate_flag, kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source, kr, \
+                 kgminer_output_flag, KGMiner, lpmln, lpmln_output_flag, data_source, kr, \
                  kgminer_output_random_flag, kp, kgminer_output_perfect_flag):
-    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_predicate, lpmln_output, \
+    file_triples, ambiverse_resources, possible_kgminer_predicate, kgminer_output, lpmln_output, \
     kgminer_output_random, kgminer_output_perfect = load_files(data_source,top_k)
     sentence_count = len(sentence_lis)
     executed_sentence = 0
@@ -256,32 +252,23 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
 
         if lpmln:
             print "Executing LPMLN"
-            if sentence_id not in lpmln_predicate.keys():
-                distance_three = []
-                for entity in resource_v:
-                    print entity
-                    distance_three = distance_one_query(entity, distance_three)
-                    distance_three = distance_three_query(entity, distance_three)
-                print "-------"
-                print len(distance_three)
-                if distance_three:
-                    item_set = evidence_writer(distance_three, sentence_id, data_source, resource_v, top_k, predicate)
-                    lpmln_predicate[sentence_id] = list(item_set)
-                    lpmln_predicate_flag = True
-            else:
-                print "Loading Stored Evidence"
-                item_set = lpmln_predicate.get(sentence_id, {})
-            if sentence_id not in lpmln_output.keys():
-                # probability, prob_test = inference(sentence_id, data_source,resource_v,top_k, predicate)
-                answer_set,answer_test = clingo_map(sentence_id, data_source,resource_v,top_k, predicate)
-                hard_prob, hard_prob_test = inference_hard(sentence_id, data_source,resource_v,top_k,predicate)
-        # #     #         probability = [1]
-        #     else:
-        #         probability,prob_test = lpmln_output[sentence_id]
-            lpmln_evaluation.append([sentence_id, sentence_check, str(hard_prob_test), str(hard_prob), str(hard_prob_test), str(hard_prob)])
+            distance_three = []
+            for entity in resource_v:
+                print entity
+                distance_three = distance_one_query(entity, distance_three)
+                distance_three = distance_two_query(entity, distance_three)
+                # distance_three = distance_three_query(entity, distance_three)
+            if distance_three:
+                item_set = evidence_writer(distance_three, sentence_id, data_source, resource_v, top_k, predicate)
+
+            # probability, prob_test = inference(sentence_id, data_source,resource_v, top_k, predicate)
+            answer_set, answer_test = clingo_map(sentence_id, data_source,resource_v, top_k, predicate)
+            hard_prob, hard_prob_test = inference_hard(sentence_id, data_source,resource_v,top_k, predicate)
+            hard_prob_not, hard_prob_test_not = inference_hard_not(sentence_id, data_source, resource_v,top_k, predicate)
+            lpmln_evaluation.append([sentence_id, sentence_check, str(hard_prob_test), str(hard_prob_test_not), \
+                                     str(answer_test), str(answer_set), str(hard_prob), str(hard_prob_not)])
                                         # ,str(prob_test),str(answer_test), \
                                      # str(hard_prob_test),str(probability),str(answer_set),str(hard_prob)])
-        #     # print lpmln_evaluation
         #     # print probability
         # update_resources(triple_flag, ambiverse_flag, kgminer_predicate_flag, lpmln_predicate_flag, \
         #                  kgminer_output_flag, file_triples, ambiverse_resources, possible_kgminer_predicate,\
@@ -308,20 +295,11 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             datawriter.writerows(kgminer_evaluation)
 
     if lpmln_evaluation:
-        with open('dataset/' + data_source + '/lpmln_spouse'+top_k+'.csv', 'wb') as csvfile:
+        with open('dataset/' + data_source + '/lpmln_founders'+top_k+'.csv', 'wb') as csvfile:
             datawriter = csv.writer(csvfile)
             datawriter.writerows(lpmln_evaluation)
 
 
-def cleanup_data(sentence_id, test_data):
-    training_files = listdir(KGMiner_data + '/' + test_data)
-    resource_files = listdir('dataset/' + test_data)
-    if 'kgminer_output.json' in resource_files:
-        remove('dataset/' + test_data + '/kgminer_output.json')
-    if sentence_id + test_data + '_ids.csv' in training_files:
-        print "Removing Training Data"
-        remove(KGMiner_data + '/' + test_data + '/' + sentence_id + test_data + '_ids.csv')
-        remove(KGMiner_data + '/' + test_data + '/' + sentence_id + test_data + '.csv')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -332,10 +310,8 @@ if __name__ == "__main__":
     parser.add_argument("-l", "--lpmln", default=False)
     parser.add_argument("-t", "--test_data", default='sample_case')
     parser.add_argument("-s", "--sentence", default='')
-    parser.add_argument("-c", "--cleanup_id", default=None)
     args = parser.parse_args()
-    if args.cleanup_id:
-        cleanup_data(args.cleanup_id, args.test_data)
+
     with open('dataset/' + args.test_data + '/' + args.input) as f:
         reader = csv.DictReader(f)
         sentences_list = []
@@ -355,7 +331,7 @@ if __name__ == "__main__":
         else:
             load_mappings = False
         fact_checker(sentences_list, id_list, true_label, load_mappings, triple_flag=False, ambiverse_flag=False, \
-                     kgminer_predicate_flag=False, lpmln_predicate_flag=False, kgminer_output_flag=False, \
+                     kgminer_predicate_flag=False, kgminer_output_flag=False, \
                      KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False, data_source=args.test_data, \
                      kr=args.kgminer_random, kgminer_output_random_flag=False, kp=args.kgminer_perfect, \
                      kgminer_output_perfect_flag = False)

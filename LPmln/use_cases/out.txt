@@ -1,0 +1,7 @@
+unsat(0,"1.000000",X,Y) :- a(X,Y) ,not b(X,Y) .
+b(X,Y) :- a(X,Y) , not unsat(0,"1.000000",X,Y).
+:~unsat(0,"1.000000",X,Y). [1000@0,0,X,Y]
+% :- b(X,Y), nb(X,Y).
+unsat(1,"1.000000",X,Y) :- c(X,Y),not -b(X,Y) .
+-b(X,Y) :- c(X,Y), not unsat(1,"1.000000",X,Y).
+:~unsat(1,"1.000000",X,Y). [1000@0,1,X,Y]

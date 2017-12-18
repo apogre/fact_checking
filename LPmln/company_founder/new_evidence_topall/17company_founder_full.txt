@@ -1,0 +1,24 @@
+birthPlace("Mark_Zuckerberg","White_Plains,_New_York").
+occupation("Mark_Zuckerberg","Mark_Zuckerberg__1").
+residence("Mark_Zuckerberg","Palo_Alto,_California").
+keyPerson("Tesla_Motors","JB_Straubel").
+keyPerson("Tesla_Motors","Elon_Musk").
+product("Tesla_Motors","Electric_car").
+product("Tesla_Motors","Tesla_Powerwall").
+founders("Tesla_Motors","JB_Straubel").
+founders("Tesla_Motors","Martin_Eberhard").
+founders("Tesla_Motors","Elon_Musk").
+birthPlace("JB_Straubel","Des_Moines,_Iowa").
+birthPlace("JB_Straubel","Wisconsin").
+birthPlace("Martin_Eberhard","Berkeley,_California").
+birthPlace("Elon_Musk","Pretoria").
+birthPlace("Elon_Musk","South_Africa").
+birthPlace("Elon_Musk","Transvaal_Province").
+location("Palo_Alto,_California","Palo Alto").
+occupation("JB_Straubel","Chief_Technical_Officer").
+occupation("JB_Straubel","JB_Straubel__1").
+occupation("Elon_Musk","Elon_Musk__1").
+residence("JB_Straubel","Menlo_Park,_California").
+residence("Elon_Musk","California").
+residence("Elon_Musk","Los_Angeles").
+residence("Elon_Musk","Bel_Air,_Los_Angeles").

@@ -1,0 +1,38 @@
+founders(A,B) :- bandMember(C,B) , hometown(C,D) , location(A,D),-0.04286
+founders(A,B) :- associatedBand(B,C) , hometown(C,D) , location(A,D),0.00000
+founders(A,B) :- associatedMusicalArtist(B,C) , hometown(C,D) , location(A,D),0.00000
+founders(A,B) :- associatedBand(B,C) , C!=D , recordLabel(D,A),0.02414
+founders(A,B) :- recordLabel(C,A) , bandMember(C,B),0.02414
+founders(A,B) :- associatedMusicalArtist(B,C) , C!=D , recordLabel(D,A),0.02414
+founders(A,B) :- recordLabel(C,A) , associatedMusicalArtist(B,C) , bandMember(C,B),0.01207
+founders(A,B) :- recordLabel(C,A) , associatedBand(B,C) , bandMember(C,B),0.01207
+founders(A,B) :- recordLabel(C,A) , genre(C,D) , genre(B,D),0.04828
+founders(A,B) :- associatedBand(B,C) , musicalBand(D,C) , recordLabel(D,A),0.01207
+founders(A,B) :- associatedMusicalArtist(B,C) , musicalArtist(D,C) , recordLabel(D,A),0.01207
+founders(A,B) :- residence(B,C) , location(D,C) , subsidiary(D,A),-0.02857
+founders(A,B) :- recordLabel(C,A) , associatedMusicalArtist(B,C),0.02414
+founders(A,B) :- associatedBand(B,C) , musicalArtist(D,C) , recordLabel(D,A),0.01207
+founders(A,B) :- genre(B,C) , genre(D,C) , recordLabel(D,A),0.04828
+founders(A,B) :- recordLabel(C,A) , associatedBand(B,C) , associatedMusicalArtist(B,C),0.02414
+founders(A,B) :- subsidiary(C,A) , location(C,D) , residence(B,D),0.00000
+founders(A,B) :- recordLabel(C,A) , associatedBand(B,C),0.02414
+founders(A,B) :- associatedMusicalArtist(B,C) , musicalBand(D,C) , recordLabel(D,A),0.33571
+founders(A,B) :- bandMember(C,B) , hometown(C,D) , location(A,D),-0.04286
+founders(A,B) :- associatedBand(B,C) , hometown(C,D) , location(A,D),0.00000
+founders(A,B) :- associatedMusicalArtist(B,C) , hometown(C,D) , location(A,D),0.00000
+founders(A,B) :- associatedBand(B,C) , C!=D , recordLabel(D,A),0.02414
+founders(A,B) :- recordLabel(C,A) , bandMember(C,B),0.02414
+founders(A,B) :- associatedMusicalArtist(B,C) , C!=D , recordLabel(D,A),0.02414
+founders(A,B) :- recordLabel(C,A) , associatedMusicalArtist(B,C) , bandMember(C,B),0.01207
+founders(A,B) :- recordLabel(C,A) , associatedBand(B,C) , bandMember(C,B),0.01207
+founders(A,B) :- recordLabel(C,A) , genre(C,D) , genre(B,D),0.04828
+founders(A,B) :- associatedBand(B,C) , musicalBand(D,C) , recordLabel(D,A),0.01207
+founders(A,B) :- associatedMusicalArtist(B,C) , musicalArtist(D,C) , recordLabel(D,A),0.01207
+founders(A,B) :- residence(B,C) , location(D,C) , subsidiary(D,A),-0.02857
+founders(A,B) :- recordLabel(C,A) , associatedMusicalArtist(B,C),0.02414
+founders(A,B) :- associatedBand(B,C) , musicalArtist(D,C) , recordLabel(D,A),0.01207
+founders(A,B) :- genre(B,C) , genre(D,C) , recordLabel(D,A),0.04828
+founders(A,B) :- recordLabel(C,A) , associatedBand(B,C) , associatedMusicalArtist(B,C),0.02414
+founders(A,B) :- subsidiary(C,A) , location(C,D) , residence(B,D),0.00000
+founders(A,B) :- recordLabel(C,A) , associatedBand(B,C),0.02414
+founders(A,B) :- associatedMusicalArtist(B,C) , musicalBand(D,C) , recordLabel(D,A),0.33571

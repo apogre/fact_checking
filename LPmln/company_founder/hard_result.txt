@@ -1,0 +1,30 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=not_founders LPmln/company_founder/new_evidence_topall_1000/29company_founder_full_unique.txt 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_checking/out.txt ...
+Solving...
+
+
+
+
+not_founders('Uber_(company)', 'Travis_Kalanick') 1.0
+not_founders('Google', 'Travis_Kalanick') 1.0
+not_founders('Uber_(company)', 'Ryan_Graves') 1.0
+not_founders('Intuit', 'Travis_Kalanick') 1.0
+not_founders('Google', 'Brad_D._Smith') 1.0
+not_founders('Intuit', 'Sundar_Pichai') 1.0
+not_founders('University_of_California,_Berkeley', 'Sundar_Pichai') 1.0
+not_founders('Google', 'Ryan_Graves') 1.0
+not_founders('University_of_Vermont', 'Sundar_Pichai') 1.0
+not_founders('Intuit', 'Ryan_Graves') 1.0
+not_founders('Intuit', 'Brad_D._Smith') 1.0
+not_founders('Google', 'Sundar_Pichai') 1.0
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.171s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.160s

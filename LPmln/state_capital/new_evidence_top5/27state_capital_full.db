@@ -1,0 +1,5 @@
+capital("Arizona","Phoenix,_Arizona").
+capital("Arizona_Territory","Phoenix,_Arizona").
+largestCity("Maricopa_County,_Arizona","Phoenix,_Arizona").
+capital("Alaska","Juneau,_Alaska").
+largestCity("Alaska","Anchorage,_Alaska").

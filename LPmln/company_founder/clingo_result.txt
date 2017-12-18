@@ -1,8 +1,11 @@
 clingo version 4.5.4
-Reading from .../company_founder/amie_hard_top15.lpmln ...
-UNKNOWN
+Reading from ..._founder/rudik_rules_1000/founders_all ...
+Solving...
+Answer: 1
+occupation("Diane_Greene","Google") occupation("Diane_Greene","Intuit") occupation("Diane_Greene","Diane_Greene__1") spouse("Diane_Greene","Mendel_Rosenblum") country("University_of_California,_Berkeley","U.S.") country("University_of_Vermont","U.S.") founders("Google","Sergey_Brin") founders("Google","Larry_Page") locationCountry("Google","U.S.") foundingYear("Intuit","1983") keyPerson("Intuit","Brad_D._Smith") keyPerson("Google","Sundar_Pichai") location("Intuit","California") location("Intuit","Mountain_View,_Santa_Clara_County,_California") locationCity("Google","California") locationCity("Google","Mountain_View,_California") locationCity("Google","Googleplex") nationality("Mendel_Rosenblum","United_States") occupation("Mendel_Rosenblum","Mendel_Rosenblum__1") parentCompany("Google","Alphabet_Inc.") spouse("Mendel_Rosenblum","Diane_Greene") subsidiary("Google","List_of_mergers_and_acquisitions_by_Alphabet") keyPerson("Uber_(company)","Travis_Kalanick") keyPerson("Uber_(company)","Ryan_Graves") locationCity("Uber_(company)","San_Francisco") locationCity("Uber_(company)","California") locationCountry("Uber_(company)","United_States") not_founders("Intuit","Sundar_Pichai") not_founders("Intuit","Travis_Kalanick") not_founders("Intuit","Ryan_Graves") not_founders("University_of_California,_Berkeley","Sundar_Pichai") not_founders("University_of_Vermont","Sundar_Pichai") not_founders("Google","Brad_D._Smith") not_founders("Google","Sundar_Pichai") not_founders("Google","Travis_Kalanick") not_founders("Google","Ryan_Graves") not_founders("Intuit","Brad_D._Smith") not_founders("Uber_(company)","Travis_Kalanick") not_founders("Uber_(company)","Ryan_Graves")
+SATISFIABLE
 
-Models       : 0+    
+Models       : 1     
 Calls        : 1
-Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.000s
+Time         : 0.018s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.010s

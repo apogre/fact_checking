@@ -1,0 +1,6 @@
+not_founders(A,B) :- keyPerson(A,B) , keyPerson(C,B) , foundedBy(C,B).
+not_founders(A,B) :- location(A,C) , locationCity(D,C) , keyPerson(D,B).
+not_founders(A,B) :- keyPerson(C,B) , owningCompany(D,C) , parentCompany(A,D).
+not_founders(A,B) :- occupation(B,C) , location(C,D) , location(A,D).
+not_founders(A,B) :- occupation(B,C) , parentCompany(A,C).
+not_founders(A,B) :- keyPerson(A,B) , keyPerson(C,B) , keyPerson(C,C).

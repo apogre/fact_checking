@@ -1,0 +1,69 @@
+birthPlace("Elon_Musk","Pretoria").
+birthPlace("Elon_Musk","South_Africa").
+birthPlace("Elon_Musk","Transvaal_Province").
+occupation("Elon_Musk","Elon_Musk__1").
+residence("Elon_Musk","California").
+residence("Elon_Musk","Los_Angeles").
+residence("Elon_Musk","Bel_Air,_Los_Angeles").
+spouse("Elon_Musk","Talulah_Riley").
+spouse("Elon_Musk","Justine_Musk").
+birthPlace("Kimbal_Musk","Pretoria").
+birthPlace("Kimbal_Musk","Pretoria,_South_Africa").
+birthPlace("Maye_Musk","Saskatchewan").
+birthPlace("Talulah_Riley","Hertfordshire").
+birthPlace("Justine_Musk","Peterborough,_Ontario").
+country("California","United_States").
+country("California","California").
+country("PayPal","United States 95131").
+country("Queen's_University","Canada").
+country("University_of_Pennsylvania","United States").
+founders("Tesla_Motors","JB_Straubel").
+founders("Tesla_Motors","Martin_Eberhard").
+founders("Tesla_Motors","Elon_Musk").
+founders("OpenAI","Elon Musk, Sam Altman, and others").
+founders("SolarCity","Lyndon_Rive").
+founders("SolarCity","Peter Rive").
+location("Los_Angeles","Los Angeles").
+location("Pretoria","Pretoria").
+occupation("Justine_Musk","Novelist, screenwriter").
+owner("Tesla_Motors","Elon Musk").
+activeYearsStartYear("Talulah_Riley","2003").
+foundingYear("OpenAI","2015").
+country("Pretoria","South_Africa").
+country("Bel_Air,_Los_Angeles","United_States").
+genre("Justine_Musk","Fantasy").
+genre("Justine_Musk","Horror_fiction").
+genre("Justine_Musk","Science_fiction").
+isPartOf("Los_Angeles","California").
+isPartOf("Los_Angeles","Los_Angeles_County,_California").
+isPartOf("Los_Angeles","Los_Angeles_metropolitan_area").
+isPartOf("Los_Angeles","Greater_Los_Angeles_Area").
+isPartOf("Bel_Air,_Los_Angeles","California").
+isPartOf("Bel_Air,_Los_Angeles","Los_Angeles_County,_California").
+keyPerson("Tesla_Motors","JB_Straubel").
+keyPerson("Tesla_Motors","Elon_Musk").
+keyPerson("OpenAI","Ilya_Sutskever").
+keyPerson("OpenAI","Ian_Goodfellow").
+keyPerson("SolarCity","Lyndon_Rive").
+keyPerson("SolarCity","Elon_Musk").
+keyPerson("SpaceX","President_(corporate_title)").
+keyPerson("SpaceX","Chief_operating_officer").
+keyPerson("SpaceX","Chief_technology_officer").
+keyPerson("SpaceX","Chief_executive_officer").
+keyPerson("SpaceX","Gwynne_Shotwell").
+keyPerson("SpaceX","Tom_Mueller").
+keyPerson("SpaceX","Elon_Musk").
+location("PayPal","San_Jose,_California").
+location("OpenAI","San_Francisco").
+locationCity("SolarCity","California").
+locationCity("SolarCity","San_Mateo,_California").
+locationCity("SpaceX","California").
+locationCity("SpaceX","United_States").
+locationCity("SpaceX","Hawthorne,_California").
+locationCountry("SolarCity","United_States").
+occupation("Kimbal_Musk","Kimbal_Musk__1").
+occupation("Tosca_Musk","Tosca_Musk__1").
+occupation("Talulah_Riley","Talulah_Riley__1").
+parentCompany("PayPal","EBay").
+spouse("Talulah_Riley","Elon_Musk").
+spouse("Justine_Musk","Elon_Musk").

@@ -1,0 +1,11 @@
+largestCity("Sangamon_County,_Illinois","Springfield,_Illinois").
+largestCity("Illinois","Chicago").
+district("Chadwick,_Illinois","Illinois").
+premierePlace("Bosoms_and_Neglect","Illinois").
+premierePlace("August:_Osage_County","Illinois").
+premierePlace("Rich_and_Famous_(play)","Illinois").
+premierePlace("Disgraced","Illinois").
+premierePlace("Late_Nite_Catechism","Illinois").
+premierePlace("Boy_Gets_Girl","Illinois").
+premierePlace("Chinglish_(play)","Illinois").
+premierePlace("Out_Cry","Illinois").

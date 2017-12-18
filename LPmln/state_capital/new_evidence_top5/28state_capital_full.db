@@ -1,0 +1,7 @@
+capital("California","Sacramento,_California").
+municipality("Jibboom_Street_Bridge","Sacramento,_California").
+municipality("Fair_Oaks_Bridge","Sacramento,_California").
+municipality("I_Street_Bridge","Sacramento,_California").
+capital("Arizona","Phoenix,_Arizona").
+largestCity("Arizona","Capital_city").
+district("Coyote_Mountains_Wilderness_(Arizona)","Arizona").

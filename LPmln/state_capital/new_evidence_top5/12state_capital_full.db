@@ -1,0 +1,6 @@
+municipality("Jibboom_Street_Bridge","Sacramento,_California").
+municipality("Fair_Oaks_Bridge","Sacramento,_California").
+municipality("I_Street_Bridge","Sacramento,_California").
+largestCity("California","Los_Angeles").
+capital("Government_of_Free_Vietnam","California").
+district("Applegate_River","California").

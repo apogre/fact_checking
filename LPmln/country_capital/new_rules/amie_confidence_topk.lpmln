@@ -1,0 +1,4 @@
+0.01 capital(A,B) :- isPartOf(B,A).
+0.01 capital(A,B) :- country(B,A).
+0.06 capital(C,B) :- country(A,C), garrison(A,B).
+0.4 capital(A,B) :- largestCity(A,B).

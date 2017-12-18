@@ -1,0 +1,4 @@
+largestCity("Montgomery_County,_Alabama","Montgomery,_Alabama").
+capital("Alabama_in_the_American_Civil_War","Montgomery,_Alabama").
+largestCity("Montgomery_metropolitan_area","Montgomery,_Alabama").
+largestCity("Alabama","Birmingham,_Alabama").

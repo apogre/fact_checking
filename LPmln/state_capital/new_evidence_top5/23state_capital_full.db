@@ -1,0 +1,4 @@
+capital("Scotland","Edinburgh").
+largestCity("Scotland","Glasgow").
+capital("Alaska","Juneau,_Alaska").
+largestCity("Alaska","Anchorage,_Alaska").

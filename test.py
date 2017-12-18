@@ -18,3 +18,5 @@ with open('person_data.csv', 'wb') as f:
     writer = csv.writer(f)
     for row in persons.iteritems():
         writer.writerow(row)
+
+^.*null.*\n

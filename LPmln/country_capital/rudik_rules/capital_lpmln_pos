@@ -1,0 +1,13 @@
+capital(A,B) :- populationTotal(B,C) , C>D , populationTotal(A,D).
+capital(A,B) :- country(A,C) , routeStart(D,C) , city(D,B).
+capital(A,B) :- areaTotal(A,C) , C>D , areaCode(B,D).
+capital(A,B) :- leaderTitle(A,C) , leaderTitle(D,C) , capital(D,B).
+capital(A,B) :- areaCode(B,C) , C>D , populationTotal(A,D).
+capital(A,B) :- place(C,A) , commander(C,D) , birthPlace(D,B).
+capital(A,B) :- place(C,B) , commander(C,D) , birthPlace(D,A).
+capital(A,B) :- headquarter(C,A) , hubAirport(C,D) , location(D,B).
+capital(A,B) :- restingPlace(C,A) , successor(C,D) , birthPlace(D,B).
+capital(A,B) :- location(C,B) , restingPlace(D,C) , deathPlace(D,A).
+capital(A,B) :- birthPlace(C,A) , leader(D,C) , capital(D,B).
+capital(A,B) :- deathPlace(C,A) , party(C,D) , headquarter(D,B).
+capital(A,B) :- birthPlace(C,A) , monarch(D,C) , birthPlace(D,B).

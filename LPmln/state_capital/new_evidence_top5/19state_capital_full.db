@@ -1,0 +1,7 @@
+capital("State_of_Deseret","Salt_Lake_City").
+capital("Utah","Salt_Lake_City").
+capital("Utah_Territory","Salt_Lake_City").
+largestCity("Salt_Lake_County,_Utah","Salt_Lake_City").
+premierePlace("Struck_Oil_(film)__Struck_Oil__1","Salt_Lake_City").
+capital("Virginia","Richmond,_Virginia").
+largestCity("Virginia","Virginia_Beach,_Virginia").

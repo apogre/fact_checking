@@ -1,0 +1,16 @@
+country("Paris","France").
+populationTotal("Paris","2229621").
+party("Paris","Socialist_Party_(France)").
+type("Paris","Cultural").
+areaTotal("France","643801.0").
+areaTotal("France","643871.0442295294").
+capital("France","Paris").
+language("France","French_language").
+leader("France","Manuel_Valls").
+leader("France","Claude_Bartolone").
+leaderTitle("France","President").
+leaderTitle("France","President of the Senate").
+leaderTitle("France","Prime Minister").
+leaderTitle("France","President of the National Assembly").
+populationTotal("France","66736000").
+timeZone("France","CET").

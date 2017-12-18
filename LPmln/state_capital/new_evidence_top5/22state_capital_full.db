@@ -1,0 +1,3 @@
+capital("New_Mexico","Santa_Fe_New_Mexico").
+largestCity("New_Mexico","Albuquerque,_New_Mexico").
+capital("New_Mexico","Santa_Fe,_New_Mexico").

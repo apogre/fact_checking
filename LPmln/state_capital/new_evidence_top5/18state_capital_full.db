@@ -1,0 +1,6 @@
+capital("Texas","Austin,_Texas").
+largestCity("Travis_County,_Texas","Austin,_Texas").
+municipality("Barton_Creek","Austin,_Texas").
+capital("Texas_in_the_American_Civil_War","Austin,_Texas").
+capital("Alabama","Montgomery,_Alabama").
+largestCity("Alabama","Birmingham,_Alabama").

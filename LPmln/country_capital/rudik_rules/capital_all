@@ -1,0 +1,25 @@
+capital(A,B) :- populationTotal(B,C) , C>D , populationTotal(A,D).
+capital(A,B) :- country(A,C) , routeStart(D,C) , city(D,B).
+capital(A,B) :- areaTotal(A,C) , C>D , areaCode(B,D).
+capital(A,B) :- leaderTitle(A,C) , leaderTitle(D,C) , capital(D,B).
+capital(A,B) :- areaCode(B,C) , C>D , populationTotal(A,D).
+capital(A,B) :- place(C,A) , commander(C,D) , birthPlace(D,B).
+capital(A,B) :- place(C,B) , commander(C,D) , birthPlace(D,A).
+capital(A,B) :- headquarter(C,A) , hubAirport(C,D) , location(D,B).
+capital(A,B) :- restingPlace(C,A) , successor(C,D) , birthPlace(D,B).
+capital(A,B) :- location(C,B) , restingPlace(D,C) , deathPlace(D,A).
+capital(A,B) :- birthPlace(C,A) , leader(D,C) , capital(D,B).
+capital(A,B) :- deathPlace(C,A) , party(C,D) , headquarter(D,B).
+capital(A,B) :- birthPlace(C,A) , monarch(D,C) , birthPlace(D,B).
+not_capital(A,B) :- birthPlace(C,A) , country(C,B).
+not_capital(A,B) :- leaderTitle(A,C) , leaderTitle(D,C) , country(D,B).
+not_capital(A,B) :- place(C,A) , place(C,D) , country(D,B).
+not_capital(A,B) :- province(C,A) , birthPlace(D,C) , birthPlace(D,B).
+not_capital(A,B) :- deathPlace(C,A) , restingPlace(C,D) , country(D,B).
+not_capital(A,B) :- isPartOf(C,A) , isPartOf(D,C) , country(D,B).
+not_capital(A,B) :- location(C,B) , type(C,D) , type(A,D).
+not_capital(A,B) :- country(A,C) , language(D,C) , city(D,B).
+not_capital(A,B) :- country(A,C) , populationPlace(D,C) , populationPlace(D,B).
+not_capital(A,B) :- location(C,A) , country(C,B).
+not_capital(A,B) :- timeZone(A,C) , daylightSavingTimeZone(D,C) , country(D,B).
+not_capital(A,B) :- country(A,C) , education(D,C) , birthPlace(D,B).

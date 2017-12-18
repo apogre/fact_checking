@@ -1,0 +1,4 @@
+capital("Virginia","Richmond,_Virginia").
+capital("Virginia_in_the_American_Civil_War","Richmond,_Virginia").
+largestCity("Greater_Richmond_Region","Richmond,_Virginia").
+capital("Utah","Salt_Lake_City").

@@ -11,8 +11,8 @@ rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4
 evidence_threshold = 0
 rule_threshold = 0.15
-top_k = str('all')
-predicate = 'spouse'
+top_k = str('all_1000')
+predicate = 'founders'
 #
 sparql_dbpedia_api = 'http://dbpedia.org/sparql'
-sparql_dbpedia = 'http://10.218.105.56:8890/sparql'
+sparql_dbpedia = 'http://localhost:8890/sparql'

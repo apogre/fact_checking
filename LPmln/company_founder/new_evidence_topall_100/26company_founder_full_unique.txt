@@ -1,0 +1,52 @@
+birthPlace("Jeff_Bezos","Albuquerque,_New_Mexico").
+occupation("Jeff_Bezos","Jeff_Bezos__1").
+occupation("Jeff_Bezos","Amazon.com").
+residence("Jeff_Bezos","Seattle,_Washington").
+birthPlace("MacKenzie_Bezos","California").
+birthPlace("MacKenzie_Bezos","San_Francisco").
+country("Princeton_University","U.S.").
+location("Albuquerque,_New_Mexico","--01-22").
+location("Albuquerque,_New_Mexico","Albuquerque South Valley").
+location("Albuquerque,_New_Mexico","Albuquerque foothills").
+owner("Amazon.com","Jeff Bezos").
+country("Albuquerque,_New_Mexico","United_States").
+isPartOf("Albuquerque,_New_Mexico","New_Mexico").
+isPartOf("Albuquerque,_New_Mexico","Bernalillo_County,_New_Mexico").
+keyPerson("Amazon.com","Jeff_Bezos").
+keyPerson("Amazon.com","Werner_Vogels").
+location("Amazon.com","Seattle").
+location("Amazon.com","Washington_(state)").
+subsidiary("Amazon.com","Audible.com").
+subsidiary("Amazon.com","Goodreads").
+subsidiary("Amazon.com","Zappos").
+subsidiary("Amazon.com","Amazon_Web_Services").
+subsidiary("Amazon.com","ComiXology").
+subsidiary("Amazon.com","Digital_Photography_Review").
+subsidiary("Amazon.com","Alexa_Internet").
+subsidiary("Amazon.com","A9.com").
+subsidiary("Amazon.com","Internet_Movie_Database").
+subsidiary("Amazon.com","Junglee.com").
+subsidiary("Amazon.com","Twitch_(website)").
+keyPerson("Tesla_Motors","JB_Straubel").
+keyPerson("Tesla_Motors","Elon_Musk").
+founders("Tesla_Motors","JB_Straubel").
+founders("Tesla_Motors","Martin_Eberhard").
+founders("Tesla_Motors","Elon_Musk").
+birthPlace("JB_Straubel","Des_Moines,_Iowa").
+birthPlace("JB_Straubel","Wisconsin").
+birthPlace("Martin_Eberhard","Berkeley,_California").
+birthPlace("Elon_Musk","Pretoria").
+birthPlace("Elon_Musk","South_Africa").
+birthPlace("Elon_Musk","Transvaal_Province").
+location("Palo_Alto,_California","Palo Alto").
+nationality("JB_Straubel","American").
+nationality("Elon_Musk","South African , Canadian , American").
+isPartOf("Palo_Alto,_California","California").
+isPartOf("Palo_Alto,_California","Santa_Clara_County,_California").
+occupation("JB_Straubel","Chief_Technical_Officer").
+occupation("JB_Straubel","JB_Straubel__1").
+occupation("Elon_Musk","Elon_Musk__1").
+residence("JB_Straubel","Menlo_Park,_California").
+residence("Elon_Musk","California").
+residence("Elon_Musk","Los_Angeles").
+residence("Elon_Musk","Bel_Air,_Los_Angeles").

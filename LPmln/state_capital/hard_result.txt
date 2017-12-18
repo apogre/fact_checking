@@ -1,0 +1,22 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=capital LPmln/state_capital/new_evidence_top5/30state_capital_full.db 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_checking/out.txt ...
+Solving...
+
+
+
+
+capital('Connecticut_Colony', 'Hartford,_Connecticut') 1.0
+capital('Arkansas', 'Little_Rock,_Arkansas') 1.0
+capital('Connecticut', 'Hartford,_Connecticut') 1.0
+capital('Hartford,_Connecticut', 'Hartford,_Connecticut') 1.0
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.179s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.170s

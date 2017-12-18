@@ -1,0 +1,34 @@
+capital(C,B) :- district(A,C), municipality(A,B).
+capital(A,B) :- largestCity(A,B).
+capital(C,B) :- premierePlace(A,C), premierePlace(A,B).
+capital(C,B) :- federalState(A,C), administrativeDistrict(A,B).
+capital(C,B) :- placeOfBurial(A,C), placeOfBurial(A,B).
+capital(C,B) :- timeZone(A,C), municipality(A,B).
+capital(C,B) :- daylightSavingTimeZone(A,C), municipality(A,B).
+capital(C,B) :- billed(A,C), billed(A,B).
+capital(C,B) :- region(A,C), municipality(A,B).
+capital(B,C) :- administrativeDistrict(A,C), federalState(A,B).
+capital(C,B) :- birthPlace(A,C), placeOfBurial(A,B).
+capital(B,C) :- location(A,C), jurisdiction(A,B).
+capital(C,B) :- deathPlace(A,C), placeOfBurial(A,B).
+capital(B,C) :- headquarter(A,C), jurisdiction(A,B).
+capital(C,B) :- assembly(A,C), assembly(A,B).
+capital(C,B) :- state(A,C), municipality(A,B).
+capital(B,C) :- billed(A,C), billed(A,B).
+capital(B,C) :- assembly(A,C), assembly(A,B).
+capital(C,B) :- country(A,C), garrison(A,B).
+capital(C,B) :- birthPlace(A,C), billed(A,B).
+capital(B,C) :- birthPlace(A,C), sportCountry(A,B).
+capital(A,C) :- highestState(B,C), governmentRegion(A,B).
+capital(B,C) :- birthPlace(A,C), billed(A,B).
+capital(B,C) :- placeOfBurial(A,C), placeOfBurial(A,B).
+capital(B,C) :- premierePlace(A,C), premierePlace(A,B).
+capital(B,C) :- headquarter(A,C), nationalAffiliation(A,B).
+capital(C,B) :- country(A,C), federalState(A,B).
+capital(B,C) :- deathPlace(A,C), placeOfBurial(A,B).
+capital(A,B) :- isPartOf(B,A).
+capital(C,B) :- headquarter(A,C), destination(A,B).
+capital(C,B) :- state(A,C), countySeat(A,B).
+capital(C,B) :- deathPlace(A,C), majorShrine(A,B).
+capital(A,B) :- country(B,A).
+capital(C,B) :- birthPlace(A,C), majorShrine(A,B).

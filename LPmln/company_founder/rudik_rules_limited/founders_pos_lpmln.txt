@@ -1,0 +1,6 @@
+founders(A,B) :- locationCity(A,C) , largestCity(D,C) , birthPlace(B,D).
+founders(A,B) :- birthPlace(B,C) , locationCity(A,C).
+founders(A,B) :- keyPerson(A,C) , residence(C,D) , birthPlace(B,D).
+founders(A,B) :- executiveProducer(C,B) , C!=D , company(D,A).
+founders(A,B) :- birthPlace(B,C) , location(A,C).
+founders(A,B) :- designer(C,B) , series(C,D) , product(A,D).

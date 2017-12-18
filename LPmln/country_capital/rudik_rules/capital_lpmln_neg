@@ -1,0 +1,12 @@
+not_capital(A,B) :- birthPlace(C,A) , country(C,B).
+not_capital(A,B) :- leaderTitle(A,C) , leaderTitle(D,C) , country(D,B).
+not_capital(A,B) :- place(C,A) , place(C,D) , country(D,B).
+not_capital(A,B) :- province(C,A) , birthPlace(D,C) , birthPlace(D,B).
+not_capital(A,B) :- deathPlace(C,A) , restingPlace(C,D) , country(D,B).
+not_capital(A,B) :- isPartOf(C,A) , isPartOf(D,C) , country(D,B).
+not_capital(A,B) :- location(C,B) , type(C,D) , type(A,D).
+not_capital(A,B) :- country(A,C) , language(D,C) , city(D,B).
+not_capital(A,B) :- country(A,C) , populationPlace(D,C) , populationPlace(D,B).
+not_capital(A,B) :- location(C,A) , country(C,B).
+not_capital(A,B) :- timeZone(A,C) , daylightSavingTimeZone(D,C) , country(D,B).
+not_capital(A,B) :- country(A,C) , education(D,C) , birthPlace(D,B).

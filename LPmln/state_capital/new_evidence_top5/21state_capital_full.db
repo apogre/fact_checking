@@ -1,0 +1,5 @@
+capital("New_Mexico_Territory","Santa_Fe,_New_Mexico").
+largestCity("Santa_Fe_County,_New_Mexico","Santa_Fe,_New_Mexico").
+capital("New_Mexico","Santa_Fe,_New_Mexico").
+capital("Wisconsin","Madison,_Wisconsin").
+largestCity("Wisconsin","Milwaukee").

@@ -1,0 +1,12 @@
+not_founders(A,B) :- keyPerson(A,B) , keyPerson(C,B) , foundedBy(C,B).
+not_founders(A,B) :- location(A,C) , locationCity(D,C) , keyPerson(D,B).
+not_founders(A,B) :- keyPerson(C,B) , owningCompany(D,C) , parentCompany(A,D).
+not_founders(A,B) :- occupation(B,C) , location(C,D) , location(A,D).
+not_founders(A,B) :- occupation(B,C) , parentCompany(A,C).
+not_founders(A,B) :- keyPerson(A,B) , keyPerson(C,B) , keyPerson(C,C).
+founders(A,B) :- locationCity(A,C) , largestCity(D,C) , birthPlace(B,D).
+founders(A,B) :- birthPlace(B,C) , locationCity(A,C).
+founders(A,B) :- keyPerson(A,C) , residence(C,D) , birthPlace(B,D).
+founders(A,B) :- executiveProducer(C,B) , C!=D , company(D,A).
+founders(A,B) :- birthPlace(B,C) , location(A,C).
+founders(A,B) :- designer(C,B) , series(C,D) , product(A,D).

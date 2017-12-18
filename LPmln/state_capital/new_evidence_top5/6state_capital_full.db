@@ -1,0 +1,3 @@
+capital("Wisconsin_Territory","Madison,_Wisconsin").
+largestCity("Dane_County,_Wisconsin","Madison,_Wisconsin").
+largestCity("Wisconsin","Milwaukee").

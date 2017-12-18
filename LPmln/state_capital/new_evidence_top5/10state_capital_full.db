@@ -1,0 +1,3 @@
+capital("Montana_Territory","Helena,_Montana").
+largestCity("Lewis_and_Clark_County,_Montana","Helena,_Montana").
+largestCity("Montana","Billings,_Montana").

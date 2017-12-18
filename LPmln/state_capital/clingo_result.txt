@@ -1,0 +1,11 @@
+clingo version 4.5.4
+Reading from ...capital/new_rules/amie_hard_top5.lpmln ...
+Solving...
+Answer: 1
+capital("Connecticut","Hartford,_Connecticut") capital("Connecticut_Colony","Hartford,_Connecticut") premierePlace("Edward_Albee's_At_Home_at_the_Zoo","Hartford,_Connecticut") premierePlace("Water_by_the_Spoonful","Hartford,_Connecticut") capital("Arkansas","Little_Rock,_Arkansas") capital("Hartford,_Connecticut","Hartford,_Connecticut")
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.001s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.000s

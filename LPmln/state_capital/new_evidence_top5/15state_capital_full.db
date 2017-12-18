@@ -1,0 +1,9 @@
+capital("Arizona_Territory","Tucson,_Arizona").
+district("Tumamoc_Hill","Tucson,_Arizona").
+district("Huerfano_Butte_(Arizona)","Tucson,_Arizona").
+largestCity("Pima_County,_Arizona","Tucson,_Arizona").
+district("Sierrita_Mountains","Tucson,_Arizona").
+district("Santa_Rita_Mountains","Tucson,_Arizona").
+capital("Arizona","Phoenix,_Arizona").
+largestCity("Arizona","Capital_city").
+district("Coyote_Mountains_Wilderness_(Arizona)","Arizona").

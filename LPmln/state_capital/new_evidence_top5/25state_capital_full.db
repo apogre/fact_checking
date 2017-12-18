@@ -1,0 +1,4 @@
+capital("Illinois","Springfield,_Illinois").
+largestCity("Sangamon_County,_Illinois","Springfield,_Illinois").
+capital("Montana","Helena,_Montana").
+largestCity("Montana","Billings,_Montana").

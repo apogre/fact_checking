@@ -1,0 +1,1 @@
+spouse(A,B) :- spouse(B,A).

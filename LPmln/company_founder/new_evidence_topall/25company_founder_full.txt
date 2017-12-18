@@ -1,0 +1,10 @@
+birthPlace("Travis_Kalanick","Los_Angeles").
+occupation("Travis_Kalanick","Entrepreneur").
+occupation("Travis_Kalanick","Travis_Kalanick__1").
+residence("Travis_Kalanick","San_Francisco").
+founders("Uber_(company)","Alexander Hank Garrett Camp").
+location("Los_Angeles","Los Angeles").
+keyPerson("Uber_(company)","Travis_Kalanick").
+keyPerson("Uber_(company)","Ryan_Graves").
+locationCity("Uber_(company)","California").
+locationCity("Uber_(company)","San_Francisco").

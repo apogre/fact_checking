@@ -71,11 +71,12 @@ def inference(sentence_id, data_source, resource_v, top_k, predicate):
     return probs, probs_test
 
 
-def clingo_map(sentence_id, data_source, resource_v, top_k, predicate):
+def clingo_map(sentence_id, data_source, resource_v, top_k, predicate, set_up):
     print "Clingo"
-    evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "clingo {0}rudik_rules_1000/founders_all {2}_full_unique.txt > {0}clingo_result.txt ".format('LPmln/' +data_source +\
-                                                                                             '/', top_k,evidence_source)
+    evidence_source = 'LPmln/' + data_source + '/' + set_up + '/evidence_'+top_k+'/' + sentence_id + predicate
+    cmd = "clingo {0}{4}/rudik_rules_{1}/{3}_all {2}_unique.txt > {0}clingo_result.txt ".format('LPmln/' + data_source +\
+                                                                                            '/', top_k, evidence_source,\
+                                                                                            predicate, set_up)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' +data_source + '/' + 'clingo_result.txt', 'r')
@@ -92,11 +93,11 @@ def clingo_map(sentence_id, data_source, resource_v, top_k, predicate):
     return probs, probs_test
 
 
-def inference_hard(sentence_id, data_source, resource_v,top_k, predicate):
+def inference_hard(sentence_id, data_source, resource_v,top_k, predicate, set_up):
     print "LPMLN Hard Inference"
-    evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}rudik_rules_1000/founders_all -q {3} -e {1}_full_unique.txt -r {0}hard_result.txt".format(
-        'LPmln/' + data_source + '/', evidence_source, top_k, predicate)
+    evidence_source = 'LPmln/' + data_source + '/' +set_up +  '/evidence_'+top_k+'/' + sentence_id + predicate
+    cmd = "lpmln2asp -i {0}{4}/rudik_rules_{2}/{3}_all -q {3} -e {1}_unique.txt -r {0}hard_result.txt".format(
+        'LPmln/' + data_source + '/', evidence_source, top_k, predicate, set_up)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' + data_source + '/' + 'hard_result.txt', 'r')
@@ -108,11 +109,11 @@ def inference_hard(sentence_id, data_source, resource_v,top_k, predicate):
     return probs, probs_test
 
 
-def inference_hard_not(sentence_id, data_source, resource_v,top_k, predicate):
+def inference_hard_not(sentence_id, data_source, resource_v,top_k, predicate, set_up):
     print "LPMLN Hard Inference"
-    evidence_source = 'LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source
-    cmd = "lpmln2asp -i {0}rudik_rules_1000/founders_all -q not_{3} -e {1}_full_unique.txt -r {0}hard_result.txt".format(
-        'LPmln/' + data_source + '/', evidence_source, top_k, predicate)
+    evidence_source = 'LPmln/' + data_source +'/' +set_up + '/evidence_'+top_k+'/' + sentence_id + predicate
+    cmd = "lpmln2asp -i {0}{4}/rudik_rules_{2}/{3}_all -q not_{3} -e {1}_unique.txt -r {0}hard_result.txt".format(
+        'LPmln/' + data_source + '/', evidence_source, top_k, predicate, set_up)
     print cmd
     subprocess.call(cmd, shell=True)
     text = open('LPmln/' + data_source + '/' + 'hard_result.txt', 'r')
@@ -124,21 +125,22 @@ def inference_hard_not(sentence_id, data_source, resource_v,top_k, predicate):
     return probs, probs_test
 
 
-def evidence_writer(filtered_evidence, sentence_id, data_source, resource_v, top_k, predicate):
+def evidence_writer(filtered_evidence, sentence_id, data_source, resource_v, top_k, predicate, set_up):
+    data_source = data_source+ '/' + set_up
     rule_predicates = get_rule_predicates(data_source, top_k, predicate)
     print rule_predicates
     item_set = OrderedSet()
     print resource_v, predicate
     for evidence in filtered_evidence:
         if evidence[1] in rule_predicates:
-            if evidence[0] == resource_v[1] and evidence[2] == resource_v[0] and evidence[1] == predicate:
+            if evidence[0] == resource_v[0] and evidence[2] == resource_v[1] and evidence[1] == predicate:
                 pass
             else:
                 try:
                     item_set.add(evidence[1] + '("' + evidence[0] + '","' + evidence[2] + '").')
                 except:
                     pass
-    with open('LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source + '_full.txt', 'wb') as csvfile:
+    with open('LPmln/' + data_source + '/evidence_'+top_k+'/' + sentence_id + predicate + '.txt', 'wb') as csvfile:
         for i in item_set:
             if '*' not in i:
                 try:
@@ -146,22 +148,21 @@ def evidence_writer(filtered_evidence, sentence_id, data_source, resource_v, top
                 except:
                     pass
 
-    with open('LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source + '_full.txt', 'r') as f, \
-            open('LPmln/' + data_source + '/new_evidence_top'+top_k+'/' + sentence_id + data_source + '_full_unique.txt', 'wb') as out_file:
+    with open('LPmln/' + data_source + '/evidence_'+top_k+'/' + sentence_id + predicate + '.txt', 'r') as f, \
+            open('LPmln/' + data_source + '/evidence_'+top_k+'/' + sentence_id + predicate + '_unique.txt', 'wb') as\
+                    out_file:
         out_file.writelines(unique_everseen(f))
     return item_set
 
 
 def get_rule_predicates(data_source, top_k, predicate):
-    text = open('LPmln/' + data_source + '/rudik_rules_1000/'+predicate+'_all', 'r')
-    print 'LPmln/' + data_source + '/rudik_rules_1000/'+predicate+'_all'
+    text = open('LPmln/' + data_source + '/rudik_rules_'+top_k + '/' + predicate + '_all', 'r')
     f = text.read()
     text.close()
     probs = re.findall("(\w+\()", f)
     probs = list(set(probs))
     predicates = [p.replace('(', '') for p in probs]
     return predicates
-
 
 
 def amie_tsv(item_set, data_source):

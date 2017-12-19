@@ -1,8 +1,8 @@
-from sentence_analysis import sentence_tagger, get_nodes, triples_extractor
+from sentence_analysis import sentence_tagger, get_nodes, triples_extractor, load_csv
 from resources_loader import load_files, load_lpmln_resource
 from ambiverse_api import ambiverse_entity_parser, spotlight_entity_parser
 from kb_query import get_description, distance_one_query, distance_three_query, distance_two_query
-from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, top_k, predicate
+from config import aux_verb, rank_threshold, kgminer_predicate_threshold, KGMiner_data, top_k, predicate, set_up
 from kgminer import get_training_set, invoke_kgminer, get_perfect_training, poi_writer, entity_id_finder, train_data_csv, \
     csv_writer
 from gensim.models import Word2Vec
@@ -253,6 +253,8 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
         if lpmln:
             print "Executing LPMLN"
             distance_three = []
+            print resource_v
+            sys.exit(0)
             for entity in resource_v:
                 print entity
                 distance_three = distance_one_query(entity, distance_three)
@@ -300,6 +302,38 @@ def fact_checker(sentence_lis, id_list, true_labels, load_mappings, triple_flag,
             datawriter.writerows(lpmln_evaluation)
 
 
+def fact_inference(data_source):
+    print "Executing Fact Inference"
+    resources_v = load_csv('dataset/' + data_source + '/triples.csv')
+    lpmln_evaluation = []
+    for id, resource_v in enumerate(resources_v):
+        print id
+        id = str(id+1)
+        distance_three = []
+        triple_check = str(resource_v)
+        for entity in resource_v:
+            print entity
+            try:
+                distance_three = distance_one_query(entity, distance_three)
+                distance_three = distance_two_query(entity, distance_three)
+                # distance_three = distance_three_query(entity, distance_three)
+            except:
+                pass
+        if distance_three:
+            item_set = evidence_writer(distance_three, id, data_source, resource_v, top_k, predicate, set_up)
+
+            # probability, prob_test = inference(id, data_source,resource_v, top_k, predicate)
+            answer_set, answer_test = clingo_map(id, data_source, resource_v, top_k, predicate, set_up)
+            hard_prob, hard_prob_test = inference_hard(id, data_source, resource_v, top_k, predicate, set_up)
+            hard_prob_not, hard_prob_test_not = inference_hard_not(id, data_source, resource_v, top_k, predicate, set_up)
+            lpmln_evaluation.append([id, triple_check, str(hard_prob_test), str(hard_prob_test_not), \
+                                     str(answer_test), str(answer_set), str(hard_prob), str(hard_prob_not)])
+
+    if lpmln_evaluation:
+        with open('dataset/' + data_source + '/' + set_up + '/lpmln_eval_'+top_k+'.csv', 'wb') as csvfile:
+            datawriter = csv.writer(csvfile)
+            datawriter.writerows(lpmln_evaluation)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -308,29 +342,32 @@ if __name__ == "__main__":
     parser.add_argument("-kr", "--kgminer_random", default=False)
     parser.add_argument("-kp", "--kgminer_perfect", default=False)
     parser.add_argument("-l", "--lpmln", default=False)
+    parser.add_argument("-c", "--csv_load", default=False)
     parser.add_argument("-t", "--test_data", default='sample_case')
     parser.add_argument("-s", "--sentence", default='')
     args = parser.parse_args()
-
-    with open('dataset/' + args.test_data + '/' + args.input) as f:
-        reader = csv.DictReader(f)
-        sentences_list = []
-        id_list = []
-        true_label = []
-        if args.sentence:
-            sentences_list = [args.sentence]
-            id_list = ['0']
-            true_label = ['X']
-        else:
-            for row in reader:
-                sentences_list.append(row.get('sentence'))
-                true_label.append(row.get('label'))
-                id_list.append(row.get('id'))
-        if args.lpmln:
-            load_mappings = True
-        else:
-            load_mappings = False
-        fact_checker(sentences_list, id_list, true_label, load_mappings, triple_flag=False, ambiverse_flag=False, \
+    if args.csv_load:
+        fact_inference(data_source=args.test_data)
+    else:
+        with open('dataset/' + args.test_data + '/' + args.input) as f:
+            reader = csv.DictReader(f)
+            sentences_list = []
+            id_list = []
+            true_label = []
+            if args.sentence:
+                sentences_list = [args.sentence]
+                id_list = ['0']
+                true_label = ['X']
+            else:
+                for row in reader:
+                    sentences_list.append(row.get('sentence'))
+                    true_label.append(row.get('label'))
+                    id_list.append(row.get('id'))
+            if args.lpmln:
+                load_mappings = True
+            else:
+                load_mappings = False
+            fact_checker(sentences_list, id_list, true_label, load_mappings, triple_flag=False, ambiverse_flag=False, \
                      kgminer_predicate_flag=False, kgminer_output_flag=False, \
                      KGMiner=args.kgminer, lpmln=args.lpmln, lpmln_output_flag=False, data_source=args.test_data, \
                      kr=args.kgminer_random, kgminer_output_random_flag=False, kp=args.kgminer_perfect, \

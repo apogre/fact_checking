@@ -11,8 +11,9 @@ rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4
 evidence_threshold = 0
 rule_threshold = 0.15
-top_k = str('all_1000')
-predicate = 'founders'
+top_k = str('compact')
+predicate = 'keyPerson'
+set_up = "controlled"
 #
 sparql_dbpedia_api = 'http://dbpedia.org/sparql'
 sparql_dbpedia = 'http://localhost:8890/sparql'

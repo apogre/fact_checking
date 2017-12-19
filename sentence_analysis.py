@@ -7,6 +7,7 @@ from StanfordOpenIEPython.main import stanford_ie
 import argparse
 from re import sub
 from config import aux_verb
+import csv
 
 # stanford_parser_jar = str(os.environ['HOME'])+'/stanford-parser-full-2015-12-09/stanford-parser.jar'
 # stanford_model_jar = str(os.environ['STANFORDTOOLSDIR'])+'/stanford-parser-full-2015-12-09/stanford-parser-3.6.0-models.jar'
@@ -88,6 +89,17 @@ def triples_extractor(sentence, named_entities):
     triples = [[trip.lstrip() for trip in triple] for triple in triples_raw]
     triple_dict = triple_filter(named_entities, triples)
     return triple_dict
+
+
+def load_csv(csv_file):
+    resources_v = []
+    with open(csv_file) as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            print(row['sub'], row['obj'])
+            resource_v = [row['sub'], row['obj']]
+            resources_v.append(resource_v)
+    return resources_v
 
 
 if __name__ == "__main__":

@@ -1,7 +1,9 @@
 import re
-
-fname = "company_founder/rudik_rules_1000/prop_founders_pos.txt"
-with open("company_founder/rudik_rules_1000/founders_pos_lpmln.txt", "w") as text_file:
+set_up = "controlled"
+predicate = "keyPerson"
+polarity = "_neg"
+fname = "company_keyPerson/"+ set_up + "/rudik_rules_all1000/" + predicate + polarity + "_all.txt"
+with open("company_keyPerson/" + set_up + "/rudik_rules_all1000/" + predicate + polarity + "_lpmln.txt", "w") as text_file:
 	with open(fname) as f:
 		content = f.readlines()
 		for con in content:
@@ -15,6 +17,8 @@ with open("company_founder/rudik_rules_1000/founders_pos_lpmln.txt", "w") as tex
 			con = con.replace("!=(D,C)", "C!=D")
 			con = con.replace(">(C,D)", "C>D")
 			con = con.replace("<(C,D)", "C>D")
-			print con
 			if "null" not in con:
-				text_file.write("founders(A,B) :- "+str(con))
+				if polarity == "_neg":
+					text_file.write("not_"+predicate+"(A,B) :- "+str(con))
+				else:
+					text_file.write(predicate+"(A,B) :- "+str(con))

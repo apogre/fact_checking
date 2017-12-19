@@ -10,6 +10,7 @@ from os import path, remove, mkdir
 from more_itertools import unique_everseen
 import json
 from resource_writer import json_serial
+import os
 
 lemmatizer = WordNetLemmatizer()
 
@@ -152,6 +153,8 @@ def evidence_writer(filtered_evidence, sentence_id, data_source, resource_v, top
             open('LPmln/' + data_source + '/evidence_'+top_k+'/' + sentence_id + predicate + '_unique.txt', 'wb') as\
                     out_file:
         out_file.writelines(unique_everseen(f))
+    remove_file = 'LPmln/' + data_source + '/evidence_'+top_k+'/' + sentence_id + predicate + '.txt'
+    os.remove(remove_file)
     return item_set
 
 

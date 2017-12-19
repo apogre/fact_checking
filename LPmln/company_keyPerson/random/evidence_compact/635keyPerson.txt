@@ -1,0 +1,9 @@
+keyPerson("Lockheed_Martin","President_(corporate_title)").
+keyPerson("Lockheed_Martin","Marillyn_A._Hewson").
+keyPerson("Lockheed_Martin","Chairman").
+location("Lockheed_Martin","Bethesda,_Maryland").
+location("Lockheed_Martin","United_States").
+type("President_(corporate_title)","Employment").
+location("Martin_Marietta","Bethesda,_Maryland").
+predecessor("Martin_Marietta","Glenn_L._Martin_Company").
+type("Bethesda,_Maryland","Census-designated_place").

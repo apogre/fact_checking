@@ -1,0 +1,26 @@
+foundedBy("Sonic_Drive-In","Troy_Smith_(businessman)").
+keyPerson("Sonic_Drive-In","J._Clifford_Hudson").
+location("Sonic_Drive-In","Oklahoma_City").
+location("Sonic_Drive-In","Oklahoma").
+location("Sonic_Drive-In","United_States").
+type("Sonic_Drive-In","Public_company").
+birthPlace("J._Clifford_Hudson","Dallas").
+birthPlace("J._Clifford_Hudson","Dallas,_Texas").
+nationality("J._Clifford_Hudson","American").
+occupation("J._Clifford_Hudson","J._Clifford_Hudson__1").
+occupation("J._Clifford_Hudson","Sonic_Drive-In").
+type("Oklahoma_City","Lists_of_capitals").
+type("Shawnee,_Oklahoma","City").
+birthPlace("Larry_Page","Michigan").
+birthPlace("Larry_Page","East_Lansing,_Michigan").
+occupation("Larry_Page","List_of_Internet_entrepreneurs").
+occupation("Larry_Page","Computer_scientist").
+occupation("Larry_Page","Larry_Page__1").
+location("Palo_Alto,_California","Palo Alto").
+type("East_Lansing,_Michigan","City").
+type("Palo_Alto,_California","Charter_city").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").
+type("Stanford_University","Private_university").

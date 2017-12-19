@@ -1,0 +1,61 @@
+assets("General_Dynamics","3.5448E10").
+assets("General_Dynamics","3.5355E10").
+equity("General_Dynamics","1.3232E10").
+netIncome("General_Dynamics","2.533E9").
+operatingIncome("General_Dynamics","3.889E9").
+revenue("General_Dynamics","3.0852E10").
+revenue("General_Dynamics","5.1281E10").
+numberOfEmployees("General_Dynamics","99500").
+foundedBy("General_Dynamics","John_Philip_Holland").
+industry("General_Dynamics","Aerospace_engineering").
+industry("General_Dynamics","Defense_(military)").
+keyPerson("General_Dynamics","Phebe_Novakovic").
+keyPerson("General_Dynamics","Chief_executive_officer").
+keyPerson("General_Dynamics","Chairman_(official)").
+locationCity("General_Dynamics","West_Falls_Church,_Virginia").
+locationCountry("General_Dynamics","United_States").
+product("General_Dynamics","Conglomerate_(company)").
+type("General_Dynamics","Public_company").
+birthPlace("John_Philip_Holland","Liscannor").
+birthPlace("Phebe_Novakovic","Pittsburgh").
+deathPlace("John_Philip_Holland","Newark,_New_Jersey").
+type("Aerospace_engineering","Profession").
+almaMater("Phebe_Novakovic","Smith_College").
+almaMater("Phebe_Novakovic","Wharton_School_of_the_University_of_Pennsylvania").
+capital("United_States","Washington,_D.C.").
+country("West_Falls_Church,_Virginia","United_States").
+isPartOf("West_Falls_Church,_Virginia","Virginia").
+isPartOf("West_Falls_Church,_Virginia","Fairfax_County,_Virginia").
+largestCity("United_States","New_York_City").
+occupation("Phebe_Novakovic","General_Dynamics").
+occupation("Phebe_Novakovic","Phebe_Novakovic__1").
+type("West_Falls_Church,_Virginia","Census-designated_place").
+birthPlace("John_P._Surma","United_States").
+birthPlace("John_P._Surma","Pennsylvania").
+birthPlace("John_P._Surma","Pittsburgh").
+birthYear("John_P._Surma","1954").
+almaMater("John_P._Surma","Penn_State_University").
+occupation("John_P._Surma","John_P._Surma__1").
+occupation("John_P._Surma","United_States_Steel_Corporation").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("Pennsylvania","Pennsylvania").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+country("Pennsylvania","United_States").
+country("Pittsburgh","United_States").
+isPartOf("Pittsburgh","Pennsylvania").
+isPartOf("Pittsburgh","French_colonization_of_the_Americas").
+isPartOf("Pittsburgh","Allegheny_County,_Pennsylvania").
+isPartOf("Pittsburgh","Colony_of_Virginia").
+isPartOf("Pittsburgh","British_Empire").
+isPartOf("Pittsburgh","New_France").
+largestCity("Pennsylvania","Philadelphia").
+type("Pittsburgh","City").

@@ -1,0 +1,25 @@
+keyPerson("Lockheed_Martin","President_(corporate_title)").
+keyPerson("Lockheed_Martin","Marillyn_A._Hewson").
+keyPerson("Lockheed_Martin","Chairman").
+location("Lockheed_Martin","Bethesda,_Maryland").
+location("Lockheed_Martin","United_States").
+type("President_(corporate_title)","Employment").
+location("Martin_Marietta","Bethesda,_Maryland").
+predecessor("Martin_Marietta","Glenn_L._Martin_Company").
+type("Bethesda,_Maryland","Census-designated_place").
+birthPlace("Marillyn_Hewson","Junction_City,_Kansas").
+occupation("Marillyn_Hewson","Marillyn_Hewson__1").
+occupation("Marillyn_Hewson","Lockheed_Martin").
+predecessor("Marillyn_Hewson","Robert_J._Stevens").
+birthPlace("Robert_J._Stevens","McKeesport,_Pennsylvania").
+birthPlace("Robert_J._Stevens","Pennsylvania").
+birthPlace("Robert_J._Stevens","McKeesport").
+type("Lockheed_Martin","Public company").
+occupation("Robert_J._Stevens","Robert_J._Stevens__1").
+occupation("Robert_J._Stevens","President").
+occupation("Robert_J._Stevens","Lockheed_Martin").
+type("University_of_Alabama","State_university_system").
+type("University_of_Alabama","Flagship_university").
+type("University_of_Alabama","Sea-grant").
+type("University_of_Alabama","Space-grant").
+type("Junction_City,_Kansas","City").

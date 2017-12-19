@@ -1,0 +1,13 @@
+foundedBy("Sun_Pharmaceutical","Dilip_Shanghvi").
+type("Sun_Pharmaceutical","Public_company").
+birthPlace("Dilip_Shanghvi","Mumbai").
+birthPlace("Dilip_Shanghvi","Amreli").
+birthPlace("Dilip_Shanghvi","Gujarat").
+type("Maharashtra","States_and_union_territories_of_India").
+nationality("Dilip_Shanghvi","Indian_people").
+occupation("Dilip_Shanghvi","Dilip_Shanghvi__1").
+occupation("Dilip_Shanghvi","Sun_Pharmaceuticals").
+type("Mumbai","Megacity").
+type("University_of_Calcutta","University and college").
+type("Gujarat","States").
+type("University_of_Calcutta","Public_university").

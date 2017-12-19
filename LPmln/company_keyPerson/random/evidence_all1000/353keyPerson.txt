@@ -1,0 +1,60 @@
+assets("Capital_One","3.34048E11").
+equity("Capital_One","4.7284E10").
+netIncome("Capital_One","4.05E9").
+operatingIncome("Capital_One","6.23E9").
+revenue("Capital_One","2.5038E10").
+numberOfEmployees("Capital_One","45400").
+foundationPlace("Capital_One","Virginia").
+foundationPlace("Capital_One","Richmond,_Virginia").
+foundationPlace("Capital_One","United_States").
+foundedBy("Capital_One","Nigel_Morris").
+foundedBy("Capital_One","Richard_Fairbank").
+industry("Capital_One","Financial_services").
+keyPerson("Capital_One","Chief_financial_officer").
+keyPerson("Capital_One","Richard_Fairbank").
+keyPerson("Capital_One","Chairman").
+keyPerson("Capital_One","President").
+keyPerson("Capital_One","Chief_Executive_Officer").
+location("Capital_One","United_States").
+location("Capital_One","McLean,_Virginia").
+location("Capital_One","Tysons_Corner,_Virginia").
+product("Capital_One","Savings_account").
+product("Capital_One","Credit_card").
+product("Capital_One","Loan").
+product("Capital_One","Retail_banking").
+type("Capital_One","Public_company").
+city("Virginia","Alexandria, VirginiaAlexandria").
+city("Virginia","Arlington County, VirginiaArlington").
+city("Virginia","Chesapeake, VirginiaChesapeake").
+city("Virginia","Hampton, VirginiaHampton").
+city("Virginia","Newport News, VirginiaNewport News").
+city("Virginia","Norfolk, VirginiaNorfolk").
+city("Virginia","Portsmouth, VirginiaPortsmouth").
+city("Virginia","Richmond, VirginiaRichmond").
+city("Virginia","Roanoke, VirginiaRoanoke").
+city("Virginia","Virginia Beach, VirginiaVirginia Beach").
+country("Virginia","Virginia").
+location("Richmond,_Virginia","Richmond International Airport, Virginia").
+capital("United_States","Washington,_D.C.").
+capital("Virginia","Richmond,_Virginia").
+country("Richmond,_Virginia","United_States").
+country("Virginia","United_States").
+country("Tysons_Corner,_Virginia","United_States").
+isPartOf("McLean,_Virginia","Virginia").
+isPartOf("McLean,_Virginia","Fairfax_County,_Virginia").
+isPartOf("Richmond,_Virginia","Virginia").
+isPartOf("Richmond,_Virginia","Independent_city_(United_States)").
+isPartOf("Tysons_Corner,_Virginia","Virginia").
+isPartOf("Tysons_Corner,_Virginia","Fairfax_County,_Virginia").
+largestCity("United_States","New_York_City").
+largestCity("Virginia","Virginia_Beach,_Virginia").
+type("McLean,_Virginia","Census-designated_place").
+type("Richmond,_Virginia","Independent_city_(United_States)").
+type("Richmond,_Virginia","List_of_capitals_in_the_United_States").
+type("Tysons_Corner,_Virginia","Census-designated_place").
+almaMater("Rory_Read","Hartwick_College").
+occupation("Rory_Read","Rory_Read__1").
+occupation("Rory_Read","Dell_Incorporated").
+city("Hartwick_College","Oneonta,_New_York").
+country("Hartwick_College","United_States").
+type("Hartwick_College","Private_school").

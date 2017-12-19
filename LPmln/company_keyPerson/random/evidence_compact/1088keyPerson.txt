@@ -1,0 +1,14 @@
+foundedBy("United_Parcel_Service","James_E._Casey").
+keyPerson("United_Parcel_Service","Scott_Davis_(businessman)").
+location("United_Parcel_Service","United_States").
+location("United_Parcel_Service","Sandy_Springs,_Georgia").
+occupation("Abigail_Johnson","Fidelity_International").
+occupation("Abigail_Johnson","Fidelity_Investments").
+occupation("Abigail_Johnson","Abigail_Johnson__1").
+type("Fidelity_Investments","Private").
+type("Fidelity_International","Private").
+keyPerson("Fidelity_Investments","Kathleen_Murphy_(executive)").
+keyPerson("Fidelity_Investments","Edward_Johnson,_III").
+keyPerson("Fidelity_Investments","Abigail_Johnson").
+keyPerson("Fidelity_International","Abigail_Johnson").
+type("Harvard_Business_School","Private_school").

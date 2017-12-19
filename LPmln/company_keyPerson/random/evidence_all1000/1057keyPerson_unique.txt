@@ -1,0 +1,16 @@
+industry("TradeKing","Financial_Services").
+locationCity("TradeKing","Fort_Lauderdale,_Florida").
+locationCountry("TradeKing","United_States").
+product("TradeKing","Online_brokerage").
+type("TradeKing","Private_company").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+capital("United_States","Washington,_D.C.").
+country("Fort_Lauderdale,_Florida","United_States_of_America").
+isPartOf("Fort_Lauderdale,_Florida","Florida").
+isPartOf("Fort_Lauderdale,_Florida","Broward_County,_Florida").
+largestCity("United_States","New_York_City").
+type("Fort_Lauderdale,_Florida","City").
+birthPlace("Fred_Carl,_Jr.","Greenwood,_Mississippi").
+isPartOf("Greenwood,_Mississippi","Mississippi").
+isPartOf("Greenwood,_Mississippi","Leflore_County,_Mississippi").
+type("Greenwood,_Mississippi","City_(Mississippi)").

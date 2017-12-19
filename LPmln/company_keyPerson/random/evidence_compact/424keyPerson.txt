@@ -1,0 +1,25 @@
+keyPerson("Deutsche_Post","Chief_financial_officer").
+keyPerson("Deutsche_Post","Wulf_von_Schimmelmann").
+keyPerson("Deutsche_Post","Frank_Appel").
+location("Deutsche_Post","Bonn").
+location("Deutsche_Post","Germany").
+location("Deutsche_Post","Post_Tower").
+type("Deutsche_Post","Aktiengesellschaft").
+birthPlace("Frank_Appel","Hamburg").
+location("Bonn","Bonn").
+type("Bonn","city").
+type("KfW","Public law legal entity").
+location("Post_Tower","Bonn").
+location("Post_Tower","Germany").
+location("KfW","Frankfurt").
+location("KfW","Germany").
+occupation("Wulf_von_Schimmelmann","Wulf_von_Schimmelmann__1").
+occupation("Frank_Appel","Deutsche_Post").
+occupation("Frank_Appel","Frank_Appel__1").
+predecessor("Frank_Appel","Klaus_Zumwinkel").
+occupation("Scott_Etzler","Scott_Etzler__1").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+type("Indiana_University","Public_University").
+type("Northwestern_University","Private_university").
+type("Kellogg_School_of_Management","Private_university").

@@ -1,0 +1,19 @@
+numberOfEmployees("Canonical_(company)","700").
+foundedBy("Canonical_(company)","Mark_Shuttleworth").
+industry("Canonical_(company)","Computer_software").
+keyPerson("Canonical_(company)","Mark_Shuttleworth").
+location("Canonical_(company)","London").
+location("Canonical_(company)","United_Kingdom").
+subsidiary("Canonical_(company)","Canonical_Ltd.").
+type("Canonical_(company)","Private_company_limited_by_shares").
+birthPlace("Mark_Shuttleworth","South_Africa").
+birthPlace("Mark_Shuttleworth","Welkom").
+birthPlace("Mark_Shuttleworth","Free_State_(province)").
+birthPlace("Jane_Silber","United_States").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("Launchpad_(website)","Project Hosting Server").
+birthYear("Mark_Shuttleworth","1973").
+country("London","United_Kingdom").
+occupation("Mark_Shuttleworth","Mark_Shuttleworth__1").
+owner("Launchpad_(website)","Canonical_Ltd.").

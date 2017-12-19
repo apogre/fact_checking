@@ -1,0 +1,36 @@
+foundingYear("Crown_Worldwide_Group","1965").
+numberOfEmployees("Crown_Worldwide_Group","4600").
+division("Crown_Worldwide_Group","www.crownfineart.com").
+division("Crown_Worldwide_Group","www.crownrms.com").
+division("Crown_Worldwide_Group","www.crown-logistics.com").
+division("Crown_Worldwide_Group","www.crownwinecellars.com").
+division("Crown_Worldwide_Group","www.crownrelo.com").
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+industry("Crown_Worldwide_Group","Warehouse").
+industry("Crown_Worldwide_Group","Relocation_service").
+industry("Crown_Worldwide_Group","Facilities_Management").
+industry("Crown_Worldwide_Group","Records_Management").
+spouse("James_E._Thompson","Sally Thompson").
+birthYear("James_E._Thompson","1940").
+almaMater("James_E._Thompson","San_Jose_State_University").
+occupation("James_E._Thompson","James_E._Thompson__1").
+birthPlace("Jay_Z","New_York_City").
+birthPlace("Jay_Z","Brooklyn").
+birthPlace("Jay_Z","New_York_(state)").
+birthYear("Jay_Z","1969").
+occupation("Jay_Z","Jay_Z__1").
+birthPlace("Jay_R","California").
+birthPlace("Jay_R","Glendale,_California").
+location("Brooklyn","JFK Airport, New York").
+country("Brooklyn","United_States_of_America").
+country("New_York_City","United_States").
+occupation("Jay_R","Composer").
+occupation("Jay_R","Actor").
+occupation("Jay_R","Dancer").
+occupation("Jay_R","Model_(person)").
+occupation("Jay_R","Music_executive").
+occupation("Jay_R","Record_producer").
+occupation("Jay_R","Singer").
+occupation("Jay_R","Businessman").
+type("Brooklyn","Borough_(New_York_City)").
+type("New_York_City","City_(New_York)").

@@ -1,0 +1,21 @@
+keyPerson("IGATE","Srinivas_Kandula").
+location("IGATE","Bridgewater,_New_Jersey").
+parentCompany("IGATE","Capgemini").
+foundedBy("Capgemini","Serge_Kampf").
+keyPerson("Capgemini","Paul_Hermelin").
+birthPlace("Kazuo_Hirai","Tokyo").
+occupation("Kazuo_Hirai","Kazuo_Hirai__1").
+occupation("Kazuo_Hirai","President").
+occupation("Kazuo_Hirai","CEO").
+occupation("Kazuo_Hirai","Sony").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+foundedBy("Sony","Masaru_Ibuka").
+foundedBy("Sony","Akio_Morita").
+keyPerson("Sony","Kazuo_Hirai").
+keyPerson("Sony","Osamu_Nagayama").
+location("Sony","Minato,_Tokyo").
+type("Tokyo","Prefectures_of_Japan").
+type("Sony","Kabushiki_gaisha").
+type("International_Christian_University","Private_university").
+type("International_Christian_University","Liberal_arts_college").

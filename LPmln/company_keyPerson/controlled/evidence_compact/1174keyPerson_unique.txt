@@ -1,0 +1,48 @@
+operatingIncome("Williams-Sonoma","4.521E8").
+numberOfEmployees("Williams-Sonoma","26800").
+foundedBy("Williams-Sonoma","Chuck_Williams_(author)").
+industry("Williams-Sonoma","E-commerce").
+keyPerson("Williams-Sonoma","CFO").
+keyPerson("Williams-Sonoma","Chief_executive_officer").
+keyPerson("Williams-Sonoma","CEO").
+keyPerson("Williams-Sonoma","Laura_Alber").
+type("Williams-Sonoma","Public_company").
+birthPlace("Chuck_Williams_(author)","Florida").
+birthPlace("Chuck_Williams_(author)","Jacksonville,_Florida").
+birthYear("Chuck_Williams_(author)","1915").
+occupation("Chuck_Williams_(author)","Chuck_Williams_(author)__1").
+birthPlace("Andrew_Witty","England").
+birthYear("Andrew_Witty","1964").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","University_of_Nottingham").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+operatingIncome("GlaxoSmithKline","1.0322E10").
+birthPlace("Jean-Pierre_Garnier","Le_Mans").
+almaMater("Emma_Walmsley","Oxford_University").
+birthPlace("Emma_Walmsley","Lancashire").
+country("University_of_Nottingham","England, UK").
+predecessor("GlaxoSmithKline","Beckman Companies").
+predecessor("GlaxoSmithKline","Beecham Group plc").
+predecessor("GlaxoSmithKline","Glaxo plc").
+predecessor("GlaxoSmithKline","Kline & French").
+predecessor("GlaxoSmithKline","Smith plc").
+predecessor("GlaxoSmithKline","Wellcome plc").
+spouse("Emma_Walmsley","David").
+type("England","Administrative_division").
+numberOfEmployees("GlaxoSmithKline","96575").
+industry("GlaxoSmithKline","Pharmaceutical_industry").
+industry("GlaxoSmithKline","Biotechnology").
+industry("GlaxoSmithKline","Fast-moving_consumer_goods").
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+parent("Emma_Walmsley","Robert_Walmsley").
+predecessor("Emma_Walmsley","Sir_Andrew_Witty").
+subsidiary("GlaxoSmithKline","Stiefel_Laboratories").
+type("GlaxoSmithKline","Public_limited_company").
+type("University_of_Nottingham","Public_university").

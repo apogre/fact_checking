@@ -1,0 +1,10 @@
+keyPerson("Tod's","Diego_Della_Valle").
+keyPerson("Tod's","Chief_executive_officer").
+type("Tod's","Joint-stock_company").
+birthPlace("Diego_Della_Valle","Italy").
+birthPlace("Diego_Della_Valle","Sant'Elpidio_a_Mare").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+occupation("Denise_Morrison","Denise_Morrison__1").
+type("Long_Branch,_New_Jersey","City_(New_Jersey)").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

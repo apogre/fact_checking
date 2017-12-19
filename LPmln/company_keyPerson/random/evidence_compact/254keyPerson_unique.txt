@@ -1,0 +1,43 @@
+keyPerson("American_Express","Chairman").
+keyPerson("American_Express","Kenneth_Chenault").
+location("American_Express","200_Vesey_Street").
+type("American_Express","Public_company").
+birthPlace("Kenneth_Chenault","Mineola,_New_York").
+predecessor("American_Express","Livingston, Fargo & Company").
+predecessor("American_Express","Wells & Company").
+predecessor("American_Express","Wells, Butterfield & Company").
+location("Shearson","United_States").
+location("Shearson","New_York,_New_York").
+location("200_Vesey_Street","Manhattan").
+location("200_Vesey_Street","United_States").
+location("200_Vesey_Street","New_York_(state)").
+occupation("Kenneth_Chenault","American_Express").
+predecessor("Shearson","Shearson_Hammill_&_Co.").
+type("Buffalo,_New_York","City_(New_York)").
+type("New_York_City","City_(New_York)").
+type("Shearson","Private_Company").
+birthPlace("Meg_Whitman","United_States").
+birthPlace("Meg_Whitman","New_York_(state)").
+birthPlace("Meg_Whitman","Cold_Spring_Harbor,_New_York").
+birthPlace("Griffith_R._Harsh","St._Louis").
+birthPlace("Jeffrey_Skoll","Canada").
+birthPlace("Jeffrey_Skoll","Montreal").
+birthPlace("Jeffrey_Skoll","Quebec").
+birthPlace("John_Donahoe","Evanston,_Illinois").
+birthPlace("Dion_Weisler","Australia").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+nationality("Jeffrey_Skoll","Canadians").
+occupation("Griffith_R._Harsh","Neurosurgeon").
+occupation("Griffith_R._Harsh","Griffith_R._Harsh__1").
+occupation("Jeffrey_Skoll","Jeffrey_Skoll__1").
+occupation("Jeffrey_Skoll","Internet_entrepreneur").
+occupation("Jeffrey_Skoll","EBay").
+occupation("John_Donahoe","PayPal").
+occupation("John_Donahoe","John_Donahoe__1").
+predecessor("Dion_Weisler","Meg_Whitman").
+type("Harvard_Business_School","Private_school").
+type("Princeton_University","Private_university").
+type("Cold_Spring_Harbor,_New_York","Hamlet_(New_York)").
+type("Cold_Spring_Harbor,_New_York","Census-designated_place").

@@ -1,0 +1,5 @@
+foundedBy("Simon_Property_Group","Herbert_Simon_(real_estate)").
+foundedBy("Simon_Property_Group","Melvin_Simon").
+location("Simon_Property_Group","Indianapolis").
+location("Simon_Property_Group","Indiana").
+location("Simon_Property_Group","United_States").

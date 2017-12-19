@@ -1,0 +1,135 @@
+numberOfEmployees("Google","57100").
+foundationPlace("Google","Menlo_Park,_California").
+industry("Google","Software").
+industry("Google","Internet").
+keyPerson("Google","Sundar_Pichai").
+locationCity("Google","California").
+locationCity("Google","Mountain_View,_California").
+locationCity("Google","Googleplex").
+parentCompany("Google","Alphabet_Inc.").
+product("Google","List_of_Google_products").
+subsidiary("Google","List_of_mergers_and_acquisitions_by_Alphabet").
+type("Google","Subsidiary").
+networth("Sundar_Pichai","1.05E9").
+networth("Sergey_Brin","3.82E10").
+networth("Larry_Page","3.9E10").
+birthPlace("Sundar_Pichai","Chennai").
+birthPlace("Sundar_Pichai","India").
+birthPlace("Sundar_Pichai","Madurai").
+birthPlace("Sundar_Pichai","Tamil_Nadu").
+birthPlace("Sergey_Brin","Moscow").
+birthPlace("Sergey_Brin","Russian_Soviet_Federative_Socialist_Republic").
+birthPlace("Sergey_Brin","Soviet_Union").
+birthPlace("Larry_Page","Michigan").
+birthPlace("Larry_Page","East_Lansing,_Michigan").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+location("Mountain_View,_California","Mountain View").
+nationality("Larry_Page","American").
+birthYear("Sundar_Pichai","1972").
+birthYear("Sergey_Brin","1973").
+birthYear("Larry_Page","1973").
+numberOfEmployees("Alphabet_Inc.","66575").
+almaMater("Sundar_Pichai","IIT_Kharagpur").
+almaMater("Sundar_Pichai","University_of_Pennsylvania").
+almaMater("Sundar_Pichai","Stanford_University").
+almaMater("Sergey_Brin","University_of_Maryland,_College_Park").
+almaMater("Sergey_Brin","Stanford_University").
+almaMater("Larry_Page","University_of_Michigan").
+almaMater("Larry_Page","Stanford_University").
+country("Menlo_Park,_California","United_States").
+country("Mountain_View,_California","United_States").
+industry("Alphabet_Inc.","Conglomerate_(company)").
+isPartOf("Menlo_Park,_California","California").
+isPartOf("Menlo_Park,_California","San_Mateo_County,_California").
+isPartOf("Mountain_View,_California","California").
+isPartOf("Mountain_View,_California","Santa_Clara_County,_California").
+keyPerson("Alphabet_Inc.","Executive_Chairman").
+keyPerson("Alphabet_Inc.","Chief_financial_officer").
+keyPerson("Alphabet_Inc.","President_(corporate_title)").
+keyPerson("Alphabet_Inc.","Ruth_Porat").
+keyPerson("Alphabet_Inc.","Eric_Schmidt").
+keyPerson("Alphabet_Inc.","Sergey_Brin").
+keyPerson("Alphabet_Inc.","Larry_Page").
+keyPerson("Alphabet_Inc.","Chief_executive_officer").
+largestCity("California","Los_Angeles").
+locationCity("Alphabet_Inc.","California").
+locationCity("Alphabet_Inc.","Mountain_View,_California").
+locationCountry("Alphabet_Inc.","United_States").
+nationality("Sergey_Brin","United_States").
+occupation("Sundar_Pichai","Google").
+occupation("Sundar_Pichai","Sundar_Pichai__1").
+occupation("Larry_Page","List_of_Internet_entrepreneurs").
+occupation("Larry_Page","Computer_scientist").
+occupation("Larry_Page","Larry_Page__1").
+owner("Alphabet_Inc.","Sergey_Brin").
+personFunction("Larry_Page","Larry_Page__1").
+product("Alphabet_Inc.","Software").
+product("Alphabet_Inc.","Internet").
+product("Alphabet_Inc.","Technology").
+product("Alphabet_Inc.","Research_and_development").
+product("Alphabet_Inc.","Biotechnology").
+product("Alphabet_Inc.","Life_sciences").
+product("Alphabet_Inc.","List_of_Google_products").
+residence("Sergey_Brin","Los_Altos,_California").
+residence("Larry_Page","California").
+residence("Larry_Page","Palo_Alto,_California").
+stateOfOrigin("Sergey_Brin","United_States").
+subsidiary("Alphabet_Inc.","Verily").
+subsidiary("Alphabet_Inc.","X_(incubator)").
+subsidiary("Alphabet_Inc.","Google_Fiber").
+subsidiary("Alphabet_Inc.","VirusTotal").
+subsidiary("Alphabet_Inc.","Sidewalk_Labs").
+subsidiary("Alphabet_Inc.","GV_(company)").
+subsidiary("Alphabet_Inc.","Vevo").
+subsidiary("Alphabet_Inc.","Jigsaw_(company)").
+subsidiary("Alphabet_Inc.","Calico_(company)").
+subsidiary("Alphabet_Inc.","Firebase").
+subsidiary("Alphabet_Inc.","Stackdriver").
+subsidiary("Alphabet_Inc.","Google").
+subsidiary("Alphabet_Inc.","Nest_Labs").
+subsidiary("Alphabet_Inc.","Google_Capital").
+type("Menlo_Park,_California","City_(California)").
+type("Mountain_View,_California","Charter_city").
+type("Alphabet_Inc.","Public_company").
+networth("Brian_L._Roberts","1.57E9").
+birthPlace("Brian_L._Roberts","Philadelphia").
+birthPlace("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+birthYear("Brian_L._Roberts","1959").
+almaMater("Brian_L._Roberts","Wharton_School_of_the_University_of_Pennsylvania").
+occupation("Brian_L._Roberts","leadership-overview").
+occupation("Brian_L._Roberts","Brian_L._Roberts__1").
+parent("Brian_L._Roberts","Ralph_J._Roberts").
+residence("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+birthPlace("Ralph_J._Roberts","New_York_City").
+deathPlace("Ralph_J._Roberts","Philadelphia").
+country("Germantown_Academy","US").
+country("Wharton_School_of_the_University_of_Pennsylvania","U.S.").
+foundedBy("Philadelphia","William Penn").
+nationality("Ralph_J._Roberts","United States").
+type("Germantown_Academy","Private").
+birthYear("Ralph_J._Roberts","1920").
+deathYear("Ralph_J._Roberts","2015").
+foundingYear("Germantown_Academy","1759").
+city("Germantown_Academy","Fort_Washington,_Pennsylvania").
+city("Wharton_School_of_the_University_of_Pennsylvania","Philadelphia").
+country("Philadelphia","United_States").
+isPartOf("Philadelphia","Pennsylvania").
+isPartOf("Philadelphia","Kingdom_of_Great_Britain").
+isPartOf("Philadelphia","Philadelphia_County,_Pennsylvania").
+isPartOf("Philadelphia","Kingdom_of_England").
+isPartOf("Philadelphia","Province_of_Pennsylvania").
+occupation("Ralph_J._Roberts","Ralph_J._Roberts__1").
+type("Philadelphia","Consolidated_city-county").
+type("Wharton_School_of_the_University_of_Pennsylvania","Private_university").

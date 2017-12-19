@@ -1,0 +1,122 @@
+assets("Hewlett-Packard","1.52406E11").
+equity("Hewlett-Packard","2.8731E10").
+netIncome("Hewlett-Packard","7.013E9").
+operatingIncome("Hewlett-Packard","9.185E9").
+numberOfEmployees("Hewlett-Packard","315000").
+industry("Hewlett-Packard","Software").
+industry("Hewlett-Packard","IT_service_management").
+industry("Hewlett-Packard","Information_technology_consulting").
+industry("Hewlett-Packard","Computer_hardware").
+locationCity("Hewlett-Packard","California").
+locationCity("Hewlett-Packard","Palo_Alto,_California").
+locationCountry("Hewlett-Packard","United_States").
+product("Hewlett-Packard","List_of_Hewlett-Packard_products").
+subsidiary("Hewlett-Packard","List_of_acquisitions_by_Hewlett-Packard").
+successor("Hewlett-Packard","Hewlett_Packard_Enterprise").
+successor("Hewlett-Packard","HP_Inc.").
+type("Hewlett-Packard","Public_company").
+revenue("Hewlett_Packard_Enterprise","5.2107E10").
+revenue("HP_Inc.","5.73E10").
+birthPlace("David_Packard","Pueblo,_Colorado").
+birthPlace("William_Redington_Hewlett","Ann_Arbor,_Michigan").
+deathPlace("David_Packard","Stanford,_California").
+deathPlace("William_Redington_Hewlett","Palo_Alto,_California").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+knownFor("David_Packard","Agilent_Technologies").
+knownFor("David_Packard","Keysight").
+knownFor("David_Packard","Hewlett-Packard").
+knownFor("David_Packard","Co-founder of:").
+location("Palo_Alto,_California","Palo Alto").
+birthYear("William_Redington_Hewlett","1913").
+deathYear("William_Redington_Hewlett","2001").
+numberOfEmployees("Hewlett_Packard_Enterprise","240000").
+numberOfEmployees("HP_Inc.","50000").
+almaMater("William_Redington_Hewlett","Massachusetts_Institute_of_Technology").
+almaMater("William_Redington_Hewlett","Stanford_University").
+capital("United_States","Washington,_D.C.").
+industry("Hewlett_Packard_Enterprise","Information_technology").
+industry("HP_Inc.","Information_technology").
+isPartOf("Palo_Alto,_California","California").
+isPartOf("Palo_Alto,_California","Santa_Clara_County,_California").
+keyPerson("Hewlett_Packard_Enterprise","Meg_Whitman").
+keyPerson("Hewlett_Packard_Enterprise","Patricia_Russo").
+keyPerson("HP_Inc.","Dion_Weisler").
+keyPerson("HP_Inc.","Meg_Whitman").
+knownFor("William_Redington_Hewlett","Agilent_Technologies").
+knownFor("William_Redington_Hewlett","Keysight").
+knownFor("William_Redington_Hewlett","Hewlett-Packard").
+largestCity("California","Los_Angeles").
+largestCity("United_States","New_York_City").
+predecessor("Hewlett_Packard_Enterprise","Hewlett-Packard").
+predecessor("David_Packard","Paul_Nitze").
+predecessor("HP_Inc.","Hewlett-Packard").
+successor("David_Packard","Kenneth_Rush").
+type("Hewlett_Packard_Enterprise","Public_company").
+type("Palo_Alto,_California","Charter_city").
+type("HP_Inc.","Public_company").
+networth("Lee_Kun-hee","1.48E10").
+birthPlace("Lee_Kun-hee","North_Gyeongsang").
+birthPlace("Lee_Kun-hee","Daegu").
+birthPlace("Lee_Kun-hee","Uiryeong_County").
+birthPlace("Lee_Kun-hee","Korea_under_Japanese_rule").
+birthYear("Lee_Kun-hee","1943").
+almaMater("Lee_Kun-hee","Waseda_University").
+almaMater("Lee_Kun-hee","George_Washington_University").
+nationality("Lee_Kun-hee","South_Korea").
+occupation("Lee_Kun-hee","Chairman").
+occupation("Lee_Kun-hee","Lee_Kun-hee__1").
+parent("Lee_Kun-hee","Lee_Byung-chul").
+stateOfOrigin("Lee_Kun-hee","South_Korea").
+networth("Lee_Jae-yong_(businessman)","7.9E9").
+birthPlace("Lee_Byung-chul","Uiryeong_County").
+birthPlace("Lee_Byung-chul","Uiryeong").
+birthPlace("Lee_Byung-chul","Gyeongsangnam-do").
+birthPlace("Lee_Byung-chul","Korean_Empire").
+birthPlace("Lee_Jae-yong_(businessman)","Seoul").
+birthPlace("Lee_Jae-yong_(businessman)","United_States").
+birthPlace("Lee_Jae-yong_(businessman)","Washington_D.C").
+deathPlace("Lee_Byung-chul","Seoul").
+deathPlace("Lee_Byung-chul","South_Korea").
+country("Korea_under_Japanese_rule","Korea").
+country("Waseda_University","Japan").
+largestCity("South_Korea","capital").
+location("Daegu","Daegu").
+nationality("Lee_Byung-chul","Korean").
+religion("Lee_Byung-chul","Buddhism").
+birthYear("Lee_Byung-chul","1910").
+birthYear("Lee_Jae-yong_(businessman)","1968").
+deathYear("Lee_Byung-chul","1987").
+almaMater("Lee_Byung-chul","Waseda_University").
+almaMater("Lee_Jae-yong_(businessman)","Seoul_National_University").
+almaMater("Lee_Jae-yong_(businessman)","Harvard_Business_School").
+almaMater("Lee_Jae-yong_(businessman)","Keio_University").
+capital("South_Korea","Seoul").
+capital("Korea_under_Japanese_rule","Names_of_Seoul").
+city("George_Washington_University","Washington,_D.C.").
+city("Waseda_University","Shinjuku,_Tokyo").
+country("Uiryeong_County","South_Korea").
+country("George_Washington_University","U.S.").
+country("Daegu","South_Korea").
+isPartOf("Uiryeong_County","Yeongnam").
+isPartOf("Daegu","Yeongnam").
+occupation("Lee_Byung-chul","Samsung_Group").
+occupation("Lee_Byung-chul","Lee_Byung-chul__1").
+occupation("Lee_Jae-yong_(businessman)","Lee_Jae-yong_(businessman)__1").
+occupation("Lee_Jae-yong_(businessman)","Vice_Chairman").
+parent("Lee_Jae-yong_(businessman)","Lee_Kun-hee").
+type("Uiryeong_County","List_of_cities_in_South_Korea").
+type("George_Washington_University","Private_university").
+type("Daegu","Special_cities_of_South_Korea").
+type("Waseda_University","Private_University").

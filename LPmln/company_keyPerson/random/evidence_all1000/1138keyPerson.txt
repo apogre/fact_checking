@@ -1,0 +1,90 @@
+numberOfEmployees("The_Walt_Disney_Company","180000").
+foundationPlace("The_Walt_Disney_Company","California").
+foundationPlace("The_Walt_Disney_Company","Los_Angeles").
+foundationPlace("The_Walt_Disney_Company","United_States").
+industry("The_Walt_Disney_Company","Entertainment").
+industry("The_Walt_Disney_Company","Mass_media").
+keyPerson("The_Walt_Disney_Company","Robert_A._Iger").
+locationCity("The_Walt_Disney_Company","Burbank,_California").
+locationCity("The_Walt_Disney_Company","California").
+locationCity("The_Walt_Disney_Company","Walt_Disney_Studios_(Burbank)").
+locationCountry("The_Walt_Disney_Company","United_States").
+product("The_Walt_Disney_Company","Radio").
+product("The_Walt_Disney_Company","Broadcasting").
+product("The_Walt_Disney_Company","Publishing").
+product("The_Walt_Disney_Company","Film").
+product("The_Walt_Disney_Company","Music").
+product("The_Walt_Disney_Company","Video_game").
+product("The_Walt_Disney_Company","Web_portal").
+product("The_Walt_Disney_Company","Cable_television").
+product("The_Walt_Disney_Company","Theme_parks").
+type("The_Walt_Disney_Company","Public_company").
+birthPlace("Walt_Disney","Chicago").
+birthPlace("Roy_O._Disney","Chicago").
+birthPlace("Roy_O._Disney","Illinois").
+deathPlace("Walt_Disney","Burbank,_California").
+deathPlace("Roy_O._Disney","Burbank,_California").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+location("Burbank,_California","Burbank-Glendale-Pasadena Airport, California").
+location("Los_Angeles","Los Angeles").
+occupation("Roy_O._Disney","Entertainment industry executive").
+predecessor("Roy_O._Disney","office created").
+birthYear("Walt_Disney","1901").
+deathYear("Walt_Disney","1966").
+foundingYear("Laugh-O-Gram_Studio","1921").
+capital("United_States","Washington,_D.C.").
+country("Burbank,_California","United_States").
+foundedBy("Laugh-O-Gram_Studio","Walt_Disney").
+industry("Laugh-O-Gram_Studio","Film_studio").
+isPartOf("Burbank,_California","California").
+isPartOf("Burbank,_California","Los_Angeles_County,_California").
+isPartOf("Los_Angeles","California").
+isPartOf("Los_Angeles","Los_Angeles_County,_California").
+isPartOf("Los_Angeles","Los_Angeles_metropolitan_area").
+isPartOf("Los_Angeles","Greater_Los_Angeles_Area").
+largestCity("California","Los_Angeles").
+largestCity("United_States","New_York_City").
+location("Laugh-O-Gram_Studio","Kansas_City,_Missouri").
+occupation("Walt_Disney","Walt_Disney__1").
+owner("Laugh-O-Gram_Studio","The_Walt_Disney_Company").
+owningCompany("Laugh-O-Gram_Studio","The_Walt_Disney_Company").
+predecessor("Roy_O._Disney","Walt_Disney").
+religion("Roy_O._Disney","Christian").
+successor("Laugh-O-Gram_Studio","The_Walt_Disney_Company").
+successor("Roy_O._Disney","Donn_Tatum").
+type("Burbank,_California","Charter_city").
+type("Los_Angeles","Metropolitan_City").
+birthPlace("Antony_Jenkins","Manchester").
+activeYearsStartYear("Antony_Jenkins","1982").
+birthYear("Antony_Jenkins","1961").
+almaMater("Antony_Jenkins","University_College,_Oxford").
+almaMater("Antony_Jenkins","Cranfield_School_of_Management").
+occupation("Antony_Jenkins","Antony_Jenkins__1").
+personFunction("Antony_Jenkins","Antony_Jenkins__1").
+salary("Antony_Jenkins","5467000.0").
+country("Cranfield_School_of_Management","United Kingdom").
+location("University_College,_Oxford","High_Street,_Oxford").
+city("Cranfield_School_of_Management","Cranfield").
+country("Manchester","United_Kingdom").
+isPartOf("Manchester","England").
+isPartOf("Manchester","Cheshire").
+isPartOf("Manchester","Lancashire").
+isPartOf("Manchester","Greater_Manchester").
+isPartOf("Manchester","North_West_England").
+isPartOf("University_College,_Oxford","University_of_Oxford").
+location("University_College,_Oxford","Oxford").
+type("Manchester","City_status_in_the_United_Kingdom").
+type("Manchester","Metropolitan_borough").
+type("Cranfield_School_of_Management","Business_School").

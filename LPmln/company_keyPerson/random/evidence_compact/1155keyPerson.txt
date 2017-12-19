@@ -1,0 +1,16 @@
+keyPerson("Washington_Mutual","Alan_H._Fishman").
+keyPerson("Washington_Mutual","Chief_Executive_Officer").
+location("Washington_Mutual","Seattle,_Washington").
+location("Washington_Mutual","United_States").
+birthPlace("Ho_Ching","Singapore").
+predecessor("Ho_Ching","Tan_Choo_Leng").
+birthPlace("Tan_Choo_Leng","Singapore").
+birthPlace("Lee_Hsien_Loong","Singapore").
+birthPlace("Lee_Hsien_Loong","Colony_of_Singapore").
+predecessor("Lee_Hsien_Loong","Constituency established").
+predecessor("Lee_Hsien_Loong","Himself").
+nationality("Lee_Hsien_Loong","Colony_of_Singapore").
+predecessor("Tan_Choo_Leng","Kwa_Geok_Choo").
+predecessor("Lee_Hsien_Loong","Richard_Hu").
+predecessor("Lee_Hsien_Loong","Goh_Chok_Tong").
+type("Stanford_University","Private_university").

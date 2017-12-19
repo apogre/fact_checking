@@ -1,0 +1,153 @@
+numberOfEmployees("Microsoft","114000").
+foundationPlace("Microsoft","Albuquerque,_New_Mexico").
+foundationPlace("Microsoft","United_States").
+foundationPlace("Microsoft","New_Mexico").
+industry("Microsoft","Consumer_electronics").
+industry("Microsoft","Software").
+industry("Microsoft","Digital_distribution").
+industry("Microsoft","Computer_hardware").
+keyPerson("Microsoft","Bill_Gates").
+keyPerson("Microsoft","President_(corporate_title)").
+keyPerson("Microsoft","Satya_Nadella").
+keyPerson("Microsoft","John_W._Thompson").
+locationCity("Microsoft","Redmond,_Washington").
+locationCity("Microsoft","Microsoft_Redmond_campus").
+locationCountry("Microsoft","United_States").
+product("Microsoft","Xbox").
+product("Microsoft","Microsoft_Dynamics").
+product("Microsoft","Skype").
+product("Microsoft","Microsoft_Azure").
+product("Microsoft","Microsoft_Mobile").
+product("Microsoft","Microsoft_Surface").
+product("Microsoft","Microsoft_Windows").
+product("Microsoft","Microsoft_Visual_Studio").
+product("Microsoft","Microsoft_Office").
+product("Microsoft","List_of_Microsoft_software").
+product("Microsoft","Microsoft_Servers").
+subsidiary("Microsoft","List_of_mergers_and_acquisitions_by_Microsoft").
+type("Microsoft","Public_company").
+networth("Bill_Gates","8.17E10").
+birthPlace("Bill_Gates","Seattle").
+capital("New_Mexico","Santa_Fe,_New_Mexico").
+city("New_Mexico","Alamogordo, New MexicoAlamogordo").
+city("New_Mexico","Albuquerque, New MexicoAlbuquerque").
+city("New_Mexico","Carlsbad, New MexicoCarlsbad").
+city("New_Mexico","Clovis, New MexicoClovis").
+city("New_Mexico","Farmington, New MexicoFarmington").
+city("New_Mexico","Hobbs, New MexicoHobbs").
+city("New_Mexico","Las Cruces, New MexicoLas Cruces").
+city("New_Mexico","Rio Rancho, New MexicoRio Rancho").
+city("New_Mexico","Roswell, New MexicoRoswell").
+city("New_Mexico","Santa Fe, New MexicoSanta Fe").
+country("New_Mexico","New Mexico").
+location("Albuquerque,_New_Mexico","--01-22").
+location("Albuquerque,_New_Mexico","Albuquerque South Valley").
+location("Albuquerque,_New_Mexico","Albuquerque foothills").
+location("Redmond,_Washington","Redmond, Washington").
+nationality("Bill_Gates","American").
+type("Xbox","Video_gaming").
+type("President_(corporate_title)","Employment").
+activeYearsStartYear("Bill_Gates","1975").
+birthYear("Bill_Gates","1955").
+almaMater("Bill_Gates","Harvard_University").
+capital("United_States","Washington,_D.C.").
+capital("New_Mexico","Santa_Fe_New_Mexico").
+country("Albuquerque,_New_Mexico","United_States").
+country("Redmond,_Washington","United_States").
+country("New_Mexico","United_States").
+foundationPlace("Microsoft_Mobile","Keilaniemi").
+foundationPlace("Microsoft_Mobile","Espoo").
+foundationPlace("Microsoft_Mobile","Finland").
+industry("Microsoft_Mobile","Telecommunications_equipment").
+isPartOf("Albuquerque,_New_Mexico","New_Mexico").
+isPartOf("Albuquerque,_New_Mexico","Bernalillo_County,_New_Mexico").
+isPartOf("Redmond,_Washington","Washington_(state)").
+isPartOf("Redmond,_Washington","King_County,_Washington").
+keyPerson("Microsoft_Mobile","Terry_Myerson").
+largestCity("United_States","New_York_City").
+largestCity("New_Mexico","Albuquerque,_New_Mexico").
+location("Microsoft_Mobile","Espoo").
+location("Microsoft_Mobile","Finland").
+owner("MSN","Microsoft").
+owner("OneDrive","Microsoft").
+owner("Microsoft_Developer_Network","Microsoft").
+owner("Outlook.com","Microsoft").
+owner("Microsoft_TechNet","Microsoft").
+owner("Bing","Microsoft").
+parent("Bill_Gates","Mary_Maxwell_Gates").
+parent("Bill_Gates","William_H._Gates,_Sr.").
+parentCompany("Microsoft_Mobile","Microsoft").
+personFunction("Bill_Gates","Bill_Gates__1").
+predecessor("Microsoft_Mobile","Nokia").
+product("Microsoft_Mobile","Mobile_app").
+product("Microsoft_Mobile","Tablet_computer").
+product("Microsoft_Mobile","Mobile_Phones").
+product("Microsoft_Mobile","Smartphones").
+residence("Bill_Gates","Medina,_Washington").
+type("Albuquerque,_New_Mexico","City").
+type("MSN","Web_portal").
+type("OneDrive","File_hosting_service").
+type("Microsoft_Developer_Network","Knowledge_base").
+type("Outlook.com","Address_book").
+type("Outlook.com","Planner_(program)").
+type("Outlook.com","Calendaring_software").
+type("Outlook.com","Webmail").
+type("Microsoft_TechNet","Knowledge_base").
+type("Microsoft_Surface","2-in-1_detachable").
+type("Microsoft_Surface","Hybrid_tablet").
+type("Microsoft_Surface","Interactive_whiteboard").
+type("Bing","Web_search_engine").
+networth("Paul_Allen","1.86E10").
+birthPlace("Paul_Allen","Seattle").
+birthPlace("Paul_Allen","Seattle,_Washington").
+birthPlace("Satya_Nadella","Hyderabad").
+birthPlace("Satya_Nadella","India").
+birthPlace("Satya_Nadella","Telangana").
+birthPlace("John_W._Thompson","New_Jersey").
+birthPlace("John_W._Thompson","United_States").
+birthPlace("John_W._Thompson","Fort_Dix").
+industry("Microsoft_Redmond_campus","Technology_company").
+location("Microsoft_Redmond_campus","Redmond,_Washington").
+owner("Microsoft_Redmond_campus","Microsoft").
+type("Xbox_Live","Online service").
+type("Xbox_Live","Premium online service").
+birthYear("Paul_Allen","1953").
+birthYear("Satya_Nadella","1967").
+birthYear("John_W._Thompson","1949").
+almaMater("Paul_Allen","Washington_State_University").
+almaMater("Satya_Nadella","University_of_Chicago_Booth_School_of_Business").
+almaMater("Satya_Nadella","Manipal_Institute_of_Technology").
+almaMater("John_W._Thompson","Florida_A&M_University").
+almaMater("John_W._Thompson","MIT_Sloan_School_of_Management").
+occupation("Paul_Allen","Portland_Trail_Blazers").
+occupation("Paul_Allen","Allen_Institute_for_Brain_Science").
+occupation("Paul_Allen","Allen_Institute_for_Cell_Science").
+occupation("Paul_Allen","Microsoft").
+occupation("Paul_Allen","Allen_Institute_for_Artificial_Intelligence").
+occupation("Paul_Allen","Seattle_Seahawks").
+occupation("Paul_Allen","Vulcan_Inc.").
+occupation("Paul_Allen","Seattle_Sounders").
+occupation("Paul_Allen","Paul_Allen__1").
+occupation("Satya_Nadella","Microsoft_Corporation").
+occupation("Satya_Nadella","Satya_Nadella__1").
+occupation("John_W._Thompson","John_W._Thompson__1").
+occupation("John_W._Thompson","Microsoft").
+residence("Paul_Allen","Mercer_Island,_Washington").
+salary("Satya_Nadella","1.82E7").
+birthPlace("Daniel_Vasella","Switzerland").
+birthPlace("Daniel_Vasella","Fribourg").
+birthYear("Daniel_Vasella","1953").
+almaMater("Daniel_Vasella","University_of_Bern").
+almaMater("Daniel_Vasella","Harvard_Business_School").
+occupation("Daniel_Vasella","Daniel_Vasella__1").
+residence("Daniel_Vasella","Switzerland").
+residence("Daniel_Vasella","Risch").
+country("Harvard_Business_School","U.S.").
+location("Fribourg"," Posieux").
+capital("Switzerland","Bern").
+city("Harvard_Business_School","Boston").
+city("University_of_Bern","Bern").
+country("Fribourg","Switzerland").
+country("University_of_Bern","Switzerland").
+type("Harvard_Business_School","Private_school").
+type("University_of_Bern","Public_university").

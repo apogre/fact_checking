@@ -1,0 +1,26 @@
+birthPlace("Ho_Ching","Singapore").
+almaMater("Ho_Ching","Stanford_University").
+predecessor("Ho_Ching","Tan_Choo_Leng").
+birthPlace("Tan_Choo_Leng","Singapore").
+birthPlace("Lee_Hsien_Loong","Singapore").
+birthPlace("Lee_Hsien_Loong","Colony_of_Singapore").
+country("Stanford_University","U.S.").
+predecessor("Lee_Hsien_Loong","Constituency established").
+predecessor("Lee_Hsien_Loong","Himself").
+successor("Lee_Hsien_Loong","Himself").
+almaMater("Lee_Hsien_Loong","Trinity_College,_Cambridge").
+almaMater("Lee_Hsien_Loong","United_States_Army_Command_and_General_Staff_College").
+almaMater("Lee_Hsien_Loong","Harvard_University").
+capital("Singapore","City-state").
+city("Stanford_University","Stanford,_California").
+country("Lee_Hsien_Loong","Singapore").
+country("Lee_Hsien_Loong","Colony_of_Singapore").
+nationality("Lee_Hsien_Loong","Colony_of_Singapore").
+predecessor("Tan_Choo_Leng","Kwa_Geok_Choo").
+predecessor("Lee_Hsien_Loong","Richard_Hu").
+predecessor("Lee_Hsien_Loong","Goh_Chok_Tong").
+residence("Lee_Hsien_Loong","Colony_of_Singapore").
+successor("Tan_Choo_Leng","Ho_Ching").
+successor("Lee_Hsien_Loong","S._Jayakumar").
+successor("Lee_Hsien_Loong","Tharman_Shanmugaratnam").
+type("Stanford_University","Private_university").

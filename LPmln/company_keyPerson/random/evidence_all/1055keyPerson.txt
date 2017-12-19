@@ -1,0 +1,57 @@
+industry("TradeKing","Financial_Services").
+locationCity("TradeKing","Fort_Lauderdale,_Florida").
+locationCountry("TradeKing","United_States").
+product("TradeKing","Online_brokerage").
+type("TradeKing","Private_company").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+capital("United_States","Washington,_D.C.").
+country("Fort_Lauderdale,_Florida","United_States_of_America").
+isPartOf("Fort_Lauderdale,_Florida","Florida").
+isPartOf("Fort_Lauderdale,_Florida","Broward_County,_Florida").
+largestCity("United_States","New_York_City").
+type("Fort_Lauderdale,_Florida","City").
+birthPlace("Andrew_Witty","England").
+birthYear("Andrew_Witty","1964").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","University_of_Nottingham").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+successor("Andrew_Witty","Emma_Walmsley").
+netIncome("GlaxoSmithKline","8.372E9").
+operatingIncome("GlaxoSmithKline","1.0322E10").
+revenue("GlaxoSmithKline","2.3923E10").
+birthPlace("Jean-Pierre_Garnier","Le_Mans").
+almaMater("Emma_Walmsley","Oxford_University").
+birthPlace("Emma_Walmsley","Lancashire").
+capital("England","London").
+country("University_of_Nottingham","England, UK").
+largestCity("England","capital").
+nationality("Emma_Walmsley","British").
+predecessor("GlaxoSmithKline","Beckman Companies").
+predecessor("GlaxoSmithKline","Beecham Group plc").
+predecessor("GlaxoSmithKline","Glaxo plc").
+predecessor("GlaxoSmithKline","Kline & French").
+predecessor("GlaxoSmithKline","Smith plc").
+predecessor("GlaxoSmithKline","Wellcome plc").
+type("England","Administrative_division").
+numberOfEmployees("GlaxoSmithKline","96575").
+city("University_of_Nottingham","Nottingham").
+industry("GlaxoSmithKline","Pharmaceutical_industry").
+industry("GlaxoSmithKline","Biotechnology").
+industry("GlaxoSmithKline","Fast-moving_consumer_goods").
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+parent("Emma_Walmsley","Robert_Walmsley").
+personFunction("Emma_Walmsley","Emma_Walmsley__1").
+predecessor("Emma_Walmsley","Sir_Andrew_Witty").
+product("GlaxoSmithKline","Over-the-counter_drug").
+product("GlaxoSmithKline","Vaccine").
+product("GlaxoSmithKline","Pharmaceutical").
+subsidiary("GlaxoSmithKline","Stiefel_Laboratories").
+type("GlaxoSmithKline","Public_limited_company").
+type("University_of_Nottingham","Public_university").

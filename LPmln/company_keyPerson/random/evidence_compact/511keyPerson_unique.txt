@@ -1,0 +1,29 @@
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+type("GlaxoSmithKline","Public_limited_company").
+birthPlace("Andrew_Witty","England").
+birthPlace("Philip_Hampton","United_Kingdom").
+birthPlace("Philip_Hampton","United Kingdom").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("England","Administrative_division").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","University_of_Nottingham").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Philip_Hampton","GlaxoSmithKline").
+occupation("Philip_Hampton","Philip_Hampton__1").
+parentCompany("Stiefel_Laboratories","GlaxoSmithKline").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+birthPlace("Bob_Dudley","Queens,_New_York").
+birthPlace("Bob_Dudley","Queens").
+occupation("Bob_Dudley","BP").
+occupation("Bob_Dudley","Bob_Dudley__1").
+keyPerson("BP","Carl-Henric_Svanberg").
+keyPerson("BP","Bob_Dudley").
+type("Queens","Borough_(New_York_City)").
+type("BP","Public_limited_company").

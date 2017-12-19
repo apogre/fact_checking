@@ -1,0 +1,47 @@
+numberOfEmployees("Caterpillar_Inc.","114233").
+foundationPlace("Caterpillar_Inc.","California").
+industry("Caterpillar_Inc.","Financial_services").
+industry("Caterpillar_Inc.","Heavy_equipment").
+keyPerson("Caterpillar_Inc.","Douglas_R._Oberhelman").
+location("Caterpillar_Inc.","Peoria,_Illinois").
+predecessor("Caterpillar_Inc.","C._L._Best").
+predecessor("Caterpillar_Inc.","Holt_Manufacturing_Company").
+type("Caterpillar_Inc.","Public_company").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+industry("Holt_Manufacturing_Company","Agricultural, machinery, construction").
+locationCountry("Holt_Manufacturing_Company","United States").
+predecessor("Holt_Manufacturing_Company","Holt Bros. Manufacturing").
+type("Holt_Manufacturing_Company","Private company").
+activeYearsStartYear("Douglas_R._Oberhelman","1975").
+birthYear("Douglas_R._Oberhelman","1953").
+foundingYear("Holt_Manufacturing_Company","1883").
+numberOfEmployees("Holt_Manufacturing_Company","2100").
+almaMater("Douglas_R._Oberhelman","Millikin_University").
+country("Peoria,_Illinois","United_States").
+foundationPlace("Holt_Manufacturing_Company","Stockton,_California").
+foundedBy("Holt_Manufacturing_Company","Benjamin_Holt").
+hometown("Douglas_R._Oberhelman","Woodstock,_Illinois").
+keyPerson("Holt_Manufacturing_Company","Benjamin_Holt").
+keyPerson("Holt_Manufacturing_Company","C._L._Best").
+largestCity("California","Los_Angeles").
+locationCity("Holt_Manufacturing_Company","Stockton,_California").
+occupation("Douglas_R._Oberhelman","Business_Executive").
+occupation("Douglas_R._Oberhelman","Douglas_R._Oberhelman__1").
+personFunction("Douglas_R._Oberhelman","Douglas_R._Oberhelman__1").
+predecessor("Douglas_R._Oberhelman","James_W._Owens").
+residence("Douglas_R._Oberhelman","Edwards,_Illinois").
+subsidiary("Holt_Manufacturing_Company","Best_Manufacturing_Company").
+successor("Holt_Manufacturing_Company","Caterpillar_Inc.").
+type("Peoria,_Illinois","List_of_cities_in_Illinois").

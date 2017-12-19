@@ -1,0 +1,16 @@
+keyPerson("Gerdau","CEO").
+keyPerson("Gerdau","Jorge_Gerdau_Johannpeter").
+keyPerson("Gerdau","Chairman").
+location("Gerdau","Brazil").
+location("Gerdau","Porto_Alegre").
+type("Gerdau","S.A._(corporation)").
+birthPlace("Jorge_Gerdau_Johannpeter","Brazil").
+birthPlace("Jorge_Gerdau_Johannpeter","Rio_de_Janeiro").
+location("Porto_Alegre","Porto Alegre").
+nationality("Jorge_Gerdau_Johannpeter","Brazil").
+occupation("David_C._Novak","David_C._Novak__1").
+location("University_of_Missouri","Columbia, Missouri, U.S.").
+parent("University_of_Missouri","University_of_Missouri_System").
+type("University_of_Missouri","Public_university").
+type("University_of_Missouri","Flagship_campus").
+type("University_of_Missouri","Land-grant_university").

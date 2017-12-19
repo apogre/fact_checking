@@ -1,0 +1,81 @@
+assets("Whole_Foods_Market","5.5E9").
+assets("Whole_Foods_Market","5.3E9").
+equity("Whole_Foods_Market","3.9E9").
+equity("Whole_Foods_Market","3.8E9").
+netIncome("Whole_Foods_Market","5.51E8").
+numberOfLocations("Whole_Foods_Market","3").
+numberOfLocations("Whole_Foods_Market","435").
+operatingIncome("Whole_Foods_Market","8.83E8").
+revenue("Whole_Foods_Market","1.29E10").
+revenue("Whole_Foods_Market","1.17E10").
+numberOfEmployees("Whole_Foods_Market","91000").
+foundationPlace("Whole_Foods_Market","Austin,_Texas").
+foundationPlace("Whole_Foods_Market","Texas").
+foundedBy("Whole_Foods_Market","John_Mackey_(businessman)").
+industry("Whole_Foods_Market","Grocery_store").
+industry("Whole_Foods_Market","Health_food_store").
+keyPerson("Whole_Foods_Market","Chief_information_officer").
+keyPerson("Whole_Foods_Market","Walter_Robb").
+keyPerson("Whole_Foods_Market","CEO").
+keyPerson("Whole_Foods_Market","John_Mackey_(businessman)").
+location("Whole_Foods_Market","Austin,_Texas").
+type("Whole_Foods_Market","Public_company").
+networth("John_Mackey_(businessman)","1.0E8").
+birthPlace("John_Mackey_(businessman)","Houston").
+birthPlace("John_Mackey_(businessman)","Texas").
+birthPlace("John_Mackey_(businessman)","United_States").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+birthYear("John_Mackey_(businessman)","1953").
+almaMater("John_Mackey_(businessman)","University_of_Texas_at_Austin").
+capital("Texas","Austin,_Texas").
+country("Austin,_Texas","United_States").
+country("Texas","United_States").
+isPartOf("Austin,_Texas","Texas").
+isPartOf("Austin,_Texas","Travis_County,_Texas").
+isPartOf("Austin,_Texas","Williamson_County,_Texas").
+isPartOf("Austin,_Texas","Hays_County,_Texas").
+largestCity("Texas","Houston").
+occupation("John_Mackey_(businessman)","Whole_Foods_Market").
+occupation("John_Mackey_(businessman)","John_Mackey_(businessman)__1").
+residence("John_Mackey_(businessman)","Austin,_Texas").
+residence("John_Mackey_(businessman)","Texas").
+residence("John_Mackey_(businessman)","United_States").
+salary("John_Mackey_(businessman)","1.0").
+birthPlace("Felipe_Gozon","Ermita,_Manila").
+birthPlace("Felipe_Gozon","Manila").
+birthPlace("Felipe_Gozon","Commonwealth_of_the_Philippines").
+activeYearsStartYear("Felipe_Gozon","1963").
+birthYear("Felipe_Gozon","1939").
+almaMater("Felipe_Gozon","University_of_the_Philippines_Diliman").
+almaMater("Felipe_Gozon","Yale_Law_School").
+nationality("Felipe_Gozon","Filipino_people").
+occupation("Felipe_Gozon","Lawyer").
+occupation("Felipe_Gozon","Felipe_Gozon__1").
+personFunction("Felipe_Gozon","Felipe_Gozon__1").
+stateOfOrigin("Felipe_Gozon","Filipino_people").
+country("Commonwealth_of_the_Philippines","Philippines").
+location("Manila","Port Area, Manila").
+parent("Yale_Law_School","Yale_University").
+type("Lawyer","Lawyer").
+foundingYear("Commonwealth_of_the_Philippines","1935").
+capital("Commonwealth_of_the_Philippines","Manila").
+city("Yale_Law_School","New_Haven,_Connecticut").
+city("University_of_the_Philippines_Diliman","Quezon_City").
+country("Yale_Law_School","United_States").
+country("University_of_the_Philippines_Diliman","Philippines").
+isPartOf("Manila","Metro_Manila").
+isPartOf("Manila","Legislative_districts_of_Manila").
+type("Manila","Capital_city").
+type("Yale_Law_School","Private_school").
+type("University_of_the_Philippines_Diliman","Research_institute").
+type("University_of_the_Philippines_Diliman","National_university").

@@ -1,0 +1,101 @@
+assets("FedEx","3.7069E10").
+equity("FedEx","1.499E10").
+netIncome("FedEx","2.57E9").
+operatingIncome("FedEx","4.26E9").
+revenue("FedEx","4.7453E10").
+foundingYear("FedEx","1971").
+numberOfEmployees("FedEx","300000").
+foundationPlace("FedEx","Little_Rock,_Arkansas").
+foundedBy("FedEx","Frederick_W._Smith").
+industry("FedEx","Express_mail").
+keyPerson("FedEx","Frederick_W._Smith").
+location("FedEx","Memphis,_Tennessee").
+product("FedEx","Express_mail").
+product("FedEx","Cargo").
+product("FedEx","Third-party_logistics").
+product("FedEx","Mail").
+subsidiary("FedEx","FedEx_Ground").
+subsidiary("FedEx","FedEx_Office").
+subsidiary("FedEx","FedEx_Express").
+subsidiary("FedEx","FedEx_Freight").
+type("FedEx","Public_company").
+networth("Frederick_W._Smith","3.7E9").
+revenue("FedEx_Ground","9.6E9").
+birthPlace("Frederick_W._Smith","Mississippi").
+birthPlace("Frederick_W._Smith","United_States").
+birthPlace("Frederick_W._Smith","Marks,_Mississippi").
+industry("FedEx_Office","Office services").
+type("FedEx_Office","Subsidiary").
+type("FedEx_Ground","Subsidiary").
+birthYear("Frederick_W._Smith","1944").
+foundingYear("FedEx_Office","1970").
+foundingYear("FedEx_Ground","1985").
+foundingYear("FedEx_Ground","1998").
+numberOfEmployees("FedEx_Office","19000").
+almaMater("Frederick_W._Smith","Yale_College").
+country("Little_Rock,_Arkansas","United_States").
+headquarter("FedEx_Express","Memphis,_Tennessee").
+hometown("Frederick_W._Smith","Mississippi").
+hometown("Frederick_W._Smith","Marks,_Mississippi").
+industry("FedEx_Express","Air_Transport").
+industry("FedEx_Ground","Transportation").
+isPartOf("Little_Rock,_Arkansas","Arkansas").
+isPartOf("Little_Rock,_Arkansas","Pulaski_County,_Arkansas").
+isPartOf("Memphis,_Tennessee","Tennessee").
+isPartOf("Memphis,_Tennessee","Shelby_County,_Tennessee").
+location("FedEx_Office","Plano,_Texas").
+location("FedEx_Ground","Moon_Township,_Pennsylvania").
+parentCompany("FedEx_Office","FedEx").
+parentCompany("FedEx_Express","FedEx").
+parentCompany("FedEx_Ground","FedEx").
+product("FedEx_Office","Printing").
+product("FedEx_Ground","Delivery_(commerce)").
+type("Little_Rock,_Arkansas","City").
+type("Memphis,_Tennessee","City_(Tennessee)").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+birthYear("James_J._Greco","1958").
+almaMater("James_J._Greco","Georgetown_University").
+almaMater("James_J._Greco","University_of_Miami").
+almaMater("James_J._Greco","City_University,_London").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+residence("James_J._Greco","Florida").
+residence("James_J._Greco","Delray_Beach,_Florida").
+residence("James_J._Greco","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Georgetown_University","US").
+country("University_of_Miami","U.S.").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+capital("Connecticut","Hartford,_Connecticut").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+city("Georgetown_University","Washington,_D.C.").
+city("University_of_Miami","Coral_Gables,_Florida").
+country("Connecticut","United_States").
+country("Delray_Beach,_Florida","United_States_of_America").
+country("Florida","United_States").
+isPartOf("Delray_Beach,_Florida","Florida").
+isPartOf("Delray_Beach,_Florida","Palm_Beach_County,_Florida").
+isPartOf("New_Haven,_Connecticut","Connecticut").
+isPartOf("New_Haven,_Connecticut","Greater_New_Haven").
+isPartOf("New_Haven,_Connecticut","Union_Station_(New_Haven)").
+largestCity("Connecticut","Bridgeport,_Connecticut").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

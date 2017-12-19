@@ -1,0 +1,27 @@
+keyPerson("Telstra","Chief_financial_officer").
+keyPerson("Telstra","Chairperson").
+keyPerson("Telstra","Andy_Penn").
+location("Telstra","Melbourne").
+location("Telstra","Telstra_Corporate_Centre").
+location("Telstra","Australia").
+type("Telstra","Public_company").
+location("Melbourne","Canberra").
+location("Melbourne","Perth").
+location("Melbourne","Sydney").
+location("Melbourne","Adelaide").
+location("Melbourne","Brisbane").
+location("Melbourne","Melbourne City").
+type("Melbourne","city").
+location("Telstra_Corporate_Centre","Melbourne,_Australia").
+occupation("Andy_Penn","Chief_Executive_Officer").
+occupation("Andy_Penn","Andy_Penn__1").
+predecessor("Andy_Penn","David_Thodey").
+occupation("Jeff_Noddle","Jeff_Noddle__1").
+keyPerson("SuperValu_(United_States)","CEO").
+location("SuperValu_(United_States)","United_States").
+location("SuperValu_(United_States)","Eden_Prairie,_Minnesota").
+type("Omaha,_Nebraska","City_(Nebraska)").
+type("University_of_Iowa","Public_university").
+type("University_of_Iowa","Flagship_university").
+type("University_of_Iowa","National_Space_Grant_College_and_Fellowship_Program").
+type("SuperValu_(United_States)","Public_company").

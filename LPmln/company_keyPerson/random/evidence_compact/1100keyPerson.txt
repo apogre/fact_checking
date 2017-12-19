@@ -1,0 +1,9 @@
+keyPerson("Valero_Energy","CEO").
+location("Valero_Energy","Texas").
+location("Valero_Energy","United_States").
+location("Valero_Energy","San_Antonio").
+type("Valero_Energy","Public_company").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+type("San_Antonio","City_(Texas)").
+type("Wesleyan_University","Private_university").

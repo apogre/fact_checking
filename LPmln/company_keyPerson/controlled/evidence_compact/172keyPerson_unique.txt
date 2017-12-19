@@ -1,0 +1,7 @@
+industry("TradeKing","Financial_Services").
+locationCity("TradeKing","Fort_Lauderdale,_Florida").
+locationCountry("TradeKing","United_States").
+type("TradeKing","Private_company").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+country("Fort_Lauderdale,_Florida","United_States_of_America").
+type("Fort_Lauderdale,_Florida","City").

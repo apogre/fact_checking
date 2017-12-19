@@ -1,0 +1,17 @@
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+type("Playboy_Enterprises","Privately_held_company").
+birthPlace("Hugh_Hefner","Chicago").
+birthPlace("Scott_Flanders","Indiana").
+birthPlace("Scott_Flanders","Indianapolis").
+nationality("Scott_Flanders","American").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+occupation("Scott_Flanders","Scott_Flanders__1").
+type("Beverly_Hills,_California","General_law_city").
+occupation("Ian_King_(BAE_Systems)","Ian_King_(BAE_Systems)__1").
+predecessor("Ian_King_(BAE_Systems)","Michael_Turner_(businessman)").
+location("Portsmouth","540.0").
+nationality("Michael_Turner_(businessman)","British").
+type("Portsmouth","City_status_in_the_United_Kingdom").

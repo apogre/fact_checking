@@ -1,0 +1,67 @@
+keyPerson("Alliance_Boots","Stefano_Pessina").
+location("Alliance_Boots","Switzerland").
+location("Alliance_Boots","Bern").
+location("Alliance_Boots","Weybridge").
+location("Alliance_Boots","United_Kingdom").
+location("Alliance_Boots","Nottingham").
+birthPlace("Stefano_Pessina","Pescara").
+location("Bern"," Zollikofen").
+location("Nottingham","Nottingham Sutton Bonington, elevation:").
+location("Nottingham","Nottingham Watnall, elevation:").
+location("Nottingham","Nottingham Watnall, elevation:   Extremes").
+parent("Boots_Opticians","Boots Optical Investment Holdings").
+predecessor("Boots_Opticians","Clement Clarke Ltd.").
+predecessor("Boots_Opticians","Dollond & Aitchison Ltd.").
+type("Pharmacy","Professional").
+type("Alliance_Healthcare","Subsidiary").
+foundedBy("Boots_UK","John_Boot").
+keyPerson("Alliance_Healthcare","Ornella_Barra").
+keyPerson("Alliance_Healthcare","Stefano_Pessina").
+keyPerson("Boots_UK","Elizabeth_Fagan").
+keyPerson("Walgreens_Boots_Alliance","James_A._Skinner").
+keyPerson("Walgreens_Boots_Alliance","Stefano_Pessina").
+location("Boots_UK","Nottingham").
+location("Boots_UK","United_Kingdom").
+location("Boots_Opticians","Nottingham").
+location("Boots_Opticians","United_Kingdom").
+nationality("Stefano_Pessina","Monaco").
+occupation("Stefano_Pessina","Stefano_Pessina__1").
+parentCompany("Boots_UK","Walgreens_Boots_Alliance").
+type("Nottingham","City_status_in_the_United_Kingdom").
+type("Nottingham","Unitary_authorities_of_England").
+type("Guangzhou_Pharmaceuticals","Joint_venture").
+type("Boots_UK","Private_company_limited_by_shares").
+type("Boots_Opticians","Subsidiary").
+type("Walgreens_Boots_Alliance","Public_company").
+birthPlace("Bob_Iger","New_York_City").
+birthPlace("Bob_Iger","Oceanside,_New_York").
+birthPlace("Bob_Iger","New_York_(state)").
+nationality("Bob_Iger","United_States").
+occupation("Bob_Iger","Bob_Iger__1").
+predecessor("Bob_Iger","Michael_Eisner").
+birthPlace("Michael_Eisner","New_York_City").
+birthPlace("Michael_Eisner","Mount_Kisco,_New_York").
+birthPlace("Ted_Harbert","New_York_City").
+birthPlace("Ted_Harbert","New_York,_New_York").
+birthPlace("Willow_Bay","New_York_City").
+birthPlace("Willow_Bay","New_York,_New_York").
+location("Los_Angeles","Los Angeles").
+nationality("Michael_Eisner","American").
+keyPerson("Apple_Inc.","Arthur_D._Levinson").
+keyPerson("Apple_Inc.","Jeff_Williams_(Apple)").
+keyPerson("Apple_Inc.","Luca_Maestri").
+keyPerson("Apple_Inc.","Tim_Cook").
+keyPerson("Apple_Inc.","Jonathan_Ive").
+keyPerson("The_Walt_Disney_Company","Robert_A._Iger").
+nationality("John_E._Pepper,_Jr.","United_States").
+occupation("Michael_Eisner","Michael_Eisner__1").
+occupation("Ted_Harbert","Ted_Harbert__1").
+occupation("Willow_Bay","Willow_Bay__1").
+occupation("Willow_Bay","Television_presenter").
+type("Los_Angeles","Metropolitan_City").
+type("New_York_City","City_(New_York)").
+type("Oceanside,_New_York","Hamlet_(New_York)").
+type("Oceanside,_New_York","Census-designated_place").
+type("Apple_Inc.","Public_company").
+type("Ithaca_College","Private_university").
+type("The_Walt_Disney_Company","Public_company").

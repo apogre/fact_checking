@@ -1,0 +1,37 @@
+foundedBy("Reliance_Industries","Dhirubhai_Ambani").
+keyPerson("Reliance_Industries","Mukesh_Ambani").
+type("Reliance_Industries","Public_company").
+birthPlace("Dhirubhai_Ambani","India").
+birthPlace("Dhirubhai_Ambani","Gujarat").
+birthPlace("Dhirubhai_Ambani","Junagadh").
+birthPlace("Dhirubhai_Ambani","Chorvad").
+birthPlace("Mukesh_Ambani","Aden").
+birthPlace("Mukesh_Ambani","Colony_of_Aden").
+predecessor("Reliance_Anil_Dhirubhai_Ambani_Group","Reliance Commercial Corporation").
+type("Maharashtra","States_and_union_territories_of_India").
+type("Reliance_Anil_Dhirubhai_Ambani_Group","Private company").
+type("BSE_SENSEX","Stock_Exchange").
+foundedBy("Reliance_Anil_Dhirubhai_Ambani_Group","Dhirubhai_Ambani").
+keyPerson("Reliance_Anil_Dhirubhai_Ambani_Group","Anil_Ambani").
+nationality("Dhirubhai_Ambani","Indian_people").
+nationality("Mukesh_Ambani","India").
+occupation("Dhirubhai_Ambani","Dhirubhai_Ambani__1").
+occupation("Dhirubhai_Ambani","Reliance_Capital").
+occupation("Dhirubhai_Ambani","Reliance_Industries").
+occupation("Dhirubhai_Ambani","Reliance_Power").
+occupation("Mukesh_Ambani","Reliance_Industries").
+occupation("Mukesh_Ambani","Mukesh_Ambani__1").
+parent("Mukesh_Ambani","Dhirubhai_Ambani").
+type("Mumbai","Megacity").
+birthPlace("Phebe_Novakovic","Pittsburgh").
+occupation("Phebe_Novakovic","General_Dynamics").
+occupation("Phebe_Novakovic","Phebe_Novakovic__1").
+foundedBy("General_Dynamics","John_Philip_Holland").
+keyPerson("General_Dynamics","Chief_executive_officer").
+keyPerson("General_Dynamics","Phebe_Novakovic").
+keyPerson("General_Dynamics","Chairman_(official)").
+type("Pittsburgh","City").
+type("Smith_College","Private_school").
+type("Smith_College","Women's_colleges_in_the_United_States").
+type("General_Dynamics","Public_company").
+type("Wharton_School_of_the_University_of_Pennsylvania","Private_university").

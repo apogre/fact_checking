@@ -1,0 +1,100 @@
+revenue("Boston_Consulting_Group","5.0E9").
+foundingYear("Boston_Consulting_Group","1963").
+numberOfEmployees("Boston_Consulting_Group","6200").
+industry("Boston_Consulting_Group","Management_consulting").
+keyPerson("Boston_Consulting_Group","Rich_Lesser").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+location("Boston_Consulting_Group","Boston").
+type("Boston_Consulting_Group","Privately_held_company").
+city("Massachusetts","Boston, MassachusettsBoston").
+city("Massachusetts","Brockton, MassachusettsBrockton").
+city("Massachusetts","Cambridge, MassachusettsCambridge").
+city("Massachusetts","Fall River, MassachusettsFall River").
+city("Massachusetts","Lowell, MassachusettsLowell").
+city("Massachusetts","Lynn, MassachusettsLynn").
+city("Massachusetts","New Bedford, MassachusettsNew Bedford").
+city("Massachusetts","Quincy, MassachusettsQuincy").
+city("Massachusetts","Springfield, MassachusettsSpringfield").
+city("Massachusetts","Worcester, MassachusettsWorcester").
+country("Massachusetts","Massachusetts").
+birthYear("Rich_Lesser","1963").
+almaMater("Rich_Lesser","Harvard_Business_School").
+almaMater("Rich_Lesser","University_of_Michigan").
+capital("Massachusetts","Boston").
+capital("United_States","Washington,_D.C.").
+country("Massachusetts","United_States").
+isPartOf("Boston","Massachusetts").
+isPartOf("Boston","Kingdom_of_Great_Britain").
+isPartOf("Boston","Province_of_Massachusetts_Bay").
+isPartOf("Boston","Massachusetts_Bay_Colony").
+isPartOf("Boston","Suffolk_County,_Massachusetts").
+isPartOf("Boston","Kingdom_of_England").
+largestCity("Massachusetts","Boston").
+largestCity("United_States","New_York_City").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Management_Consultant").
+personFunction("Rich_Lesser","Rich_Lesser__1").
+type("Boston","Capital_city").
+networth("John_Mackey_(businessman)","1.0E8").
+birthPlace("John_Mackey_(businessman)","United_States").
+birthPlace("John_Mackey_(businessman)","Houston").
+birthPlace("John_Mackey_(businessman)","Texas").
+birthYear("John_Mackey_(businessman)","1953").
+almaMater("John_Mackey_(businessman)","University_of_Texas_at_Austin").
+occupation("John_Mackey_(businessman)","Whole_Foods_Market").
+occupation("John_Mackey_(businessman)","John_Mackey_(businessman)__1").
+residence("John_Mackey_(businessman)","Austin,_Texas").
+residence("John_Mackey_(businessman)","United_States").
+residence("John_Mackey_(businessman)","Texas").
+assets("Whole_Foods_Market","5.5E9").
+assets("Whole_Foods_Market","5.3E9").
+equity("Whole_Foods_Market","3.9E9").
+equity("Whole_Foods_Market","3.8E9").
+netIncome("Whole_Foods_Market","5.51E8").
+numberOfLocations("Whole_Foods_Market","3").
+numberOfLocations("Whole_Foods_Market","435").
+operatingIncome("Whole_Foods_Market","8.83E8").
+revenue("Whole_Foods_Market","1.29E10").
+revenue("Whole_Foods_Market","1.17E10").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+country("University_of_Texas_at_Austin","U.S.").
+numberOfEmployees("Whole_Foods_Market","91000").
+capital("Texas","Austin,_Texas").
+city("University_of_Texas_at_Austin","Austin,_Texas").
+country("Austin,_Texas","United_States").
+country("Texas","United_States").
+foundationPlace("Whole_Foods_Market","Austin,_Texas").
+foundationPlace("Whole_Foods_Market","Texas").
+foundedBy("Whole_Foods_Market","John_Mackey_(businessman)").
+industry("Whole_Foods_Market","Grocery_store").
+industry("Whole_Foods_Market","Health_food_store").
+isPartOf("Austin,_Texas","Texas").
+isPartOf("Austin,_Texas","Travis_County,_Texas").
+isPartOf("Austin,_Texas","Williamson_County,_Texas").
+isPartOf("Austin,_Texas","Hays_County,_Texas").
+isPartOf("Houston","Texas").
+isPartOf("Houston","Fort_Bend_County,_Texas").
+isPartOf("Houston","Montgomery_County,_Texas").
+isPartOf("Houston","Harris_County,_Texas").
+keyPerson("Whole_Foods_Market","Chief_information_officer").
+keyPerson("Whole_Foods_Market","Walter_Robb").
+keyPerson("Whole_Foods_Market","CEO").
+keyPerson("Whole_Foods_Market","John_Mackey_(businessman)").
+largestCity("Texas","Houston").
+location("Whole_Foods_Market","Austin,_Texas").
+type("Houston","City").
+type("Whole_Foods_Market","Public_company").
+type("University_of_Texas_at_Austin","Flagship_campus").
+type("University_of_Texas_at_Austin","Space-grant_university").

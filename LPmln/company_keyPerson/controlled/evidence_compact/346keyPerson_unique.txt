@@ -1,0 +1,31 @@
+numberOfEmployees("Canonical_(company)","700").
+foundedBy("Canonical_(company)","Mark_Shuttleworth").
+industry("Canonical_(company)","Computer_software").
+keyPerson("Canonical_(company)","Jane_Silber").
+keyPerson("Canonical_(company)","Mark_Shuttleworth").
+location("Canonical_(company)","London").
+location("Canonical_(company)","United_Kingdom").
+subsidiary("Canonical_(company)","Canonical_Ltd.").
+type("Canonical_(company)","Private_company_limited_by_shares").
+birthPlace("Mark_Shuttleworth","South_Africa").
+birthPlace("Mark_Shuttleworth","Welkom").
+birthPlace("Mark_Shuttleworth","Free_State_(province)").
+birthPlace("Jane_Silber","United_States").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("Launchpad_(website)","Project Hosting Server").
+birthYear("Mark_Shuttleworth","1973").
+country("London","United_Kingdom").
+occupation("Mark_Shuttleworth","Mark_Shuttleworth__1").
+owner("Launchpad_(website)","Canonical_Ltd.").
+almaMater("Scott_Etzler","Northwestern_University").
+almaMater("Scott_Etzler","Kellogg_School_of_Management").
+almaMater("Scott_Etzler","Indiana_University").
+occupation("Scott_Etzler","Scott_Etzler__1").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+country("Northwestern_University","U.S.").
+country("Kellogg_School_of_Management","United_States").
+type("Indiana_University","Public_University").
+type("Northwestern_University","Private_university").
+type("Kellogg_School_of_Management","Private_university").

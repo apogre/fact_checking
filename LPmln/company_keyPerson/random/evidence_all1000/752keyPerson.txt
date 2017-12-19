@@ -1,0 +1,147 @@
+numberOfEmployees("Oracle_Corporation","136262").
+foundationPlace("Oracle_Corporation","California").
+foundationPlace("Oracle_Corporation","Santa_Clara,_California").
+foundedBy("Oracle_Corporation","Larry_Ellison").
+foundedBy("Oracle_Corporation","Bob_Miner").
+foundedBy("Oracle_Corporation","Ed_Oates").
+industry("Oracle_Corporation","Cloud_Computing").
+industry("Oracle_Corporation","Enterprise_software").
+keyPerson("Oracle_Corporation","Safra_A._Catz").
+keyPerson("Oracle_Corporation","Mark_Hurd").
+keyPerson("Oracle_Corporation","Larry_Ellison").
+keyPerson("Oracle_Corporation","Jeffrey_O._Henley").
+locationCity("Oracle_Corporation","California").
+locationCity("Oracle_Corporation","Redwood_City,_California").
+locationCity("Oracle_Corporation","Redwood_Shores,_California").
+product("Oracle_Corporation","Oracle_Database").
+product("Oracle_Corporation","Server_(computing)").
+product("Oracle_Corporation","Computer_data_storage").
+product("Oracle_Corporation","Oracle_Corporation").
+product("Oracle_Corporation","Workstation").
+product("Oracle_Corporation","Oracle_Applications").
+product("Oracle_Corporation","Oracle_Enterprise_Manager").
+product("Oracle_Corporation","Oracle_Fusion_Middleware").
+subsidiary("Oracle_Corporation","List_of_acquisitions_by_Oracle").
+type("Oracle_Corporation","Public_company").
+networth("Safra_A._Catz","5.25E8").
+networth("Larry_Ellison","5.16E10").
+birthPlace("Safra_A._Catz","Israel").
+birthPlace("Safra_A._Catz","Holon").
+birthPlace("Mark_Hurd","Manhattan").
+birthPlace("Mark_Hurd","Manhattan,_New_York").
+birthPlace("Larry_Ellison","Manhattan").
+birthPlace("Larry_Ellison","The_Bronx").
+birthPlace("Larry_Ellison","New_York_(state)").
+birthPlace("Bob_Miner","Cicero,_Illinois").
+deathPlace("Bob_Miner","San_Francisco").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+deathPlace("Bob_Miner","San Francisco, California, U.S.").
+knownFor("Ed_Oates","One of the three founders of Oracle Corporation").
+location("Redwood_City,_California","Redwood City, California").
+location("Santa_Clara,_California","Santa Clara, California").
+locationCountry("Oracle_Corporation","United States").
+nationality("Larry_Ellison","American").
+nationality("Bob_Miner","American, Assyrian").
+nationality("Ed_Oates","USA").
+residence("Safra_A._Catz","Redwood City, CA").
+activeYearsStartYear("Safra_A._Catz","1986").
+activeYearsStartYear("Larry_Ellison","1966").
+activeYearsStartYear("Bob_Miner","1994").
+birthYear("Safra_A._Catz","1961").
+birthYear("Mark_Hurd","1957").
+birthYear("Larry_Ellison","1944").
+birthYear("Bob_Miner","1941").
+birthYear("Ed_Oates","1946").
+deathYear("Bob_Miner","1994").
+almaMater("Larry_Ellison","University_of_Chicago").
+almaMater("Larry_Ellison","University_of_Illinois_at_Urbana-Champaign").
+country("Redwood_City,_California","United_States").
+country("Santa_Clara,_California","United_States_of_America").
+isPartOf("Redwood_City,_California","California").
+isPartOf("Redwood_City,_California","San_Mateo_County,_California").
+isPartOf("Santa_Clara,_California","California").
+isPartOf("Santa_Clara,_California","Santa_Clara_County,_California").
+knownFor("Larry_Ellison","Co-founder").
+knownFor("Larry_Ellison","CEO").
+largestCity("California","Los_Angeles").
+nationality("Ed_Oates","United_States").
+occupation("Safra_A._Catz","Oracle_Corporation").
+occupation("Safra_A._Catz","Safra_A._Catz__1").
+occupation("Mark_Hurd","Mark_Hurd__1").
+occupation("Mark_Hurd","Oracle_Corporation").
+occupation("Larry_Ellison","Executive_Chairman").
+occupation("Larry_Ellison","Chief_technology_officer").
+occupation("Larry_Ellison","Larry_Ellison__1").
+occupation("Bob_Miner","Oracle_Corporation").
+occupation("Bob_Miner","Bob_Miner__1").
+residence("Mark_Hurd","Palo_Alto,_California").
+residence("Larry_Ellison","Woodside,_California").
+type("Redwood_City,_California","Charter_city").
+type("Santa_Clara,_California","City_(California)").
+type("Redwood_Shores,_California","Redwood_City,_California").
+salary("Safra_A._Catz","5.32E7").
+salary("Mark_Hurd","5.32E7").
+birthPlace("John_Stumpf","Pierz,_Minnesota").
+birthYear("John_Stumpf","1953").
+almaMater("John_Stumpf","University_of_Minnesota").
+almaMater("John_Stumpf","St._Cloud_State_University").
+knownFor("John_Stumpf","Chairman").
+residence("John_Stumpf","San_Francisco,_California").
+salary("John_Stumpf","1.93E7").
+assets("Chevron_Corporation","2.6602E11").
+assets("Target_Corporation","4.0262E10").
+equity("Chevron_Corporation","1.5502E11").
+equity("Target_Corporation","1.2957E10").
+netIncome("Chevron_Corporation","4.58E9").
+netIncome("Target_Corporation","3.363E9").
+operatingIncome("Chevron_Corporation","1.58E8").
+operatingIncome("Target_Corporation","5.53E9").
+country("St._Cloud_State_University","U.S.").
+country("University_of_Minnesota","United States").
+revenue("Chevron_Corporation","US$").
+revenue("Target_Corporation","United_States_dollar").
+foundingYear("Chevron_Corporation","1879").
+foundingYear("Chevron_Corporation","1984").
+numberOfEmployees("Chevron_Corporation","64700").
+numberOfEmployees("Target_Corporation","341000").
+capital("United_States","Washington,_D.C.").
+city("St._Cloud_State_University","St._Cloud,_Minnesota").
+city("University_of_Minnesota","Minneapolis").
+city("University_of_Minnesota","Saint_Paul,_Minnesota").
+country("Pierz,_Minnesota","United_States").
+foundedBy("Target_Corporation","George_Dayton").
+industry("Chevron_Corporation","Oil_and_gas_industry").
+industry("Target_Corporation","Retail").
+isPartOf("Pierz,_Minnesota","Minnesota").
+isPartOf("Pierz,_Minnesota","Morrison_County,_Minnesota").
+keyPerson("Chevron_Corporation","John_S._Watson_(Chevron)").
+keyPerson("Target_Corporation","Brian_C._Cornell").
+largestCity("United_States","New_York_City").
+location("Chevron_Corporation","San_Ramon,_California").
+predecessor("Chevron_Corporation","Gulf_Oil").
+predecessor("Chevron_Corporation","Standard_Oil_of_California").
+product("Chevron_Corporation","Natural_gas").
+product("Chevron_Corporation","Petroleum").
+product("Chevron_Corporation","Petrochemical").
+subsidiary("Chevron_Corporation","Texaco").
+type("Chevron_Corporation","Public_company").
+type("St._Cloud_State_University","Public_school_(government_funded)").
+type("Target_Corporation","Public_company").
+type("University_of_Minnesota","Public_university").
+type("University_of_Minnesota","Flagship_university").
+type("University_of_Minnesota","Land-grant_university").
+type("University_of_Minnesota","Sea-grant_university").
+type("University_of_Minnesota","Space-grant_university").
+type("Pierz,_Minnesota","City").

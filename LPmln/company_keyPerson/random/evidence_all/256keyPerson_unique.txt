@@ -1,0 +1,142 @@
+assets("American_Airlines_Group","4.8415E10").
+equity("American_Airlines_Group","5.635E9").
+netIncome("American_Airlines_Group","7.61E9").
+operatingIncome("American_Airlines_Group","6.204E9").
+revenue("American_Airlines_Group","4.099E10").
+numberOfEmployees("American_Airlines_Group","118500").
+industry("American_Airlines_Group","Aviation").
+keyPerson("American_Airlines_Group","Chief_Financial_Officer").
+keyPerson("American_Airlines_Group","Doug_Parker").
+subsidiary("American_Airlines_Group","American_Airlines,_Inc.").
+subsidiary("American_Airlines_Group","Envoy_Air_Inc.").
+subsidiary("American_Airlines_Group","PSA_Airlines,_Inc.").
+subsidiary("American_Airlines_Group","Piedmont_Airlines,_Inc.").
+type("American_Airlines_Group","Public_company").
+assets("AMR_Corporation","2.351E10").
+assets("US_Airways_Group","8.33E9").
+equity("AMR_Corporation","-7.111E9").
+equity("US_Airways_Group","1.5E8").
+netIncome("AMR_Corporation","-1.876E9").
+netIncome("US_Airways_Group","7.1E7").
+operatingIncome("AMR_Corporation","-1.172E9").
+operatingIncome("US_Airways_Group","4.26E8").
+revenue("US_Airways_Group","1.305E10").
+assets("American_Eagle_(airline_brand)","See parent").
+assets("American_Airlines_Shuttle","See parent").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+equity("American_Eagle_(airline_brand)","See parent").
+equity("American_Airlines_Shuttle","See parent").
+location("Fort_Worth,_Texas","Fort Worth, Texas").
+netIncome("American_Eagle_(airline_brand)","See parent").
+netIncome("American_Airlines_Shuttle","See parent").
+operatingIncome("American_Eagle_(airline_brand)","See parent").
+operatingIncome("American_Airlines_Shuttle","See parent").
+revenue("AMR_Corporation","United_States_Dollar").
+revenue("American_Eagle_(airline_brand)","See parent").
+revenue("American_Airlines_Shuttle","See parent").
+foundingYear("AMR_Corporation","1982").
+foundingYear("US_Airways_Group","1939").
+numberOfEmployees("AMR_Corporation","77750").
+numberOfEmployees("US_Airways_Group","31467").
+capital("Texas","Austin,_Texas").
+capital("United_States","Washington,_D.C.").
+country("Fort_Worth,_Texas","United_States_of_America").
+country("Texas","United_States").
+headquarter("American_Eagle_(airline_brand)","Texas").
+headquarter("American_Eagle_(airline_brand)","United_States").
+headquarter("American_Eagle_(airline_brand)","Fort_Worth").
+headquarter("American_Airlines_Shuttle","Texas").
+headquarter("American_Airlines_Shuttle","United_States").
+headquarter("American_Airlines_Shuttle","Fort_Worth").
+industry("AMR_Corporation","Aviation").
+industry("American_Eagle_(airline_brand)","Air_Transport").
+industry("American_Airlines_Shuttle","Air_Transport").
+industry("US_Airways_Group","Aviation").
+isPartOf("Fort_Worth,_Texas","Texas").
+isPartOf("Fort_Worth,_Texas","Denton_County,_Texas").
+isPartOf("Fort_Worth,_Texas","Parker_County,_Texas").
+isPartOf("Fort_Worth,_Texas","Tarrant_County,_Texas").
+isPartOf("Fort_Worth,_Texas","Wise_County,_Texas").
+keyPerson("US_Airways_Group","Doug_Parker_(airline_executive)").
+keyPerson("US_Airways_Group","CEO").
+keyPerson("US_Airways_Group","President").
+largestCity("Texas","Houston").
+largestCity("United_States","New_York_City").
+location("AMR_Corporation","Fort_Worth,_Texas").
+location("AMR_Corporation","Texas").
+location("US_Airways_Group","Tempe,_Arizona").
+parentCompany("American_Eagle_(airline_brand)","American_Airlines_Group").
+parentCompany("American_Airlines_Shuttle","American_Airlines_Group").
+product("US_Airways_Group","Airline").
+regionServed("AMR_Corporation","World").
+successor("US_Airways_Group","American_Airlines_Group").
+type("Fort_Worth,_Texas","City").
+type("AMR_Corporation","Public_company").
+type("US_Airways_Group","Public_company").
+birthPlace("Jeff_Zucker","Florida").
+birthPlace("Jeff_Zucker","United_States").
+birthPlace("Jeff_Zucker","Homestead,_Florida").
+activeYearsStartYear("Jeff_Zucker","1986").
+birthYear("Jeff_Zucker","1965").
+almaMater("Jeff_Zucker","Bachelor_of_Arts").
+almaMater("Jeff_Zucker","Harvard_University").
+nationality("Jeff_Zucker","Americans").
+occupation("Jeff_Zucker","Jeff_Zucker__1").
+occupation("Jeff_Zucker","CNN").
+stateOfOrigin("Jeff_Zucker","Americans").
+birthPlace("Bob_Wright","Hempstead,_New_York").
+birthPlace("Garth_Ancier","Perth_Amboy,_New_Jersey").
+birthPlace("Garth_Ancier","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Harvard_University","U.S.").
+location("Homestead,_Florida","Homestead General Aviation Airport, Florida").
+birthYear("Bob_Wright","1943").
+birthYear("Garth_Ancier","1957").
+birthYear("Steve_Burke_(businessman)","1958").
+almaMater("Bob_Wright","College_of_the_Holy_Cross").
+almaMater("Bob_Wright","University_of_Virginia_School_of_Law").
+almaMater("Garth_Ancier","Princeton_University").
+almaMater("Steve_Burke_(businessman)","Harvard_Business_School").
+almaMater("Steve_Burke_(businessman)","Colgate_University").
+capital("Florida","Tallahassee,_Florida").
+city("Harvard_University","Cambridge,_Massachusetts").
+country("Florida","United_States").
+country("CNN","United_States").
+headquarter("CNN","CNN_Center").
+headquarter("CNN","Atlanta").
+headquarter("CNN","Georgia_(U.S._state)").
+isPartOf("Homestead,_Florida","Florida").
+isPartOf("Homestead,_Florida","Miami-Dade_County,_Florida").
+largestCity("Florida","Jacksonville,_Florida").
+locationCountry("CNN","United_States").
+nationality("Bob_Wright","United_States").
+occupation("Bob_Wright","Bob_Wright__1").
+occupation("Bob_Wright","Author").
+occupation("Bob_Wright","Lawyer").
+occupation("Bob_Wright","Businessman").
+occupation("Garth_Ancier","Garth_Ancier__1").
+personFunction("Steve_Burke_(businessman)","Steve_Burke_(businessman)__1").
+residence("Steve_Burke_(businessman)","Philadelphia,_Pennsylvania").
+stateOfOrigin("Bob_Wright","United_States").
+type("Homestead,_Florida","List_of_communities_in_Miami-Dade_County,_Florida").
+type("Harvard_University","Research_university").

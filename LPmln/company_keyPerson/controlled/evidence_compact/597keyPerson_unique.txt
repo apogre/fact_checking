@@ -1,0 +1,53 @@
+foundingYear("InterCall","1991").
+industry("InterCall","Web_conferencing").
+industry("InterCall","Telecommunication").
+keyPerson("InterCall","Scott_Etzler").
+location("InterCall","Chicago").
+parentCompany("InterCall","West_Corporation").
+industry("West_Corporation","Unified Communications
+Interactive Services
+Specialized Agent Services
+Telecom Services
+Safety Services").
+numberOfEmployees("West_Corporation","26430").
+almaMater("Scott_Etzler","Indiana_University").
+almaMater("Scott_Etzler","Northwestern_University").
+almaMater("Scott_Etzler","Kellogg_School_of_Management").
+country("Chicago","United_States_of_America").
+location("West_Corporation","Omaha,_Nebraska").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+occupation("Scott_Etzler","Scott_Etzler__1").
+type("Chicago","City").
+type("West_Corporation","Public_company").
+birthPlace("David_Thodey","Perth,_Western_Australia").
+birthPlace("David_Thodey","Perth").
+birthYear("David_Thodey","1954").
+employer("David_Thodey","Telstra").
+occupation("David_Thodey","David_Thodey__1").
+occupation("David_Thodey","Chief_Executive_Officer").
+predecessor("David_Thodey","Solomon_Trujillo").
+operatingIncome("Telstra","6.3E9").
+location("Perth","Adelaide").
+location("Perth","Darwin,_Northern_Territory").
+location("Perth","Melbourne").
+location("Perth","Sydney").
+location("Perth","Jandakot_Airport").
+location("Perth","Kalamunda").
+location("Perth","Perth, Western Australia").
+type("Perth","city").
+birthYear("Andy_Penn","1963").
+numberOfEmployees("Telstra","36165").
+country("Perth","Australia").
+employer("Andy_Penn","Telstra").
+industry("Telstra","Telecommunication").
+keyPerson("Telstra","Chief_financial_officer").
+keyPerson("Telstra","Andy_Penn").
+keyPerson("Telstra","Chairperson").
+location("Telstra","Australia").
+location("Telstra","Melbourne").
+location("Telstra","Telstra_Corporate_Centre").
+occupation("Andy_Penn","Chief_Executive_Officer").
+occupation("Andy_Penn","Andy_Penn__1").
+predecessor("Andy_Penn","David_Thodey").
+type("Telstra","Public_company").

@@ -1,0 +1,35 @@
+keyPerson("Adobe_Systems","Shantanu_Narayen").
+keyPerson("Adobe_Systems","Charles_Geschke").
+keyPerson("Adobe_Systems","John_Warnock").
+location("Adobe_Systems","Adobe_Systems_headquarters_complex").
+location("Adobe_Systems","California").
+location("Adobe_Systems","San_Jose,_California").
+type("Adobe_Systems","Public_company").
+birthPlace("John_Warnock","Salt_Lake_City").
+birthPlace("Shantanu_Narayen","Hyderabad").
+birthPlace("Shantanu_Narayen","India").
+birthPlace("Shantanu_Narayen","Telangana").
+birthPlace("Charles_Geschke","Cleveland").
+birthPlace("Charles_Geschke","Cleveland,_Ohio").
+location("Mountain_View,_California","Mountain View").
+location("San_Jose,_California","San Jose, California").
+nationality("Charles_Geschke","United_States").
+occupation("Shantanu_Narayen","Adobe_Systems").
+occupation("Shantanu_Narayen","Shantanu_Narayen__1").
+type("Mountain_View,_California","Charter_city").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+birthPlace("Sunil_Mittal","Ludhiana").
+birthPlace("Sunil_Mittal","India").
+birthPlace("Sunil_Mittal","Punjab_(India)").
+nationality("Sunil_Mittal","India").
+occupation("Sunil_Mittal","Sunil_Mittal__1").
+occupation("Sunil_Mittal","Bharti_Enterprises").
+location("Ludhiana","Ludhiana").
+foundedBy("Bharti_Enterprises","Sunil_Bharti_Mittal").
+keyPerson("Bharti_Enterprises","Chairman").
+keyPerson("Bharti_Enterprises","Sunil_Bharti_Mittal").
+location("Bharti_Enterprises","India").
+location("Bharti_Enterprises","New_Delhi").
+type("New_Delhi","List_of_districts_of_Delhi").
+type("Bharti_Enterprises","Private_company").

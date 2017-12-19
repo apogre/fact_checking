@@ -1,0 +1,9 @@
+keyPerson(A,B) :- location(A,C) , birthPlace(B,C) , nationality(B,C).
+keyPerson(A,B) :- predecessor(C,B) , birthPlace(C,D) , location(A,D).
+keyPerson(A,B) :- birthPlace(B,C) , location(D,C) , location(A,D).
+keyPerson(A,B) :- keyPerson(A,C) , occupation(B,C).
+keyPerson(A,B) :- keyPerson(C,B) , legalForm(C,D) , type(A,D).
+not_keyPerson(A,B) :- keyPerson(C,B) , parentCompany(D,C) , parentCompany(A,D).
+not_keyPerson(A,B) :- keyPerson(C,B) , location(C,D) , headquarter(A,D).
+not_keyPerson(A,B) :- keyPerson(A,C) , parent(C,B).
+not_keyPerson(A,B) :- foundedBy(C,B) , parentCompany(C,A).

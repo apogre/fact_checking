@@ -1,0 +1,32 @@
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+type("GlaxoSmithKline","Public_limited_company").
+birthPlace("Andrew_Witty","England").
+birthPlace("Philip_Hampton","United_Kingdom").
+birthPlace("Philip_Hampton","United Kingdom").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("England","Administrative_division").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","University_of_Nottingham").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Philip_Hampton","GlaxoSmithKline").
+occupation("Philip_Hampton","Philip_Hampton__1").
+parentCompany("Stiefel_Laboratories","GlaxoSmithKline").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+birthPlace("Jean-Pierre_Garnier","Le_Mans").
+birthPlace("Emma_Walmsley","Lancashire").
+nationality("Emma_Walmsley","British").
+predecessor("GlaxoSmithKline","Beckman Companies").
+predecessor("GlaxoSmithKline","Beecham Group plc").
+predecessor("GlaxoSmithKline","Glaxo plc").
+predecessor("GlaxoSmithKline","Kline & French").
+predecessor("GlaxoSmithKline","Smith plc").
+predecessor("GlaxoSmithKline","Wellcome plc").
+parent("Emma_Walmsley","Robert_Walmsley").
+predecessor("Emma_Walmsley","Sir_Andrew_Witty").
+type("University_of_Nottingham","Public_university").

@@ -1,0 +1,14 @@
+foundingYear("ConAgra_Foods","1971").
+foundingYear("ConAgra_Foods","1919").
+numberOfEmployees("ConAgra_Foods","26100").
+industry("ConAgra_Foods","Food_processing").
+keyPerson("ConAgra_Foods","Sean_Connolly").
+location("ConAgra_Foods","United_States").
+location("ConAgra_Foods","Chicago,_Illinois").
+type("ConAgra_Foods","Public_company").
+birthPlace("Mark_Zuckerberg","White_Plains,_New_York").
+birthYear("Mark_Zuckerberg","1984").
+almaMater("Mark_Zuckerberg","Harvard_University").
+occupation("Mark_Zuckerberg","Mark_Zuckerberg__1").
+spouse("Mark_Zuckerberg","Priscilla_Chan_(philanthropist)").
+spouse("Mark_Zuckerberg","United_States_elections,_2012").

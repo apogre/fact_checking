@@ -1,0 +1,28 @@
+foundingYear("Viking_Range","1987").
+foundedBy("Viking_Range","Fred_Carl,_Jr.").
+locationCity("Viking_Range","Greenwood,_Mississippi").
+parentCompany("Viking_Range","").
+type("Viking_Range","Subsidiary").
+birthPlace("Fred_Carl,_Jr.","Greenwood,_Mississippi").
+type("Greenwood,_Mississippi","City_(Mississippi)").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+birthYear("James_J._Greco","1958").
+almaMater("James_J._Greco","Georgetown_University").
+almaMater("James_J._Greco","University_of_Miami").
+almaMater("James_J._Greco","City_University,_London").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+country("Florida","Florida").
+country("Georgetown_University","US").
+country("University_of_Miami","U.S.").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+country("Connecticut","United_States").
+country("Delray_Beach,_Florida","United_States_of_America").
+country("Florida","United_States").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

@@ -1,0 +1,12 @@
+foundedBy("Tesco","Jack_Cohen_(businessman)").
+keyPerson("Tesco","Dave_Lewis_(businessman)").
+keyPerson("Tesco","John_Allan_(businessman)").
+location("Tesco","Hertfordshire").
+location("Tesco","Welwyn_Garden_City").
+type("Tesco","Public_limited_company").
+occupation("Andrew_S._Rosen","Kaplan,_Inc.").
+occupation("Andrew_S._Rosen","Andrew_S._Rosen__1").
+foundedBy("Kaplan,_Inc.","Stanley_Kaplan").
+keyPerson("Kaplan,_Inc.","Andrew_Rosen").
+parentCompany("Kaplan,_Inc.","Graham_Holdings_Company").
+type("Kaplan,_Inc.","Subsidiary").

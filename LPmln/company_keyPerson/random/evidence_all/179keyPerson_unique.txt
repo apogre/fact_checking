@@ -1,0 +1,27 @@
+netIncome("UGI_Corporation","3.37E8").
+operatingIncome("UGI_Corporation","1006.0").
+revenue("UGI_Corporation","8277.0").
+foundingYear("UGI_Corporation","1882").
+industry("UGI_Corporation","Energy_industry").
+locationCity("UGI_Corporation","King_of_Prussia,_Pennsylvania").
+locationCountry("UGI_Corporation","United_States").
+regionServed("UGI_Corporation","Pennsylvania").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("King_of_Prussia,_Pennsylvania","United States").
+country("Pennsylvania","Pennsylvania").
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+capital("United_States","Washington,_D.C.").
+country("Pennsylvania","United_States").
+largestCity("Pennsylvania","Philadelphia").
+largestCity("United_States","New_York_City").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").

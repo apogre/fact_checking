@@ -1,0 +1,112 @@
+numberOfEmployees("Oracle_Corporation","136262").
+foundationPlace("Oracle_Corporation","California").
+foundationPlace("Oracle_Corporation","Santa_Clara,_California").
+foundedBy("Oracle_Corporation","Larry_Ellison").
+foundedBy("Oracle_Corporation","Bob_Miner").
+foundedBy("Oracle_Corporation","Ed_Oates").
+industry("Oracle_Corporation","Cloud_Computing").
+industry("Oracle_Corporation","Enterprise_software").
+keyPerson("Oracle_Corporation","Safra_A._Catz").
+keyPerson("Oracle_Corporation","Mark_Hurd").
+keyPerson("Oracle_Corporation","Larry_Ellison").
+keyPerson("Oracle_Corporation","Jeffrey_O._Henley").
+locationCity("Oracle_Corporation","California").
+locationCity("Oracle_Corporation","Redwood_City,_California").
+locationCity("Oracle_Corporation","Redwood_Shores,_California").
+product("Oracle_Corporation","Oracle_Database").
+product("Oracle_Corporation","Server_(computing)").
+product("Oracle_Corporation","Computer_data_storage").
+product("Oracle_Corporation","Oracle_Corporation").
+product("Oracle_Corporation","Workstation").
+product("Oracle_Corporation","Oracle_Applications").
+product("Oracle_Corporation","Oracle_Enterprise_Manager").
+product("Oracle_Corporation","Oracle_Fusion_Middleware").
+subsidiary("Oracle_Corporation","List_of_acquisitions_by_Oracle").
+type("Oracle_Corporation","Public_company").
+networth("Safra_A._Catz","5.25E8").
+networth("Larry_Ellison","5.16E10").
+birthPlace("Safra_A._Catz","Israel").
+birthPlace("Safra_A._Catz","Holon").
+birthPlace("Mark_Hurd","Manhattan").
+birthPlace("Mark_Hurd","Manhattan,_New_York").
+birthPlace("Larry_Ellison","Manhattan").
+birthPlace("Larry_Ellison","The_Bronx").
+birthPlace("Larry_Ellison","New_York_(state)").
+birthPlace("Bob_Miner","Cicero,_Illinois").
+deathPlace("Bob_Miner","San_Francisco").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+deathPlace("Bob_Miner","San Francisco, California, U.S.").
+location("Redwood_City,_California","Redwood City, California").
+location("Santa_Clara,_California","Santa Clara, California").
+locationCountry("Oracle_Corporation","United States").
+nationality("Larry_Ellison","American").
+nationality("Bob_Miner","American, Assyrian").
+nationality("Ed_Oates","USA").
+residence("Safra_A._Catz","Redwood City, CA").
+activeYearsStartYear("Safra_A._Catz","1986").
+activeYearsStartYear("Larry_Ellison","1966").
+activeYearsStartYear("Bob_Miner","1994").
+birthYear("Safra_A._Catz","1961").
+birthYear("Mark_Hurd","1957").
+birthYear("Larry_Ellison","1944").
+birthYear("Bob_Miner","1941").
+birthYear("Ed_Oates","1946").
+deathYear("Bob_Miner","1994").
+almaMater("Larry_Ellison","University_of_Chicago").
+almaMater("Larry_Ellison","University_of_Illinois_at_Urbana-Champaign").
+country("Redwood_City,_California","United_States").
+country("Santa_Clara,_California","United_States_of_America").
+isPartOf("Redwood_City,_California","California").
+isPartOf("Redwood_City,_California","San_Mateo_County,_California").
+isPartOf("Santa_Clara,_California","California").
+isPartOf("Santa_Clara,_California","Santa_Clara_County,_California").
+largestCity("California","Los_Angeles").
+nationality("Ed_Oates","United_States").
+occupation("Safra_A._Catz","Oracle_Corporation").
+occupation("Safra_A._Catz","Safra_A._Catz__1").
+occupation("Mark_Hurd","Mark_Hurd__1").
+occupation("Mark_Hurd","Oracle_Corporation").
+occupation("Larry_Ellison","Executive_Chairman").
+occupation("Larry_Ellison","Chief_technology_officer").
+occupation("Larry_Ellison","Larry_Ellison__1").
+occupation("Bob_Miner","Oracle_Corporation").
+occupation("Bob_Miner","Bob_Miner__1").
+residence("Mark_Hurd","Palo_Alto,_California").
+residence("Larry_Ellison","Woodside,_California").
+type("Redwood_City,_California","Charter_city").
+type("Santa_Clara,_California","City_(California)").
+type("Redwood_Shores,_California","Redwood_City,_California").
+networth("Isaac_Larian","1.2E9").
+birthPlace("Isaac_Larian","Iran").
+birthPlace("Isaac_Larian","Kashan").
+birthYear("Isaac_Larian","1954").
+occupation("Isaac_Larian","MGA_Entertainment").
+occupation("Isaac_Larian","Chief_Executive_Officer").
+occupation("Isaac_Larian","Isaac_Larian__1").
+revenue("MGA_Entertainment","2.0E9").
+industry("MGA_Entertainment","Toys").
+largestCity("Iran","capital").
+foundingYear("MGA_Entertainment","1979").
+numberOfEmployees("MGA_Entertainment","1100").
+capital("Iran","Tehran").
+country("Kashan","Iran").
+isPartOf("Kashan","Central_District_(Kashan_County)").
+isPartOf("Kashan","Isfahan_Province").
+isPartOf("Kashan","Kashan_County").
+keyPerson("MGA_Entertainment","Isaac_Larian").
+keyPerson("MGA_Entertainment","Chief_executive_officer").
+location("MGA_Entertainment","United_States").
+location("MGA_Entertainment","Los_Angeles,_California").
+type("MGA_Entertainment","Private_company").

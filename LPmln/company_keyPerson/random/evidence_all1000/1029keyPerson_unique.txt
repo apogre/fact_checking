@@ -1,0 +1,53 @@
+country("Tracinda","United_States").
+foundedBy("Tracinda","Kirk_Kerkorian").
+keyPerson("Tracinda","Kirk_Kerkorian").
+locationCity("Tracinda","Nevada").
+locationCity("Tracinda","Las_Vegas").
+networth("Kirk_Kerkorian","4.0E9").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+deathPlace("Kirk_Kerkorian","Beverly_Hills,_California").
+deathPlace("Kirk_Kerkorian","Los_Angeles").
+city("Nevada","Carson City, NevadaCarson City").
+city("Nevada","Enterprise, NevadaEnterprise").
+city("Nevada","Henderson, NevadaHenderson").
+city("Nevada","Las Vegas, NevadaLas Vegas").
+city("Nevada","North Las Vegas, NevadaNorth Las Vegas").
+city("Nevada","Paradise, NevadaParadise").
+city("Nevada","Reno, NevadaReno").
+city("Nevada","Sparks, NevadaSparks").
+city("Nevada","Spring Valley, NevadaSpring Valley").
+city("Nevada","Sunrise Manor, NevadaSunrise Manor").
+country("Nevada","Nevada").
+religion("Kirk_Kerkorian","Armenian Apostolic Church").
+residence("Kirk_Kerkorian","Beverly Hills, California").
+birthYear("Kirk_Kerkorian","1917").
+deathYear("Kirk_Kerkorian","2015").
+capital("Nevada","Carson_City,_Nevada").
+capital("United_States","Washington,_D.C.").
+country("Las_Vegas","United_States_of_America").
+country("Nevada","United_States").
+isPartOf("Las_Vegas","Nevada").
+isPartOf("Las_Vegas","Clark_County,_Nevada").
+largestCity("Nevada","Las_Vegas").
+largestCity("United_States","New_York_City").
+type("Las_Vegas","City").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+birthYear("Gunupati_Venkata_Krishna_Reddy","1937").
+nationality("Gunupati_Venkata_Krishna_Reddy","India").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+residence("Gunupati_Venkata_Krishna_Reddy","India").
+stateOfOrigin("Gunupati_Venkata_Krishna_Reddy","India").
+type("Padma_Bhushan","Civilian").
+type("Andhra_Pradesh","States_of_India").
+capital("India","New_Delhi").
+country("Andhra_Pradesh","India").
+largestCity("India","Mumbai").
+religion("Telugu_people","Buddhism").
+religion("Telugu_people","Christianity").
+religion("Telugu_people","Islam").
+religion("Telugu_people","Jainism").
+religion("Telugu_people","Hinduism").

@@ -1,0 +1,39 @@
+operatingIncome("UBS","3.0605E10").
+numberOfEmployees("UBS","60099").
+industry("UBS","Banking").
+industry("UBS","Financial_services").
+keyPerson("UBS","Axel_A._Weber").
+location("UBS","Basel").
+predecessor("UBS","Union_Bank_of_Switzerland").
+predecessor("UBS","Swiss_Bank_Corporation").
+predecessor("UBS","PaineWebber").
+type("UBS","Public_company").
+type("UBS","Aktiengesellschaft").
+birthPlace("Axel_A._Weber","Kusel").
+birthPlace("Axel_A._Weber","Rhineland-Palatinate").
+location("Basel","Binningen").
+predecessor("Union_Bank_of_Switzerland","Bank in Winterthur").
+predecessor("Union_Bank_of_Switzerland","Toggenburger Bank").
+predecessor("Swiss_Bank_Corporation","Bankverein").
+predecessor("Swiss_Bank_Corporation","Basler Bankverein").
+type("Union_Bank_of_Switzerland","Acquired").
+type("Swiss_Bank_Corporation","Acquired").
+foundingYear("Union_Bank_of_Switzerland","1862").
+foundingYear("Swiss_Bank_Corporation","1852").
+numberOfEmployees("Union_Bank_of_Switzerland","29100").
+almaMater("Axel_A._Weber","University_of_Konstanz").
+almaMater("Axel_A._Weber","University_of_Siegen").
+country("Basel","Switzerland").
+industry("Union_Bank_of_Switzerland","Banking").
+industry("Union_Bank_of_Switzerland","Financial_services").
+industry("Union_Bank_of_Switzerland","Investment").
+industry("Swiss_Bank_Corporation","Banking").
+industry("Swiss_Bank_Corporation","Financial_services").
+industry("Swiss_Bank_Corporation","Investment").
+location("Union_Bank_of_Switzerland","Switzerland").
+location("Union_Bank_of_Switzerland","Zurich").
+location("Swiss_Bank_Corporation","Basel").
+location("Swiss_Bank_Corporation","Switzerland").
+occupation("Axel_A._Weber","Economist").
+predecessor("Axel_A._Weber","Ernst_Welteke").
+occupation("James_M._Wells,_III","James_M._Wells,_III__1").

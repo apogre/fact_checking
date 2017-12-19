@@ -1,0 +1,44 @@
+http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/parentCompany(v1,v0) & http://dbpedia.org/ontology/parentCompany(subject,v1),-0.004878
+http://dbpedia.org/ontology/location(subject,v0) & http://dbpedia.org/ontology/country(v0,v1) & http://dbpedia.org/ontology/deathPlace(object,v1),0.700000
+http://dbpedia.org/ontology/networth(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/netIncome(subject,v1),0.002574
+http://dbpedia.org/ontology/birthYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/numberOfEmployees(subject,v1),0.000000
+http://dbpedia.org/ontology/keyPerson(subject,v0) & http://dbpedia.org/ontology/parent(v0,object),-0.002439
+http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/recordLabel(v1,v0) & http://dbpedia.org/ontology/recordLabel(v1,subject),0.009007
+http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/locationCountry(v0,v1) & http://dbpedia.org/ontology/headquarter(subject,v1),0.000000
+http://dbpedia.org/ontology/foundedBy(subject,object) & http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/owner(v0,object),2.800000
+http://dbpedia.org/ontology/subsidiary(v0,subject) & !=(v1,v0) & http://dbpedia.org/ontology/occupation(object,v1),0.009007
+http://dbpedia.org/ontology/nationality(object,v0) & http://dbpedia.org/ontology/largestCity(v0,http://dbpedia.org/resource/New_York_City) & http://dbpedia.org/ontology/locationCity(subject,http://dbpedia.org/resource/New_York_City),null
+http://dbpedia.org/ontology/occupation(object,v0) & http://dbpedia.org/ontology/subsidiary(v0,subject),0.001287
+http://dbpedia.org/ontology/locationCity(subject,v0) & http://dbpedia.org/ontology/largestCity(http://dbpedia.org/resource/United_States,v0) & http://dbpedia.org/ontology/stateOfOrigin(object,http://dbpedia.org/resource/United_States),null
+http://dbpedia.org/ontology/headquarter(subject,v0) & http://dbpedia.org/ontology/locationCity(v1,v0) & http://dbpedia.org/ontology/keyPerson(v1,object),0.000000
+http://dbpedia.org/ontology/keyPerson(subject,v0) & http://dbpedia.org/ontology/occupation(v0,subject) & http://dbpedia.org/ontology/foundedBy(subject,object),5.596341
+http://dbpedia.org/ontology/headquarter(subject,v0) & http://dbpedia.org/ontology/location(v1,v0) & http://dbpedia.org/ontology/keyPerson(v1,object),0.000000
+http://dbpedia.org/ontology/numberOfEmployees(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/birthYear(object,v1),-0.036585
+http://dbpedia.org/ontology/occupation(object,v0) & !=(v0,v1) & http://dbpedia.org/ontology/subsidiary(v1,subject),0.009007
+http://dbpedia.org/ontology/parentCompany(subject,v0) & http://dbpedia.org/ontology/locationCity(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.002574
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/locationCity(v1,v0) & http://dbpedia.org/ontology/parentCompany(subject,v1),0.002574
+http://dbpedia.org/ontology/stateOfOrigin(object,v0) & http://dbpedia.org/ontology/largestCity(v0,http://dbpedia.org/resource/New_York_City) & http://dbpedia.org/ontology/locationCity(subject,http://dbpedia.org/resource/New_York_City),null
+http://dbpedia.org/ontology/locationCity(subject,v0) & http://dbpedia.org/ontology/largestCity(http://dbpedia.org/resource/United_States,v0) & http://dbpedia.org/ontology/nationality(object,http://dbpedia.org/resource/United_States),null
+http://dbpedia.org/ontology/foundedBy(v0,object) & http://dbpedia.org/ontology/locationCity(v0,v1) & http://dbpedia.org/ontology/location(subject,v1),0.870122
+http://dbpedia.org/ontology/numberOfEmployees(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1),-0.001220
+http://dbpedia.org/ontology/foundedBy(subject,object),23.045122
+http://dbpedia.org/ontology/location(subject,v0) & http://dbpedia.org/ontology/locationCity(v1,v0) & http://dbpedia.org/ontology/foundedBy(v1,object),0.006434
+http://dbpedia.org/ontology/activeYearsStartYear(object,v0) & <(v0,v1) & http://dbpedia.org/ontology/foundingYear(subject,v1),0.016728
+http://dbpedia.org/ontology/netIncome(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/networth(object,v1),1.395122
+http://dbpedia.org/ontology/foundingYear(subject,v0) & <(v0,v1) & http://dbpedia.org/ontology/deathYear(object,v1),0.012868
+http://dbpedia.org/ontology/foundedBy(v0,object) & http://dbpedia.org/ontology/parentCompany(v0,subject),-0.004878
+http://dbpedia.org/ontology/headquarter(subject,v0) & http://dbpedia.org/ontology/locationCountry(v1,v0) & http://dbpedia.org/ontology/keyPerson(v1,object),0.000000
+http://dbpedia.org/ontology/recordLabel(v0,subject) & http://dbpedia.org/ontology/recordLabel(v0,v1) & http://dbpedia.org/ontology/keyPerson(v1,object),2.450000
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/headquarter(subject,v0),0.006434
+http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/location(v0,v1) & http://dbpedia.org/ontology/headquarter(subject,v1),-0.007317
+http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/largestCity(v1,v0) & http://dbpedia.org/ontology/location(subject,v1),0.039739
+http://dbpedia.org/ontology/parentCompany(subject,v0) & http://dbpedia.org/ontology/parentCompany(v0,v1) & http://dbpedia.org/ontology/keyPerson(v1,object),0.000000
+http://dbpedia.org/ontology/keyPerson(v0,object) & http://dbpedia.org/ontology/locationCity(v0,v1) & http://dbpedia.org/ontology/headquarter(subject,v1),0.000000
+http://dbpedia.org/ontology/deathYear(object,v0) & >(v0,v1) & http://dbpedia.org/ontology/foundingYear(subject,v1),3.491463
+http://dbpedia.org/ontology/parentCompany(subject,v0) & http://dbpedia.org/ontology/location(v0,v1) & http://dbpedia.org/ontology/birthPlace(object,v1),0.002574
+http://dbpedia.org/ontology/parentCompany(v0,subject) & !=(v0,v1) & http://dbpedia.org/ontology/foundedBy(v1,object),0.009007
+http://dbpedia.org/ontology/industry(subject,v0) & http://dbpedia.org/ontology/product(subject,v0) & http://dbpedia.org/ontology/foundedBy(subject,object),0.276341
+http://dbpedia.org/ontology/foundedBy(subject,object) & http://dbpedia.org/ontology/birthPlace(object,v0) & http://dbpedia.org/ontology/location(subject,v0),0.002574
+http://dbpedia.org/ontology/foundingYear(subject,v0) & >(v0,v1) & http://dbpedia.org/ontology/activeYearsStartYear(object,v1),1.774878
+http://dbpedia.org/ontology/foundedBy(subject,object) & http://dbpedia.org/ontology/foundedBy(v0,object) & http://dbpedia.org/ontology/parentCompany(v0,subject),0.000000
+http://dbpedia.org/ontology/foundedBy(v0,object) & !=(v1,v0) & http://dbpedia.org/ontology/parentCompany(v1,subject),0.009007

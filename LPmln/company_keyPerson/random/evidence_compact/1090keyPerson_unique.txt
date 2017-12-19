@@ -1,0 +1,4 @@
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").
+type("University_of_Pennsylvania","Private_university").
+type("Emory_University","Private_university").

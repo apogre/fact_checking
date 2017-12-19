@@ -1,0 +1,10 @@
+birthPlace("Hans_Vestberg","Hudiksvall").
+birthPlace("Hans_Vestberg","Sweden").
+birthYear("Hans_Vestberg","1965").
+occupation("Hans_Vestberg","Hans_Vestberg__1").
+occupation("Hans_Vestberg","CEO").
+largestCity("Sweden","capital").
+location("Hudiksvall","Hudiksvall").
+capital("Sweden","Stockholm").
+country("Hudiksvall","Sweden").
+isPartOf("Hudiksvall","Hudiksvall_Municipality").

@@ -1,0 +1,5 @@
+type("TradeKing","Private_company").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+type("Fort_Lauderdale,_Florida","City").
+birthPlace("Fred_Carl,_Jr.","Greenwood,_Mississippi").
+type("Greenwood,_Mississippi","City_(Mississippi)").

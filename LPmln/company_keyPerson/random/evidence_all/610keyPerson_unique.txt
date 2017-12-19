@@ -1,0 +1,89 @@
+revenue("Kaplan,_Inc.","2.6E9").
+foundingYear("Kaplan,_Inc.","1938").
+foundedBy("Kaplan,_Inc.","Stanley_Kaplan").
+keyPerson("Kaplan,_Inc.","Andrew_Rosen").
+locationCity("Kaplan,_Inc.","Fort_Lauderdale,_Florida").
+parentCompany("Kaplan,_Inc.","Graham_Holdings_Company").
+type("Kaplan,_Inc.","Subsidiary").
+revenue("Graham_Holdings_Company","2.58E9").
+birthPlace("Stanley_Kaplan","New_York_City").
+deathPlace("Stanley_Kaplan","New_York_City").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+nationality("Stanley_Kaplan","USA").
+netIncome("Graham_Holdings_Company","US$").
+operatingIncome("Graham_Holdings_Company","US$").
+birthYear("Stanley_Kaplan","1919").
+deathYear("Stanley_Kaplan","2009").
+foundingYear("Graham_Holdings_Company","2013").
+numberOfEmployees("Graham_Holdings_Company","11500").
+almaMater("Stanley_Kaplan","City_College_of_New_York").
+country("Fort_Lauderdale,_Florida","United_States_of_America").
+foundationPlace("Graham_Holdings_Company","Washington,_D.C.").
+industry("Graham_Holdings_Company","Mass_media").
+isPartOf("Fort_Lauderdale,_Florida","Florida").
+isPartOf("Fort_Lauderdale,_Florida","Broward_County,_Florida").
+keyPerson("Graham_Holdings_Company","Donald_E._Graham").
+keyPerson("Graham_Holdings_Company","Chief_financial_officer").
+keyPerson("Graham_Holdings_Company","Chief_executive_officer").
+keyPerson("Graham_Holdings_Company","Chairman").
+location("Graham_Holdings_Company","United_States").
+location("Graham_Holdings_Company","Arlington,_Virginia").
+occupation("Stanley_Kaplan","Kaplan,_Inc.").
+occupation("Stanley_Kaplan","Stanley_Kaplan__1").
+product("Graham_Holdings_Company","Magazine").
+product("Graham_Holdings_Company","Electronic_media").
+product("Graham_Holdings_Company","Education").
+product("Graham_Holdings_Company","Television").
+product("Graham_Holdings_Company","Cable_television").
+type("Fort_Lauderdale,_Florida","City").
+type("Graham_Holdings_Company","Public_company").
+birthPlace("Ashok_Vemuri","New_Delhi").
+birthPlace("Ashok_Vemuri","India").
+activeYearsStartYear("Ashok_Vemuri","1992").
+birthYear("Ashok_Vemuri","1968").
+almaMater("Ashok_Vemuri","Indian_Institute_of_Management,_Ahmedabad").
+occupation("Ashok_Vemuri","Business_executive").
+occupation("Ashok_Vemuri","Ashok_Vemuri__1").
+residence("Ashok_Vemuri","United_States").
+residence("Ashok_Vemuri","New_Jersey").
+assets("Xerox","2.48E10").
+netIncome("Xerox","4.88E8").
+operatingIncome("Xerox","6.45E8").
+revenue("Xerox","1.804E10").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+location("St._Stephen's_College,_Delhi","University Enclave, New Delhi, India").
+type("Xerox","Public").
+numberOfEmployees("Xerox","140800").
+capital("India","New_Delhi").
+capital("New_Jersey","Trenton,_New_Jersey").
+capital("United_States","Washington,_D.C.").
+country("New_Delhi","India").
+country("New_Jersey","United_States").
+foundationPlace("Xerox","Rochester,_New_York").
+foundationPlace("Xerox","United_States").
+foundationPlace("Xerox","New_York_(state)").
+industry("Xerox","Document_management_system").
+isPartOf("New_Delhi","Delhi").
+keyPerson("Xerox","Ursula_Burns").
+largestCity("India","Mumbai").
+largestCity("New_Jersey","Newark,_New_Jersey").
+largestCity("United_States","New_York_City").
+locationCity("Xerox","Connecticut").
+locationCity("Xerox","Norwalk,_Connecticut").
+locationCountry("Xerox","United_States").
+product("Xerox","Image_projector").
+product("Xerox","Image_scanner").
+product("Xerox","Office_equipment").
+product("Xerox","Printer_(computing)").
+type("New_Delhi","List_of_districts_of_Delhi").

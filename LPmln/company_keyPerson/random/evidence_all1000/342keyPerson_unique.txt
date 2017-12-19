@@ -1,0 +1,76 @@
+assets("Campbell_Soup_Company","6.862E9").
+equity("Campbell_Soup_Company","1.096E9").
+netIncome("Campbell_Soup_Company","8.02E8").
+operatingIncome("Campbell_Soup_Company","1.279E9").
+revenue("Campbell_Soup_Company","7.719E9").
+foundingYear("Campbell_Soup_Company","1869").
+numberOfEmployees("Campbell_Soup_Company","17500").
+industry("Campbell_Soup_Company","Food_processing").
+keyPerson("Campbell_Soup_Company","Chief_Executive_Officer").
+keyPerson("Campbell_Soup_Company","Chairman").
+keyPerson("Campbell_Soup_Company","President").
+keyPerson("Campbell_Soup_Company","Denise_Morrison").
+location("Campbell_Soup_Company","New_Jersey").
+location("Campbell_Soup_Company","United_States").
+location("Campbell_Soup_Company","Camden,_New_Jersey").
+product("Campbell_Soup_Company","V8_(beverage)").
+product("Campbell_Soup_Company","Liebig").
+product("Campbell_Soup_Company","Pepperidge_Farm").
+product("Campbell_Soup_Company","Bolthouse_Farms").
+product("Campbell_Soup_Company","Pace_Foods").
+product("Campbell_Soup_Company","Arnott's_Biscuits_Holdings").
+type("Campbell_Soup_Company","Public_company").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+birthPlace("Denise_Morrison","Elberon, New Jersey").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+location("Camden,_New_Jersey","Camden, New Jersey").
+nationality("Denise_Morrison","American").
+residence("Denise_Morrison","Princeton, New Jersey").
+type("V8_(beverage)","Vegetable_juice").
+birthYear("Denise_Morrison","1954").
+foundingYear("Pepperidge_Farm","1937").
+almaMater("Denise_Morrison","Boston_College").
+capital("New_Jersey","Trenton,_New_Jersey").
+capital("United_States","Washington,_D.C.").
+country("Camden,_New_Jersey","United_States").
+country("New_Jersey","United_States").
+industry("Pepperidge_Farm","Food_processing").
+isPartOf("Camden,_New_Jersey","New_Jersey").
+isPartOf("Camden,_New_Jersey","Camden_County,_New_Jersey").
+keyPerson("Pepperidge_Farm","Senior_Vice_President").
+largestCity("New_Jersey","Newark,_New_Jersey").
+largestCity("United_States","New_York_City").
+location("Pepperidge_Farm","Norwalk,_Connecticut").
+location("Pepperidge_Farm","United_States").
+occupation("Denise_Morrison","Denise_Morrison__1").
+parentCompany("Pepperidge_Farm","Campbell_Soup_Company").
+type("Camden,_New_Jersey","City_(New_Jersey)").
+type("Pepperidge_Farm","Subsidiary").
+activeYearsStartYear("Robert_Noel_(businessman)","1985").
+birthYear("Robert_Noel_(businessman)","1964").
+almaMater("Robert_Noel_(businessman)","Reading_University").
+occupation("Robert_Noel_(businessman)","Robert_Noel_(businessman)__1").
+personFunction("Robert_Noel_(businessman)","Robert_Noel_(businessman)__1").
+predecessor("Robert_Noel_(businessman)","Francis_Salway").
+residence("Robert_Noel_(businessman)","Frinton-on-Sea").
+salary("Robert_Noel_(businessman)","2272000.0").
+foundingYear("Marlborough_College","1843").
+city("Marlborough_College","Marlborough,_Wiltshire").
+country("Frinton-on-Sea","England").
+country("Frinton-on-Sea","Essex").
+country("Frinton-on-Sea","United_Kingdom").
+country("Marlborough_College","England").
+country("Marlborough_College","United_Kingdom").
+religion("Marlborough_College","Church_of_England").
+type("Marlborough_College","Independent_school_(United_Kingdom)").

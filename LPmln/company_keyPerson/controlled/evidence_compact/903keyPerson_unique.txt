@@ -1,0 +1,14 @@
+numberOfEmployees("Sleep_Country_Canada","674").
+keyPerson("Sleep_Country_Canada","Christine_Magee").
+keyPerson("Sleep_Country_Canada","David_Friesma").
+keyPerson("Sleep_Country_Canada","Stephen_K._Gunn").
+locationCity("Sleep_Country_Canada","Toronto").
+locationCountry("Sleep_Country_Canada","Canada").
+birthPlace("Christine_Magee","Ontario").
+birthPlace("Christine_Magee","Toronto").
+location("Toronto","The_Annex").
+birthYear("Christine_Magee","1959").
+almaMater("Christine_Magee","University_of_Western_Ontario").
+country("Toronto","Canada").
+occupation("Christine_Magee","Christine_Magee__1").
+type("Toronto","List_of_cities_in_Ontario").

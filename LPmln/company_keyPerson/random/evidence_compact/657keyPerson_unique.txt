@@ -1,0 +1,15 @@
+keyPerson("MetLife","Steven_A._Kandarian").
+location("MetLife","United_States").
+location("MetLife","New_York_(state)").
+location("MetLife","1095_Avenue_of_the_Americas").
+location("MetLife","New_York_City").
+type("MetLife","Public_company").
+birthPlace("Steven_A._Kandarian","West_Hartford,_Connecticut").
+location("1095_Avenue_of_the_Americas","New_York_(state)").
+nationality("Steven_A._Kandarian","Armenian-American").
+occupation("Steven_A._Kandarian","Steven_A._Kandarian__1").
+occupation("Steven_A._Kandarian","President").
+occupation("Steven_A._Kandarian","Chief_executive_officer").
+occupation("Steven_A._Kandarian","Chairman").
+occupation("Steven_A._Kandarian","MetLife").
+type("New_York_City","City_(New_York)").

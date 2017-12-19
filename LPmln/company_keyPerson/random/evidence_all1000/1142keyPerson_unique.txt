@@ -1,0 +1,96 @@
+numberOfLocations("Walgreens","8177").
+foundingYear("Walgreens","1901").
+foundationPlace("Walgreens","Chicago").
+foundationPlace("Walgreens","United_States").
+foundationPlace("Walgreens","Illinois").
+foundedBy("Walgreens","Charles_Rudolph_Walgreen").
+industry("Walgreens","Retail").
+keyPerson("Walgreens","James_A._Skinner").
+parentCompany("Walgreens","Walgreens_Boots_Alliance").
+product("Walgreens","Drug_store").
+product("Walgreens","Pharmacy").
+regionServed("Walgreens","United_States").
+type("Walgreens","Subsidiary").
+netIncome("Walgreens_Boots_Alliance","4.2E9").
+revenue("Walgreens_Boots_Alliance","1.034E11").
+birthPlace("Charles_Rudolph_Walgreen","Knoxville,_Illinois").
+birthPlace("James_A._Skinner","Moline,_Illinois").
+deathPlace("Charles_Rudolph_Walgreen","Cuba").
+almaMater("Charles_Rudolph_Walgreen","Dixon Business College").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+locationCountry("Walgreens_Boots_Alliance","United States").
+nationality("James_A._Skinner","American").
+type("Pharmacy","Professional").
+birthYear("Charles_Rudolph_Walgreen","1873").
+birthYear("James_A._Skinner","1944").
+deathYear("Charles_Rudolph_Walgreen","1939").
+foundingYear("Walgreens_Boots_Alliance","2014").
+numberOfEmployees("Walgreens_Boots_Alliance","370000").
+capital("Illinois","Springfield,_Illinois").
+capital("United_States","Washington,_D.C.").
+country("Chicago","United_States_of_America").
+country("Illinois","United_States").
+country("Deerfield,_Illinois","United_States").
+foundationPlace("Walgreens_Boots_Alliance","Chicago").
+industry("Walgreens_Boots_Alliance","Retail").
+industry("Walgreens_Boots_Alliance","Pharmaceutical").
+isPartOf("Chicago","Illinois").
+isPartOf("Chicago","DuPage_County,_Illinois").
+isPartOf("Chicago","Cook_County,_Illinois").
+keyPerson("Walgreens_Boots_Alliance","James_A._Skinner").
+keyPerson("Walgreens_Boots_Alliance","Stefano_Pessina").
+largestCity("Illinois","Chicago").
+largestCity("United_States","New_York_City").
+locationCity("Walgreens_Boots_Alliance","Deerfield,_Illinois").
+nationality("Charles_Rudolph_Walgreen","United_States").
+occupation("Charles_Rudolph_Walgreen","Walgreens").
+occupation("Charles_Rudolph_Walgreen","Charles_Rudolph_Walgreen__1").
+occupation("James_A._Skinner","Walgreens_Boots_Alliance").
+occupation("James_A._Skinner","James_A._Skinner__1").
+product("Walgreens_Boots_Alliance","Pharmacy").
+product("Walgreens_Boots_Alliance","Drug_store").
+stateOfOrigin("Charles_Rudolph_Walgreen","United_States").
+subsidiary("Walgreens_Boots_Alliance","Walgreens").
+subsidiary("Walgreens_Boots_Alliance","Alliance_Healthcare").
+subsidiary("Walgreens_Boots_Alliance","Farmacias_Ahumada").
+subsidiary("Walgreens_Boots_Alliance","Farmacias_Benavides").
+subsidiary("Walgreens_Boots_Alliance","Duane_Reade").
+subsidiary("Walgreens_Boots_Alliance","Boots_UK").
+subsidiary("Walgreens_Boots_Alliance","Drugstore.com").
+subsidiary("Walgreens_Boots_Alliance","Boots_Opticians").
+type("Chicago","City").
+type("Deerfield,_Illinois","List_of_towns_and_villages_in_Illinois").
+type("Walgreens_Boots_Alliance","Public_company").
+salary("James_A._Skinner","639881.0").
+birthPlace("Antony_Jenkins","Manchester").
+activeYearsStartYear("Antony_Jenkins","1982").
+birthYear("Antony_Jenkins","1961").
+almaMater("Antony_Jenkins","University_College,_Oxford").
+almaMater("Antony_Jenkins","Cranfield_School_of_Management").
+occupation("Antony_Jenkins","Antony_Jenkins__1").
+personFunction("Antony_Jenkins","Antony_Jenkins__1").
+salary("Antony_Jenkins","5467000.0").
+country("Cranfield_School_of_Management","United Kingdom").
+location("University_College,_Oxford","High_Street,_Oxford").
+city("Cranfield_School_of_Management","Cranfield").
+country("Manchester","United_Kingdom").
+isPartOf("Manchester","England").
+isPartOf("Manchester","Cheshire").
+isPartOf("Manchester","Lancashire").
+isPartOf("Manchester","Greater_Manchester").
+isPartOf("Manchester","North_West_England").
+isPartOf("University_College,_Oxford","University_of_Oxford").
+location("University_College,_Oxford","Oxford").
+type("Manchester","City_status_in_the_United_Kingdom").
+type("Manchester","Metropolitan_borough").
+type("Cranfield_School_of_Management","Business_School").

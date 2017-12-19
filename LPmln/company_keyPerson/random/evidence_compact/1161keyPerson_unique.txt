@@ -1,0 +1,20 @@
+keyPerson("Graham_Holdings_Company","Donald_E._Graham").
+keyPerson("Graham_Holdings_Company","Chief_executive_officer").
+keyPerson("Graham_Holdings_Company","Chairman").
+keyPerson("Graham_Holdings_Company","Chief_financial_officer").
+location("Graham_Holdings_Company","United_States").
+location("Graham_Holdings_Company","Arlington,_Virginia").
+type("Graham_Holdings_Company","Public_company").
+birthPlace("Donald_E._Graham","United_States").
+occupation("Donald_E._Graham","Chairman_of_the_board").
+occupation("Donald_E._Graham","Donald_E._Graham__1").
+parent("Donald_E._Graham","Phil_Graham").
+parent("Donald_E._Graham","Katharine_Graham").
+type("Washington,_D.C.","Federal_district").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+birthPlace("Lisa_Bonder","Columbus,_Ohio").
+location("Los_Angeles","Los Angeles").
+type("Beverly_Hills,_California","General_law_city").
+type("Fresno,_California","Charter_city").
+type("Fresno,_California","County_seat").
+type("Los_Angeles","Metropolitan_City").

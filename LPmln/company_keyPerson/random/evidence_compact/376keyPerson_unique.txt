@@ -1,0 +1,5 @@
+keyPerson("Citigroup","Michael_Corbat").
+keyPerson("Citigroup","Michael_E._O'Neill").
+type("Citigroup","Public_company").
+birthPlace("Norbert_Reithofer","Penzberg").
+type("Penzberg","Stadt").

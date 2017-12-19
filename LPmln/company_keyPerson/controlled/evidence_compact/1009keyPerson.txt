@@ -1,0 +1,24 @@
+foundingYear("Tim_Hortons","1964").
+numberOfEmployees("Tim_Hortons","100000").
+foundationPlace("Tim_Hortons","Hamilton,_Ontario").
+keyPerson("Tim_Hortons","Alex_Behring").
+keyPerson("Tim_Hortons","Daniel_Schwartz").
+location("Tim_Hortons","Canada").
+location("Tim_Hortons","Oakville,_Ontario").
+parentCompany("Tim_Hortons","Restaurant_Brands_International").
+type("Tim_Hortons","Subsidiary").
+birthPlace("Dilip_Shanghvi","Mumbai").
+birthPlace("Dilip_Shanghvi","Gujarat").
+birthPlace("Dilip_Shanghvi","Amreli").
+birthYear("Dilip_Shanghvi","1955").
+almaMater("Dilip_Shanghvi","University_of_Calcutta").
+occupation("Dilip_Shanghvi","Sun_Pharmaceuticals").
+occupation("Dilip_Shanghvi","Dilip_Shanghvi__1").
+type("University_of_Calcutta","University and college").
+type("Gujarat","States").
+country("Mumbai","India").
+country("Amreli","India").
+country("University_of_Calcutta","India").
+country("Gujarat","India").
+type("Mumbai","Megacity").
+type("University_of_Calcutta","Public_university").

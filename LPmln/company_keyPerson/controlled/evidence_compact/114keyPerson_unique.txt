@@ -1,0 +1,61 @@
+numberOfEmployees("PepsiCo","263000").
+foundationPlace("PepsiCo","New_Bern,_North_Carolina").
+foundationPlace("PepsiCo","North_Carolina").
+foundationPlace("PepsiCo","United_States").
+industry("PepsiCo","Beverages").
+industry("PepsiCo","Food_processing").
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+subsidiary("PepsiCo","List_of_assets_owned_by_PepsiCo").
+type("PepsiCo","Public_company").
+birthPlace("Donald_M._Kendall","Sequim,_Washington").
+birthPlace("Herman_Lay","Charlotte,_North_Carolina").
+birthPlace("Caleb_Bradham","North_Carolina").
+birthPlace("Caleb_Bradham","Chinquapin,_North_Carolina").
+birthPlace("Indra_Nooyi","Chennai").
+birthPlace("Indra_Nooyi","India").
+birthPlace("Indra_Nooyi","Madras_State").
+birthPlace("Indra_Nooyi","Madras").
+country("North_Carolina","North Carolina").
+location("New_Bern,_North_Carolina","New Bern, North Carolina").
+spouse("Caleb_Bradham","Charity Credle").
+spouse("Indra_Nooyi","Raj K. Nooyi").
+birthYear("Donald_M._Kendall","1921").
+birthYear("Herman_Lay","1909").
+birthYear("Caleb_Bradham","1867").
+birthYear("Indra_Nooyi","1955").
+almaMater("Indra_Nooyi","Yale_School_of_Management").
+almaMater("Indra_Nooyi","Indian_Institute_of_Management_Calcutta").
+almaMater("Indra_Nooyi","Madras_Christian_College").
+country("New_Bern,_North_Carolina","United_States").
+country("North_Carolina","United_States").
+country("Purchase,_New_York","United_States").
+employer("Indra_Nooyi","PepsiCo").
+occupation("Donald_M._Kendall","Donald_M._Kendall__1").
+occupation("Herman_Lay","Herman_Lay__1").
+occupation("Caleb_Bradham","Caleb_Bradham__1").
+occupation("Caleb_Bradham","Pepsi").
+occupation("Caleb_Bradham","Pharmacist").
+occupation("Indra_Nooyi","Chairperson").
+occupation("Indra_Nooyi","Indra_Nooyi__1").
+type("New_Bern,_North_Carolina","City").
+type("Purchase,_New_York","Hamlet_(New_York)").
+birthPlace("Steven_Reinemund","New_York_City").
+country("Yale_School_of_Management","United_States").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+spouse("Steven_Reinemund","Gail T. Reinemund").
+type("Yale_School_of_Management","Business_school").
+type("Yale_School_of_Management","Private_school").
+type("Indian_Institute_of_Management_Calcutta","Institute").
+type("Madras_Christian_College","Government Aided").
+birthYear("Steven_Reinemund","1948").
+country("Chennai","India").
+country("Greenwich,_Connecticut","United_States").
+country("Indian_Institute_of_Management_Calcutta","India").
+country("Madras_Christian_College","India").
+employer("Steven_Reinemund","Wake_Forest_University").
+predecessor("Steven_Reinemund","Roger_Enrico").
+type("Chennai","Megacity").
+type("Greenwich,_Connecticut","New_England_town").
+type("Indian_Institute_of_Management_Calcutta","Public_university").

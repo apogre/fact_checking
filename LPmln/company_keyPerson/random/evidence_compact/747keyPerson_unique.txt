@@ -1,0 +1,32 @@
+keyPerson("Office_Depot","Chief_accounting_officer").
+keyPerson("Office_Depot","Chief_executive_officer").
+keyPerson("Office_Depot","Executive_vice_president").
+keyPerson("Office_Depot","Chief_financial_officer").
+keyPerson("Office_Depot","Chairman").
+type("Office_Depot","Public_company").
+location("Boca_Raton,_Florida","Boca Raton, Florida").
+foundedBy("Grand_&_Toy","James_Grand").
+location("OfficeMax","Boca_Raton,_Florida").
+location("OfficeMax","Florida").
+location("Viking_Direct","Leicester").
+location("Viking_Direct","United_Kingdom").
+parentCompany("OfficeMax","Office_Depot").
+parentCompany("Viking_Direct","Office_Depot").
+parentCompany("Grand_&_Toy","OfficeMax").
+type("Boca_Raton,_Florida","City_(Florida)").
+type("OfficeMax","Subsidiary").
+type("OfficeMax","Brand_(marketing)").
+type("Viking_Direct","Subsidiary").
+type("Viking_Direct","Private_company_limited_by_shares").
+type("Grand_&_Toy","Subsidiary").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

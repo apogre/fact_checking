@@ -1,0 +1,16 @@
+keyPerson("Citigroup","Michael_Corbat").
+keyPerson("Citigroup","Michael_E._O'Neill").
+type("Citigroup","Public_company").
+birthPlace("Mel_Karmazin","United_States").
+birthPlace("Mel_Karmazin","Manhattan").
+birthPlace("Mel_Karmazin","New_York_(state)").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+nationality("Craig_Karmazin","United States").
+occupation("Craig_Karmazin","Craig_Karmazin__1").
+occupation("Craig_Karmazin","CEO").
+parent("Craig_Karmazin","Mel_Karmazin").
+type("Greenwich,_Connecticut","New_England_town").
+type("Manhattan","Borough_(New_York_City)").
+type("Pace_University","Nonsectarian").
+type("Pace_University","Private_University").
+type("Pace_University","Co-educational").

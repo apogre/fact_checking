@@ -1,0 +1,36 @@
+operatingIncome("Williams-Sonoma","4.521E8").
+numberOfEmployees("Williams-Sonoma","26800").
+foundedBy("Williams-Sonoma","Chuck_Williams_(author)").
+industry("Williams-Sonoma","E-commerce").
+keyPerson("Williams-Sonoma","CFO").
+keyPerson("Williams-Sonoma","Chief_executive_officer").
+keyPerson("Williams-Sonoma","CEO").
+keyPerson("Williams-Sonoma","Laura_Alber").
+type("Williams-Sonoma","Public_company").
+birthPlace("Chuck_Williams_(author)","Florida").
+birthPlace("Chuck_Williams_(author)","Jacksonville,_Florida").
+birthYear("Chuck_Williams_(author)","1915").
+occupation("Chuck_Williams_(author)","Chuck_Williams_(author)__1").
+birthPlace("Grandhi_Mallikarjuna_Rao","Srikakulam").
+birthPlace("Grandhi_Mallikarjuna_Rao","India").
+birthPlace("Grandhi_Mallikarjuna_Rao","Rajam,_Andhra_Pradesh").
+birthPlace("Grandhi_Mallikarjuna_Rao","Andhra_Pradesh").
+birthYear("Grandhi_Mallikarjuna_Rao","1950").
+occupation("Grandhi_Mallikarjuna_Rao","GMR_Group").
+occupation("Grandhi_Mallikarjuna_Rao","Grandhi_Mallikarjuna_Rao__1").
+division("GMR_Group","Airports, Energy, Highways and Urban Infrastructure").
+industry("GMR_Group","Infrastructure").
+location("Srikakulam","Srikakulam, Andhra Pradesh").
+type("Andhra_Pradesh","States_of_India").
+foundingYear("GMR_Group","1978").
+numberOfEmployees("GMR_Group","10000").
+country("Andhra_Pradesh","India").
+country("Srikakulam","India").
+country("Rajam,_Andhra_Pradesh","India").
+foundedBy("GMR_Group","Grandhi_Mallikarjuna_Rao").
+keyPerson("GMR_Group","Grandhi_Mallikarjuna_Rao").
+locationCity("GMR_Group","Bengaluru").
+locationCountry("GMR_Group","India").
+type("GMR_Group","Listed_company").
+type("Srikakulam","City").
+type("Rajam,_Andhra_Pradesh","Town").

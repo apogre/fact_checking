@@ -1,0 +1,13 @@
+foundedBy("Tracinda","Kirk_Kerkorian").
+keyPerson("Tracinda","Kirk_Kerkorian").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+type("Las_Vegas","City").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+nationality("Gunupati_Venkata_Krishna_Reddy","India").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+type("Padma_Bhushan","Civilian").
+type("Andhra_Pradesh","States_of_India").

@@ -1,0 +1,31 @@
+foundedBy("Canonical_(company)","Mark_Shuttleworth").
+keyPerson("Canonical_(company)","Jane_Silber").
+keyPerson("Canonical_(company)","Mark_Shuttleworth").
+location("Canonical_(company)","London").
+location("Canonical_(company)","United_Kingdom").
+type("Canonical_(company)","Private_company_limited_by_shares").
+birthPlace("Mark_Shuttleworth","South_Africa").
+birthPlace("Mark_Shuttleworth","Welkom").
+birthPlace("Mark_Shuttleworth","Free_State_(province)").
+birthPlace("Jane_Silber","United_States").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("Launchpad_(website)","Project Hosting Server").
+nationality("Mark_Shuttleworth","South_Africa").
+nationality("Mark_Shuttleworth","United_Kingdom").
+occupation("Mark_Shuttleworth","Mark_Shuttleworth__1").
+birthPlace("Lloyd_Blankfein","New_York_(state)").
+birthPlace("Lloyd_Blankfein","The_Bronx").
+birthPlace("Lloyd_Blankfein","New_York_City").
+birthPlace("Lloyd_Blankfein","United_States").
+predecessor("Lloyd_Blankfein","Henry_Paulson").
+birthPlace("Henry_Paulson","Florida").
+birthPlace("Henry_Paulson","Palm_Beach,_Florida").
+predecessor("Democratic_Party_(United_States)","Democratic-Republican_Party").
+headquarter("Democratic_Party_(United_States)","Washington,_D.C.").
+headquarter("Democratic_Party_(United_States)","South_Capitol_Street").
+predecessor("Henry_Paulson","John_W._Snow").
+predecessor("Henry_Paulson","Jon_Corzine").
+type("New_York_City","City_(New_York)").
+type("The_Bronx","Borough_(New_York_City)").
+type("Harvard_University","Research_university").

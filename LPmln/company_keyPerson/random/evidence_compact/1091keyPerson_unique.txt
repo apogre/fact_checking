@@ -1,0 +1,16 @@
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").
+birthPlace("James_Goodnight","Salisbury,_North_Carolina").
+birthPlace("James_Goodnight","Salisbury,_NC").
+nationality("James_Goodnight","United_States").
+occupation("James_Goodnight","Inventor").
+occupation("James_Goodnight","Entrepreneur").
+occupation("James_Goodnight","James_Goodnight__1").
+occupation("James_Goodnight","CEO").
+occupation("James_Goodnight","Software_engineer").
+occupation("James_Goodnight","Statistician").
+type("Salisbury,_North_Carolina","City").
+type("North_Carolina_State_University","Public_university").
+type("North_Carolina_State_University","Land-grant_university").
+type("North_Carolina_State_University","Sea-grant_university").
+type("North_Carolina_State_University","Space-grant_university").

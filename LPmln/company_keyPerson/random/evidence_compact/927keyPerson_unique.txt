@@ -1,0 +1,17 @@
+birthPlace("Frank_Appel","Hamburg").
+occupation("Frank_Appel","Frank_Appel__1").
+occupation("Frank_Appel","Deutsche_Post").
+predecessor("Frank_Appel","Klaus_Zumwinkel").
+birthPlace("Klaus_Zumwinkel","Germany").
+birthPlace("Klaus_Zumwinkel","Rheinberg").
+birthPlace("Klaus_Zumwinkel","Northrhine-Westphalia").
+location("Hamburg","Hamburg").
+location("Hamburg","left").
+keyPerson("Deutsche_Post","Chief_financial_officer").
+keyPerson("Deutsche_Post","Wulf_von_Schimmelmann").
+keyPerson("Deutsche_Post","Frank_Appel").
+location("Deutsche_Post","Bonn").
+location("Deutsche_Post","Germany").
+location("Deutsche_Post","Post_Tower").
+occupation("Klaus_Zumwinkel","Klaus_Zumwinkel__1").
+type("Deutsche_Post","Aktiengesellschaft").

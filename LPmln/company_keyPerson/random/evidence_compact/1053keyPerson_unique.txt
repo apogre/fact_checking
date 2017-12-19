@@ -1,0 +1,24 @@
+foundedBy("Toys_for_Bob","Fred_Ford_(programmer)").
+foundedBy("Toys_for_Bob","Paul_Reiche_III").
+parentCompany("Toys_for_Bob","Activision").
+type("Toys_for_Bob","Subsidiary").
+birthPlace("Paul_Reiche_III","Lincoln,_Nebraska").
+occupation("Paul_Reiche_III","Toys_for_Bob").
+occupation("Paul_Reiche_III","Game_designer").
+occupation("Paul_Reiche_III","Paul_Reiche_III__1").
+parentCompany("Activision","Activision_Blizzard").
+type("Novato,_California","City_(California)").
+type("Activision","Division_(business)").
+birthPlace("Felipe_Gozon","Ermita,_Manila").
+birthPlace("Felipe_Gozon","Manila").
+birthPlace("Felipe_Gozon","Commonwealth_of_the_Philippines").
+nationality("Felipe_Gozon","Filipino_people").
+occupation("Felipe_Gozon","Lawyer").
+occupation("Felipe_Gozon","Felipe_Gozon__1").
+location("Manila","Port Area, Manila").
+parent("Yale_Law_School","Yale_University").
+type("Lawyer","Lawyer").
+type("Manila","Capital_city").
+type("Yale_Law_School","Private_school").
+type("University_of_the_Philippines_Diliman","Research_institute").
+type("University_of_the_Philippines_Diliman","National_university").

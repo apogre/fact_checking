@@ -1,0 +1,12 @@
+foundingYear("Nation_Media_Group","1959").
+industry("Nation_Media_Group","Mass_media").
+location("Nation_Media_Group","Kenya").
+location("Nation_Media_Group","Nairobi").
+type("Nation_Media_Group","Public_company").
+location("Nairobi","Nairobi").
+country("Nairobi","Kenya").
+type("Nairobi","List_of_cities_and_towns_in_Kenya_by_population").
+birthPlace("Stefano_Pessina","Pescara").
+birthYear("Stefano_Pessina","1941").
+almaMater("Stefano_Pessina","Polytechnic_University_of_Milan").
+occupation("Stefano_Pessina","Stefano_Pessina__1").

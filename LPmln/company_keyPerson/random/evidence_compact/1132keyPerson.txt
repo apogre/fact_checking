@@ -1,0 +1,27 @@
+headquarter("Vulcan_Inc.","United_States").
+headquarter("Vulcan_Inc.","Seattle").
+type("Vulcan_Inc.","Privately_held_company").
+birthPlace("Paul_Allen","Seattle").
+birthPlace("Paul_Allen","Seattle,_Washington").
+occupation("Jody_Allen","Seattle_Seahawks").
+occupation("Jody_Allen","Jody_Allen__1").
+occupation("Paul_Allen","Portland_Trail_Blazers").
+occupation("Paul_Allen","Allen_Institute_for_Brain_Science").
+occupation("Paul_Allen","Allen_Institute_for_Cell_Science").
+occupation("Paul_Allen","Microsoft").
+occupation("Paul_Allen","Allen_Institute_for_Artificial_Intelligence").
+occupation("Paul_Allen","Seattle_Seahawks").
+occupation("Paul_Allen","Vulcan_Inc.").
+occupation("Paul_Allen","Seattle_Sounders").
+occupation("Paul_Allen","Paul_Allen__1").
+type("Seattle","City_(Washington)").
+birthPlace("John_Thain","United_States").
+birthPlace("John_Thain","Antioch,_Illinois").
+birthPlace("John_Thain","Illinois").
+location("Antioch,_Illinois","Antioch, IL").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+type("Harvard_Business_School","Private_school").
+type("Massachusetts_Institute_of_Technology","Private_university").
+type("Massachusetts_Institute_of_Technology","Land-grant_university").

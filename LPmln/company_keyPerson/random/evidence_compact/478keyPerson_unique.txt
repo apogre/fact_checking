@@ -1,0 +1,9 @@
+keyPerson("Fidelity_Investments","Edward_Johnson,_III").
+keyPerson("Fidelity_Investments","Kathleen_Murphy_(executive)").
+keyPerson("Fidelity_Investments","Abigail_Johnson").
+nationality("Kathleen_Murphy_(executive)","American").
+occupation("Kathleen_Murphy_(executive)","Kathleen_Murphy_(executive)__1").
+occupation("Abigail_Johnson","Fidelity_Investments").
+occupation("Abigail_Johnson","Fidelity_International").
+occupation("Abigail_Johnson","Abigail_Johnson__1").
+type("Boston","Capital_city").

@@ -1,0 +1,24 @@
+parentCompany("Outback_Steakhouse","Bloomin'_Brands").
+type("Outback_Steakhouse","Subsidiary").
+location("Costa_Rica","Costa Rica").
+location("Venezuela","right").
+location("Guam","Guam").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+foundedBy("Bloomin'_Brands","J._Timothy_Gannon").
+foundedBy("Bloomin'_Brands","Chris_T._Sullivan").
+keyPerson("Bloomin'_Brands","Chief_brand_officer").
+keyPerson("Bloomin'_Brands","President").
+keyPerson("Bloomin'_Brands","Chief_executive_officer").
+keyPerson("Bloomin'_Brands","Vice_president").
+keyPerson("Bloomin'_Brands","Chairman").
+keyPerson("Bloomin'_Brands","CFO").
+location("Bloomin'_Brands","Tampa,_Florida").
+type("Bloomin'_Brands","Public_company").
+birthPlace("Diego_Della_Valle","Sant'Elpidio_a_Mare").
+birthPlace("Diego_Della_Valle","Italy").
+birthPlace("Andrea_Della_Valle","Sant'Elpidio_a_Mare").
+type("University_of_Bologna","Public").
+keyPerson("Tod's","Diego_Della_Valle").
+keyPerson("Tod's","Chief_executive_officer").
+type("Tod's","Joint-stock_company").

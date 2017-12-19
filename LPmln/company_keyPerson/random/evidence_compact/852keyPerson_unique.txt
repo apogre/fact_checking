@@ -1,0 +1,14 @@
+birthPlace("Vittorio_Colao","Brescia").
+location("Brescia","Brescia").
+type("Brescia","Cultural").
+foundedBy("RCS_MediaGroup","Angelo_Rizzoli").
+keyPerson("RCS_MediaGroup","Urbano_Cairo").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+keyPerson("Vodafone","Vittorio_Colao").
+location("Vodafone","Newbury,_Berkshire").
+parentCompany("RCS_MediaGroup","Cairo_Communication").
+predecessor("Vodafone","Racal").
+type("RCS_MediaGroup","S.A._(corporation)").
+type("Vodafone","Public_limited_company").
+type("Harvard_University","Research_university").
+type("Bocconi_University","Private_school").

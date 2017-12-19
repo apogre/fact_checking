@@ -1,0 +1,23 @@
+keyPerson("Cavium","Syed_B._Ali").
+keyPerson("Cavium","M._Raghib_Hussain").
+type("Cavium","Public_company").
+birthPlace("M._Raghib_Hussain","Karachi,_Pakistan").
+location("San_Jose,_California","San Jose, California").
+nationality("M._Raghib_Hussain","Pakistani-American").
+occupation("M._Raghib_Hussain","M._Raghib_Hussain__1").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+birthPlace("Sunil_Mittal","Ludhiana").
+birthPlace("Sunil_Mittal","India").
+birthPlace("Sunil_Mittal","Punjab_(India)").
+nationality("Sunil_Mittal","India").
+occupation("Sunil_Mittal","Sunil_Mittal__1").
+occupation("Sunil_Mittal","Bharti_Enterprises").
+location("Ludhiana","Ludhiana").
+foundedBy("Bharti_Enterprises","Sunil_Bharti_Mittal").
+keyPerson("Bharti_Enterprises","Chairman").
+keyPerson("Bharti_Enterprises","Sunil_Bharti_Mittal").
+location("Bharti_Enterprises","India").
+location("Bharti_Enterprises","New_Delhi").
+type("New_Delhi","List_of_districts_of_Delhi").
+type("Bharti_Enterprises","Private_company").

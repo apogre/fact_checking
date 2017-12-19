@@ -1,0 +1,32 @@
+operatingIncome("The_Travelers_Companies","3.437E9").
+foundingYear("The_Travelers_Companies","1853").
+foundingYear("The_Travelers_Companies","2004").
+numberOfEmployees("The_Travelers_Companies","30000").
+industry("The_Travelers_Companies","Insurance").
+keyPerson("The_Travelers_Companies","Executive_Chairman").
+keyPerson("The_Travelers_Companies","Alan_D._Schnitzer").
+keyPerson("The_Travelers_Companies","John_Dasburg").
+keyPerson("The_Travelers_Companies","Chief_Executive_Officer").
+location("The_Travelers_Companies","New_York_(state)").
+location("The_Travelers_Companies","New_York_City").
+location("The_Travelers_Companies","United_States").
+predecessor("The_Travelers_Companies","Citigroup").
+type("The_Travelers_Companies","Public_company").
+birthPlace("John_Thain","United_States").
+birthPlace("John_Thain","Antioch,_Illinois").
+birthPlace("John_Thain","Illinois").
+birthYear("John_Thain","1955").
+almaMater("John_Thain","Massachusetts_Institute_of_Technology").
+almaMater("John_Thain","Harvard_Business_School").
+country("Illinois","Illinois").
+country("Harvard_Business_School","U.S.").
+country("Massachusetts_Institute_of_Technology","United States").
+country("Republican_Party_(United_States)","United States").
+location("Antioch,_Illinois","Antioch, IL").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+country("Illinois","United_States").
+country("Antioch,_Illinois","United_States").
+type("Harvard_Business_School","Private_school").
+type("Massachusetts_Institute_of_Technology","Private_university").
+type("Massachusetts_Institute_of_Technology","Land-grant_university").

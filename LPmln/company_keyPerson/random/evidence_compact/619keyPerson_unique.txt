@@ -1,0 +1,13 @@
+keyPerson("Land_Securities","Chief_Executive").
+keyPerson("Land_Securities","Chairman").
+keyPerson("Land_Securities","Robert_Noel_(businessman)").
+keyPerson("Land_Securities","Alison_Carnwath").
+location("Land_Securities","London").
+location("Land_Securities","United_Kingdom").
+type("Land_Securities","Real_estate_investment_trust").
+occupation("Andrew_S._Rosen","Kaplan,_Inc.").
+occupation("Andrew_S._Rosen","Andrew_S._Rosen__1").
+foundedBy("Kaplan,_Inc.","Stanley_Kaplan").
+keyPerson("Kaplan,_Inc.","Andrew_Rosen").
+parentCompany("Kaplan,_Inc.","Graham_Holdings_Company").
+type("Kaplan,_Inc.","Subsidiary").

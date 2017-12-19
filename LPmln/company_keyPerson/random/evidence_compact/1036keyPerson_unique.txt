@@ -1,0 +1,13 @@
+keyPerson("The_Siegel_Group","Steve_Siegel").
+location("The_Siegel_Group","Paradise,_Nevada").
+location("The_Siegel_Group","Nevada").
+occupation("Steve_Siegel","Real_Estate_Development").
+occupation("Steve_Siegel","Steve_Siegel__1").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").
+birthPlace("Diego_Della_Valle","Sant'Elpidio_a_Mare").
+birthPlace("Diego_Della_Valle","Italy").
+birthPlace("Andrea_Della_Valle","Sant'Elpidio_a_Mare").
+type("University_of_Bologna","Public").
+keyPerson("Tod's","Diego_Della_Valle").
+keyPerson("Tod's","Chief_executive_officer").
+type("Tod's","Joint-stock_company").

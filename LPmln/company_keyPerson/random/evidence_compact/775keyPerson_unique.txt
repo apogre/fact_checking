@@ -1,0 +1,28 @@
+location("Pizza_Hut","Plano,_Texas").
+parentCompany("Pizza_Hut","PepsiCo").
+parentCompany("Pizza_Hut","Yum!_Brands").
+type("Pizza_Hut","Subsidiary").
+location("Wichita,_Kansas","Wichita Mid-Continent Airport, Kansas").
+type("Pizza","Lunch or dinner").
+keyPerson("Yum!_Brands","Greg_Creed").
+keyPerson("Yum!_Brands","CEO").
+keyPerson("Yum!_Brands","Robert_D._Walter").
+keyPerson("Yum!_Brands","CFO").
+keyPerson("PepsiCo","Indra_Nooyi").
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+type("Plano,_Texas","City_(Texas)").
+type("Wichita,_Kansas","City").
+type("Yum!_Brands","Public_company").
+type("PepsiCo","Public_company").
+type("Pizza","Flatbread").
+birthPlace("Michael_Dell","Houston").
+birthPlace("Michael_Dell","Texas").
+occupation("Michael_Dell","Dell").
+occupation("Michael_Dell","Michael_Dell__1").
+keyPerson("Dell","Michael_Dell").
+type("Houston","City").
+type("Dell","Privately_held_company").
+type("University_of_Texas_at_Austin","Flagship_campus").
+type("University_of_Texas_at_Austin","Space-grant_university").

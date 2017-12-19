@@ -1,0 +1,15 @@
+keyPerson("The_Siegel_Group","Steve_Siegel").
+location("The_Siegel_Group","Paradise,_Nevada").
+location("The_Siegel_Group","Nevada").
+occupation("Steve_Siegel","Real_Estate_Development").
+occupation("Steve_Siegel","Steve_Siegel__1").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").
+birthPlace("David_M._Cote","Manchester,_New_Hampshire").
+location("Manchester,_New_Hampshire","Manchester, NH").
+type("Manchester,_New_Hampshire","City").
+type("University_of_New_Hampshire","Public_university").
+type("University_of_New_Hampshire","Flagship_university").
+type("University_of_New_Hampshire","Land-grant_university").
+type("University_of_New_Hampshire","Sea_grant_colleges").
+type("University_of_New_Hampshire","Space_grant_colleges").
+type("Pembroke_Academy","State_school").

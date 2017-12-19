@@ -1,0 +1,36 @@
+numberOfEmployees("Valero_Energy","10103").
+industry("Valero_Energy","List_of_petroleum_companies").
+keyPerson("Valero_Energy","CEO").
+location("Valero_Energy","Texas").
+location("Valero_Energy","United_States").
+location("Valero_Energy","San_Antonio").
+regionServed("Valero_Energy","North_America").
+regionServed("Valero_Energy","Caribbean").
+type("Valero_Energy","Public_company").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+capital("Texas","Austin,_Texas").
+capital("United_States","Washington,_D.C.").
+country("Texas","United_States").
+isPartOf("San_Antonio","Texas").
+isPartOf("San_Antonio","Bexar_County,_Texas").
+isPartOf("San_Antonio","Comal_County,_Texas").
+isPartOf("San_Antonio","Medina_County,_Texas").
+largestCity("Texas","Houston").
+largestCity("United_States","New_York_City").
+type("San_Antonio","City_(Texas)").
+birthYear("Jonathan_I._Schwartz","1965").
+country("Wesleyan_University","U.S.").
+city("Wesleyan_University","Middletown,_Connecticut").
+type("Wesleyan_University","Private_university").

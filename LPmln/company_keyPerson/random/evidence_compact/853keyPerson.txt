@@ -1,0 +1,8 @@
+birthPlace("Peter_Lynch","United_States").
+occupation("Peter_Lynch","Peter_Lynch__1").
+type("Fidelity_Investments","Private").
+keyPerson("Fidelity_Investments","Kathleen_Murphy_(executive)").
+keyPerson("Fidelity_Investments","Edward_Johnson,_III").
+keyPerson("Fidelity_Investments","Abigail_Johnson").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

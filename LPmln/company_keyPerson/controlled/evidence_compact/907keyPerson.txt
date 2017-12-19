@@ -1,0 +1,7 @@
+birthPlace("Hans_Vestberg","Hudiksvall").
+birthPlace("Hans_Vestberg","Sweden").
+birthYear("Hans_Vestberg","1965").
+occupation("Hans_Vestberg","Hans_Vestberg__1").
+occupation("Hans_Vestberg","CEO").
+location("Hudiksvall","Hudiksvall").
+country("Hudiksvall","Sweden").

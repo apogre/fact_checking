@@ -1,0 +1,38 @@
+operatingIncome("BP","-7.92E9").
+foundingYear("BP","1935").
+foundingYear("BP","1954").
+foundingYear("BP","1998").
+foundingYear("BP","2001").
+numberOfEmployees("BP","79800").
+industry("BP","Petroleum_industry").
+keyPerson("BP","Carl-Henric_Svanberg").
+locationCity("BP","London").
+locationCountry("BP","England").
+locationCountry("BP","United_Kingdom").
+regionServed("BP","World").
+subsidiary("BP","Amoco").
+type("BP","Public_limited_company").
+birthPlace("Carl-Henric_Svanberg","Porjus").
+birthPlace("Bob_Dudley","Queens").
+birthPlace("Bob_Dudley","Queens,_New_York").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+spouse("Bob_Dudley","Mary Dudley").
+type("England","Administrative_division").
+type("Amoco","Oil company").
+birthYear("Carl-Henric_Svanberg","1952").
+birthYear("Bob_Dudley","1955").
+foundingYear("Amoco","1889").
+country("London","United_Kingdom").
+foundedBy("Amoco","John_D._Rockefeller").
+industry("Amoco","Oil").
+location("Amoco","United_States").
+location("Amoco","Aon_Center_(Chicago)").
+location("Amoco","Chicago,_Illinois").
+occupation("Carl-Henric_Svanberg","Carl-Henric_Svanberg__1").
+occupation("Carl-Henric_Svanberg","Volvo").
+occupation("Carl-Henric_Svanberg","British_Petroleum").
+occupation("Bob_Dudley","BP").
+occupation("Bob_Dudley","Bob_Dudley__1").
+country("Queens","United_States_of_America").
+type("Queens","Borough_(New_York_City)").

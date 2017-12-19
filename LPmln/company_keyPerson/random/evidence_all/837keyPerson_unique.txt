@@ -1,0 +1,13 @@
+birthPlace("Mike_S._Zafirovski","Socialist_Federal_Republic_of_Yugoslavia").
+birthPlace("Mike_S._Zafirovski","Skopje").
+birthYear("Mike_S._Zafirovski","1954").
+nationality("Mike_S._Zafirovski","Macedonian_American").
+stateOfOrigin("Mike_S._Zafirovski","Macedonian_American").
+country("Socialist_Federal_Republic_of_Yugoslavia","Yugoslavia").
+location("Skopje","Skopje").
+foundingYear("Socialist_Federal_Republic_of_Yugoslavia","1945").
+capital("Socialist_Federal_Republic_of_Yugoslavia","Belgrade").
+country("Skopje","Macedonia").
+isPartOf("Skopje","Skopje_Statistical_Region").
+isPartOf("Skopje","Greater_Skopje").
+type("Skopje","List_of_cities_in_the_Republic_of_Macedonia").

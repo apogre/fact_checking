@@ -1,0 +1,6 @@
+keyPerson("Yahoo!","Marissa_Mayer").
+keyPerson("Yahoo!","Maynard_Webb").
+keyPerson("Yahoo!","David_Filo").
+type("Yahoo!","Verizon_Communications").
+type("Yahoo!","Public_company").
+nationality("Gary_Rodkin","United_States").

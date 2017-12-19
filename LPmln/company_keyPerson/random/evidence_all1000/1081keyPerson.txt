@@ -1,0 +1,94 @@
+assets("U.S._Century_Bank","9.31E8").
+equity("U.S._Century_Bank","4.7E7").
+foundingYear("U.S._Century_Bank","2002").
+numberOfEmployees("U.S._Century_Bank","243").
+foundationPlace("U.S._Century_Bank","Florida").
+foundationPlace("U.S._Century_Bank","Miami,_Florida").
+industry("U.S._Century_Bank","Banking").
+industry("U.S._Century_Bank","Financial_services").
+industry("U.S._Century_Bank","Investment").
+keyPerson("U.S._Century_Bank","Chief_Executive_Officer").
+keyPerson("U.S._Century_Bank","President").
+keyPerson("U.S._Century_Bank","Chairman").
+keyPerson("U.S._Century_Bank","Alex_Acosta").
+keyPerson("U.S._Century_Bank","Luis_de_la_Aguilera").
+location("U.S._Century_Bank","Florida").
+location("U.S._Century_Bank","Miami").
+location("U.S._Century_Bank","Doral,_Florida").
+product("U.S._Century_Bank","Finance_and_insurance").
+product("U.S._Century_Bank","Commercial_bank").
+product("U.S._Century_Bank","Investment_Banking").
+product("U.S._Century_Bank","Retail_banking").
+product("U.S._Century_Bank","Private_banking").
+product("U.S._Century_Bank","Mortgages").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+capital("Florida","Tallahassee,_Florida").
+country("Florida","United_States").
+country("Miami","United_States").
+isPartOf("Miami","Florida").
+isPartOf("Miami","Miami-Dade_County,_Florida").
+isPartOf("Doral,_Florida","Florida").
+isPartOf("Doral,_Florida","Miami-Dade_County,_Florida").
+largestCity("Florida","Jacksonville,_Florida").
+type("Miami","Metropolitan_City").
+type("Doral,_Florida","List_of_communities_in_Miami-Dade_County,_Florida").
+networth("Larry_Page","3.9E10").
+birthPlace("Larry_Page","Michigan").
+birthPlace("Larry_Page","East_Lansing,_Michigan").
+birthYear("Larry_Page","1973").
+almaMater("Larry_Page","University_of_Michigan").
+almaMater("Larry_Page","Stanford_University").
+knownFor("Larry_Page","Google_Inc.").
+knownFor("Larry_Page","Alphabet_Inc").
+knownFor("Larry_Page","PageRank").
+occupation("Larry_Page","List_of_Internet_entrepreneurs").
+occupation("Larry_Page","Computer_scientist").
+occupation("Larry_Page","Larry_Page__1").
+personFunction("Larry_Page","Larry_Page__1").
+residence("Larry_Page","California").
+residence("Larry_Page","Palo_Alto,_California").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+country("University_of_Michigan","United States").
+country("Stanford_University","U.S.").
+location("Palo_Alto,_California","Palo Alto").
+capital("Michigan","Lansing,_Michigan").
+city("University_of_Michigan","Ann_Arbor,_Michigan").
+city("Stanford_University","Stanford,_California").
+country("Michigan","United_States").
+country("East_Lansing,_Michigan","United_States").
+isPartOf("East_Lansing,_Michigan","Michigan").
+isPartOf("East_Lansing,_Michigan","Ingham_County,_Michigan").
+isPartOf("East_Lansing,_Michigan","Clinton_County,_Michigan").
+isPartOf("Palo_Alto,_California","California").
+isPartOf("Palo_Alto,_California","Santa_Clara_County,_California").
+largestCity("California","Los_Angeles").
+largestCity("Michigan","Detroit").
+type("East_Lansing,_Michigan","City").
+type("Palo_Alto,_California","Charter_city").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").
+type("Stanford_University","Private_university").

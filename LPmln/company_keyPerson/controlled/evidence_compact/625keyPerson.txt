@@ -1,0 +1,15 @@
+foundingYear("Lanco_Infratech","1986").
+numberOfEmployees("Lanco_Infratech","6500").
+industry("Lanco_Infratech","Infrastructure_industry").
+industry("Lanco_Infratech","Energy_industry").
+keyPerson("Lanco_Infratech","Lagadapati_Rajagopal").
+keyPerson("Lanco_Infratech","Lagadapati_Madhusudhan_Rao").
+locationCity("Lanco_Infratech","New_Delhi").
+locationCity("Lanco_Infratech","India").
+birthPlace("Lagadapati_Rajagopal","India").
+birthPlace("Lagadapati_Rajagopal","Nellore").
+birthPlace("Lagadapati_Rajagopal","Vijayawada").
+almaMater("Lagadapati_Rajagopal","Velagapudi_Ramakrishna_Siddhartha_Engineering_College").
+country("New_Delhi","India").
+predecessor("Lagadapati_Rajagopal","Gadde_Ramamohan").
+type("New_Delhi","List_of_districts_of_Delhi").

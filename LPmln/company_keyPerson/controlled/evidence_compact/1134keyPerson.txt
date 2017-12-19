@@ -1,0 +1,42 @@
+numberOfEmployees("The_Walt_Disney_Company","180000").
+foundationPlace("The_Walt_Disney_Company","California").
+foundationPlace("The_Walt_Disney_Company","Los_Angeles").
+foundationPlace("The_Walt_Disney_Company","United_States").
+industry("The_Walt_Disney_Company","Entertainment").
+industry("The_Walt_Disney_Company","Mass_media").
+keyPerson("The_Walt_Disney_Company","Robert_A._Iger").
+locationCity("The_Walt_Disney_Company","Burbank,_California").
+locationCity("The_Walt_Disney_Company","California").
+locationCity("The_Walt_Disney_Company","Walt_Disney_Studios_(Burbank)").
+locationCountry("The_Walt_Disney_Company","United_States").
+type("The_Walt_Disney_Company","Public_company").
+birthPlace("Walt_Disney","Chicago").
+birthPlace("Roy_O._Disney","Chicago").
+birthPlace("Roy_O._Disney","Illinois").
+country("California","United_States").
+country("California","California").
+location("Burbank,_California","Burbank-Glendale-Pasadena Airport, California").
+location("Los_Angeles","Los Angeles").
+occupation("Roy_O._Disney","Entertainment industry executive").
+predecessor("Roy_O._Disney","office created").
+spouse("Roy_O._Disney","Edna Francis").
+birthYear("Walt_Disney","1901").
+foundingYear("Laugh-O-Gram_Studio","1921").
+country("Burbank,_California","United_States").
+foundedBy("Laugh-O-Gram_Studio","Walt_Disney").
+industry("Laugh-O-Gram_Studio","Film_studio").
+location("Laugh-O-Gram_Studio","Kansas_City,_Missouri").
+occupation("Walt_Disney","Walt_Disney__1").
+owner("Laugh-O-Gram_Studio","The_Walt_Disney_Company").
+owningCompany("Laugh-O-Gram_Studio","The_Walt_Disney_Company").
+predecessor("Roy_O._Disney","Walt_Disney").
+type("Burbank,_California","Charter_city").
+type("Los_Angeles","Metropolitan_City").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+birthYear("Kirk_Kerkorian","1917").
+spouse("Kirk_Kerkorian","Lisa_Bonder").
+birthPlace("Lisa_Bonder","Columbus,_Ohio").
+country("Lisa_Bonder","USA").
+type("Beverly_Hills,_California","General_law_city").
+type("Fresno,_California","Charter_city").
+type("Fresno,_California","County_seat").

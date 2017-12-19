@@ -1,0 +1,25 @@
+keyPerson("Rocawear","Jay-Z").
+keyPerson("Rocawear","Damon_Dash").
+birthPlace("Damon_Dash","New_York_City").
+keyPerson("Iconix_Brand_Group","President").
+location("Iconix_Brand_Group","New_York_City").
+location("Iconix_Brand_Group","United_States").
+location("Iconix_Brand_Group","New_York_(state)").
+nationality("Damon_Dash","Americans").
+occupation("Damon_Dash","Entrepreneur").
+occupation("Damon_Dash","Damon_Dash__1").
+type("Iconix_Brand_Group","Public_company").
+birthPlace("Masayoshi_Son","Japan").
+birthPlace("Masayoshi_Son","Tosu,_Saga").
+occupation("Masayoshi_Son","Masayoshi_Son__1").
+occupation("Masayoshi_Son","SoftBank").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+type("Tokyo","Prefectures_of_Japan").
+type("Tosu,_Saga","Cities_of_Japan").
+type("Holy_Names_University","Non-profit").
+type("Holy_Names_University","Private_university").
+type("Holy_Names_University","Coeducational").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").

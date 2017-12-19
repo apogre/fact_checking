@@ -1,0 +1,3 @@
+type("TradeKing","Private_company").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+type("Fort_Lauderdale,_Florida","City").

@@ -1,0 +1,13 @@
+keyPerson("The_Travelers_Companies","Executive_Chairman").
+keyPerson("The_Travelers_Companies","Alan_D._Schnitzer").
+keyPerson("The_Travelers_Companies","John_Dasburg").
+keyPerson("The_Travelers_Companies","Chief_Executive_Officer").
+location("The_Travelers_Companies","New_York_(state)").
+location("The_Travelers_Companies","New_York_City").
+location("The_Travelers_Companies","United_States").
+predecessor("The_Travelers_Companies","Citigroup").
+type("The_Travelers_Companies","Public_company").
+birthPlace("Jay_S._Fishman","New_York_City").
+occupation("Jay_S._Fishman","Jay_S._Fishman__1").
+type("New_York_City","City_(New_York)").
+type("University_of_Pennsylvania","Private_university").

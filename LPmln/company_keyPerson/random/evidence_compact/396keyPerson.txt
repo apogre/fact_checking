@@ -1,0 +1,6 @@
+keyPerson("ConAgra_Foods","Sean_Connolly").
+location("ConAgra_Foods","United_States").
+location("ConAgra_Foods","Chicago,_Illinois").
+type("ConAgra_Foods","Public_company").
+birthPlace("Mark_Zuckerberg","White_Plains,_New_York").
+occupation("Mark_Zuckerberg","Mark_Zuckerberg__1").

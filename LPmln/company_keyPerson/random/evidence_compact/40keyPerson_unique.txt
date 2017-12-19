@@ -1,0 +1,5 @@
+keyPerson("ConAgra_Foods","Sean_Connolly").
+location("ConAgra_Foods","United_States").
+location("ConAgra_Foods","Chicago,_Illinois").
+type("ConAgra_Foods","Public_company").
+nationality("Gary_Rodkin","United_States").

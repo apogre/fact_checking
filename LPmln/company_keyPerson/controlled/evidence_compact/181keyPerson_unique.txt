@@ -1,0 +1,14 @@
+numberOfEmployees("Valero_Energy","10103").
+industry("Valero_Energy","List_of_petroleum_companies").
+keyPerson("Valero_Energy","CEO").
+location("Valero_Energy","Texas").
+location("Valero_Energy","United_States").
+location("Valero_Energy","San_Antonio").
+regionServed("Valero_Energy","North_America").
+regionServed("Valero_Energy","Caribbean").
+type("Valero_Energy","Public_company").
+country("Texas","Texas").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+country("Texas","United_States").
+type("San_Antonio","City_(Texas)").

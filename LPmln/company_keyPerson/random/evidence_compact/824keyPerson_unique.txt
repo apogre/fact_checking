@@ -1,0 +1,11 @@
+keyPerson("Rocawear","Jay-Z").
+keyPerson("Rocawear","Damon_Dash").
+birthPlace("Damon_Dash","New_York_City").
+keyPerson("Iconix_Brand_Group","President").
+location("Iconix_Brand_Group","New_York_City").
+location("Iconix_Brand_Group","United_States").
+location("Iconix_Brand_Group","New_York_(state)").
+nationality("Damon_Dash","Americans").
+occupation("Damon_Dash","Entrepreneur").
+occupation("Damon_Dash","Damon_Dash__1").
+type("Iconix_Brand_Group","Public_company").

@@ -1,0 +1,9 @@
+keyPerson("Global_Telecom_Holding","Executive_Chairman").
+keyPerson("Global_Telecom_Holding","Khaled_Bichara").
+keyPerson("Global_Telecom_Holding","Group_CEO").
+location("Global_Telecom_Holding","Cairo").
+location("Global_Telecom_Holding","Egypt").
+parentCompany("Global_Telecom_Holding","Wind_Telecom").
+type("Global_Telecom_Holding","Public_company").
+parentCompany("Wind_Telecom","VimpelCom_Ltd.").
+type("Wind_Telecom","Subsidiary").

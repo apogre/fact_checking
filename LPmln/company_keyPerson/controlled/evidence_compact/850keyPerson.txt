@@ -1,0 +1,15 @@
+birthPlace("Tom_Enders","Neuschlade").
+birthPlace("Tom_Enders","Germany").
+birthPlace("Tom_Enders","Bruchertseifen").
+birthYear("Tom_Enders","1958").
+almaMater("Tom_Enders","University_of_Bonn").
+almaMater("Tom_Enders","University_of_California,_Los_Angeles").
+occupation("Tom_Enders","Chief_executive_officer").
+occupation("Tom_Enders","Tom_Enders__1").
+country("University_of_California,_Los_Angeles","United States").
+country("Bruchertseifen","Germany").
+country("University_of_Bonn","Germany").
+type("University_of_Bonn","Public_university").
+type("University_of_California,_Los_Angeles","Research").
+type("University_of_California,_Los_Angeles","Flagship_university").
+type("University_of_California,_Los_Angeles","Land-grant_university").

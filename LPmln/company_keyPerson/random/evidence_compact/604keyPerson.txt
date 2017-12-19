@@ -1,0 +1,23 @@
+foundedBy("Juniper_Networks","Pradeep_Sindhu").
+keyPerson("Juniper_Networks","Scott_Kriens").
+keyPerson("Juniper_Networks","Pradeep_Sindhu").
+type("Juniper_Networks","Public_company").
+birthPlace("Pradeep_Sindhu","Mumbai").
+location("Sunnyvale,_California","Sunnyvale, California").
+nationality("Scott_Kriens","United_States").
+type("Sunnyvale,_California","Charter_city").
+birthPlace("Muhtar_Kent","New_York_City").
+nationality("Muhtar_Kent","United_States").
+nationality("Muhtar_Kent","Turkey").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+parent("Muhtar_Kent","Necdet_Kent").
+type("Cass_Business_School","Undergraduate, Postgraduate, Executive Education, Research").
+nationality("Necdet_Kent","Turkish_people").
+occupation("Necdet_Kent","Diplomat").
+occupation("Necdet_Kent","Necdet_Kent__1").
+type("New_York_City","City_(New_York)").
+type("University_of_Hull","Public_university").
+type("Tarsus_American_College","Independent_school").
+type("Tarsus_American_College","Boarding_school").

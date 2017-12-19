@@ -1,0 +1,34 @@
+foundingYear("Crown_Worldwide_Group","1965").
+numberOfEmployees("Crown_Worldwide_Group","4600").
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+industry("Crown_Worldwide_Group","Warehouse").
+industry("Crown_Worldwide_Group","Relocation_service").
+industry("Crown_Worldwide_Group","Facilities_Management").
+industry("Crown_Worldwide_Group","Records_Management").
+networth("James_E._Thompson","1.0E9").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+birthYear("James_E._Thompson","1940").
+almaMater("James_E._Thompson","San_Jose_State_University").
+occupation("James_E._Thompson","James_E._Thompson__1").
+personFunction("James_E._Thompson","James_E._Thompson__1").
+birthPlace("Ben_van_Beurden","Roosendaal").
+activeYearsStartYear("Ben_van_Beurden","1983").
+birthYear("Ben_van_Beurden","1958").
+almaMater("Ben_van_Beurden","Delft_University_of_Technology").
+personFunction("Ben_van_Beurden","Ben_van_Beurden__1").
+predecessor("Ben_van_Beurden","Peter_Voser").
+birthPlace("Peter_Voser","Baden,_Switzerland").
+birthPlace("Peter_Voser","Switzerland").
+country("Delft_University_of_Technology","Netherlands").
+nationality("Peter_Voser","Swiss").
+birthYear("Peter_Voser","1958").
+almaMater("Peter_Voser","Zurich_University_of_Applied_Sciences").
+city("Delft_University_of_Technology","Delft").
+country("Roosendaal","Netherlands").
+isPartOf("Roosendaal","North_Brabant").
+occupation("Peter_Voser","Peter_Voser__1").
+personFunction("Peter_Voser","Peter_Voser__1").
+type("Roosendaal","List_of_municipalities_of_the_Netherlands").
+type("Delft_University_of_Technology","Public_university").
+type("Delft_University_of_Technology","Technical_University").

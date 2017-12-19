@@ -1,0 +1,9 @@
+foundedBy("Mossy_Oak","Toxey_Haas").
+keyPerson("Mossy_Oak","Toxey_Haas").
+location("Mossy_Oak","West_Point,_MS").
+type("Mossy_Oak","Private_company").
+birthPlace("Toxey_Haas","Mississippi").
+birthPlace("Toxey_Haas","United_States").
+birthPlace("Toxey_Haas","West_Point,_Mississippi").
+occupation("Toxey_Haas","CEO").
+occupation("Toxey_Haas","Toxey_Haas__1").

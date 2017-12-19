@@ -1,0 +1,44 @@
+keyPerson("Alliance_Boots","Stefano_Pessina").
+location("Alliance_Boots","Switzerland").
+location("Alliance_Boots","Bern").
+location("Alliance_Boots","Weybridge").
+location("Alliance_Boots","United_Kingdom").
+location("Alliance_Boots","Nottingham").
+birthPlace("Stefano_Pessina","Pescara").
+location("Bern"," Zollikofen").
+location("Nottingham","Nottingham Sutton Bonington, elevation:").
+location("Nottingham","Nottingham Watnall, elevation:").
+location("Nottingham","Nottingham Watnall, elevation:   Extremes").
+parent("Boots_Opticians","Boots Optical Investment Holdings").
+predecessor("Boots_Opticians","Clement Clarke Ltd.").
+predecessor("Boots_Opticians","Dollond & Aitchison Ltd.").
+type("Pharmacy","Professional").
+type("Alliance_Healthcare","Subsidiary").
+foundedBy("Boots_UK","John_Boot").
+keyPerson("Alliance_Healthcare","Ornella_Barra").
+keyPerson("Alliance_Healthcare","Stefano_Pessina").
+keyPerson("Boots_UK","Elizabeth_Fagan").
+keyPerson("Walgreens_Boots_Alliance","James_A._Skinner").
+keyPerson("Walgreens_Boots_Alliance","Stefano_Pessina").
+location("Boots_UK","Nottingham").
+location("Boots_UK","United_Kingdom").
+location("Boots_Opticians","Nottingham").
+location("Boots_Opticians","United_Kingdom").
+nationality("Stefano_Pessina","Monaco").
+occupation("Stefano_Pessina","Stefano_Pessina__1").
+parentCompany("Boots_UK","Walgreens_Boots_Alliance").
+type("Nottingham","City_status_in_the_United_Kingdom").
+type("Nottingham","Unitary_authorities_of_England").
+type("Guangzhou_Pharmaceuticals","Joint_venture").
+type("Boots_UK","Private_company_limited_by_shares").
+type("Boots_Opticians","Subsidiary").
+type("Walgreens_Boots_Alliance","Public_company").
+birthPlace("Frederick_W._Smith","Mississippi").
+birthPlace("Frederick_W._Smith","Marks,_Mississippi").
+birthPlace("Frederick_W._Smith","United_States").
+parent("Yale_College","Yale_University").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+type("Yale_College","Private_school").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+type("Marks,_Mississippi","City").

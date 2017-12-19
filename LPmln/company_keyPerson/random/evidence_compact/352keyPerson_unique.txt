@@ -1,0 +1,21 @@
+foundedBy("Capital_One","Nigel_Morris").
+foundedBy("Capital_One","Richard_Fairbank").
+keyPerson("Capital_One","Chief_financial_officer").
+keyPerson("Capital_One","Richard_Fairbank").
+keyPerson("Capital_One","Chairman").
+keyPerson("Capital_One","President").
+keyPerson("Capital_One","Chief_Executive_Officer").
+location("Capital_One","United_States").
+location("Capital_One","McLean,_Virginia").
+location("Capital_One","Tysons_Corner,_Virginia").
+type("Capital_One","Public_company").
+location("Richmond,_Virginia","Richmond International Airport, Virginia").
+type("McLean,_Virginia","Census-designated_place").
+type("Richmond,_Virginia","Independent_city_(United_States)").
+type("Richmond,_Virginia","List_of_capitals_in_the_United_States").
+type("Tysons_Corner,_Virginia","Census-designated_place").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+occupation("Denise_Morrison","Denise_Morrison__1").
+type("Long_Branch,_New_Jersey","City_(New_Jersey)").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

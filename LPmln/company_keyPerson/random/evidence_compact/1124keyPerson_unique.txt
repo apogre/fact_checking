@@ -1,0 +1,13 @@
+foundedBy("Volkswagen","German_Labour_Front").
+parentCompany("Volkswagen","Volkswagen_Group").
+type("Volkswagen","Public").
+type("Wolfsburg","town").
+keyPerson("Volkswagen_Commercial_Vehicles","Dr._Eckhard_Scholz").
+location("Volkswagen_Commercial_Vehicles","Germany").
+location("Volkswagen_Commercial_Vehicles","Hanover").
+parentCompany("Volkswagen_Commercial_Vehicles","Volkswagen_Group").
+type("Volkswagen_Commercial_Vehicles","Subsidiary").
+type("Volkswagen_Group","Public_company").
+nationality("Naguib_Sawiris","Egypt").
+headquarter("Free_Egyptians_Party","Zamalek").
+type("ETH_Zurich","Public_university").

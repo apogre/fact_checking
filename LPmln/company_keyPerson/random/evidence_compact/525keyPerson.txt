@@ -1,0 +1,44 @@
+foundedBy("GMA_Network","Robert_%22Uncle_Bob%22_Stewart").
+keyPerson("GMA_Network","Chief_Executive_Officer").
+keyPerson("GMA_Network","President").
+keyPerson("GMA_Network","Felipe_Gozon").
+keyPerson("GMA_Network","Chief_Operating_Officer").
+type("GMA_Network","Terrestrial_television").
+birthPlace("Felipe_Gozon","Manila").
+birthPlace("Felipe_Gozon","Commonwealth_of_the_Philippines").
+birthPlace("Felipe_Gozon","Ermita,_Manila").
+parent("GMA_Network_(company)","GMA Holdings, Inc.").
+predecessor("GMA_Network_(company)","Loreto F. de Hemedes Inc.").
+predecessor("GMA_Network_(company)","Republic Broadcasting System Inc.").
+foundedBy("GMA_Network_(company)","Robert_%22Uncle_Bob%22_Stewart").
+keyPerson("GMA_News_TV","GMA_Network_Inc.").
+keyPerson("GMA_News_TV","CEO").
+keyPerson("GMA_News_TV","Eddie_Villanueva").
+keyPerson("GMA_News_TV","GMA_Network_(company)").
+keyPerson("GMA_News_TV","Felipe_Gozon").
+keyPerson("GMA_Network_(company)","Chief_financial_officer").
+keyPerson("GMA_Network_(company)","Chief_operating_officer").
+keyPerson("GMA_Network_(company)","President").
+keyPerson("GMA_Network_(company)","Chief_executive_officer").
+keyPerson("GMA_Network_(company)","Felipe_Gozon").
+nationality("Felipe_Gozon","Filipino_people").
+occupation("Felipe_Gozon","Lawyer").
+occupation("Felipe_Gozon","Felipe_Gozon__1").
+type("GMA_Network_(company)","Public_company").
+birthPlace("Anshu_Jain","Jaipur").
+birthPlace("Anshu_Jain","Rajasthan").
+occupation("Anshu_Jain","Anshu_Jain__1").
+occupation("Anshu_Jain","Deutsche_Bank").
+location("Jaipur","Jaipur").
+type("Rajasthan","States_and_union_territories_of_India").
+keyPerson("Deutsche_Bank","John_Cryan").
+keyPerson("Deutsche_Bank","Paul_Achleitner").
+location("Deutsche_Bank","Frankfurt").
+location("Deutsche_Bank","Germany").
+location("Deutsche_Bank","Deutsche_Bank_Twin_Towers").
+type("Jaipur","City").
+type("University_of_Massachusetts_Amherst","Public_University").
+type("University_of_Massachusetts_Amherst","Flagship_university").
+type("University_of_Massachusetts_Amherst","Land-grant_university").
+type("Deutsche_Bank","Aktiengesellschaft").
+type("University_of_Delhi","Public_university").

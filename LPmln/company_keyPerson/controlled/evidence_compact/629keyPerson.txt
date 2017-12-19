@@ -1,0 +1,28 @@
+operatingIncome("Las_Vegas_Sands","4.09E9").
+foundingYear("Las_Vegas_Sands","1988").
+numberOfEmployees("Las_Vegas_Sands","40000").
+foundedBy("Las_Vegas_Sands","Sheldon_G._Adelson").
+industry("Las_Vegas_Sands","Tourism").
+industry("Las_Vegas_Sands","Hospitality").
+keyPerson("Las_Vegas_Sands","Partha_Ojha").
+keyPerson("Las_Vegas_Sands","Sheldon_G._Adelson").
+location("Las_Vegas_Sands","Nevada").
+location("Las_Vegas_Sands","Paradise,_Nevada").
+owner("Las_Vegas_Sands","Sheldon_Adelson").
+owningCompany("Las_Vegas_Sands","Sheldon_Adelson").
+birthPlace("Sheldon_Adelson","Boston").
+birthPlace("Sheldon_Adelson","Massachusetts").
+birthPlace("Sheldon_Adelson","United_States").
+country("Nevada","Nevada").
+spouse("Sheldon_Adelson","Miriam Ochsorn").
+spouse("Sheldon_Adelson","Sandra Adelson").
+birthYear("Sheldon_Adelson","1933").
+almaMater("Sheldon_Adelson","City_College_of_New_York").
+country("Nevada","United_States").
+country("Paradise,_Nevada","United_States").
+occupation("Sheldon_Adelson","Sheldon_Adelson__1").
+occupation("Sheldon_Adelson","Las_Vegas_Sands").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").
+birthYear("Jonathan_I._Schwartz","1965").
+country("Wesleyan_University","U.S.").
+type("Wesleyan_University","Private_university").

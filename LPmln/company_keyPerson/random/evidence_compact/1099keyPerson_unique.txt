@@ -1,0 +1,16 @@
+keyPerson("Valero_Energy","CEO").
+location("Valero_Energy","Texas").
+location("Valero_Energy","United_States").
+location("Valero_Energy","San_Antonio").
+type("Valero_Energy","Public_company").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+type("San_Antonio","City_(Texas)").
+birthPlace("Bob_Dudley","Queens,_New_York").
+birthPlace("Bob_Dudley","Queens").
+occupation("Bob_Dudley","BP").
+occupation("Bob_Dudley","Bob_Dudley__1").
+keyPerson("BP","Carl-Henric_Svanberg").
+keyPerson("BP","Bob_Dudley").
+type("Queens","Borough_(New_York_City)").
+type("BP","Public_limited_company").

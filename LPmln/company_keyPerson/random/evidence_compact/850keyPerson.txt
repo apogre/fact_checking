@@ -1,0 +1,10 @@
+birthPlace("Tom_Enders","Neuschlade").
+birthPlace("Tom_Enders","Germany").
+birthPlace("Tom_Enders","Bruchertseifen").
+nationality("Tom_Enders","Germany").
+occupation("Tom_Enders","Chief_executive_officer").
+occupation("Tom_Enders","Tom_Enders__1").
+type("University_of_Bonn","Public_university").
+type("University_of_California,_Los_Angeles","Research").
+type("University_of_California,_Los_Angeles","Flagship_university").
+type("University_of_California,_Los_Angeles","Land-grant_university").

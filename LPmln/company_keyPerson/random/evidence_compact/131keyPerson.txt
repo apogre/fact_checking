@@ -1,0 +1,4 @@
+birthPlace("Tom_L._Ward","Seiling,_Oklahoma").
+occupation("Tom_L._Ward","Tapstone_Energy").
+occupation("Tom_L._Ward","Tom_L._Ward__1").
+type("Seiling,_Oklahoma","City").

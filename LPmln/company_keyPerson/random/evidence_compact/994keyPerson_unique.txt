@@ -1,0 +1,24 @@
+keyPerson("Telstra","Chief_financial_officer").
+keyPerson("Telstra","Chairperson").
+keyPerson("Telstra","Andy_Penn").
+location("Telstra","Melbourne").
+location("Telstra","Telstra_Corporate_Centre").
+location("Telstra","Australia").
+type("Telstra","Public_company").
+location("Melbourne","Canberra").
+location("Melbourne","Perth").
+location("Melbourne","Sydney").
+location("Melbourne","Adelaide").
+location("Melbourne","Brisbane").
+location("Melbourne","Melbourne City").
+type("Melbourne","city").
+location("Telstra_Corporate_Centre","Melbourne,_Australia").
+occupation("Andy_Penn","Chief_Executive_Officer").
+occupation("Andy_Penn","Andy_Penn__1").
+predecessor("Andy_Penn","David_Thodey").
+birthPlace("John_P._Surma","United_States").
+birthPlace("John_P._Surma","Pennsylvania").
+birthPlace("John_P._Surma","Pittsburgh").
+occupation("John_P._Surma","John_P._Surma__1").
+occupation("John_P._Surma","United_States_Steel_Corporation").
+type("Pittsburgh","City").

@@ -1,0 +1,24 @@
+foundedBy("Qwest","Phillip_Anschutz").
+predecessor("Qwest","US_West").
+type("Qwest","CenturyLink").
+predecessor("Qwest_Corporation","Colorado Telephone").
+predecessor("Qwest_Corporation","Rocky Mountain Bell").
+type("US_West","Public").
+keyPerson("CenturyLink","William_Owens_(admiral)").
+keyPerson("CenturyLink","Glen_Post").
+keyPerson("CenturyLink","Chief_Executive_Officer").
+keyPerson("CenturyLink","Chairman").
+location("Qwest_Corporation","Denver").
+location("Qwest_Corporation","Colorado").
+location("Qwest_Corporation","1801_California_Street").
+parentCompany("Qwest_Corporation","CenturyLink").
+parentCompany("Qwest_Corporation","American_Telephone_&_Telegraph").
+parentCompany("Qwest_Corporation","US_West").
+parentCompany("Qwest_Corporation","Qwest").
+predecessor("US_West","Northwestern_Bell").
+predecessor("US_West","American_Telephone_and_Telegraph_Company").
+type("CenturyLink","Public_company").
+type("Qwest_Corporation","CenturyLink").
+occupation("Douglas_R._Oberhelman","Douglas_R._Oberhelman__1").
+occupation("Douglas_R._Oberhelman","Business_Executive").
+predecessor("Douglas_R._Oberhelman","James_W._Owens").

@@ -1,0 +1,3 @@
+foundedBy("United_Parcel_Service","James_E._Casey").
+location("United_Parcel_Service","United_States").
+location("United_Parcel_Service","Sandy_Springs,_Georgia").

@@ -1,0 +1,42 @@
+operatingIncome("Prudential_Financial","1.759E9").
+foundingYear("Prudential_Financial","1875").
+numberOfEmployees("Prudential_Financial","48331").
+foundationPlace("Prudential_Financial","New_Jersey").
+foundationPlace("Prudential_Financial","Newark,_New_Jersey").
+foundationPlace("Prudential_Financial","United_States").
+foundedBy("Prudential_Financial","John_F._Dryden").
+industry("Prudential_Financial","Financial_Services").
+keyPerson("Prudential_Financial","Mark_Grier").
+keyPerson("Prudential_Financial","John_Strangfeld").
+locationCity("Prudential_Financial","Newark,_New_Jersey").
+locationCity("Prudential_Financial","Prudential_Headquarters").
+locationCountry("Prudential_Financial","United_States").
+type("Prudential_Financial","Public_company").
+birthPlace("John_F._Dryden","Temple,_Maine").
+country("New_Jersey","New Jersey").
+location("Newark,_New_Jersey","Newark, New Jersey").
+country("New_Jersey","United_States").
+predecessor("John_F._Dryden","William_Joyce_Sewell").
+type("Newark,_New_Jersey","City_(New_Jersey)").
+birthPlace("Larry_Page","Michigan").
+birthPlace("Larry_Page","East_Lansing,_Michigan").
+birthYear("Larry_Page","1973").
+almaMater("Larry_Page","University_of_Michigan").
+almaMater("Larry_Page","Stanford_University").
+occupation("Larry_Page","List_of_Internet_entrepreneurs").
+occupation("Larry_Page","Computer_scientist").
+occupation("Larry_Page","Larry_Page__1").
+country("California","United_States").
+country("California","California").
+country("University_of_Michigan","United States").
+country("Stanford_University","U.S.").
+location("Palo_Alto,_California","Palo Alto").
+country("Michigan","United_States").
+country("East_Lansing,_Michigan","United_States").
+type("East_Lansing,_Michigan","City").
+type("Palo_Alto,_California","Charter_city").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").
+type("Stanford_University","Private_university").

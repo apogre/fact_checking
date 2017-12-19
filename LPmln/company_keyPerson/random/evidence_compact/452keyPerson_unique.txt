@@ -1,0 +1,9 @@
+foundedBy("Electronic_Arts","Trip_Hawkins").
+keyPerson("Electronic_Arts","Andrew_Wilson_(businessman)").
+keyPerson("Electronic_Arts","Larry_Probst").
+keyPerson("Electronic_Arts","Peter_Moore_(business)").
+location("Electronic_Arts","California").
+location("Electronic_Arts","Redwood_City,_California").
+location("Electronic_Arts","United_States").
+type("Electronic_Arts","Public_company").
+type("Wesleyan_University","Private_university").

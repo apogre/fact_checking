@@ -1,0 +1,41 @@
+operatingIncome("Campbell_Soup_Company","1.279E9").
+foundingYear("Campbell_Soup_Company","1869").
+numberOfEmployees("Campbell_Soup_Company","17500").
+industry("Campbell_Soup_Company","Food_processing").
+keyPerson("Campbell_Soup_Company","Chief_Executive_Officer").
+keyPerson("Campbell_Soup_Company","Chairman").
+keyPerson("Campbell_Soup_Company","President").
+keyPerson("Campbell_Soup_Company","Denise_Morrison").
+location("Campbell_Soup_Company","New_Jersey").
+location("Campbell_Soup_Company","United_States").
+location("Campbell_Soup_Company","Camden,_New_Jersey").
+type("Campbell_Soup_Company","Public_company").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+birthPlace("Denise_Morrison","Elberon, New Jersey").
+country("New_Jersey","New Jersey").
+location("Camden,_New_Jersey","Camden, New Jersey").
+type("V8_(beverage)","Vegetable_juice").
+birthYear("Denise_Morrison","1954").
+foundingYear("Pepperidge_Farm","1937").
+almaMater("Denise_Morrison","Boston_College").
+country("Camden,_New_Jersey","United_States").
+country("New_Jersey","United_States").
+industry("Pepperidge_Farm","Food_processing").
+keyPerson("Pepperidge_Farm","Senior_Vice_President").
+location("Pepperidge_Farm","Norwalk,_Connecticut").
+location("Pepperidge_Farm","United_States").
+occupation("Denise_Morrison","Denise_Morrison__1").
+parentCompany("Pepperidge_Farm","Campbell_Soup_Company").
+type("Camden,_New_Jersey","City_(New_Jersey)").
+type("Pepperidge_Farm","Subsidiary").
+birthYear("Robert_Noel_(businessman)","1964").
+almaMater("Robert_Noel_(businessman)","Reading_University").
+occupation("Robert_Noel_(businessman)","Robert_Noel_(businessman)__1").
+predecessor("Robert_Noel_(businessman)","Francis_Salway").
+foundingYear("Marlborough_College","1843").
+country("Frinton-on-Sea","England").
+country("Frinton-on-Sea","Essex").
+country("Frinton-on-Sea","United_Kingdom").
+country("Marlborough_College","England").
+country("Marlborough_College","United_Kingdom").
+type("Marlborough_College","Independent_school_(United_Kingdom)").

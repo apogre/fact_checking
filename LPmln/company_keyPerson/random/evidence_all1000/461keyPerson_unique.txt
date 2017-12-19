@@ -1,0 +1,172 @@
+numberOfEmployees("ExxonMobil","75300").
+industry("ExxonMobil","Oil_and_gas_industry").
+keyPerson("ExxonMobil","Rex_W._Tillerson").
+predecessor("ExxonMobil","Exxon").
+predecessor("ExxonMobil","Mobil").
+product("ExxonMobil","Natural_gas").
+product("ExxonMobil","Crude_oil").
+product("ExxonMobil","Petrochemical").
+product("ExxonMobil","Oil_products").
+subsidiary("ExxonMobil","Exxon_Neftegas").
+subsidiary("ExxonMobil","Mobil_Producing_Nigeria").
+subsidiary("ExxonMobil","Esso_Australia").
+subsidiary("ExxonMobil","Aera_Energy").
+subsidiary("ExxonMobil","Superior_Oil_Company").
+subsidiary("ExxonMobil","Vacuum_Oil_Company").
+subsidiary("ExxonMobil","Esso").
+subsidiary("ExxonMobil","Exxon").
+subsidiary("ExxonMobil","Mobil").
+subsidiary("ExxonMobil","XTO_Energy").
+subsidiary("ExxonMobil","Imperial_Oil").
+subsidiary("ExxonMobil","Syncrude").
+subsidiary("ExxonMobil","SeaRiver_Maritime").
+type("ExxonMobil","Public_company").
+assets("Imperial_Oil","2.364E9").
+equity("Imperial_Oil","1.6377E10").
+netIncome("Imperial_Oil","3.766E9").
+revenue("Imperial_Oil","3.1188E10").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+industry("Esso_Australia","Energy").
+type("Exxon","Automobile_repair_shop").
+type("Exxon","Car_wash").
+type("Exxon","Convenience_store").
+type("Exxon","Diesel_fuel").
+type("Exxon","Gasoline").
+type("Exxon","At some locations:").
+foundingYear("Esso_Australia","1933").
+foundingYear("Aera_Energy","1997").
+foundingYear("Esso","1912").
+foundingYear("XTO_Energy","1986").
+foundingYear("Imperial_Oil","1880").
+foundingYear("Syncrude","1964").
+numberOfEmployees("Aera_Energy","1370").
+numberOfEmployees("Imperial_Oil","5263").
+numberOfEmployees("Syncrude","5600").
+capital("Texas","Austin,_Texas").
+capital("United_States","Washington,_D.C.").
+country("Texas","United_States").
+country("Irving,_Texas","United_States").
+country("SeaRiver_Maritime","United_States").
+foundationPlace("XTO_Energy","Fort_Worth,_Texas").
+foundationPlace("Imperial_Oil","Canada").
+foundationPlace("Imperial_Oil","London,_Ontario").
+foundationPlace("Imperial_Oil","Ontario").
+foundedBy("XTO_Energy","Bob_R._Simpson").
+industry("Aera_Energy","List_of_petroleum_companies").
+industry("XTO_Energy","Oil_and_gas_industry").
+industry("Imperial_Oil","Petroleum_industry").
+industry("Syncrude","List_of_petroleum_companies").
+isPartOf("Irving,_Texas","Texas").
+isPartOf("Irving,_Texas","Dallas_County,_Texas").
+keyPerson("Imperial_Oil","Richard_Kruger").
+keyPerson("Imperial_Oil","President").
+keyPerson("Imperial_Oil","Chairman").
+largestCity("Texas","Houston").
+largestCity("United_States","New_York_City").
+location("Aera_Energy","California").
+location("Aera_Energy","Bakersfield").
+location("Esso","Irving,_Texas").
+location("Imperial_Oil","Alberta").
+location("Imperial_Oil","Calgary").
+location("Imperial_Oil","Canada").
+location("Syncrude","Alberta").
+location("Syncrude","Fort_McMurray").
+locationCity("Esso_Australia","Melbourne").
+locationCity("XTO_Energy","Fort_Worth,_Texas").
+locationCity("XTO_Energy","Texas").
+locationCountry("Esso_Australia","Australia").
+locationCountry("XTO_Energy","United_States").
+owner("Imperial_Oil","ExxonMobil").
+owningCompany("Imperial_Oil","ExxonMobil").
+parentCompany("Esso_Australia","ExxonMobil").
+parentCompany("Aera_Energy","Shell_Oil_Company").
+parentCompany("Aera_Energy","ExxonMobil").
+parentCompany("Esso","ExxonMobil").
+parentCompany("XTO_Energy","ExxonMobil").
+product("Esso","Oil").
+product("Esso","Fuel").
+product("XTO_Energy","Natural_gas").
+product("XTO_Energy","Petroleum").
+product("Imperial_Oil","Petrochemical").
+product("Syncrude","Petroleum").
+regionServed("Aera_Energy","California").
+type("Aera_Energy","Limited_Liability_Company").
+type("XTO_Energy","Subsidiary").
+type("Imperial_Oil","Public_company").
+type("Syncrude","Joint_Venture").
+type("Irving,_Texas","City").
+birthPlace("Christie_Hefner","Chicago,_Illinois").
+birthPlace("Christie_Hefner","Illinois").
+birthPlace("Christie_Hefner","Wilmette,_Illinois").
+birthYear("Christie_Hefner","1952").
+knownFor("Christie_Hefner","Playboy_Enterprises").
+occupation("Christie_Hefner","Christie_Hefner__1").
+parent("Christie_Hefner","Hugh_Hefner").
+residence("Christie_Hefner","Chicago").
+residence("Christie_Hefner","Illinois").
+assets("Playboy_Enterprises","1.9683E8").
+equity("Playboy_Enterprises","-2.23E7").
+netIncome("Playboy_Enterprises","-4.85E7").
+operatingIncome("Playboy_Enterprises","-3.63E7").
+revenue("Playboy_Enterprises","2.15E8").
+birthPlace("Hugh_Hefner","Chicago").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Brandeis_University","U.S.").
+knownFor("Hugh_Hefner","Editor-in-chief of Playboy magazine, Chief Creative Officer of Playboy Enterprises").
+revenue("Playboy_Enterprises","A").
+type("Playboy_Enterprises","magazine website, erotica").
+birthYear("Hugh_Hefner","1926").
+foundingYear("Playboy_Enterprises","1953").
+numberOfEmployees("Playboy_Enterprises","165").
+almaMater("Hugh_Hefner","University_of_Illinois_at_Urbana_Champaign").
+almaMater("Hugh_Hefner","Steinmetz_High_School").
+capital("Illinois","Springfield,_Illinois").
+city("Brandeis_University","Waltham,_Massachusetts").
+country("Chicago","United_States_of_America").
+country("Illinois","United_States").
+country("Wilmette,_Illinois","United_States").
+foundationPlace("Playboy_Enterprises","Illinois").
+foundationPlace("Playboy_Enterprises","United_States").
+foundationPlace("Playboy_Enterprises","Chicago,_Illinois").
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+hometown("Hugh_Hefner","Chicago").
+hometown("Hugh_Hefner","Illinois").
+industry("Playboy_Enterprises","Lifestyle_(sociology)").
+isPartOf("Chicago","Illinois").
+isPartOf("Chicago","DuPage_County,_Illinois").
+isPartOf("Chicago","Cook_County,_Illinois").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+largestCity("Illinois","Chicago").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+product("Playboy_Enterprises","Playboy_Magazine").
+product("Playboy_Enterprises","Playboy_Online").
+product("Playboy_Enterprises","Adult_entertainment").
+product("Playboy_Enterprises","Playboy_TV").
+residence("Hugh_Hefner","Playboy_Mansion").
+residence("Hugh_Hefner","Holmby_Hills,_Los_Angeles").
+type("Chicago","City").
+type("Playboy_Enterprises","Privately_held_company").
+type("Wilmette,_Illinois","List_of_towns_and_villages_in_Illinois").
+type("Brandeis_University","Private_university").

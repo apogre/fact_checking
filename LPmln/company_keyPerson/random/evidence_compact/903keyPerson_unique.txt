@@ -1,0 +1,9 @@
+keyPerson("Sleep_Country_Canada","Christine_Magee").
+keyPerson("Sleep_Country_Canada","David_Friesma").
+keyPerson("Sleep_Country_Canada","Stephen_K._Gunn").
+birthPlace("Christine_Magee","Ontario").
+birthPlace("Christine_Magee","Toronto").
+location("Toronto","The_Annex").
+nationality("Christine_Magee","Canadian").
+occupation("Christine_Magee","Christine_Magee__1").
+type("Toronto","List_of_cities_in_Ontario").

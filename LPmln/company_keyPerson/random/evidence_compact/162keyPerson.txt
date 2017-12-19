@@ -1,0 +1,6 @@
+keyPerson("Tim_Hortons","Alex_Behring").
+keyPerson("Tim_Hortons","Daniel_Schwartz").
+location("Tim_Hortons","Canada").
+location("Tim_Hortons","Oakville,_Ontario").
+parentCompany("Tim_Hortons","Restaurant_Brands_International").
+type("Tim_Hortons","Subsidiary").

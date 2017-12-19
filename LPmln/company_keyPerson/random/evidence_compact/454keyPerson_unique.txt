@@ -1,0 +1,11 @@
+foundedBy("Electronic_Arts","Trip_Hawkins").
+keyPerson("Electronic_Arts","Andrew_Wilson_(businessman)").
+keyPerson("Electronic_Arts","Larry_Probst").
+keyPerson("Electronic_Arts","Peter_Moore_(business)").
+location("Electronic_Arts","California").
+location("Electronic_Arts","Redwood_City,_California").
+location("Electronic_Arts","United_States").
+type("Electronic_Arts","Public_company").
+occupation("Douglas_R._Oberhelman","Douglas_R._Oberhelman__1").
+occupation("Douglas_R._Oberhelman","Business_Executive").
+predecessor("Douglas_R._Oberhelman","James_W._Owens").

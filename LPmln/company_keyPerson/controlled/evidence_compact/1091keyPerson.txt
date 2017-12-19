@@ -1,0 +1,28 @@
+operatingIncome("UGI_Corporation","1006.0").
+foundingYear("UGI_Corporation","1882").
+industry("UGI_Corporation","Energy_industry").
+locationCity("UGI_Corporation","King_of_Prussia,_Pennsylvania").
+locationCountry("UGI_Corporation","United_States").
+regionServed("UGI_Corporation","Pennsylvania").
+country("King_of_Prussia,_Pennsylvania","United States").
+country("Pennsylvania","Pennsylvania").
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+country("Pennsylvania","United_States").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").
+birthPlace("James_Goodnight","Salisbury,_North_Carolina").
+birthPlace("James_Goodnight","Salisbury,_NC").
+birthYear("James_Goodnight","1943").
+almaMater("James_Goodnight","North_Carolina_State_University").
+occupation("James_Goodnight","Inventor").
+occupation("James_Goodnight","Entrepreneur").
+occupation("James_Goodnight","James_Goodnight__1").
+occupation("James_Goodnight","CEO").
+occupation("James_Goodnight","Software_engineer").
+occupation("James_Goodnight","Statistician").
+country("North_Carolina_State_University","U.S.").
+country("Salisbury,_North_Carolina","United_States").
+type("Salisbury,_North_Carolina","City").
+type("North_Carolina_State_University","Public_university").
+type("North_Carolina_State_University","Land-grant_university").
+type("North_Carolina_State_University","Sea-grant_university").
+type("North_Carolina_State_University","Space-grant_university").

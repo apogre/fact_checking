@@ -1,0 +1,89 @@
+revenue("Graham_Holdings_Company","2.58E9").
+foundingYear("Graham_Holdings_Company","2013").
+numberOfEmployees("Graham_Holdings_Company","11500").
+foundationPlace("Graham_Holdings_Company","Washington,_D.C.").
+industry("Graham_Holdings_Company","Mass_media").
+keyPerson("Graham_Holdings_Company","Donald_E._Graham").
+keyPerson("Graham_Holdings_Company","Chief_executive_officer").
+keyPerson("Graham_Holdings_Company","Chairman").
+keyPerson("Graham_Holdings_Company","Chief_financial_officer").
+location("Graham_Holdings_Company","United_States").
+location("Graham_Holdings_Company","Arlington,_Virginia").
+product("Graham_Holdings_Company","Magazine").
+product("Graham_Holdings_Company","Education").
+product("Graham_Holdings_Company","Cable_television").
+product("Graham_Holdings_Company","Television").
+product("Graham_Holdings_Company","Electronic_media").
+type("Graham_Holdings_Company","Public_company").
+birthPlace("Donald_E._Graham","United_States").
+birthYear("Donald_E._Graham","1945").
+capital("United_States","Washington,_D.C.").
+largestCity("United_States","New_York_City").
+occupation("Donald_E._Graham","Chairman_of_the_board").
+occupation("Donald_E._Graham","Donald_E._Graham__1").
+parent("Donald_E._Graham","Phil_Graham").
+parent("Donald_E._Graham","Katharine_Graham").
+type("Washington,_D.C.","Federal_district").
+birthPlace("Christie_Hefner","Chicago,_Illinois").
+birthPlace("Christie_Hefner","Illinois").
+birthPlace("Christie_Hefner","Wilmette,_Illinois").
+birthYear("Christie_Hefner","1952").
+occupation("Christie_Hefner","Christie_Hefner__1").
+parent("Christie_Hefner","Hugh_Hefner").
+residence("Christie_Hefner","Chicago").
+residence("Christie_Hefner","Illinois").
+assets("Playboy_Enterprises","1.9683E8").
+equity("Playboy_Enterprises","-2.23E7").
+netIncome("Playboy_Enterprises","-4.85E7").
+operatingIncome("Playboy_Enterprises","-3.63E7").
+revenue("Playboy_Enterprises","2.15E8").
+birthPlace("Hugh_Hefner","Chicago").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Brandeis_University","U.S.").
+revenue("Playboy_Enterprises","A").
+type("Playboy_Enterprises","magazine website, erotica").
+birthYear("Hugh_Hefner","1926").
+foundingYear("Playboy_Enterprises","1953").
+numberOfEmployees("Playboy_Enterprises","165").
+almaMater("Hugh_Hefner","University_of_Illinois_at_Urbana_Champaign").
+almaMater("Hugh_Hefner","Steinmetz_High_School").
+capital("Illinois","Springfield,_Illinois").
+city("Brandeis_University","Waltham,_Massachusetts").
+country("Chicago","United_States_of_America").
+country("Illinois","United_States").
+country("Wilmette,_Illinois","United_States").
+foundationPlace("Playboy_Enterprises","Illinois").
+foundationPlace("Playboy_Enterprises","United_States").
+foundationPlace("Playboy_Enterprises","Chicago,_Illinois").
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+hometown("Hugh_Hefner","Chicago").
+hometown("Hugh_Hefner","Illinois").
+industry("Playboy_Enterprises","Lifestyle_(sociology)").
+isPartOf("Chicago","Illinois").
+isPartOf("Chicago","DuPage_County,_Illinois").
+isPartOf("Chicago","Cook_County,_Illinois").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+largestCity("Illinois","Chicago").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+product("Playboy_Enterprises","Playboy_Magazine").
+product("Playboy_Enterprises","Playboy_Online").
+product("Playboy_Enterprises","Adult_entertainment").
+product("Playboy_Enterprises","Playboy_TV").
+residence("Hugh_Hefner","Playboy_Mansion").
+residence("Hugh_Hefner","Holmby_Hills,_Los_Angeles").
+type("Chicago","City").
+type("Playboy_Enterprises","Privately_held_company").
+type("Wilmette,_Illinois","List_of_towns_and_villages_in_Illinois").
+type("Brandeis_University","Private_university").

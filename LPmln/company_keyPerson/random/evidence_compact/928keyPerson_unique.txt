@@ -1,0 +1,11 @@
+type("Starbucks","Public_company").
+birthPlace("Dieter_Zetsche","Istanbul").
+birthPlace("Dieter_Zetsche","Turkey").
+occupation("Dieter_Zetsche","Dieter_Zetsche__1").
+occupation("Dieter_Zetsche","Engineer").
+occupation("Dieter_Zetsche","Chairman").
+occupation("Dieter_Zetsche","Businessman").
+type("Istanbul","Cultural").
+type("Stuttgart","Stadt").
+type("Engineer","Profession").
+type("University_of_Paderborn","Public_university").

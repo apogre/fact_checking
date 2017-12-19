@@ -1,0 +1,26 @@
+foundedBy("GMR_Group","Grandhi_Mallikarjuna_Rao").
+keyPerson("GMR_Group","Grandhi_Mallikarjuna_Rao").
+type("GMR_Group","Listed_company").
+birthPlace("Grandhi_Mallikarjuna_Rao","India").
+birthPlace("Grandhi_Mallikarjuna_Rao","Andhra_Pradesh").
+birthPlace("Grandhi_Mallikarjuna_Rao","Srikakulam").
+birthPlace("Grandhi_Mallikarjuna_Rao","Rajam,_Andhra_Pradesh").
+nationality("Grandhi_Mallikarjuna_Rao","India").
+occupation("Grandhi_Mallikarjuna_Rao","GMR_Group").
+occupation("Grandhi_Mallikarjuna_Rao","Grandhi_Mallikarjuna_Rao__1").
+birthPlace("Jeff_Bezos","Albuquerque,_New_Mexico").
+occupation("Jeff_Bezos","Jeff_Bezos__1").
+occupation("Jeff_Bezos","Amazon.com").
+birthPlace("MacKenzie_Bezos","California").
+birthPlace("MacKenzie_Bezos","San_Francisco").
+location("Albuquerque,_New_Mexico","--01-22").
+location("Albuquerque,_New_Mexico","Albuquerque South Valley").
+location("Albuquerque,_New_Mexico","Albuquerque foothills").
+foundedBy("Amazon.com","Jeff_Bezos").
+keyPerson("Amazon.com","Jeff_Bezos").
+keyPerson("Amazon.com","Werner_Vogels").
+location("Amazon.com","Seattle").
+location("Amazon.com","Washington_(state)").
+type("Albuquerque,_New_Mexico","City").
+type("Amazon.com","Public_company").
+type("Princeton_University","Private_university").

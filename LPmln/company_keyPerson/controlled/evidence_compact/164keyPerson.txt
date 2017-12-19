@@ -1,0 +1,18 @@
+operatingIncome("Tod's","1.599E8").
+foundingYear("Tod's","1920").
+numberOfEmployees("Tod's","3100").
+industry("Tod's","Manufacturing").
+industry("Tod's","Textile").
+keyPerson("Tod's","Chief_executive_officer").
+locationCity("Tod's","Sant'Elpidio_a_Mare").
+type("Tod's","Joint-stock_company").
+birthPlace("Diego_Della_Valle","Italy").
+birthPlace("Diego_Della_Valle","Sant'Elpidio_a_Mare").
+spouse("Diego_Della_Valle","Barbara Pistilli").
+birthYear("Diego_Della_Valle","1953").
+almaMater("Diego_Della_Valle","University_of_Bologna").
+country("Sant'Elpidio_a_Mare","Italy").
+birthPlace("Andrea_Della_Valle","Sant'Elpidio_a_Mare").
+locationCountry("Tod's","Italy").
+type("University_of_Bologna","Public").
+country("University_of_Bologna","Italy").

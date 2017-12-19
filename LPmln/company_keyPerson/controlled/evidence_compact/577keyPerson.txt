@@ -1,0 +1,29 @@
+foundingYear("IGATE","1996").
+numberOfEmployees("IGATE","31453").
+industry("IGATE","Information_technology").
+industry("IGATE","IT_service_management").
+keyPerson("IGATE","Srinivas_Kandula").
+location("IGATE","Bridgewater,_New_Jersey").
+parentCompany("IGATE","Capgemini").
+operatingIncome("Capgemini","1.262E9").
+industry("Capgemini","Management consulting").
+locationCity("Capgemini","Paris").
+locationCountry("Capgemini","France").
+foundingYear("Capgemini","1967").
+numberOfEmployees("Capgemini","180639").
+almaMater("Srinivas_Kandula","XLRI_-_Xavier_School_of_Management").
+employer("Srinivas_Kandula","Capgemini").
+foundedBy("Capgemini","Serge_Kampf").
+keyPerson("Capgemini","Paul_Hermelin").
+birthPlace("Daniel_Vasella","Switzerland").
+birthPlace("Daniel_Vasella","Fribourg").
+birthYear("Daniel_Vasella","1953").
+almaMater("Daniel_Vasella","University_of_Bern").
+almaMater("Daniel_Vasella","Harvard_Business_School").
+occupation("Daniel_Vasella","Daniel_Vasella__1").
+country("Harvard_Business_School","U.S.").
+location("Fribourg"," Posieux").
+country("Fribourg","Switzerland").
+country("University_of_Bern","Switzerland").
+type("Harvard_Business_School","Private_school").
+type("University_of_Bern","Public_university").

@@ -1,0 +1,27 @@
+parentCompany("Outback_Steakhouse","Bloomin'_Brands").
+type("Outback_Steakhouse","Subsidiary").
+location("Costa_Rica","Costa Rica").
+location("Venezuela","right").
+location("Guam","Guam").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+foundedBy("Bloomin'_Brands","J._Timothy_Gannon").
+foundedBy("Bloomin'_Brands","Chris_T._Sullivan").
+keyPerson("Bloomin'_Brands","Chief_brand_officer").
+keyPerson("Bloomin'_Brands","President").
+keyPerson("Bloomin'_Brands","Chief_executive_officer").
+keyPerson("Bloomin'_Brands","Vice_president").
+keyPerson("Bloomin'_Brands","Chairman").
+keyPerson("Bloomin'_Brands","CFO").
+location("Bloomin'_Brands","Tampa,_Florida").
+type("Bloomin'_Brands","Public_company").
+birthPlace("Dieter_Zetsche","Istanbul").
+birthPlace("Dieter_Zetsche","Turkey").
+occupation("Dieter_Zetsche","Dieter_Zetsche__1").
+occupation("Dieter_Zetsche","Engineer").
+occupation("Dieter_Zetsche","Chairman").
+occupation("Dieter_Zetsche","Businessman").
+type("Istanbul","Cultural").
+type("Stuttgart","Stadt").
+type("Engineer","Profession").
+type("University_of_Paderborn","Public_university").

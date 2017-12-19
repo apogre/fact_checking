@@ -1,0 +1,70 @@
+numberOfEmployees("Sleep_Country_Canada","674").
+keyPerson("Sleep_Country_Canada","Christine_Magee").
+keyPerson("Sleep_Country_Canada","David_Friesma").
+keyPerson("Sleep_Country_Canada","Stephen_K._Gunn").
+locationCity("Sleep_Country_Canada","Toronto").
+locationCountry("Sleep_Country_Canada","Canada").
+birthPlace("Christine_Magee","Ontario").
+birthPlace("Christine_Magee","Toronto").
+location("Toronto","The_Annex").
+nationality("Christine_Magee","Canadian").
+birthYear("Christine_Magee","1959").
+almaMater("Christine_Magee","University_of_Western_Ontario").
+capital("Canada","Ottawa").
+country("Toronto","Canada").
+isPartOf("Toronto","East_York").
+isPartOf("Toronto","Scarborough,_Toronto").
+isPartOf("Toronto","Etobicoke").
+isPartOf("Toronto","York,_Toronto").
+isPartOf("Toronto","North_York").
+isPartOf("Toronto","Old_Toronto").
+largestCity("Canada","Toronto").
+occupation("Christine_Magee","Christine_Magee__1").
+type("Toronto","List_of_cities_in_Ontario").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+birthYear("James_J._Greco","1958").
+almaMater("James_J._Greco","Georgetown_University").
+almaMater("James_J._Greco","University_of_Miami").
+almaMater("James_J._Greco","City_University,_London").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+residence("James_J._Greco","Florida").
+residence("James_J._Greco","Delray_Beach,_Florida").
+residence("James_J._Greco","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Georgetown_University","US").
+country("University_of_Miami","U.S.").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+capital("Connecticut","Hartford,_Connecticut").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+city("Georgetown_University","Washington,_D.C.").
+city("University_of_Miami","Coral_Gables,_Florida").
+country("Connecticut","United_States").
+country("Delray_Beach,_Florida","United_States_of_America").
+country("Florida","United_States").
+isPartOf("Delray_Beach,_Florida","Florida").
+isPartOf("Delray_Beach,_Florida","Palm_Beach_County,_Florida").
+isPartOf("New_Haven,_Connecticut","Connecticut").
+isPartOf("New_Haven,_Connecticut","Greater_New_Haven").
+isPartOf("New_Haven,_Connecticut","Union_Station_(New_Haven)").
+largestCity("Connecticut","Bridgeport,_Connecticut").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

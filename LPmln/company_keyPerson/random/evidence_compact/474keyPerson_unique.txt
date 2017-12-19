@@ -1,0 +1,28 @@
+foundedBy("FedEx","Frederick_W._Smith").
+keyPerson("FedEx","Frederick_W._Smith").
+location("FedEx","Memphis,_Tennessee").
+type("FedEx","Public_company").
+birthPlace("Frederick_W._Smith","Mississippi").
+birthPlace("Frederick_W._Smith","United_States").
+birthPlace("Frederick_W._Smith","Marks,_Mississippi").
+type("FedEx_Office","Subsidiary").
+type("FedEx_Ground","Subsidiary").
+headquarter("FedEx_Express","Memphis,_Tennessee").
+location("FedEx_Office","Plano,_Texas").
+location("FedEx_Ground","Moon_Township,_Pennsylvania").
+parentCompany("FedEx_Office","FedEx").
+parentCompany("FedEx_Express","FedEx").
+parentCompany("FedEx_Ground","FedEx").
+type("Little_Rock,_Arkansas","City").
+type("Memphis,_Tennessee","City_(Tennessee)").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

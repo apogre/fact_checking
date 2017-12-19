@@ -1,0 +1,20 @@
+foundedBy("Cognizant","Kumar_Mahadeva").
+foundedBy("Cognizant","Francisco_D'Souza").
+keyPerson("Cognizant","Lakshmi_Narayanan").
+predecessor("Cognizant","Dun_&_Bradstreet").
+type("Cognizant","Public_company").
+birthPlace("Kumar_Mahadeva","Sri_Lanka").
+birthPlace("Francisco_D'Souza","Nairobi").
+location("Dun_&_Bradstreet","Short_Hills,_New_Jersey").
+occupation("Kumar_Mahadeva","Kumar_Mahadeva__1").
+occupation("Francisco_D'Souza","Francisco_D'Souza__1").
+occupation("Francisco_D'Souza","Cognizant").
+occupation("Francisco_D'Souza","CEO").
+type("Teaneck,_New_Jersey","Township_(New_Jersey)").
+type("Dun_&_Bradstreet","Public_company").
+location("Nairobi","Nairobi").
+location("University_of_Macau","Avenida da Universidade, Taipa, Macau").
+type("Nairobi","List_of_cities_and_towns_in_Kenya_by_population").
+type("University_of_Macau","Private_university").
+type("University_of_Macau","Public_university").
+type("Carnegie_Mellon_University","Private_university").

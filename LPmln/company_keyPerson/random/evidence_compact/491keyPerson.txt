@@ -1,0 +1,10 @@
+birthPlace("Terry_Gou","Taipei_County").
+birthPlace("Terry_Gou","Taiwan").
+birthPlace("Terry_Gou","Banqiao_District").
+occupation("Terry_Gou","Foxconn").
+occupation("Terry_Gou","Terry_Gou__1").
+foundedBy("Foxconn","Terry_Gou").
+keyPerson("Foxconn","Terry_Gou").
+keyPerson("Foxconn","Chairman").
+type("Banqiao_District","District_(Republic_of_China)").
+type("Foxconn","Public_company").

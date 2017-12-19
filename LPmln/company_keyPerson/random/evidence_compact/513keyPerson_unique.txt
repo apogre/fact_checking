@@ -1,0 +1,32 @@
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+type("GlaxoSmithKline","Public_limited_company").
+birthPlace("Andrew_Witty","England").
+birthPlace("Philip_Hampton","United_Kingdom").
+birthPlace("Philip_Hampton","United Kingdom").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("England","Administrative_division").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","University_of_Nottingham").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Philip_Hampton","GlaxoSmithKline").
+occupation("Philip_Hampton","Philip_Hampton__1").
+parentCompany("Stiefel_Laboratories","GlaxoSmithKline").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+birthPlace("Satya_Nadella","India").
+birthPlace("Satya_Nadella","Hyderabad").
+birthPlace("Satya_Nadella","Telangana").
+occupation("Satya_Nadella","Microsoft_Corporation").
+occupation("Satya_Nadella","Satya_Nadella__1").
+birthPlace("Steve_Ballmer","Detroit").
+birthPlace("Steve_Ballmer","Michigan").
+birthPlace("Steve_Ballmer","United_States").
+type("Telangana","States_and_union_territories_of_India").
+type("Hyderabad","Metropolis").
+type("Manipal_Institute_of_Technology","Private_school").

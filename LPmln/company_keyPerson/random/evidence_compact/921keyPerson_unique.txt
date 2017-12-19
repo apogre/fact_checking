@@ -1,0 +1,23 @@
+foundedBy("Sony","Masaru_Ibuka").
+foundedBy("Sony","Akio_Morita").
+keyPerson("Sony","Kazuo_Hirai").
+keyPerson("Sony","Osamu_Nagayama").
+location("Sony","Minato,_Tokyo").
+type("Sony","Kabushiki_gaisha").
+birthPlace("Kazuo_Hirai","Tokyo").
+birthPlace("Akio_Morita","Japan").
+birthPlace("Akio_Morita","Nagoya").
+birthPlace("Akio_Morita","Tokoname").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+nationality("Masaru_Ibuka","Japanese_people").
+nationality("Akio_Morita","Japan").
+occupation("Kazuo_Hirai","CEO").
+occupation("Kazuo_Hirai","President").
+occupation("Kazuo_Hirai","Sony").
+occupation("Kazuo_Hirai","Kazuo_Hirai__1").
+occupation("Osamu_Nagayama","Sony").
+occupation("Osamu_Nagayama","Chugai_Pharmaceutical_Co.").
+occupation("Osamu_Nagayama","Osamu_Nagayama__1").
+type("Minato,_Tokyo","Special_wards_of_Tokyo").
+type("Tokyo","Prefectures_of_Japan").

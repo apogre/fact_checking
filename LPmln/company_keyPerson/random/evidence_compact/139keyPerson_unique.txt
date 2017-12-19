@@ -1,0 +1,5 @@
+location("Singtel","Singapore").
+location("Optus","Australia").
+location("Optus","New_South_Wales").
+location("Optus","Sydney").
+type("Optus","Subsidiary").

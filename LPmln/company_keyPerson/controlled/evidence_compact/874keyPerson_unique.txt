@@ -1,0 +1,14 @@
+foundingYear("Scottrade","1980").
+numberOfEmployees("Scottrade","3803").
+foundationPlace("Scottrade","Scottsdale,_Arizona").
+industry("Scottrade","Discount_brokerage").
+keyPerson("Scottrade","Rodger_O._Riney").
+keyPerson("Scottrade","CEO").
+location("Scottrade","Town_and_Country,_Missouri").
+type("Scottrade","Private_company").
+birthPlace("Martin_Winterkorn","Leonberg").
+birthYear("Martin_Winterkorn","1947").
+occupation("Martin_Winterkorn","Martin_Winterkorn__1").
+occupation("Martin_Winterkorn","Volkswagen_AG").
+type("Leonberg","Stadt").
+country("Leonberg","Germany").

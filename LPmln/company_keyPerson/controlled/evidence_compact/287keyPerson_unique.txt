@@ -1,0 +1,12 @@
+operatingIncome("Banco_Bilbao_Vizcaya_Argentaria","6.81E9").
+foundingYear("Banco_Bilbao_Vizcaya_Argentaria","1857").
+numberOfEmployees("Banco_Bilbao_Vizcaya_Argentaria","137968").
+foundationPlace("Banco_Bilbao_Vizcaya_Argentaria","Bilbao").
+foundationPlace("Banco_Bilbao_Vizcaya_Argentaria","Spain").
+industry("Banco_Bilbao_Vizcaya_Argentaria","Financial_services").
+keyPerson("Banco_Bilbao_Vizcaya_Argentaria","CEO").
+keyPerson("Banco_Bilbao_Vizcaya_Argentaria","Carlos_Torres_Vila_(banker)").
+locationCity("Banco_Bilbao_Vizcaya_Argentaria","Bilbao").
+locationCountry("Banco_Bilbao_Vizcaya_Argentaria","Spain").
+predecessor("Banco_Bilbao_Vizcaya_Argentaria","Banco_Bilbao_Vizcaya").
+type("Banco_Bilbao_Vizcaya_Argentaria","S.A._(corporation)").

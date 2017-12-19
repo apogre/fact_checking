@@ -1,0 +1,14 @@
+keyPerson("Boston_Consulting_Group","Rich_Lesser").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+location("Boston_Consulting_Group","Boston").
+type("Boston_Consulting_Group","Privately_held_company").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Management_Consultant").
+type("Boston","Capital_city").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+occupation("Denise_Morrison","Denise_Morrison__1").
+type("Long_Branch,_New_Jersey","City_(New_Jersey)").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

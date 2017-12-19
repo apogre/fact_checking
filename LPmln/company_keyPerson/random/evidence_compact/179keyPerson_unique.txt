@@ -1,0 +1,2 @@
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").

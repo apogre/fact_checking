@@ -1,0 +1,14 @@
+operatingIncome("EBay","2.19E9").
+numberOfEmployees("EBay","34600").
+foundedBy("EBay","Pierre_Omidyar").
+industry("EBay","Internet").
+location("EBay","California").
+location("EBay","San_Jose,_California").
+subsidiary("EBay","GittiGidiyor").
+subsidiary("EBay","IBazar").
+subsidiary("EBay","Kijiji").
+subsidiary("EBay","Gumtree").
+subsidiary("EBay","Half.com").
+subsidiary("EBay","Stubhub").
+type("EBay","Public_company").
+birthPlace("Jane_Silber","United_States").

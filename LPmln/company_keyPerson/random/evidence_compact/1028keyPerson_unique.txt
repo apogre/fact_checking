@@ -1,0 +1,13 @@
+foundedBy("Tracinda","Kirk_Kerkorian").
+keyPerson("Tracinda","Kirk_Kerkorian").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+type("Las_Vegas","City").
+birthPlace("David_M._Cote","Manchester,_New_Hampshire").
+location("Manchester,_New_Hampshire","Manchester, NH").
+type("Manchester,_New_Hampshire","City").
+type("University_of_New_Hampshire","Public_university").
+type("University_of_New_Hampshire","Flagship_university").
+type("University_of_New_Hampshire","Land-grant_university").
+type("University_of_New_Hampshire","Sea_grant_colleges").
+type("University_of_New_Hampshire","Space_grant_colleges").
+type("Pembroke_Academy","State_school").

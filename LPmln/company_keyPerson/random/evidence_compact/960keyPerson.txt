@@ -1,0 +1,7 @@
+keyPerson("SuperValu_(United_States)","CEO").
+location("SuperValu_(United_States)","Eden_Prairie,_Minnesota").
+location("SuperValu_(United_States)","United_States").
+type("SuperValu_(United_States)","Public_company").
+location("SuperValu_Pharmacies","Franklin_Park,_Illinois").
+type("SuperValu_Pharmacies","Pharmacies").
+type("Eden_Prairie,_Minnesota","City").

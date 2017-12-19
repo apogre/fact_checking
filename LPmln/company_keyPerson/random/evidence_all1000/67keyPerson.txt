@@ -1,0 +1,73 @@
+country("GMA_Network","Philippines").
+foundedBy("GMA_Network","Robert_%22Uncle_Bob%22_Stewart").
+keyPerson("GMA_Network","Chief_Executive_Officer").
+keyPerson("GMA_Network","President").
+keyPerson("GMA_Network","Chief_Operating_Officer").
+locationCountry("GMA_Network","Philippines").
+owningCompany("GMA_Network","GMA_Network_(company)").
+type("GMA_Network","Terrestrial_television").
+birthPlace("Felipe_Gozon","Manila").
+birthPlace("Felipe_Gozon","Commonwealth_of_the_Philippines").
+birthPlace("Felipe_Gozon","Ermita,_Manila").
+owner("GMA_Network_(company)","FLG Management and Development Corporation").
+owner("GMA_Network_(company)","GMA Holdings, Inc.").
+owner("GMA_Network_(company)","Group Management and Development, Inc.").
+owner("GMA_Network_(company)","M.A. Jimenez Enterprises").
+owner("GMA_Network_(company)","Television International Corporation").
+parent("GMA_Network_(company)","GMA Holdings, Inc.").
+predecessor("GMA_Network_(company)","Loreto F. de Hemedes Inc.").
+predecessor("GMA_Network_(company)","Republic Broadcasting System Inc.").
+activeYearsStartYear("Felipe_Gozon","1963").
+birthYear("Felipe_Gozon","1939").
+numberOfEmployees("GMA_Network_(company)","2913").
+almaMater("Felipe_Gozon","Yale_Law_School").
+almaMater("Felipe_Gozon","University_of_the_Philippines_Diliman").
+capital("Philippines","Manila").
+country("GMA_News_TV","Philippines").
+foundedBy("GMA_Network_(company)","Robert_%22Uncle_Bob%22_Stewart").
+industry("GMA_Network_(company)","Mass_media").
+keyPerson("GMA_News_TV","GMA_Network_Inc.").
+keyPerson("GMA_News_TV","CEO").
+keyPerson("GMA_News_TV","Eddie_Villanueva").
+keyPerson("GMA_News_TV","GMA_Network_(company)").
+keyPerson("GMA_News_TV","Felipe_Gozon").
+keyPerson("GMA_Network_(company)","Chief_financial_officer").
+keyPerson("GMA_Network_(company)","Chief_operating_officer").
+keyPerson("GMA_Network_(company)","President").
+keyPerson("GMA_Network_(company)","Chief_executive_officer").
+keyPerson("GMA_Network_(company)","Felipe_Gozon").
+largestCity("Philippines","Quezon_City").
+locationCity("GMA_Network_(company)","Quezon_City").
+locationCity("GMA_Network_(company)","EDSA_(road)").
+locationCity("GMA_Network_(company)","Diliman").
+locationCity("GMA_Network_(company)","GMA_Network_Center").
+locationCountry("GMA_News_TV","Philippines").
+locationCountry("GMA_Network_(company)","Philippines").
+nationality("Felipe_Gozon","Filipino_people").
+occupation("Felipe_Gozon","Lawyer").
+occupation("Felipe_Gozon","Felipe_Gozon__1").
+owningCompany("GMA_News_TV","GMA_Network_(company)").
+owningCompany("GMA_News_TV","ZOE_Broadcasting_Network").
+personFunction("Felipe_Gozon","Felipe_Gozon__1").
+stateOfOrigin("Felipe_Gozon","Filipino_people").
+subsidiary("GMA_Network_(company)","GMA_Films").
+subsidiary("GMA_Network_(company)","GMA_Records").
+subsidiary("GMA_Network_(company)","Digify_(company)").
+subsidiary("GMA_Network_(company)","GMA_New_Media").
+type("GMA_Network_(company)","Public_company").
+country("Commonwealth_of_the_Philippines","Philippines").
+location("Manila","Port Area, Manila").
+parent("Yale_Law_School","Yale_University").
+type("Lawyer","Lawyer").
+foundingYear("Commonwealth_of_the_Philippines","1935").
+capital("Commonwealth_of_the_Philippines","Manila").
+city("Yale_Law_School","New_Haven,_Connecticut").
+city("University_of_the_Philippines_Diliman","Quezon_City").
+country("Yale_Law_School","United_States").
+country("University_of_the_Philippines_Diliman","Philippines").
+isPartOf("Manila","Metro_Manila").
+isPartOf("Manila","Legislative_districts_of_Manila").
+type("Manila","Capital_city").
+type("Yale_Law_School","Private_school").
+type("University_of_the_Philippines_Diliman","Research_institute").
+type("University_of_the_Philippines_Diliman","National_university").

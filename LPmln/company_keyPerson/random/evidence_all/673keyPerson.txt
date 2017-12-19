@@ -1,0 +1,45 @@
+revenue("Mile_High_Comics","3500000.0").
+foundingYear("Mile_High_Comics","1969").
+foundationPlace("Mile_High_Comics","Colorado_Springs,_Colorado").
+foundedBy("Mile_High_Comics","Chuck_Rozanski").
+industry("Mile_High_Comics","Collectibles").
+location("Mile_High_Comics","Denver,_Colorado").
+type("Mile_High_Comics","Privately_held_company").
+birthPlace("Chuck_Rozanski","Germany").
+birthPlace("Chuck_Rozanski","Goldbach,_Bavaria").
+occupation("Chuck_Rozanski","Retailer, columnist").
+country("Colorado_Springs,_Colorado","United_States").
+isPartOf("Colorado_Springs,_Colorado","Colorado").
+isPartOf("Colorado_Springs,_Colorado","El_Paso_County,_Colorado").
+nationality("Chuck_Rozanski","United_States").
+type("Colorado_Springs,_Colorado","List_of_cities_and_towns_in_Colorado").
+networth("Brian_L._Roberts","1.57E9").
+birthPlace("Brian_L._Roberts","Philadelphia").
+birthPlace("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+birthYear("Brian_L._Roberts","1959").
+almaMater("Brian_L._Roberts","Wharton_School_of_the_University_of_Pennsylvania").
+occupation("Brian_L._Roberts","leadership-overview").
+occupation("Brian_L._Roberts","Brian_L._Roberts__1").
+parent("Brian_L._Roberts","Ralph_J._Roberts").
+residence("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+birthPlace("Ralph_J._Roberts","New_York_City").
+deathPlace("Ralph_J._Roberts","Philadelphia").
+country("Germantown_Academy","US").
+country("Wharton_School_of_the_University_of_Pennsylvania","U.S.").
+foundedBy("Philadelphia","William Penn").
+nationality("Ralph_J._Roberts","United States").
+type("Germantown_Academy","Private").
+birthYear("Ralph_J._Roberts","1920").
+deathYear("Ralph_J._Roberts","2015").
+foundingYear("Germantown_Academy","1759").
+city("Germantown_Academy","Fort_Washington,_Pennsylvania").
+city("Wharton_School_of_the_University_of_Pennsylvania","Philadelphia").
+country("Philadelphia","United_States").
+isPartOf("Philadelphia","Pennsylvania").
+isPartOf("Philadelphia","Kingdom_of_Great_Britain").
+isPartOf("Philadelphia","Philadelphia_County,_Pennsylvania").
+isPartOf("Philadelphia","Kingdom_of_England").
+isPartOf("Philadelphia","Province_of_Pennsylvania").
+occupation("Ralph_J._Roberts","Ralph_J._Roberts__1").
+type("Philadelphia","Consolidated_city-county").
+type("Wharton_School_of_the_University_of_Pennsylvania","Private_university").

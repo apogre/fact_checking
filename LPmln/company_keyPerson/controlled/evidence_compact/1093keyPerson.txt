@@ -1,0 +1,33 @@
+operatingIncome("UGI_Corporation","1006.0").
+foundingYear("UGI_Corporation","1882").
+industry("UGI_Corporation","Energy_industry").
+locationCity("UGI_Corporation","King_of_Prussia,_Pennsylvania").
+locationCountry("UGI_Corporation","United_States").
+regionServed("UGI_Corporation","Pennsylvania").
+country("King_of_Prussia,_Pennsylvania","United States").
+country("Pennsylvania","Pennsylvania").
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+country("Pennsylvania","United_States").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").
+birthYear("Rich_Lesser","1963").
+almaMater("Rich_Lesser","University_of_Michigan").
+almaMater("Rich_Lesser","Harvard_Business_School").
+employer("Rich_Lesser","Boston_Consulting_Group").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Management_Consultant").
+country("Harvard_Business_School","U.S.").
+country("University_of_Michigan","United States").
+foundingYear("Boston_Consulting_Group","1963").
+numberOfEmployees("Boston_Consulting_Group","6200").
+industry("Boston_Consulting_Group","Management_consulting").
+keyPerson("Boston_Consulting_Group","Rich_Lesser").
+location("Boston_Consulting_Group","Boston").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+type("Harvard_Business_School","Private_school").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").
+type("Boston_Consulting_Group","Privately_held_company").

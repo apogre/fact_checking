@@ -1,0 +1,16 @@
+keyPerson("Tim_Hortons","Alex_Behring").
+keyPerson("Tim_Hortons","Daniel_Schwartz").
+location("Tim_Hortons","Canada").
+location("Tim_Hortons","Oakville,_Ontario").
+parentCompany("Tim_Hortons","Restaurant_Brands_International").
+type("Tim_Hortons","Subsidiary").
+birthPlace("Isaac_Larian","Iran").
+birthPlace("Isaac_Larian","Kashan").
+occupation("Isaac_Larian","MGA_Entertainment").
+occupation("Isaac_Larian","Chief_Executive_Officer").
+occupation("Isaac_Larian","Isaac_Larian__1").
+keyPerson("MGA_Entertainment","Isaac_Larian").
+keyPerson("MGA_Entertainment","Chief_executive_officer").
+location("MGA_Entertainment","United_States").
+location("MGA_Entertainment","Los_Angeles,_California").
+type("MGA_Entertainment","Private_company").

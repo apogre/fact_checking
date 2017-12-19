@@ -1,0 +1,9 @@
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+occupation("James_E._Thompson","James_E._Thompson__1").
+birthPlace("Sergio_Ermotti","Switzerland").
+birthPlace("Sergio_Ermotti","Lugano").
+nationality("Sergio_Ermotti","Switzerland").
+occupation("Sergio_Ermotti","Economist").
+location("Lugano","Lugano").

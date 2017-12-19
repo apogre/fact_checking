@@ -1,0 +1,8 @@
+birthPlace("Mike_S._Zafirovski","Socialist_Federal_Republic_of_Yugoslavia").
+birthPlace("Mike_S._Zafirovski","Skopje").
+birthYear("Mike_S._Zafirovski","1954").
+country("Socialist_Federal_Republic_of_Yugoslavia","Yugoslavia").
+location("Skopje","Skopje").
+foundingYear("Socialist_Federal_Republic_of_Yugoslavia","1945").
+country("Skopje","Macedonia").
+type("Skopje","List_of_cities_in_the_Republic_of_Macedonia").

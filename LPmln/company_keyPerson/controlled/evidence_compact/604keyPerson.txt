@@ -1,0 +1,38 @@
+operatingIncome("Juniper_Networks","9.12E8").
+numberOfEmployees("Juniper_Networks","9058").
+foundedBy("Juniper_Networks","Pradeep_Sindhu").
+industry("Juniper_Networks","Networking_hardware").
+keyPerson("Juniper_Networks","Scott_Kriens").
+keyPerson("Juniper_Networks","Pradeep_Sindhu").
+locationCity("Juniper_Networks","Sunnyvale,_California").
+type("Juniper_Networks","Public_company").
+birthPlace("Pradeep_Sindhu","Mumbai").
+location("Sunnyvale,_California","Sunnyvale, California").
+birthYear("Pradeep_Sindhu","1953").
+almaMater("Pradeep_Sindhu","University_of_Hawaii").
+almaMater("Pradeep_Sindhu","Indian_Institute_of_Technology,_Kanpur").
+almaMater("Pradeep_Sindhu","Carnegie_Mellon_University").
+almaMater("Scott_Kriens","California_State_University,_East_Bay").
+country("Sunnyvale,_California","United_States").
+employer("Pradeep_Sindhu","Juniper_Networks").
+type("Sunnyvale,_California","Charter_city").
+birthPlace("Muhtar_Kent","New_York_City").
+birthYear("Muhtar_Kent","1952").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+parent("Muhtar_Kent","Necdet_Kent").
+country("Cass_Business_School","United Kingdom").
+type("Cass_Business_School","Undergraduate, Postgraduate, Executive Education, Research").
+birthYear("Necdet_Kent","1911").
+foundingYear("Tarsus_American_College","1888").
+almaMater("Necdet_Kent","New_York_University").
+country("New_York_City","United_States").
+country("University_of_Hull","England").
+country("Tarsus_American_College","Turkey").
+occupation("Necdet_Kent","Diplomat").
+occupation("Necdet_Kent","Necdet_Kent__1").
+type("New_York_City","City_(New_York)").
+type("University_of_Hull","Public_university").
+type("Tarsus_American_College","Independent_school").
+type("Tarsus_American_College","Boarding_school").

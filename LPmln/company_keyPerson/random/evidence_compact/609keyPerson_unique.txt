@@ -1,0 +1,25 @@
+foundedBy("Kaplan,_Inc.","Stanley_Kaplan").
+keyPerson("Kaplan,_Inc.","Andrew_Rosen").
+parentCompany("Kaplan,_Inc.","Graham_Holdings_Company").
+type("Kaplan,_Inc.","Subsidiary").
+birthPlace("Stanley_Kaplan","New_York_City").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+nationality("Stanley_Kaplan","USA").
+keyPerson("Graham_Holdings_Company","Donald_E._Graham").
+keyPerson("Graham_Holdings_Company","Chief_financial_officer").
+keyPerson("Graham_Holdings_Company","Chief_executive_officer").
+keyPerson("Graham_Holdings_Company","Chairman").
+location("Graham_Holdings_Company","United_States").
+location("Graham_Holdings_Company","Arlington,_Virginia").
+occupation("Stanley_Kaplan","Kaplan,_Inc.").
+occupation("Stanley_Kaplan","Stanley_Kaplan__1").
+type("Fort_Lauderdale,_Florida","City").
+type("Graham_Holdings_Company","Public_company").
+birthPlace("Peter_Lynch","United_States").
+occupation("Peter_Lynch","Peter_Lynch__1").
+type("Fidelity_Investments","Private").
+keyPerson("Fidelity_Investments","Kathleen_Murphy_(executive)").
+keyPerson("Fidelity_Investments","Edward_Johnson,_III").
+keyPerson("Fidelity_Investments","Abigail_Johnson").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

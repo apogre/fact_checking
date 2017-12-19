@@ -1,0 +1,9 @@
+foundedBy("Williams-Sonoma","Chuck_Williams_(author)").
+keyPerson("Williams-Sonoma","CFO").
+keyPerson("Williams-Sonoma","Chief_executive_officer").
+keyPerson("Williams-Sonoma","CEO").
+keyPerson("Williams-Sonoma","Laura_Alber").
+type("Williams-Sonoma","Public_company").
+birthPlace("Chuck_Williams_(author)","Florida").
+birthPlace("Chuck_Williams_(author)","Jacksonville,_Florida").
+occupation("Chuck_Williams_(author)","Chuck_Williams_(author)__1").

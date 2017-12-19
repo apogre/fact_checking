@@ -1,0 +1,21 @@
+foundedBy("Nike,_Inc.","Bill_Bowerman").
+foundedBy("Nike,_Inc.","Phil_Knight").
+keyPerson("Nike,_Inc.","Phil_Knight").
+keyPerson("Nike,_Inc.","Mark_Parker").
+location("Nike,_Inc.","Beaverton,_Oregon").
+location("Nike,_Inc.","Washington_County,_Oregon").
+type("Nike,_Inc.","Public_company").
+birthPlace("Rex_Tillerson","Wichita_Falls").
+birthPlace("Rex_Tillerson","Texas").
+birthPlace("Rex_Tillerson","Wichita_Falls,_Texas").
+occupation("Rex_Tillerson","Rex_Tillerson__1").
+occupation("Rex_Tillerson","Exxon_Mobil").
+predecessor("Rex_Tillerson","Lee_R._Raymond").
+birthPlace("Lee_Raymond","Watertown,_South_Dakota").
+location("Wichita_Falls,_Texas","Wichita Falls, Texas").
+nationality("Lee_Raymond","American").
+occupation("Lee_Raymond","Exxon_Mobil").
+occupation("Lee_Raymond","Lee_Raymond__1").
+type("Wichita_Falls,_Texas","City").
+type("University_of_Texas_at_Austin","Flagship_campus").
+type("University_of_Texas_at_Austin","Space-grant_university").

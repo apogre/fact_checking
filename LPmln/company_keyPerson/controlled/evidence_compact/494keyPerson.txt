@@ -1,0 +1,36 @@
+birthPlace("Stephen_A._Schwarzman","Philadelphia").
+birthYear("Stephen_A._Schwarzman","1947").
+almaMater("Stephen_A._Schwarzman","Harvard_Business_School").
+almaMater("Stephen_A._Schwarzman","Yale_University").
+occupation("Stephen_A._Schwarzman","The_Blackstone_Group").
+occupation("Stephen_A._Schwarzman","Stephen_A._Schwarzman__1").
+occupation("Stephen_A._Schwarzman","Entrepreneur").
+country("Harvard_Business_School","U.S.").
+country("Yale_University","U.S.").
+country("Republican_Party_(United_States)","United States").
+foundedBy("Philadelphia","William Penn").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+foundingYear("The_Blackstone_Group","1985").
+numberOfEmployees("The_Blackstone_Group","2190").
+country("Philadelphia","United_States").
+foundedBy("The_Blackstone_Group","Peter_George_Peterson").
+foundedBy("The_Blackstone_Group","Stephen_A._Schwarzman").
+industry("The_Blackstone_Group","Financial_services").
+keyPerson("The_Blackstone_Group","J._Tomilson_Hill").
+keyPerson("The_Blackstone_Group","President_(corporate_title)").
+keyPerson("The_Blackstone_Group","Jonathan_D._Gray").
+keyPerson("The_Blackstone_Group","Chief_executive_officer").
+keyPerson("The_Blackstone_Group","Stephen_A._Schwarzman").
+keyPerson("The_Blackstone_Group","Chairman").
+keyPerson("The_Blackstone_Group","Real_estate").
+keyPerson("The_Blackstone_Group","Hamilton_E._James").
+location("The_Blackstone_Group","345_Park_Avenue").
+locationCity("The_Blackstone_Group","Manhattan").
+locationCity("The_Blackstone_Group","New_York_City").
+locationCity("The_Blackstone_Group","New_York_(state)").
+locationCountry("The_Blackstone_Group","United_States").
+type("Philadelphia","Consolidated_city-county").
+type("Harvard_Business_School","Private_school").
+type("Yale_University","Private_university").
+type("The_Blackstone_Group","Public_company").

@@ -1,0 +1,36 @@
+foundedBy("Reliance_Industries","Dhirubhai_Ambani").
+keyPerson("Reliance_Industries","Mukesh_Ambani").
+type("Reliance_Industries","Public_company").
+birthPlace("Dhirubhai_Ambani","India").
+birthPlace("Dhirubhai_Ambani","Gujarat").
+birthPlace("Dhirubhai_Ambani","Junagadh").
+birthPlace("Dhirubhai_Ambani","Chorvad").
+birthPlace("Mukesh_Ambani","Aden").
+birthPlace("Mukesh_Ambani","Colony_of_Aden").
+predecessor("Reliance_Anil_Dhirubhai_Ambani_Group","Reliance Commercial Corporation").
+type("Maharashtra","States_and_union_territories_of_India").
+type("Reliance_Anil_Dhirubhai_Ambani_Group","Private company").
+type("BSE_SENSEX","Stock_Exchange").
+foundedBy("Reliance_Anil_Dhirubhai_Ambani_Group","Dhirubhai_Ambani").
+keyPerson("Reliance_Anil_Dhirubhai_Ambani_Group","Anil_Ambani").
+nationality("Dhirubhai_Ambani","Indian_people").
+nationality("Mukesh_Ambani","India").
+occupation("Dhirubhai_Ambani","Dhirubhai_Ambani__1").
+occupation("Dhirubhai_Ambani","Reliance_Capital").
+occupation("Dhirubhai_Ambani","Reliance_Industries").
+occupation("Dhirubhai_Ambani","Reliance_Power").
+occupation("Mukesh_Ambani","Reliance_Industries").
+occupation("Mukesh_Ambani","Mukesh_Ambani__1").
+parent("Mukesh_Ambani","Dhirubhai_Ambani").
+type("Mumbai","Megacity").
+birthPlace("Lowell_McAdam","Buffalo,_New_York").
+occupation("Lowell_McAdam","Lowell_McAdam__1").
+occupation("Lowell_McAdam","Chief_Executive_Officer").
+occupation("Lowell_McAdam","Chairman").
+type("Buffalo,_New_York","City_(New_York)").
+type("University_of_San_Diego","Private_university").
+type("Cornell_University","Private_university").
+type("Cornell_University","Land-grant_university").
+type("Cornell_University","Sea-grant").
+type("Cornell_University","Space-grant").
+type("Cornell_University","Statutory_college").

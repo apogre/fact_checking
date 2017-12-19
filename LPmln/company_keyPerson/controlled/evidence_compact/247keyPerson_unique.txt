@@ -1,0 +1,24 @@
+operatingIncome("Advanced_Micro_Devices","8000000.0").
+numberOfEmployees("Advanced_Micro_Devices","8099").
+foundedBy("Advanced_Micro_Devices","Jerry_Sanders_(businessman)").
+industry("Advanced_Micro_Devices","Semiconductor_industry").
+keyPerson("Advanced_Micro_Devices","Lisa_Su").
+keyPerson("Advanced_Micro_Devices","John_Edward_Caldwell").
+locationCity("Advanced_Micro_Devices","California").
+locationCity("Advanced_Micro_Devices","Sunnyvale,_California").
+locationCity("Advanced_Micro_Devices","United_States").
+regionServed("Advanced_Micro_Devices","World").
+type("Advanced_Micro_Devices","Public_company").
+birthPlace("Lisa_Su","Taiwan").
+birthPlace("Lisa_Su","Tainan").
+country("California","United_States").
+country("California","California").
+location("Sunnyvale,_California","Sunnyvale, California").
+location("Lisa_Su","US").
+birthYear("Jerry_Sanders_(businessman)","1936").
+birthYear("Lisa_Su","1969").
+almaMater("Lisa_Su","MIT").
+country("Sunnyvale,_California","United_States").
+occupation("Lisa_Su","Lisa_Su__1").
+occupation("Lisa_Su","AMD").
+type("Sunnyvale,_California","Charter_city").

@@ -1,0 +1,9 @@
+operatingIncome("Yahoo!","-4.74E9").
+numberOfEmployees("Yahoo!","10400").
+keyPerson("Yahoo!","Marissa_Mayer").
+keyPerson("Yahoo!","Maynard_Webb").
+keyPerson("Yahoo!","David_Filo").
+locationCity("Yahoo!","Sunnyvale,_California").
+subsidiary("Yahoo!","List_of_acquisitions_by_Yahoo!").
+type("Yahoo!","Verizon_Communications").
+type("Yahoo!","Public_company").

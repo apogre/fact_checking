@@ -1,0 +1,24 @@
+foundedBy("Whole_Foods_Market","John_Mackey_(businessman)").
+keyPerson("Whole_Foods_Market","Chief_information_officer").
+keyPerson("Whole_Foods_Market","Walter_Robb").
+keyPerson("Whole_Foods_Market","CEO").
+keyPerson("Whole_Foods_Market","John_Mackey_(businessman)").
+location("Whole_Foods_Market","Austin,_Texas").
+type("Whole_Foods_Market","Public_company").
+birthPlace("John_Mackey_(businessman)","Houston").
+birthPlace("John_Mackey_(businessman)","Texas").
+birthPlace("John_Mackey_(businessman)","United_States").
+occupation("John_Mackey_(businessman)","Whole_Foods_Market").
+occupation("John_Mackey_(businessman)","John_Mackey_(businessman)__1").
+birthPlace("Daymond_John","Queens").
+birthPlace("Daymond_John","Brooklyn").
+birthPlace("Daymond_John","United_States").
+birthPlace("Daymond_John","New_York_City").
+nationality("Daymond_John","United_States").
+occupation("Daymond_John","CEO").
+occupation("Daymond_John","Daymond_John__1").
+location("Brooklyn","JFK Airport, New York").
+type("Brooklyn","Borough_(New_York_City)").
+type("New_York_City","City_(New_York)").
+type("Queens","Borough_(New_York_City)").
+type("Babson_College","Private_university").

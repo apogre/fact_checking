@@ -1,0 +1,9 @@
+foundedBy("Tesco","Jack_Cohen_(businessman)").
+keyPerson("Tesco","Dave_Lewis_(businessman)").
+keyPerson("Tesco","John_Allan_(businessman)").
+location("Tesco","Hertfordshire").
+location("Tesco","Welwyn_Garden_City").
+type("Tesco","Public_limited_company").
+birthPlace("Philip_Clarke_(businessman)","Liverpool").
+occupation("Philip_Clarke_(businessman)","Philip_Clarke_(businessman)__1").
+predecessor("Philip_Clarke_(businessman)","Terry_Leahy").

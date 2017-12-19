@@ -1,0 +1,43 @@
+equity("Sun_Hung_Kai_Properties","456818.0").
+revenue("Sun_Hung_Kai_Properties","6.68E10").
+foundingYear("Sun_Hung_Kai_Properties","1963").
+numberOfEmployees("Sun_Hung_Kai_Properties","37000").
+foundedBy("Sun_Hung_Kai_Properties","Lee_Shau_Kee").
+foundedBy("Sun_Hung_Kai_Properties","Fung_King_Hey").
+foundedBy("Sun_Hung_Kai_Properties","Kwok_Tak_Seng").
+industry("Sun_Hung_Kai_Properties","Real_Estate").
+keyPerson("Sun_Hung_Kai_Properties","Raymond_Kwok").
+keyPerson("Sun_Hung_Kai_Properties","Adam_Kwok").
+owner("Sun_Hung_Kai_Properties","Thomas_Kwok").
+owner("Sun_Hung_Kai_Properties","Raymond_Kwok").
+owningCompany("Sun_Hung_Kai_Properties","Thomas_Kwok").
+owningCompany("Sun_Hung_Kai_Properties","Raymond_Kwok").
+product("Sun_Hung_Kai_Properties","Telecommunication").
+product("Sun_Hung_Kai_Properties","Real_Estate").
+subsidiary("Sun_Hung_Kai_Properties","SmarTone_Telecommunications_Holdings_Limited").
+networth("Raymond_Kwok","1.86E10").
+networth("Thomas_Kwok","1.63E10").
+birthPlace("Raymond_Kwok","Hong_Kong").
+birthPlace("Thomas_Kwok","Macau").
+birthPlace("Thomas_Kwok","Portuguese_Macau").
+birthPlace("Raymond_Kwok","Hong Kong").
+residence("Raymond_Kwok","Hong Kong").
+residence("Thomas_Kwok","Hong Kong").
+birthYear("Thomas_Kwok","1951").
+occupation("Raymond_Kwok","Sun_Hung_Kai_Properties").
+occupation("Raymond_Kwok","Raymond_Kwok__1").
+occupation("Thomas_Kwok","Sun_Hung_Kai_Properties").
+occupation("Thomas_Kwok","Thomas_Kwok__1").
+parent("Raymond_Kwok","Kwong_Siu-hing").
+parent("Raymond_Kwok","Kwok_Tak_Seng").
+parent("Thomas_Kwok","Kwong_Siu-hing").
+parent("Thomas_Kwok","Kwok_Tak_Seng").
+networth("Walter_Kwok","7.0E9").
+birthPlace("Walter_Kwok","Hong_Kong").
+occupation("Walter_Kwok","Walter_Kwok__1").
+occupation("Walter_Kwok","Sun_Hung_Kai_Properties").
+parent("Walter_Kwok","Kwok_Tak_Seng").
+parent("Walter_Kwok","Kwong_Siu-hing").
+location("Sun_Hung_Kai_Properties","Hong Kong, SAR").
+location("Sun_Hung_Kai_Properties","Sun Hung Kai Centre,").
+type("Sun_Hung_Kai_Properties","Public").

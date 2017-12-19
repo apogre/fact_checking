@@ -1,0 +1,15 @@
+keyPerson("Lanco_Infratech","Lagadapati_Rajagopal").
+keyPerson("Lanco_Infratech","Lagadapati_Madhusudhan_Rao").
+birthPlace("Lagadapati_Rajagopal","India").
+birthPlace("Lagadapati_Rajagopal","Nellore").
+birthPlace("Lagadapati_Rajagopal","Vijayawada").
+predecessor("Lagadapati_Rajagopal","Gadde_Ramamohan").
+type("New_Delhi","List_of_districts_of_Delhi").
+birthPlace("Madhusudhan_Rao_Lagadapati","Guntur").
+birthPlace("Madhusudhan_Rao_Lagadapati","Andhra_Pradesh").
+occupation("Madhusudhan_Rao_Lagadapati","Madhusudhan_Rao_Lagadapati__1").
+location("Guntur","Guntur City").
+type("Lanco_Infratech","Public company").
+type("Andhra_Pradesh","States_of_India").
+type("Wayne_State_University","Public_university").
+type("Guntur","City").

@@ -1,0 +1,33 @@
+keyPerson("Cisco_Systems","John_T._Chambers").
+keyPerson("Cisco_Systems","Chuck_Robbins").
+type("Cisco_Systems","Public_company").
+birthPlace("John_T._Chambers","Cleveland").
+birthPlace("John_T._Chambers","Ohio").
+birthPlace("John_T._Chambers","United_States").
+birthPlace("Leonard_Bosack","Philadelphia").
+nationality("Chuck_Robbins","American").
+keyPerson("Sysco","Jackie_L._Ward").
+keyPerson("Sysco","William_J._DeLaney_III").
+location("Certis_CISCO","Singapore").
+location("Sysco","United_States").
+location("Sysco","Houston,_Texas").
+occupation("John_T._Chambers","Chairman").
+occupation("John_T._Chambers","Cisco_Systems").
+occupation("John_T._Chambers","John_T._Chambers__1").
+occupation("Chuck_Robbins","Chuck_Robbins__1").
+occupation("Chuck_Robbins","Cisco_Systems").
+parentCompany("Certis_CISCO","Temasek_Holdings").
+type("San_Francisco","Consolidated_city-county").
+type("Certis_CISCO","Subsidiary").
+type("Sysco","Public_company").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

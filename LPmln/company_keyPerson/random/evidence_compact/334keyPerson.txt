@@ -1,0 +1,34 @@
+keyPerson("BP","Carl-Henric_Svanberg").
+keyPerson("BP","Bob_Dudley").
+type("BP","Public_limited_company").
+birthPlace("Carl-Henric_Svanberg","Porjus").
+birthPlace("Bob_Dudley","Queens").
+birthPlace("Bob_Dudley","Queens,_New_York").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+nationality("Bob_Dudley","American").
+type("England","Administrative_division").
+type("Amoco","Oil company").
+foundedBy("Amoco","John_D._Rockefeller").
+location("Amoco","United_States").
+location("Amoco","Aon_Center_(Chicago)").
+location("Amoco","Chicago,_Illinois").
+occupation("Carl-Henric_Svanberg","Carl-Henric_Svanberg__1").
+occupation("Carl-Henric_Svanberg","Volvo").
+occupation("Carl-Henric_Svanberg","British_Petroleum").
+occupation("Bob_Dudley","BP").
+occupation("Bob_Dudley","Bob_Dudley__1").
+birthPlace("Vittorio_Colao","Brescia").
+location("Brescia","Brescia").
+type("Brescia","Cultural").
+foundedBy("RCS_MediaGroup","Angelo_Rizzoli").
+keyPerson("RCS_MediaGroup","Urbano_Cairo").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+keyPerson("Vodafone","Vittorio_Colao").
+location("Vodafone","Newbury,_Berkshire").
+parentCompany("RCS_MediaGroup","Cairo_Communication").
+predecessor("Vodafone","Racal").
+type("RCS_MediaGroup","S.A._(corporation)").
+type("Vodafone","Public_limited_company").
+type("Harvard_University","Research_university").
+type("Bocconi_University","Private_school").

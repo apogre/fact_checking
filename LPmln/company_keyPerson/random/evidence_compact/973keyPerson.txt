@@ -1,0 +1,16 @@
+foundedBy("Target_Corporation","George_Dayton").
+keyPerson("Target_Corporation","Brian_C._Cornell").
+type("Target_Corporation","Public_company").
+birthPlace("George_Dayton","United_States").
+birthPlace("George_Dayton","New_York_(state)").
+birthPlace("George_Dayton","Clifton_Springs,_New_York").
+location("Minneapolis","--04-08").
+location("Target_Plaza_South","Minnesota").
+location("Target_Plaza_South","Minneapolis,_Minnesota").
+nationality("George_Dayton","United_States").
+occupation("George_Dayton","George_Dayton__1").
+occupation("George_Dayton","Entrepreneur").
+type("Minneapolis","City_(Minnesota)").
+birthPlace("Stefano_Pessina","Pescara").
+nationality("Stefano_Pessina","Monaco").
+occupation("Stefano_Pessina","Stefano_Pessina__1").

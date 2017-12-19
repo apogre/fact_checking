@@ -1,0 +1,8 @@
+keyPerson("Scottrade","Rodger_O._Riney").
+keyPerson("Scottrade","CEO").
+location("Scottrade","Town_and_Country,_Missouri").
+type("Scottrade","Private_company").
+birthPlace("Martin_Winterkorn","Leonberg").
+occupation("Martin_Winterkorn","Martin_Winterkorn__1").
+occupation("Martin_Winterkorn","Volkswagen_AG").
+type("Leonberg","Stadt").

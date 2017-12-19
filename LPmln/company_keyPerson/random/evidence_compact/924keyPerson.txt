@@ -1,0 +1,15 @@
+birthPlace("J._Clifford_Hudson","Dallas,_Texas").
+birthPlace("J._Clifford_Hudson","Dallas").
+occupation("J._Clifford_Hudson","J._Clifford_Hudson__1").
+occupation("J._Clifford_Hudson","Sonic_Drive-In").
+foundedBy("Sonic_Drive-In","Troy_Smith_(businessman)").
+keyPerson("Sonic_Drive-In","J._Clifford_Hudson").
+location("Sonic_Drive-In","Oklahoma").
+location("Sonic_Drive-In","Oklahoma_City").
+location("Sonic_Drive-In","United_States").
+type("Dallas","List_of_cities_in_Texas").
+type("Sonic_Drive-In","Public_company").
+type("University_of_Oklahoma","Public_university").
+type("University_of_Oklahoma","Flagship_university").
+type("University_of_Oklahoma","Space_grant_colleges").
+type("Georgetown_University","Private_university").

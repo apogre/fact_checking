@@ -1,0 +1,30 @@
+keyPerson("Cavium","Syed_B._Ali").
+keyPerson("Cavium","M._Raghib_Hussain").
+type("Cavium","Public_company").
+birthPlace("M._Raghib_Hussain","Karachi,_Pakistan").
+location("San_Jose,_California","San Jose, California").
+nationality("M._Raghib_Hussain","Pakistani-American").
+occupation("M._Raghib_Hussain","M._Raghib_Hussain__1").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+birthPlace("Mark_Fields_(businessman)","Brooklyn").
+birthPlace("Mark_Fields_(businessman)","New_York_(state)").
+predecessor("Mark_Fields_(businessman)","Alan_Mulally").
+birthPlace("Alan_Mulally","Oakland,_California").
+birthPlace("Alan_Mulally","United_States").
+location("Brooklyn","JFK Airport, New York").
+location("Dearborn,_Michigan","Dearborn, Michigan").
+location("Paramus_High_School","New_Jersey").
+location("Paramus_High_School","Paramus,_New_Jersey").
+occupation("Alan_Mulally","Chief_Executive_Officer").
+occupation("Alan_Mulally","President").
+occupation("Alan_Mulally","Alan_Mulally__1").
+type("Brooklyn","Borough_(New_York_City)").
+type("Dearborn,_Michigan","City").
+type("Harvard_Business_School","Private_school").
+type("Paramus_High_School","State_school").
+type("Rutgers_University","Research_university").
+type("Rutgers_University","Public_university").
+type("Rutgers_University","Land-grant_university").
+type("Rutgers_University","Sea-grant_university").
+type("Rutgers_University","University_system").

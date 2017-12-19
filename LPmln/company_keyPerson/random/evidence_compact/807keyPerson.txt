@@ -1,0 +1,63 @@
+foundedBy("Reliance_Anil_Dhirubhai_Ambani_Group","Dhirubhai_Ambani").
+keyPerson("Reliance_Anil_Dhirubhai_Ambani_Group","Anil_Ambani").
+birthPlace("Anil_Ambani","Maharashtra").
+birthPlace("Anil_Ambani","Mumbai").
+birthPlace("Anil_Ambani","Aden").
+birthPlace("Dhirubhai_Ambani","India").
+birthPlace("Dhirubhai_Ambani","Gujarat").
+birthPlace("Dhirubhai_Ambani","Junagadh").
+birthPlace("Dhirubhai_Ambani","Chorvad").
+nationality("Anil_Ambani","Indian").
+predecessor("Reliance_Industries","Reliance Commercial Corporation").
+type("Maharashtra","States_and_union_territories_of_India").
+type("Reliance_Communications","Public company").
+type("Reliance_Capital","Public company").
+type("Reliance_Health","Private").
+type("Reliance_Infrastructure","Public company").
+type("Reliance_Power","Public company").
+foundedBy("Reliance_Communications","Anil_Ambani").
+foundedBy("Reliance_Capital","Dhirubhai_Ambani").
+foundedBy("Reliance_Industries","Dhirubhai_Ambani").
+keyPerson("Reliance_Capital","Anil_Ambani").
+keyPerson("Reliance_Entertainment","Anil_Ambani").
+keyPerson("Reliance_Industries","Mukesh_Ambani").
+keyPerson("Reliance_Health","Tina_Ambani").
+keyPerson("Reliance_Infrastructure","Anil_Ambani").
+keyPerson("Reliance_Power","Anil_Ambani").
+location("Reliance_Communications","Maharashtra").
+location("Reliance_Communications","Navi_Mumbai").
+location("Reliance_Communications","Kopar_Khairane").
+location("Reliance_Communications","Dhirubhai_Ambani_Knowledge_City").
+location("Reliance_Capital","India").
+location("Reliance_Capital","Mumbai").
+location("Reliance_Entertainment","India").
+location("Reliance_Entertainment","Maharashtra").
+location("Reliance_Entertainment","Mumbai").
+location("Reliance_Health","Mumbai").
+location("Reliance_Health","Andheri").
+location("Reliance_Infrastructure","Mumbai").
+location("Reliance_Power","India").
+location("Reliance_Power","Navi_Mumbai").
+nationality("Dhirubhai_Ambani","Indian_people").
+occupation("Anil_Ambani","Anil_Dhirubhai_Ambani_Group").
+occupation("Anil_Ambani","Anil_Ambani__1").
+occupation("Dhirubhai_Ambani","Dhirubhai_Ambani__1").
+occupation("Dhirubhai_Ambani","Reliance_Capital").
+occupation("Dhirubhai_Ambani","Reliance_Industries").
+occupation("Dhirubhai_Ambani","Reliance_Power").
+parent("Anil_Ambani","Dhirubhai_Ambani").
+parentCompany("Reliance_Capital","Reliance_Anil_Dhirubhai_Ambani_Group").
+parentCompany("Reliance_Capital","Anil_Dhirubhai_Ambani_Group").
+parentCompany("Reliance_Entertainment","Reliance_Anil_Dhirubhai_Ambani_Group").
+parentCompany("Reliance_Health","Reliance_Anil_Dhirubhai_Ambani_Group").
+parentCompany("Reliance_Infrastructure","Reliance_Anil_Dhirubhai_Ambani_Group").
+parentCompany("Reliance_Power","Reliance_Anil_Dhirubhai_Ambani_Group").
+type("Reliance_Capital","Public_company").
+type("Reliance_Entertainment","Division_(business)").
+type("Reliance_Industries","Public_company").
+occupation("Andrew_S._Rosen","Kaplan,_Inc.").
+occupation("Andrew_S._Rosen","Andrew_S._Rosen__1").
+foundedBy("Kaplan,_Inc.","Stanley_Kaplan").
+keyPerson("Kaplan,_Inc.","Andrew_Rosen").
+parentCompany("Kaplan,_Inc.","Graham_Holdings_Company").
+type("Kaplan,_Inc.","Subsidiary").

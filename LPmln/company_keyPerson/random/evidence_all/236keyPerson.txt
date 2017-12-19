@@ -1,0 +1,98 @@
+assets("Alcatel-Lucent","2.32E10").
+equity("Alcatel-Lucent","3.7E9").
+netIncome("Alcatel-Lucent","2.72E8").
+operatingIncome("Alcatel-Lucent","7.14E8").
+revenue("Alcatel-Lucent","1.43E10").
+foundingYear("Alcatel-Lucent","1872").
+foundingYear("Alcatel-Lucent","2006").
+foundingYear("Alcatel-Lucent","1870").
+numberOfEmployees("Alcatel-Lucent","52673").
+industry("Alcatel-Lucent","Networking_equipment").
+industry("Alcatel-Lucent","Telecommunications_equipment").
+keyPerson("Alcatel-Lucent","Philippe_Camus_(businessman)").
+keyPerson("Alcatel-Lucent","Chairman").
+locationCity("Alcatel-Lucent","Boulogne-Billancourt").
+locationCountry("Alcatel-Lucent","France").
+parentCompany("Alcatel-Lucent","Nokia").
+product("Alcatel-Lucent","Computer_software").
+type("Alcatel-Lucent","S.A._(corporation)").
+assets("Nokia","4.506E10").
+equity("Nokia","9.44E9").
+netIncome("Nokia","1.68E9").
+operatingIncome("Nokia","5.453E9").
+revenue("Nokia","2.322E10").
+birthPlace("Philippe_Camus_(businessman)","France").
+birthPlace("Philippe_Camus_(businessman)","Paris").
+birthYear("Philippe_Camus_(businessman)","1948").
+foundingYear("Nokia","1871").
+numberOfEmployees("Nokia","114256").
+capital("France","Paris").
+country("Boulogne-Billancourt","France").
+foundationPlace("Nokia","Tampere").
+foundationPlace("Nokia","Nokia,_Finland").
+foundationPlace("Nokia","Grand_Duchy_of_Finland").
+keyPerson("Nokia","Rajeev_Suri").
+keyPerson("Nokia","Risto_Siilasmaa").
+largestCity("France","Capital_city").
+locationCity("Nokia","Espoo").
+locationCity("Nokia","Uusimaa").
+locationCountry("Nokia","Finland").
+nationality("Philippe_Camus_(businessman)","France").
+occupation("Philippe_Camus_(businessman)","Alcatel-Lucent").
+occupation("Philippe_Camus_(businessman)","Philippe_Camus_(businessman)__1").
+product("Nokia","List_of_Nokia_products").
+stateOfOrigin("Philippe_Camus_(businessman)","France").
+subsidiary("Nokia","Alcatel-Lucent").
+subsidiary("Nokia","Nokia_Networks").
+subsidiary("Nokia","Nokia_Bell_Labs").
+subsidiary("Nokia","Nokia_Technologies").
+birthPlace("Ashok_Vemuri","New_Delhi").
+birthPlace("Ashok_Vemuri","India").
+activeYearsStartYear("Ashok_Vemuri","1992").
+birthYear("Ashok_Vemuri","1968").
+almaMater("Ashok_Vemuri","Indian_Institute_of_Management,_Ahmedabad").
+occupation("Ashok_Vemuri","Business_executive").
+occupation("Ashok_Vemuri","Ashok_Vemuri__1").
+residence("Ashok_Vemuri","United_States").
+residence("Ashok_Vemuri","New_Jersey").
+assets("Xerox","2.48E10").
+netIncome("Xerox","4.88E8").
+operatingIncome("Xerox","6.45E8").
+revenue("Xerox","1.804E10").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+location("St._Stephen's_College,_Delhi","University Enclave, New Delhi, India").
+type("Xerox","Public").
+numberOfEmployees("Xerox","140800").
+capital("India","New_Delhi").
+capital("New_Jersey","Trenton,_New_Jersey").
+capital("United_States","Washington,_D.C.").
+country("New_Delhi","India").
+country("New_Jersey","United_States").
+foundationPlace("Xerox","Rochester,_New_York").
+foundationPlace("Xerox","United_States").
+foundationPlace("Xerox","New_York_(state)").
+industry("Xerox","Document_management_system").
+isPartOf("New_Delhi","Delhi").
+keyPerson("Xerox","Ursula_Burns").
+largestCity("India","Mumbai").
+largestCity("New_Jersey","Newark,_New_Jersey").
+largestCity("United_States","New_York_City").
+locationCity("Xerox","Connecticut").
+locationCity("Xerox","Norwalk,_Connecticut").
+locationCountry("Xerox","United_States").
+product("Xerox","Image_projector").
+product("Xerox","Image_scanner").
+product("Xerox","Office_equipment").
+product("Xerox","Printer_(computing)").
+type("New_Delhi","List_of_districts_of_Delhi").

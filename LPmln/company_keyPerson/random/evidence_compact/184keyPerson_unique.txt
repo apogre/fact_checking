@@ -1,0 +1,5 @@
+foundedBy("Viking_Range","Fred_Carl,_Jr.").
+parentCompany("Viking_Range","").
+type("Viking_Range","Subsidiary").
+birthPlace("Fred_Carl,_Jr.","Greenwood,_Mississippi").
+type("Greenwood,_Mississippi","City_(Mississippi)").

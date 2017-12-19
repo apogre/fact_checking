@@ -1,0 +1,14 @@
+owner("Manchester_United_F.C.","Glazer_ownership_of_Manchester_United").
+birthPlace("Avram_Glazer","Rochester,_New_York").
+birthPlace("Joel_Glazer","Rochester,_New_York").
+location("Old_Trafford","England").
+location("Old_Trafford","Old_Trafford,_Greater_Manchester").
+location("Old_Trafford","Greater_Manchester").
+location("Old_Trafford","Sir_Matt_Busby_Way").
+owner("Old_Trafford","Manchester_United_F.C.").
+almaMater("Rory_Read","Hartwick_College").
+occupation("Rory_Read","Rory_Read__1").
+occupation("Rory_Read","Dell_Incorporated").
+city("Hartwick_College","Oneonta,_New_York").
+country("Hartwick_College","United_States").
+type("Hartwick_College","Private_school").

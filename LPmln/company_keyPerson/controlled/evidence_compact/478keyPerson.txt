@@ -1,0 +1,21 @@
+foundingYear("Fidelity_Investments","1946").
+numberOfEmployees("Fidelity_Investments","45000").
+industry("Fidelity_Investments","Financial_Services").
+keyPerson("Fidelity_Investments","Edward_Johnson,_III").
+keyPerson("Fidelity_Investments","Kathleen_Murphy_(executive)").
+keyPerson("Fidelity_Investments","Abigail_Johnson").
+locationCity("Fidelity_Investments","Boston").
+locationCity("Fidelity_Investments","Massachusetts").
+locationCountry("Fidelity_Investments","United_States").
+country("Massachusetts","Massachusetts").
+spouse("Abigail_Johnson","Christopher John McKown").
+birthYear("Abigail_Johnson","1961").
+almaMater("Kathleen_Murphy_(executive)","Fairfield_University").
+almaMater("Kathleen_Murphy_(executive)","University_of_Connecticut_School_of_Law").
+country("Massachusetts","United_States").
+employer("Kathleen_Murphy_(executive)","Fidelity_Investments").
+occupation("Kathleen_Murphy_(executive)","Kathleen_Murphy_(executive)__1").
+occupation("Abigail_Johnson","Fidelity_Investments").
+occupation("Abigail_Johnson","Fidelity_International").
+occupation("Abigail_Johnson","Abigail_Johnson__1").
+type("Boston","Capital_city").

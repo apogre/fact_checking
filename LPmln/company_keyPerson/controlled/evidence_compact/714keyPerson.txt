@@ -1,0 +1,32 @@
+foundingYear("NIIT","1981").
+numberOfEmployees("NIIT","2372").
+foundedBy("NIIT","Vijay_K._Thadani").
+foundedBy("NIIT","Rajendra_S._Pawar").
+industry("NIIT","For-profit_school").
+location("NIIT","Gurgaon,_India").
+type("NIIT","Public_company").
+birthYear("Vijay_K._Thadani","1951").
+almaMater("Vijay_K._Thadani","Indian_Institute_of_Technology,_Delhi").
+employer("Vijay_K._Thadani","NIIT").
+occupation("Vijay_K._Thadani","CEO").
+occupation("Vijay_K._Thadani","NIIT").
+occupation("Vijay_K._Thadani","Vijay_K._Thadani__1").
+birthPlace("Mel_Karmazin","United_States").
+birthPlace("Mel_Karmazin","Manhattan").
+birthPlace("Mel_Karmazin","New_York_(state)").
+birthYear("Mel_Karmazin","1943").
+almaMater("Mel_Karmazin","Pace_University").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+spouse("Craig_Karmazin","Kelli Gabel").
+birthYear("Craig_Karmazin","1975").
+almaMater("Craig_Karmazin","Emory_University").
+country("Greenwich,_Connecticut","United_States").
+country("Pace_University","United_States").
+occupation("Craig_Karmazin","Craig_Karmazin__1").
+occupation("Craig_Karmazin","CEO").
+parent("Craig_Karmazin","Mel_Karmazin").
+type("Greenwich,_Connecticut","New_England_town").
+type("Manhattan","Borough_(New_York_City)").
+type("Pace_University","Nonsectarian").
+type("Pace_University","Private_University").
+type("Pace_University","Co-educational").

@@ -1,0 +1,13 @@
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+occupation("James_E._Thompson","James_E._Thompson__1").
+birthPlace("Ben_van_Beurden","Roosendaal").
+predecessor("Ben_van_Beurden","Peter_Voser").
+birthPlace("Peter_Voser","Baden,_Switzerland").
+birthPlace("Peter_Voser","Switzerland").
+nationality("Peter_Voser","Swiss").
+occupation("Peter_Voser","Peter_Voser__1").
+type("Roosendaal","List_of_municipalities_of_the_Netherlands").
+type("Delft_University_of_Technology","Public_university").
+type("Delft_University_of_Technology","Technical_University").

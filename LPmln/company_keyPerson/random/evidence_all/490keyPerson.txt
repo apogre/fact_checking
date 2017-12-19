@@ -1,0 +1,16 @@
+networth("Rupert_Murdoch","1.17E10").
+birthPlace("Rupert_Murdoch","Australia").
+birthPlace("Rupert_Murdoch","Melbourne").
+birthPlace("Rupert_Murdoch","Victoria_(Australia)").
+birthYear("Rupert_Murdoch","1931").
+almaMater("Rupert_Murdoch","Worcester_College,_Oxford").
+nationality("Rupert_Murdoch","United_States").
+nationality("Rupert_Murdoch","Australian").
+occupation("Rupert_Murdoch","21st_Century_Fox").
+occupation("Rupert_Murdoch","Fox_News").
+occupation("Rupert_Murdoch","News_Corporation").
+occupation("Rupert_Murdoch","Rupert_Murdoch__1").
+parent("Rupert_Murdoch","Elisabeth_Murdoch_(philanthropist)").
+parent("Rupert_Murdoch","Keith_Murdoch").
+stateOfOrigin("Rupert_Murdoch","United_States").
+stateOfOrigin("Rupert_Murdoch","Australian").

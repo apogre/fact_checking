@@ -1,0 +1,38 @@
+foundedBy("Canonical_(company)","Mark_Shuttleworth").
+keyPerson("Canonical_(company)","Jane_Silber").
+keyPerson("Canonical_(company)","Mark_Shuttleworth").
+location("Canonical_(company)","London").
+location("Canonical_(company)","United_Kingdom").
+type("Canonical_(company)","Private_company_limited_by_shares").
+birthPlace("Mark_Shuttleworth","South_Africa").
+birthPlace("Mark_Shuttleworth","Welkom").
+birthPlace("Mark_Shuttleworth","Free_State_(province)").
+birthPlace("Jane_Silber","United_States").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("Launchpad_(website)","Project Hosting Server").
+nationality("Mark_Shuttleworth","South_Africa").
+nationality("Mark_Shuttleworth","United_Kingdom").
+occupation("Mark_Shuttleworth","Mark_Shuttleworth__1").
+birthPlace("Indra_Nooyi","Chennai").
+birthPlace("Indra_Nooyi","India").
+birthPlace("Indra_Nooyi","Madras_State").
+birthPlace("Indra_Nooyi","Madras").
+occupation("Indra_Nooyi","Chairperson").
+occupation("Indra_Nooyi","Indra_Nooyi__1").
+birthPlace("Steven_Reinemund","New_York_City").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+type("Yale_School_of_Management","Business_school").
+type("Yale_School_of_Management","Private_school").
+type("Indian_Institute_of_Management_Calcutta","Institute").
+type("Madras_Christian_College","Government Aided").
+keyPerson("PepsiCo","Indra_Nooyi").
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+nationality("Steven_Reinemund","United_States_of_America").
+predecessor("Steven_Reinemund","Roger_Enrico").
+type("Chennai","Megacity").
+type("Greenwich,_Connecticut","New_England_town").
+type("PepsiCo","Public_company").
+type("Indian_Institute_of_Management_Calcutta","Public_university").

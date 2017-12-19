@@ -1,0 +1,16 @@
+foundedBy("GVK_(conglomerate)","Gunupati_Venkata_Krishna_Reddy").
+industry("GVK_(conglomerate)","Conglomerate_(company)").
+locationCity("GVK_(conglomerate)","Hyderabad,_India").
+locationCountry("GVK_(conglomerate)","India").
+type("GVK_(conglomerate)","Private_Company").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+birthYear("Gunupati_Venkata_Krishna_Reddy","1937").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+birthPlace("Stefano_Pessina","Pescara").
+birthYear("Stefano_Pessina","1941").
+almaMater("Stefano_Pessina","Polytechnic_University_of_Milan").
+occupation("Stefano_Pessina","Stefano_Pessina__1").

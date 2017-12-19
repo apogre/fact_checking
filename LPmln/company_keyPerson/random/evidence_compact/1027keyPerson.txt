@@ -1,0 +1,15 @@
+foundedBy("Tracinda","Kirk_Kerkorian").
+keyPerson("Tracinda","Kirk_Kerkorian").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+type("Las_Vegas","City").
+birthPlace("Jeff_Clarke_(businessman)","Ithaca,_New_York").
+birthPlace("Jeff_Clarke_(businessman)","United_States").
+occupation("Jeff_Clarke_(businessman)","Jeff_Clarke_(businessman)__1").
+predecessor("Kodak","The Eastman Dry Plate Company").
+foundedBy("Kodak","George_Eastman").
+foundedBy("Kodak","Henry_A._Strong").
+keyPerson("Kodak","Jeff_Clarke_(businessman)").
+keyPerson("Kodak","Chief_executive_officer").
+location("Kodak","Rochester,_New_York").
+location("Kodak","New_York_(state)").
+type("Kodak","Public_company").

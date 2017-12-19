@@ -1,0 +1,25 @@
+operatingIncome("Halliburton","5.1E9").
+foundingYear("Halliburton","1919").
+numberOfEmployees("Halliburton","70000").
+foundationPlace("Halliburton","Duncan,_Oklahoma").
+foundedBy("Halliburton","Erle_P._Halliburton").
+industry("Halliburton","Oilfield").
+keyPerson("Halliburton","President").
+keyPerson("Halliburton","David_Lesar").
+keyPerson("Halliburton","CEO").
+keyPerson("Halliburton","Chairman").
+location("Halliburton","Houston,_Texas").
+type("Halliburton","Public_company").
+birthPlace("Erle_P._Halliburton","Duncan,_Oklahoma").
+location("Duncan,_Oklahoma","Duncan, Oklahoma").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+birthYear("Gunupati_Venkata_Krishna_Reddy","1937").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+division("Nellore_district","Nellore district").
+type("Padma_Bhushan","Civilian").
+type("Andhra_Pradesh","States_of_India").
+country("Andhra_Pradesh","India").

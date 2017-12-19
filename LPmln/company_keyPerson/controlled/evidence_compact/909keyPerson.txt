@@ -1,0 +1,66 @@
+operatingIncome("Southwest_Airlines","4.1E9").
+numberOfEmployees("Southwest_Airlines","52301").
+industry("Southwest_Airlines","Air_Transport").
+location("Denver_International_Airport","Northeastern Denver, Colorado").
+owner("Nashville_International_Airport","Metropolitan Government of Nashville and Davidson County").
+owner("Denver_International_Airport","City & County of Denver Department of Aviation").
+owner("Los_Angeles_International_Airport","City of Los Angeles").
+owner("Midway_International_Airport","City of Chicago").
+owner("William_P._Hobby_Airport","City of Houston").
+owner("Dallas_Love_Field","City of Dallas").
+type("Nashville_International_Airport","Public").
+type("Denver_International_Airport","Public").
+type("Los_Angeles_International_Airport","Public").
+type("John_Wayne_Airport","Public").
+type("Midway_International_Airport","Public").
+type("Oakland_International_Airport","Public").
+type("McCarran_International_Airport","Public").
+type("Orlando_International_Airport","Public").
+type("San_Diego_International_Airport","Public").
+type("Tampa_International_Airport","Public").
+type("General_Mitchell_International_Airport","Public").
+type("Phoenix_Sky_Harbor_International_Airport","Public").
+type("Dallas_Love_Field","Public").
+location("Los_Angeles_International_Airport","California").
+location("Los_Angeles_International_Airport","Los_Angeles").
+location("John_Wayne_Airport","Santa_Ana,_California").
+location("Midway_International_Airport","Chicago").
+location("Midway_International_Airport","Illinois").
+location("Oakland_International_Airport","Oakland,_California").
+location("William_P._Hobby_Airport","Houston").
+location("McCarran_International_Airport","Paradise,_Nevada").
+location("San_Diego_International_Airport","California").
+location("San_Diego_International_Airport","San_Diego").
+location("General_Mitchell_International_Airport","Milwaukee").
+location("General_Mitchell_International_Airport","Wisconsin").
+location("Phoenix_Sky_Harbor_International_Airport","Phoenix,_Arizona").
+location("Dallas_Love_Field","Dallas").
+owner("Oakland_International_Airport","Port_of_Oakland").
+owner("Orlando_International_Airport","Greater_Orlando_Aviation_Authority").
+owner("General_Mitchell_International_Airport","Milwaukee_County").
+birthPlace("Yang_Hyun-suk","Seoul").
+occupation("Yang_Hyun-suk","Dancer").
+occupation("Yang_Hyun-suk","Record_executive").
+occupation("Yang_Hyun-suk","Record_producer").
+operatingIncome("YG_Entertainment","2.8E7").
+birthPlace("Seo_Taiji","Seoul").
+type("Record_producer","Profession").
+foundingYear("YG_Entertainment","1996").
+country("Seoul","South_Korea").
+industry("YG_Entertainment","Entertainment").
+keyPerson("YG_Entertainment","Yang_Hyun-suk").
+occupation("Seo_Taiji","Singer-songwriter").
+occupation("Seo_Taiji","Musician").
+occupation("Seo_Taiji","Record_producer").
+owner("YG_Entertainment","Yang_Hyun-suk").
+owner("YG_Entertainment","Samsung_Life_Insurance").
+owner("YG_Entertainment","LVMH").
+owner("YG_Entertainment","National_Pension_Service").
+owningCompany("YG_Entertainment","Yang_Hyun-suk").
+owningCompany("YG_Entertainment","Samsung_Life_Insurance").
+owningCompany("YG_Entertainment","LVMH").
+owningCompany("YG_Entertainment","National_Pension_Service").
+subsidiary("YG_Entertainment","").
+subsidiary("YG_Entertainment","index.html").
+type("Seoul","Special_cities_of_South_Korea").
+type("YG_Entertainment","Public_company").

@@ -1,0 +1,18 @@
+keyPerson("Scottrade","Rodger_O._Riney").
+keyPerson("Scottrade","CEO").
+location("Scottrade","Town_and_Country,_Missouri").
+type("Scottrade","Private_company").
+birthPlace("Masayoshi_Son","Japan").
+birthPlace("Masayoshi_Son","Tosu,_Saga").
+occupation("Masayoshi_Son","Masayoshi_Son__1").
+occupation("Masayoshi_Son","SoftBank").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+type("Tokyo","Prefectures_of_Japan").
+type("Tosu,_Saga","Cities_of_Japan").
+type("Holy_Names_University","Non-profit").
+type("Holy_Names_University","Private_university").
+type("Holy_Names_University","Coeducational").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").

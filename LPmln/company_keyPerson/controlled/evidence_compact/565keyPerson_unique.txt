@@ -1,0 +1,39 @@
+foundingYear("Honeywell","1906").
+numberOfEmployees("Honeywell","129000").
+foundationPlace("Honeywell","Wabash,_Indiana").
+foundedBy("Honeywell","Mark_C._Honeywell").
+industry("Honeywell","Conglomerate_(company)").
+keyPerson("Honeywell","David_M._Cote").
+predecessor("Honeywell","AlliedSignal").
+type("Honeywell","Public_company").
+birthPlace("David_M._Cote","Manchester,_New_Hampshire").
+birthPlace("Mark_C._Honeywell","Florida").
+birthYear("David_M._Cote","1952").
+foundingYear("AlliedSignal","1985").
+numberOfEmployees("AlliedSignal","70400").
+almaMater("David_M._Cote","University_of_New_Hampshire").
+country("Wabash,_Indiana","United_States").
+country("Morris_Plains,_New_Jersey","United_States").
+location("AlliedSignal","Morristown,_New_Jersey").
+predecessor("AlliedSignal","Allied_Corp.").
+type("Wabash,_Indiana","City").
+type("Morris_Plains,_New_Jersey","Borough_(New_Jersey)").
+type("AlliedSignal","Public_company").
+birthPlace("John_Thain","United_States").
+birthPlace("John_Thain","Antioch,_Illinois").
+birthPlace("John_Thain","Illinois").
+birthYear("John_Thain","1955").
+almaMater("John_Thain","Massachusetts_Institute_of_Technology").
+almaMater("John_Thain","Harvard_Business_School").
+country("Illinois","Illinois").
+country("Harvard_Business_School","U.S.").
+country("Massachusetts_Institute_of_Technology","United States").
+country("Republican_Party_(United_States)","United States").
+location("Antioch,_Illinois","Antioch, IL").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+country("Illinois","United_States").
+country("Antioch,_Illinois","United_States").
+type("Harvard_Business_School","Private_school").
+type("Massachusetts_Institute_of_Technology","Private_university").
+type("Massachusetts_Institute_of_Technology","Land-grant_university").

@@ -1,0 +1,14 @@
+foundingYear("Mossy_Oak","1986").
+foundedBy("Mossy_Oak","Toxey_Haas").
+industry("Mossy_Oak","Retail").
+keyPerson("Mossy_Oak","Toxey_Haas").
+location("Mossy_Oak","West_Point,_MS").
+type("Mossy_Oak","Private_company").
+birthPlace("Toxey_Haas","Mississippi").
+birthPlace("Toxey_Haas","United_States").
+birthPlace("Toxey_Haas","West_Point,_Mississippi").
+spouse("Toxey_Haas","Diane Lusk Haas").
+birthYear("Toxey_Haas","1960").
+almaMater("Toxey_Haas","Mississippi_State_University").
+occupation("Toxey_Haas","CEO").
+occupation("Toxey_Haas","Toxey_Haas__1").

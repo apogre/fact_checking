@@ -1,0 +1,15 @@
+operatingIncome("Ralph_Lauren_Corporation","7.94E8").
+foundingYear("Ralph_Lauren_Corporation","1967").
+numberOfEmployees("Ralph_Lauren_Corporation","23000").
+foundedBy("Ralph_Lauren_Corporation","Ralph_Lauren").
+keyPerson("Ralph_Lauren_Corporation","Ralph_Lauren").
+keyPerson("Ralph_Lauren_Corporation","Stefan_Larsson_(businessman)").
+locationCity("Ralph_Lauren_Corporation","New_York_(state)").
+locationCity("Ralph_Lauren_Corporation","New_York_City").
+locationCountry("Ralph_Lauren_Corporation","United_States").
+subsidiary("Ralph_Lauren_Corporation","Club_Monaco").
+type("Ralph_Lauren_Corporation","Public_company").
+birthPlace("Stefano_Pessina","Pescara").
+birthYear("Stefano_Pessina","1941").
+almaMater("Stefano_Pessina","Polytechnic_University_of_Milan").
+occupation("Stefano_Pessina","Stefano_Pessina__1").

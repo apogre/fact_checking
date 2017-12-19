@@ -1,0 +1,43 @@
+lpmln2cl
+Clingo executed with command:
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=not_keyPerson LPmln/company_keyPerson/controlled/evidence_compact/1208keyPerson_unique.txt 
+clingo version 4.5.4
+Reading from ...me/apradhan/proj/fact_checking/out.txt ...
+Solving...
+
+
+
+
+not_keyPerson('Pizza_Hut', 'CEO') 1.0
+not_keyPerson('Yum!_Brands', 'CFO') 1.0
+not_keyPerson('WingStreet', 'Glen_Bell') 1.0
+not_keyPerson('WingStreet', 'CFO') 1.0
+not_keyPerson('Yum!_Brands', 'Greg_Creed') 1.0
+not_keyPerson('Pizza_Hut', 'Glen_Bell') 1.0
+not_keyPerson('WingStreet', 'Robert_D._Walter') 1.0
+not_keyPerson('WingStreet', 'CEO') 1.0
+not_keyPerson('Pizza_Hut', 'Greg_Creed') 1.0
+not_keyPerson('Taco_Bell', 'Robert_D._Walter') 1.0
+not_keyPerson('Pizza_Hut', 'Robert_D._Walter') 1.0
+not_keyPerson('KFC', 'CEO') 1.0
+not_keyPerson('Taco_Bell', 'Glen_Bell') 1.0
+not_keyPerson('Taco_Bell', 'CFO') 1.0
+not_keyPerson('Yum!_Brands', 'CEO') 1.0
+not_keyPerson('Pizza_Hut', 'CFO') 1.0
+not_keyPerson('Taco_Bell', 'Greg_Creed') 1.0
+not_keyPerson('KFC', 'Robert_D._Walter') 1.0
+not_keyPerson('KFC', 'Greg_Creed') 1.0
+not_keyPerson('WingStreet', 'Greg_Creed') 1.0
+not_keyPerson('KFC', 'Glen_Bell') 1.0
+not_keyPerson('KFC', 'CFO') 1.0
+not_keyPerson('Taco_Bell', 'CEO') 1.0
+not_keyPerson('Yum!_Brands', 'Glen_Bell') 1.0
+not_keyPerson('Yum!_Brands', 'Robert_D._Walter') 1.0
+
+
+SATISFIABLE
+
+Models       : 1     
+Calls        : 1
+Time         : 0.171s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.160s

@@ -1,0 +1,48 @@
+netIncome("UGI_Corporation","3.37E8").
+operatingIncome("UGI_Corporation","1006.0").
+revenue("UGI_Corporation","8277.0").
+foundingYear("UGI_Corporation","1882").
+industry("UGI_Corporation","Energy_industry").
+locationCity("UGI_Corporation","King_of_Prussia,_Pennsylvania").
+locationCountry("UGI_Corporation","United_States").
+regionServed("UGI_Corporation","Pennsylvania").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("King_of_Prussia,_Pennsylvania","United States").
+country("Pennsylvania","Pennsylvania").
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+capital("United_States","Washington,_D.C.").
+country("Pennsylvania","United_States").
+largestCity("Pennsylvania","Philadelphia").
+largestCity("United_States","New_York_City").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").
+birthPlace("Ben_van_Beurden","Roosendaal").
+activeYearsStartYear("Ben_van_Beurden","1983").
+birthYear("Ben_van_Beurden","1958").
+almaMater("Ben_van_Beurden","Delft_University_of_Technology").
+personFunction("Ben_van_Beurden","Ben_van_Beurden__1").
+predecessor("Ben_van_Beurden","Peter_Voser").
+salary("Ben_van_Beurden","2.429E7").
+birthPlace("Peter_Voser","Baden,_Switzerland").
+birthPlace("Peter_Voser","Switzerland").
+country("Delft_University_of_Technology","Netherlands").
+nationality("Peter_Voser","Swiss").
+birthYear("Peter_Voser","1958").
+almaMater("Peter_Voser","Zurich_University_of_Applied_Sciences").
+city("Delft_University_of_Technology","Delft").
+country("Roosendaal","Netherlands").
+isPartOf("Roosendaal","North_Brabant").
+occupation("Peter_Voser","Peter_Voser__1").
+personFunction("Peter_Voser","Peter_Voser__1").
+type("Roosendaal","List_of_municipalities_of_the_Netherlands").
+type("Delft_University_of_Technology","Public_university").
+type("Delft_University_of_Technology","Technical_University").

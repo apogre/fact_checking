@@ -1,0 +1,56 @@
+foundingYear("Graham_Holdings_Company","2013").
+numberOfEmployees("Graham_Holdings_Company","11500").
+foundationPlace("Graham_Holdings_Company","Washington,_D.C.").
+industry("Graham_Holdings_Company","Mass_media").
+keyPerson("Graham_Holdings_Company","Chief_executive_officer").
+keyPerson("Graham_Holdings_Company","Chairman").
+keyPerson("Graham_Holdings_Company","Chief_financial_officer").
+location("Graham_Holdings_Company","United_States").
+location("Graham_Holdings_Company","Arlington,_Virginia").
+type("Graham_Holdings_Company","Public_company").
+birthPlace("Donald_E._Graham","United_States").
+spouse("Donald_E._Graham","Amanda Bennett").
+spouse("Donald_E._Graham","Mary Wissler").
+birthYear("Donald_E._Graham","1945").
+employer("Donald_E._Graham","Facebook").
+employer("Donald_E._Graham","Graham_Holdings_Company").
+occupation("Donald_E._Graham","Chairman_of_the_board").
+occupation("Donald_E._Graham","Donald_E._Graham__1").
+parent("Donald_E._Graham","Phil_Graham").
+parent("Donald_E._Graham","Katharine_Graham").
+type("Washington,_D.C.","Federal_district").
+birthPlace("Phil_Graham","South_Dakota").
+birthPlace("Phil_Graham","Terry,_South_Dakota").
+birthPlace("Katharine_Graham","New_York_City").
+birthPlace("Katharine_Graham","New York City").
+operatingIncome("Graham_Holdings_Company","US$").
+owner("Facebook","Mark Zuckerberg").
+birthYear("Phil_Graham","1915").
+birthYear("Katharine_Graham","1917").
+numberOfEmployees("Facebook","14495").
+country("Harvard_College","United_States").
+foundedBy("Facebook","Eduardo_Saverin").
+foundedBy("Facebook","Andrew_McCollum").
+foundedBy("Facebook","Chris_Hughes").
+foundedBy("Facebook","Dustin_Moskovitz").
+foundedBy("Facebook","Mark_Zuckerberg").
+industry("Facebook","Internet").
+keyPerson("Facebook","Sheryl_Sandberg").
+keyPerson("Facebook","Chief_operating_officer").
+keyPerson("Facebook","CEO").
+keyPerson("Facebook","Chairman").
+keyPerson("Facebook","Mark_Zuckerberg").
+location("Facebook","Menlo_Park,_California").
+occupation("Phil_Graham","Phil_Graham__1").
+occupation("Katharine_Graham","Publisher").
+occupation("Katharine_Graham","Katharine_Graham__1").
+parent("Katharine_Graham","Eugene_Meyer_(financier)").
+regionServed("Facebook","Censorship_of_Facebook").
+spouse("Phil_Graham","Katharine_Graham").
+spouse("Katharine_Graham","Phil_Graham").
+subsidiary("Facebook","Facebook_Messenger").
+subsidiary("Facebook","WhatsApp").
+subsidiary("Facebook","Oculus_VR").
+subsidiary("Facebook","Instagram").
+type("Facebook","Public_company").
+type("Harvard_College","Private_school").

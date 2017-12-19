@@ -1,0 +1,93 @@
+assets("EBay","1.778E10").
+equity("EBay","6.57E9").
+netIncome("EBay","1.72E9").
+operatingIncome("EBay","2.19E9").
+revenue("EBay","8.59E9").
+numberOfEmployees("EBay","34600").
+foundedBy("EBay","Pierre_Omidyar").
+industry("EBay","Internet").
+location("EBay","California").
+location("EBay","San_Jose,_California").
+subsidiary("EBay","GittiGidiyor").
+subsidiary("EBay","IBazar").
+subsidiary("EBay","Kijiji").
+subsidiary("EBay","Gumtree").
+subsidiary("EBay","Half.com").
+subsidiary("EBay","Stubhub").
+type("EBay","Public_company").
+birthPlace("John_Donahoe","Evanston,_Illinois").
+birthYear("John_Donahoe","1960").
+almaMater("John_Donahoe","Dartmouth_College").
+almaMater("John_Donahoe","Stanford_Graduate_School_of_Business").
+occupation("John_Donahoe","John_Donahoe__1").
+occupation("John_Donahoe","PayPal").
+residence("John_Donahoe","Portola_Valley,_California").
+residence("John_Donahoe","California").
+salary("John_Donahoe","1.3833374E7").
+networth("Meg_Whitman","2.1E9").
+revenue("Bain_&_Company","2.1E9").
+birthPlace("Meg_Whitman","United_States").
+birthPlace("Meg_Whitman","New_York_(state)").
+birthPlace("Meg_Whitman","Cold_Spring_Harbor,_New_York").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+country("PayPal","United States 95131").
+country("Stanford_Graduate_School_of_Business","U.S.").
+predecessor("PayPal","Confinity").
+type("Stanford_Graduate_School_of_Business","Private").
+birthYear("Meg_Whitman","1956").
+foundingYear("Bain_&_Company","1973").
+numberOfEmployees("Bain_&_Company","5700").
+almaMater("Meg_Whitman","Harvard_Business_School").
+almaMater("Meg_Whitman","Princeton_University").
+almaMater("Eileen_Donahoe","Dartmouth_College").
+almaMater("Eileen_Donahoe","Harvard_University").
+almaMater("Eileen_Donahoe","Stanford_University").
+city("Stanford_Graduate_School_of_Business","Stanford,_California").
+city("Dartmouth_College","Hanover,_New_Hampshire").
+country("Evanston,_Illinois","United_States").
+country("Dartmouth_College","United_States").
+foundedBy("PayPal","Ken_Howery").
+foundedBy("PayPal","Luke_Nosek").
+foundedBy("PayPal","Max_Levchin").
+foundedBy("PayPal","Peter_Thiel").
+foundedBy("PayPal","Elon_Musk").
+foundedBy("Bain_&_Company","Bill_Bain_(consultant)").
+industry("PayPal","Financial_Services").
+industry("Bain_&_Company","Management_consulting").
+isPartOf("Evanston,_Illinois","Illinois").
+isPartOf("Evanston,_Illinois","Cook_County,_Illinois").
+isPartOf("Evanston,_Illinois","Evanston_Township,_Cook_County,_Illinois").
+isPartOf("Portola_Valley,_California","California").
+isPartOf("Portola_Valley,_California","San_Mateo_County,_California").
+keyPerson("Bain_&_Company","Orit_Gadiesh").
+largestCity("California","Los_Angeles").
+location("PayPal","San_Jose,_California").
+location("Bain_&_Company","Boston").
+location("Bain_&_Company","Massachusetts").
+location("Bain_&_Company","United_States").
+nationality("Eileen_Donahoe","United_States").
+parentCompany("PayPal","EBay").
+predecessor("Eileen_Donahoe","Rudy_Boschwitz").
+product("PayPal","Payment_system").
+product("Bain_&_Company","Management_Consulting").
+religion("Meg_Whitman","Presbyterianism").
+residence("Meg_Whitman","Atherton,_California").
+residence("Eileen_Donahoe","Geneva").
+successor("Eileen_Donahoe","Keith_M._Harper").
+type("Evanston,_Illinois","City").
+type("PayPal","Public_company").
+type("Bain_&_Company","Partnership").
+type("Dartmouth_College","Private_university").
+type("Portola_Valley,_California","Town").

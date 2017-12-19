@@ -1,0 +1,20 @@
+keyPerson("Cavium","Syed_B._Ali").
+keyPerson("Cavium","M._Raghib_Hussain").
+type("Cavium","Public_company").
+birthPlace("M._Raghib_Hussain","Karachi,_Pakistan").
+location("San_Jose,_California","San Jose, California").
+nationality("M._Raghib_Hussain","Pakistani-American").
+occupation("M._Raghib_Hussain","M._Raghib_Hussain__1").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+birthPlace("Klaus_Kleinfeld","Bremen").
+birthPlace("Klaus_Kleinfeld","Bremen,_Germany").
+nationality("Klaus_Kleinfeld","Germany").
+occupation("Klaus_Kleinfeld","Klaus_Kleinfeld__1").
+occupation("Klaus_Kleinfeld","Chairman").
+occupation("Klaus_Kleinfeld","CEO").
+birthPlace("Heinrich_von_Pierer","Erlangen").
+birthPlace("Heinrich_von_Pierer","Germany").
+location("Bremen","Bremen").
+type("Bremen","Stadt").
+occupation("Heinrich_von_Pierer","Heinrich_von_Pierer__1").

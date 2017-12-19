@@ -1,0 +1,121 @@
+numberOfEmployees("WWE","800").
+foundationPlace("WWE","South_Yarmouth,_Massachusetts").
+industry("WWE","Sports_entertainment").
+industry("WWE","Streaming_media").
+industry("WWE","Professional_wrestling").
+keyPerson("WWE","Triple_H").
+keyPerson("WWE","Vince_McMahon").
+keyPerson("WWE","Stephanie_McMahon").
+keyPerson("WWE","Creative_director").
+keyPerson("WWE","House_show").
+keyPerson("WWE","Chief_Brand_Officer").
+keyPerson("WWE","Executive_Vice_President").
+locationCity("WWE","Stamford,_Connecticut").
+predecessor("WWE","Capitol_Wrestling_Corporation").
+networth("Linda_McMahon","8.55E8").
+networth("Vince_McMahon","1.21E9").
+networth("Stephanie_McMahon","5.46E7").
+birthPlace("Linda_McMahon","New_Bern,_North_Carolina").
+birthPlace("Linda_McMahon","North_Carolina").
+birthPlace("Linda_McMahon","New_Bern").
+birthPlace("Triple_H","Nashua,_New_Hampshire").
+birthPlace("Vince_McMahon","United_States").
+birthPlace("Vince_McMahon","Pinehurst,_North_Carolina").
+birthPlace("Stephanie_McMahon","Connecticut").
+birthPlace("Stephanie_McMahon","Hartford,_Connecticut").
+birthPlace("Stephanie_McMahon","New_York_City").
+birthPlace("Stephanie_McMahon","United_States").
+location("Stamford,_Connecticut","Stamford, Connecticut").
+activeYearsStartYear("Linda_McMahon","1969").
+activeYearsStartYear("Triple_H","1992").
+activeYearsStartYear("Vince_McMahon","1969").
+activeYearsStartYear("Stephanie_McMahon","1998").
+birthYear("Linda_McMahon","1948").
+birthYear("Triple_H","1969").
+birthYear("Vince_McMahon","1945").
+birthYear("Stephanie_McMahon","1976").
+almaMater("Stephanie_McMahon","Boston_University").
+country("South_Yarmouth,_Massachusetts","United_States").
+industry("Capitol_Wrestling_Corporation","Professional_wrestling").
+isPartOf("Stamford,_Connecticut","Connecticut").
+isPartOf("Stamford,_Connecticut","Fairfield_County,_Connecticut").
+isPartOf("South_Yarmouth,_Massachusetts","Massachusetts").
+isPartOf("South_Yarmouth,_Massachusetts","Barnstable_County,_Massachusetts").
+isPartOf("South_Yarmouth,_Massachusetts","Yarmouth,_Massachusetts").
+occupation("Linda_McMahon","Linda_McMahon__1").
+occupation("Linda_McMahon","Chief_executive_officer").
+occupation("Linda_McMahon","WWE").
+occupation("Triple_H","Triple_H__1").
+occupation("Triple_H","Professional_wrestling").
+occupation("Triple_H","WWE").
+occupation("Triple_H","Executive_Vice_President").
+occupation("Vince_McMahon","Vince_McMahon__1").
+occupation("Vince_McMahon","Chairman").
+occupation("Vince_McMahon","WWE").
+occupation("Vince_McMahon","Sports_commentator").
+occupation("Stephanie_McMahon","Stephanie_McMahon__1").
+occupation("Stephanie_McMahon","Chief_Brand_Officer").
+owner("Capitol_Wrestling_Corporation","Vince_McMahon,_Sr.").
+parent("Vince_McMahon","Vince_McMahon_Sr.").
+parent("Stephanie_McMahon","Linda_McMahon").
+parent("Stephanie_McMahon","Vince_McMahon").
+personFunction("Triple_H","Triple_H__1").
+personFunction("Vince_McMahon","Vince_McMahon__1").
+residence("Triple_H","Weston,_Connecticut").
+residence("Stephanie_McMahon","Connecticut").
+residence("Stephanie_McMahon","United_States").
+residence("Stephanie_McMahon","Weston,_Connecticut").
+successor("Capitol_Wrestling_Corporation","WWE").
+type("Stamford,_Connecticut","City").
+type("South_Yarmouth,_Massachusetts","Census-designated_place").
+type("Capitol_Wrestling_Corporation","Private_company").
+birthPlace("Ashok_Vemuri","New_Delhi").
+birthPlace("Ashok_Vemuri","India").
+activeYearsStartYear("Ashok_Vemuri","1992").
+birthYear("Ashok_Vemuri","1968").
+almaMater("Ashok_Vemuri","Indian_Institute_of_Management,_Ahmedabad").
+occupation("Ashok_Vemuri","Business_executive").
+occupation("Ashok_Vemuri","Ashok_Vemuri__1").
+residence("Ashok_Vemuri","United_States").
+residence("Ashok_Vemuri","New_Jersey").
+assets("Xerox","2.48E10").
+netIncome("Xerox","4.88E8").
+operatingIncome("Xerox","6.45E8").
+revenue("Xerox","1.804E10").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+location("St._Stephen's_College,_Delhi","University Enclave, New Delhi, India").
+type("Xerox","Public").
+numberOfEmployees("Xerox","140800").
+capital("India","New_Delhi").
+capital("New_Jersey","Trenton,_New_Jersey").
+capital("United_States","Washington,_D.C.").
+country("New_Delhi","India").
+country("New_Jersey","United_States").
+foundationPlace("Xerox","Rochester,_New_York").
+foundationPlace("Xerox","United_States").
+foundationPlace("Xerox","New_York_(state)").
+industry("Xerox","Document_management_system").
+isPartOf("New_Delhi","Delhi").
+keyPerson("Xerox","Ursula_Burns").
+largestCity("India","Mumbai").
+largestCity("New_Jersey","Newark,_New_Jersey").
+largestCity("United_States","New_York_City").
+locationCity("Xerox","Connecticut").
+locationCity("Xerox","Norwalk,_Connecticut").
+locationCountry("Xerox","United_States").
+product("Xerox","Image_projector").
+product("Xerox","Image_scanner").
+product("Xerox","Office_equipment").
+product("Xerox","Printer_(computing)").
+type("New_Delhi","List_of_districts_of_Delhi").

@@ -1,0 +1,51 @@
+foundedBy("Comcast","Ralph_J._Roberts").
+foundedBy("Comcast","Julian_A._Brodsky").
+keyPerson("Comcast","David_L._Cohen").
+keyPerson("Comcast","Brian_L._Roberts").
+type("Comcast","Public_company").
+birthPlace("Ralph_J._Roberts","New_York_City").
+birthPlace("David_L._Cohen","Highland_Park,_New_Jersey").
+birthPlace("Brian_L._Roberts","Philadelphia").
+birthPlace("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+foundedBy("Philadelphia","William Penn").
+location("Tupelo,_Mississippi","Tupelo, Mississippi").
+nationality("Ralph_J._Roberts","United States").
+nationality("Julian_A._Brodsky","United States").
+nationality("Brian_L._Roberts","United States").
+foundedBy("Comcast_Spectacor","Ed_Snider").
+keyPerson("Comcast_Spectacor","Chief_financial_officer").
+keyPerson("Comcast_Spectacor","President").
+keyPerson("Comcast_Spectacor","TBA").
+keyPerson("Comcast_Spectacor","Vice_Chairman").
+keyPerson("Comcast_Cable","Neil_Smit").
+keyPerson("Comcast_Cable","Brian_L._Roberts").
+keyPerson("NBCUniversal","Steve_Burke_(businessman)").
+keyPerson("Comcast_Interactive_Media","Amy_Banse").
+keyPerson("Comcast_Interactive_Media","President").
+keyPerson("Comcast_Interactive_Media","Samuel_H._Schwartz").
+keyPerson("Comcast_Interactive_Media","Executive_Vice_President").
+location("Midco","Sioux_Falls,_South_Dakota").
+occupation("Ralph_J._Roberts","Ralph_J._Roberts__1").
+occupation("Julian_A._Brodsky","Julian_A._Brodsky__1").
+occupation("David_L._Cohen","Comcast").
+occupation("David_L._Cohen","David_L._Cohen__1").
+occupation("Brian_L._Roberts","Brian_L._Roberts__1").
+occupation("Brian_L._Roberts","leadership-overview").
+parent("Brian_L._Roberts","Ralph_J._Roberts").
+parentCompany("Comcast_Spectacor","Comcast").
+parentCompany("Midco","Comcast").
+parentCompany("Comcast_Cable","Comcast").
+parentCompany("NBCUniversal","Comcast").
+parentCompany("Comcast_Interactive_Media","Comcast_Cable").
+predecessor("NBCUniversal","MCA_Inc.").
+predecessor("NBCUniversal","General_Electric").
+predecessor("NBCUniversal","Vivendi_Universal_Entertainment").
+type("Philadelphia","Consolidated_city-county").
+type("Tupelo,_Mississippi","City").
+type("Comcast_Spectacor","Subsidiary").
+type("Midco","Joint_venture").
+type("Comcast_Cable","Division_(business)").
+type("NBCUniversal","Division_(business)").
+type("Comcast_Interactive_Media","Subsidiary").
+birthPlace("Natarajan_Chandrasekaran","Mohanur").
+type("Mohanur","Town_panchayat").

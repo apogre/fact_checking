@@ -1,0 +1,98 @@
+assets("Alcatel-Lucent","2.32E10").
+equity("Alcatel-Lucent","3.7E9").
+netIncome("Alcatel-Lucent","2.72E8").
+operatingIncome("Alcatel-Lucent","7.14E8").
+revenue("Alcatel-Lucent","1.43E10").
+foundingYear("Alcatel-Lucent","1872").
+foundingYear("Alcatel-Lucent","2006").
+foundingYear("Alcatel-Lucent","1870").
+numberOfEmployees("Alcatel-Lucent","52673").
+industry("Alcatel-Lucent","Networking_equipment").
+industry("Alcatel-Lucent","Telecommunications_equipment").
+keyPerson("Alcatel-Lucent","Philippe_Camus_(businessman)").
+keyPerson("Alcatel-Lucent","Chairman").
+locationCity("Alcatel-Lucent","Boulogne-Billancourt").
+locationCountry("Alcatel-Lucent","France").
+parentCompany("Alcatel-Lucent","Nokia").
+product("Alcatel-Lucent","Computer_software").
+type("Alcatel-Lucent","S.A._(corporation)").
+assets("Nokia","4.506E10").
+equity("Nokia","9.44E9").
+netIncome("Nokia","1.68E9").
+operatingIncome("Nokia","5.453E9").
+revenue("Nokia","2.322E10").
+birthPlace("Philippe_Camus_(businessman)","France").
+birthPlace("Philippe_Camus_(businessman)","Paris").
+birthYear("Philippe_Camus_(businessman)","1948").
+foundingYear("Nokia","1871").
+numberOfEmployees("Nokia","114256").
+capital("France","Paris").
+country("Boulogne-Billancourt","France").
+foundationPlace("Nokia","Tampere").
+foundationPlace("Nokia","Nokia,_Finland").
+foundationPlace("Nokia","Grand_Duchy_of_Finland").
+keyPerson("Nokia","Rajeev_Suri").
+keyPerson("Nokia","Risto_Siilasmaa").
+largestCity("France","Capital_city").
+locationCity("Nokia","Espoo").
+locationCity("Nokia","Uusimaa").
+locationCountry("Nokia","Finland").
+nationality("Philippe_Camus_(businessman)","France").
+occupation("Philippe_Camus_(businessman)","Alcatel-Lucent").
+occupation("Philippe_Camus_(businessman)","Philippe_Camus_(businessman)__1").
+product("Nokia","List_of_Nokia_products").
+stateOfOrigin("Philippe_Camus_(businessman)","France").
+subsidiary("Nokia","Alcatel-Lucent").
+subsidiary("Nokia","Nokia_Networks").
+subsidiary("Nokia","Nokia_Bell_Labs").
+subsidiary("Nokia","Nokia_Technologies").
+networth("Larry_Page","3.9E10").
+birthPlace("Larry_Page","Michigan").
+birthPlace("Larry_Page","East_Lansing,_Michigan").
+birthYear("Larry_Page","1973").
+almaMater("Larry_Page","University_of_Michigan").
+almaMater("Larry_Page","Stanford_University").
+knownFor("Larry_Page","Google_Inc.").
+knownFor("Larry_Page","Alphabet_Inc").
+knownFor("Larry_Page","PageRank").
+occupation("Larry_Page","List_of_Internet_entrepreneurs").
+occupation("Larry_Page","Computer_scientist").
+occupation("Larry_Page","Larry_Page__1").
+personFunction("Larry_Page","Larry_Page__1").
+residence("Larry_Page","California").
+residence("Larry_Page","Palo_Alto,_California").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+country("University_of_Michigan","United States").
+country("Stanford_University","U.S.").
+location("Palo_Alto,_California","Palo Alto").
+capital("Michigan","Lansing,_Michigan").
+city("University_of_Michigan","Ann_Arbor,_Michigan").
+city("Stanford_University","Stanford,_California").
+country("Michigan","United_States").
+country("East_Lansing,_Michigan","United_States").
+isPartOf("East_Lansing,_Michigan","Michigan").
+isPartOf("East_Lansing,_Michigan","Ingham_County,_Michigan").
+isPartOf("East_Lansing,_Michigan","Clinton_County,_Michigan").
+isPartOf("Palo_Alto,_California","California").
+isPartOf("Palo_Alto,_California","Santa_Clara_County,_California").
+largestCity("California","Los_Angeles").
+largestCity("Michigan","Detroit").
+type("East_Lansing,_Michigan","City").
+type("Palo_Alto,_California","Charter_city").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").
+type("Stanford_University","Private_university").

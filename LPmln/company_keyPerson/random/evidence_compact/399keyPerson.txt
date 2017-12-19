@@ -1,0 +1,11 @@
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+occupation("James_E._Thompson","James_E._Thompson__1").
+birthPlace("Antony_Jenkins","Manchester").
+occupation("Antony_Jenkins","Antony_Jenkins__1").
+location("University_College,_Oxford","High_Street,_Oxford").
+location("University_College,_Oxford","Oxford").
+type("Manchester","City_status_in_the_United_Kingdom").
+type("Manchester","Metropolitan_borough").
+type("Cranfield_School_of_Management","Business_School").

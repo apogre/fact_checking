@@ -1,0 +1,42 @@
+operatingIncome("American_Express","7.93E9").
+numberOfEmployees("American_Express","54000").
+foundationPlace("American_Express","Buffalo,_New_York").
+foundationPlace("American_Express","United_States").
+foundationPlace("American_Express","New_York_(state)").
+industry("American_Express","Financial_services").
+industry("American_Express","Bank").
+keyPerson("American_Express","Chairman").
+location("American_Express","200_Vesey_Street").
+locationCity("American_Express","New_York_City").
+locationCity("American_Express","New_York_(state)").
+locationCountry("American_Express","United_States").
+type("American_Express","Public_company").
+birthPlace("Kenneth_Chenault","Mineola,_New_York").
+predecessor("American_Express","Livingston, Fargo & Company").
+predecessor("American_Express","Wells & Company").
+predecessor("American_Express","Wells, Butterfield & Company").
+spouse("Kenneth_Chenault","Kathryn Chenault").
+foundingYear("Shearson","1902").
+almaMater("Kenneth_Chenault","Bowdoin_College").
+almaMater("Kenneth_Chenault","Harvard_University").
+country("New_York_City","United_States").
+industry("Shearson","Investment_banking").
+location("Shearson","United_States").
+location("Shearson","New_York,_New_York").
+location("200_Vesey_Street","Manhattan").
+location("200_Vesey_Street","United_States").
+location("200_Vesey_Street","New_York_(state)").
+occupation("Kenneth_Chenault","American_Express").
+owner("200_Vesey_Street","American_Express").
+owner("200_Vesey_Street","Brookfield_Office_Properties").
+predecessor("Shearson","Shearson_Hammill_&_Co.").
+type("Buffalo,_New_York","City_(New_York)").
+type("New_York_City","City_(New_York)").
+type("Shearson","Private_Company").
+country("Bowdoin_College","USA").
+country("Harvard_University","U.S.").
+location("Mineola,_New_York","Mineola, New York").
+country("Mineola,_New_York","United_States").
+type("Mineola,_New_York","Village_(New_York)").
+type("Bowdoin_College","Private_university").
+type("Harvard_University","Research_university").

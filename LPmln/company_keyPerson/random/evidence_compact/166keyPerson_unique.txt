@@ -1,0 +1,9 @@
+foundedBy("Tracinda","Kirk_Kerkorian").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+type("Las_Vegas","City").
+birthPlace("Lisa_Bonder","Columbus,_Ohio").
+location("Los_Angeles","Los Angeles").
+type("Beverly_Hills,_California","General_law_city").
+type("Fresno,_California","Charter_city").
+type("Fresno,_California","County_seat").
+type("Los_Angeles","Metropolitan_City").

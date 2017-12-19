@@ -1,0 +1,20 @@
+operatingIncome("Popular,_Inc.","7.89E8").
+foundingYear("Popular,_Inc.","1893").
+numberOfEmployees("Popular,_Inc.","13210").
+foundationPlace("Popular,_Inc.","San_Juan,_Puerto_Rico").
+industry("Popular,_Inc.","Finance_and_Insurance").
+location("Popular,_Inc.","Hato_Rey").
+location("Popular,_Inc.","San_Juan,_Puerto_Rico").
+type("Popular,_Inc.","Public_company").
+country("San_Juan,_Puerto_Rico","United_States_of_America").
+type("San_Juan,_Puerto_Rico","Municipalities_of_Puerto_Rico").
+birthPlace("Hiroshi_Okuda","Tsu,_Mie").
+birthPlace("Fujio_Cho","Japan").
+birthPlace("Fujio_Cho","Tokyo").
+birthPlace("Tatsuro_Toyoda","Nagoya").
+location("Tsu,_Mie","Omu, Tsu, Mie").
+birthYear("Fujio_Cho","1937").
+almaMater("Fujio_Cho","University_of_Tokyo").
+occupation("Fujio_Cho","Fujio_Cho__1").
+occupation("Fujio_Cho","Chairman").
+type("Tsu,_Mie","Cities_of_Japan").

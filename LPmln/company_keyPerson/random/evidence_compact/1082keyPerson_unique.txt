@@ -1,0 +1,21 @@
+keyPerson("U.S._Century_Bank","Chief_Executive_Officer").
+keyPerson("U.S._Century_Bank","President").
+keyPerson("U.S._Century_Bank","Chairman").
+keyPerson("U.S._Century_Bank","Alex_Acosta").
+keyPerson("U.S._Century_Bank","Luis_de_la_Aguilera").
+location("U.S._Century_Bank","Florida").
+location("U.S._Century_Bank","Miami").
+location("U.S._Century_Bank","Doral,_Florida").
+type("Miami","Metropolitan_City").
+type("Doral,_Florida","List_of_communities_in_Miami-Dade_County,_Florida").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

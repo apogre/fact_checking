@@ -1,0 +1,31 @@
+operatingIncome("Popular,_Inc.","7.89E8").
+foundingYear("Popular,_Inc.","1893").
+numberOfEmployees("Popular,_Inc.","13210").
+foundationPlace("Popular,_Inc.","San_Juan,_Puerto_Rico").
+industry("Popular,_Inc.","Finance_and_Insurance").
+location("Popular,_Inc.","Hato_Rey").
+location("Popular,_Inc.","San_Juan,_Puerto_Rico").
+type("Popular,_Inc.","Public_company").
+country("San_Juan,_Puerto_Rico","United_States_of_America").
+type("San_Juan,_Puerto_Rico","Municipalities_of_Puerto_Rico").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+birthYear("James_J._Greco","1958").
+almaMater("James_J._Greco","Georgetown_University").
+almaMater("James_J._Greco","University_of_Miami").
+almaMater("James_J._Greco","City_University,_London").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+country("Florida","Florida").
+country("Georgetown_University","US").
+country("University_of_Miami","U.S.").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+country("Connecticut","United_States").
+country("Delray_Beach,_Florida","United_States_of_America").
+country("Florida","United_States").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

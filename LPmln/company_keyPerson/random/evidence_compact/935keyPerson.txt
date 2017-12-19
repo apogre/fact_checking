@@ -1,0 +1,6 @@
+keyPerson("Statoil","Hans_Jakob_Hegge").
+location("Statoil","Norway").
+location("Statoil","Stavanger").
+type("Statoil","Public").
+location("Stavanger","Stavanger").
+type("Wesleyan_University","Private_university").

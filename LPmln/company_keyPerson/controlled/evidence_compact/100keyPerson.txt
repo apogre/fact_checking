@@ -1,0 +1,42 @@
+division("Mozilla","Mozilla_Corporation").
+division("Mozilla","Mozilla_Foundation").
+foundedBy("Mozilla","Netscape").
+industry("Mozilla","Open-source_software").
+industry("Netscape","Internet, Software, & Telecommunication").
+locationCity("Mozilla_Foundation","Mountain_View,_California").
+locationCountry("Mozilla_Foundation","United States").
+locationCountry("Mozilla_Corporation","US").
+type("Netscape","Subsidiary").
+numberOfEmployees("Netscape","2500").
+numberOfEmployees("Mozilla_Corporation","1000").
+keyPerson("Netscape","James_H._Clark").
+keyPerson("Netscape","Marc_Andreessen").
+keyPerson("Netscape","James_Barksdale").
+keyPerson("Mozilla_Corporation","Mitchell_Baker").
+keyPerson("Mozilla_Corporation","Chris_Beard_(executive)").
+location("Netscape","California").
+location("Netscape","Mountain_View,_California").
+location("Netscape","United_States").
+location("Netscape","Virginia").
+location("Netscape","Dulles,_Virginia").
+locationCity("Mozilla_Corporation","Mountain_View,_California").
+parentCompany("Netscape","AOL").
+parentCompany("Mozilla_Corporation","Mozilla_Foundation").
+type("Mozilla_Foundation","501(c)(3)").
+type("Mozilla_Corporation","Privately_held_company").
+birthPlace("Mitchell_Baker","Berkeley,_California").
+birthPlace("Mitchell_Baker","Oakland,_California").
+birthYear("Mitchell_Baker","1959").
+almaMater("Mitchell_Baker","Boalt_Hall_School_of_Law").
+almaMater("Mitchell_Baker","University_of_California,_Berkeley").
+occupation("Mitchell_Baker","Mozilla_Foundation").
+occupation("Mitchell_Baker","Mozilla_Corporation").
+occupation("Mitchell_Baker","Mitchell_Baker__1").
+country("University_of_California,_Berkeley","U.S.").
+location("Berkeley,_California","Berkeley, California").
+location("Oakland,_California","Oakland Museum").
+type("Berkeley,_California","Charter_city").
+type("Oakland,_California","Charter_city").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").

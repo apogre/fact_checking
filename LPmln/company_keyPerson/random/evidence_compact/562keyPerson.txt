@@ -1,0 +1,29 @@
+keyPerson("Hindalco_Industries","Kumar_Mangalam_Birla").
+location("Hindalco_Industries","India").
+location("Hindalco_Industries","Mumbai").
+parentCompany("Hindalco_Industries","Aditya_Birla_Group").
+birthPlace("Kumar_Mangalam_Birla","Mumbai").
+type("BSE_SENSEX","Stock_Exchange").
+foundedBy("Aditya_Birla_Group","Seth_Shiv_Narayan_Birla").
+keyPerson("Aditya_Birla_Group","Kumar_Mangalam_Birla").
+location("Aditya_Birla_Group","India").
+location("Aditya_Birla_Group","Maharashtra").
+location("Aditya_Birla_Group","Mumbai").
+nationality("Kumar_Mangalam_Birla","India").
+occupation("Kumar_Mangalam_Birla","Chairman").
+occupation("Kumar_Mangalam_Birla","Kumar_Mangalam_Birla__1").
+parent("Kumar_Mangalam_Birla","Aditya_Vikram_Birla").
+type("Mumbai","Megacity").
+type("Aditya_Birla_Group","Privately_held_company").
+birthPlace("Brian_L._Roberts","Philadelphia").
+birthPlace("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+occupation("Brian_L._Roberts","leadership-overview").
+occupation("Brian_L._Roberts","Brian_L._Roberts__1").
+parent("Brian_L._Roberts","Ralph_J._Roberts").
+birthPlace("Ralph_J._Roberts","New_York_City").
+foundedBy("Philadelphia","William Penn").
+nationality("Ralph_J._Roberts","United States").
+type("Germantown_Academy","Private").
+occupation("Ralph_J._Roberts","Ralph_J._Roberts__1").
+type("Philadelphia","Consolidated_city-county").
+type("Wharton_School_of_the_University_of_Pennsylvania","Private_university").

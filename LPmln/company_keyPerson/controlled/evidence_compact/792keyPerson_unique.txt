@@ -1,0 +1,38 @@
+operatingIncome("Prudential_Financial","1.759E9").
+foundingYear("Prudential_Financial","1875").
+numberOfEmployees("Prudential_Financial","48331").
+foundationPlace("Prudential_Financial","New_Jersey").
+foundationPlace("Prudential_Financial","Newark,_New_Jersey").
+foundationPlace("Prudential_Financial","United_States").
+foundedBy("Prudential_Financial","John_F._Dryden").
+industry("Prudential_Financial","Financial_Services").
+keyPerson("Prudential_Financial","Mark_Grier").
+keyPerson("Prudential_Financial","John_Strangfeld").
+locationCity("Prudential_Financial","Newark,_New_Jersey").
+locationCity("Prudential_Financial","Prudential_Headquarters").
+locationCountry("Prudential_Financial","United_States").
+type("Prudential_Financial","Public_company").
+birthPlace("John_F._Dryden","Temple,_Maine").
+country("New_Jersey","New Jersey").
+location("Newark,_New_Jersey","Newark, New Jersey").
+country("New_Jersey","United_States").
+predecessor("John_F._Dryden","William_Joyce_Sewell").
+type("Newark,_New_Jersey","City_(New_Jersey)").
+birthPlace("Paul_Reiche_III","Lincoln,_Nebraska").
+birthYear("Paul_Reiche_III","1961").
+occupation("Paul_Reiche_III","Paul_Reiche_III__1").
+occupation("Paul_Reiche_III","Toys_for_Bob").
+occupation("Paul_Reiche_III","Game_designer").
+location("Lincoln,_Nebraska","Lincoln Airport, Nebraska").
+foundingYear("Toys_for_Bob","1989").
+numberOfEmployees("Toys_for_Bob","120").
+country("Lincoln,_Nebraska","United_States_of_America").
+foundedBy("Toys_for_Bob","Fred_Ford_(programmer)").
+foundedBy("Toys_for_Bob","Paul_Reiche_III").
+industry("Toys_for_Bob","Video_game_industry").
+industry("Toys_for_Bob","Interactive_entertainment").
+locationCity("Toys_for_Bob","Novato,_California").
+locationCountry("Toys_for_Bob","United_States").
+parentCompany("Toys_for_Bob","Activision").
+type("Lincoln,_Nebraska","City").
+type("Toys_for_Bob","Subsidiary").

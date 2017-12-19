@@ -1,0 +1,25 @@
+location("Pizza_Hut","Plano,_Texas").
+parentCompany("Pizza_Hut","PepsiCo").
+parentCompany("Pizza_Hut","Yum!_Brands").
+type("Pizza_Hut","Subsidiary").
+location("Wichita,_Kansas","Wichita Mid-Continent Airport, Kansas").
+type("Pizza","Lunch or dinner").
+keyPerson("Yum!_Brands","Greg_Creed").
+keyPerson("Yum!_Brands","CEO").
+keyPerson("Yum!_Brands","Robert_D._Walter").
+keyPerson("Yum!_Brands","CFO").
+keyPerson("PepsiCo","Indra_Nooyi").
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+type("Plano,_Texas","City_(Texas)").
+type("Wichita,_Kansas","City").
+type("Yum!_Brands","Public_company").
+type("PepsiCo","Public_company").
+type("Pizza","Flatbread").
+occupation("David_C._Novak","David_C._Novak__1").
+location("University_of_Missouri","Columbia, Missouri, U.S.").
+parent("University_of_Missouri","University_of_Missouri_System").
+type("University_of_Missouri","Public_university").
+type("University_of_Missouri","Flagship_campus").
+type("University_of_Missouri","Land-grant_university").

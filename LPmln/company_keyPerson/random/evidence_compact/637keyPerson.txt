@@ -1,0 +1,23 @@
+keyPerson("Lockheed_Martin","President_(corporate_title)").
+keyPerson("Lockheed_Martin","Marillyn_A._Hewson").
+keyPerson("Lockheed_Martin","Chairman").
+location("Lockheed_Martin","Bethesda,_Maryland").
+location("Lockheed_Martin","United_States").
+type("President_(corporate_title)","Employment").
+location("Martin_Marietta","Bethesda,_Maryland").
+predecessor("Martin_Marietta","Glenn_L._Martin_Company").
+type("Bethesda,_Maryland","Census-designated_place").
+birthPlace("Grandhi_Mallikarjuna_Rao","Srikakulam").
+birthPlace("Grandhi_Mallikarjuna_Rao","India").
+birthPlace("Grandhi_Mallikarjuna_Rao","Rajam,_Andhra_Pradesh").
+birthPlace("Grandhi_Mallikarjuna_Rao","Andhra_Pradesh").
+nationality("Grandhi_Mallikarjuna_Rao","India").
+occupation("Grandhi_Mallikarjuna_Rao","GMR_Group").
+occupation("Grandhi_Mallikarjuna_Rao","Grandhi_Mallikarjuna_Rao__1").
+location("Srikakulam","Srikakulam, Andhra Pradesh").
+type("Andhra_Pradesh","States_of_India").
+foundedBy("GMR_Group","Grandhi_Mallikarjuna_Rao").
+keyPerson("GMR_Group","Grandhi_Mallikarjuna_Rao").
+type("GMR_Group","Listed_company").
+type("Srikakulam","City").
+type("Rajam,_Andhra_Pradesh","Town").

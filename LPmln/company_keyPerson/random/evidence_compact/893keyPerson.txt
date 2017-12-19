@@ -1,0 +1,10 @@
+location("Singtel","Singapore").
+location("Optus","Australia").
+location("Optus","New_South_Wales").
+location("Optus","Sydney").
+type("Optus","Subsidiary").
+birthPlace("Sergio_Ermotti","Switzerland").
+birthPlace("Sergio_Ermotti","Lugano").
+nationality("Sergio_Ermotti","Switzerland").
+occupation("Sergio_Ermotti","Economist").
+location("Lugano","Lugano").

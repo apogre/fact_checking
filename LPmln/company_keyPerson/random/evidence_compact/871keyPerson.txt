@@ -1,0 +1,23 @@
+keyPerson("Sbarro","CEO").
+keyPerson("Sbarro","President").
+location("Sbarro","Columbus,_Ohio").
+type("Sbarro","Privately_held_company").
+location("Brooklyn","JFK Airport, New York").
+location("Sbarro_restaurant_suicide_bombing","Israel").
+location("Sbarro_restaurant_suicide_bombing","Jerusalem").
+type("Sbarro_restaurant_suicide_bombing","Suicide_bombing").
+type("Pizza","Lunch or dinner").
+type("Brooklyn","Borough_(New_York_City)").
+type("Columbus,_Ohio","City").
+type("New_York_City","City_(New_York)").
+type("Pizza","Flatbread").
+birthPlace("Terry_Gou","Taipei_County").
+birthPlace("Terry_Gou","Taiwan").
+birthPlace("Terry_Gou","Banqiao_District").
+occupation("Terry_Gou","Foxconn").
+occupation("Terry_Gou","Terry_Gou__1").
+foundedBy("Foxconn","Terry_Gou").
+keyPerson("Foxconn","Terry_Gou").
+keyPerson("Foxconn","Chairman").
+type("Banqiao_District","District_(Republic_of_China)").
+type("Foxconn","Public_company").

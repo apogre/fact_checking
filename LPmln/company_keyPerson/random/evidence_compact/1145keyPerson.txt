@@ -1,0 +1,6 @@
+foundedBy("Walmart","Sam_Walton").
+keyPerson("Walmart","Doug_McMillon").
+keyPerson("Walmart","Greg_Penner").
+location("Walmart","Bentonville,_Arkansas").
+type("Walmart","Public_company").
+type("Wesleyan_University","Private_university").

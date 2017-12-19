@@ -1,0 +1,6 @@
+not_keyperson(A,B) :- keyPerson(C,B) , parentCompany(D,C) , parentCompany(A,D)
+not_keyperson(A,B) :- keyPerson(C,B) , location(C,D) , headquarter(A,D)
+not_keyperson(A,B) :- numberOfEmployees(A,C) , C>D , activeYearsStartYear(B,D)
+not_keyperson(A,B) :- keyPerson(A,C) , parent(C,B)
+not_keyperson(A,B) :- numberOfEmployees(A,C) , C>D , birthYear(B,D)
+not_keyperson(A,B) :- foundedBy(C,B) , parentCompany(C,A)

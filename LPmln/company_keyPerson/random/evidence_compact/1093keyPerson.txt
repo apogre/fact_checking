@@ -1,0 +1,15 @@
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Management_Consultant").
+keyPerson("Boston_Consulting_Group","Rich_Lesser").
+location("Boston_Consulting_Group","Boston").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+type("Harvard_Business_School","Private_school").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").
+type("Boston_Consulting_Group","Privately_held_company").

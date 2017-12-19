@@ -1,0 +1,15 @@
+foundedBy("IKEA","Ingvar_Kamprad").
+keyPerson("IKEA","CEO").
+location("IKEA","Delft").
+parentCompany("IKEA","Stichting_INGKA_Foundation").
+type("IKEA","Privately_held_company").
+occupation("Ingvar_Kamprad","IKEA").
+occupation("Ingvar_Kamprad","Ingvar_Kamprad__1").
+type("Delft","List_of_municipalities_of_the_Netherlands").
+type("Delft","Cities_of_the_Netherlands").
+birthPlace("John_P._Surma","United_States").
+birthPlace("John_P._Surma","Pennsylvania").
+birthPlace("John_P._Surma","Pittsburgh").
+occupation("John_P._Surma","John_P._Surma__1").
+occupation("John_P._Surma","United_States_Steel_Corporation").
+type("Pittsburgh","City").

@@ -1,0 +1,26 @@
+operatingIncome("UGI_Corporation","1006.0").
+foundingYear("UGI_Corporation","1882").
+industry("UGI_Corporation","Energy_industry").
+locationCity("UGI_Corporation","King_of_Prussia,_Pennsylvania").
+locationCountry("UGI_Corporation","United_States").
+regionServed("UGI_Corporation","Pennsylvania").
+country("King_of_Prussia,_Pennsylvania","United States").
+country("Pennsylvania","Pennsylvania").
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+country("Pennsylvania","United_States").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").
+birthPlace("Ben_van_Beurden","Roosendaal").
+birthYear("Ben_van_Beurden","1958").
+almaMater("Ben_van_Beurden","Delft_University_of_Technology").
+predecessor("Ben_van_Beurden","Peter_Voser").
+birthPlace("Peter_Voser","Baden,_Switzerland").
+birthPlace("Peter_Voser","Switzerland").
+country("Delft_University_of_Technology","Netherlands").
+spouse("Peter_Voser","Daniela Voser").
+birthYear("Peter_Voser","1958").
+almaMater("Peter_Voser","Zurich_University_of_Applied_Sciences").
+country("Roosendaal","Netherlands").
+occupation("Peter_Voser","Peter_Voser__1").
+type("Roosendaal","List_of_municipalities_of_the_Netherlands").
+type("Delft_University_of_Technology","Public_university").
+type("Delft_University_of_Technology","Technical_University").

@@ -1,0 +1,105 @@
+assets("J.Crew","3.486E9").
+equity("J.Crew","1.091E9").
+netIncome("J.Crew","9.608E7").
+numberOfLocations("J.Crew","551").
+operatingIncome("J.Crew","2.536E8").
+revenue("J.Crew","2.227E9").
+foundingYear("J.Crew","1983").
+numberOfEmployees("J.Crew","15600").
+industry("J.Crew","Retail").
+keyPerson("J.Crew","Chief_Executive_Officer").
+keyPerson("J.Crew","Millard_Drexler").
+keyPerson("J.Crew","Jenna_Lyons").
+keyPerson("J.Crew","President").
+keyPerson("J.Crew","Chairman").
+keyPerson("J.Crew","Creative_Director").
+location("J.Crew","New_York_City").
+location("J.Crew","United_States").
+location("J.Crew","New_York_(state)").
+location("J.Crew","770_Broadway").
+owner("J.Crew","TPG_Capital").
+owner("J.Crew","Leonard_Green_&_Partners").
+owningCompany("J.Crew","TPG_Capital").
+owningCompany("J.Crew","Leonard_Green_&_Partners").
+product("J.Crew","Fashion_accessory").
+product("J.Crew","Clothing").
+product("J.Crew","Shoes").
+type("J.Crew","Private_Company").
+assets("TPG_Capital","7.5E10").
+assets("Leonard_Green_&_Partners","9.0E9").
+predecessor("TPG_Capital","Texas Pacific Group").
+foundingYear("TPG_Capital","1992").
+foundingYear("Leonard_Green_&_Partners","1989").
+numberOfEmployees("Leonard_Green_&_Partners","28").
+capital("United_States","Washington,_D.C.").
+country("New_York_City","United_States").
+foundedBy("TPG_Capital","James_Coulter_(financier)").
+foundedBy("TPG_Capital","William_S._Price_III").
+foundedBy("TPG_Capital","David_Bonderman").
+foundedBy("Leonard_Green_&_Partners","Leonard_I._Green").
+industry("TPG_Capital","Private_equity").
+industry("Leonard_Green_&_Partners","Private_equity").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+largestCity("United_States","New_York_City").
+location("TPG_Capital","California").
+location("TPG_Capital","Fort_Worth,_Texas").
+location("TPG_Capital","San_Francisco").
+location("TPG_Capital","Texas").
+location("TPG_Capital","United_States").
+location("770_Broadway","New_York_City").
+location("770_Broadway","Broadway_(Manhattan)").
+location("Leonard_Green_&_Partners","California").
+location("Leonard_Green_&_Partners","Los_Angeles").
+location("Leonard_Green_&_Partners","United_States").
+product("TPG_Capital","Growth_capital").
+product("TPG_Capital","Leveraged_buyout").
+product("TPG_Capital","Venture_capital").
+product("Leonard_Green_&_Partners","Leveraged_buyout").
+type("New_York_City","City_(New_York)").
+type("TPG_Capital","Privately_held_company").
+type("Leonard_Green_&_Partners","Privately_held_company").
+birthPlace("Rex_Tillerson","Wichita_Falls").
+birthPlace("Rex_Tillerson","Texas").
+birthPlace("Rex_Tillerson","Wichita_Falls,_Texas").
+birthYear("Rex_Tillerson","1952").
+almaMater("Rex_Tillerson","University_of_Texas_at_Austin").
+occupation("Rex_Tillerson","Rex_Tillerson__1").
+occupation("Rex_Tillerson","Exxon_Mobil").
+predecessor("Rex_Tillerson","Lee_R._Raymond").
+salary("Rex_Tillerson","4.03E7").
+birthPlace("Lee_Raymond","Watertown,_South_Dakota").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+country("University_of_Texas_at_Austin","U.S.").
+location("Wichita_Falls,_Texas","Wichita Falls, Texas").
+nationality("Lee_Raymond","American").
+birthYear("Lee_Raymond","1938").
+almaMater("Lee_Raymond","University_of_Minnesota").
+capital("Texas","Austin,_Texas").
+city("University_of_Texas_at_Austin","Austin,_Texas").
+country("Texas","United_States").
+country("Wichita_Falls,_Texas","United_States").
+isPartOf("Wichita_Falls,_Texas","Texas").
+isPartOf("Wichita_Falls,_Texas","Wichita_County,_Texas").
+largestCity("Texas","Houston").
+occupation("Lee_Raymond","Exxon_Mobil").
+occupation("Lee_Raymond","Lee_Raymond__1").
+type("Wichita_Falls,_Texas","City").
+type("University_of_Texas_at_Austin","Flagship_campus").
+type("University_of_Texas_at_Austin","Space-grant_university").

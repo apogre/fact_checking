@@ -1,0 +1,18 @@
+foundingYear("Crown_Worldwide_Group","1965").
+numberOfEmployees("Crown_Worldwide_Group","4600").
+division("Crown_Worldwide_Group","www.crownfineart.com").
+division("Crown_Worldwide_Group","www.crownrms.com").
+division("Crown_Worldwide_Group","www.crown-logistics.com").
+division("Crown_Worldwide_Group","www.crownwinecellars.com").
+division("Crown_Worldwide_Group","www.crownrelo.com").
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+industry("Crown_Worldwide_Group","Warehouse").
+industry("Crown_Worldwide_Group","Relocation_service").
+industry("Crown_Worldwide_Group","Facilities_Management").
+industry("Crown_Worldwide_Group","Records_Management").
+spouse("James_E._Thompson","Sally Thompson").
+birthYear("James_E._Thompson","1940").
+almaMater("James_E._Thompson","San_Jose_State_University").
+occupation("James_E._Thompson","James_E._Thompson__1").
+country("San_Jose_State_University","U.S.").
+type("San_Jose_State_University","Public_university").

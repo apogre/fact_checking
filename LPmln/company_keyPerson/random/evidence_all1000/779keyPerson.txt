@@ -1,0 +1,85 @@
+assets("Playboy_Enterprises","1.9683E8").
+equity("Playboy_Enterprises","-2.23E7").
+netIncome("Playboy_Enterprises","-4.85E7").
+operatingIncome("Playboy_Enterprises","-3.63E7").
+revenue("Playboy_Enterprises","2.15E8").
+foundingYear("Playboy_Enterprises","1953").
+numberOfEmployees("Playboy_Enterprises","165").
+foundationPlace("Playboy_Enterprises","Illinois").
+foundationPlace("Playboy_Enterprises","United_States").
+foundationPlace("Playboy_Enterprises","Chicago,_Illinois").
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+industry("Playboy_Enterprises","Lifestyle_(sociology)").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+product("Playboy_Enterprises","Playboy_Magazine").
+product("Playboy_Enterprises","Playboy_Online").
+product("Playboy_Enterprises","Adult_entertainment").
+product("Playboy_Enterprises","Playboy_TV").
+type("Playboy_Enterprises","Privately_held_company").
+birthPlace("Hugh_Hefner","Chicago").
+birthPlace("Scott_Flanders","Indiana").
+birthPlace("Scott_Flanders","Indianapolis").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Playboy_TV","United States").
+knownFor("Hugh_Hefner","Editor-in-chief of Playboy magazine, Chief Creative Officer of Playboy Enterprises").
+nationality("Scott_Flanders","American").
+birthYear("Hugh_Hefner","1926").
+birthYear("Scott_Flanders","1956").
+almaMater("Hugh_Hefner","University_of_Illinois_at_Urbana_Champaign").
+almaMater("Hugh_Hefner","Steinmetz_High_School").
+capital("Illinois","Springfield,_Illinois").
+capital("United_States","Washington,_D.C.").
+country("Illinois","United_States").
+hometown("Hugh_Hefner","Chicago").
+hometown("Hugh_Hefner","Illinois").
+isPartOf("Beverly_Hills,_California","California").
+isPartOf("Beverly_Hills,_California","Los_Angeles_County,_California").
+largestCity("Illinois","Chicago").
+largestCity("United_States","New_York_City").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+occupation("Scott_Flanders","Scott_Flanders__1").
+owningCompany("Playboy_TV","MindGeek").
+residence("Hugh_Hefner","Playboy_Mansion").
+residence("Hugh_Hefner","Holmby_Hills,_Los_Angeles").
+type("Beverly_Hills,_California","General_law_city").
+networth("Masayoshi_Son","1.7E10").
+birthPlace("Masayoshi_Son","Japan").
+birthPlace("Masayoshi_Son","Tosu,_Saga").
+birthYear("Masayoshi_Son","1957").
+almaMater("Masayoshi_Son","Holy_Names_University").
+almaMater("Masayoshi_Son","University_of_California,_Berkeley").
+occupation("Masayoshi_Son","Masayoshi_Son__1").
+occupation("Masayoshi_Son","SoftBank").
+residence("Masayoshi_Son","Tokyo").
+residence("Masayoshi_Son","Japan").
+country("Holy_Names_University","US").
+country("University_of_California,_Berkeley","U.S.").
+largestCity("Japan","capital").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+capital("Japan","Tokyo").
+city("Holy_Names_University","Oakland,_California").
+city("University_of_California,_Berkeley","Berkeley,_California").
+country("Tokyo","Japan").
+country("Jefferson_Union_High_School_District","United_States").
+isPartOf("Tokyo","Honshu").
+type("Tokyo","Prefectures_of_Japan").
+type("Tosu,_Saga","Cities_of_Japan").
+type("Holy_Names_University","Non-profit").
+type("Holy_Names_University","Private_university").
+type("Holy_Names_University","Coeducational").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").

@@ -1,0 +1,15 @@
+keyPerson("Apple_Inc.","Arthur_D._Levinson").
+keyPerson("Apple_Inc.","Jeff_Williams_(Apple)").
+keyPerson("Apple_Inc.","Luca_Maestri").
+keyPerson("Apple_Inc.","Tim_Cook").
+keyPerson("Apple_Inc.","Jonathan_Ive").
+type("Apple_Inc.","Public_company").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+nationality("Gunupati_Venkata_Krishna_Reddy","India").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+type("Padma_Bhushan","Civilian").
+type("Andhra_Pradesh","States_of_India").

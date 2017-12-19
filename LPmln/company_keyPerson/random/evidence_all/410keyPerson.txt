@@ -1,0 +1,113 @@
+numberOfEmployees("Dell","101800").
+industry("Dell","Software").
+industry("Dell","Personal_computer_hardware").
+keyPerson("Dell","Michael_Dell").
+locationCity("Dell","Round_Rock,_Texas").
+owner("Dell","Michael_Dell").
+owner("Dell","Silver_Lake_Partners").
+product("Dell","Smartphone").
+product("Dell","Server_(computing)").
+product("Dell","Peripheral").
+successor("Dell","Dell_Technologies").
+type("Dell","Privately_held_company").
+networth("Michael_Dell","2.03E10").
+numberOfLocations("Silver_Lake_Partners","8").
+birthPlace("Michael_Dell","Houston").
+birthPlace("Michael_Dell","Texas").
+locationCountry("Dell_Technologies","United States").
+nationality("Michael_Dell","American").
+birthYear("Michael_Dell","1965").
+foundingYear("Silver_Lake_Partners","1999").
+numberOfEmployees("Dell_Technologies","140").
+numberOfEmployees("Silver_Lake_Partners","100").
+almaMater("Michael_Dell","University_of_Texas_at_Austin").
+country("Round_Rock,_Texas","United_States").
+foundedBy("Dell_Technologies","Michael_Dell").
+foundedBy("Silver_Lake_Partners","Glenn_Hutchins").
+foundedBy("Silver_Lake_Partners","Roger_McNamee").
+industry("Dell_Technologies","Information_technology").
+industry("Silver_Lake_Partners","Private_equity").
+industry("Silver_Lake_Partners","Technology").
+isPartOf("Round_Rock,_Texas","Texas").
+isPartOf("Round_Rock,_Texas","Williamson_County,_Texas").
+keyPerson("Dell_Technologies","Michael_Dell").
+location("Silver_Lake_Partners","California").
+location("Silver_Lake_Partners","Menlo_Park,_California").
+location("Silver_Lake_Partners","United_States").
+location("Silver_Lake_Partners","Sand_Hill_Road").
+locationCity("Dell_Technologies","Round_Rock,_Texas").
+occupation("Michael_Dell","Dell").
+occupation("Michael_Dell","Michael_Dell__1").
+owner("Dell_Technologies","Michael_Dell").
+owner("Dell_Technologies","Silver_Lake_Partners").
+predecessor("Dell_Technologies","Dell").
+product("Dell_Technologies","Personal_computers").
+product("Dell_Technologies","Server_(computing)").
+product("Dell_Technologies","Computer_software").
+product("Dell_Technologies","Computer_network").
+product("Silver_Lake_Partners","Growth_capital").
+product("Silver_Lake_Partners","Leveraged_buyout").
+residence("Michael_Dell","Austin,_Texas").
+residence("Michael_Dell","Texas").
+subsidiary("Dell_Technologies","VMware").
+subsidiary("Dell_Technologies","SecureWorks").
+subsidiary("Dell_Technologies","Pivotal_Software").
+type("Dell_Technologies","Privately_held_company").
+type("Round_Rock,_Texas","City_(United_States)").
+type("Silver_Lake_Partners","Private_Company").
+type("Silver_Lake_Partners","Limited_liability_company").
+assetUnderManagement("Silver_Lake_Partners","2.6E10").
+birthPlace("Jeffrey_R._Immelt","Ohio").
+birthPlace("Jeffrey_R._Immelt","Cincinnati").
+birthPlace("Jeffrey_R._Immelt","United_States").
+almaMater("Jeffrey_R._Immelt","Harvard_Business_School").
+almaMater("Jeffrey_R._Immelt","Dartmouth_College").
+predecessor("Jeffrey_R._Immelt","Jack_Welch").
+networth("Jack_Welch","7.5E8").
+birthPlace("Jack_Welch","Peabody,_Massachusetts").
+birthPlace("Paul_Volcker","Cape_May,_New_Jersey").
+birthPlace("Paul_Volcker","New_Jersey").
+birthPlace("Paul_Volcker","United_States").
+city("Ohio","Cleveland").
+city("Ohio","Akron, OhioAkron").
+city("Ohio","Canton, OhioCanton").
+city("Ohio","Cincinnati").
+city("Ohio","Columbus, OhioColumbus").
+city("Ohio","Dayton, OhioDayton").
+city("Ohio","Lorain, OhioLorain").
+city("Ohio","Parma, OhioParma").
+city("Ohio","Toledo, OhioToledo").
+city("Ohio","Youngstown, OhioYoungstown").
+country("Ohio","Ohio").
+country("Harvard_Business_School","U.S.").
+country("Republican_Party_(United_States)","United States").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+predecessor("Paul_Volcker","Position established").
+birthYear("Jack_Welch","1935").
+almaMater("Jack_Welch","University_of_Illinois").
+almaMater("Jack_Welch","University_of_Massachusetts_Amherst").
+almaMater("Paul_Volcker","Harvard_University").
+almaMater("Paul_Volcker","Princeton_University").
+almaMater("Paul_Volcker","London_School_of_Economics").
+capital("Ohio","Columbus,_Ohio").
+capital("United_States","Washington,_D.C.").
+city("Harvard_Business_School","Boston").
+city("Dartmouth_College","Hanover,_New_Hampshire").
+country("Cincinnati","United_States").
+country("Ohio","United_States").
+country("Dartmouth_College","United_States").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+hometown("Jack_Welch","Salem,_Massachusetts").
+isPartOf("Cincinnati","Ohio").
+isPartOf("Cincinnati","Hamilton_County,_Ohio").
+largestCity("United_States","New_York_City").
+occupation("Jack_Welch","Jack_Welch__1").
+predecessor("Paul_Volcker","G._William_Miller").
+predecessor("Paul_Volcker","Alfred_Hayes_(banker)").
+residence("Jack_Welch","Boston,_Massachusetts").
+successor("Paul_Volcker","Alan_Greenspan").
+successor("Paul_Volcker","Anthony_M._Solomon").
+successor("Paul_Volcker","Jeffrey_R._Immelt").
+type("Harvard_Business_School","Private_school").
+type("Dartmouth_College","Private_university").

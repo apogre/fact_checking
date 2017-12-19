@@ -1,0 +1,32 @@
+numberOfEmployees("Walmart","2").
+numberOfEmployees("Walmart","1").
+foundationPlace("Walmart","United_States").
+foundationPlace("Walmart","Rogers,_Arkansas").
+foundedBy("Walmart","Sam_Walton").
+industry("Walmart","Retail").
+keyPerson("Walmart","Doug_McMillon").
+keyPerson("Walmart","Greg_Penner").
+location("Walmart","Bentonville,_Arkansas").
+owner("Walmart","Walton_family").
+owningCompany("Walmart","Walton_family").
+type("Walmart","Public_company").
+birthYear("Mike_Duke","1949").
+almaMater("Mike_Duke","Georgia_Tech").
+employer("Mike_Duke","Walmart").
+birthPlace("Lee_Scott_(businessman)","Baxter_Springs,_Kansas").
+birthPlace("Doug_McMillon","Jonesboro,_Arkansas").
+birthPlace("Doug_McMillon","Memphis,_Tennessee").
+almaMater("Doug_McMillon","University_of_Tulsa").
+almaMater("Doug_McMillon","University_of_Arkansas").
+spouse("Lee_Scott_(businessman)","Linda Scott").
+spouse("Doug_McMillon","Shelley McMillon").
+birthYear("Lee_Scott_(businessman)","1949").
+birthYear("Doug_McMillon","1966").
+almaMater("Lee_Scott_(businessman)","Pittsburg_State_University").
+employer("Lee_Scott_(businessman)","Wal-Mart_Stores,_Inc.").
+occupation("Lee_Scott_(businessman)","Lee_Scott_(businessman)__1").
+occupation("Lee_Scott_(businessman)","Businessman").
+occupation("Doug_McMillon","President_(corporate_title)").
+occupation("Doug_McMillon","Walmart").
+occupation("Doug_McMillon","Doug_McMillon__1").
+predecessor("Lee_Scott_(businessman)","David_Glass_(businessman)").

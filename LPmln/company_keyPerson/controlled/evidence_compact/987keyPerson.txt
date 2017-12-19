@@ -1,0 +1,21 @@
+foundingYear("Telmex","1947").
+numberOfEmployees("Telmex","52346").
+industry("Telmex","Telecommunications").
+keyPerson("Telmex","CEO").
+keyPerson("Telmex","Carlos_Slim").
+location("Telmex","Mexico").
+location("Telmex","Mexico_City").
+type("Telmex","Subsidiary").
+birthPlace("Carlos_Slim","Mexico_City").
+location("Mexico_City","Mexico City").
+parent("Mexico_City","National_Autonomous_University_of_Mexico").
+spouse("Carlos_Slim","died").
+spouse("Carlos_Slim","Soumaya Domit").
+type("Mexico_City","Cultural").
+birthYear("Carlos_Slim","1940").
+country("Mexico_City","Mexico").
+occupation("Carlos_Slim","Grupo_Carso").
+occupation("Carlos_Slim","Telmex").
+occupation("Carlos_Slim","Carlos_Slim__1").
+occupation("Carlos_Slim","Samsung_Mexico").
+type("Mexico_City","Administrative_divisions_of_Mexico").

@@ -1,0 +1,63 @@
+assets("Whole_Foods_Market","5.5E9").
+assets("Whole_Foods_Market","5.3E9").
+equity("Whole_Foods_Market","3.9E9").
+equity("Whole_Foods_Market","3.8E9").
+netIncome("Whole_Foods_Market","5.51E8").
+numberOfLocations("Whole_Foods_Market","3").
+numberOfLocations("Whole_Foods_Market","435").
+operatingIncome("Whole_Foods_Market","8.83E8").
+revenue("Whole_Foods_Market","1.29E10").
+revenue("Whole_Foods_Market","1.17E10").
+numberOfEmployees("Whole_Foods_Market","91000").
+foundationPlace("Whole_Foods_Market","Austin,_Texas").
+foundationPlace("Whole_Foods_Market","Texas").
+foundedBy("Whole_Foods_Market","John_Mackey_(businessman)").
+industry("Whole_Foods_Market","Grocery_store").
+industry("Whole_Foods_Market","Health_food_store").
+keyPerson("Whole_Foods_Market","Chief_information_officer").
+keyPerson("Whole_Foods_Market","Walter_Robb").
+keyPerson("Whole_Foods_Market","CEO").
+location("Whole_Foods_Market","Austin,_Texas").
+type("Whole_Foods_Market","Public_company").
+networth("John_Mackey_(businessman)","1.0E8").
+birthPlace("John_Mackey_(businessman)","Houston").
+birthPlace("John_Mackey_(businessman)","Texas").
+birthPlace("John_Mackey_(businessman)","United_States").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+birthYear("John_Mackey_(businessman)","1953").
+almaMater("John_Mackey_(businessman)","University_of_Texas_at_Austin").
+capital("Texas","Austin,_Texas").
+country("Austin,_Texas","United_States").
+country("Texas","United_States").
+isPartOf("Austin,_Texas","Texas").
+isPartOf("Austin,_Texas","Travis_County,_Texas").
+isPartOf("Austin,_Texas","Williamson_County,_Texas").
+isPartOf("Austin,_Texas","Hays_County,_Texas").
+largestCity("Texas","Houston").
+occupation("John_Mackey_(businessman)","Whole_Foods_Market").
+occupation("John_Mackey_(businessman)","John_Mackey_(businessman)__1").
+residence("John_Mackey_(businessman)","Austin,_Texas").
+residence("John_Mackey_(businessman)","Texas").
+residence("John_Mackey_(businessman)","United_States").
+salary("John_Mackey_(businessman)","1.0").
+country("University_of_Texas_at_Austin","U.S.").
+capital("United_States","Washington,_D.C.").
+city("University_of_Texas_at_Austin","Austin,_Texas").
+isPartOf("Houston","Texas").
+isPartOf("Houston","Fort_Bend_County,_Texas").
+isPartOf("Houston","Montgomery_County,_Texas").
+isPartOf("Houston","Harris_County,_Texas").
+largestCity("United_States","New_York_City").
+type("Houston","City").
+type("University_of_Texas_at_Austin","Flagship_campus").
+type("University_of_Texas_at_Austin","Space-grant_university").

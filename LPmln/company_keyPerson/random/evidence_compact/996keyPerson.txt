@@ -1,0 +1,31 @@
+keyPerson("Telstra","Chief_financial_officer").
+keyPerson("Telstra","Chairperson").
+keyPerson("Telstra","Andy_Penn").
+location("Telstra","Melbourne").
+location("Telstra","Telstra_Corporate_Centre").
+location("Telstra","Australia").
+type("Telstra","Public_company").
+location("Melbourne","Canberra").
+location("Melbourne","Perth").
+location("Melbourne","Sydney").
+location("Melbourne","Adelaide").
+location("Melbourne","Brisbane").
+location("Melbourne","Melbourne City").
+type("Melbourne","city").
+location("Telstra_Corporate_Centre","Melbourne,_Australia").
+occupation("Andy_Penn","Chief_Executive_Officer").
+occupation("Andy_Penn","Andy_Penn__1").
+predecessor("Andy_Penn","David_Thodey").
+birthPlace("Mel_Karmazin","United_States").
+birthPlace("Mel_Karmazin","Manhattan").
+birthPlace("Mel_Karmazin","New_York_(state)").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+nationality("Craig_Karmazin","United States").
+occupation("Craig_Karmazin","Craig_Karmazin__1").
+occupation("Craig_Karmazin","CEO").
+parent("Craig_Karmazin","Mel_Karmazin").
+type("Greenwich,_Connecticut","New_England_town").
+type("Manhattan","Borough_(New_York_City)").
+type("Pace_University","Nonsectarian").
+type("Pace_University","Private_University").
+type("Pace_University","Co-educational").

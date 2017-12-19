@@ -1,0 +1,66 @@
+assets("Williams-Sonoma","2.34E9").
+equity("Williams-Sonoma","1.36E9").
+netIncome("Williams-Sonoma","2.789E8").
+operatingIncome("Williams-Sonoma","4.521E8").
+revenue("Williams-Sonoma","4.4E9").
+numberOfEmployees("Williams-Sonoma","26800").
+foundedBy("Williams-Sonoma","Chuck_Williams_(author)").
+industry("Williams-Sonoma","E-commerce").
+keyPerson("Williams-Sonoma","CFO").
+keyPerson("Williams-Sonoma","Chief_executive_officer").
+keyPerson("Williams-Sonoma","CEO").
+keyPerson("Williams-Sonoma","Laura_Alber").
+product("Williams-Sonoma","Home_furnishings").
+type("Williams-Sonoma","Public_company").
+birthPlace("Chuck_Williams_(author)","Florida").
+birthPlace("Chuck_Williams_(author)","Jacksonville,_Florida").
+deathPlace("Chuck_Williams_(author)","California").
+deathPlace("Chuck_Williams_(author)","San_Francisco").
+birthYear("Chuck_Williams_(author)","1915").
+deathYear("Chuck_Williams_(author)","2015").
+occupation("Chuck_Williams_(author)","Chuck_Williams_(author)__1").
+birthPlace("Andrew_Witty","England").
+birthYear("Andrew_Witty","1964").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","University_of_Nottingham").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+successor("Andrew_Witty","Emma_Walmsley").
+netIncome("GlaxoSmithKline","8.372E9").
+operatingIncome("GlaxoSmithKline","1.0322E10").
+revenue("GlaxoSmithKline","2.3923E10").
+birthPlace("Jean-Pierre_Garnier","Le_Mans").
+almaMater("Emma_Walmsley","Oxford_University").
+birthPlace("Emma_Walmsley","Lancashire").
+capital("England","London").
+country("University_of_Nottingham","England, UK").
+largestCity("England","capital").
+nationality("Emma_Walmsley","British").
+predecessor("GlaxoSmithKline","Beckman Companies").
+predecessor("GlaxoSmithKline","Beecham Group plc").
+predecessor("GlaxoSmithKline","Glaxo plc").
+predecessor("GlaxoSmithKline","Kline & French").
+predecessor("GlaxoSmithKline","Smith plc").
+predecessor("GlaxoSmithKline","Wellcome plc").
+type("England","Administrative_division").
+numberOfEmployees("GlaxoSmithKline","96575").
+city("University_of_Nottingham","Nottingham").
+industry("GlaxoSmithKline","Pharmaceutical_industry").
+industry("GlaxoSmithKline","Biotechnology").
+industry("GlaxoSmithKline","Fast-moving_consumer_goods").
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+parent("Emma_Walmsley","Robert_Walmsley").
+personFunction("Emma_Walmsley","Emma_Walmsley__1").
+predecessor("Emma_Walmsley","Sir_Andrew_Witty").
+product("GlaxoSmithKline","Over-the-counter_drug").
+product("GlaxoSmithKline","Vaccine").
+product("GlaxoSmithKline","Pharmaceutical").
+subsidiary("GlaxoSmithKline","Stiefel_Laboratories").
+type("GlaxoSmithKline","Public_limited_company").
+type("University_of_Nottingham","Public_university").

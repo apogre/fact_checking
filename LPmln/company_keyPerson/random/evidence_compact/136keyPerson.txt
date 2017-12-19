@@ -1,0 +1,3 @@
+keyPerson("Scottrade","CEO").
+location("Scottrade","Town_and_Country,_Missouri").
+type("Scottrade","Private_company").

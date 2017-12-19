@@ -1,0 +1,23 @@
+foundingYear("Crown_Worldwide_Group","1965").
+numberOfEmployees("Crown_Worldwide_Group","4600").
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+industry("Crown_Worldwide_Group","Warehouse").
+industry("Crown_Worldwide_Group","Relocation_service").
+industry("Crown_Worldwide_Group","Facilities_Management").
+industry("Crown_Worldwide_Group","Records_Management").
+networth("James_E._Thompson","1.0E9").
+knownFor("James_E._Thompson","Founder of The Crown Worldwide Group").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+birthYear("James_E._Thompson","1940").
+almaMater("James_E._Thompson","San_Jose_State_University").
+occupation("James_E._Thompson","James_E._Thompson__1").
+personFunction("James_E._Thompson","James_E._Thompson__1").
+birthPlace("Sergio_Ermotti","Switzerland").
+birthPlace("Sergio_Ermotti","Lugano").
+almaMater("Sergio_Ermotti","Oxford_University").
+nationality("Sergio_Ermotti","Switzerland").
+occupation("Sergio_Ermotti","Economist").
+location("Lugano","Lugano").
+capital("Switzerland","Bern").
+country("Lugano","Switzerland").

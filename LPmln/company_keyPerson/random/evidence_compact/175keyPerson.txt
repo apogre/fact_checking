@@ -1,0 +1,17 @@
+keyPerson("UAL_Corporation","President").
+keyPerson("UAL_Corporation","Chairman").
+keyPerson("UAL_Corporation","Chief_executive_officer").
+keyPerson("UAL_Corporation","Glenn_F._Tilton").
+type("UAL_Corporation","Public_company").
+headquarter("United_Airlines","Chicago").
+headquarter("United_Airlines","Illinois").
+headquarter("United_Airlines","United_States").
+headquarter("United_Airlines","Willis_Tower").
+keyPerson("United_Continental_Holdings","Chief_executive_officer").
+keyPerson("United_Continental_Holdings","Chief_Financial_Officer").
+keyPerson("United_Continental_Holdings","Oscar_Munoz_(executive)").
+keyPerson("United_Continental_Holdings","Chief_Commercial_Officer").
+keyPerson("United_Continental_Holdings","Robert_A._Milton").
+parentCompany("United_Airlines","United_Continental_Holdings").
+predecessor("United_Continental_Holdings","UAL_Corporation").
+type("United_Continental_Holdings","Public_company").

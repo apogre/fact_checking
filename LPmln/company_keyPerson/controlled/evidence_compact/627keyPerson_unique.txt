@@ -1,0 +1,33 @@
+foundingYear("Lanco_Infratech","1986").
+numberOfEmployees("Lanco_Infratech","6500").
+industry("Lanco_Infratech","Infrastructure_industry").
+industry("Lanco_Infratech","Energy_industry").
+keyPerson("Lanco_Infratech","Lagadapati_Rajagopal").
+keyPerson("Lanco_Infratech","Lagadapati_Madhusudhan_Rao").
+locationCity("Lanco_Infratech","New_Delhi").
+locationCity("Lanco_Infratech","India").
+birthPlace("Lagadapati_Rajagopal","India").
+birthPlace("Lagadapati_Rajagopal","Nellore").
+birthPlace("Lagadapati_Rajagopal","Vijayawada").
+almaMater("Lagadapati_Rajagopal","Velagapudi_Ramakrishna_Siddhartha_Engineering_College").
+country("New_Delhi","India").
+predecessor("Lagadapati_Rajagopal","Gadde_Ramamohan").
+type("New_Delhi","List_of_districts_of_Delhi").
+birthPlace("John_Thain","United_States").
+birthPlace("John_Thain","Antioch,_Illinois").
+birthPlace("John_Thain","Illinois").
+birthYear("John_Thain","1955").
+almaMater("John_Thain","Massachusetts_Institute_of_Technology").
+almaMater("John_Thain","Harvard_Business_School").
+country("Illinois","Illinois").
+country("Harvard_Business_School","U.S.").
+country("Massachusetts_Institute_of_Technology","United States").
+country("Republican_Party_(United_States)","United States").
+location("Antioch,_Illinois","Antioch, IL").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+country("Illinois","United_States").
+country("Antioch,_Illinois","United_States").
+type("Harvard_Business_School","Private_school").
+type("Massachusetts_Institute_of_Technology","Private_university").
+type("Massachusetts_Institute_of_Technology","Land-grant_university").

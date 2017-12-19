@@ -1,0 +1,26 @@
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+type("Playboy_Enterprises","Privately_held_company").
+birthPlace("Hugh_Hefner","Chicago").
+birthPlace("Scott_Flanders","Indiana").
+birthPlace("Scott_Flanders","Indianapolis").
+nationality("Scott_Flanders","American").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+occupation("Scott_Flanders","Scott_Flanders__1").
+type("Beverly_Hills,_California","General_law_city").
+birthPlace("Masayoshi_Son","Japan").
+birthPlace("Masayoshi_Son","Tosu,_Saga").
+occupation("Masayoshi_Son","Masayoshi_Son__1").
+occupation("Masayoshi_Son","SoftBank").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+type("Tokyo","Prefectures_of_Japan").
+type("Tosu,_Saga","Cities_of_Japan").
+type("Holy_Names_University","Non-profit").
+type("Holy_Names_University","Private_university").
+type("Holy_Names_University","Coeducational").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").

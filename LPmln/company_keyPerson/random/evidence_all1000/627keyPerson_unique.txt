@@ -1,0 +1,60 @@
+foundingYear("Lanco_Infratech","1986").
+numberOfEmployees("Lanco_Infratech","6500").
+industry("Lanco_Infratech","Infrastructure_industry").
+industry("Lanco_Infratech","Energy_industry").
+keyPerson("Lanco_Infratech","Lagadapati_Rajagopal").
+keyPerson("Lanco_Infratech","Lagadapati_Madhusudhan_Rao").
+locationCity("Lanco_Infratech","New_Delhi").
+locationCity("Lanco_Infratech","India").
+product("Lanco_Infratech","Real_estate").
+product("Lanco_Infratech","Electricity_generation").
+product("Lanco_Infratech","Electricity_distribution").
+product("Lanco_Infratech","Natural_gas").
+birthPlace("Lagadapati_Rajagopal","India").
+birthPlace("Lagadapati_Rajagopal","Nellore").
+birthPlace("Lagadapati_Rajagopal","Vijayawada").
+almaMater("Lagadapati_Rajagopal","Velagapudi_Ramakrishna_Siddhartha_Engineering_College").
+capital("India","New_Delhi").
+country("New_Delhi","India").
+isPartOf("New_Delhi","Delhi").
+largestCity("India","Mumbai").
+predecessor("Lagadapati_Rajagopal","Gadde_Ramamohan").
+religion("Lagadapati_Rajagopal","Hindu").
+residence("Lagadapati_Rajagopal","Vijaywada").
+successor("Lagadapati_Rajagopal","Kesineni_Srinivas").
+type("New_Delhi","List_of_districts_of_Delhi").
+birthPlace("John_Thain","United_States").
+birthPlace("John_Thain","Antioch,_Illinois").
+birthPlace("John_Thain","Illinois").
+birthYear("John_Thain","1955").
+almaMater("John_Thain","Massachusetts_Institute_of_Technology").
+almaMater("John_Thain","Harvard_Business_School").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Harvard_Business_School","U.S.").
+country("Massachusetts_Institute_of_Technology","United States").
+country("Republican_Party_(United_States)","United States").
+location("Antioch,_Illinois","Antioch, IL").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+capital("Illinois","Springfield,_Illinois").
+capital("United_States","Washington,_D.C.").
+city("Harvard_Business_School","Boston").
+city("Massachusetts_Institute_of_Technology","Cambridge,_Massachusetts").
+country("Illinois","United_States").
+country("Antioch,_Illinois","United_States").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+largestCity("Illinois","Chicago").
+largestCity("United_States","New_York_City").
+type("Harvard_Business_School","Private_school").
+type("Massachusetts_Institute_of_Technology","Private_university").
+type("Massachusetts_Institute_of_Technology","Land-grant_university").

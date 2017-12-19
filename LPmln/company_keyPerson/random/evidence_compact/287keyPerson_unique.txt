@@ -1,0 +1,4 @@
+keyPerson("Banco_Bilbao_Vizcaya_Argentaria","CEO").
+keyPerson("Banco_Bilbao_Vizcaya_Argentaria","Carlos_Torres_Vila_(banker)").
+predecessor("Banco_Bilbao_Vizcaya_Argentaria","Banco_Bilbao_Vizcaya").
+type("Banco_Bilbao_Vizcaya_Argentaria","S.A._(corporation)").

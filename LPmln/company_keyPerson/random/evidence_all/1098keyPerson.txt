@@ -1,0 +1,80 @@
+assets("U.S._Steel","9.326E9").
+equity("U.S._Steel","2.546E9").
+netIncome("U.S._Steel","1.508E9").
+operatingIncome("U.S._Steel","1.055E9").
+revenue("U.S._Steel","1.1574E10").
+numberOfEmployees("U.S._Steel","37000").
+foundationPlace("U.S._Steel","Carnegie_Steel").
+foundationPlace("U.S._Steel","William_Henry_%22Judge%22_Moore").
+industry("U.S._Steel","Steel").
+keyPerson("U.S._Steel","Mario_Longhi").
+location("U.S._Steel","Pennsylvania").
+location("U.S._Steel","United_States").
+location("U.S._Steel","U.S._Steel_Tower").
+location("U.S._Steel","Pittsburgh,_Pennsylvania").
+product("U.S._Steel","Steel").
+regionServed("U.S._Steel","World").
+type("U.S._Steel","Public_company").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("Pennsylvania","Pennsylvania").
+owner("U.S._Steel_Tower","The 601W Companies").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+capital("United_States","Washington,_D.C.").
+country("Pennsylvania","United_States").
+largestCity("Pennsylvania","Philadelphia").
+largestCity("United_States","New_York_City").
+location("U.S._Steel_Tower","Pennsylvania").
+location("U.S._Steel_Tower","Pittsburgh").
+location("U.S._Steel_Tower","Grant_Street").
+nationality("Mario_Longhi","United_States").
+birthPlace("Muhtar_Kent","New_York_City").
+birthYear("Muhtar_Kent","1952").
+nationality("Muhtar_Kent","United_States").
+nationality("Muhtar_Kent","Turkey").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+parent("Muhtar_Kent","Necdet_Kent").
+residence("Muhtar_Kent","Atlanta,_Georgia").
+stateOfOrigin("Muhtar_Kent","Turkey").
+stateOfOrigin("Muhtar_Kent","United_States").
+country("Cass_Business_School","United Kingdom").
+type("Cass_Business_School","Undergraduate, Postgraduate, Executive Education, Research").
+birthYear("Necdet_Kent","1911").
+deathYear("Necdet_Kent","2002").
+foundingYear("Tarsus_American_College","1888").
+almaMater("Necdet_Kent","New_York_University").
+capital("Turkey","Ankara").
+city("University_of_Hull","Kingston_upon_Hull").
+city("Tarsus_American_College","Mersin").
+city("Tarsus_American_College","Tarsus_(city)").
+city("Cass_Business_School","London").
+country("New_York_City","United_States").
+country("University_of_Hull","England").
+country("Tarsus_American_College","Turkey").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+largestCity("Turkey","Istanbul").
+nationality("Necdet_Kent","Turkish_people").
+occupation("Necdet_Kent","Diplomat").
+occupation("Necdet_Kent","Necdet_Kent__1").
+stateOfOrigin("Necdet_Kent","Turkish_people").
+type("New_York_City","City_(New_York)").
+type("University_of_Hull","Public_university").
+type("Tarsus_American_College","Independent_school").
+type("Tarsus_American_College","Boarding_school").

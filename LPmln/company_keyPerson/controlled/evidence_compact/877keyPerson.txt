@@ -1,0 +1,11 @@
+foundingYear("Scottrade","1980").
+numberOfEmployees("Scottrade","3803").
+foundationPlace("Scottrade","Scottsdale,_Arizona").
+industry("Scottrade","Discount_brokerage").
+keyPerson("Scottrade","Rodger_O._Riney").
+keyPerson("Scottrade","CEO").
+location("Scottrade","Town_and_Country,_Missouri").
+type("Scottrade","Private_company").
+birthYear("Steve_Siegel","1971").
+occupation("Steve_Siegel","Real_Estate_Development").
+occupation("Steve_Siegel","Steve_Siegel__1").

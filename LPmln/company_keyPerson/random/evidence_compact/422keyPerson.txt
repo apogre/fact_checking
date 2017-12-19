@@ -1,0 +1,33 @@
+keyPerson("Deutsche_Post","Chief_financial_officer").
+keyPerson("Deutsche_Post","Wulf_von_Schimmelmann").
+keyPerson("Deutsche_Post","Frank_Appel").
+location("Deutsche_Post","Bonn").
+location("Deutsche_Post","Germany").
+location("Deutsche_Post","Post_Tower").
+type("Deutsche_Post","Aktiengesellschaft").
+birthPlace("Frank_Appel","Hamburg").
+location("Bonn","Bonn").
+type("Bonn","city").
+type("KfW","Public law legal entity").
+location("Post_Tower","Bonn").
+location("Post_Tower","Germany").
+location("KfW","Frankfurt").
+location("KfW","Germany").
+occupation("Wulf_von_Schimmelmann","Wulf_von_Schimmelmann__1").
+occupation("Frank_Appel","Deutsche_Post").
+occupation("Frank_Appel","Frank_Appel__1").
+predecessor("Frank_Appel","Klaus_Zumwinkel").
+birthPlace("Grandhi_Mallikarjuna_Rao","Srikakulam").
+birthPlace("Grandhi_Mallikarjuna_Rao","India").
+birthPlace("Grandhi_Mallikarjuna_Rao","Rajam,_Andhra_Pradesh").
+birthPlace("Grandhi_Mallikarjuna_Rao","Andhra_Pradesh").
+nationality("Grandhi_Mallikarjuna_Rao","India").
+occupation("Grandhi_Mallikarjuna_Rao","GMR_Group").
+occupation("Grandhi_Mallikarjuna_Rao","Grandhi_Mallikarjuna_Rao__1").
+location("Srikakulam","Srikakulam, Andhra Pradesh").
+type("Andhra_Pradesh","States_of_India").
+foundedBy("GMR_Group","Grandhi_Mallikarjuna_Rao").
+keyPerson("GMR_Group","Grandhi_Mallikarjuna_Rao").
+type("GMR_Group","Listed_company").
+type("Srikakulam","City").
+type("Rajam,_Andhra_Pradesh","Town").

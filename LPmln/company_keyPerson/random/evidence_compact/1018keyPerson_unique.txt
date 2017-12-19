@@ -1,0 +1,14 @@
+keyPerson("Tod's","Diego_Della_Valle").
+keyPerson("Tod's","Chief_executive_officer").
+type("Tod's","Joint-stock_company").
+birthPlace("Diego_Della_Valle","Italy").
+birthPlace("Diego_Della_Valle","Sant'Elpidio_a_Mare").
+birthPlace("Howard_Schultz","New_York_(state)").
+birthPlace("Howard_Schultz","Brooklyn").
+birthPlace("Howard_Schultz","United_States").
+occupation("Howard_Schultz","Howard_Schultz__1").
+occupation("Howard_Schultz","Starbucks").
+location("Brooklyn","JFK Airport, New York").
+type("Brooklyn","Borough_(New_York_City)").
+type("Starbucks","Public_company").
+type("Northern_Michigan_University","Public_university").

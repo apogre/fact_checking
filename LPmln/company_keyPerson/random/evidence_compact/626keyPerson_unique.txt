@@ -1,0 +1,8 @@
+keyPerson("Lanco_Infratech","Lagadapati_Rajagopal").
+keyPerson("Lanco_Infratech","Lagadapati_Madhusudhan_Rao").
+birthPlace("Lagadapati_Rajagopal","India").
+birthPlace("Lagadapati_Rajagopal","Nellore").
+birthPlace("Lagadapati_Rajagopal","Vijayawada").
+predecessor("Lagadapati_Rajagopal","Gadde_Ramamohan").
+type("New_Delhi","List_of_districts_of_Delhi").
+birthPlace("Jane_Silber","United_States").

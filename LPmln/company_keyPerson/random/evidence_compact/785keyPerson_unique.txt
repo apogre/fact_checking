@@ -1,0 +1,7 @@
+foundedBy("Ralph_Lauren_Corporation","Ralph_Lauren").
+keyPerson("Ralph_Lauren_Corporation","Ralph_Lauren").
+keyPerson("Ralph_Lauren_Corporation","Stefan_Larsson_(businessman)").
+type("Ralph_Lauren_Corporation","Public_company").
+birthPlace("Stefano_Pessina","Pescara").
+nationality("Stefano_Pessina","Monaco").
+occupation("Stefano_Pessina","Stefano_Pessina__1").

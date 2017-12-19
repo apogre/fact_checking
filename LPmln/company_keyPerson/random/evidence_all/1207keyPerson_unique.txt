@@ -1,0 +1,117 @@
+assets("Yum!_Brands","8.075E9").
+equity("Yum!_Brands","9.69E8").
+netIncome("Yum!_Brands","1.293E9").
+operatingIncome("Yum!_Brands","1.921E9").
+revenue("Yum!_Brands","1.3105E10").
+foundingYear("Yum!_Brands","1997").
+numberOfEmployees("Yum!_Brands","505000").
+industry("Yum!_Brands","Restaurant").
+keyPerson("Yum!_Brands","CEO").
+keyPerson("Yum!_Brands","CFO").
+keyPerson("Yum!_Brands","Greg_Creed").
+keyPerson("Yum!_Brands","Robert_D._Walter").
+locationCity("Yum!_Brands","Louisville,_Kentucky").
+subsidiary("Yum!_Brands","Pizza_Hut").
+subsidiary("Yum!_Brands","WingStreet").
+subsidiary("Yum!_Brands","KFC").
+subsidiary("Yum!_Brands","Taco_Bell").
+type("Yum!_Brands","Public_company").
+numberOfLocations("Pizza_Hut","13728").
+numberOfLocations("Taco_Bell","6407").
+revenue("Taco_Bell","1.988E9").
+birthPlace("Robert_D._Walter","Dublin,_Ohio").
+revenue("WingStreet","USD").
+foundingYear("WingStreet","2003").
+numberOfEmployees("Pizza_Hut","160000").
+numberOfEmployees("Taco_Bell","175000").
+capital("India","New_Delhi").
+country("Louisville,_Kentucky","United_States").
+foundationPlace("Pizza_Hut","Kansas").
+foundationPlace("Pizza_Hut","Wichita,_Kansas").
+foundationPlace("Taco_Bell","Downey,_California").
+industry("WingStreet","Fast_Food").
+industry("Pizza_Hut","Restaurant").
+industry("Taco_Bell","Fast_Food").
+isPartOf("Louisville,_Kentucky","Kentucky").
+isPartOf("Louisville,_Kentucky","Jefferson_County,_Kentucky").
+keyPerson("Taco_Bell","Glen_Bell").
+largestCity("India","Mumbai").
+location("WingStreet","Dallas,_Texas").
+location("Pizza_Hut","Plano,_Texas").
+location("Taco_Bell","Irvine,_California").
+nationality("Robert_D._Walter","United_States").
+parentCompany("WingStreet","Yum!_Brands").
+parentCompany("Pizza_Hut","Yum!_Brands").
+parentCompany("Pizza_Hut","PepsiCo").
+parentCompany("Taco_Bell","Yum!_Brands").
+product("WingStreet","Chicken").
+product("Pizza_Hut","Pizza").
+product("Pizza_Hut","Italian-American_cuisine").
+product("Taco_Bell","Taco").
+product("Taco_Bell","Tex-Mex_cuisine").
+product("Taco_Bell","Burrito").
+regionServed("Taco_Bell","Canada").
+regionServed("Taco_Bell","United_States").
+type("Louisville,_Kentucky","Consolidated_city-county").
+type("WingStreet","Subsidiary").
+type("Pizza_Hut","Subsidiary").
+type("Taco_Bell","Subsidiary").
+birthPlace("Jeff_Zucker","Florida").
+birthPlace("Jeff_Zucker","United_States").
+birthPlace("Jeff_Zucker","Homestead,_Florida").
+activeYearsStartYear("Jeff_Zucker","1986").
+birthYear("Jeff_Zucker","1965").
+almaMater("Jeff_Zucker","Bachelor_of_Arts").
+almaMater("Jeff_Zucker","Harvard_University").
+nationality("Jeff_Zucker","Americans").
+occupation("Jeff_Zucker","Jeff_Zucker__1").
+occupation("Jeff_Zucker","CNN").
+stateOfOrigin("Jeff_Zucker","Americans").
+birthPlace("Bob_Wright","Hempstead,_New_York").
+birthPlace("Garth_Ancier","Perth_Amboy,_New_Jersey").
+birthPlace("Garth_Ancier","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Harvard_University","U.S.").
+location("Homestead,_Florida","Homestead General Aviation Airport, Florida").
+birthYear("Bob_Wright","1943").
+birthYear("Garth_Ancier","1957").
+birthYear("Steve_Burke_(businessman)","1958").
+almaMater("Bob_Wright","College_of_the_Holy_Cross").
+almaMater("Bob_Wright","University_of_Virginia_School_of_Law").
+almaMater("Garth_Ancier","Princeton_University").
+almaMater("Steve_Burke_(businessman)","Harvard_Business_School").
+almaMater("Steve_Burke_(businessman)","Colgate_University").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+city("Harvard_University","Cambridge,_Massachusetts").
+country("Florida","United_States").
+country("CNN","United_States").
+headquarter("CNN","CNN_Center").
+headquarter("CNN","Atlanta").
+headquarter("CNN","Georgia_(U.S._state)").
+isPartOf("Homestead,_Florida","Florida").
+isPartOf("Homestead,_Florida","Miami-Dade_County,_Florida").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+locationCountry("CNN","United_States").
+nationality("Bob_Wright","United_States").
+occupation("Bob_Wright","Bob_Wright__1").
+occupation("Bob_Wright","Author").
+occupation("Bob_Wright","Lawyer").
+occupation("Bob_Wright","Businessman").
+occupation("Garth_Ancier","Garth_Ancier__1").
+personFunction("Steve_Burke_(businessman)","Steve_Burke_(businessman)__1").
+residence("Steve_Burke_(businessman)","Philadelphia,_Pennsylvania").
+stateOfOrigin("Bob_Wright","United_States").
+type("Homestead,_Florida","List_of_communities_in_Miami-Dade_County,_Florida").
+type("Harvard_University","Research_university").

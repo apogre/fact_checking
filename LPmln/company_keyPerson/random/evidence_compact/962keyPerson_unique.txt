@@ -1,0 +1,8 @@
+location("Sulekha","Chennai").
+location("Sulekha","Tamil_Nadu").
+location("Sulekha","India").
+type("Tamil_Nadu","States_and_union_territories_of_India").
+keyPerson("KPMG","John_B._Veihmeyer").
+location("KPMG","Amstelveen").
+type("Chennai","Megacity").
+type("KPMG","Cooperative").

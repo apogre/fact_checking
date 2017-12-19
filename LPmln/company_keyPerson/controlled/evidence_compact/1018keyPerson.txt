@@ -1,0 +1,31 @@
+operatingIncome("Tod's","1.599E8").
+foundingYear("Tod's","1920").
+numberOfEmployees("Tod's","3100").
+industry("Tod's","Manufacturing").
+industry("Tod's","Textile").
+keyPerson("Tod's","Diego_Della_Valle").
+keyPerson("Tod's","Chief_executive_officer").
+locationCity("Tod's","Sant'Elpidio_a_Mare").
+type("Tod's","Joint-stock_company").
+birthPlace("Diego_Della_Valle","Italy").
+birthPlace("Diego_Della_Valle","Sant'Elpidio_a_Mare").
+spouse("Diego_Della_Valle","Barbara Pistilli").
+birthYear("Diego_Della_Valle","1953").
+almaMater("Diego_Della_Valle","University_of_Bologna").
+country("Sant'Elpidio_a_Mare","Italy").
+birthPlace("Howard_Schultz","New_York_(state)").
+birthPlace("Howard_Schultz","Brooklyn").
+birthPlace("Howard_Schultz","United_States").
+birthYear("Howard_Schultz","1953").
+almaMater("Howard_Schultz","Northern_Michigan_University").
+occupation("Howard_Schultz","Howard_Schultz__1").
+occupation("Howard_Schultz","Starbucks").
+operatingIncome("Starbucks","5.429E10").
+country("Northern_Michigan_University","U.S.").
+location("Brooklyn","JFK Airport, New York").
+numberOfEmployees("Starbucks","238000").
+country("Brooklyn","United_States_of_America").
+industry("Starbucks","Coffeehouse").
+type("Brooklyn","Borough_(New_York_City)").
+type("Starbucks","Public_company").
+type("Northern_Michigan_University","Public_university").

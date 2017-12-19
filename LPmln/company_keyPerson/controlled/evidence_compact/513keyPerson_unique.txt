@@ -1,0 +1,60 @@
+operatingIncome("GlaxoSmithKline","1.0322E10").
+numberOfEmployees("GlaxoSmithKline","96575").
+industry("GlaxoSmithKline","Pharmaceutical_industry").
+industry("GlaxoSmithKline","Biotechnology").
+industry("GlaxoSmithKline","Fast-moving_consumer_goods").
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+subsidiary("GlaxoSmithKline","Stiefel_Laboratories").
+type("GlaxoSmithKline","Public_limited_company").
+birthPlace("Andrew_Witty","England").
+birthPlace("Philip_Hampton","United_Kingdom").
+birthPlace("Philip_Hampton","United Kingdom").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+locationCountry("Stiefel_Laboratories","USA").
+spouse("Andrew_Witty","Caroline M. Witty").
+type("England","Administrative_division").
+birthYear("Andrew_Witty","1964").
+birthYear("Philip_Hampton","1953").
+foundingYear("Stiefel_Laboratories","1847").
+almaMater("Philip_Hampton","Lincoln_College,_Oxford").
+country("Isleworth","England").
+country("Isleworth","United_Kingdom").
+country("London","United_Kingdom").
+foundationPlace("Stiefel_Laboratories","Germany").
+industry("Stiefel_Laboratories","Pharmaceuticals").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","University_of_Nottingham").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Philip_Hampton","GlaxoSmithKline").
+occupation("Philip_Hampton","Philip_Hampton__1").
+parentCompany("Stiefel_Laboratories","GlaxoSmithKline").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+birthPlace("Satya_Nadella","India").
+birthPlace("Satya_Nadella","Hyderabad").
+birthPlace("Satya_Nadella","Telangana").
+birthYear("Satya_Nadella","1967").
+almaMater("Satya_Nadella","Manipal_Institute_of_Technology").
+almaMater("Satya_Nadella","University_of_Chicago_Booth_School_of_Business").
+employer("Satya_Nadella","Microsoft_Corporation").
+occupation("Satya_Nadella","Microsoft_Corporation").
+occupation("Satya_Nadella","Satya_Nadella__1").
+birthPlace("Steve_Ballmer","Detroit").
+birthPlace("Steve_Ballmer","Michigan").
+birthPlace("Steve_Ballmer","United_States").
+country("Telangana","India").
+spouse("Steve_Ballmer","Connie Snyder").
+type("Telangana","States_and_union_territories_of_India").
+birthYear("Steve_Ballmer","1956").
+almaMater("Steve_Ballmer","Stanford_Graduate_School_of_Business").
+almaMater("Steve_Ballmer","Harvard_College").
+country("Hyderabad","India").
+country("Manipal_Institute_of_Technology","India").
+type("Hyderabad","Metropolis").
+type("Manipal_Institute_of_Technology","Private_school").

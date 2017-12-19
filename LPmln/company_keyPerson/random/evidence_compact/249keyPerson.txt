@@ -1,0 +1,27 @@
+foundedBy("Advanced_Micro_Devices","Jerry_Sanders_(businessman)").
+keyPerson("Advanced_Micro_Devices","Lisa_Su").
+keyPerson("Advanced_Micro_Devices","John_Edward_Caldwell").
+type("Advanced_Micro_Devices","Public_company").
+birthPlace("Lisa_Su","Taiwan").
+birthPlace("Lisa_Su","Tainan").
+location("Sunnyvale,_California","Sunnyvale, California").
+location("Lisa_Su","US").
+nationality("Lisa_Su","United_States").
+occupation("Lisa_Su","Lisa_Su__1").
+occupation("Lisa_Su","AMD").
+type("Sunnyvale,_California","Charter_city").
+birthPlace("Muhtar_Kent","New_York_City").
+nationality("Muhtar_Kent","United_States").
+nationality("Muhtar_Kent","Turkey").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+parent("Muhtar_Kent","Necdet_Kent").
+type("Cass_Business_School","Undergraduate, Postgraduate, Executive Education, Research").
+nationality("Necdet_Kent","Turkish_people").
+occupation("Necdet_Kent","Diplomat").
+occupation("Necdet_Kent","Necdet_Kent__1").
+type("New_York_City","City_(New_York)").
+type("University_of_Hull","Public_university").
+type("Tarsus_American_College","Independent_school").
+type("Tarsus_American_College","Boarding_school").

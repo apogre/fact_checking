@@ -1,0 +1,41 @@
+operatingIncome("Las_Vegas_Sands","4.09E9").
+foundingYear("Las_Vegas_Sands","1988").
+numberOfEmployees("Las_Vegas_Sands","40000").
+foundedBy("Las_Vegas_Sands","Sheldon_G._Adelson").
+industry("Las_Vegas_Sands","Tourism").
+industry("Las_Vegas_Sands","Hospitality").
+keyPerson("Las_Vegas_Sands","Partha_Ojha").
+keyPerson("Las_Vegas_Sands","Sheldon_G._Adelson").
+location("Las_Vegas_Sands","Nevada").
+location("Las_Vegas_Sands","Paradise,_Nevada").
+owner("Las_Vegas_Sands","Sheldon_Adelson").
+owningCompany("Las_Vegas_Sands","Sheldon_Adelson").
+birthPlace("Sheldon_Adelson","Boston").
+birthPlace("Sheldon_Adelson","Massachusetts").
+birthPlace("Sheldon_Adelson","United_States").
+country("Nevada","Nevada").
+spouse("Sheldon_Adelson","Miriam Ochsorn").
+spouse("Sheldon_Adelson","Sandra Adelson").
+birthYear("Sheldon_Adelson","1933").
+almaMater("Sheldon_Adelson","City_College_of_New_York").
+country("Nevada","United_States").
+country("Paradise,_Nevada","United_States").
+occupation("Sheldon_Adelson","Sheldon_Adelson__1").
+occupation("Sheldon_Adelson","Las_Vegas_Sands").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").
+birthPlace("Kushal_Pal_Singh","British_India").
+birthPlace("Kushal_Pal_Singh","Bulandshahr").
+birthPlace("Kushal_Pal_Singh","Uttar_Pradesh").
+birthPlace("Kushal_Pal_Singh","Bulandshahar").
+birthPlace("Kushal_Pal_Singh","United_Provinces_of_Agra_and_Oudh").
+birthYear("Kushal_Pal_Singh","1931").
+almaMater("Kushal_Pal_Singh","Meerut_College").
+occupation("Kushal_Pal_Singh","DLF_Universal").
+occupation("Kushal_Pal_Singh","Kushal_Pal_Singh__1").
+location("Uttar_Pradesh","Uttar Pradesh").
+type("Uttar_Pradesh","States_and_union_territories_of_India").
+country("New_Delhi","India").
+country("Uttar_Pradesh","India").
+country("Bulandshahr","India").
+country("Meerut_College","India").
+type("New_Delhi","List_of_districts_of_Delhi").

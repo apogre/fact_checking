@@ -1,0 +1,7 @@
+keyperson(A,B) :- location(A,C) , birthPlace(B,C) , nationality(B,C)
+keyperson(A,B) :- predecessor(C,B) , birthPlace(C,D) , location(A,D)
+keyperson(A,B) :- keyPerson(C,B) , internationally(C,1^^http://www.w3.org/2001/XMLSchema#boolean) , internationally(A,1^^http://www.w3.org/2001/XMLSchema#boolean)
+keyperson(A,B) :- birthPlace(B,C) , location(D,C) , location(A,D)
+keyperson(A,B) :- keyPerson(A,C) , occupation(B,C)
+keyperson(A,B) :- numberOfEmployees(A,C) , C>D , birthYear(B,D)
+keyperson(A,B) :- keyPerson(C,B) , legalForm(C,D) , type(A,D)

@@ -1,0 +1,19 @@
+keyPerson("Alcatel-Lucent","Philippe_Camus_(businessman)").
+keyPerson("Alcatel-Lucent","Chairman").
+parentCompany("Alcatel-Lucent","Nokia").
+type("Alcatel-Lucent","S.A._(corporation)").
+birthPlace("Philippe_Camus_(businessman)","France").
+birthPlace("Philippe_Camus_(businessman)","Paris").
+keyPerson("Nokia","Rajeev_Suri").
+keyPerson("Nokia","Risto_Siilasmaa").
+nationality("Philippe_Camus_(businessman)","France").
+occupation("Philippe_Camus_(businessman)","Alcatel-Lucent").
+occupation("Philippe_Camus_(businessman)","Philippe_Camus_(businessman)__1").
+birthPlace("Ashok_Vemuri","New_Delhi").
+birthPlace("Ashok_Vemuri","India").
+occupation("Ashok_Vemuri","Business_executive").
+occupation("Ashok_Vemuri","Ashok_Vemuri__1").
+location("St._Stephen's_College,_Delhi","University Enclave, New Delhi, India").
+type("Xerox","Public").
+keyPerson("Xerox","Ursula_Burns").
+type("New_Delhi","List_of_districts_of_Delhi").

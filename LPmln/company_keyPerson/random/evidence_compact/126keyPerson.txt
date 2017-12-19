@@ -1,0 +1,13 @@
+keyPerson("Ahold","Supervisory_Board").
+keyPerson("Ahold","Dick_Boer").
+location("Ahold","Zaandam").
+type("Ahold","Naamloze_vennootschap").
+birthPlace("Dick_Boer","Axel,_Netherlands").
+nationality("Dick_Boer","Dutch").
+type("Pharmacy","Professional").
+keyPerson("Ahold_Delhaize","Dick_Boer").
+location("Ahold_Delhaize","Zaandam").
+occupation("Dick_Boer","Dick_Boer__1").
+predecessor("Dick_Boer","John_Rishton").
+type("Zaandam","City").
+type("Ahold_Delhaize","Naamloze_vennootschap").

@@ -1,0 +1,29 @@
+foundingYear("Scottrade","1980").
+numberOfEmployees("Scottrade","3803").
+foundationPlace("Scottrade","Scottsdale,_Arizona").
+industry("Scottrade","Discount_brokerage").
+keyPerson("Scottrade","Rodger_O._Riney").
+keyPerson("Scottrade","CEO").
+location("Scottrade","Town_and_Country,_Missouri").
+type("Scottrade","Private_company").
+birthPlace("Masayoshi_Son","Japan").
+birthPlace("Masayoshi_Son","Tosu,_Saga").
+birthYear("Masayoshi_Son","1957").
+almaMater("Masayoshi_Son","Holy_Names_University").
+almaMater("Masayoshi_Son","University_of_California,_Berkeley").
+occupation("Masayoshi_Son","Masayoshi_Son__1").
+occupation("Masayoshi_Son","SoftBank").
+country("Holy_Names_University","US").
+country("University_of_California,_Berkeley","U.S.").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+country("Tokyo","Japan").
+country("Jefferson_Union_High_School_District","United_States").
+type("Tokyo","Prefectures_of_Japan").
+type("Tosu,_Saga","Cities_of_Japan").
+type("Holy_Names_University","Non-profit").
+type("Holy_Names_University","Private_university").
+type("Holy_Names_University","Coeducational").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").

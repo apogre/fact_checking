@@ -1,0 +1,4 @@
+foundedBy("EBay","Pierre_Omidyar").
+location("EBay","California").
+location("EBay","San_Jose,_California").
+type("EBay","Public_company").

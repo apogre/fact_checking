@@ -1,0 +1,7 @@
+birthPlace("Tom_L._Ward","Seiling,_Oklahoma").
+occupation("Tom_L._Ward","Tapstone_Energy").
+occupation("Tom_L._Ward","Tom_L._Ward__1").
+country("Seiling,_Oklahoma","United_States").
+isPartOf("Seiling,_Oklahoma","Oklahoma").
+isPartOf("Seiling,_Oklahoma","Dewey_County,_Oklahoma").
+type("Seiling,_Oklahoma","City").

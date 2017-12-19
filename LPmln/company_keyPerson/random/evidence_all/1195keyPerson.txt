@@ -1,0 +1,81 @@
+assets("Yahoo!","4.5204E10").
+equity("Yahoo!","2.904E10").
+netIncome("Yahoo!","-4.35E9").
+operatingIncome("Yahoo!","-4.74E9").
+numberOfEmployees("Yahoo!","10400").
+keyPerson("Yahoo!","Marissa_Mayer").
+keyPerson("Yahoo!","Maynard_Webb").
+keyPerson("Yahoo!","David_Filo").
+locationCity("Yahoo!","Sunnyvale,_California").
+product("Yahoo!","Yahoo!_Messenger").
+product("Yahoo!","Yahoo!_Finance").
+product("Yahoo!","Yahoo!_Search").
+product("Yahoo!","Tumblr").
+product("Yahoo!","Yahoo!_Mail").
+product("Yahoo!","Yahoo!_Answers").
+product("Yahoo!","Yahoo!_Sports").
+product("Yahoo!","Yahoo!_News").
+product("Yahoo!","Flickr").
+product("Yahoo!","List_of_Yahoo!-owned_sites_and_services").
+subsidiary("Yahoo!","List_of_acquisitions_by_Yahoo!").
+type("Yahoo!","Verizon_Communications").
+type("Yahoo!","Public_company").
+birthPlace("Jeff_Zucker","Florida").
+birthPlace("Jeff_Zucker","United_States").
+birthPlace("Jeff_Zucker","Homestead,_Florida").
+activeYearsStartYear("Jeff_Zucker","1986").
+birthYear("Jeff_Zucker","1965").
+almaMater("Jeff_Zucker","Bachelor_of_Arts").
+almaMater("Jeff_Zucker","Harvard_University").
+nationality("Jeff_Zucker","Americans").
+occupation("Jeff_Zucker","Jeff_Zucker__1").
+occupation("Jeff_Zucker","CNN").
+stateOfOrigin("Jeff_Zucker","Americans").
+birthPlace("Bob_Wright","Hempstead,_New_York").
+birthPlace("Garth_Ancier","Perth_Amboy,_New_Jersey").
+birthPlace("Garth_Ancier","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Harvard_University","U.S.").
+location("Homestead,_Florida","Homestead General Aviation Airport, Florida").
+birthYear("Bob_Wright","1943").
+birthYear("Garth_Ancier","1957").
+birthYear("Steve_Burke_(businessman)","1958").
+almaMater("Bob_Wright","College_of_the_Holy_Cross").
+almaMater("Bob_Wright","University_of_Virginia_School_of_Law").
+almaMater("Garth_Ancier","Princeton_University").
+almaMater("Steve_Burke_(businessman)","Harvard_Business_School").
+almaMater("Steve_Burke_(businessman)","Colgate_University").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+city("Harvard_University","Cambridge,_Massachusetts").
+country("Florida","United_States").
+country("CNN","United_States").
+headquarter("CNN","CNN_Center").
+headquarter("CNN","Atlanta").
+headquarter("CNN","Georgia_(U.S._state)").
+isPartOf("Homestead,_Florida","Florida").
+isPartOf("Homestead,_Florida","Miami-Dade_County,_Florida").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+locationCountry("CNN","United_States").
+nationality("Bob_Wright","United_States").
+occupation("Bob_Wright","Bob_Wright__1").
+occupation("Bob_Wright","Author").
+occupation("Bob_Wright","Lawyer").
+occupation("Bob_Wright","Businessman").
+occupation("Garth_Ancier","Garth_Ancier__1").
+personFunction("Steve_Burke_(businessman)","Steve_Burke_(businessman)__1").
+residence("Steve_Burke_(businessman)","Philadelphia,_Pennsylvania").
+stateOfOrigin("Bob_Wright","United_States").
+type("Homestead,_Florida","List_of_communities_in_Miami-Dade_County,_Florida").
+type("Harvard_University","Research_university").

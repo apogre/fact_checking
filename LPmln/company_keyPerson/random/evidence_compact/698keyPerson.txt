@@ -1,0 +1,5 @@
+location("Nation_Media_Group","Kenya").
+location("Nation_Media_Group","Nairobi").
+type("Nation_Media_Group","Public_company").
+location("Nairobi","Nairobi").
+type("Nairobi","List_of_cities_and_towns_in_Kenya_by_population").

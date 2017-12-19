@@ -1,0 +1,7 @@
+foundedBy("Syntel","Neerja_Sethi").
+foundedBy("Syntel","Bharat_Desai").
+keyPerson("Syntel","Prashant_Ranade").
+keyPerson("Syntel","Bharat_Desai").
+keyPerson("Syntel","Nitin_Rakesh").
+keyPerson("Syntel","Rakesh_Khanna").
+type("Syntel","Public_company").

@@ -1,0 +1,63 @@
+operatingIncome("Campbell_Soup_Company","1.279E9").
+foundingYear("Campbell_Soup_Company","1869").
+numberOfEmployees("Campbell_Soup_Company","17500").
+industry("Campbell_Soup_Company","Food_processing").
+keyPerson("Campbell_Soup_Company","Chief_Executive_Officer").
+keyPerson("Campbell_Soup_Company","Chairman").
+keyPerson("Campbell_Soup_Company","President").
+keyPerson("Campbell_Soup_Company","Denise_Morrison").
+location("Campbell_Soup_Company","New_Jersey").
+location("Campbell_Soup_Company","United_States").
+location("Campbell_Soup_Company","Camden,_New_Jersey").
+type("Campbell_Soup_Company","Public_company").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+birthPlace("Denise_Morrison","Elberon, New Jersey").
+country("New_Jersey","New Jersey").
+location("Camden,_New_Jersey","Camden, New Jersey").
+type("V8_(beverage)","Vegetable_juice").
+birthYear("Denise_Morrison","1954").
+foundingYear("Pepperidge_Farm","1937").
+almaMater("Denise_Morrison","Boston_College").
+country("Camden,_New_Jersey","United_States").
+country("New_Jersey","United_States").
+industry("Pepperidge_Farm","Food_processing").
+keyPerson("Pepperidge_Farm","Senior_Vice_President").
+location("Pepperidge_Farm","Norwalk,_Connecticut").
+location("Pepperidge_Farm","United_States").
+occupation("Denise_Morrison","Denise_Morrison__1").
+parentCompany("Pepperidge_Farm","Campbell_Soup_Company").
+type("Camden,_New_Jersey","City_(New_Jersey)").
+type("Pepperidge_Farm","Subsidiary").
+birthPlace("Jeffrey_R._Immelt","Ohio").
+birthPlace("Jeffrey_R._Immelt","Cincinnati").
+birthPlace("Jeffrey_R._Immelt","United_States").
+almaMater("Jeffrey_R._Immelt","Harvard_Business_School").
+almaMater("Jeffrey_R._Immelt","Dartmouth_College").
+predecessor("Jeffrey_R._Immelt","Jack_Welch").
+birthPlace("Jack_Welch","Peabody,_Massachusetts").
+birthPlace("Paul_Volcker","Cape_May,_New_Jersey").
+birthPlace("Paul_Volcker","New_Jersey").
+birthPlace("Paul_Volcker","United_States").
+country("Ohio","Ohio").
+country("Harvard_Business_School","U.S.").
+country("Republican_Party_(United_States)","United States").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+predecessor("Paul_Volcker","Position established").
+spouse("Paul_Volcker","Anke Dening").
+spouse("Paul_Volcker","Barbara Bahnson").
+birthYear("Jack_Welch","1935").
+almaMater("Jack_Welch","University_of_Illinois").
+almaMater("Jack_Welch","University_of_Massachusetts_Amherst").
+almaMater("Paul_Volcker","Harvard_University").
+almaMater("Paul_Volcker","Princeton_University").
+almaMater("Paul_Volcker","London_School_of_Economics").
+country("Cincinnati","United_States").
+country("Ohio","United_States").
+country("Dartmouth_College","United_States").
+occupation("Jack_Welch","Jack_Welch__1").
+predecessor("Paul_Volcker","G._William_Miller").
+predecessor("Paul_Volcker","Alfred_Hayes_(banker)").
+spouse("Jack_Welch","Suzy_Wetlaufer").
+type("Harvard_Business_School","Private_school").
+type("Dartmouth_College","Private_university").

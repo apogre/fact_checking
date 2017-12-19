@@ -1,0 +1,27 @@
+keyPerson("Vodafone","Vittorio_Colao").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+location("Vodafone","Newbury,_Berkshire").
+predecessor("Vodafone","Racal").
+type("Vodafone","Public_limited_company").
+birthPlace("Gerard_Kleisterlee","Ludwigsburg").
+birthPlace("Vittorio_Colao","Brescia").
+birthPlace("Gerard_Kleisterlee","Germany").
+nationality("Vittorio_Colao","Italian").
+keyPerson("Racal","Ernest_Harrison").
+keyPerson("Vodafone_Global_Enterprise","CEO").
+location("Racal","United_Kingdom").
+location("Racal","Weybridge").
+nationality("Gerard_Kleisterlee","Dutch_people").
+parentCompany("Vodafone_Global_Enterprise","Vodafone").
+type("Racal","Public_limited_company").
+type("Vodafone_Global_Enterprise","Subsidiary").
+type("Vodafone_Global_Enterprise","Private_company_limited_by_shares").
+birthPlace("Helge_Lund","Oslo").
+birthPlace("Helge_Lund","Asker").
+occupation("Helge_Lund","Schlumberger").
+occupation("Helge_Lund","Helge_Lund__1").
+location("Oslo","Oslo-Blindern , Norway").
+foundedBy("Schlumberger","Schlumberger_brothers").
+keyPerson("Schlumberger","Paal_Kibsgaard").
+type("Schlumberger","Naamloze_vennootschap").
+type("Norwegian_School_of_Economics","Public_university").

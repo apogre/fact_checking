@@ -1,0 +1,22 @@
+location("Singtel","Singapore").
+location("Optus","Australia").
+location("Optus","New_South_Wales").
+location("Optus","Sydney").
+type("Optus","Subsidiary").
+birthPlace("Mitchell_Baker","Berkeley,_California").
+birthPlace("Mitchell_Baker","Oakland,_California").
+occupation("Mitchell_Baker","Mozilla_Foundation").
+occupation("Mitchell_Baker","Mozilla_Corporation").
+occupation("Mitchell_Baker","Mitchell_Baker__1").
+location("Berkeley,_California","Berkeley, California").
+location("Oakland,_California","Oakland Museum").
+keyPerson("Mozilla_Corporation","Mitchell_Baker").
+keyPerson("Mozilla_Corporation","Chris_Beard_(executive)").
+parentCompany("Mozilla_Corporation","Mozilla_Foundation").
+type("Berkeley,_California","Charter_city").
+type("Oakland,_California","Charter_city").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").
+type("Mozilla_Foundation","501(c)(3)").
+type("Mozilla_Corporation","Privately_held_company").

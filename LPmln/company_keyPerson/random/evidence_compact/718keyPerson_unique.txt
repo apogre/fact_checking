@@ -1,0 +1,13 @@
+foundedBy("Nike,_Inc.","Bill_Bowerman").
+foundedBy("Nike,_Inc.","Phil_Knight").
+keyPerson("Nike,_Inc.","Phil_Knight").
+keyPerson("Nike,_Inc.","Mark_Parker").
+location("Nike,_Inc.","Beaverton,_Oregon").
+location("Nike,_Inc.","Washington_County,_Oregon").
+type("Nike,_Inc.","Public_company").
+occupation("David_C._Novak","David_C._Novak__1").
+location("University_of_Missouri","Columbia, Missouri, U.S.").
+parent("University_of_Missouri","University_of_Missouri_System").
+type("University_of_Missouri","Public_university").
+type("University_of_Missouri","Flagship_campus").
+type("University_of_Missouri","Land-grant_university").

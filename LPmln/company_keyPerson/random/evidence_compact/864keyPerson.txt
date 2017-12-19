@@ -1,0 +1,43 @@
+foundedBy("SAS_Institute","James_Goodnight").
+foundedBy("SAS_Institute","John_Sall").
+foundedBy("SAS_Institute","Anthony_James_Barr").
+keyPerson("SAS_Institute","James_Goodnight").
+keyPerson("SAS_Institute","John_Sall").
+keyPerson("SAS_Institute","Entrepreneur").
+location("SAS_Institute","United_States").
+location("SAS_Institute","Cary,_North_Carolina").
+location("SAS_Institute","North_Carolina").
+birthPlace("James_Goodnight","Salisbury,_North_Carolina").
+birthPlace("James_Goodnight","Salisbury,_NC").
+birthPlace("Anthony_James_Barr","New_York").
+birthPlace("John_Sall","Rockford,_Illinois").
+location("Cary,_North_Carolina","Cary, North Carolina").
+nationality("James_Goodnight","United_States").
+nationality("Anthony_James_Barr","United_States").
+occupation("James_Goodnight","CEO").
+occupation("James_Goodnight","Entrepreneur").
+occupation("James_Goodnight","Statistician").
+occupation("James_Goodnight","Inventor").
+occupation("James_Goodnight","Software_engineer").
+occupation("James_Goodnight","James_Goodnight__1").
+occupation("Anthony_James_Barr","Programming_language").
+occupation("Anthony_James_Barr","Software_Engineer").
+occupation("Anthony_James_Barr","Inventor").
+occupation("Anthony_James_Barr","Anthony_James_Barr__1").
+occupation("John_Sall","SAS_Institute").
+occupation("John_Sall","John_Sall__1").
+birthPlace("Stuart_Gulliver","Derby").
+nationality("Stuart_Gulliver","United_Kingdom").
+occupation("Stuart_Gulliver","Banker").
+occupation("Stuart_Gulliver","Stuart_Gulliver__1").
+location("Derby","Watnall").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+foundedBy("HSBC","Thomas_Sutherland_(banker)").
+keyPerson("HSBC","Chief_executive_officer").
+keyPerson("HSBC","Douglas_Flint").
+keyPerson("HSBC","Stuart_Gulliver").
+location("HSBC","HSBC_Tower,_London").
+type("Derby","City_status_in_the_United_Kingdom").
+type("Derby","Unitary_authorities_of_England").
+type("HSBC","Public_limited_company").

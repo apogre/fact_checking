@@ -1,0 +1,11 @@
+keyPerson("IGATE","Srinivas_Kandula").
+location("IGATE","Bridgewater,_New_Jersey").
+parentCompany("IGATE","Capgemini").
+foundedBy("Capgemini","Serge_Kampf").
+keyPerson("Capgemini","Paul_Hermelin").
+birthPlace("Daniel_Vasella","Switzerland").
+birthPlace("Daniel_Vasella","Fribourg").
+occupation("Daniel_Vasella","Daniel_Vasella__1").
+location("Fribourg"," Posieux").
+type("Harvard_Business_School","Private_school").
+type("University_of_Bern","Public_university").

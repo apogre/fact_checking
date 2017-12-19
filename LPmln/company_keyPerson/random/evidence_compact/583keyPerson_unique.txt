@@ -1,0 +1,19 @@
+foundedBy("IKEA","Ingvar_Kamprad").
+keyPerson("IKEA","CEO").
+location("IKEA","Delft").
+parentCompany("IKEA","Stichting_INGKA_Foundation").
+type("IKEA","Privately_held_company").
+occupation("Ingvar_Kamprad","IKEA").
+occupation("Ingvar_Kamprad","Ingvar_Kamprad__1").
+type("Delft","List_of_municipalities_of_the_Netherlands").
+type("Delft","Cities_of_the_Netherlands").
+birthPlace("Kushal_Pal_Singh","British_India").
+birthPlace("Kushal_Pal_Singh","Bulandshahr").
+birthPlace("Kushal_Pal_Singh","Uttar_Pradesh").
+birthPlace("Kushal_Pal_Singh","Bulandshahar").
+birthPlace("Kushal_Pal_Singh","United_Provinces_of_Agra_and_Oudh").
+occupation("Kushal_Pal_Singh","DLF_Universal").
+occupation("Kushal_Pal_Singh","Kushal_Pal_Singh__1").
+location("Uttar_Pradesh","Uttar Pradesh").
+type("Uttar_Pradesh","States_and_union_territories_of_India").
+type("New_Delhi","List_of_districts_of_Delhi").

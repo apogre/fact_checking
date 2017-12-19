@@ -1,0 +1,17 @@
+foundedBy("Sonic_Drive-In","Troy_Smith_(businessman)").
+location("Sonic_Drive-In","Oklahoma_City").
+location("Sonic_Drive-In","Oklahoma").
+location("Sonic_Drive-In","United_States").
+type("Sonic_Drive-In","Public_company").
+birthPlace("J._Clifford_Hudson","Dallas").
+birthPlace("J._Clifford_Hudson","Dallas,_Texas").
+nationality("J._Clifford_Hudson","American").
+occupation("J._Clifford_Hudson","J._Clifford_Hudson__1").
+occupation("J._Clifford_Hudson","Sonic_Drive-In").
+type("Oklahoma_City","Lists_of_capitals").
+type("Shawnee,_Oklahoma","City").
+type("Dallas","List_of_cities_in_Texas").
+type("University_of_Oklahoma","Public_university").
+type("University_of_Oklahoma","Flagship_university").
+type("University_of_Oklahoma","Space_grant_colleges").
+type("Georgetown_University","Private_university").

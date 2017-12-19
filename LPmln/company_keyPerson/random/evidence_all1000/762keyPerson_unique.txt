@@ -1,0 +1,110 @@
+numberOfLocations("Outback_Steakhouse","978").
+industry("Outback_Steakhouse","Restaurant").
+locationCity("Outback_Steakhouse","Tampa,_Florida").
+locationCity("Outback_Steakhouse","Florida").
+locationCountry("Outback_Steakhouse","United_States").
+parentCompany("Outback_Steakhouse","Bloomin'_Brands").
+product("Outback_Steakhouse","Cuisine_of_the_United_States").
+regionServed("Outback_Steakhouse","Taiwan").
+regionServed("Outback_Steakhouse","China").
+regionServed("Outback_Steakhouse","Costa_Rica").
+regionServed("Outback_Steakhouse","Southeast_Asia").
+regionServed("Outback_Steakhouse","Japan").
+regionServed("Outback_Steakhouse","Australia").
+regionServed("Outback_Steakhouse","Venezuela").
+regionServed("Outback_Steakhouse","Caribbean").
+regionServed("Outback_Steakhouse","United_Kingdom").
+regionServed("Outback_Steakhouse","Hong_Kong").
+regionServed("Outback_Steakhouse","Guam").
+regionServed("Outback_Steakhouse","Brazil").
+regionServed("Outback_Steakhouse","Philippines").
+regionServed("Outback_Steakhouse","North_America").
+type("Outback_Steakhouse","Subsidiary").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+largestCity("Costa_Rica","capital").
+largestCity("Japan","capital").
+location("Costa_Rica","Costa Rica").
+religion("Costa_Rica","Roman_Catholicism_in_Costa_Rica").
+capital("Australia","Canberra").
+capital("Florida","Tallahassee,_Florida").
+capital("Japan","Tokyo").
+capital("Philippines","Manila").
+capital("Taiwan","Taipei").
+capital("United_Kingdom","London").
+country("Florida","United_States").
+isPartOf("Tampa,_Florida","Florida").
+isPartOf("Tampa,_Florida","Hillsborough_County,_Florida").
+largestCity("Australia","Sydney").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("Philippines","Quezon_City").
+largestCity("Taiwan","New_Taipei_City").
+largestCity("United_Kingdom","Capital_city").
+numberOfLocations("Bloomin'_Brands","1507").
+largestCity("Venezuela","capital").
+location("Venezuela","right").
+location("Guam","Guam").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+numberOfEmployees("Bloomin'_Brands","100000").
+capital("United_States","Washington,_D.C.").
+capital("Venezuela","Caracas").
+capital("China","Beijing").
+foundationPlace("Bloomin'_Brands","Tampa,_Florida").
+foundedBy("Bloomin'_Brands","J._Timothy_Gannon").
+foundedBy("Bloomin'_Brands","Chris_T._Sullivan").
+industry("Bloomin'_Brands","Restaurant").
+keyPerson("Bloomin'_Brands","Chief_brand_officer").
+keyPerson("Bloomin'_Brands","President").
+keyPerson("Bloomin'_Brands","Chief_executive_officer").
+keyPerson("Bloomin'_Brands","Vice_president").
+keyPerson("Bloomin'_Brands","Chairman").
+keyPerson("Bloomin'_Brands","CFO").
+largestCity("United_States","New_York_City").
+largestCity("China","Shanghai").
+location("Bloomin'_Brands","Tampa,_Florida").
+subsidiary("Bloomin'_Brands","Outback_Steakhouse").
+subsidiary("Bloomin'_Brands","Bonefish_Grill").
+subsidiary("Bloomin'_Brands","Carrabba's_Italian_Grill").
+subsidiary("Bloomin'_Brands","Fleming's_Prime_Steakhouse_&_Wine_Bar").
+type("Bloomin'_Brands","Public_company").
+networth("Diego_Della_Valle","1.75E9").
+birthPlace("Diego_Della_Valle","Sant'Elpidio_a_Mare").
+birthPlace("Diego_Della_Valle","Italy").
+birthYear("Diego_Della_Valle","1953").
+almaMater("Diego_Della_Valle","University_of_Bologna").
+knownFor("Diego_Della_Valle","Tod's").
+religion("Diego_Della_Valle","Roman_Catholic").
+assets("Tod's","9.157E8").
+equity("Tod's","6.184E8").
+netIncome("Tod's","1.091E8").
+operatingIncome("Tod's","1.599E8").
+revenue("Tod's","8.064E8").
+birthPlace("Andrea_Della_Valle","Sant'Elpidio_a_Mare").
+largestCity("Italy","capital").
+locationCountry("Tod's","Italy").
+religion("Italy","Roman_Catholic").
+type("University_of_Bologna","Public").
+foundingYear("Tod's","1920").
+numberOfEmployees("Tod's","3100").
+capital("Italy","Rome").
+city("University_of_Bologna","Bologna").
+country("University_of_Bologna","Italy").
+country("Sant'Elpidio_a_Mare","Italy").
+industry("Tod's","Textile").
+industry("Tod's","Manufacturing").
+keyPerson("Tod's","Diego_Della_Valle").
+keyPerson("Tod's","Chief_executive_officer").
+locationCity("Tod's","Sant'Elpidio_a_Mare").
+product("Tod's","Footwear").
+product("Tod's","Leather").
+type("Tod's","Joint-stock_company").

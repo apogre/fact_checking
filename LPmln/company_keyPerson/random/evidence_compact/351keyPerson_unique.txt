@@ -1,0 +1,28 @@
+foundedBy("Capital_One","Nigel_Morris").
+foundedBy("Capital_One","Richard_Fairbank").
+keyPerson("Capital_One","Chief_financial_officer").
+keyPerson("Capital_One","Richard_Fairbank").
+keyPerson("Capital_One","Chairman").
+keyPerson("Capital_One","President").
+keyPerson("Capital_One","Chief_Executive_Officer").
+location("Capital_One","United_States").
+location("Capital_One","McLean,_Virginia").
+location("Capital_One","Tysons_Corner,_Virginia").
+type("Capital_One","Public_company").
+location("Richmond,_Virginia","Richmond International Airport, Virginia").
+type("McLean,_Virginia","Census-designated_place").
+type("Richmond,_Virginia","Independent_city_(United_States)").
+type("Richmond,_Virginia","List_of_capitals_in_the_United_States").
+type("Tysons_Corner,_Virginia","Census-designated_place").
+birthPlace("Brian_L._Roberts","Philadelphia").
+birthPlace("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+occupation("Brian_L._Roberts","leadership-overview").
+occupation("Brian_L._Roberts","Brian_L._Roberts__1").
+parent("Brian_L._Roberts","Ralph_J._Roberts").
+birthPlace("Ralph_J._Roberts","New_York_City").
+foundedBy("Philadelphia","William Penn").
+nationality("Ralph_J._Roberts","United States").
+type("Germantown_Academy","Private").
+occupation("Ralph_J._Roberts","Ralph_J._Roberts__1").
+type("Philadelphia","Consolidated_city-county").
+type("Wharton_School_of_the_University_of_Pennsylvania","Private_university").

@@ -1,0 +1,13 @@
+foundedBy("Syntel","Neerja_Sethi").
+foundedBy("Syntel","Bharat_Desai").
+keyPerson("Syntel","Prashant_Ranade").
+keyPerson("Syntel","Bharat_Desai").
+keyPerson("Syntel","Nitin_Rakesh").
+keyPerson("Syntel","Rakesh_Khanna").
+type("Syntel","Public_company").
+occupation("Scott_Etzler","Scott_Etzler__1").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+type("Indiana_University","Public_University").
+type("Northwestern_University","Private_university").
+type("Kellogg_School_of_Management","Private_university").

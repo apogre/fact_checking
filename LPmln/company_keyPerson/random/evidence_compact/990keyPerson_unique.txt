@@ -1,0 +1,23 @@
+keyPerson("Telmex","CEO").
+keyPerson("Telmex","Carlos_Slim").
+location("Telmex","Mexico").
+location("Telmex","Mexico_City").
+type("Telmex","Subsidiary").
+birthPlace("Carlos_Slim","Mexico_City").
+location("Mexico_City","Mexico City").
+nationality("Carlos_Slim","Mexican").
+parent("Mexico_City","National_Autonomous_University_of_Mexico").
+type("Mexico_City","Cultural").
+occupation("Carlos_Slim","Grupo_Carso").
+occupation("Carlos_Slim","Telmex").
+occupation("Carlos_Slim","Carlos_Slim__1").
+occupation("Carlos_Slim","Samsung_Mexico").
+type("Mexico_City","Administrative_divisions_of_Mexico").
+birthPlace("Rajeev_Suri","India").
+birthPlace("Rajeev_Suri","New_Delhi").
+nationality("Rajeev_Suri","Singapore").
+occupation("Rajeev_Suri","Rajeev_Suri__1").
+keyPerson("Nokia","Rajeev_Suri").
+keyPerson("Nokia","Risto_Siilasmaa").
+type("New_Delhi","List_of_districts_of_Delhi").
+type("Manipal_Institute_of_Technology","Private_school").

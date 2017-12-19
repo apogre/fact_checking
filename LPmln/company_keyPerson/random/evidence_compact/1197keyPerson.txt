@@ -1,0 +1,13 @@
+keyPerson("Yahoo!","Marissa_Mayer").
+keyPerson("Yahoo!","Maynard_Webb").
+keyPerson("Yahoo!","David_Filo").
+type("Yahoo!","Verizon_Communications").
+type("Yahoo!","Public_company").
+birthPlace("Anant_Gupta","Delhi").
+birthPlace("Anant_Gupta","India").
+nationality("Anant_Gupta","India").
+occupation("Anant_Gupta","CEO").
+occupation("Anant_Gupta","Anant_Gupta__1").
+type("Delhi","Union_territory").
+type("Delhi","List_of_cities_in_India_by_population").
+type("University_of_Liverpool","Public_university").

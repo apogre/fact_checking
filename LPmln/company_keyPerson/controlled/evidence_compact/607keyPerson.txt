@@ -1,0 +1,34 @@
+operatingIncome("Juniper_Networks","9.12E8").
+numberOfEmployees("Juniper_Networks","9058").
+foundedBy("Juniper_Networks","Pradeep_Sindhu").
+industry("Juniper_Networks","Networking_hardware").
+keyPerson("Juniper_Networks","Scott_Kriens").
+keyPerson("Juniper_Networks","Pradeep_Sindhu").
+locationCity("Juniper_Networks","Sunnyvale,_California").
+type("Juniper_Networks","Public_company").
+birthPlace("Pradeep_Sindhu","Mumbai").
+location("Sunnyvale,_California","Sunnyvale, California").
+birthYear("Pradeep_Sindhu","1953").
+almaMater("Pradeep_Sindhu","University_of_Hawaii").
+almaMater("Pradeep_Sindhu","Indian_Institute_of_Technology,_Kanpur").
+almaMater("Pradeep_Sindhu","Carnegie_Mellon_University").
+almaMater("Scott_Kriens","California_State_University,_East_Bay").
+country("Sunnyvale,_California","United_States").
+employer("Pradeep_Sindhu","Juniper_Networks").
+type("Sunnyvale,_California","Charter_city").
+birthPlace("Howard_Schultz","New_York_(state)").
+birthPlace("Howard_Schultz","Brooklyn").
+birthPlace("Howard_Schultz","United_States").
+birthYear("Howard_Schultz","1953").
+almaMater("Howard_Schultz","Northern_Michigan_University").
+occupation("Howard_Schultz","Howard_Schultz__1").
+occupation("Howard_Schultz","Starbucks").
+operatingIncome("Starbucks","5.429E10").
+country("Northern_Michigan_University","U.S.").
+location("Brooklyn","JFK Airport, New York").
+numberOfEmployees("Starbucks","238000").
+country("Brooklyn","United_States_of_America").
+industry("Starbucks","Coffeehouse").
+type("Brooklyn","Borough_(New_York_City)").
+type("Starbucks","Public_company").
+type("Northern_Michigan_University","Public_university").

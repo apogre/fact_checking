@@ -1,0 +1,27 @@
+foundedBy("SAP_SE","Hasso_Plattner").
+foundedBy("SAP_SE","Klaus_Tschira").
+foundedBy("SAP_SE","Dietmar_Hopp").
+foundedBy("SAP_SE","Claus_Wellenreuther").
+keyPerson("SAP_SE","Bill_McDermott").
+keyPerson("SAP_SE","Hasso_Plattner").
+type("SAP_SE","Societas_Europaea").
+birthPlace("Klaus_Tschira","Freiburg_im_Breisgau").
+birthPlace("Hasso_Plattner","Berlin").
+birthPlace("Hasso_Plattner","Germany").
+birthPlace("Dietmar_Hopp","Heidelberg").
+birthPlace("Bill_McDermott","Flushing, Queens, New York, U.S.").
+nationality("Dietmar_Hopp","German").
+nationality("Bill_McDermott","American").
+type("Weinheim","Stadt").
+type("Walldorf","Stadt").
+occupation("Hasso_Plattner","Hasso_Plattner__1").
+occupation("Dietmar_Hopp","SAP_AG").
+occupation("Dietmar_Hopp","Dietmar_Hopp__1").
+occupation("Bill_McDermott","Bill_McDermott__1").
+birthPlace("Michael_Corbat","Bristol,_Connecticut").
+occupation("Michael_Corbat","Michael_Corbat__1").
+keyPerson("Citigroup","Michael_Corbat").
+keyPerson("Citigroup","Michael_E._O'Neill").
+type("Citigroup","Public_company").
+type("Bristol,_Connecticut","City").
+type("Harvard_University","Research_university").

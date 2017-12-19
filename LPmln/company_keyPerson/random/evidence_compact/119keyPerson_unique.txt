@@ -1,0 +1,7 @@
+foundedBy("Prudential_Financial","John_F._Dryden").
+keyPerson("Prudential_Financial","Mark_Grier").
+type("Prudential_Financial","Public_company").
+birthPlace("John_F._Dryden","Temple,_Maine").
+location("Newark,_New_Jersey","Newark, New Jersey").
+predecessor("John_F._Dryden","William_Joyce_Sewell").
+type("Newark,_New_Jersey","City_(New_Jersey)").

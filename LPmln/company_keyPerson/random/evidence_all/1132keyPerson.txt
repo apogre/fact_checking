@@ -1,0 +1,61 @@
+headquarter("Vulcan_Inc.","United_States").
+headquarter("Vulcan_Inc.","Seattle").
+type("Vulcan_Inc.","Privately_held_company").
+owner("Vulcan_Inc.","Paul_Allen").
+networth("Paul_Allen","1.86E10").
+birthPlace("Paul_Allen","Seattle").
+birthPlace("Paul_Allen","Seattle,_Washington").
+almaMater("Jody_Allen","Whitman_College").
+birthYear("Paul_Allen","1953").
+almaMater("Paul_Allen","Washington_State_University").
+capital("United_States","Washington,_D.C.").
+isPartOf("Seattle","Washington_(state)").
+isPartOf("Seattle","King_County,_Washington").
+largestCity("United_States","New_York_City").
+occupation("Jody_Allen","Seattle_Seahawks").
+occupation("Jody_Allen","Jody_Allen__1").
+occupation("Paul_Allen","Portland_Trail_Blazers").
+occupation("Paul_Allen","Allen_Institute_for_Brain_Science").
+occupation("Paul_Allen","Allen_Institute_for_Cell_Science").
+occupation("Paul_Allen","Microsoft").
+occupation("Paul_Allen","Allen_Institute_for_Artificial_Intelligence").
+occupation("Paul_Allen","Seattle_Seahawks").
+occupation("Paul_Allen","Vulcan_Inc.").
+occupation("Paul_Allen","Seattle_Sounders").
+occupation("Paul_Allen","Paul_Allen__1").
+residence("Jody_Allen","Mercer_Island,_Washington").
+residence("Paul_Allen","Mercer_Island,_Washington").
+type("Seattle","City_(Washington)").
+birthPlace("John_Thain","United_States").
+birthPlace("John_Thain","Antioch,_Illinois").
+birthPlace("John_Thain","Illinois").
+birthYear("John_Thain","1955").
+almaMater("John_Thain","Massachusetts_Institute_of_Technology").
+almaMater("John_Thain","Harvard_Business_School").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Harvard_Business_School","U.S.").
+country("Massachusetts_Institute_of_Technology","United States").
+country("Republican_Party_(United_States)","United States").
+location("Antioch,_Illinois","Antioch, IL").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+capital("Illinois","Springfield,_Illinois").
+city("Harvard_Business_School","Boston").
+city("Massachusetts_Institute_of_Technology","Cambridge,_Massachusetts").
+country("Illinois","United_States").
+country("Antioch,_Illinois","United_States").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+largestCity("Illinois","Chicago").
+type("Harvard_Business_School","Private_school").
+type("Massachusetts_Institute_of_Technology","Private_university").
+type("Massachusetts_Institute_of_Technology","Land-grant_university").

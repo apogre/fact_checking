@@ -1,0 +1,33 @@
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+type("PepsiCo","Public_company").
+birthPlace("Donald_M._Kendall","Sequim,_Washington").
+birthPlace("Herman_Lay","Charlotte,_North_Carolina").
+birthPlace("Caleb_Bradham","North_Carolina").
+birthPlace("Caleb_Bradham","Chinquapin,_North_Carolina").
+birthPlace("Indra_Nooyi","Chennai").
+birthPlace("Indra_Nooyi","India").
+birthPlace("Indra_Nooyi","Madras_State").
+birthPlace("Indra_Nooyi","Madras").
+location("New_Bern,_North_Carolina","New Bern, North Carolina").
+occupation("Donald_M._Kendall","Donald_M._Kendall__1").
+occupation("Herman_Lay","Herman_Lay__1").
+occupation("Caleb_Bradham","Caleb_Bradham__1").
+occupation("Caleb_Bradham","Pepsi").
+occupation("Caleb_Bradham","Pharmacist").
+occupation("Indra_Nooyi","Chairperson").
+occupation("Indra_Nooyi","Indra_Nooyi__1").
+type("New_Bern,_North_Carolina","City").
+type("Purchase,_New_York","Hamlet_(New_York)").
+birthPlace("Steven_Reinemund","New_York_City").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+type("Yale_School_of_Management","Business_school").
+type("Yale_School_of_Management","Private_school").
+type("Indian_Institute_of_Management_Calcutta","Institute").
+type("Madras_Christian_College","Government Aided").
+nationality("Steven_Reinemund","United_States_of_America").
+predecessor("Steven_Reinemund","Roger_Enrico").
+type("Chennai","Megacity").
+type("Greenwich,_Connecticut","New_England_town").
+type("Indian_Institute_of_Management_Calcutta","Public_university").

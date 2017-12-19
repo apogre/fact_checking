@@ -1,0 +1,127 @@
+assets("Daimler_AG","2.3591E11").
+equity("Daimler_AG","5.4624E10").
+revenue("Daimler_AG","1.49467E11").
+foundingYear("Daimler_AG","2007").
+numberOfEmployees("Daimler_AG","284015").
+industry("Daimler_AG","Automotive_industry").
+keyPerson("Daimler_AG","Supervisory_board").
+keyPerson("Daimler_AG","Dieter_Zetsche").
+location("Daimler_AG","Stuttgart").
+location("Daimler_AG","Germany").
+owner("Daimler_AG","Kuwait_Investment_Authority").
+predecessor("Daimler_AG","Daimler-Benz").
+product("Daimler_AG","Automobile").
+product("Daimler_AG","Commercial_vehicle").
+type("Daimler_AG","Aktiengesellschaft").
+birthPlace("Dieter_Zetsche","Istanbul").
+birthPlace("Dieter_Zetsche","Turkey").
+locationCountry("Daimler-Benz","Germany").
+locationCountry("Smart_(automobile)","Germany").
+type("Stuttgart","Stadt").
+birthYear("Dieter_Zetsche","1953").
+foundingYear("Stuttgart","0010").
+foundingYear("Daimler-Benz","1926").
+foundingYear("Smart_(automobile)","1994").
+foundingYear("Mercedes-Benz","1926").
+almaMater("Dieter_Zetsche","University_of_Paderborn").
+almaMater("Dieter_Zetsche","University_of_Karlsruhe").
+capital("Germany","Berlin").
+country("Stuttgart","Germany").
+foundedBy("Mercedes-Benz","Karl_Benz").
+foundedBy("Mercedes-Benz","Gottlieb_Daimler").
+headquarter("Kuwait_Investment_Authority","Al_Asimah_Governorate_(Kuwait)").
+industry("Daimler-Benz","Automotive_industry").
+industry("Daimler-Benz","Military").
+industry("Smart_(automobile)","Automotive_industry").
+industry("Mercedes-Benz","Automotive_industry").
+keyPerson("Daimler-Benz","Karl_Benz").
+keyPerson("Daimler-Benz","Gottlieb_Daimler").
+keyPerson("Smart_(automobile)","Annette_Winkler").
+keyPerson("Mercedes-Benz","Dieter_Zetsche").
+keyPerson("Mercedes-Benz","Chairman").
+largestCity("Germany","Capital_city").
+location("Kuwait_Investment_Authority","Al_Asimah_Governorate_(Kuwait)").
+locationCity("Daimler-Benz","Stuttgart").
+locationCity("Mercedes-Benz","Stuttgart").
+locationCountry("Mercedes-Benz","Germany").
+occupation("Dieter_Zetsche","Chairman").
+occupation("Dieter_Zetsche","Engineer").
+occupation("Dieter_Zetsche","Businessman").
+occupation("Dieter_Zetsche","Dieter_Zetsche__1").
+owner("Smart_(automobile)","Daimler_AG").
+owner("Mercedes-Benz","Daimler_AG").
+predecessor("Mercedes-Benz","Karl_Benz").
+predecessor("Mercedes-Benz","Daimler-Motoren-Gesellschaft").
+product("Daimler-Benz","Motor_vehicle").
+product("Daimler-Benz","Internal_combustion_engine").
+product("Daimler-Benz","Military_technology_and_equipment").
+product("Smart_(automobile)","Microcar").
+product("Mercedes-Benz","Car").
+product("Mercedes-Benz","Internal_combustion_engine").
+product("Mercedes-Benz","Bus").
+product("Mercedes-Benz","Truck").
+product("Mercedes-Benz","Luxury_vehicle").
+residence("Dieter_Zetsche","Stuttgart").
+successor("Daimler-Benz","Daimler_AG").
+type("Daimler-Benz","Public_company").
+type("Smart_(automobile)","Division_(business)").
+type("Mercedes-Benz","Division_(business)").
+birthPlace("Jeff_Zucker","Florida").
+birthPlace("Jeff_Zucker","United_States").
+birthPlace("Jeff_Zucker","Homestead,_Florida").
+activeYearsStartYear("Jeff_Zucker","1986").
+birthYear("Jeff_Zucker","1965").
+almaMater("Jeff_Zucker","Bachelor_of_Arts").
+almaMater("Jeff_Zucker","Harvard_University").
+nationality("Jeff_Zucker","Americans").
+occupation("Jeff_Zucker","Jeff_Zucker__1").
+occupation("Jeff_Zucker","CNN").
+stateOfOrigin("Jeff_Zucker","Americans").
+birthPlace("Bob_Wright","Hempstead,_New_York").
+birthPlace("Garth_Ancier","Perth_Amboy,_New_Jersey").
+birthPlace("Garth_Ancier","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Harvard_University","U.S.").
+location("Homestead,_Florida","Homestead General Aviation Airport, Florida").
+birthYear("Bob_Wright","1943").
+birthYear("Garth_Ancier","1957").
+birthYear("Steve_Burke_(businessman)","1958").
+almaMater("Bob_Wright","College_of_the_Holy_Cross").
+almaMater("Bob_Wright","University_of_Virginia_School_of_Law").
+almaMater("Garth_Ancier","Princeton_University").
+almaMater("Steve_Burke_(businessman)","Harvard_Business_School").
+almaMater("Steve_Burke_(businessman)","Colgate_University").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+city("Harvard_University","Cambridge,_Massachusetts").
+country("Florida","United_States").
+country("CNN","United_States").
+headquarter("CNN","CNN_Center").
+headquarter("CNN","Atlanta").
+headquarter("CNN","Georgia_(U.S._state)").
+isPartOf("Homestead,_Florida","Florida").
+isPartOf("Homestead,_Florida","Miami-Dade_County,_Florida").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+locationCountry("CNN","United_States").
+nationality("Bob_Wright","United_States").
+occupation("Bob_Wright","Bob_Wright__1").
+occupation("Bob_Wright","Author").
+occupation("Bob_Wright","Lawyer").
+occupation("Bob_Wright","Businessman").
+occupation("Garth_Ancier","Garth_Ancier__1").
+personFunction("Steve_Burke_(businessman)","Steve_Burke_(businessman)__1").
+residence("Steve_Burke_(businessman)","Philadelphia,_Pennsylvania").
+stateOfOrigin("Bob_Wright","United_States").
+type("Homestead,_Florida","List_of_communities_in_Miami-Dade_County,_Florida").
+type("Harvard_University","Research_university").

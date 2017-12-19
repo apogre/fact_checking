@@ -1,0 +1,35 @@
+foundingYear("Sonic_Drive-In","1953").
+numberOfEmployees("Sonic_Drive-In","363").
+foundationPlace("Sonic_Drive-In","United_States").
+foundationPlace("Sonic_Drive-In","Oklahoma").
+foundationPlace("Sonic_Drive-In","Shawnee,_Oklahoma").
+foundedBy("Sonic_Drive-In","Troy_Smith_(businessman)").
+industry("Sonic_Drive-In","Restaurants").
+keyPerson("Sonic_Drive-In","J._Clifford_Hudson").
+location("Sonic_Drive-In","Oklahoma_City").
+location("Sonic_Drive-In","Oklahoma").
+location("Sonic_Drive-In","United_States").
+type("Sonic_Drive-In","Public_company").
+birthPlace("J._Clifford_Hudson","Dallas").
+birthPlace("J._Clifford_Hudson","Dallas,_Texas").
+spouse("J._Clifford_Hudson","Leslie Hudson").
+birthYear("J._Clifford_Hudson","1954").
+almaMater("J._Clifford_Hudson","University_of_Oklahoma").
+almaMater("J._Clifford_Hudson","Georgetown_University").
+country("Oklahoma","United_States").
+country("Shawnee,_Oklahoma","United_States").
+occupation("J._Clifford_Hudson","J._Clifford_Hudson__1").
+occupation("J._Clifford_Hudson","Sonic_Drive-In").
+type("Oklahoma_City","Lists_of_capitals").
+type("Shawnee,_Oklahoma","City").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+birthYear("Gunupati_Venkata_Krishna_Reddy","1937").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+division("Nellore_district","Nellore district").
+type("Padma_Bhushan","Civilian").
+type("Andhra_Pradesh","States_of_India").
+country("Andhra_Pradesh","India").

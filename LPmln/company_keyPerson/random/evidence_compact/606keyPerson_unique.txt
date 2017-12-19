@@ -1,0 +1,16 @@
+foundedBy("Juniper_Networks","Pradeep_Sindhu").
+keyPerson("Juniper_Networks","Scott_Kriens").
+keyPerson("Juniper_Networks","Pradeep_Sindhu").
+type("Juniper_Networks","Public_company").
+birthPlace("Pradeep_Sindhu","Mumbai").
+location("Sunnyvale,_California","Sunnyvale, California").
+nationality("Scott_Kriens","United_States").
+type("Sunnyvale,_California","Charter_city").
+birthPlace("Anant_Gupta","Delhi").
+birthPlace("Anant_Gupta","India").
+nationality("Anant_Gupta","India").
+occupation("Anant_Gupta","CEO").
+occupation("Anant_Gupta","Anant_Gupta__1").
+type("Delhi","Union_territory").
+type("Delhi","List_of_cities_in_India_by_population").
+type("University_of_Liverpool","Public_university").

@@ -1,0 +1,24 @@
+location("Pizza_Hut","Plano,_Texas").
+parentCompany("Pizza_Hut","PepsiCo").
+parentCompany("Pizza_Hut","Yum!_Brands").
+type("Pizza_Hut","Subsidiary").
+location("Wichita,_Kansas","Wichita Mid-Continent Airport, Kansas").
+type("Pizza","Lunch or dinner").
+keyPerson("Yum!_Brands","Greg_Creed").
+keyPerson("Yum!_Brands","CEO").
+keyPerson("Yum!_Brands","Robert_D._Walter").
+keyPerson("Yum!_Brands","CFO").
+keyPerson("PepsiCo","Indra_Nooyi").
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+type("Plano,_Texas","City_(Texas)").
+type("Wichita,_Kansas","City").
+type("Yum!_Brands","Public_company").
+type("PepsiCo","Public_company").
+type("Pizza","Flatbread").
+occupation("Ian_King_(BAE_Systems)","Ian_King_(BAE_Systems)__1").
+predecessor("Ian_King_(BAE_Systems)","Michael_Turner_(businessman)").
+location("Portsmouth","540.0").
+nationality("Michael_Turner_(businessman)","British").
+type("Portsmouth","City_status_in_the_United_Kingdom").

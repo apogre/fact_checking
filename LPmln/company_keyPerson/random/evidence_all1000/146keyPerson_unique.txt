@@ -1,0 +1,26 @@
+assets("Starbucks","1.0752E10").
+equity("Starbucks","5.272E9").
+operatingIncome("Starbucks","5.429E10").
+numberOfEmployees("Starbucks","238000").
+industry("Starbucks","Coffeehouse").
+type("Starbucks","Public_company").
+revenue("Starbucks","United_States_dollar").
+networth("Howard_Schultz","2.9E9").
+birthPlace("Howard_Schultz","New_York_(state)").
+birthPlace("Howard_Schultz","Brooklyn").
+birthPlace("Howard_Schultz","United_States").
+birthYear("Howard_Schultz","1953").
+almaMater("Howard_Schultz","Northern_Michigan_University").
+occupation("Howard_Schultz","Howard_Schultz__1").
+occupation("Howard_Schultz","Starbucks").
+salary("Howard_Schultz","2.1775001E7").
+country("Northern_Michigan_University","U.S.").
+location("Brooklyn","JFK Airport, New York").
+capital("United_States","Washington,_D.C.").
+city("Northern_Michigan_University","Marquette,_Michigan").
+country("Brooklyn","United_States_of_America").
+isPartOf("Brooklyn","New_York").
+isPartOf("Brooklyn","New_York_City").
+largestCity("United_States","New_York_City").
+type("Brooklyn","Borough_(New_York_City)").
+type("Northern_Michigan_University","Public_university").

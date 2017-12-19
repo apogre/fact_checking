@@ -1,0 +1,23 @@
+foundingYear("Pfizer","1849").
+numberOfEmployees("Pfizer","78300").
+industry("Pfizer","Pharmaceutical_industry").
+keyPerson("Pfizer","Ian_Read").
+location("Pfizer","New_York_City").
+subsidiary("Pfizer","G.D._Searle,_LLC").
+subsidiary("Pfizer","Parke-Davis").
+subsidiary("Pfizer","Hospira").
+subsidiary("Pfizer","Pfizer_UK").
+type("Pfizer","Public_company").
+birthPlace("Frederick_W._Smith","Mississippi").
+birthPlace("Frederick_W._Smith","Marks,_Mississippi").
+birthPlace("Frederick_W._Smith","United_States").
+birthYear("Frederick_W._Smith","1944").
+almaMater("Frederick_W._Smith","Yale_College").
+country("Republican_Party_(United_States)","United States").
+parent("Yale_College","Yale_University").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+type("Yale_College","Private_school").
+country("Mississippi","United_States").
+country("Marks,_Mississippi","United_States").
+type("Marks,_Mississippi","City").

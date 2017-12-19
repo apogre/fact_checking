@@ -1,0 +1,29 @@
+keyPerson("Caterpillar_Inc.","Douglas_R._Oberhelman").
+location("Caterpillar_Inc.","Peoria,_Illinois").
+predecessor("Caterpillar_Inc.","C._L._Best").
+predecessor("Caterpillar_Inc.","Holt_Manufacturing_Company").
+type("Caterpillar_Inc.","Public_company").
+predecessor("Holt_Manufacturing_Company","Holt Bros. Manufacturing").
+type("Holt_Manufacturing_Company","Private company").
+foundedBy("Holt_Manufacturing_Company","Benjamin_Holt").
+keyPerson("Holt_Manufacturing_Company","Benjamin_Holt").
+keyPerson("Holt_Manufacturing_Company","C._L._Best").
+occupation("Douglas_R._Oberhelman","Business_Executive").
+occupation("Douglas_R._Oberhelman","Douglas_R._Oberhelman__1").
+predecessor("Douglas_R._Oberhelman","James_W._Owens").
+type("Peoria,_Illinois","List_of_cities_in_Illinois").
+birthPlace("Muhtar_Kent","New_York_City").
+nationality("Muhtar_Kent","United_States").
+nationality("Muhtar_Kent","Turkey").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+parent("Muhtar_Kent","Necdet_Kent").
+type("Cass_Business_School","Undergraduate, Postgraduate, Executive Education, Research").
+nationality("Necdet_Kent","Turkish_people").
+occupation("Necdet_Kent","Diplomat").
+occupation("Necdet_Kent","Necdet_Kent__1").
+type("New_York_City","City_(New_York)").
+type("University_of_Hull","Public_university").
+type("Tarsus_American_College","Independent_school").
+type("Tarsus_American_College","Boarding_school").

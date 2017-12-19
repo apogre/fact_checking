@@ -1,0 +1,8 @@
+keyPerson("Cavium","M._Raghib_Hussain").
+type("Cavium","Public_company").
+birthPlace("M._Raghib_Hussain","Karachi,_Pakistan").
+location("San_Jose,_California","San Jose, California").
+nationality("M._Raghib_Hussain","Pakistani-American").
+occupation("M._Raghib_Hussain","M._Raghib_Hussain__1").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").

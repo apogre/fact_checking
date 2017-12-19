@@ -1,0 +1,10 @@
+foundingYear("The_Siegel_Group","2001").
+location("The_Siegel_Group","Paradise,_Nevada").
+location("The_Siegel_Group","Nevada").
+country("Nevada","Nevada").
+birthYear("Steve_Siegel","1971").
+country("Nevada","United_States").
+country("Paradise,_Nevada","United_States").
+occupation("Steve_Siegel","Real_Estate_Development").
+occupation("Steve_Siegel","Steve_Siegel__1").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").

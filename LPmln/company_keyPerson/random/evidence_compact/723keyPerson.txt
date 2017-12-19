@@ -1,0 +1,33 @@
+keyPerson("Nokia","Rajeev_Suri").
+keyPerson("Nokia","Risto_Siilasmaa").
+birthPlace("Rajeev_Suri","India").
+birthPlace("Rajeev_Suri","New_Delhi").
+birthPlace("Leo_Mechelin","Hamina").
+location("Tampere","Tampere").
+headquarter("Financial_Times","London").
+keyPerson("Alcatel-Lucent","Philippe_Camus_(businessman)").
+keyPerson("Alcatel-Lucent","Chairman").
+keyPerson("Nokia_Networks","Rajeev_Suri").
+keyPerson("Nokia_Networks","Chief_financial_officer").
+nationality("Rajeev_Suri","Singapore").
+occupation("Rajeev_Suri","Rajeev_Suri__1").
+parentCompany("Alcatel-Lucent","Nokia").
+parentCompany("Nokia_Networks","Nokia").
+parentCompany("Prentice_Hall","Pearson_Education").
+type("Alcatel-Lucent","S.A._(corporation)").
+type("Nokia_Networks","Subsidiary").
+type("Uusimaa","Regions_of_Finland").
+birthPlace("Masayoshi_Son","Japan").
+birthPlace("Masayoshi_Son","Tosu,_Saga").
+occupation("Masayoshi_Son","Masayoshi_Son__1").
+occupation("Masayoshi_Son","SoftBank").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+type("Tokyo","Prefectures_of_Japan").
+type("Tosu,_Saga","Cities_of_Japan").
+type("Holy_Names_University","Non-profit").
+type("Holy_Names_University","Private_university").
+type("Holy_Names_University","Coeducational").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").

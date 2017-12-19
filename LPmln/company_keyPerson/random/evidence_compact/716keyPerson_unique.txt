@@ -1,0 +1,18 @@
+foundedBy("NIIT","Vijay_K._Thadani").
+foundedBy("NIIT","Rajendra_S._Pawar").
+location("NIIT","Gurgaon,_India").
+type("NIIT","Public_company").
+nationality("Vijay_K._Thadani","India").
+occupation("Vijay_K._Thadani","CEO").
+occupation("Vijay_K._Thadani","NIIT").
+occupation("Vijay_K._Thadani","Vijay_K._Thadani__1").
+nationality("Ross_McEwan","New_Zealand").
+occupation("Ross_McEwan","Ross_McEwan__1").
+predecessor("Ross_McEwan","Stephen_Hester").
+birthPlace("Stephen_Hester","Yorkshire").
+location("Hastings,_New_Zealand","Hastings").
+nationality("Stephen_Hester","British").
+type("Hastings_Boys'_High_School","State single-sex boys, Secondary").
+occupation("Stephen_Hester","Stephen_Hester__1").
+type("Hastings,_New_Zealand","Urban_areas_of_New_Zealand").
+type("Massey_University","Public_university").

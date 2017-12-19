@@ -1,0 +1,73 @@
+assets("Southwest_Airlines","2.1312E10").
+equity("Southwest_Airlines","7.358E9").
+netIncome("Southwest_Airlines","2.2E9").
+operatingIncome("Southwest_Airlines","4.1E9").
+numberOfEmployees("Southwest_Airlines","52301").
+headquarter("Southwest_Airlines","United_States").
+headquarter("Southwest_Airlines","Dallas,_Texas").
+industry("Southwest_Airlines","Air_Transport").
+location("Denver_International_Airport","Northeastern Denver, Colorado").
+owner("Nashville_International_Airport","Metropolitan Government of Nashville and Davidson County").
+owner("Denver_International_Airport","City & County of Denver Department of Aviation").
+owner("Los_Angeles_International_Airport","City of Los Angeles").
+owner("Midway_International_Airport","City of Chicago").
+owner("William_P._Hobby_Airport","City of Houston").
+owner("Dallas_Love_Field","City of Dallas").
+type("Nashville_International_Airport","Public").
+type("Denver_International_Airport","Public").
+type("Los_Angeles_International_Airport","Public").
+type("John_Wayne_Airport","Public").
+type("Midway_International_Airport","Public").
+type("Oakland_International_Airport","Public").
+type("McCarran_International_Airport","Public").
+type("Orlando_International_Airport","Public").
+type("San_Diego_International_Airport","Public").
+type("Tampa_International_Airport","Public").
+type("General_Mitchell_International_Airport","Public").
+type("Phoenix_Sky_Harbor_International_Airport","Public").
+type("Dallas_Love_Field","Public").
+capital("United_States","Washington,_D.C.").
+city("Nashville_International_Airport","Nashville,_Tennessee").
+city("Denver_International_Airport","Denver").
+city("Denver_International_Airport","Front_Range_Urban_Corridor").
+city("Denver_International_Airport","Nebraska_Panhandle").
+city("Denver_International_Airport","Northern_Colorado").
+city("Los_Angeles_International_Airport","Greater_Los_Angeles_Area").
+city("John_Wayne_Airport","Orange_County,_California").
+city("Midway_International_Airport","Chicago").
+city("Midway_International_Airport","Illinois").
+city("Oakland_International_Airport","San_Francisco_Bay_Area").
+city("William_P._Hobby_Airport","Greater_Houston").
+city("McCarran_International_Airport","Las_Vegas_Valley").
+city("Orlando_International_Airport","Orlando,_Florida").
+city("San_Diego_International_Airport","Greater_San_Diego").
+city("Tampa_International_Airport","Tampa_Bay_Area").
+city("General_Mitchell_International_Airport","Milwaukee").
+city("General_Mitchell_International_Airport","Wisconsin").
+city("Phoenix_Sky_Harbor_International_Airport","Phoenix_metropolitan_area").
+largestCity("United_States","New_York_City").
+location("Los_Angeles_International_Airport","California").
+location("Los_Angeles_International_Airport","Los_Angeles").
+location("John_Wayne_Airport","Santa_Ana,_California").
+location("Midway_International_Airport","Chicago").
+location("Midway_International_Airport","Illinois").
+location("Oakland_International_Airport","Oakland,_California").
+location("William_P._Hobby_Airport","Houston").
+location("McCarran_International_Airport","Paradise,_Nevada").
+location("San_Diego_International_Airport","California").
+location("San_Diego_International_Airport","San_Diego").
+location("General_Mitchell_International_Airport","Milwaukee").
+location("General_Mitchell_International_Airport","Wisconsin").
+location("Phoenix_Sky_Harbor_International_Airport","Phoenix,_Arizona").
+location("Dallas_Love_Field","Dallas").
+owner("Oakland_International_Airport","Port_of_Oakland").
+owner("Orlando_International_Airport","Greater_Orlando_Aviation_Authority").
+owner("General_Mitchell_International_Airport","Milwaukee_County").
+birthPlace("Philip_Clarke_(businessman)","Liverpool").
+activeYearsStartYear("Philip_Clarke_(businessman)","1981").
+birthYear("Philip_Clarke_(businessman)","1960").
+almaMater("Philip_Clarke_(businessman)","University_of_Liverpool").
+occupation("Philip_Clarke_(businessman)","Philip_Clarke_(businessman)__1").
+predecessor("Philip_Clarke_(businessman)","Terry_Leahy").
+successor("Philip_Clarke_(businessman)","Dave_Lewis_(businessman)").
+salary("Philip_Clarke_(businessman)","1171000.0").

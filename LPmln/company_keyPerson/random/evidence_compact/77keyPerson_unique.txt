@@ -1,0 +1,13 @@
+keyPerson("IGATE","Srinivas_Kandula").
+location("IGATE","Bridgewater,_New_Jersey").
+parentCompany("IGATE","Capgemini").
+foundedBy("Capgemini","Serge_Kampf").
+keyPerson("Capgemini","Paul_Hermelin").
+birthPlace("Ashok_Vemuri","New_Delhi").
+birthPlace("Ashok_Vemuri","India").
+occupation("Ashok_Vemuri","Business_executive").
+occupation("Ashok_Vemuri","Ashok_Vemuri__1").
+location("St._Stephen's_College,_Delhi","University Enclave, New Delhi, India").
+type("Xerox","Public").
+keyPerson("Xerox","Ursula_Burns").
+type("New_Delhi","List_of_districts_of_Delhi").

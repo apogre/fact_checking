@@ -1,0 +1,31 @@
+keyPerson("BHP_Billiton","Andrew_Mackenzie_(businessman)").
+keyPerson("BHP_Billiton","Jacques_Nasser").
+location("BHP_Billiton","Melbourne").
+location("BHP_Billiton","Australia").
+type("BHP_Billiton","Public_company").
+birthPlace("Andrew_Mackenzie_(businessman)","Scotland").
+birthPlace("Jacques_Nasser","Lebanon").
+birthPlace("Jacques_Nasser","Amyoun").
+birthPlace("Jacques_Nasser","Amioun").
+location("Melbourne","Canberra").
+location("Melbourne","Perth").
+location("Melbourne","Sydney").
+location("Melbourne","Adelaide").
+location("Melbourne","Brisbane").
+location("Melbourne","Melbourne City").
+type("Melbourne","city").
+type("Coal","Sedimentary").
+nationality("Jacques_Nasser","Australian").
+occupation("Jacques_Nasser","Jacques_Nasser__1").
+birthPlace("Ho_Ching","Singapore").
+predecessor("Ho_Ching","Tan_Choo_Leng").
+birthPlace("Tan_Choo_Leng","Singapore").
+birthPlace("Lee_Hsien_Loong","Singapore").
+birthPlace("Lee_Hsien_Loong","Colony_of_Singapore").
+predecessor("Lee_Hsien_Loong","Constituency established").
+predecessor("Lee_Hsien_Loong","Himself").
+nationality("Lee_Hsien_Loong","Colony_of_Singapore").
+predecessor("Tan_Choo_Leng","Kwa_Geok_Choo").
+predecessor("Lee_Hsien_Loong","Richard_Hu").
+predecessor("Lee_Hsien_Loong","Goh_Chok_Tong").
+type("Stanford_University","Private_university").

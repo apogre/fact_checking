@@ -1,0 +1,12 @@
+industry("Agenus","Biotechnology").
+industry("Agenus","Pharmaceutical_Company").
+birthPlace("Garo_H._Armen","Istanbul").
+birthPlace("Garo_H._Armen","Turkey").
+birthYear("Garo_H._Armen","1953").
+occupation("Garo_H._Armen","Garo_H._Armen__1").
+type("Istanbul","Cultural").
+capital("Turkey","Ankara").
+country("Istanbul","Turkey").
+isPartOf("Istanbul","Marmara_Region").
+isPartOf("Istanbul","Istanbul_Province").
+largestCity("Turkey","Istanbul").

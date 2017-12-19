@@ -1,0 +1,67 @@
+operatingIncome("BMW","9.224E9").
+numberOfEmployees("BMW","122244").
+division("BMW","BMW_Motorrad").
+division("BMW","Mini_(marque)").
+division("BMW","BMW_i").
+division("BMW","BMW_Motorsport").
+foundedBy("BMW","Karl_Rapp").
+foundedBy("BMW","Franz_Josef_Popp").
+foundedBy("BMW","Camillo_Castiglioni").
+industry("BMW","Automotive").
+locationCity("BMW","Bavaria").
+locationCity("BMW","Munich").
+owner("BMW","Susanne_Klatten").
+owner("BMW","Stefan_Quandt").
+owner("BMW","Public_float").
+owningCompany("BMW","Susanne_Klatten").
+owningCompany("BMW","Stefan_Quandt").
+owningCompany("BMW","Public_float").
+predecessor("BMW","Rapp_Motorenwerke").
+predecessor("BMW","Automobilwerk_Eisenach").
+type("BMW","Aktiengesellschaft").
+birthPlace("Norbert_Reithofer","Penzberg").
+birthPlace("Karl_Rapp","Ehingen").
+birthPlace("Karl_Rapp","Germany").
+birthPlace("Susanne_Klatten","Bad_Homburg").
+birthPlace("Franz_Josef_Popp","Vienna").
+birthPlace("Camillo_Castiglioni","Trieste").
+birthPlace("Franz_Josef_Popp","Vienna, Austro-Hungarian Empire").
+industry("Rapp_Motorenwerke","Military Aviation").
+location("Munich","Munich Airport").
+spouse("Susanne_Klatten","Jan Klatten").
+spouse("Stefan_Quandt","Katharina Quandt").
+type("Munich","City").
+type("BMW_Motorrad","Motorcycle").
+type("BMW_Motorrad","Brand").
+type("Mini_(marque)","Category").
+birthYear("Karl_Rapp","1882").
+birthYear("Susanne_Klatten","1962").
+birthYear("Camillo_Castiglioni","1879").
+birthYear("Stefan_Quandt","1966").
+foundingYear("BMW_i","2011").
+foundingYear("Rapp_Motorenwerke","1913").
+country("Bavaria","Germany").
+country("Munich","Germany").
+division("Munich","Boroughs_of_Munich").
+employer("Karl_Rapp","Rapp_Motorenwerke").
+industry("BMW_i","Automotive_industry").
+keyPerson("Rapp_Motorenwerke","Karl_Friedrich_Rapp").
+locationCity("Rapp_Motorenwerke","Munich").
+locationCountry("Rapp_Motorenwerke","German_Empire").
+occupation("Karl_Rapp","Karl_Rapp__1").
+occupation("Franz_Josef_Popp","BMW_AG").
+occupation("Franz_Josef_Popp","Entrepreneur").
+occupation("Camillo_Castiglioni","Camillo_Castiglioni__1").
+occupation("Camillo_Castiglioni","Financier").
+occupation("Camillo_Castiglioni","Industrialist").
+occupation("Stefan_Quandt","Stefan_Quandt__1").
+owner("BMW_i","BMW").
+owningCompany("BMW_i","BMW").
+parent("Susanne_Klatten","Herbert_Quandt").
+parent("Susanne_Klatten","Johanna_Quandt").
+parent("Stefan_Quandt","Herbert_Quandt").
+parent("Stefan_Quandt","Johanna_Quandt").
+parentCompany("BMW_i","BMW").
+type("BMW_i","BMW").
+type("Penzberg","Stadt").
+country("Penzberg","Germany").

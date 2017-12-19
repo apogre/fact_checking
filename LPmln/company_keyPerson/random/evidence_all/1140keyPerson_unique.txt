@@ -1,0 +1,199 @@
+numberOfLocations("Walgreens","8177").
+foundingYear("Walgreens","1901").
+foundationPlace("Walgreens","Chicago").
+foundationPlace("Walgreens","United_States").
+foundationPlace("Walgreens","Illinois").
+foundedBy("Walgreens","Charles_Rudolph_Walgreen").
+industry("Walgreens","Retail").
+keyPerson("Walgreens","James_A._Skinner").
+parentCompany("Walgreens","Walgreens_Boots_Alliance").
+product("Walgreens","Drug_store").
+product("Walgreens","Pharmacy").
+regionServed("Walgreens","United_States").
+type("Walgreens","Subsidiary").
+netIncome("Walgreens_Boots_Alliance","4.2E9").
+revenue("Walgreens_Boots_Alliance","1.034E11").
+birthPlace("Charles_Rudolph_Walgreen","Knoxville,_Illinois").
+birthPlace("James_A._Skinner","Moline,_Illinois").
+deathPlace("Charles_Rudolph_Walgreen","Cuba").
+almaMater("Charles_Rudolph_Walgreen","Dixon Business College").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+locationCountry("Walgreens_Boots_Alliance","United States").
+nationality("James_A._Skinner","American").
+type("Pharmacy","Professional").
+birthYear("Charles_Rudolph_Walgreen","1873").
+birthYear("James_A._Skinner","1944").
+deathYear("Charles_Rudolph_Walgreen","1939").
+foundingYear("Walgreens_Boots_Alliance","2014").
+numberOfEmployees("Walgreens_Boots_Alliance","370000").
+capital("Illinois","Springfield,_Illinois").
+capital("United_States","Washington,_D.C.").
+country("Chicago","United_States_of_America").
+country("Illinois","United_States").
+country("Deerfield,_Illinois","United_States").
+foundationPlace("Walgreens_Boots_Alliance","Chicago").
+industry("Walgreens_Boots_Alliance","Retail").
+industry("Walgreens_Boots_Alliance","Pharmaceutical").
+isPartOf("Chicago","Illinois").
+isPartOf("Chicago","DuPage_County,_Illinois").
+isPartOf("Chicago","Cook_County,_Illinois").
+keyPerson("Walgreens_Boots_Alliance","James_A._Skinner").
+keyPerson("Walgreens_Boots_Alliance","Stefano_Pessina").
+largestCity("Illinois","Chicago").
+largestCity("United_States","New_York_City").
+locationCity("Walgreens_Boots_Alliance","Deerfield,_Illinois").
+nationality("Charles_Rudolph_Walgreen","United_States").
+occupation("Charles_Rudolph_Walgreen","Walgreens").
+occupation("Charles_Rudolph_Walgreen","Charles_Rudolph_Walgreen__1").
+occupation("James_A._Skinner","Walgreens_Boots_Alliance").
+occupation("James_A._Skinner","James_A._Skinner__1").
+product("Walgreens_Boots_Alliance","Pharmacy").
+product("Walgreens_Boots_Alliance","Drug_store").
+stateOfOrigin("Charles_Rudolph_Walgreen","United_States").
+subsidiary("Walgreens_Boots_Alliance","Walgreens").
+subsidiary("Walgreens_Boots_Alliance","Alliance_Healthcare").
+subsidiary("Walgreens_Boots_Alliance","Farmacias_Ahumada").
+subsidiary("Walgreens_Boots_Alliance","Farmacias_Benavides").
+subsidiary("Walgreens_Boots_Alliance","Duane_Reade").
+subsidiary("Walgreens_Boots_Alliance","Boots_UK").
+subsidiary("Walgreens_Boots_Alliance","Drugstore.com").
+subsidiary("Walgreens_Boots_Alliance","Boots_Opticians").
+type("Chicago","City").
+type("Deerfield,_Illinois","List_of_towns_and_villages_in_Illinois").
+type("Walgreens_Boots_Alliance","Public_company").
+birthPlace("Sumner_Redstone","Boston").
+birthPlace("Sumner_Redstone","Massachusetts").
+birthPlace("Sumner_Redstone","United_States").
+birthYear("Sumner_Redstone","1923").
+occupation("Sumner_Redstone","Viacom").
+occupation("Sumner_Redstone","CBS_Corporation").
+occupation("Sumner_Redstone","Chairman").
+occupation("Sumner_Redstone","Sumner_Redstone__1").
+parent("Sumner_Redstone","Michael_Redstone").
+residence("Sumner_Redstone","California").
+residence("Sumner_Redstone","United_States").
+residence("Sumner_Redstone","Beverly_Park,_Los_Angeles").
+assets("Viacom","2.225E10").
+assets("Viacom","2.3829E10").
+assets("CBS_Corporation","2.376E10").
+equity("Viacom","5.19E9").
+equity("Viacom","7.439E9").
+equity("CBS_Corporation","5.563E9").
+netIncome("Viacom","2.395E9").
+netIncome("CBS_Corporation","1.413E9").
+operatingIncome("Viacom","3.836E9").
+operatingIncome("CBS_Corporation","2.417E9").
+revenue("Viacom","1.3794E10").
+revenue("Viacom","1.3887E10").
+revenue("CBS_Corporation","1.388E10").
+birthPlace("Michael_Redstone","Boston").
+birthPlace("Michael_Redstone","Massachusetts").
+deathPlace("Michael_Redstone","Bal_Harbour,_Florida").
+birthPlace("Shari_Redstone","Washington, D.C., US").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+city("Massachusetts","Boston, MassachusettsBoston").
+city("Massachusetts","Brockton, MassachusettsBrockton").
+city("Massachusetts","Cambridge, MassachusettsCambridge").
+city("Massachusetts","Fall River, MassachusettsFall River").
+city("Massachusetts","Lowell, MassachusettsLowell").
+city("Massachusetts","Lynn, MassachusettsLynn").
+city("Massachusetts","New Bedford, MassachusettsNew Bedford").
+city("Massachusetts","Quincy, MassachusettsQuincy").
+city("Massachusetts","Springfield, MassachusettsSpringfield").
+city("Massachusetts","Worcester, MassachusettsWorcester").
+country("California","United_States").
+country("California","California").
+country("Massachusetts","Massachusetts").
+nationality("Michael_Redstone","United States").
+activeYearsStartYear("Brent_Redstone","2004").
+birthYear("Michael_Redstone","1902").
+birthYear("Shari_Redstone","1954").
+birthYear("Brent_Redstone","1951").
+deathYear("Michael_Redstone","1987").
+foundingYear("CBS_Corporation","1986").
+numberOfEmployees("Viacom","10580").
+capital("Massachusetts","Boston").
+country("Massachusetts","United_States").
+industry("Viacom","Mass_media").
+industry("CBS_Corporation","Mass_media").
+isPartOf("Boston","Massachusetts").
+isPartOf("Boston","Kingdom_of_Great_Britain").
+isPartOf("Boston","Province_of_Massachusetts_Bay").
+isPartOf("Boston","Massachusetts_Bay_Colony").
+isPartOf("Boston","Suffolk_County,_Massachusetts").
+isPartOf("Boston","Kingdom_of_England").
+keyPerson("CBS_Corporation","Sumner_Redstone").
+keyPerson("CBS_Corporation","President_(corporate_title)").
+keyPerson("CBS_Corporation","Leslie_Moonves").
+keyPerson("CBS_Corporation","Chief_executive_officer").
+keyPerson("CBS_Corporation","Chairman").
+largestCity("California","Los_Angeles").
+largestCity("Massachusetts","Boston").
+location("CBS_Corporation","CBS_Building").
+locationCity("Viacom","Manhattan").
+locationCity("Viacom","New_York_City").
+locationCity("Viacom","One_Astor_Plaza").
+locationCity("Viacom","New_York_(state)").
+locationCity("CBS_Corporation","Manhattan").
+locationCity("CBS_Corporation","New_York_(state)").
+locationCountry("Viacom","United_States").
+locationCountry("CBS_Corporation","United_States").
+occupation("Michael_Redstone","Michael_Redstone__1").
+owner("Viacom","National_Amusements").
+owner("CBS_Corporation","National_Amusements").
+parent("Shari_Redstone","Sumner_Redstone").
+parent("Shari_Redstone","Phyllis_Gloria_Raphael").
+parent("Brent_Redstone","Sumner_Redstone").
+predecessor("Viacom","Gulf_and_Western_Industries").
+predecessor("Viacom","Viacom_(original)").
+predecessor("CBS_Corporation","Westinghouse_Electric_(1886)").
+predecessor("CBS_Corporation","Viacom_(original)").
+product("Viacom","Radio").
+product("Viacom","Broadcasting").
+product("Viacom","Web_portal").
+product("Viacom","Cable_television").
+product("CBS_Corporation","Movie_production").
+product("CBS_Corporation","Broadcasting").
+product("CBS_Corporation","Publishing").
+product("CBS_Corporation","Internet").
+product("CBS_Corporation","Cable_television").
+product("CBS_Corporation","Record_label").
+product("CBS_Corporation","TV_production").
+regionServed("CBS_Corporation","United_States").
+subsidiary("Viacom","Network_18").
+subsidiary("Viacom","Viacom_18").
+subsidiary("Viacom","Rainbow_S.r.l.").
+subsidiary("Viacom","Defy_Media").
+subsidiary("Viacom","BET_Networks").
+subsidiary("Viacom","Paramount_Pictures").
+subsidiary("Viacom","Viacom_International").
+subsidiary("CBS_Corporation","Showtime_Networks").
+subsidiary("CBS_Corporation","TV_Guide").
+subsidiary("CBS_Corporation","Westinghouse_Licensing_Corporation").
+subsidiary("CBS_Corporation","Simon_&_Schuster").
+subsidiary("CBS_Corporation","Pop_(U.S._TV_network)").
+subsidiary("CBS_Corporation","The_CW").
+subsidiary("CBS_Corporation","List_of_assets_owned_by_CBS").
+type("Boston","Capital_city").
+type("Viacom","Public_company").
+type("CBS_Corporation","Public_company").

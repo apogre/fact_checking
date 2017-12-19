@@ -1,0 +1,35 @@
+numberOfEmployees("Canonical_(company)","700").
+foundedBy("Canonical_(company)","Mark_Shuttleworth").
+industry("Canonical_(company)","Computer_software").
+keyPerson("Canonical_(company)","Mark_Shuttleworth").
+location("Canonical_(company)","London").
+location("Canonical_(company)","United_Kingdom").
+product("Canonical_(company)","Launchpad_(website)").
+product("Canonical_(company)","Ubuntu_One").
+product("Canonical_(company)","Canonical_Landscape").
+product("Canonical_(company)","Ubuntu_(operating_system)").
+product("Canonical_(company)","Bazaar_(software)").
+subsidiary("Canonical_(company)","Canonical_Ltd.").
+type("Canonical_(company)","Private_company_limited_by_shares").
+networth("Mark_Shuttleworth","1.6E8").
+birthPlace("Mark_Shuttleworth","South_Africa").
+birthPlace("Mark_Shuttleworth","Welkom").
+birthPlace("Mark_Shuttleworth","Free_State_(province)").
+birthPlace("Jane_Silber","United_States").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("Launchpad_(website)","Project Hosting Server").
+birthYear("Mark_Shuttleworth","1973").
+capital("United_Kingdom","London").
+country("London","United_Kingdom").
+isPartOf("London","England").
+isPartOf("London","Greater_London").
+largestCity("United_Kingdom","Capital_city").
+nationality("Mark_Shuttleworth","South_Africa").
+nationality("Mark_Shuttleworth","United_Kingdom").
+occupation("Mark_Shuttleworth","Mark_Shuttleworth__1").
+owner("Launchpad_(website)","Canonical_Ltd.").
+stateOfOrigin("Mark_Shuttleworth","South_Africa").
+stateOfOrigin("Mark_Shuttleworth","United_Kingdom").
+capital("United_States","Washington,_D.C.").
+largestCity("United_States","New_York_City").

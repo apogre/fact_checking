@@ -1,0 +1,12 @@
+keyPerson("SuperValu_(United_States)","CEO").
+location("SuperValu_(United_States)","Eden_Prairie,_Minnesota").
+location("SuperValu_(United_States)","United_States").
+type("SuperValu_(United_States)","Public_company").
+location("SuperValu_Pharmacies","Franklin_Park,_Illinois").
+type("SuperValu_Pharmacies","Pharmacies").
+type("Eden_Prairie,_Minnesota","City").
+occupation("Jeff_Noddle","Jeff_Noddle__1").
+type("Omaha,_Nebraska","City_(Nebraska)").
+type("University_of_Iowa","Public_university").
+type("University_of_Iowa","Flagship_university").
+type("University_of_Iowa","National_Space_Grant_College_and_Fellowship_Program").

@@ -1,0 +1,10 @@
+foundedBy("Ralph_Lauren_Corporation","Ralph_Lauren").
+keyPerson("Ralph_Lauren_Corporation","Ralph_Lauren").
+keyPerson("Ralph_Lauren_Corporation","Stefan_Larsson_(businessman)").
+type("Ralph_Lauren_Corporation","Public_company").
+birthPlace("Mukesh_Ambani","Aden").
+birthPlace("Mukesh_Ambani","Colony_of_Aden").
+nationality("Mukesh_Ambani","India").
+occupation("Mukesh_Ambani","Mukesh_Ambani__1").
+occupation("Mukesh_Ambani","Reliance_Industries").
+parent("Mukesh_Ambani","Dhirubhai_Ambani").

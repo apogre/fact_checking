@@ -1,0 +1,16 @@
+foundedBy("Walmart","Sam_Walton").
+keyPerson("Walmart","Doug_McMillon").
+keyPerson("Walmart","Greg_Penner").
+location("Walmart","Bentonville,_Arkansas").
+type("Walmart","Public_company").
+birthPlace("Lee_Scott_(businessman)","Baxter_Springs,_Kansas").
+birthPlace("Doug_McMillon","Jonesboro,_Arkansas").
+birthPlace("Doug_McMillon","Memphis,_Tennessee").
+nationality("Lee_Scott_(businessman)","United States").
+nationality("Doug_McMillon","American").
+occupation("Lee_Scott_(businessman)","Lee_Scott_(businessman)__1").
+occupation("Lee_Scott_(businessman)","Businessman").
+occupation("Doug_McMillon","President_(corporate_title)").
+occupation("Doug_McMillon","Walmart").
+occupation("Doug_McMillon","Doug_McMillon__1").
+predecessor("Lee_Scott_(businessman)","David_Glass_(businessman)").

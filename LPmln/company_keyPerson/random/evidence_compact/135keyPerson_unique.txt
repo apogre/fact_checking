@@ -1,0 +1,24 @@
+keyPerson("Sbarro","CEO").
+keyPerson("Sbarro","President").
+location("Sbarro","Columbus,_Ohio").
+type("Sbarro","Privately_held_company").
+location("Brooklyn","JFK Airport, New York").
+location("Sbarro_restaurant_suicide_bombing","Israel").
+location("Sbarro_restaurant_suicide_bombing","Jerusalem").
+type("Sbarro_restaurant_suicide_bombing","Suicide_bombing").
+type("Pizza","Lunch or dinner").
+type("Brooklyn","Borough_(New_York_City)").
+type("Columbus,_Ohio","City").
+type("New_York_City","City_(New_York)").
+type("Pizza","Flatbread").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

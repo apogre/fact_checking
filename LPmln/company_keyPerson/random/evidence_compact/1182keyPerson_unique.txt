@@ -1,0 +1,15 @@
+keyPerson("Winn-Dixie","Ian_McLeod_(businessman)").
+location("Winn-Dixie","Jacksonville,_Florida").
+location("Winn-Dixie","United_States").
+parentCompany("Winn-Dixie","Southeastern_Grocers").
+type("Winn-Dixie","Subsidiary").
+birthPlace("Ian_McLeod_(businessman)","Scotland").
+location("Jacksonville,_Florida","--01-01").
+keyPerson("Southeastern_Grocers","Ian_McLeod_(businessman)").
+location("Southeastern_Grocers","Jacksonville,_Florida").
+nationality("Ian_McLeod_(businessman)","Scottish_people").
+occupation("Ian_McLeod_(businessman)","Chief_Executive_Officer").
+occupation("Ian_McLeod_(businessman)","Ian_McLeod_(businessman)__1").
+type("Southeastern_Grocers","Privately_held_company").
+nationality("James_M._Wells,_III","People_from_the_United_States").
+occupation("James_M._Wells,_III","James_M._Wells,_III__1").

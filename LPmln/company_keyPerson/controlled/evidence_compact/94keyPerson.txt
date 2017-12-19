@@ -1,0 +1,15 @@
+foundingYear("MGA_Entertainment","1979").
+numberOfEmployees("MGA_Entertainment","1100").
+keyPerson("MGA_Entertainment","Chief_executive_officer").
+location("MGA_Entertainment","United_States").
+location("MGA_Entertainment","Los_Angeles,_California").
+type("MGA_Entertainment","Private_company").
+birthPlace("Isaac_Larian","Iran").
+birthPlace("Isaac_Larian","Kashan").
+spouse("Isaac_Larian","Angela Neman").
+birthYear("Isaac_Larian","1954").
+occupation("Isaac_Larian","Chief_Executive_Officer").
+occupation("Isaac_Larian","MGA_Entertainment").
+occupation("Isaac_Larian","Isaac_Larian__1").
+industry("MGA_Entertainment","Toys").
+country("Kashan","Iran").

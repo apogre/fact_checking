@@ -1,0 +1,23 @@
+keyPerson("UBS","Axel_A._Weber").
+location("UBS","Basel").
+predecessor("UBS","Union_Bank_of_Switzerland").
+predecessor("UBS","Swiss_Bank_Corporation").
+predecessor("UBS","PaineWebber").
+type("UBS","Public_company").
+type("UBS","Aktiengesellschaft").
+birthPlace("Axel_A._Weber","Kusel").
+birthPlace("Axel_A._Weber","Rhineland-Palatinate").
+location("Basel","Binningen").
+predecessor("Union_Bank_of_Switzerland","Bank in Winterthur").
+predecessor("Union_Bank_of_Switzerland","Toggenburger Bank").
+predecessor("Swiss_Bank_Corporation","Bankverein").
+predecessor("Swiss_Bank_Corporation","Basler Bankverein").
+type("Union_Bank_of_Switzerland","Acquired").
+type("Swiss_Bank_Corporation","Acquired").
+location("Union_Bank_of_Switzerland","Switzerland").
+location("Union_Bank_of_Switzerland","Zurich").
+location("Swiss_Bank_Corporation","Basel").
+location("Swiss_Bank_Corporation","Switzerland").
+nationality("Axel_A._Weber","Germany").
+occupation("Axel_A._Weber","Economist").
+predecessor("Axel_A._Weber","Ernst_Welteke").

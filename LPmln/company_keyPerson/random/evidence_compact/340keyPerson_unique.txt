@@ -1,0 +1,37 @@
+keyPerson("Campbell_Soup_Company","Chief_Executive_Officer").
+keyPerson("Campbell_Soup_Company","Chairman").
+keyPerson("Campbell_Soup_Company","President").
+keyPerson("Campbell_Soup_Company","Denise_Morrison").
+location("Campbell_Soup_Company","New_Jersey").
+location("Campbell_Soup_Company","United_States").
+location("Campbell_Soup_Company","Camden,_New_Jersey").
+type("Campbell_Soup_Company","Public_company").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+birthPlace("Denise_Morrison","Elberon, New Jersey").
+location("Camden,_New_Jersey","Camden, New Jersey").
+nationality("Denise_Morrison","American").
+type("V8_(beverage)","Vegetable_juice").
+keyPerson("Pepperidge_Farm","Senior_Vice_President").
+location("Pepperidge_Farm","Norwalk,_Connecticut").
+location("Pepperidge_Farm","United_States").
+occupation("Denise_Morrison","Denise_Morrison__1").
+parentCompany("Pepperidge_Farm","Campbell_Soup_Company").
+type("Camden,_New_Jersey","City_(New_Jersey)").
+type("Pepperidge_Farm","Subsidiary").
+birthPlace("Jeffrey_R._Immelt","Ohio").
+birthPlace("Jeffrey_R._Immelt","Cincinnati").
+birthPlace("Jeffrey_R._Immelt","United_States").
+predecessor("Jeffrey_R._Immelt","Jack_Welch").
+birthPlace("Jack_Welch","Peabody,_Massachusetts").
+birthPlace("Paul_Volcker","Cape_May,_New_Jersey").
+birthPlace("Paul_Volcker","New_Jersey").
+birthPlace("Paul_Volcker","United_States").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+predecessor("Paul_Volcker","Position established").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+occupation("Jack_Welch","Jack_Welch__1").
+predecessor("Paul_Volcker","G._William_Miller").
+predecessor("Paul_Volcker","Alfred_Hayes_(banker)").
+type("Harvard_Business_School","Private_school").
+type("Dartmouth_College","Private_university").

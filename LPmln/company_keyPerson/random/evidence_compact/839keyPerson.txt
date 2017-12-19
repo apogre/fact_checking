@@ -1,0 +1,48 @@
+keyPerson("Royal_Dutch_Shell","Charles_O._Holliday").
+keyPerson("Royal_Dutch_Shell","Ben_van_Beurden").
+location("Royal_Dutch_Shell","London").
+location("Royal_Dutch_Shell","Netherlands").
+location("Royal_Dutch_Shell","The_Hague").
+location("Royal_Dutch_Shell","United_Kingdom").
+location("Royal_Dutch_Shell","Shell_Centre").
+type("Royal_Dutch_Shell","Public_limited_company").
+birthPlace("Charles_O._Holliday","Nashville,_Tennessee").
+birthPlace("Ben_van_Beurden","Roosendaal").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+location("Netherlands","De Bilt , all KNMI locations , snowy days: .").
+location("The_Hague","Valkenburg_Naval_Air_Base").
+nationality("Ben_van_Beurden","Dutch").
+keyPerson("Shell_Oil_Company","President_(corporate_title)").
+keyPerson("Shell_Pakistan","Chief_executive_officer").
+keyPerson("Shell_Canada","President_(corporate_title)").
+location("Shell_Pakistan","Karachi").
+location("Shell_Pakistan","Pakistan").
+nationality("Charles_O._Holliday","United_States").
+parentCompany("Shell_Oil_Company","Royal_Dutch_Shell").
+parentCompany("Shell_Pakistan","Royal_Dutch_Shell").
+parentCompany("Shell_Australia","Royal_Dutch_Shell").
+parentCompany("Shell_Canada","Royal_Dutch_Shell").
+predecessor("Ben_van_Beurden","Peter_Voser").
+type("The_Hague","List_of_municipalities_of_the_Netherlands").
+type("The_Hague","Cities_of_the_Netherlands").
+type("Shell_Oil_Company","Subsidiary").
+type("Shell_Pakistan","Public_limited_company").
+type("Shell_Australia","Subsidiary").
+type("Shell_Canada","Subsidiary").
+birthPlace("Jeff_Bezos","Albuquerque,_New_Mexico").
+occupation("Jeff_Bezos","Jeff_Bezos__1").
+occupation("Jeff_Bezos","Amazon.com").
+birthPlace("MacKenzie_Bezos","California").
+birthPlace("MacKenzie_Bezos","San_Francisco").
+location("Albuquerque,_New_Mexico","--01-22").
+location("Albuquerque,_New_Mexico","Albuquerque South Valley").
+location("Albuquerque,_New_Mexico","Albuquerque foothills").
+foundedBy("Amazon.com","Jeff_Bezos").
+keyPerson("Amazon.com","Jeff_Bezos").
+keyPerson("Amazon.com","Werner_Vogels").
+location("Amazon.com","Seattle").
+location("Amazon.com","Washington_(state)").
+type("Albuquerque,_New_Mexico","City").
+type("Amazon.com","Public_company").
+type("Princeton_University","Private_university").

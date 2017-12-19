@@ -1,0 +1,15 @@
+assets("Syntel","1.22E9").
+equity("Syntel","9.686E8").
+netIncome("Syntel","2.525E8").
+operatingIncome("Syntel","2.837E8").
+numberOfEmployees("Syntel","23773").
+foundationPlace("Syntel","Troy,_Michigan").
+foundedBy("Syntel","Neerja_Sethi").
+foundedBy("Syntel","Bharat_Desai").
+industry("Syntel","Information_technology_consulting").
+industry("Syntel","IT_service_management").
+keyPerson("Syntel","Prashant_Ranade").
+keyPerson("Syntel","Nitin_Rakesh").
+keyPerson("Syntel","Rakesh_Khanna").
+locationCity("Syntel","Troy,_Michigan").
+type("Syntel","Public_company").

@@ -1,0 +1,14 @@
+operatingIncome("The_Travelers_Companies","3.437E9").
+foundingYear("The_Travelers_Companies","1853").
+foundingYear("The_Travelers_Companies","2004").
+numberOfEmployees("The_Travelers_Companies","30000").
+industry("The_Travelers_Companies","Insurance").
+keyPerson("The_Travelers_Companies","Executive_Chairman").
+keyPerson("The_Travelers_Companies","Alan_D._Schnitzer").
+keyPerson("The_Travelers_Companies","John_Dasburg").
+keyPerson("The_Travelers_Companies","Chief_Executive_Officer").
+location("The_Travelers_Companies","New_York_(state)").
+location("The_Travelers_Companies","New_York_City").
+location("The_Travelers_Companies","United_States").
+predecessor("The_Travelers_Companies","Citigroup").
+type("The_Travelers_Companies","Public_company").

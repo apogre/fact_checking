@@ -1,0 +1,6 @@
+type("Starbucks","Public_company").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+occupation("Denise_Morrison","Denise_Morrison__1").
+type("Long_Branch,_New_Jersey","City_(New_Jersey)").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

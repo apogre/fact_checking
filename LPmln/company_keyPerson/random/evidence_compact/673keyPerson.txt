@@ -1,0 +1,20 @@
+foundedBy("Mile_High_Comics","Chuck_Rozanski").
+location("Mile_High_Comics","Denver,_Colorado").
+type("Mile_High_Comics","Privately_held_company").
+birthPlace("Chuck_Rozanski","Germany").
+birthPlace("Chuck_Rozanski","Goldbach,_Bavaria").
+occupation("Chuck_Rozanski","Retailer, columnist").
+nationality("Chuck_Rozanski","United_States").
+type("Colorado_Springs,_Colorado","List_of_cities_and_towns_in_Colorado").
+birthPlace("Brian_L._Roberts","Philadelphia").
+birthPlace("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+occupation("Brian_L._Roberts","leadership-overview").
+occupation("Brian_L._Roberts","Brian_L._Roberts__1").
+parent("Brian_L._Roberts","Ralph_J._Roberts").
+birthPlace("Ralph_J._Roberts","New_York_City").
+foundedBy("Philadelphia","William Penn").
+nationality("Ralph_J._Roberts","United States").
+type("Germantown_Academy","Private").
+occupation("Ralph_J._Roberts","Ralph_J._Roberts__1").
+type("Philadelphia","Consolidated_city-county").
+type("Wharton_School_of_the_University_of_Pennsylvania","Private_university").

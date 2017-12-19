@@ -1,0 +1,16 @@
+foundedBy("Viking_Range","Fred_Carl,_Jr.").
+parentCompany("Viking_Range","").
+type("Viking_Range","Subsidiary").
+birthPlace("Fred_Carl,_Jr.","Greenwood,_Mississippi").
+type("Greenwood,_Mississippi","City_(Mississippi)").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

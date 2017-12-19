@@ -1,0 +1,14 @@
+keyPerson("ACE_Limited","Evan_G._Greenberg").
+birthPlace("Evan_G._Greenberg","United_States").
+location("Hamilton,_Bermuda","Hamilton, Bermuda").
+nationality("Evan_G._Greenberg","United_States").
+occupation("Evan_G._Greenberg","Evan_G._Greenberg__1").
+occupation("Evan_G._Greenberg","Chubb_Limited").
+parent("Evan_G._Greenberg","Maurice_R._Greenberg").
+birthPlace("Michael_Corbat","Bristol,_Connecticut").
+occupation("Michael_Corbat","Michael_Corbat__1").
+keyPerson("Citigroup","Michael_Corbat").
+keyPerson("Citigroup","Michael_E._O'Neill").
+type("Citigroup","Public_company").
+type("Bristol,_Connecticut","City").
+type("Harvard_University","Research_university").

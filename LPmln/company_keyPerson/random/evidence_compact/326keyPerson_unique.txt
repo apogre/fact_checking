@@ -1,0 +1,46 @@
+foundedBy("BMW","Karl_Rapp").
+foundedBy("BMW","Franz_Josef_Popp").
+foundedBy("BMW","Camillo_Castiglioni").
+keyPerson("BMW","Norbert_Reithofer").
+predecessor("BMW","Rapp_Motorenwerke").
+predecessor("BMW","Automobilwerk_Eisenach").
+type("BMW","Aktiengesellschaft").
+birthPlace("Norbert_Reithofer","Penzberg").
+birthPlace("Karl_Rapp","Ehingen").
+birthPlace("Karl_Rapp","Germany").
+birthPlace("Susanne_Klatten","Bad_Homburg").
+birthPlace("Franz_Josef_Popp","Vienna").
+birthPlace("Camillo_Castiglioni","Trieste").
+birthPlace("Franz_Josef_Popp","Vienna, Austro-Hungarian Empire").
+location("Munich","Munich Airport").
+nationality("Camillo_Castiglioni","Austria").
+nationality("Stefan_Quandt","German").
+type("Munich","City").
+type("BMW_Motorrad","Motorcycle").
+type("BMW_Motorrad","Brand").
+type("Mini_(marque)","Category").
+keyPerson("Rapp_Motorenwerke","Karl_Friedrich_Rapp").
+nationality("Karl_Rapp","Germany").
+occupation("Karl_Rapp","Karl_Rapp__1").
+occupation("Franz_Josef_Popp","BMW_AG").
+occupation("Franz_Josef_Popp","Entrepreneur").
+occupation("Camillo_Castiglioni","Camillo_Castiglioni__1").
+occupation("Camillo_Castiglioni","Financier").
+occupation("Camillo_Castiglioni","Industrialist").
+occupation("Stefan_Quandt","Stefan_Quandt__1").
+parent("Susanne_Klatten","Herbert_Quandt").
+parent("Susanne_Klatten","Johanna_Quandt").
+parent("Stefan_Quandt","Herbert_Quandt").
+parent("Stefan_Quandt","Johanna_Quandt").
+parentCompany("BMW_i","BMW").
+type("BMW_i","BMW").
+birthPlace("John_Thain","United_States").
+birthPlace("John_Thain","Antioch,_Illinois").
+birthPlace("John_Thain","Illinois").
+location("Antioch,_Illinois","Antioch, IL").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+type("Harvard_Business_School","Private_school").
+type("Massachusetts_Institute_of_Technology","Private_university").
+type("Massachusetts_Institute_of_Technology","Land-grant_university").

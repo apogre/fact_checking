@@ -1,0 +1,27 @@
+keyPerson("Adobe_Systems","Shantanu_Narayen").
+keyPerson("Adobe_Systems","Charles_Geschke").
+keyPerson("Adobe_Systems","John_Warnock").
+location("Adobe_Systems","Adobe_Systems_headquarters_complex").
+location("Adobe_Systems","California").
+location("Adobe_Systems","San_Jose,_California").
+type("Adobe_Systems","Public_company").
+birthPlace("John_Warnock","Salt_Lake_City").
+birthPlace("Shantanu_Narayen","Hyderabad").
+birthPlace("Shantanu_Narayen","India").
+birthPlace("Shantanu_Narayen","Telangana").
+birthPlace("Charles_Geschke","Cleveland").
+birthPlace("Charles_Geschke","Cleveland,_Ohio").
+location("Mountain_View,_California","Mountain View").
+location("San_Jose,_California","San Jose, California").
+nationality("Charles_Geschke","United_States").
+occupation("Shantanu_Narayen","Adobe_Systems").
+occupation("Shantanu_Narayen","Shantanu_Narayen__1").
+type("Mountain_View,_California","Charter_city").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+birthPlace("John_P._Surma","United_States").
+birthPlace("John_P._Surma","Pennsylvania").
+birthPlace("John_P._Surma","Pittsburgh").
+occupation("John_P._Surma","John_P._Surma__1").
+occupation("John_P._Surma","United_States_Steel_Corporation").
+type("Pittsburgh","City").

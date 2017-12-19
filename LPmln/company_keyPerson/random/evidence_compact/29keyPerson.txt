@@ -1,0 +1,22 @@
+keyPerson("Campbell_Soup_Company","Chief_Executive_Officer").
+keyPerson("Campbell_Soup_Company","Chairman").
+keyPerson("Campbell_Soup_Company","President").
+location("Campbell_Soup_Company","New_Jersey").
+location("Campbell_Soup_Company","United_States").
+location("Campbell_Soup_Company","Camden,_New_Jersey").
+type("Campbell_Soup_Company","Public_company").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+birthPlace("Denise_Morrison","Elberon, New Jersey").
+location("Camden,_New_Jersey","Camden, New Jersey").
+nationality("Denise_Morrison","American").
+type("V8_(beverage)","Vegetable_juice").
+keyPerson("Pepperidge_Farm","Senior_Vice_President").
+location("Pepperidge_Farm","Norwalk,_Connecticut").
+location("Pepperidge_Farm","United_States").
+occupation("Denise_Morrison","Denise_Morrison__1").
+parentCompany("Pepperidge_Farm","Campbell_Soup_Company").
+type("Camden,_New_Jersey","City_(New_Jersey)").
+type("Pepperidge_Farm","Subsidiary").
+type("Long_Branch,_New_Jersey","City_(New_Jersey)").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

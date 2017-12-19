@@ -1,0 +1,161 @@
+netIncome("Singtel","3.871E9").
+operatingIncome("Singtel","5.013E9").
+revenue("Singtel","1.6961E10").
+numberOfEmployees("Singtel","25000").
+industry("Singtel","Telecommunications").
+location("Singtel","Singapore").
+product("Singtel","Digital_television").
+product("Singtel","Landline").
+product("Singtel","Broadband_Internet_access").
+product("Singtel","Mobile_phone").
+product("Singtel","Information_technology").
+product("Singtel","Telecommunications_network").
+regionServed("Singtel","Australia").
+subsidiary("Singtel","Optus").
+netIncome("Optus","7.64E8").
+revenue("Optus","8.93E9").
+foundingYear("Optus","1981").
+capital("Australia","Canberra").
+capital("Singapore","City-state").
+industry("Optus","Telecommunication").
+largestCity("Australia","Sydney").
+location("Optus","Australia").
+location("Optus","New_South_Wales").
+location("Optus","Sydney").
+product("Optus","Leased_line").
+product("Optus","Telephony").
+product("Optus","Cable_Television").
+product("Optus","Internet_service_provider").
+product("Optus","Mobile_network_operator").
+product("Optus","Network_service_provider").
+type("Optus","Subsidiary").
+birthPlace("Sumner_Redstone","Boston").
+birthPlace("Sumner_Redstone","Massachusetts").
+birthPlace("Sumner_Redstone","United_States").
+birthYear("Sumner_Redstone","1923").
+occupation("Sumner_Redstone","Viacom").
+occupation("Sumner_Redstone","CBS_Corporation").
+occupation("Sumner_Redstone","Chairman").
+occupation("Sumner_Redstone","Sumner_Redstone__1").
+parent("Sumner_Redstone","Michael_Redstone").
+residence("Sumner_Redstone","California").
+residence("Sumner_Redstone","United_States").
+residence("Sumner_Redstone","Beverly_Park,_Los_Angeles").
+assets("Viacom","2.225E10").
+assets("Viacom","2.3829E10").
+assets("CBS_Corporation","2.376E10").
+equity("Viacom","5.19E9").
+equity("Viacom","7.439E9").
+equity("CBS_Corporation","5.563E9").
+netIncome("Viacom","2.395E9").
+netIncome("CBS_Corporation","1.413E9").
+operatingIncome("Viacom","3.836E9").
+operatingIncome("CBS_Corporation","2.417E9").
+revenue("Viacom","1.3794E10").
+revenue("Viacom","1.3887E10").
+revenue("CBS_Corporation","1.388E10").
+birthPlace("Michael_Redstone","Boston").
+birthPlace("Michael_Redstone","Massachusetts").
+deathPlace("Michael_Redstone","Bal_Harbour,_Florida").
+birthPlace("Shari_Redstone","Washington, D.C., US").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+city("Massachusetts","Boston, MassachusettsBoston").
+city("Massachusetts","Brockton, MassachusettsBrockton").
+city("Massachusetts","Cambridge, MassachusettsCambridge").
+city("Massachusetts","Fall River, MassachusettsFall River").
+city("Massachusetts","Lowell, MassachusettsLowell").
+city("Massachusetts","Lynn, MassachusettsLynn").
+city("Massachusetts","New Bedford, MassachusettsNew Bedford").
+city("Massachusetts","Quincy, MassachusettsQuincy").
+city("Massachusetts","Springfield, MassachusettsSpringfield").
+city("Massachusetts","Worcester, MassachusettsWorcester").
+country("California","United_States").
+country("California","California").
+country("Massachusetts","Massachusetts").
+nationality("Michael_Redstone","United States").
+activeYearsStartYear("Brent_Redstone","2004").
+birthYear("Michael_Redstone","1902").
+birthYear("Shari_Redstone","1954").
+birthYear("Brent_Redstone","1951").
+deathYear("Michael_Redstone","1987").
+foundingYear("CBS_Corporation","1986").
+numberOfEmployees("Viacom","10580").
+capital("Massachusetts","Boston").
+capital("United_States","Washington,_D.C.").
+country("Massachusetts","United_States").
+industry("Viacom","Mass_media").
+industry("CBS_Corporation","Mass_media").
+isPartOf("Boston","Massachusetts").
+isPartOf("Boston","Kingdom_of_Great_Britain").
+isPartOf("Boston","Province_of_Massachusetts_Bay").
+isPartOf("Boston","Massachusetts_Bay_Colony").
+isPartOf("Boston","Suffolk_County,_Massachusetts").
+isPartOf("Boston","Kingdom_of_England").
+keyPerson("CBS_Corporation","Sumner_Redstone").
+keyPerson("CBS_Corporation","President_(corporate_title)").
+keyPerson("CBS_Corporation","Leslie_Moonves").
+keyPerson("CBS_Corporation","Chief_executive_officer").
+keyPerson("CBS_Corporation","Chairman").
+largestCity("California","Los_Angeles").
+largestCity("Massachusetts","Boston").
+largestCity("United_States","New_York_City").
+location("CBS_Corporation","CBS_Building").
+locationCity("Viacom","Manhattan").
+locationCity("Viacom","New_York_City").
+locationCity("Viacom","One_Astor_Plaza").
+locationCity("Viacom","New_York_(state)").
+locationCity("CBS_Corporation","Manhattan").
+locationCity("CBS_Corporation","New_York_(state)").
+locationCountry("Viacom","United_States").
+locationCountry("CBS_Corporation","United_States").
+occupation("Michael_Redstone","Michael_Redstone__1").
+owner("Viacom","National_Amusements").
+owner("CBS_Corporation","National_Amusements").
+owningCompany("Viacom","National_Amusements").
+owningCompany("CBS_Corporation","National_Amusements").
+parent("Shari_Redstone","Sumner_Redstone").
+parent("Shari_Redstone","Phyllis_Gloria_Raphael").
+parent("Brent_Redstone","Sumner_Redstone").
+predecessor("Viacom","Gulf_and_Western_Industries").
+predecessor("Viacom","Viacom_(original)").
+predecessor("CBS_Corporation","Westinghouse_Electric_(1886)").
+predecessor("CBS_Corporation","Viacom_(original)").
+product("Viacom","Radio").
+product("Viacom","Broadcasting").
+product("Viacom","Web_portal").
+product("Viacom","Cable_television").
+product("CBS_Corporation","Movie_production").
+product("CBS_Corporation","Broadcasting").
+product("CBS_Corporation","Publishing").
+product("CBS_Corporation","Internet").
+product("CBS_Corporation","Cable_television").
+product("CBS_Corporation","Record_label").
+product("CBS_Corporation","TV_production").
+regionServed("CBS_Corporation","United_States").
+subsidiary("Viacom","Network_18").
+subsidiary("Viacom","Viacom_18").
+subsidiary("Viacom","Rainbow_S.r.l.").
+subsidiary("Viacom","Defy_Media").
+subsidiary("Viacom","BET_Networks").
+subsidiary("Viacom","Paramount_Pictures").
+subsidiary("Viacom","Viacom_International").
+subsidiary("CBS_Corporation","Showtime_Networks").
+subsidiary("CBS_Corporation","TV_Guide").
+subsidiary("CBS_Corporation","Westinghouse_Licensing_Corporation").
+subsidiary("CBS_Corporation","Simon_&_Schuster").
+subsidiary("CBS_Corporation","Pop_(U.S._TV_network)").
+subsidiary("CBS_Corporation","The_CW").
+subsidiary("CBS_Corporation","List_of_assets_owned_by_CBS").
+type("Boston","Capital_city").
+type("Viacom","Public_company").
+type("CBS_Corporation","Public_company").

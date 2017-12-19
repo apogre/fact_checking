@@ -1,0 +1,32 @@
+keyPerson("BAE_Systems","Roger_Carr_(businessman)").
+type("BAE_Systems","Public_limited_company").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+nationality("Ian_King_(BAE_Systems)","British").
+nationality("Roger_Carr_(businessman)","British").
+type("BAE_Systems_Australia","Private").
+type("Aerospace_engineering","Profession").
+keyPerson("BAE_Systems_Inc.","President_(corporate_title)").
+keyPerson("Marconi_Electronic_Systems","Guglielmo_Marconi").
+keyPerson("Marconi_Electronic_Systems","Arnold_Weinstock").
+location("BAE_Systems_Inc.","Virginia").
+location("BAE_Systems_Inc.","Arlington,_Virginia").
+location("British_Aerospace","Farnborough,_Hampshire").
+location("British_Aerospace","Hampshire").
+location("Marconi_Electronic_Systems","Chelmsford").
+occupation("Ian_King_(BAE_Systems)","Ian_King_(BAE_Systems)__1").
+occupation("Roger_Carr_(businessman)","Roger_Carr_(businessman)__1").
+parentCompany("BAE_Systems_Inc.","BAE_Systems").
+parentCompany("BAE_Systems_Australia","BAE_Systems_plc").
+parentCompany("Marconi_Electronic_Systems","The_General_Electric_Company").
+predecessor("Ian_King_(BAE_Systems)","Michael_Turner_(businessman)").
+predecessor("British_Aerospace","British_Aircraft_Corporation").
+predecessor("British_Aerospace","Scottish_Aviation").
+predecessor("British_Aerospace","Hawker_Siddeley_Dynamics").
+predecessor("British_Aerospace","Hawker_Siddeley_Aviation").
+type("BAE_Systems_Inc.","Subsidiary").
+type("British_Aerospace","Public_limited_company").
+type("British_Aerospace","State-owned_company").
+location("Portsmouth","540.0").
+nationality("Michael_Turner_(businessman)","British").
+type("Portsmouth","City_status_in_the_United_Kingdom").

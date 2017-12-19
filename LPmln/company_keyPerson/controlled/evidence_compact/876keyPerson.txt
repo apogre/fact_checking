@@ -1,0 +1,19 @@
+foundingYear("Scottrade","1980").
+numberOfEmployees("Scottrade","3803").
+foundationPlace("Scottrade","Scottsdale,_Arizona").
+industry("Scottrade","Discount_brokerage").
+keyPerson("Scottrade","Rodger_O._Riney").
+keyPerson("Scottrade","CEO").
+location("Scottrade","Town_and_Country,_Missouri").
+type("Scottrade","Private_company").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+birthYear("Gunupati_Venkata_Krishna_Reddy","1937").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+division("Nellore_district","Nellore district").
+type("Padma_Bhushan","Civilian").
+type("Andhra_Pradesh","States_of_India").
+country("Andhra_Pradesh","India").

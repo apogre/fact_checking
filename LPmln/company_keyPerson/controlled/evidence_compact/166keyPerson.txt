@@ -1,0 +1,18 @@
+country("Tracinda","United_States").
+foundedBy("Tracinda","Kirk_Kerkorian").
+locationCity("Tracinda","Nevada").
+locationCity("Tracinda","Las_Vegas").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+country("Nevada","Nevada").
+birthYear("Kirk_Kerkorian","1917").
+country("Las_Vegas","United_States_of_America").
+country("Nevada","United_States").
+spouse("Kirk_Kerkorian","Lisa_Bonder").
+type("Las_Vegas","City").
+birthPlace("Lisa_Bonder","Columbus,_Ohio").
+country("Lisa_Bonder","USA").
+location("Los_Angeles","Los Angeles").
+type("Beverly_Hills,_California","General_law_city").
+type("Fresno,_California","Charter_city").
+type("Fresno,_California","County_seat").
+type("Los_Angeles","Metropolitan_City").

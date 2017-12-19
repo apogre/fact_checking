@@ -1,0 +1,35 @@
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+type("GlaxoSmithKline","Public_limited_company").
+birthPlace("Andrew_Witty","England").
+birthPlace("Philip_Hampton","United_Kingdom").
+birthPlace("Philip_Hampton","United Kingdom").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("England","Administrative_division").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","University_of_Nottingham").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Philip_Hampton","GlaxoSmithKline").
+occupation("Philip_Hampton","Philip_Hampton__1").
+parentCompany("Stiefel_Laboratories","GlaxoSmithKline").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+birthPlace("Rex_Tillerson","Wichita_Falls").
+birthPlace("Rex_Tillerson","Texas").
+birthPlace("Rex_Tillerson","Wichita_Falls,_Texas").
+occupation("Rex_Tillerson","Rex_Tillerson__1").
+occupation("Rex_Tillerson","Exxon_Mobil").
+predecessor("Rex_Tillerson","Lee_R._Raymond").
+birthPlace("Lee_Raymond","Watertown,_South_Dakota").
+location("Wichita_Falls,_Texas","Wichita Falls, Texas").
+nationality("Lee_Raymond","American").
+occupation("Lee_Raymond","Exxon_Mobil").
+occupation("Lee_Raymond","Lee_Raymond__1").
+type("Wichita_Falls,_Texas","City").
+type("University_of_Texas_at_Austin","Flagship_campus").
+type("University_of_Texas_at_Austin","Space-grant_university").

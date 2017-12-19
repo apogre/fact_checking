@@ -1,0 +1,13 @@
+keyPerson("Pfizer","Ian_Read").
+location("Pfizer","New_York_City").
+type("Pfizer","Public_company").
+birthPlace("Alan_Joyce_(executive)","Republic_of_Ireland").
+birthPlace("Alan_Joyce_(executive)","Dublin").
+birthPlace("Alan_Joyce_(executive)","Tallaght").
+nationality("Alan_Joyce_(executive)","Irish_nationality_law").
+occupation("Alan_Joyce_(executive)","Alan_Joyce_(executive)__1").
+occupation("Alan_Joyce_(executive)","Businessperson").
+location("Dublin","Dublin_Airport").
+headquarter("Qantas","Australia").
+headquarter("Qantas","Mascot,_New_South_Wales").
+type("Dublin","Capital_city").

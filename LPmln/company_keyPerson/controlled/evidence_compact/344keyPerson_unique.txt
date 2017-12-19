@@ -1,0 +1,61 @@
+numberOfEmployees("Canonical_(company)","700").
+foundedBy("Canonical_(company)","Mark_Shuttleworth").
+industry("Canonical_(company)","Computer_software").
+keyPerson("Canonical_(company)","Jane_Silber").
+keyPerson("Canonical_(company)","Mark_Shuttleworth").
+location("Canonical_(company)","London").
+location("Canonical_(company)","United_Kingdom").
+subsidiary("Canonical_(company)","Canonical_Ltd.").
+type("Canonical_(company)","Private_company_limited_by_shares").
+birthPlace("Mark_Shuttleworth","South_Africa").
+birthPlace("Mark_Shuttleworth","Welkom").
+birthPlace("Mark_Shuttleworth","Free_State_(province)").
+birthPlace("Jane_Silber","United_States").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("Launchpad_(website)","Project Hosting Server").
+birthYear("Mark_Shuttleworth","1973").
+country("London","United_Kingdom").
+occupation("Mark_Shuttleworth","Mark_Shuttleworth__1").
+owner("Launchpad_(website)","Canonical_Ltd.").
+birthPlace("Indra_Nooyi","Chennai").
+birthPlace("Indra_Nooyi","India").
+birthPlace("Indra_Nooyi","Madras_State").
+birthPlace("Indra_Nooyi","Madras").
+birthYear("Indra_Nooyi","1955").
+almaMater("Indra_Nooyi","Yale_School_of_Management").
+almaMater("Indra_Nooyi","Indian_Institute_of_Management_Calcutta").
+almaMater("Indra_Nooyi","Madras_Christian_College").
+employer("Indra_Nooyi","PepsiCo").
+occupation("Indra_Nooyi","Chairperson").
+occupation("Indra_Nooyi","Indra_Nooyi__1").
+birthPlace("Steven_Reinemund","New_York_City").
+country("Yale_School_of_Management","United_States").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+spouse("Steven_Reinemund","Gail T. Reinemund").
+type("Yale_School_of_Management","Business_school").
+type("Yale_School_of_Management","Private_school").
+type("Indian_Institute_of_Management_Calcutta","Institute").
+type("Madras_Christian_College","Government Aided").
+birthYear("Steven_Reinemund","1948").
+numberOfEmployees("PepsiCo","263000").
+country("Chennai","India").
+country("Greenwich,_Connecticut","United_States").
+country("Indian_Institute_of_Management_Calcutta","India").
+country("Madras_Christian_College","India").
+employer("Steven_Reinemund","Wake_Forest_University").
+foundationPlace("PepsiCo","New_Bern,_North_Carolina").
+foundationPlace("PepsiCo","North_Carolina").
+foundationPlace("PepsiCo","United_States").
+industry("PepsiCo","Beverages").
+industry("PepsiCo","Food_processing").
+keyPerson("PepsiCo","Indra_Nooyi").
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+predecessor("Steven_Reinemund","Roger_Enrico").
+subsidiary("PepsiCo","List_of_assets_owned_by_PepsiCo").
+type("Chennai","Megacity").
+type("Greenwich,_Connecticut","New_England_town").
+type("PepsiCo","Public_company").
+type("Indian_Institute_of_Management_Calcutta","Public_university").

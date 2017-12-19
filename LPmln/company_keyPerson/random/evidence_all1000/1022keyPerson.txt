@@ -1,0 +1,114 @@
+revenue("TJX_Companies","3.09E10").
+foundingYear("TJX_Companies","1987").
+numberOfEmployees("TJX_Companies","216000").
+industry("TJX_Companies","Retail").
+locationCity("TJX_Companies","Massachusetts").
+locationCity("TJX_Companies","Framingham,_Massachusetts").
+locationCountry("TJX_Companies","United_States").
+type("TJX_Companies","Public_company").
+numberOfLocations("Sierra_Trading_Post","9").
+numberOfLocations("HomeGoods","577").
+numberOfLocations("T.K._Maxx","407").
+numberOfLocations("Winners","234").
+city("Massachusetts","Boston, MassachusettsBoston").
+city("Massachusetts","Brockton, MassachusettsBrockton").
+city("Massachusetts","Cambridge, MassachusettsCambridge").
+city("Massachusetts","Fall River, MassachusettsFall River").
+city("Massachusetts","Lowell, MassachusettsLowell").
+city("Massachusetts","Lynn, MassachusettsLynn").
+city("Massachusetts","New Bedford, MassachusettsNew Bedford").
+city("Massachusetts","Quincy, MassachusettsQuincy").
+city("Massachusetts","Springfield, MassachusettsSpringfield").
+city("Massachusetts","Worcester, MassachusettsWorcester").
+country("Massachusetts","Massachusetts").
+industry("Winners","Discount").
+foundingYear("Sierra_Trading_Post","1986").
+foundingYear("HomeGoods","1992").
+foundingYear("HomeSense","2001").
+foundingYear("T.K._Maxx","1994").
+foundingYear("Marshalls","1956").
+foundingYear("Winners","1982").
+numberOfEmployees("Sierra_Trading_Post","950").
+capital("Massachusetts","Boston").
+capital("United_States","Washington,_D.C.").
+country("Massachusetts","United_States").
+foundationPlace("Sierra_Trading_Post","Reno,_Nevada").
+foundationPlace("Sierra_Trading_Post","United_States").
+foundationPlace("Marshalls","Massachusetts").
+foundationPlace("Marshalls","United_States").
+foundationPlace("Marshalls","Beverly,_Massachusetts").
+foundedBy("Marshalls","Alfred_Marshall_(businessman)").
+industry("Sierra_Trading_Post","Retail").
+industry("HomeGoods","Retail").
+industry("HomeSense","Retail").
+industry("T.K._Maxx","Retail").
+industry("Marshalls","Retail").
+isPartOf("Framingham,_Massachusetts","Massachusetts").
+isPartOf("Framingham,_Massachusetts","Middlesex_County,_Massachusetts").
+largestCity("Massachusetts","Boston").
+largestCity("United_States","New_York_City").
+location("HomeGoods","Framingham,_Massachusetts").
+location("HomeSense","Canada").
+location("HomeSense","Europe").
+location("T.K._Maxx","Framingham,_Massachusetts").
+location("T.K._Maxx","United_States").
+location("Marshalls","Framingham,_Massachusetts").
+location("Winners","Canada").
+location("Winners","Mississauga").
+locationCity("Sierra_Trading_Post","Cheyenne,_Wyoming").
+parentCompany("Sierra_Trading_Post","TJX_Companies").
+parentCompany("HomeGoods","TJX_Companies").
+parentCompany("HomeSense","TJX_Companies").
+parentCompany("T.K._Maxx","TJX_Companies").
+parentCompany("Marshalls","TJX_Companies").
+parentCompany("Winners","TJX_Companies").
+type("Framingham,_Massachusetts","New_England_town").
+type("Sierra_Trading_Post","Subsidiary").
+type("HomeGoods","Subsidiary").
+type("HomeSense","Subsidiary").
+type("T.K._Maxx","Subsidiary").
+type("Marshalls","Subsidiary").
+type("Winners","Subsidiary").
+birthPlace("Vishal_Sikka","Madhya_Pradesh").
+birthPlace("Vishal_Sikka","Vadodara").
+birthYear("Vishal_Sikka","1967").
+occupation("Vishal_Sikka","Vishal_Sikka__1").
+salary("Vishal_Sikka","1.1E7").
+almaMater("Vishal_Sikka","Syracuse_University").
+almaMater("Vishal_Sikka","Stanford_University").
+almaMater("Vishal_Sikka","Maharaja_Sayajirao_University_of_Baroda").
+country("Madhya_Pradesh","India").
+country("Syracuse_University","U.S.").
+country("Stanford_University","U.S.").
+location("Vadodara","Vadodara").
+foundingYear("Infosys","1981").
+numberOfEmployees("Infosys","197050").
+city("Syracuse_University","Syracuse,_New_York").
+city("Stanford_University","Stanford,_California").
+city("Maharaja_Sayajirao_University_of_Baroda","India").
+city("Maharaja_Sayajirao_University_of_Baroda","Vadodara").
+country("Vadodara","India").
+foundedBy("Infosys","N._R._Narayana_Murthy").
+foundedBy("Infosys","Nandan_Nilekani").
+foundedBy("Infosys","N._S._Raghavan").
+foundedBy("Infosys","S._D._Shibulal").
+foundedBy("Infosys","S._Gopalakrishnan").
+industry("Infosys","IT_service_management").
+industry("Infosys","Information_technology_consulting").
+isPartOf("Vadodara","Gujarat").
+isPartOf("Vadodara","Vadodara_District").
+isPartOf("Madhya_Pradesh","Bundelkhand").
+isPartOf("Madhya_Pradesh","Gird").
+isPartOf("Madhya_Pradesh","Malwa").
+isPartOf("Madhya_Pradesh","Mahakoshal").
+isPartOf("Madhya_Pradesh","Baghelkhand").
+isPartOf("Madhya_Pradesh","Nimar").
+keyPerson("Infosys","Vishal_Sikka").
+locationCity("Infosys","Bangalore").
+locationCity("Infosys","Karnataka").
+locationCity("Infosys","Electronic_City").
+locationCountry("Infosys","India").
+type("Infosys","Public_limited_company").
+type("Madhya_Pradesh","States_and_union_territories_of_India").
+type("Syracuse_University","Private_university").
+type("Stanford_University","Private_university").

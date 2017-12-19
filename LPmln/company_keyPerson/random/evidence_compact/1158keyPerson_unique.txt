@@ -1,0 +1,11 @@
+keyPerson("Washington_Mutual","Alan_H._Fishman").
+keyPerson("Washington_Mutual","Chief_Executive_Officer").
+location("Washington_Mutual","Seattle,_Washington").
+location("Washington_Mutual","United_States").
+birthPlace("Antony_Jenkins","Manchester").
+occupation("Antony_Jenkins","Antony_Jenkins__1").
+location("University_College,_Oxford","High_Street,_Oxford").
+location("University_College,_Oxford","Oxford").
+type("Manchester","City_status_in_the_United_Kingdom").
+type("Manchester","Metropolitan_borough").
+type("Cranfield_School_of_Management","Business_School").

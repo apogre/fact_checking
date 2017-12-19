@@ -1,0 +1,16 @@
+revenue("Scottrade","1.1").
+foundingYear("Scottrade","1980").
+numberOfEmployees("Scottrade","3803").
+foundationPlace("Scottrade","Scottsdale,_Arizona").
+industry("Scottrade","Discount_brokerage").
+keyPerson("Scottrade","Rodger_O._Riney").
+keyPerson("Scottrade","CEO").
+location("Scottrade","Town_and_Country,_Missouri").
+type("Scottrade","Private_company").
+birthPlace("Tom_L._Ward","Seiling,_Oklahoma").
+occupation("Tom_L._Ward","Tapstone_Energy").
+occupation("Tom_L._Ward","Tom_L._Ward__1").
+country("Seiling,_Oklahoma","United_States").
+isPartOf("Seiling,_Oklahoma","Oklahoma").
+isPartOf("Seiling,_Oklahoma","Dewey_County,_Oklahoma").
+type("Seiling,_Oklahoma","City").

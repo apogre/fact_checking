@@ -1,0 +1,58 @@
+numberOfEmployees("The_Coca-Cola_Company","123200").
+foundationPlace("The_Coca-Cola_Company","Georgia_(U.S._state)").
+foundationPlace("The_Coca-Cola_Company","United_States").
+foundationPlace("The_Coca-Cola_Company","Atlanta").
+foundedBy("The_Coca-Cola_Company","Asa_Griggs_Candler").
+industry("The_Coca-Cola_Company","Beverage").
+keyPerson("The_Coca-Cola_Company","Muhtar_Kent").
+locationCity("The_Coca-Cola_Company","Atlanta").
+locationCity("The_Coca-Cola_Company","Coca-Cola_headquarters").
+locationCity("The_Coca-Cola_Company","Georgia_(U.S._state)").
+locationCountry("The_Coca-Cola_Company","United_States").
+product("The_Coca-Cola_Company","List_of_Coca-Cola_brands").
+regionServed("The_Coca-Cola_Company","Cuba").
+regionServed("The_Coca-Cola_Company","North_Korea").
+subsidiary("The_Coca-Cola_Company","List_of_assets_owned_by_The_Coca-Cola_Company").
+type("The_Coca-Cola_Company","Public_company").
+birthPlace("Muhtar_Kent","New_York_City").
+birthPlace("Asa_Griggs_Candler","Villa_Rica,_Georgia").
+deathPlace("Asa_Griggs_Candler","Atlanta").
+birthPlace("Muhtar_Kent","New York City, New York, U.S.").
+city("Georgia_(U.S._state)","Albany, GeorgiaAlbany").
+city("Georgia_(U.S._state)","Athens, GeorgiaAthens").
+city("Georgia_(U.S._state)","Atlanta, GeorgiaAtlanta").
+city("Georgia_(U.S._state)","Augusta, GeorgiaAugusta").
+city("Georgia_(U.S._state)","Columbus, GeorgiaColumbus").
+city("Georgia_(U.S._state)","Johns Creek, GeorgiaJohns Creek").
+city("Georgia_(U.S._state)","Macon, GeorgiaMacon").
+city("Georgia_(U.S._state)","Roswell, GeorgiaRoswell").
+city("Georgia_(U.S._state)","Sandy Springs, GeorgiaSandy Springs").
+city("Georgia_(U.S._state)","Savannah, GeorgiaSavannah").
+country("Georgia_(U.S._state)","Georgia").
+largestCity("Cuba","capital").
+nationality("Asa_Griggs_Candler","American").
+birthYear("Muhtar_Kent","1952").
+birthYear("Asa_Griggs_Candler","1851").
+deathYear("Asa_Griggs_Candler","1929").
+capital("Georgia_(U.S._state)","Atlanta").
+capital("United_States","Washington,_D.C.").
+capital("Cuba","Havana").
+capital("North_Korea","Pyongyang").
+country("Atlanta","United_States_of_America").
+country("Georgia_(U.S._state)","United_States").
+isPartOf("Atlanta","Georgia_(U.S._state)").
+isPartOf("Atlanta","Fulton_County,_Georgia").
+isPartOf("Atlanta","DeKalb_County,_Georgia").
+largestCity("United_States","New_York_City").
+largestCity("North_Korea","Pyongyang").
+nationality("Muhtar_Kent","Turkey").
+nationality("Muhtar_Kent","United_States").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Asa_Griggs_Candler","Asa_Griggs_Candler__1").
+parent("Muhtar_Kent","Necdet_Kent").
+residence("Muhtar_Kent","Atlanta,_Georgia").
+stateOfOrigin("Muhtar_Kent","Turkey").
+stateOfOrigin("Muhtar_Kent","United_States").
+type("Atlanta","City").

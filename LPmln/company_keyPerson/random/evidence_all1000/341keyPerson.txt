@@ -1,0 +1,121 @@
+assets("Campbell_Soup_Company","6.862E9").
+equity("Campbell_Soup_Company","1.096E9").
+netIncome("Campbell_Soup_Company","8.02E8").
+operatingIncome("Campbell_Soup_Company","1.279E9").
+revenue("Campbell_Soup_Company","7.719E9").
+foundingYear("Campbell_Soup_Company","1869").
+numberOfEmployees("Campbell_Soup_Company","17500").
+industry("Campbell_Soup_Company","Food_processing").
+keyPerson("Campbell_Soup_Company","Chief_Executive_Officer").
+keyPerson("Campbell_Soup_Company","Chairman").
+keyPerson("Campbell_Soup_Company","President").
+keyPerson("Campbell_Soup_Company","Denise_Morrison").
+location("Campbell_Soup_Company","New_Jersey").
+location("Campbell_Soup_Company","United_States").
+location("Campbell_Soup_Company","Camden,_New_Jersey").
+product("Campbell_Soup_Company","V8_(beverage)").
+product("Campbell_Soup_Company","Liebig").
+product("Campbell_Soup_Company","Pepperidge_Farm").
+product("Campbell_Soup_Company","Bolthouse_Farms").
+product("Campbell_Soup_Company","Pace_Foods").
+product("Campbell_Soup_Company","Arnott's_Biscuits_Holdings").
+type("Campbell_Soup_Company","Public_company").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+birthPlace("Denise_Morrison","Elberon, New Jersey").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+location("Camden,_New_Jersey","Camden, New Jersey").
+nationality("Denise_Morrison","American").
+residence("Denise_Morrison","Princeton, New Jersey").
+type("V8_(beverage)","Vegetable_juice").
+birthYear("Denise_Morrison","1954").
+foundingYear("Pepperidge_Farm","1937").
+almaMater("Denise_Morrison","Boston_College").
+capital("New_Jersey","Trenton,_New_Jersey").
+capital("United_States","Washington,_D.C.").
+country("Camden,_New_Jersey","United_States").
+country("New_Jersey","United_States").
+industry("Pepperidge_Farm","Food_processing").
+isPartOf("Camden,_New_Jersey","New_Jersey").
+isPartOf("Camden,_New_Jersey","Camden_County,_New_Jersey").
+keyPerson("Pepperidge_Farm","Senior_Vice_President").
+largestCity("New_Jersey","Newark,_New_Jersey").
+largestCity("United_States","New_York_City").
+location("Pepperidge_Farm","Norwalk,_Connecticut").
+location("Pepperidge_Farm","United_States").
+occupation("Denise_Morrison","Denise_Morrison__1").
+parentCompany("Pepperidge_Farm","Campbell_Soup_Company").
+type("Camden,_New_Jersey","City_(New_Jersey)").
+type("Pepperidge_Farm","Subsidiary").
+networth("John_Mackey_(businessman)","1.0E8").
+birthPlace("John_Mackey_(businessman)","United_States").
+birthPlace("John_Mackey_(businessman)","Houston").
+birthPlace("John_Mackey_(businessman)","Texas").
+birthYear("John_Mackey_(businessman)","1953").
+almaMater("John_Mackey_(businessman)","University_of_Texas_at_Austin").
+occupation("John_Mackey_(businessman)","Whole_Foods_Market").
+occupation("John_Mackey_(businessman)","John_Mackey_(businessman)__1").
+residence("John_Mackey_(businessman)","Austin,_Texas").
+residence("John_Mackey_(businessman)","United_States").
+residence("John_Mackey_(businessman)","Texas").
+salary("John_Mackey_(businessman)","1.0").
+assets("Whole_Foods_Market","5.5E9").
+assets("Whole_Foods_Market","5.3E9").
+equity("Whole_Foods_Market","3.9E9").
+equity("Whole_Foods_Market","3.8E9").
+netIncome("Whole_Foods_Market","5.51E8").
+numberOfLocations("Whole_Foods_Market","3").
+numberOfLocations("Whole_Foods_Market","435").
+operatingIncome("Whole_Foods_Market","8.83E8").
+revenue("Whole_Foods_Market","1.29E10").
+revenue("Whole_Foods_Market","1.17E10").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+country("University_of_Texas_at_Austin","U.S.").
+numberOfEmployees("Whole_Foods_Market","91000").
+capital("Texas","Austin,_Texas").
+city("University_of_Texas_at_Austin","Austin,_Texas").
+country("Austin,_Texas","United_States").
+country("Texas","United_States").
+foundationPlace("Whole_Foods_Market","Austin,_Texas").
+foundationPlace("Whole_Foods_Market","Texas").
+foundedBy("Whole_Foods_Market","John_Mackey_(businessman)").
+industry("Whole_Foods_Market","Grocery_store").
+industry("Whole_Foods_Market","Health_food_store").
+isPartOf("Austin,_Texas","Texas").
+isPartOf("Austin,_Texas","Travis_County,_Texas").
+isPartOf("Austin,_Texas","Williamson_County,_Texas").
+isPartOf("Austin,_Texas","Hays_County,_Texas").
+isPartOf("Houston","Texas").
+isPartOf("Houston","Fort_Bend_County,_Texas").
+isPartOf("Houston","Montgomery_County,_Texas").
+isPartOf("Houston","Harris_County,_Texas").
+keyPerson("Whole_Foods_Market","Chief_information_officer").
+keyPerson("Whole_Foods_Market","Walter_Robb").
+keyPerson("Whole_Foods_Market","CEO").
+keyPerson("Whole_Foods_Market","John_Mackey_(businessman)").
+largestCity("Texas","Houston").
+location("Whole_Foods_Market","Austin,_Texas").
+type("Houston","City").
+type("Whole_Foods_Market","Public_company").
+type("University_of_Texas_at_Austin","Flagship_campus").
+type("University_of_Texas_at_Austin","Space-grant_university").

@@ -1,0 +1,101 @@
+foundingYear("Sun_Pharmaceutical","1981").
+numberOfEmployees("Sun_Pharmaceutical","52700").
+foundedBy("Sun_Pharmaceutical","Dilip_Shanghvi").
+industry("Sun_Pharmaceutical","Pharmaceutical_industry").
+keyPerson("Sun_Pharmaceutical","Dilip_Shanghvi").
+locationCity("Sun_Pharmaceutical","Maharashtra").
+locationCity("Sun_Pharmaceutical","Mumbai").
+product("Sun_Pharmaceutical","Pharmaceutical").
+product("Sun_Pharmaceutical","Generic_drug").
+type("Sun_Pharmaceutical","Public_company").
+networth("Dilip_Shanghvi","1.69E10").
+birthPlace("Dilip_Shanghvi","Mumbai").
+birthPlace("Dilip_Shanghvi","Amreli").
+birthPlace("Dilip_Shanghvi","Gujarat").
+type("Maharashtra","States_and_union_territories_of_India").
+birthYear("Dilip_Shanghvi","1955").
+almaMater("Dilip_Shanghvi","University_of_Calcutta").
+country("Maharashtra","India").
+country("Mumbai","India").
+isPartOf("Mumbai","Maharashtra").
+isPartOf("Mumbai","Konkani_language").
+isPartOf("Mumbai","Navi_Mumbai").
+isPartOf("Mumbai","Mumbai_City_district").
+isPartOf("Mumbai","Marathi_language").
+isPartOf("Mumbai","Mumbai_Suburban_District").
+nationality("Dilip_Shanghvi","Indian_people").
+occupation("Dilip_Shanghvi","Dilip_Shanghvi__1").
+occupation("Dilip_Shanghvi","Sun_Pharmaceuticals").
+residence("Dilip_Shanghvi","Mumbai,_Maharashtra").
+stateOfOrigin("Dilip_Shanghvi","Indian_people").
+type("Mumbai","Megacity").
+birthPlace("John_T._Chambers","Ohio").
+birthPlace("John_T._Chambers","Cleveland").
+birthPlace("John_T._Chambers","United_States").
+birthYear("John_T._Chambers","1949").
+almaMater("John_T._Chambers","Edmund_T._Pratt_Jr._School_of_Engineering").
+almaMater("John_T._Chambers","West_Virginia_University").
+almaMater("John_T._Chambers","Kelley_School_of_Business").
+occupation("John_T._Chambers","Cisco_Systems").
+occupation("John_T._Chambers","Chairman").
+occupation("John_T._Chambers","John_T._Chambers__1").
+city("Ohio","Cleveland").
+city("Ohio","Akron, OhioAkron").
+city("Ohio","Canton, OhioCanton").
+city("Ohio","Cincinnati").
+city("Ohio","Columbus, OhioColumbus").
+city("Ohio","Dayton, OhioDayton").
+city("Ohio","Lorain, OhioLorain").
+city("Ohio","Parma, OhioParma").
+city("Ohio","Toledo, OhioToledo").
+city("Ohio","Youngstown, OhioYoungstown").
+country("Ohio","Ohio").
+country("West_Virginia_University","U.S.").
+country("Kelley_School_of_Business","U.S.").
+country("Republican_Party_(United_States)","United States").
+location("Edmund_T._Pratt_Jr._School_of_Engineering","Durham,_North_Carolina").
+location("Edmund_T._Pratt_Jr._School_of_Engineering","North_Carolina").
+location("Edmund_T._Pratt_Jr._School_of_Engineering","United_States").
+parent("Kelley_School_of_Business","Indiana_University").
+parent("Edmund_T._Pratt_Jr._School_of_Engineering","Duke_University").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+numberOfEmployees("Cisco_Systems","71883").
+capital("Ohio","Columbus,_Ohio").
+capital("United_States","Washington,_D.C.").
+city("West_Virginia_University","Morgantown,_West_Virginia").
+city("Kelley_School_of_Business","Bloomington,_Indiana").
+country("Ohio","United_States").
+foundationPlace("Cisco_Systems","California").
+foundationPlace("Cisco_Systems","San_Francisco").
+foundationPlace("Cisco_Systems","United_States").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+industry("Cisco_Systems","Networking_hardware").
+isPartOf("Cleveland","Ohio").
+isPartOf("Cleveland","Cuyahoga_County,_Ohio").
+keyPerson("Cisco_Systems","John_T._Chambers").
+keyPerson("Cisco_Systems","Chuck_Robbins").
+largestCity("United_States","New_York_City").
+locationCity("Cisco_Systems","California").
+locationCity("Cisco_Systems","San_Jose,_CA").
+locationCountry("Cisco_Systems","United_States").
+product("Cisco_Systems","Cisco_IOS").
+product("Cisco_Systems","Wireless").
+product("Cisco_Systems","Computer_networking_device").
+product("Cisco_Systems","Datacenter").
+product("Cisco_Systems","Interface_(computer_science)").
+product("Cisco_Systems","Module").
+product("Cisco_Systems","Network_Management").
+product("Cisco_Systems","Optical_networking_(disambiguation)").
+product("Cisco_Systems","Storage_area_network").
+product("Cisco_Systems","Telepresence").
+product("Cisco_Systems","VOIP").
+subsidiary("Cisco_Systems","List_of_acquisitions_by_Cisco_Systems").
+type("Cleveland","City").
+type("West_Virginia_University","Satellite_campus").
+type("West_Virginia_University","Public_university").
+type("West_Virginia_University","Flagship_university").
+type("West_Virginia_University","Land-grant_university").
+type("West_Virginia_University","Space_grant_college").
+type("Kelley_School_of_Business","Public_university").
+type("Cisco_Systems","Public_company").

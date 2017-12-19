@@ -1,0 +1,31 @@
+foundingYear("Kaplan,_Inc.","1938").
+division("Kaplan,_Inc.","Test_preparation").
+foundedBy("Kaplan,_Inc.","Stanley_Kaplan").
+keyPerson("Kaplan,_Inc.","Andrew_Rosen").
+locationCity("Kaplan,_Inc.","Fort_Lauderdale,_Florida").
+parentCompany("Kaplan,_Inc.","Graham_Holdings_Company").
+type("Kaplan,_Inc.","Subsidiary").
+birthPlace("Stanley_Kaplan","New_York_City").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+operatingIncome("Graham_Holdings_Company","US$").
+spouse("Stanley_Kaplan","Rita Gwirtzman Kaplan").
+birthYear("Stanley_Kaplan","1919").
+foundingYear("Graham_Holdings_Company","2013").
+numberOfEmployees("Graham_Holdings_Company","11500").
+almaMater("Stanley_Kaplan","City_College_of_New_York").
+country("Fort_Lauderdale,_Florida","United_States_of_America").
+foundationPlace("Graham_Holdings_Company","Washington,_D.C.").
+industry("Graham_Holdings_Company","Mass_media").
+keyPerson("Graham_Holdings_Company","Donald_E._Graham").
+keyPerson("Graham_Holdings_Company","Chief_financial_officer").
+keyPerson("Graham_Holdings_Company","Chief_executive_officer").
+keyPerson("Graham_Holdings_Company","Chairman").
+location("Graham_Holdings_Company","United_States").
+location("Graham_Holdings_Company","Arlington,_Virginia").
+occupation("Stanley_Kaplan","Kaplan,_Inc.").
+occupation("Stanley_Kaplan","Stanley_Kaplan__1").
+type("Fort_Lauderdale,_Florida","City").
+type("Graham_Holdings_Company","Public_company").
+occupation("Andrew_S._Rosen","Kaplan,_Inc.").
+occupation("Andrew_S._Rosen","Andrew_S._Rosen__1").
+industry("Kaplan,_Inc.","Education").

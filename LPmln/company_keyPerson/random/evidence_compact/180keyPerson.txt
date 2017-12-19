@@ -1,0 +1,16 @@
+keyPerson("U.S._Steel","Mario_Longhi").
+location("U.S._Steel","Pennsylvania").
+location("U.S._Steel","United_States").
+location("U.S._Steel","U.S._Steel_Tower").
+location("U.S._Steel","Pittsburgh,_Pennsylvania").
+type("U.S._Steel","Public_company").
+location("U.S._Steel_Tower","Pennsylvania").
+location("U.S._Steel_Tower","Pittsburgh").
+location("U.S._Steel_Tower","Grant_Street").
+nationality("Mario_Longhi","United_States").
+birthPlace("John_P._Surma","United_States").
+birthPlace("John_P._Surma","Pennsylvania").
+birthPlace("John_P._Surma","Pittsburgh").
+occupation("John_P._Surma","John_P._Surma__1").
+occupation("John_P._Surma","United_States_Steel_Corporation").
+type("Pittsburgh","City").

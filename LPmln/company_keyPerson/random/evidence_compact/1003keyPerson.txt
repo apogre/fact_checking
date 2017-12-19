@@ -1,0 +1,6 @@
+foundedBy("Tesco","Jack_Cohen_(businessman)").
+keyPerson("Tesco","Dave_Lewis_(businessman)").
+keyPerson("Tesco","John_Allan_(businessman)").
+location("Tesco","Hertfordshire").
+location("Tesco","Welwyn_Garden_City").
+type("Tesco","Public_limited_company").

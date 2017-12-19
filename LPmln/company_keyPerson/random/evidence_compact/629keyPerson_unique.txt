@@ -1,0 +1,12 @@
+foundedBy("Las_Vegas_Sands","Sheldon_G._Adelson").
+keyPerson("Las_Vegas_Sands","Partha_Ojha").
+keyPerson("Las_Vegas_Sands","Sheldon_G._Adelson").
+location("Las_Vegas_Sands","Nevada").
+location("Las_Vegas_Sands","Paradise,_Nevada").
+birthPlace("Sheldon_Adelson","Boston").
+birthPlace("Sheldon_Adelson","Massachusetts").
+birthPlace("Sheldon_Adelson","United_States").
+occupation("Sheldon_Adelson","Sheldon_Adelson__1").
+occupation("Sheldon_Adelson","Las_Vegas_Sands").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").
+type("Wesleyan_University","Private_university").

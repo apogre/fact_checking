@@ -1,0 +1,91 @@
+numberOfEmployees("Dell","101800").
+industry("Dell","Software").
+industry("Dell","Personal_computer_hardware").
+locationCity("Dell","Round_Rock,_Texas").
+owner("Dell","Michael_Dell").
+owner("Dell","Silver_Lake_Partners").
+owningCompany("Dell","Michael_Dell").
+owningCompany("Dell","Silver_Lake_Partners").
+product("Dell","Smartphone").
+product("Dell","Server_(computing)").
+product("Dell","Peripheral").
+successor("Dell","Dell_Technologies").
+type("Dell","Privately_held_company").
+networth("Michael_Dell","2.03E10").
+numberOfLocations("Silver_Lake_Partners","8").
+birthPlace("Michael_Dell","Houston").
+birthPlace("Michael_Dell","Texas").
+locationCountry("Dell_Technologies","United States").
+nationality("Michael_Dell","American").
+birthYear("Michael_Dell","1965").
+foundingYear("Silver_Lake_Partners","1999").
+numberOfEmployees("Dell_Technologies","140").
+numberOfEmployees("Silver_Lake_Partners","100").
+almaMater("Michael_Dell","University_of_Texas_at_Austin").
+country("Round_Rock,_Texas","United_States").
+foundedBy("Dell_Technologies","Michael_Dell").
+foundedBy("Silver_Lake_Partners","Glenn_Hutchins").
+foundedBy("Silver_Lake_Partners","Roger_McNamee").
+industry("Dell_Technologies","Information_technology").
+industry("Silver_Lake_Partners","Private_equity").
+industry("Silver_Lake_Partners","Technology").
+isPartOf("Round_Rock,_Texas","Texas").
+isPartOf("Round_Rock,_Texas","Williamson_County,_Texas").
+keyPerson("Dell_Technologies","Michael_Dell").
+location("Silver_Lake_Partners","California").
+location("Silver_Lake_Partners","Menlo_Park,_California").
+location("Silver_Lake_Partners","United_States").
+location("Silver_Lake_Partners","Sand_Hill_Road").
+locationCity("Dell_Technologies","Round_Rock,_Texas").
+occupation("Michael_Dell","Dell").
+occupation("Michael_Dell","Michael_Dell__1").
+owner("Dell_Technologies","Michael_Dell").
+owner("Dell_Technologies","Silver_Lake_Partners").
+owningCompany("Dell_Technologies","Michael_Dell").
+owningCompany("Dell_Technologies","Silver_Lake_Partners").
+predecessor("Dell_Technologies","Dell").
+product("Dell_Technologies","Personal_computers").
+product("Dell_Technologies","Server_(computing)").
+product("Dell_Technologies","Computer_software").
+product("Dell_Technologies","Computer_network").
+product("Silver_Lake_Partners","Growth_capital").
+product("Silver_Lake_Partners","Leveraged_buyout").
+residence("Michael_Dell","Austin,_Texas").
+residence("Michael_Dell","Texas").
+subsidiary("Dell_Technologies","VMware").
+subsidiary("Dell_Technologies","SecureWorks").
+subsidiary("Dell_Technologies","Pivotal_Software").
+type("Dell_Technologies","Privately_held_company").
+type("Round_Rock,_Texas","City_(United_States)").
+type("Silver_Lake_Partners","Private_Company").
+type("Silver_Lake_Partners","Limited_liability_company").
+assetUnderManagement("Silver_Lake_Partners","2.6E10").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+country("University_of_Texas_at_Austin","U.S.").
+locationCountry("Dell","United States").
+capital("Texas","Austin,_Texas").
+city("University_of_Texas_at_Austin","Austin,_Texas").
+country("Austin,_Texas","United_States").
+country("Texas","United_States").
+isPartOf("Austin,_Texas","Texas").
+isPartOf("Austin,_Texas","Travis_County,_Texas").
+isPartOf("Austin,_Texas","Williamson_County,_Texas").
+isPartOf("Austin,_Texas","Hays_County,_Texas").
+isPartOf("Houston","Texas").
+isPartOf("Houston","Fort_Bend_County,_Texas").
+isPartOf("Houston","Montgomery_County,_Texas").
+isPartOf("Houston","Harris_County,_Texas").
+largestCity("Texas","Houston").
+type("Houston","City").
+type("University_of_Texas_at_Austin","Flagship_campus").
+type("University_of_Texas_at_Austin","Space-grant_university").

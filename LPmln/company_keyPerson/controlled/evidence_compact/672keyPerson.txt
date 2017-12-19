@@ -1,0 +1,26 @@
+foundingYear("Mile_High_Comics","1969").
+foundationPlace("Mile_High_Comics","Colorado_Springs,_Colorado").
+foundedBy("Mile_High_Comics","Chuck_Rozanski").
+industry("Mile_High_Comics","Collectibles").
+location("Mile_High_Comics","Denver,_Colorado").
+type("Mile_High_Comics","Privately_held_company").
+birthPlace("Chuck_Rozanski","Germany").
+birthPlace("Chuck_Rozanski","Goldbach,_Bavaria").
+occupation("Chuck_Rozanski","Retailer, columnist").
+country("Colorado_Springs,_Colorado","United_States").
+type("Colorado_Springs,_Colorado","List_of_cities_and_towns_in_Colorado").
+birthPlace("David_Gill_(executive)","Reading,_Berkshire").
+birthYear("David_Gill_(executive)","1957").
+almaMater("David_Gill_(executive)","University_of_Birmingham").
+occupation("David_Gill_(executive)","David_Gill_(executive)__1").
+birthPlace("Oliver_Gill","Frimley").
+country("University_of_Birmingham","United Kingdom").
+location("Reading,_Berkshire","Reading").
+location("The_Football_Association","England").
+regionServed("FIFA","Worldwide").
+type("Manchester_United_F.C.","Public_company").
+owner("Manchester_United_F.C.","Glazer_ownership_of_Manchester_United").
+regionServed("UEFA","Europe").
+type("Reading,_Berkshire","City_status_in_the_United_Kingdom").
+type("FIFA","List_of_international_sport_federations").
+type("University_of_Birmingham","Public_university").

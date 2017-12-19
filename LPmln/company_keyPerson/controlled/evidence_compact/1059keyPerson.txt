@@ -1,0 +1,12 @@
+industry("TradeKing","Financial_Services").
+locationCity("TradeKing","Fort_Lauderdale,_Florida").
+locationCountry("TradeKing","United_States").
+type("TradeKing","Private_company").
+location("Fort_Lauderdale,_Florida","Fort Lauderdale, Florida").
+country("Fort_Lauderdale,_Florida","United_States_of_America").
+type("Fort_Lauderdale,_Florida","City").
+birthPlace("Philip_Clarke_(businessman)","Liverpool").
+birthYear("Philip_Clarke_(businessman)","1960").
+almaMater("Philip_Clarke_(businessman)","University_of_Liverpool").
+occupation("Philip_Clarke_(businessman)","Philip_Clarke_(businessman)__1").
+predecessor("Philip_Clarke_(businessman)","Terry_Leahy").

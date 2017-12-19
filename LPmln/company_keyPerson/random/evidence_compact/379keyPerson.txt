@@ -1,0 +1,18 @@
+foundedBy("The_Coca-Cola_Company","Asa_Griggs_Candler").
+keyPerson("The_Coca-Cola_Company","Muhtar_Kent").
+type("The_Coca-Cola_Company","Public_company").
+birthPlace("Muhtar_Kent","New_York_City").
+birthPlace("Asa_Griggs_Candler","Villa_Rica,_Georgia").
+birthPlace("Muhtar_Kent","New York City, New York, U.S.").
+nationality("Asa_Griggs_Candler","American").
+nationality("Muhtar_Kent","Turkey").
+nationality("Muhtar_Kent","United_States").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Asa_Griggs_Candler","Asa_Griggs_Candler__1").
+parent("Muhtar_Kent","Necdet_Kent").
+type("Atlanta","City").
+nationality("Naguib_Sawiris","Egypt").
+headquarter("Free_Egyptians_Party","Zamalek").
+type("ETH_Zurich","Public_university").

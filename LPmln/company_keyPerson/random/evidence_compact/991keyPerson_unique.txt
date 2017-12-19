@@ -1,0 +1,29 @@
+keyPerson("Telmex","CEO").
+keyPerson("Telmex","Carlos_Slim").
+location("Telmex","Mexico").
+location("Telmex","Mexico_City").
+type("Telmex","Subsidiary").
+birthPlace("Carlos_Slim","Mexico_City").
+location("Mexico_City","Mexico City").
+nationality("Carlos_Slim","Mexican").
+parent("Mexico_City","National_Autonomous_University_of_Mexico").
+type("Mexico_City","Cultural").
+occupation("Carlos_Slim","Grupo_Carso").
+occupation("Carlos_Slim","Telmex").
+occupation("Carlos_Slim","Carlos_Slim__1").
+occupation("Carlos_Slim","Samsung_Mexico").
+type("Mexico_City","Administrative_divisions_of_Mexico").
+birthPlace("Masayoshi_Son","Japan").
+birthPlace("Masayoshi_Son","Tosu,_Saga").
+occupation("Masayoshi_Son","Masayoshi_Son__1").
+occupation("Masayoshi_Son","SoftBank").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+type("Tokyo","Prefectures_of_Japan").
+type("Tosu,_Saga","Cities_of_Japan").
+type("Holy_Names_University","Non-profit").
+type("Holy_Names_University","Private_university").
+type("Holy_Names_University","Coeducational").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").

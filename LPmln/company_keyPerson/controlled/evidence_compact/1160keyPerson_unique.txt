@@ -1,0 +1,31 @@
+foundingYear("Graham_Holdings_Company","2013").
+numberOfEmployees("Graham_Holdings_Company","11500").
+foundationPlace("Graham_Holdings_Company","Washington,_D.C.").
+industry("Graham_Holdings_Company","Mass_media").
+keyPerson("Graham_Holdings_Company","Donald_E._Graham").
+keyPerson("Graham_Holdings_Company","Chief_executive_officer").
+keyPerson("Graham_Holdings_Company","Chairman").
+keyPerson("Graham_Holdings_Company","Chief_financial_officer").
+location("Graham_Holdings_Company","United_States").
+location("Graham_Holdings_Company","Arlington,_Virginia").
+type("Graham_Holdings_Company","Public_company").
+birthPlace("Donald_E._Graham","United_States").
+spouse("Donald_E._Graham","Amanda Bennett").
+spouse("Donald_E._Graham","Mary Wissler").
+birthYear("Donald_E._Graham","1945").
+employer("Donald_E._Graham","Facebook").
+employer("Donald_E._Graham","Graham_Holdings_Company").
+occupation("Donald_E._Graham","Chairman_of_the_board").
+occupation("Donald_E._Graham","Donald_E._Graham__1").
+parent("Donald_E._Graham","Phil_Graham").
+parent("Donald_E._Graham","Katharine_Graham").
+type("Washington,_D.C.","Federal_district").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+birthYear("Denise_Morrison","1954").
+almaMater("Denise_Morrison","Boston_College").
+occupation("Denise_Morrison","Denise_Morrison__1").
+country("Boston_College","U.S.").
+country("Long_Branch,_New_Jersey","United_States").
+type("Long_Branch,_New_Jersey","City_(New_Jersey)").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

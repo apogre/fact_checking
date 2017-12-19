@@ -1,0 +1,34 @@
+keyPerson("Telstra","Chief_financial_officer").
+keyPerson("Telstra","Chairperson").
+keyPerson("Telstra","Andy_Penn").
+location("Telstra","Melbourne").
+location("Telstra","Telstra_Corporate_Centre").
+location("Telstra","Australia").
+type("Telstra","Public_company").
+location("Melbourne","Canberra").
+location("Melbourne","Perth").
+location("Melbourne","Sydney").
+location("Melbourne","Adelaide").
+location("Melbourne","Brisbane").
+location("Melbourne","Melbourne City").
+type("Melbourne","city").
+location("Telstra_Corporate_Centre","Melbourne,_Australia").
+occupation("Andy_Penn","Chief_Executive_Officer").
+occupation("Andy_Penn","Andy_Penn__1").
+predecessor("Andy_Penn","David_Thodey").
+birthPlace("Francisco_D'Souza","Nairobi").
+occupation("Francisco_D'Souza","Cognizant").
+occupation("Francisco_D'Souza","Francisco_D'Souza__1").
+occupation("Francisco_D'Souza","CEO").
+location("Nairobi","Nairobi").
+location("University_of_Macau","Avenida da Universidade, Taipa, Macau").
+foundedBy("Cognizant","Kumar_Mahadeva").
+foundedBy("Cognizant","Francisco_D'Souza").
+keyPerson("Cognizant","Lakshmi_Narayanan").
+keyPerson("Cognizant","Francisco_D'Souza").
+predecessor("Cognizant","Dun_&_Bradstreet").
+type("Nairobi","List_of_cities_and_towns_in_Kenya_by_population").
+type("Cognizant","Public_company").
+type("University_of_Macau","Private_university").
+type("University_of_Macau","Public_university").
+type("Carnegie_Mellon_University","Private_university").

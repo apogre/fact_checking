@@ -1,0 +1,4 @@
+foundedBy("United_Parcel_Service","James_E._Casey").
+keyPerson("United_Parcel_Service","Scott_Davis_(businessman)").
+location("United_Parcel_Service","United_States").
+location("United_Parcel_Service","Sandy_Springs,_Georgia").

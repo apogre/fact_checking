@@ -1,0 +1,21 @@
+foundedBy("NIIT","Vijay_K._Thadani").
+foundedBy("NIIT","Rajendra_S._Pawar").
+location("NIIT","Gurgaon,_India").
+type("NIIT","Public_company").
+nationality("Vijay_K._Thadani","India").
+occupation("Vijay_K._Thadani","CEO").
+occupation("Vijay_K._Thadani","NIIT").
+occupation("Vijay_K._Thadani","Vijay_K._Thadani__1").
+birthPlace("Mel_Karmazin","United_States").
+birthPlace("Mel_Karmazin","Manhattan").
+birthPlace("Mel_Karmazin","New_York_(state)").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+nationality("Craig_Karmazin","United States").
+occupation("Craig_Karmazin","Craig_Karmazin__1").
+occupation("Craig_Karmazin","CEO").
+parent("Craig_Karmazin","Mel_Karmazin").
+type("Greenwich,_Connecticut","New_England_town").
+type("Manhattan","Borough_(New_York_City)").
+type("Pace_University","Nonsectarian").
+type("Pace_University","Private_University").
+type("Pace_University","Co-educational").

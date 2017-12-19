@@ -1,0 +1,10 @@
+foundedBy("Walmart","Sam_Walton").
+keyPerson("Walmart","Doug_McMillon").
+keyPerson("Walmart","Greg_Penner").
+location("Walmart","Bentonville,_Arkansas").
+type("Walmart","Public_company").
+occupation("Ian_King_(BAE_Systems)","Ian_King_(BAE_Systems)__1").
+predecessor("Ian_King_(BAE_Systems)","Michael_Turner_(businessman)").
+location("Portsmouth","540.0").
+nationality("Michael_Turner_(businessman)","British").
+type("Portsmouth","City_status_in_the_United_Kingdom").

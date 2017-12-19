@@ -1,0 +1,69 @@
+numberOfLocations("DineEquity","3716").
+revenue("DineEquity","6.811E8").
+foundingYear("DineEquity","1976").
+numberOfEmployees("DineEquity","200000").
+location("DineEquity","California").
+location("DineEquity","Glendale,_California").
+subsidiary("DineEquity","IHOP").
+subsidiary("DineEquity","Applebee's").
+type("DineEquity","Public_company").
+assets("Applebee's","9.35E8").
+equity("Applebee's","4.87E8").
+netIncome("IHOP","4.45E7").
+netIncome("Applebee's","8.1E7").
+numberOfLocations("IHOP","1650").
+numberOfLocations("Applebee's","2033").
+operatingIncome("IHOP","7.28E7").
+operatingIncome("Applebee's","1.31E8").
+revenue("IHOP","3.496E8").
+revenue("Applebee's","2.5E9").
+birthPlace("Julia_Stewart_(businesswoman)","United_States").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+industry("Applebee's","Restaurants").
+location("Glendale,_California","Glendale, California").
+birthYear("Julia_Stewart_(businesswoman)","1955").
+numberOfEmployees("IHOP","32300").
+numberOfEmployees("Applebee's","28000").
+country("Glendale,_California","United_States").
+foundationPlace("IHOP","California").
+foundationPlace("IHOP","Los_Angeles").
+foundationPlace("IHOP","United_States").
+foundationPlace("Applebee's","Decatur,_Georgia").
+foundationPlace("Applebee's","Georgia_(U.S._state)").
+foundationPlace("Applebee's","United_States").
+industry("IHOP","Restaurant").
+isPartOf("Glendale,_California","California").
+isPartOf("Glendale,_California","Los_Angeles_County,_California").
+keyPerson("IHOP","Darren_Rebelez").
+keyPerson("IHOP","Russell_Findlay").
+keyPerson("Applebee's","Julia_Stewart_(businesswoman)").
+largestCity("California","Los_Angeles").
+location("IHOP","Glendale,_California").
+location("IHOP","United_States").
+location("Applebee's","Kansas_City,_Missouri").
+location("Applebee's","United_States").
+occupation("Julia_Stewart_(businesswoman)","Julia_Stewart_(businesswoman)__1").
+occupation("Julia_Stewart_(businesswoman)","DineEquity").
+parentCompany("IHOP","DineEquity").
+parentCompany("Applebee's","DineEquity").
+product("IHOP","Lunch").
+product("IHOP","Pancakes").
+product("IHOP","Breakfast").
+type("Glendale,_California","Charter_city").
+type("IHOP","Subsidiary").
+type("Applebee's","Subsidiary").
+industry("DineEquity","Restaurants").
+capital("United_States","Washington,_D.C.").
+largestCity("United_States","New_York_City").

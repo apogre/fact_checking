@@ -1,0 +1,99 @@
+assets("Office_Depot","6.844E9").
+equity("Office_Depot","1.621E9").
+netIncome("Office_Depot","-3.54E8").
+operatingIncome("Office_Depot","-2.75E8").
+revenue("Office_Depot","1.45E10").
+numberOfEmployees("Office_Depot","56000").
+keyPerson("Office_Depot","Chief_accounting_officer").
+keyPerson("Office_Depot","Chief_executive_officer").
+keyPerson("Office_Depot","Executive_vice_president").
+keyPerson("Office_Depot","Chief_financial_officer").
+keyPerson("Office_Depot","Chairman").
+product("Office_Depot","Office_supplies").
+subsidiary("Office_Depot","Grand_&_Toy").
+subsidiary("Office_Depot","OfficeMax").
+subsidiary("Office_Depot","Viking_Direct").
+type("Office_Depot","Public_company").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+location("Boca_Raton,_Florida","Boca Raton, Florida").
+foundingYear("Viking_Direct","1960").
+foundingYear("Grand_&_Toy","1882").
+numberOfEmployees("Viking_Direct","1300").
+numberOfEmployees("Grand_&_Toy","1100").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+country("Boca_Raton,_Florida","United_States_of_America").
+country("Florida","United_States").
+foundationPlace("OfficeMax","Cleveland").
+foundationPlace("OfficeMax","Ohio").
+foundationPlace("OfficeMax","United_States").
+foundationPlace("Viking_Direct","California").
+foundationPlace("Viking_Direct","Los_Angeles").
+foundationPlace("Viking_Direct","United_States").
+foundedBy("Grand_&_Toy","James_Grand").
+industry("OfficeMax","Retail").
+industry("Viking_Direct","Office_supplies").
+isPartOf("Boca_Raton,_Florida","Florida").
+isPartOf("Boca_Raton,_Florida","Palm_Beach_County,_Florida").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+location("OfficeMax","Boca_Raton,_Florida").
+location("OfficeMax","Florida").
+location("Viking_Direct","Leicester").
+location("Viking_Direct","United_Kingdom").
+locationCity("Grand_&_Toy","Ontario").
+locationCity("Grand_&_Toy","Toronto").
+locationCountry("Grand_&_Toy","Canada").
+owner("Grand_&_Toy","Office_Depot").
+parentCompany("OfficeMax","Office_Depot").
+parentCompany("Viking_Direct","Office_Depot").
+parentCompany("Grand_&_Toy","OfficeMax").
+product("OfficeMax","Office_supplies").
+regionServed("Viking_Direct","Europe").
+type("Boca_Raton,_Florida","City_(Florida)").
+type("OfficeMax","Subsidiary").
+type("OfficeMax","Brand_(marketing)").
+type("Viking_Direct","Subsidiary").
+type("Viking_Direct","Private_company_limited_by_shares").
+type("Grand_&_Toy","Subsidiary").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+birthYear("James_J._Greco","1958").
+almaMater("James_J._Greco","Georgetown_University").
+almaMater("James_J._Greco","University_of_Miami").
+almaMater("James_J._Greco","City_University,_London").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+residence("James_J._Greco","Florida").
+residence("James_J._Greco","Delray_Beach,_Florida").
+residence("James_J._Greco","United_States").
+country("Georgetown_University","US").
+country("University_of_Miami","U.S.").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+type("University_of_Miami","Private").
+capital("Connecticut","Hartford,_Connecticut").
+city("Georgetown_University","Washington,_D.C.").
+city("University_of_Miami","Coral_Gables,_Florida").
+country("Connecticut","United_States").
+country("Delray_Beach,_Florida","United_States_of_America").
+isPartOf("Delray_Beach,_Florida","Florida").
+isPartOf("Delray_Beach,_Florida","Palm_Beach_County,_Florida").
+isPartOf("New_Haven,_Connecticut","Connecticut").
+isPartOf("New_Haven,_Connecticut","Greater_New_Haven").
+isPartOf("New_Haven,_Connecticut","Union_Station_(New_Haven)").
+largestCity("Connecticut","Bridgeport,_Connecticut").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

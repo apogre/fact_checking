@@ -1,0 +1,17 @@
+birthPlace("Gordon_Nixon","Montreal").
+birthPlace("Gordon_Nixon","Canada").
+birthPlace("Gordon_Nixon","Montreal,_Quebec").
+occupation("Gordon_Nixon","Gordon_Nixon__1").
+occupation("Gordon_Nixon","President").
+occupation("Gordon_Nixon","Royal_Bank_of_Canada").
+birthPlace("John_Cleghorn","Montreal").
+birthPlace("John_Cleghorn","Quebec").
+keyPerson("Royal_Bank_of_Canada","David_I._McKay").
+location("Royal_Bank_of_Canada","Canada").
+location("Royal_Bank_of_Canada","Montreal").
+location("Royal_Bank_of_Canada","Ontario").
+location("Royal_Bank_of_Canada","Quebec").
+location("Royal_Bank_of_Canada","Toronto").
+type("Montreal","City_(TV_network)").
+type("Queen's_University","Public_university").
+type("Royal_Bank_of_Canada","Public_company").

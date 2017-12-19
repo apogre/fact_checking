@@ -1,0 +1,37 @@
+foundingYear("Crown_Worldwide_Group","1965").
+numberOfEmployees("Crown_Worldwide_Group","4600").
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+industry("Crown_Worldwide_Group","Warehouse").
+industry("Crown_Worldwide_Group","Relocation_service").
+industry("Crown_Worldwide_Group","Facilities_Management").
+industry("Crown_Worldwide_Group","Records_Management").
+networth("James_E._Thompson","1.0E9").
+knownFor("James_E._Thompson","Founder of The Crown Worldwide Group").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+birthYear("James_E._Thompson","1940").
+almaMater("James_E._Thompson","San_Jose_State_University").
+occupation("James_E._Thompson","James_E._Thompson__1").
+personFunction("James_E._Thompson","James_E._Thompson__1").
+birthPlace("Antony_Jenkins","Manchester").
+activeYearsStartYear("Antony_Jenkins","1982").
+birthYear("Antony_Jenkins","1961").
+almaMater("Antony_Jenkins","University_College,_Oxford").
+almaMater("Antony_Jenkins","Cranfield_School_of_Management").
+occupation("Antony_Jenkins","Antony_Jenkins__1").
+personFunction("Antony_Jenkins","Antony_Jenkins__1").
+salary("Antony_Jenkins","5467000.0").
+country("Cranfield_School_of_Management","United Kingdom").
+location("University_College,_Oxford","High_Street,_Oxford").
+city("Cranfield_School_of_Management","Cranfield").
+country("Manchester","United_Kingdom").
+isPartOf("Manchester","England").
+isPartOf("Manchester","Cheshire").
+isPartOf("Manchester","Lancashire").
+isPartOf("Manchester","Greater_Manchester").
+isPartOf("Manchester","North_West_England").
+isPartOf("University_College,_Oxford","University_of_Oxford").
+location("University_College,_Oxford","Oxford").
+type("Manchester","City_status_in_the_United_Kingdom").
+type("Manchester","Metropolitan_borough").
+type("Cranfield_School_of_Management","Business_School").

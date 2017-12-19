@@ -1,0 +1,11 @@
+keyPerson("Alcatel-Lucent","Philippe_Camus_(businessman)").
+keyPerson("Alcatel-Lucent","Chairman").
+parentCompany("Alcatel-Lucent","Nokia").
+type("Alcatel-Lucent","S.A._(corporation)").
+birthPlace("Philippe_Camus_(businessman)","France").
+birthPlace("Philippe_Camus_(businessman)","Paris").
+keyPerson("Nokia","Rajeev_Suri").
+keyPerson("Nokia","Risto_Siilasmaa").
+nationality("Philippe_Camus_(businessman)","France").
+occupation("Philippe_Camus_(businessman)","Alcatel-Lucent").
+occupation("Philippe_Camus_(businessman)","Philippe_Camus_(businessman)__1").

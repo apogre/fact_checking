@@ -1,0 +1,11 @@
+foundedBy("Mile_High_Comics","Chuck_Rozanski").
+location("Mile_High_Comics","Denver,_Colorado").
+type("Mile_High_Comics","Privately_held_company").
+birthPlace("Chuck_Rozanski","Germany").
+birthPlace("Chuck_Rozanski","Goldbach,_Bavaria").
+occupation("Chuck_Rozanski","Retailer, columnist").
+nationality("Chuck_Rozanski","United_States").
+type("Colorado_Springs,_Colorado","List_of_cities_and_towns_in_Colorado").
+birthPlace("Stefano_Pessina","Pescara").
+nationality("Stefano_Pessina","Monaco").
+occupation("Stefano_Pessina","Stefano_Pessina__1").

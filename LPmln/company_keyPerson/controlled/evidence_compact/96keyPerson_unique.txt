@@ -1,0 +1,12 @@
+foundingYear("Mile_High_Comics","1969").
+foundationPlace("Mile_High_Comics","Colorado_Springs,_Colorado").
+foundedBy("Mile_High_Comics","Chuck_Rozanski").
+industry("Mile_High_Comics","Collectibles").
+location("Mile_High_Comics","Denver,_Colorado").
+type("Mile_High_Comics","Privately_held_company").
+birthPlace("Chuck_Rozanski","Germany").
+birthPlace("Chuck_Rozanski","Goldbach,_Bavaria").
+occupation("Chuck_Rozanski","Retailer, columnist").
+country("Colorado_Springs,_Colorado","United_States").
+type("Colorado_Springs,_Colorado","List_of_cities_and_towns_in_Colorado").
+country("Goldbach,_Bavaria","Germany").

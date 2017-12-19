@@ -1,0 +1,93 @@
+numberOfEmployees("Caterpillar_Inc.","114233").
+foundationPlace("Caterpillar_Inc.","California").
+industry("Caterpillar_Inc.","Financial_services").
+industry("Caterpillar_Inc.","Heavy_equipment").
+keyPerson("Caterpillar_Inc.","Douglas_R._Oberhelman").
+location("Caterpillar_Inc.","Peoria,_Illinois").
+predecessor("Caterpillar_Inc.","C._L._Best").
+predecessor("Caterpillar_Inc.","Holt_Manufacturing_Company").
+type("Caterpillar_Inc.","Public_company").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+industry("Holt_Manufacturing_Company","Agricultural, machinery, construction").
+locationCountry("Holt_Manufacturing_Company","United States").
+predecessor("Holt_Manufacturing_Company","Holt Bros. Manufacturing").
+type("Holt_Manufacturing_Company","Private company").
+activeYearsStartYear("Douglas_R._Oberhelman","1975").
+birthYear("Douglas_R._Oberhelman","1953").
+foundingYear("Holt_Manufacturing_Company","1883").
+numberOfEmployees("Holt_Manufacturing_Company","2100").
+almaMater("Douglas_R._Oberhelman","Millikin_University").
+country("Peoria,_Illinois","United_States").
+foundationPlace("Holt_Manufacturing_Company","Stockton,_California").
+foundedBy("Holt_Manufacturing_Company","Benjamin_Holt").
+hometown("Douglas_R._Oberhelman","Woodstock,_Illinois").
+keyPerson("Holt_Manufacturing_Company","Benjamin_Holt").
+keyPerson("Holt_Manufacturing_Company","C._L._Best").
+largestCity("California","Los_Angeles").
+locationCity("Holt_Manufacturing_Company","Stockton,_California").
+occupation("Douglas_R._Oberhelman","Business_Executive").
+occupation("Douglas_R._Oberhelman","Douglas_R._Oberhelman__1").
+personFunction("Douglas_R._Oberhelman","Douglas_R._Oberhelman__1").
+predecessor("Douglas_R._Oberhelman","James_W._Owens").
+residence("Douglas_R._Oberhelman","Edwards,_Illinois").
+subsidiary("Holt_Manufacturing_Company","Best_Manufacturing_Company").
+successor("Holt_Manufacturing_Company","Caterpillar_Inc.").
+type("Peoria,_Illinois","List_of_cities_in_Illinois").
+birthPlace("Vittorio_Colao","Brescia").
+birthYear("Vittorio_Colao","1961").
+almaMater("Vittorio_Colao","Harvard_University").
+almaMater("Vittorio_Colao","Bocconi_University").
+assets("RCS_MediaGroup","1.368E9").
+assets("Vodafone","1.337E11").
+equity("RCS_MediaGroup","1.0E8").
+equity("Vodafone","6.588E10").
+netIncome("Vodafone","-4.02E9").
+operatingIncome("Vodafone","1.37E9").
+revenue("Vodafone","4.097E10").
+country("Harvard_University","U.S.").
+location("Brescia","Brescia").
+type("Brescia","Cultural").
+foundingYear("RCS_MediaGroup","1927").
+foundingYear("RCS_MediaGroup","1952").
+foundingYear("RCS_MediaGroup","1986").
+foundingYear("RCS_MediaGroup","1997").
+foundingYear("RCS_MediaGroup","2003").
+numberOfEmployees("Vodafone","107667").
+city("Harvard_University","Cambridge,_Massachusetts").
+city("Bocconi_University","Milan").
+country("Brescia","Italy").
+country("Bocconi_University","Italy").
+foundedBy("RCS_MediaGroup","Angelo_Rizzoli").
+industry("RCS_MediaGroup","Mass_media").
+industry("Vodafone","Telecommunication").
+keyPerson("RCS_MediaGroup","Urbano_Cairo").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+keyPerson("Vodafone","Vittorio_Colao").
+location("Vodafone","Newbury,_Berkshire").
+parentCompany("RCS_MediaGroup","Cairo_Communication").
+predecessor("Vodafone","Racal").
+product("RCS_MediaGroup","Radio").
+product("RCS_MediaGroup","Magazines").
+product("RCS_MediaGroup","Newspapers").
+product("RCS_MediaGroup","Advertising").
+product("RCS_MediaGroup","Television").
+product("RCS_MediaGroup","New_Media").
+product("Vodafone","Landline").
+product("Vodafone","Mobile_phone").
+product("Vodafone","Digital_television").
+type("RCS_MediaGroup","S.A._(corporation)").
+type("Vodafone","Public_limited_company").
+type("Harvard_University","Research_university").
+type("Bocconi_University","Private_school").

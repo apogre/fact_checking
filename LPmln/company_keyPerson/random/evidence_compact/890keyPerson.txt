@@ -1,0 +1,14 @@
+location("Singtel","Singapore").
+location("Optus","Australia").
+location("Optus","New_South_Wales").
+location("Optus","Sydney").
+type("Optus","Subsidiary").
+birthPlace("Helge_Lund","Oslo").
+birthPlace("Helge_Lund","Asker").
+occupation("Helge_Lund","Schlumberger").
+occupation("Helge_Lund","Helge_Lund__1").
+location("Oslo","Oslo-Blindern , Norway").
+foundedBy("Schlumberger","Schlumberger_brothers").
+keyPerson("Schlumberger","Paal_Kibsgaard").
+type("Schlumberger","Naamloze_vennootschap").
+type("Norwegian_School_of_Economics","Public_university").

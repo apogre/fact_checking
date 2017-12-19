@@ -1,0 +1,64 @@
+assets("Telstra","4.045E10").
+equity("Telstra","1.451E10").
+netIncome("Telstra","5.8E9").
+operatingIncome("Telstra","6.3E9").
+revenue("Telstra","2.71E10").
+numberOfEmployees("Telstra","36165").
+industry("Telstra","Telecommunication").
+keyPerson("Telstra","Chief_financial_officer").
+keyPerson("Telstra","Chairperson").
+keyPerson("Telstra","Andy_Penn").
+location("Telstra","Melbourne").
+location("Telstra","Telstra_Corporate_Centre").
+location("Telstra","Australia").
+product("Telstra","Internet").
+product("Telstra","Landline").
+product("Telstra","Mobile_phone").
+product("Telstra","Digital_television").
+type("Telstra","Public_company").
+location("Melbourne","Canberra").
+location("Melbourne","Perth").
+location("Melbourne","Sydney").
+location("Melbourne","Adelaide").
+location("Melbourne","Brisbane").
+location("Melbourne","Melbourne City").
+type("Melbourne","city").
+birthYear("Andy_Penn","1963").
+capital("Australia","Canberra").
+country("Melbourne","Australia").
+largestCity("Australia","Sydney").
+location("Telstra_Corporate_Centre","Melbourne,_Australia").
+occupation("Andy_Penn","Chief_Executive_Officer").
+occupation("Andy_Penn","Andy_Penn__1").
+predecessor("Andy_Penn","David_Thodey").
+birthPlace("John_P._Surma","United_States").
+birthPlace("John_P._Surma","Pennsylvania").
+birthPlace("John_P._Surma","Pittsburgh").
+birthYear("John_P._Surma","1954").
+almaMater("John_P._Surma","Penn_State_University").
+occupation("John_P._Surma","John_P._Surma__1").
+occupation("John_P._Surma","United_States_Steel_Corporation").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("Pennsylvania","Pennsylvania").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+capital("United_States","Washington,_D.C.").
+country("Pennsylvania","United_States").
+country("Pittsburgh","United_States").
+isPartOf("Pittsburgh","Pennsylvania").
+isPartOf("Pittsburgh","French_colonization_of_the_Americas").
+isPartOf("Pittsburgh","Allegheny_County,_Pennsylvania").
+isPartOf("Pittsburgh","Colony_of_Virginia").
+isPartOf("Pittsburgh","British_Empire").
+isPartOf("Pittsburgh","New_France").
+largestCity("Pennsylvania","Philadelphia").
+largestCity("United_States","New_York_City").
+type("Pittsburgh","City").

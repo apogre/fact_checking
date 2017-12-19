@@ -1,0 +1,28 @@
+foundingYear("Crown_Worldwide_Group","1965").
+numberOfEmployees("Crown_Worldwide_Group","4600").
+division("Crown_Worldwide_Group","www.crownfineart.com").
+division("Crown_Worldwide_Group","www.crownrms.com").
+division("Crown_Worldwide_Group","www.crown-logistics.com").
+division("Crown_Worldwide_Group","www.crownwinecellars.com").
+division("Crown_Worldwide_Group","www.crownrelo.com").
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+industry("Crown_Worldwide_Group","Warehouse").
+industry("Crown_Worldwide_Group","Relocation_service").
+industry("Crown_Worldwide_Group","Facilities_Management").
+industry("Crown_Worldwide_Group","Records_Management").
+spouse("James_E._Thompson","Sally Thompson").
+birthYear("James_E._Thompson","1940").
+almaMater("James_E._Thompson","San_Jose_State_University").
+occupation("James_E._Thompson","James_E._Thompson__1").
+birthPlace("Antony_Jenkins","Manchester").
+birthYear("Antony_Jenkins","1961").
+almaMater("Antony_Jenkins","University_College,_Oxford").
+almaMater("Antony_Jenkins","Cranfield_School_of_Management").
+occupation("Antony_Jenkins","Antony_Jenkins__1").
+country("Cranfield_School_of_Management","United Kingdom").
+location("University_College,_Oxford","High_Street,_Oxford").
+country("Manchester","United_Kingdom").
+location("University_College,_Oxford","Oxford").
+type("Manchester","City_status_in_the_United_Kingdom").
+type("Manchester","Metropolitan_borough").
+type("Cranfield_School_of_Management","Business_School").

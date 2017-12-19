@@ -1,0 +1,23 @@
+keyPerson("Sbarro","CEO").
+keyPerson("Sbarro","President").
+location("Sbarro","Columbus,_Ohio").
+type("Sbarro","Privately_held_company").
+location("Brooklyn","JFK Airport, New York").
+location("Sbarro_restaurant_suicide_bombing","Israel").
+location("Sbarro_restaurant_suicide_bombing","Jerusalem").
+type("Sbarro_restaurant_suicide_bombing","Suicide_bombing").
+type("Pizza","Lunch or dinner").
+type("Brooklyn","Borough_(New_York_City)").
+type("Columbus,_Ohio","City").
+type("New_York_City","City_(New_York)").
+type("Pizza","Flatbread").
+birthPlace("Dilip_Shanghvi","Mumbai").
+birthPlace("Dilip_Shanghvi","Gujarat").
+birthPlace("Dilip_Shanghvi","Amreli").
+nationality("Dilip_Shanghvi","Indian_people").
+occupation("Dilip_Shanghvi","Sun_Pharmaceuticals").
+occupation("Dilip_Shanghvi","Dilip_Shanghvi__1").
+type("University_of_Calcutta","University and college").
+type("Gujarat","States").
+type("Mumbai","Megacity").
+type("University_of_Calcutta","Public_university").

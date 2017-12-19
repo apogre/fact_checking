@@ -1,0 +1,13 @@
+foundingYear("Nike,_Inc.","1971").
+numberOfEmployees("Nike,_Inc.","62600").
+foundedBy("Nike,_Inc.","Bill_Bowerman").
+foundedBy("Nike,_Inc.","Phil_Knight").
+industry("Nike,_Inc.","Fashion_accessory").
+industry("Nike,_Inc.","Apparel").
+keyPerson("Nike,_Inc.","Phil_Knight").
+location("Nike,_Inc.","Beaverton,_Oregon").
+location("Nike,_Inc.","Washington_County,_Oregon").
+product("Nike,_Inc.","Footwear").
+product("Nike,_Inc.","Apparel").
+product("Nike,_Inc.","Sport_equipment").
+type("Nike,_Inc.","Public_company").

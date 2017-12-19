@@ -1,0 +1,111 @@
+assets("Motorola","1.2679E10").
+assets("Motorola","1.1851E10").
+numberOfEmployees("Motorola","40000").
+location("Motorola","Illinois").
+location("Motorola","Schaumburg,_Illinois").
+location("Motorola","United_States").
+product("Motorola","Cellular_networks").
+product("Motorola","Smartphone").
+product("Motorola","RFID").
+product("Motorola","Two-way_radio").
+product("Motorola","Tablet_computer").
+product("Motorola","Telecommunications_network").
+product("Motorola","Cable_television").
+product("Motorola","Broadband_networks").
+successor("Motorola","Motorola_Mobility").
+successor("Motorola","ON_Semiconductor").
+successor("Motorola","Motorola_Solutions").
+successor("Motorola","Freescale_Semiconductor").
+successor("Motorola","Arris_Group").
+assets("Arris_Group","1.36E9").
+equity("Arris_Group","9.1621E8").
+netIncome("Arris_Group","3.2721E8").
+netIncome("Freescale_Semiconductor","2.51E8").
+operatingIncome("Arris_Group","3.4133E8").
+operatingIncome("Freescale_Semiconductor","7.65E8").
+revenue("Arris_Group","5.322E9").
+revenue("ON_Semiconductor","3.496E9").
+revenue("Freescale_Semiconductor","4.634E9").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Schaumburg,_Illinois","United States").
+locationCountry("Motorola_Mobility","U.S.").
+type("Freescale_Semiconductor","Public").
+foundingYear("Motorola_Solutions","2011").
+foundingYear("Arris_Group","1995").
+foundingYear("ON_Semiconductor","1999").
+foundingYear("Freescale_Semiconductor","2004").
+numberOfEmployees("Motorola_Solutions","14000").
+numberOfEmployees("Motorola_Mobility","3466").
+numberOfEmployees("Arris_Group","6660").
+numberOfEmployees("ON_Semiconductor","24500").
+numberOfEmployees("Freescale_Semiconductor","17300").
+capital("Illinois","Springfield,_Illinois").
+capital("United_States","Washington,_D.C.").
+country("Illinois","United_States").
+foundationPlace("Freescale_Semiconductor","Spin_out").
+industry("Motorola_Solutions","Telecommunications_equipment").
+industry("Motorola_Mobility","Consumer_electronics").
+industry("Motorola_Mobility","Telecoms_equipment").
+industry("Arris_Group","Telecommunications").
+industry("ON_Semiconductor","Semiconductors").
+industry("Freescale_Semiconductor","Semiconductors").
+keyPerson("Motorola_Solutions","Greg_Brown_(businessman)").
+keyPerson("Motorola_Solutions","CEO").
+keyPerson("Arris_Group","Bruce_McClelland").
+keyPerson("Freescale_Semiconductor","CEO").
+largestCity("Illinois","Chicago").
+largestCity("United_States","New_York_City").
+location("Motorola_Solutions","Illinois").
+location("Motorola_Solutions","United_States").
+location("Motorola_Solutions","Chicago,_Illinois").
+location("Arris_Group","Suwanee,_Georgia").
+location("ON_Semiconductor","Phoenix,_Arizona").
+locationCity("Motorola_Mobility","Chicago").
+locationCity("Motorola_Mobility","Illinois").
+locationCity("Motorola_Mobility","Merchandise_Mart").
+locationCity("Freescale_Semiconductor","Texas").
+locationCity("Freescale_Semiconductor","Austin").
+locationCity("Freescale_Semiconductor","United_States_of_America").
+parentCompany("Motorola_Mobility","Google").
+parentCompany("Motorola_Mobility","Lenovo").
+predecessor("Motorola_Solutions","Motorola").
+predecessor("Motorola_Mobility","Motorola").
+product("Motorola_Solutions","Walkie-talkie").
+product("Motorola_Mobility","Smartwatch").
+product("Motorola_Mobility","Mobile_phone").
+product("Motorola_Mobility","Smartphone").
+product("ON_Semiconductor","Discrete_transistor").
+type("Schaumburg,_Illinois","Village").
+type("Motorola_Solutions","Public_company").
+type("Motorola_Mobility","Subsidiary").
+type("Arris_Group","Public_company").
+type("ON_Semiconductor","Public_company").
+birthPlace("Lowell_McAdam","Buffalo,_New_York").
+birthYear("Lowell_McAdam","1954").
+almaMater("Lowell_McAdam","University_of_San_Diego").
+almaMater("Lowell_McAdam","Cornell_University").
+occupation("Lowell_McAdam","Lowell_McAdam__1").
+occupation("Lowell_McAdam","Chief_Executive_Officer").
+occupation("Lowell_McAdam","Chairman").
+country("University_of_San_Diego","U.S.").
+country("Cornell_University","U.S.").
+city("University_of_San_Diego","San_Diego").
+city("Cornell_University","Ithaca,_New_York").
+isPartOf("Buffalo,_New_York","Erie_County,_New_York").
+type("Buffalo,_New_York","City_(New_York)").
+type("University_of_San_Diego","Private_university").
+type("Cornell_University","Private_university").
+type("Cornell_University","Land-grant_university").
+type("Cornell_University","Sea-grant").
+type("Cornell_University","Space-grant").
+type("Cornell_University","Statutory_college").

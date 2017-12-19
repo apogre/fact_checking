@@ -1,0 +1,41 @@
+birthPlace("Jeff_Bezos","Albuquerque,_New_Mexico").
+birthYear("Jeff_Bezos","1964").
+almaMater("Jeff_Bezos","Princeton_University").
+occupation("Jeff_Bezos","Jeff_Bezos__1").
+occupation("Jeff_Bezos","Amazon.com").
+spouse("Jeff_Bezos","MacKenzie_Bezos").
+operatingIncome("Amazon.com","2.233E9").
+birthPlace("MacKenzie_Bezos","California").
+birthPlace("MacKenzie_Bezos","San_Francisco").
+country("Princeton_University","U.S.").
+location("Albuquerque,_New_Mexico","--01-22").
+location("Albuquerque,_New_Mexico","Albuquerque South Valley").
+location("Albuquerque,_New_Mexico","Albuquerque foothills").
+owner("Amazon.com","Jeff Bezos").
+birthYear("MacKenzie_Bezos","1970").
+numberOfEmployees("Amazon.com","268900").
+country("Albuquerque,_New_Mexico","United_States").
+foundationPlace("Amazon.com","Seattle").
+foundationPlace("Amazon.com","United_States").
+foundationPlace("Amazon.com","Washington_(state)").
+foundedBy("Amazon.com","Jeff_Bezos").
+industry("Amazon.com","Internet").
+keyPerson("Amazon.com","Jeff_Bezos").
+keyPerson("Amazon.com","Werner_Vogels").
+location("Amazon.com","Seattle").
+location("Amazon.com","Washington_(state)").
+spouse("MacKenzie_Bezos","Jeff_Bezos").
+subsidiary("Amazon.com","Audible.com").
+subsidiary("Amazon.com","Goodreads").
+subsidiary("Amazon.com","Zappos").
+subsidiary("Amazon.com","Amazon_Web_Services").
+subsidiary("Amazon.com","ComiXology").
+subsidiary("Amazon.com","Digital_Photography_Review").
+subsidiary("Amazon.com","Alexa_Internet").
+subsidiary("Amazon.com","A9.com").
+subsidiary("Amazon.com","Internet_Movie_Database").
+subsidiary("Amazon.com","Junglee.com").
+subsidiary("Amazon.com","Twitch_(website)").
+type("Albuquerque,_New_Mexico","City").
+type("Amazon.com","Public_company").
+type("Princeton_University","Private_university").

@@ -1,0 +1,43 @@
+keyPerson("The_Walt_Disney_Company","Robert_A._Iger").
+type("The_Walt_Disney_Company","Public_company").
+birthPlace("Walt_Disney","Chicago").
+birthPlace("Roy_O._Disney","Chicago").
+birthPlace("Roy_O._Disney","Illinois").
+location("Burbank,_California","Burbank-Glendale-Pasadena Airport, California").
+location("Los_Angeles","Los Angeles").
+occupation("Roy_O._Disney","Entertainment industry executive").
+predecessor("Roy_O._Disney","office created").
+foundedBy("Laugh-O-Gram_Studio","Walt_Disney").
+location("Laugh-O-Gram_Studio","Kansas_City,_Missouri").
+occupation("Walt_Disney","Walt_Disney__1").
+predecessor("Roy_O._Disney","Walt_Disney").
+type("Burbank,_California","Charter_city").
+type("Los_Angeles","Metropolitan_City").
+birthPlace("Bob_Iger","New_York_City").
+birthPlace("Bob_Iger","Oceanside,_New_York").
+birthPlace("Bob_Iger","New_York_(state)").
+nationality("Bob_Iger","United_States").
+occupation("Bob_Iger","Bob_Iger__1").
+predecessor("Bob_Iger","Michael_Eisner").
+birthPlace("Michael_Eisner","New_York_City").
+birthPlace("Michael_Eisner","Mount_Kisco,_New_York").
+birthPlace("Ted_Harbert","New_York_City").
+birthPlace("Ted_Harbert","New_York,_New_York").
+birthPlace("Willow_Bay","New_York_City").
+birthPlace("Willow_Bay","New_York,_New_York").
+nationality("Michael_Eisner","American").
+keyPerson("Apple_Inc.","Arthur_D._Levinson").
+keyPerson("Apple_Inc.","Jeff_Williams_(Apple)").
+keyPerson("Apple_Inc.","Luca_Maestri").
+keyPerson("Apple_Inc.","Tim_Cook").
+keyPerson("Apple_Inc.","Jonathan_Ive").
+nationality("John_E._Pepper,_Jr.","United_States").
+occupation("Michael_Eisner","Michael_Eisner__1").
+occupation("Ted_Harbert","Ted_Harbert__1").
+occupation("Willow_Bay","Willow_Bay__1").
+occupation("Willow_Bay","Television_presenter").
+type("New_York_City","City_(New_York)").
+type("Oceanside,_New_York","Hamlet_(New_York)").
+type("Oceanside,_New_York","Census-designated_place").
+type("Apple_Inc.","Public_company").
+type("Ithaca_College","Private_university").

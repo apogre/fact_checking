@@ -1,0 +1,13 @@
+operatingIncome("Starbucks","5.429E10").
+numberOfEmployees("Starbucks","238000").
+industry("Starbucks","Coffeehouse").
+type("Starbucks","Public_company").
+birthPlace("Denise_Morrison","Long_Branch,_New_Jersey").
+birthYear("Denise_Morrison","1954").
+almaMater("Denise_Morrison","Boston_College").
+occupation("Denise_Morrison","Denise_Morrison__1").
+country("Boston_College","U.S.").
+country("Long_Branch,_New_Jersey","United_States").
+type("Long_Branch,_New_Jersey","City_(New_Jersey)").
+type("Boston_College","Research").
+type("Boston_College","Private_university").

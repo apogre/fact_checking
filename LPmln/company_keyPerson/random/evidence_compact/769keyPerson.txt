@@ -1,0 +1,12 @@
+keyPerson("Pfizer","Ian_Read").
+location("Pfizer","New_York_City").
+type("Pfizer","Public_company").
+birthPlace("Frederick_W._Smith","Mississippi").
+birthPlace("Frederick_W._Smith","Marks,_Mississippi").
+birthPlace("Frederick_W._Smith","United_States").
+parent("Yale_College","Yale_University").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+type("Yale_College","Private_school").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+type("Marks,_Mississippi","City").

@@ -1,0 +1,41 @@
+division("Mozilla","Mozilla_Corporation").
+division("Mozilla","Mozilla_Foundation").
+foundedBy("Mozilla","Netscape").
+industry("Mozilla","Open-source_software").
+industry("Netscape","Internet, Software, & Telecommunication").
+locationCity("Mozilla_Foundation","Mountain_View,_California").
+locationCountry("Mozilla_Foundation","United States").
+locationCountry("Mozilla_Corporation","US").
+type("Netscape","Subsidiary").
+numberOfEmployees("Netscape","2500").
+numberOfEmployees("Mozilla_Corporation","1000").
+keyPerson("Netscape","James_H._Clark").
+keyPerson("Netscape","Marc_Andreessen").
+keyPerson("Netscape","James_Barksdale").
+keyPerson("Mozilla_Corporation","Mitchell_Baker").
+keyPerson("Mozilla_Corporation","Chris_Beard_(executive)").
+location("Netscape","California").
+location("Netscape","Mountain_View,_California").
+location("Netscape","United_States").
+location("Netscape","Virginia").
+location("Netscape","Dulles,_Virginia").
+locationCity("Mozilla_Corporation","Mountain_View,_California").
+parentCompany("Netscape","AOL").
+parentCompany("Mozilla_Corporation","Mozilla_Foundation").
+type("Mozilla_Foundation","501(c)(3)").
+type("Mozilla_Corporation","Privately_held_company").
+birthPlace("Dilip_Shanghvi","Mumbai").
+birthPlace("Dilip_Shanghvi","Gujarat").
+birthPlace("Dilip_Shanghvi","Amreli").
+birthYear("Dilip_Shanghvi","1955").
+almaMater("Dilip_Shanghvi","University_of_Calcutta").
+occupation("Dilip_Shanghvi","Sun_Pharmaceuticals").
+occupation("Dilip_Shanghvi","Dilip_Shanghvi__1").
+type("University_of_Calcutta","University and college").
+type("Gujarat","States").
+country("Mumbai","India").
+country("Amreli","India").
+country("University_of_Calcutta","India").
+country("Gujarat","India").
+type("Mumbai","Megacity").
+type("University_of_Calcutta","Public_university").

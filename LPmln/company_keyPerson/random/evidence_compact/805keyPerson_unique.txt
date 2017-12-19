@@ -1,0 +1,34 @@
+foundedBy("Qwest","Phillip_Anschutz").
+predecessor("Qwest","US_West").
+type("Qwest","CenturyLink").
+predecessor("Qwest_Corporation","Colorado Telephone").
+predecessor("Qwest_Corporation","Rocky Mountain Bell").
+type("US_West","Public").
+keyPerson("CenturyLink","William_Owens_(admiral)").
+keyPerson("CenturyLink","Glen_Post").
+keyPerson("CenturyLink","Chief_Executive_Officer").
+keyPerson("CenturyLink","Chairman").
+location("Qwest_Corporation","Denver").
+location("Qwest_Corporation","Colorado").
+location("Qwest_Corporation","1801_California_Street").
+parentCompany("Qwest_Corporation","CenturyLink").
+parentCompany("Qwest_Corporation","American_Telephone_&_Telegraph").
+parentCompany("Qwest_Corporation","US_West").
+parentCompany("Qwest_Corporation","Qwest").
+predecessor("US_West","Northwestern_Bell").
+predecessor("US_West","American_Telephone_and_Telegraph_Company").
+type("CenturyLink","Public_company").
+type("Qwest_Corporation","CenturyLink").
+birthPlace("Al-Waleed_bin_Talal","Jeddah").
+nationality("Al-Waleed_bin_Talal","Saudi_Arabia").
+nationality("Al-Waleed_bin_Talal","Lebanon").
+occupation("Al-Waleed_bin_Talal","Kingdom_Holding_Company").
+occupation("Al-Waleed_bin_Talal","Al-Waleed_bin_Talal__1").
+birthPlace("Ameera_al-Taweel","Riyadh").
+birthPlace("Ameera_al-Taweel","Saudi_Arabia").
+location("Jeddah","Jeddah").
+nationality("Ameera_al-Taweel","Saudi").
+keyPerson("Kingdom_Holding_Company","Al-Waleed_bin_Talal").
+type("Kingdom_Holding_Company","Holding_company").
+type("Menlo_College","Private_university").
+type("Syracuse_University","Private_university").

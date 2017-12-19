@@ -1,0 +1,22 @@
+keyPerson("SunTrust_Banks","William_H._Rogers,_Jr.").
+location("SunTrust_Banks","Georgia_(U.S._state)").
+location("SunTrust_Banks","Atlanta").
+location("SunTrust_Banks","SunTrust_Plaza").
+type("SunTrust_Banks","Public_company").
+location("SunTrust_Plaza","Peachtree_Street").
+location("SunTrust_Plaza","Atlanta,_Georgia").
+nationality("William_H._Rogers,_Jr.","United_States").
+occupation("William_H._Rogers,_Jr.","William_H._Rogers,_Jr.__1").
+type("Atlanta","City").
+birthPlace("Daymond_John","Queens").
+birthPlace("Daymond_John","Brooklyn").
+birthPlace("Daymond_John","United_States").
+birthPlace("Daymond_John","New_York_City").
+nationality("Daymond_John","United_States").
+occupation("Daymond_John","CEO").
+occupation("Daymond_John","Daymond_John__1").
+location("Brooklyn","JFK Airport, New York").
+type("Brooklyn","Borough_(New_York_City)").
+type("New_York_City","City_(New_York)").
+type("Queens","Borough_(New_York_City)").
+type("Babson_College","Private_university").

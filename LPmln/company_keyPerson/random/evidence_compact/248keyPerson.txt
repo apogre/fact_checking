@@ -1,0 +1,28 @@
+foundedBy("Advanced_Micro_Devices","Jerry_Sanders_(businessman)").
+keyPerson("Advanced_Micro_Devices","Lisa_Su").
+keyPerson("Advanced_Micro_Devices","John_Edward_Caldwell").
+type("Advanced_Micro_Devices","Public_company").
+birthPlace("Lisa_Su","Taiwan").
+birthPlace("Lisa_Su","Tainan").
+location("Sunnyvale,_California","Sunnyvale, California").
+location("Lisa_Su","US").
+nationality("Lisa_Su","United_States").
+occupation("Lisa_Su","Lisa_Su__1").
+occupation("Lisa_Su","AMD").
+type("Sunnyvale,_California","Charter_city").
+birthPlace("Kazuo_Hirai","Tokyo").
+occupation("Kazuo_Hirai","Kazuo_Hirai__1").
+occupation("Kazuo_Hirai","President").
+occupation("Kazuo_Hirai","CEO").
+occupation("Kazuo_Hirai","Sony").
+location("Tokyo","Chichijima, Ogasawara, Tokyo").
+location("Tokyo","Ogouchi, Okutama town, Tokyo").
+foundedBy("Sony","Masaru_Ibuka").
+foundedBy("Sony","Akio_Morita").
+keyPerson("Sony","Kazuo_Hirai").
+keyPerson("Sony","Osamu_Nagayama").
+location("Sony","Minato,_Tokyo").
+type("Tokyo","Prefectures_of_Japan").
+type("Sony","Kabushiki_gaisha").
+type("International_Christian_University","Private_university").
+type("International_Christian_University","Liberal_arts_college").

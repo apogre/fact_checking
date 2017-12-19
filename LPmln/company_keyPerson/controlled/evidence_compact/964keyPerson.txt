@@ -1,0 +1,27 @@
+numberOfEmployees("Sulekha","1300").
+location("Sulekha","Chennai").
+location("Sulekha","Tamil_Nadu").
+location("Sulekha","India").
+regionServed("Sulekha","United_States").
+regionServed("Sulekha","Canada").
+regionServed("Sulekha","India").
+country("Tamil_Nadu","India").
+type("Tamil_Nadu","States_and_union_territories_of_India").
+foundingYear("KPMG","1987").
+numberOfEmployees("KPMG","173965").
+country("Chennai","India").
+industry("KPMG","Professional_services").
+keyPerson("KPMG","John_B._Veihmeyer").
+location("KPMG","Amstelveen").
+type("Chennai","Megacity").
+type("KPMG","Cooperative").
+birthPlace("Hiroshi_Okuda","Tsu,_Mie").
+birthPlace("Fujio_Cho","Japan").
+birthPlace("Fujio_Cho","Tokyo").
+birthPlace("Tatsuro_Toyoda","Nagoya").
+location("Tsu,_Mie","Omu, Tsu, Mie").
+birthYear("Fujio_Cho","1937").
+almaMater("Fujio_Cho","University_of_Tokyo").
+occupation("Fujio_Cho","Fujio_Cho__1").
+occupation("Fujio_Cho","Chairman").
+type("Tsu,_Mie","Cities_of_Japan").

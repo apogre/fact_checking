@@ -1,0 +1,10 @@
+keyPerson("U.S._Century_Bank","Chief_Executive_Officer").
+keyPerson("U.S._Century_Bank","President").
+keyPerson("U.S._Century_Bank","Chairman").
+keyPerson("U.S._Century_Bank","Alex_Acosta").
+keyPerson("U.S._Century_Bank","Luis_de_la_Aguilera").
+location("U.S._Century_Bank","Florida").
+location("U.S._Century_Bank","Miami").
+location("U.S._Century_Bank","Doral,_Florida").
+type("Miami","Metropolitan_City").
+type("Doral,_Florida","List_of_communities_in_Miami-Dade_County,_Florida").

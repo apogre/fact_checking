@@ -1,0 +1,15 @@
+keyPerson("The_Walt_Disney_Company","Robert_A._Iger").
+type("The_Walt_Disney_Company","Public_company").
+birthPlace("Walt_Disney","Chicago").
+birthPlace("Roy_O._Disney","Chicago").
+birthPlace("Roy_O._Disney","Illinois").
+location("Burbank,_California","Burbank-Glendale-Pasadena Airport, California").
+location("Los_Angeles","Los Angeles").
+occupation("Roy_O._Disney","Entertainment industry executive").
+predecessor("Roy_O._Disney","office created").
+foundedBy("Laugh-O-Gram_Studio","Walt_Disney").
+location("Laugh-O-Gram_Studio","Kansas_City,_Missouri").
+occupation("Walt_Disney","Walt_Disney__1").
+predecessor("Roy_O._Disney","Walt_Disney").
+type("Burbank,_California","Charter_city").
+type("Los_Angeles","Metropolitan_City").

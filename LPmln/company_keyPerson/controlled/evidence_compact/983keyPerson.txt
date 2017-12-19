@@ -1,0 +1,6 @@
+birthPlace("Garo_H._Armen","Istanbul").
+birthPlace("Garo_H._Armen","Turkey").
+birthYear("Garo_H._Armen","1953").
+occupation("Garo_H._Armen","Garo_H._Armen__1").
+type("Istanbul","Cultural").
+country("Istanbul","Turkey").

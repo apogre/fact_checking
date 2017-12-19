@@ -1,0 +1,39 @@
+numberOfEmployees("Intel","95000").
+industry("Intel","Semiconductor").
+keyPerson("Intel","Brian_Krzanich").
+keyPerson("Intel","Gordon_Moore").
+keyPerson("Intel","Andy_Bryant").
+type("Intel","Public_company").
+birthPlace("Brian_Krzanich","Santa_Clara_County,_California").
+birthPlace("Gordon_Moore","California").
+birthPlace("Gordon_Moore","San_Francisco").
+birthPlace("Robert_Noyce","Iowa").
+birthPlace("Robert_Noyce","Burlington,_Iowa").
+birthPlace("Andy_Bryant","Independence,_Missouri").
+birthPlace("Andy_Bryant","Mountain_Grove,_Missouri").
+industry("Bluetooth","Mobile personal area networks").
+location("Santa_Clara,_California","Santa Clara, California").
+spouse("Brian_Krzanich","Brandee Krzanich").
+spouse("Andy_Bryant","Nancy").
+birthYear("Brian_Krzanich","1960").
+birthYear("Robert_Noyce","1927").
+birthYear("Andy_Bryant","1950").
+almaMater("Brian_Krzanich","San_Jose_State_University").
+almaMater("Gordon_Moore","California_Institute_of_Technology").
+almaMater("Gordon_Moore","San_Jose_State_University").
+almaMater("Gordon_Moore","University_of_California,_Berkeley").
+almaMater("Robert_Noyce","Grinnell_College").
+almaMater("Robert_Noyce","Massachusetts_Institute_of_Technology").
+almaMater("Andy_Bryant","University_of_Kansas").
+almaMater("Andy_Bryant","University_of_Missouri").
+country("Santa_Clara,_California","United_States_of_America").
+occupation("Brian_Krzanich","Intel").
+occupation("Brian_Krzanich","Brian_Krzanich__1").
+occupation("Robert_Noyce","Fairchild_Semiconductor").
+occupation("Robert_Noyce","Intel").
+occupation("Robert_Noyce","Robert_Noyce__1").
+occupation("Andy_Bryant","Chairman").
+occupation("Andy_Bryant","Intel").
+occupation("Andy_Bryant","Andy_Bryant__1").
+spouse("Robert_Noyce","Elizabeth_Bottomley").
+type("Santa_Clara,_California","City_(California)").

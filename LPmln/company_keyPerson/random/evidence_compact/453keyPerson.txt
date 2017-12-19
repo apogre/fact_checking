@@ -1,0 +1,17 @@
+foundedBy("Electronic_Arts","Trip_Hawkins").
+keyPerson("Electronic_Arts","Andrew_Wilson_(businessman)").
+keyPerson("Electronic_Arts","Larry_Probst").
+keyPerson("Electronic_Arts","Peter_Moore_(business)").
+location("Electronic_Arts","California").
+location("Electronic_Arts","Redwood_City,_California").
+location("Electronic_Arts","United_States").
+type("Electronic_Arts","Public_company").
+birthPlace("Pierre_Nanterme","Lyon").
+location("Lyon","Lyon").
+type("Lyon","Cultural").
+keyPerson("Accenture","Pierre_Nanterme").
+location("Accenture","Dublin").
+location("Accenture","Ireland").
+predecessor("Accenture","Andersen_Consulting").
+type("Accenture","Public_company").
+type("ESSEC_Business_School","Business_school").

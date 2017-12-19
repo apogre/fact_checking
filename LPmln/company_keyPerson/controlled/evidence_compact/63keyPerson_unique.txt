@@ -1,0 +1,15 @@
+foundingYear("Gerdau","1901").
+numberOfEmployees("Gerdau","45000").
+industry("Gerdau","Iron_and_steel").
+keyPerson("Gerdau","CEO").
+keyPerson("Gerdau","Jorge_Gerdau_Johannpeter").
+keyPerson("Gerdau","Chairman").
+location("Gerdau","Brazil").
+location("Gerdau","Porto_Alegre").
+type("Gerdau","S.A._(corporation)").
+birthPlace("Jorge_Gerdau_Johannpeter","Brazil").
+birthPlace("Jorge_Gerdau_Johannpeter","Rio_de_Janeiro").
+location("Porto_Alegre","Porto Alegre").
+birthYear("Jorge_Gerdau_Johannpeter","1936").
+almaMater("Jorge_Gerdau_Johannpeter","Universidade_Federal_do_Rio_Grande_do_Sul").
+country("Porto_Alegre","Brazil").

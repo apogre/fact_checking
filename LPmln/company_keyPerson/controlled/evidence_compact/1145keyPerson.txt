@@ -1,0 +1,15 @@
+numberOfEmployees("Walmart","2").
+numberOfEmployees("Walmart","1").
+foundationPlace("Walmart","United_States").
+foundationPlace("Walmart","Rogers,_Arkansas").
+foundedBy("Walmart","Sam_Walton").
+industry("Walmart","Retail").
+keyPerson("Walmart","Doug_McMillon").
+keyPerson("Walmart","Greg_Penner").
+location("Walmart","Bentonville,_Arkansas").
+owner("Walmart","Walton_family").
+owningCompany("Walmart","Walton_family").
+type("Walmart","Public_company").
+birthYear("Jonathan_I._Schwartz","1965").
+country("Wesleyan_University","U.S.").
+type("Wesleyan_University","Private_university").

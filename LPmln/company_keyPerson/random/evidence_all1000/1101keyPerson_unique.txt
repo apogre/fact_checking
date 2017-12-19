@@ -1,0 +1,66 @@
+numberOfEmployees("Valero_Energy","10103").
+industry("Valero_Energy","List_of_petroleum_companies").
+keyPerson("Valero_Energy","CEO").
+location("Valero_Energy","Texas").
+location("Valero_Energy","United_States").
+location("Valero_Energy","San_Antonio").
+regionServed("Valero_Energy","North_America").
+regionServed("Valero_Energy","Caribbean").
+type("Valero_Energy","Public_company").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+capital("Texas","Austin,_Texas").
+capital("United_States","Washington,_D.C.").
+country("Texas","United_States").
+isPartOf("San_Antonio","Texas").
+isPartOf("San_Antonio","Bexar_County,_Texas").
+isPartOf("San_Antonio","Comal_County,_Texas").
+isPartOf("San_Antonio","Medina_County,_Texas").
+largestCity("Texas","Houston").
+largestCity("United_States","New_York_City").
+type("San_Antonio","City_(Texas)").
+networth("Daymond_John","3.0E8").
+birthPlace("Daymond_John","Queens").
+birthPlace("Daymond_John","Brooklyn").
+birthPlace("Daymond_John","United_States").
+birthPlace("Daymond_John","New_York_City").
+birthYear("Daymond_John","1969").
+knownFor("Daymond_John","FUBU").
+nationality("Daymond_John","United_States").
+occupation("Daymond_John","CEO").
+occupation("Daymond_John","Daymond_John__1").
+residence("Daymond_John","New_York_City").
+stateOfOrigin("Daymond_John","United_States").
+location("Brooklyn","JFK Airport, New York").
+city("Babson_College","Wellesley,_Massachusetts").
+country("Brooklyn","United_States_of_America").
+country("New_York_City","United_States").
+country("Queens","United_States_of_America").
+country("Babson_College","United_States").
+isPartOf("Brooklyn","New_York").
+isPartOf("Brooklyn","New_York_City").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+isPartOf("Queens","New_York").
+isPartOf("Queens","New_York_City").
+type("Brooklyn","Borough_(New_York_City)").
+type("New_York_City","City_(New_York)").
+type("Queens","Borough_(New_York_City)").
+type("Babson_College","Private_university").

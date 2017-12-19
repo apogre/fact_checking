@@ -1,0 +1,2 @@
+nationality("James_M._Wells,_III","People_from_the_United_States").
+occupation("James_M._Wells,_III","James_M._Wells,_III__1").

@@ -1,0 +1,17 @@
+birthPlace("Evan_G._Greenberg","United_States").
+nationality("Evan_G._Greenberg","United_States").
+occupation("Evan_G._Greenberg","Evan_G._Greenberg__1").
+occupation("Evan_G._Greenberg","Chubb_Limited").
+parent("Evan_G._Greenberg","Maurice_R._Greenberg").
+birthPlace("Jeffrey_W._Greenberg","United_States").
+birthPlace("Maurice_R._Greenberg","Chicago").
+birthPlace("Maurice_R._Greenberg","New_York_City").
+birthPlace("Maurice_R._Greenberg","United_States").
+keyPerson("Chubb_Limited","Evan_Greenberg").
+location("Chubb_Limited","Zurich,_Switzerland").
+nationality("Maurice_R._Greenberg","United_States").
+occupation("Jeffrey_W._Greenberg","Jeffrey_W._Greenberg__1").
+occupation("Jeffrey_W._Greenberg","Lawyer").
+occupation("Maurice_R._Greenberg","Maurice_R._Greenberg__1").
+parent("Jeffrey_W._Greenberg","Maurice_R._Greenberg").
+type("Chubb_Limited","Public_company").

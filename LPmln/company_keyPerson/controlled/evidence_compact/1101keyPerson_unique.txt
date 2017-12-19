@@ -1,0 +1,31 @@
+numberOfEmployees("Valero_Energy","10103").
+industry("Valero_Energy","List_of_petroleum_companies").
+keyPerson("Valero_Energy","CEO").
+location("Valero_Energy","Texas").
+location("Valero_Energy","United_States").
+location("Valero_Energy","San_Antonio").
+regionServed("Valero_Energy","North_America").
+regionServed("Valero_Energy","Caribbean").
+type("Valero_Energy","Public_company").
+country("Texas","Texas").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+country("Texas","United_States").
+type("San_Antonio","City_(Texas)").
+birthPlace("Daymond_John","Queens").
+birthPlace("Daymond_John","Brooklyn").
+birthPlace("Daymond_John","United_States").
+birthPlace("Daymond_John","New_York_City").
+birthYear("Daymond_John","1969").
+employer("Daymond_John","FUBU").
+occupation("Daymond_John","CEO").
+occupation("Daymond_John","Daymond_John__1").
+location("Brooklyn","JFK Airport, New York").
+country("Brooklyn","United_States_of_America").
+country("New_York_City","United_States").
+country("Queens","United_States_of_America").
+country("Babson_College","United_States").
+type("Brooklyn","Borough_(New_York_City)").
+type("New_York_City","City_(New_York)").
+type("Queens","Borough_(New_York_City)").
+type("Babson_College","Private_university").

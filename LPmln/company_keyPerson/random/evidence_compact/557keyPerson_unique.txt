@@ -1,0 +1,21 @@
+type("Hewlett-Packard","Public_company").
+birthPlace("David_Packard","Pueblo,_Colorado").
+birthPlace("William_Redington_Hewlett","Ann_Arbor,_Michigan").
+location("Palo_Alto,_California","Palo Alto").
+keyPerson("Hewlett_Packard_Enterprise","Meg_Whitman").
+keyPerson("Hewlett_Packard_Enterprise","Patricia_Russo").
+keyPerson("HP_Inc.","Dion_Weisler").
+keyPerson("HP_Inc.","Meg_Whitman").
+predecessor("Hewlett_Packard_Enterprise","Hewlett-Packard").
+predecessor("David_Packard","Paul_Nitze").
+predecessor("HP_Inc.","Hewlett-Packard").
+type("Hewlett_Packard_Enterprise","Public_company").
+type("Palo_Alto,_California","Charter_city").
+type("HP_Inc.","Public_company").
+birthPlace("Julia_Stewart_(businesswoman)","United_States").
+occupation("Julia_Stewart_(businesswoman)","DineEquity").
+occupation("Julia_Stewart_(businesswoman)","Julia_Stewart_(businesswoman)__1").
+keyPerson("DineEquity","Julia_Stewart_(businesswoman)").
+location("DineEquity","California").
+location("DineEquity","Glendale,_California").
+type("DineEquity","Public_company").

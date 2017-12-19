@@ -1,0 +1,28 @@
+keyPerson("Caterpillar_Inc.","Douglas_R._Oberhelman").
+location("Caterpillar_Inc.","Peoria,_Illinois").
+predecessor("Caterpillar_Inc.","C._L._Best").
+predecessor("Caterpillar_Inc.","Holt_Manufacturing_Company").
+type("Caterpillar_Inc.","Public_company").
+predecessor("Holt_Manufacturing_Company","Holt Bros. Manufacturing").
+type("Holt_Manufacturing_Company","Private company").
+foundedBy("Holt_Manufacturing_Company","Benjamin_Holt").
+keyPerson("Holt_Manufacturing_Company","Benjamin_Holt").
+keyPerson("Holt_Manufacturing_Company","C._L._Best").
+occupation("Douglas_R._Oberhelman","Business_Executive").
+occupation("Douglas_R._Oberhelman","Douglas_R._Oberhelman__1").
+predecessor("Douglas_R._Oberhelman","James_W._Owens").
+type("Peoria,_Illinois","List_of_cities_in_Illinois").
+birthPlace("Vittorio_Colao","Brescia").
+location("Brescia","Brescia").
+type("Brescia","Cultural").
+foundedBy("RCS_MediaGroup","Angelo_Rizzoli").
+keyPerson("RCS_MediaGroup","Urbano_Cairo").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+keyPerson("Vodafone","Vittorio_Colao").
+location("Vodafone","Newbury,_Berkshire").
+parentCompany("RCS_MediaGroup","Cairo_Communication").
+predecessor("Vodafone","Racal").
+type("RCS_MediaGroup","S.A._(corporation)").
+type("Vodafone","Public_limited_company").
+type("Harvard_University","Research_university").
+type("Bocconi_University","Private_school").

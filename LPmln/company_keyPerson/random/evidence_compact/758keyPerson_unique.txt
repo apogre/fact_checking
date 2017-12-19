@@ -1,0 +1,23 @@
+parentCompany("Outback_Steakhouse","Bloomin'_Brands").
+type("Outback_Steakhouse","Subsidiary").
+location("Costa_Rica","Costa Rica").
+location("Venezuela","right").
+location("Guam","Guam").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+foundedBy("Bloomin'_Brands","J._Timothy_Gannon").
+foundedBy("Bloomin'_Brands","Chris_T._Sullivan").
+keyPerson("Bloomin'_Brands","Chief_brand_officer").
+keyPerson("Bloomin'_Brands","President").
+keyPerson("Bloomin'_Brands","Chief_executive_officer").
+keyPerson("Bloomin'_Brands","Vice_president").
+keyPerson("Bloomin'_Brands","Chairman").
+keyPerson("Bloomin'_Brands","CFO").
+location("Bloomin'_Brands","Tampa,_Florida").
+type("Bloomin'_Brands","Public_company").
+occupation("Scott_Etzler","Scott_Etzler__1").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+type("Indiana_University","Public_University").
+type("Northwestern_University","Private_university").
+type("Kellogg_School_of_Management","Private_university").

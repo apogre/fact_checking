@@ -1,0 +1,11 @@
+foundedBy("GVK_(conglomerate)","Gunupati_Venkata_Krishna_Reddy").
+type("GVK_(conglomerate)","Private_Company").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+nationality("Gunupati_Venkata_Krishna_Reddy","India").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+type("Padma_Bhushan","Civilian").
+type("Andhra_Pradesh","States_of_India").

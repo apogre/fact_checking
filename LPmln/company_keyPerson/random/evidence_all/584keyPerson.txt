@@ -1,0 +1,56 @@
+assets("IKEA","4.4667E10").
+equity("IKEA","3.1608E10").
+netIncome("IKEA","3.329E9").
+operatingIncome("IKEA","3.793E9").
+revenue("IKEA","2.9293E10").
+foundingYear("IKEA","1943").
+numberOfEmployees("IKEA","172000").
+foundationPlace("IKEA","Sweden").
+foundedBy("IKEA","Ingvar_Kamprad").
+keyPerson("IKEA","CEO").
+location("IKEA","Delft").
+parentCompany("IKEA","Stichting_INGKA_Foundation").
+product("IKEA","Self-assembly_furniture").
+type("IKEA","Privately_held_company").
+networth("Ingvar_Kamprad","3.4E9").
+networth("Ingvar_Kamprad","4.18E10").
+largestCity("Sweden","capital").
+birthYear("Ingvar_Kamprad","1926").
+capital("Sweden","Stockholm").
+country("Delft","Netherlands").
+isPartOf("Delft","South_Holland").
+occupation("Ingvar_Kamprad","IKEA").
+occupation("Ingvar_Kamprad","Ingvar_Kamprad__1").
+type("Delft","List_of_municipalities_of_the_Netherlands").
+type("Delft","Cities_of_the_Netherlands").
+birthPlace("John_P._Surma","United_States").
+birthPlace("John_P._Surma","Pennsylvania").
+birthPlace("John_P._Surma","Pittsburgh").
+birthYear("John_P._Surma","1954").
+almaMater("John_P._Surma","Penn_State_University").
+occupation("John_P._Surma","John_P._Surma__1").
+occupation("John_P._Surma","United_States_Steel_Corporation").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("Pennsylvania","Pennsylvania").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+capital("United_States","Washington,_D.C.").
+country("Pennsylvania","United_States").
+country("Pittsburgh","United_States").
+isPartOf("Pittsburgh","Pennsylvania").
+isPartOf("Pittsburgh","French_colonization_of_the_Americas").
+isPartOf("Pittsburgh","Allegheny_County,_Pennsylvania").
+isPartOf("Pittsburgh","Colony_of_Virginia").
+isPartOf("Pittsburgh","British_Empire").
+isPartOf("Pittsburgh","New_France").
+largestCity("Pennsylvania","Philadelphia").
+largestCity("United_States","New_York_City").
+type("Pittsburgh","City").

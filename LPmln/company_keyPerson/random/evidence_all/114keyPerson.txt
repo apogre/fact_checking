@@ -1,0 +1,101 @@
+numberOfEmployees("PepsiCo","263000").
+foundationPlace("PepsiCo","New_Bern,_North_Carolina").
+foundationPlace("PepsiCo","North_Carolina").
+foundationPlace("PepsiCo","United_States").
+industry("PepsiCo","Beverages").
+industry("PepsiCo","Food_processing").
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+subsidiary("PepsiCo","List_of_assets_owned_by_PepsiCo").
+type("PepsiCo","Public_company").
+networth("Indra_Nooyi","1.44E8").
+birthPlace("Donald_M._Kendall","Sequim,_Washington").
+birthPlace("Herman_Lay","Charlotte,_North_Carolina").
+birthPlace("Caleb_Bradham","North_Carolina").
+birthPlace("Caleb_Bradham","Chinquapin,_North_Carolina").
+birthPlace("Indra_Nooyi","Chennai").
+birthPlace("Indra_Nooyi","India").
+birthPlace("Indra_Nooyi","Madras_State").
+birthPlace("Indra_Nooyi","Madras").
+deathPlace("Herman_Lay","Dallas").
+deathPlace("Herman_Lay","U.S.A").
+deathPlace("Herman_Lay","Dallas,_Texas").
+deathPlace("Caleb_Bradham","New_Bern,_North_Carolina").
+city("North_Carolina","Cary, North CarolinaCary").
+city("North_Carolina","Charlotte, North CarolinaCharlotte").
+city("North_Carolina","Durham, North CarolinaDurham").
+city("North_Carolina","Fayetteville, North CarolinaFayetteville").
+city("North_Carolina","Greensboro, North CarolinaGreensboro").
+city("North_Carolina","Greenville, North CarolinaGreenville").
+city("North_Carolina","High Point, North CarolinaHigh Point").
+city("North_Carolina","Raleigh, North CarolinaRaleigh").
+city("North_Carolina","Wilmington, North CarolinaWilmington").
+city("North_Carolina","Winston-Salem, North CarolinaWinston-Salem").
+country("North_Carolina","North Carolina").
+location("New_Bern,_North_Carolina","New Bern, North Carolina").
+birthYear("Donald_M._Kendall","1921").
+birthYear("Herman_Lay","1909").
+birthYear("Caleb_Bradham","1867").
+birthYear("Indra_Nooyi","1955").
+deathYear("Herman_Lay","1982").
+deathYear("Caleb_Bradham","1934").
+almaMater("Indra_Nooyi","Yale_School_of_Management").
+almaMater("Indra_Nooyi","Indian_Institute_of_Management_Calcutta").
+almaMater("Indra_Nooyi","Madras_Christian_College").
+capital("North_Carolina","Raleigh,_North_Carolina").
+capital("United_States","Washington,_D.C.").
+country("New_Bern,_North_Carolina","United_States").
+country("North_Carolina","United_States").
+country("Purchase,_New_York","United_States").
+isPartOf("New_Bern,_North_Carolina","North_Carolina").
+isPartOf("New_Bern,_North_Carolina","Craven_County,_North_Carolina").
+isPartOf("Purchase,_New_York","Harrison,_New_York").
+isPartOf("Purchase,_New_York","Westchester_County,_New_York").
+isPartOf("Purchase,_New_York","New_York_(state)").
+largestCity("North_Carolina","Charlotte,_North_Carolina").
+largestCity("United_States","New_York_City").
+occupation("Donald_M._Kendall","Donald_M._Kendall__1").
+occupation("Herman_Lay","Herman_Lay__1").
+occupation("Caleb_Bradham","Caleb_Bradham__1").
+occupation("Caleb_Bradham","Pepsi").
+occupation("Caleb_Bradham","Pharmacist").
+occupation("Indra_Nooyi","Chairperson").
+occupation("Indra_Nooyi","Indra_Nooyi__1").
+residence("Indra_Nooyi","Greenwich,_Connecticut").
+type("New_Bern,_North_Carolina","City").
+type("Purchase,_New_York","Hamlet_(New_York)").
+birthPlace("Steven_Reinemund","New_York_City").
+city("Yale_School_of_Management","New_Haven").
+country("Yale_School_of_Management","United_States").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+type("Yale_School_of_Management","Business_school").
+type("Yale_School_of_Management","Private_school").
+type("Indian_Institute_of_Management_Calcutta","Institute").
+type("Madras_Christian_College","Government Aided").
+birthYear("Steven_Reinemund","1948").
+capital("India","New_Delhi").
+city("Indian_Institute_of_Management_Calcutta","Kolkata").
+city("Indian_Institute_of_Management_Calcutta","Joka,_Kolkata").
+city("Madras_Christian_College","Chennai").
+city("Madras_Christian_College","Tambaram").
+country("Chennai","India").
+country("Greenwich,_Connecticut","United_States").
+country("Indian_Institute_of_Management_Calcutta","India").
+country("Madras_Christian_College","India").
+isPartOf("Chennai","Chennai_district").
+isPartOf("Chennai","Kanchipuram_District").
+isPartOf("Chennai","Tamil_Nadu").
+isPartOf("Chennai","Tamil_language").
+isPartOf("Chennai","Tiruvallur_District").
+isPartOf("Greenwich,_Connecticut","Connecticut").
+largestCity("India","Mumbai").
+nationality("Steven_Reinemund","United_States_of_America").
+personFunction("Steven_Reinemund","Steven_Reinemund__1").
+predecessor("Steven_Reinemund","Roger_Enrico").
+residence("Steven_Reinemund","Winston-Salem,_North_Carolina").
+stateOfOrigin("Steven_Reinemund","United_States_of_America").
+successor("Steven_Reinemund","Indra_Nooyi").
+type("Chennai","Megacity").
+type("Greenwich,_Connecticut","New_England_town").
+type("Indian_Institute_of_Management_Calcutta","Public_university").

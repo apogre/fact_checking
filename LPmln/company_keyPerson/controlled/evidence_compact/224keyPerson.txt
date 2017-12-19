@@ -1,0 +1,3 @@
+industry("Agenus","Biotechnology").
+industry("Agenus","Pharmaceutical_Company").
+occupation("James_M._Wells,_III","James_M._Wells,_III__1").

@@ -1,0 +1,61 @@
+assets("U.S._Steel","9.326E9").
+equity("U.S._Steel","2.546E9").
+netIncome("U.S._Steel","1.508E9").
+operatingIncome("U.S._Steel","1.055E9").
+revenue("U.S._Steel","1.1574E10").
+numberOfEmployees("U.S._Steel","37000").
+foundationPlace("U.S._Steel","Carnegie_Steel").
+foundationPlace("U.S._Steel","William_Henry_%22Judge%22_Moore").
+industry("U.S._Steel","Steel").
+keyPerson("U.S._Steel","Mario_Longhi").
+location("U.S._Steel","Pennsylvania").
+location("U.S._Steel","United_States").
+location("U.S._Steel","U.S._Steel_Tower").
+location("U.S._Steel","Pittsburgh,_Pennsylvania").
+product("U.S._Steel","Steel").
+regionServed("U.S._Steel","World").
+type("U.S._Steel","Public_company").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("Pennsylvania","Pennsylvania").
+owner("U.S._Steel_Tower","The 601W Companies").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+capital("United_States","Washington,_D.C.").
+country("Pennsylvania","United_States").
+largestCity("Pennsylvania","Philadelphia").
+largestCity("United_States","New_York_City").
+location("U.S._Steel_Tower","Pennsylvania").
+location("U.S._Steel_Tower","Pittsburgh").
+location("U.S._Steel_Tower","Grant_Street").
+nationality("Mario_Longhi","United_States").
+almaMater("Krishnakumar_Natarajan","XLRI").
+almaMater("Krishnakumar_Natarajan","College_of_Engineering,_Guindy").
+occupation("Krishnakumar_Natarajan","NASSCOM").
+occupation("Krishnakumar_Natarajan","Mindtree").
+occupation("Krishnakumar_Natarajan","Krishnakumar_Natarajan__1").
+locationCountry("Mindtree","India").
+foundingYear("Mindtree","1999").
+numberOfEmployees("Mindtree","16110").
+city("College_of_Engineering,_Guindy","Chennai").
+country("College_of_Engineering,_Guindy","India").
+foundedBy("Mindtree","Krishnakumar_Natarajan").
+foundedBy("Mindtree","Ashok_Soota").
+foundedBy("Mindtree","Subroto_Bagchi").
+headquarter("NASSCOM","Delhi").
+headquarter("NASSCOM","India").
+headquarter("NASSCOM","New_Delhi").
+headquarter("NASSCOM","Chanakyapuri").
+industry("Mindtree","IT_service_management").
+industry("Mindtree","Information_technology_consulting").
+locationCity("Mindtree","Bangalore").
+type("College_of_Engineering,_Guindy","Public_University").
+type("Mindtree","Public_company").
+type("NASSCOM","Non-profit_organisation").

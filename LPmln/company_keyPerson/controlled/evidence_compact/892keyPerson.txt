@@ -1,0 +1,38 @@
+operatingIncome("Singtel","5.013E9").
+numberOfEmployees("Singtel","25000").
+industry("Singtel","Telecommunications").
+location("Singtel","Singapore").
+regionServed("Singtel","Australia").
+subsidiary("Singtel","Optus").
+foundingYear("Optus","1981").
+industry("Optus","Telecommunication").
+location("Optus","Australia").
+location("Optus","New_South_Wales").
+location("Optus","Sydney").
+type("Optus","Subsidiary").
+birthPlace("Mitchell_Baker","Berkeley,_California").
+birthPlace("Mitchell_Baker","Oakland,_California").
+birthYear("Mitchell_Baker","1959").
+almaMater("Mitchell_Baker","Boalt_Hall_School_of_Law").
+almaMater("Mitchell_Baker","University_of_California,_Berkeley").
+occupation("Mitchell_Baker","Mozilla_Foundation").
+occupation("Mitchell_Baker","Mozilla_Corporation").
+occupation("Mitchell_Baker","Mitchell_Baker__1").
+country("University_of_California,_Berkeley","U.S.").
+location("Berkeley,_California","Berkeley, California").
+location("Oakland,_California","Oakland Museum").
+locationCity("Mozilla_Foundation","Mountain_View,_California").
+locationCountry("Mozilla_Foundation","United States").
+locationCountry("Mozilla_Corporation","US").
+numberOfEmployees("Mozilla_Corporation","1000").
+keyPerson("Mozilla_Corporation","Mitchell_Baker").
+keyPerson("Mozilla_Corporation","Chris_Beard_(executive)").
+locationCity("Mozilla_Corporation","Mountain_View,_California").
+parentCompany("Mozilla_Corporation","Mozilla_Foundation").
+type("Berkeley,_California","Charter_city").
+type("Oakland,_California","Charter_city").
+type("University_of_California,_Berkeley","Public_university").
+type("University_of_California,_Berkeley","Flagship_university").
+type("University_of_California,_Berkeley","Land-grant_University").
+type("Mozilla_Foundation","501(c)(3)").
+type("Mozilla_Corporation","Privately_held_company").

@@ -1,0 +1,52 @@
+netIncome("UGI_Corporation","3.37E8").
+operatingIncome("UGI_Corporation","1006.0").
+revenue("UGI_Corporation","8277.0").
+foundingYear("UGI_Corporation","1882").
+industry("UGI_Corporation","Energy_industry").
+locationCity("UGI_Corporation","King_of_Prussia,_Pennsylvania").
+locationCountry("UGI_Corporation","United_States").
+regionServed("UGI_Corporation","Pennsylvania").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("King_of_Prussia,_Pennsylvania","United States").
+country("Pennsylvania","Pennsylvania").
+location("King_of_Prussia,_Pennsylvania","King of Prussia, Pennsylvania").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+capital("United_States","Washington,_D.C.").
+country("Pennsylvania","United_States").
+largestCity("Pennsylvania","Philadelphia").
+largestCity("United_States","New_York_City").
+type("King_of_Prussia,_Pennsylvania","Census-designated_place").
+birthYear("Rich_Lesser","1963").
+almaMater("Rich_Lesser","University_of_Michigan").
+almaMater("Rich_Lesser","Harvard_Business_School").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Management_Consultant").
+personFunction("Rich_Lesser","Rich_Lesser__1").
+revenue("Boston_Consulting_Group","5.0E9").
+country("Harvard_Business_School","U.S.").
+country("University_of_Michigan","United States").
+foundingYear("Boston_Consulting_Group","1963").
+numberOfEmployees("Boston_Consulting_Group","6200").
+city("Harvard_Business_School","Boston").
+city("University_of_Michigan","Ann_Arbor,_Michigan").
+industry("Boston_Consulting_Group","Management_consulting").
+keyPerson("Boston_Consulting_Group","Rich_Lesser").
+location("Boston_Consulting_Group","Boston").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+type("Harvard_Business_School","Private_school").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").
+type("Boston_Consulting_Group","Privately_held_company").

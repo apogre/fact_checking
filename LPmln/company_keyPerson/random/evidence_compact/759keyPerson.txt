@@ -1,0 +1,21 @@
+parentCompany("Outback_Steakhouse","Bloomin'_Brands").
+type("Outback_Steakhouse","Subsidiary").
+location("Costa_Rica","Costa Rica").
+location("Venezuela","right").
+location("Guam","Guam").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+foundedBy("Bloomin'_Brands","J._Timothy_Gannon").
+foundedBy("Bloomin'_Brands","Chris_T._Sullivan").
+keyPerson("Bloomin'_Brands","Chief_brand_officer").
+keyPerson("Bloomin'_Brands","President").
+keyPerson("Bloomin'_Brands","Chief_executive_officer").
+keyPerson("Bloomin'_Brands","Vice_president").
+keyPerson("Bloomin'_Brands","Chairman").
+keyPerson("Bloomin'_Brands","CFO").
+location("Bloomin'_Brands","Tampa,_Florida").
+type("Bloomin'_Brands","Public_company").
+birthPlace("Tom_L._Ward","Seiling,_Oklahoma").
+occupation("Tom_L._Ward","Tapstone_Energy").
+occupation("Tom_L._Ward","Tom_L._Ward__1").
+type("Seiling,_Oklahoma","City").

@@ -1,0 +1,22 @@
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+type("Playboy_Enterprises","Privately_held_company").
+birthPlace("Hugh_Hefner","Chicago").
+birthPlace("Scott_Flanders","Indiana").
+birthPlace("Scott_Flanders","Indianapolis").
+nationality("Scott_Flanders","American").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+occupation("Scott_Flanders","Scott_Flanders__1").
+type("Beverly_Hills,_California","General_law_city").
+birthPlace("Dilip_Shanghvi","Mumbai").
+birthPlace("Dilip_Shanghvi","Gujarat").
+birthPlace("Dilip_Shanghvi","Amreli").
+nationality("Dilip_Shanghvi","Indian_people").
+occupation("Dilip_Shanghvi","Sun_Pharmaceuticals").
+occupation("Dilip_Shanghvi","Dilip_Shanghvi__1").
+type("University_of_Calcutta","University and college").
+type("Gujarat","States").
+type("Mumbai","Megacity").
+type("University_of_Calcutta","Public_university").

@@ -1,0 +1,4 @@
+location("Popular,_Inc.","Hato_Rey").
+location("Popular,_Inc.","San_Juan,_Puerto_Rico").
+type("Popular,_Inc.","Public_company").
+type("San_Juan,_Puerto_Rico","Municipalities_of_Puerto_Rico").

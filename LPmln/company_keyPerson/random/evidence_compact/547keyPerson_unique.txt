@@ -1,0 +1,20 @@
+foundedBy("Halliburton","Erle_P._Halliburton").
+keyPerson("Halliburton","President").
+keyPerson("Halliburton","David_Lesar").
+keyPerson("Halliburton","CEO").
+keyPerson("Halliburton","Chairman").
+location("Halliburton","Houston,_Texas").
+type("Halliburton","Public_company").
+birthPlace("Erle_P._Halliburton","Duncan,_Oklahoma").
+location("Duncan,_Oklahoma","Duncan, Oklahoma").
+birthPlace("Lowell_McAdam","Buffalo,_New_York").
+occupation("Lowell_McAdam","Lowell_McAdam__1").
+occupation("Lowell_McAdam","Chief_Executive_Officer").
+occupation("Lowell_McAdam","Chairman").
+type("Buffalo,_New_York","City_(New_York)").
+type("University_of_San_Diego","Private_university").
+type("Cornell_University","Private_university").
+type("Cornell_University","Land-grant_university").
+type("Cornell_University","Sea-grant").
+type("Cornell_University","Space-grant").
+type("Cornell_University","Statutory_college").

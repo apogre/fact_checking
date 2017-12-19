@@ -1,0 +1,13 @@
+operatingIncome("Statoil","2.7E10").
+numberOfEmployees("Statoil","21600").
+industry("Statoil","Oil_and_gas_industry").
+keyPerson("Statoil","Hans_Jakob_Hegge").
+location("Statoil","Norway").
+location("Statoil","Stavanger").
+owner("Statoil","Government_Pension_Fund_of_Norway").
+owner("Statoil","Government_of_Norway").
+owningCompany("Statoil","Government_Pension_Fund_of_Norway").
+owningCompany("Statoil","Government_of_Norway").
+type("Statoil","Public").
+location("Stavanger","Stavanger").
+country("Stavanger","Norway").

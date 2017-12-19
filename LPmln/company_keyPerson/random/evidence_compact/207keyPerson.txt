@@ -1,0 +1,32 @@
+keyPerson("ACE_Limited","Evan_G._Greenberg").
+birthPlace("Evan_G._Greenberg","United_States").
+location("Hamilton,_Bermuda","Hamilton, Bermuda").
+nationality("Evan_G._Greenberg","United_States").
+occupation("Evan_G._Greenberg","Evan_G._Greenberg__1").
+occupation("Evan_G._Greenberg","Chubb_Limited").
+parent("Evan_G._Greenberg","Maurice_R._Greenberg").
+birthPlace("Walter_Kwok","Hong_Kong").
+occupation("Walter_Kwok","Walter_Kwok__1").
+occupation("Walter_Kwok","Sun_Hung_Kai_Properties").
+parent("Walter_Kwok","Kwok_Tak_Seng").
+parent("Walter_Kwok","Kwong_Siu-hing").
+birthPlace("Raymond_Kwok","Hong_Kong").
+birthPlace("Thomas_Kwok","Macau").
+birthPlace("Thomas_Kwok","Portuguese_Macau").
+birthPlace("Raymond_Kwok","Hong Kong").
+location("Sun_Hung_Kai_Properties","Hong Kong, SAR").
+location("Sun_Hung_Kai_Properties","Sun Hung Kai Centre,").
+type("Sun_Hung_Kai_Properties","Public").
+foundedBy("Sun_Hung_Kai_Properties","Kwok_Tak_Seng").
+foundedBy("Sun_Hung_Kai_Properties","Lee_Shau_Kee").
+foundedBy("Sun_Hung_Kai_Properties","Fung_King_Hey").
+keyPerson("Sun_Hung_Kai_Properties","Raymond_Kwok").
+keyPerson("Sun_Hung_Kai_Properties","Adam_Kwok").
+occupation("Raymond_Kwok","Sun_Hung_Kai_Properties").
+occupation("Raymond_Kwok","Raymond_Kwok__1").
+occupation("Thomas_Kwok","Sun_Hung_Kai_Properties").
+occupation("Thomas_Kwok","Thomas_Kwok__1").
+parent("Raymond_Kwok","Kwong_Siu-hing").
+parent("Raymond_Kwok","Kwok_Tak_Seng").
+parent("Thomas_Kwok","Kwong_Siu-hing").
+parent("Thomas_Kwok","Kwok_Tak_Seng").

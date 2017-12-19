@@ -1,0 +1,40 @@
+not_keyPerson(A,B) :- keyPerson(C,B) , parentCompany(D,C) , parentCompany(A,D),-0.004878
+not_keyPerson(A,B) :- location(A,C) , country(C,D) , deathPlace(B,D),0.700000
+not_keyPerson(A,B) :- networth(B,C) , C>D , netIncome(A,D),0.002574
+not_keyPerson(A,B) :- birthYear(B,C) , C>D , numberOfEmployees(A,D),0.000000
+not_keyPerson(A,B) :- keyPerson(A,C) , parent(C,B),-0.002439
+not_keyPerson(A,B) :- keyPerson(C,B) , recordLabel(D,C) , recordLabel(D,A),0.009007
+not_keyPerson(A,B) :- keyPerson(C,B) , locationCountry(C,D) , headquarter(A,D),0.000000
+not_keyPerson(A,B) :- foundedBy(A,B) , keyPerson(C,B) , owner(C,B),2.800000
+not_keyPerson(A,B) :- subsidiary(C,A) , C!=D , occupation(B,D),0.009007
+not_keyPerson(A,B) :- occupation(B,C) , subsidiary(C,A),0.001287
+not_keyPerson(A,B) :- headquarter(A,C) , locationCity(D,C) , keyPerson(D,B),0.000000
+not_keyPerson(A,B) :- keyPerson(A,C) , occupation(C,A) , foundedBy(A,B),5.596341
+not_keyPerson(A,B) :- headquarter(A,C) , location(D,C) , keyPerson(D,B),0.000000
+not_keyPerson(A,B) :- numberOfEmployees(A,C) , C>D , birthYear(B,D),-0.036585
+not_keyPerson(A,B) :- occupation(B,C) , C!=D , subsidiary(D,A),0.009007
+not_keyPerson(A,B) :- parentCompany(A,C) , locationCity(C,D) , birthPlace(B,D),0.002574
+not_keyPerson(A,B) :- birthPlace(B,C) , locationCity(D,C) , parentCompany(A,D),0.002574
+not_keyPerson(A,B) :- foundedBy(C,B) , locationCity(C,D) , location(A,D),0.870122
+not_keyPerson(A,B) :- numberOfEmployees(A,C) , C>D , activeYearsStartYear(B,D),-0.001220
+not_keyPerson(A,B) :- foundedBy(A,B),23.045122
+not_keyPerson(A,B) :- location(A,C) , locationCity(D,C) , foundedBy(D,B),0.006434
+not_keyPerson(A,B) :- activeYearsStartYear(B,C) , C>D , foundingYear(A,D),0.016728
+not_keyPerson(A,B) :- netIncome(A,C) , C>D , networth(B,D),1.395122
+not_keyPerson(A,B) :- foundingYear(A,C) , C>D , deathYear(B,D),0.012868
+not_keyPerson(A,B) :- foundedBy(C,B) , parentCompany(C,A),-0.004878
+not_keyPerson(A,B) :- headquarter(A,C) , locationCountry(D,C) , keyPerson(D,B),0.000000
+not_keyPerson(A,B) :- recordLabel(C,A) , recordLabel(C,D) , keyPerson(D,B),2.450000
+not_keyPerson(A,B) :- birthPlace(B,C) , headquarter(A,C),0.006434
+not_keyPerson(A,B) :- keyPerson(C,B) , location(C,D) , headquarter(A,D),-0.007317
+not_keyPerson(A,B) :- birthPlace(B,C) , largestCity(D,C) , location(A,D),0.039739
+not_keyPerson(A,B) :- parentCompany(A,C) , parentCompany(C,D) , keyPerson(D,B),0.000000
+not_keyPerson(A,B) :- keyPerson(C,B) , locationCity(C,D) , headquarter(A,D),0.000000
+not_keyPerson(A,B) :- deathYear(B,C) , C>D , foundingYear(A,D),3.491463
+not_keyPerson(A,B) :- parentCompany(A,C) , location(C,D) , birthPlace(B,D),0.002574
+not_keyPerson(A,B) :- parentCompany(C,A) , C!=D , foundedBy(D,B),0.009007
+not_keyPerson(A,B) :- industry(A,C) , product(A,C) , foundedBy(A,B),0.276341
+not_keyPerson(A,B) :- foundedBy(A,B) , birthPlace(B,C) , location(A,C),0.002574
+not_keyPerson(A,B) :- foundingYear(A,C) , C>D , activeYearsStartYear(B,D),1.774878
+not_keyPerson(A,B) :- foundedBy(A,B) , foundedBy(C,B) , parentCompany(C,A),0.000000
+not_keyPerson(A,B) :- foundedBy(C,B) , C!=D , parentCompany(D,A),0.009007

@@ -1,0 +1,32 @@
+foundedBy("Canonical_(company)","Mark_Shuttleworth").
+keyPerson("Canonical_(company)","Jane_Silber").
+keyPerson("Canonical_(company)","Mark_Shuttleworth").
+location("Canonical_(company)","London").
+location("Canonical_(company)","United_Kingdom").
+type("Canonical_(company)","Private_company_limited_by_shares").
+birthPlace("Mark_Shuttleworth","South_Africa").
+birthPlace("Mark_Shuttleworth","Welkom").
+birthPlace("Mark_Shuttleworth","Free_State_(province)").
+birthPlace("Jane_Silber","United_States").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("Launchpad_(website)","Project Hosting Server").
+nationality("Mark_Shuttleworth","South_Africa").
+nationality("Mark_Shuttleworth","United_Kingdom").
+occupation("Mark_Shuttleworth","Mark_Shuttleworth__1").
+birthPlace("Christie_Hefner","Chicago,_Illinois").
+birthPlace("Christie_Hefner","Illinois").
+birthPlace("Christie_Hefner","Wilmette,_Illinois").
+occupation("Christie_Hefner","Christie_Hefner__1").
+parent("Christie_Hefner","Hugh_Hefner").
+birthPlace("Hugh_Hefner","Chicago").
+type("Playboy_Enterprises","magazine website, erotica").
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+type("Chicago","City").
+type("Playboy_Enterprises","Privately_held_company").
+type("Wilmette,_Illinois","List_of_towns_and_villages_in_Illinois").
+type("Brandeis_University","Private_university").

@@ -1,0 +1,13 @@
+foundedBy("Bharti_Enterprises","Sunil_Bharti_Mittal").
+keyPerson("Bharti_Enterprises","Sunil_Bharti_Mittal").
+keyPerson("Bharti_Enterprises","Chairman").
+location("Bharti_Enterprises","India").
+location("Bharti_Enterprises","New_Delhi").
+type("Bharti_Enterprises","Private_company").
+foundedBy("Bharti_Airtel","Sunil_Bharti_Mittal").
+keyPerson("Bharti_Airtel","Sunil_Bharti_Mittal").
+location("Bharti_Airtel","India").
+location("Bharti_Airtel","Nelson_Mandela_Road").
+parentCompany("Bharti_Airtel","Bharti_Enterprises").
+type("New_Delhi","List_of_districts_of_Delhi").
+type("Bharti_Airtel","Public_company").

@@ -1,0 +1,107 @@
+assets("Sirius_Satellite_Radio","7.38E9").
+equity("Sirius_Satellite_Radio","2.08E8").
+netIncome("Sirius_Satellite_Radio","4.65E8").
+operatingIncome("Sirius_Satellite_Radio","4.77E7").
+revenue("Sirius_Satellite_Radio","2.82E9").
+foundingYear("Sirius_Satellite_Radio","1990").
+numberOfEmployees("Sirius_Satellite_Radio","1514").
+foundedBy("Sirius_Satellite_Radio","Robert_Briskman").
+foundedBy("Sirius_Satellite_Radio","David_Margolese").
+foundedBy("Sirius_Satellite_Radio","Martine_Rothblatt").
+industry("Sirius_Satellite_Radio","Broadcasting").
+location("Sirius_Satellite_Radio","New_York_City").
+parentCompany("Sirius_Satellite_Radio","Sirius_XM_Holdings").
+product("Sirius_Satellite_Radio","Satellite_radio").
+type("Sirius_Satellite_Radio","Division_(business)").
+assets("Sirius_XM_Holdings","8.046662E9").
+equity("Sirius_XM_Holdings","-1.66491E8").
+netIncome("Sirius_XM_Holdings","5.09724E8").
+operatingIncome("Sirius_XM_Holdings","1.178688E9").
+revenue("Sirius_XM_Holdings","4.570058E9").
+birthPlace("Martine_Rothblatt","Chicago").
+birthPlace("Martine_Rothblatt","United_States").
+birthPlace("Martine_Rothblatt","Chicago,_Illinois").
+birthPlace("Robert_Briskman","New_York_City").
+birthPlace("David_Margolese","Canada").
+birthPlace("David_Margolese","Vancouver").
+religion("Martine_Rothblatt","Terasem Movement Transreligion").
+activeYearsStartYear("David_Margolese","1978").
+birthYear("Martine_Rothblatt","1954").
+birthYear("Robert_Briskman","1932").
+birthYear("David_Margolese","1957").
+numberOfEmployees("Sirius_XM_Holdings","2323").
+almaMater("Martine_Rothblatt","M.B.A").
+almaMater("Martine_Rothblatt","Juris_Doctor").
+almaMater("Martine_Rothblatt","University_of_California,_Los_Angeles").
+almaMater("Martine_Rothblatt","Barts_and_The_London_School_of_Medicine_and_Dentistry").
+almaMater("Robert_Briskman","University_of_Maryland").
+almaMater("Robert_Briskman","Princeton_University").
+almaMater("David_Margolese","University_of_British_Columbia").
+country("New_York_City","United_States").
+foundedBy("Sirius_XM_Holdings","Martine_Rothblatt").
+foundedBy("Sirius_XM_Holdings","Robert_Briskman").
+foundedBy("Sirius_XM_Holdings","David_Margolese").
+industry("Sirius_XM_Holdings","Radio_broadcasting").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+keyPerson("Sirius_XM_Holdings","Greg_Maffei").
+keyPerson("Sirius_XM_Holdings","President_(corporate_title)").
+keyPerson("Sirius_XM_Holdings","Chief_executive_officer").
+keyPerson("Sirius_XM_Holdings","Chairman").
+keyPerson("Sirius_XM_Holdings","Scott_Greenstein").
+keyPerson("Sirius_XM_Holdings","Chief_Content_Officer").
+location("Sirius_XM_Holdings","New_York_City").
+location("Sirius_XM_Holdings","United_States").
+location("Sirius_XM_Holdings","1221_Avenue_of_the_Americas").
+location("Sirius_XM_Holdings","New_York_(state)").
+nationality("David_Margolese","Israelis").
+occupation("Martine_Rothblatt","Martine_Rothblatt__1").
+occupation("Martine_Rothblatt","United_Therapeutics").
+occupation("Robert_Briskman","Robert_Briskman__1").
+occupation("Robert_Briskman","Sirius_XM_Radio").
+occupation("Robert_Briskman","GenMobi_Technologies").
+occupation("David_Margolese","David_Margolese__1").
+occupation("David_Margolese","Rogers_Wireless").
+occupation("David_Margolese","Sirius_XM_Radio").
+owner("Sirius_XM_Holdings","Liberty_Media").
+owningCompany("Sirius_XM_Holdings","Liberty_Media").
+product("Sirius_XM_Holdings","Satellite_radio").
+regionServed("Sirius_XM_Holdings","Canada").
+regionServed("Sirius_XM_Holdings","United_States").
+religion("David_Margolese","Judaism").
+residence("Martine_Rothblatt","Satellite_Beach,_Florida").
+residence("David_Margolese","Jerusalem,_Israel").
+stateOfOrigin("David_Margolese","Israelis").
+subsidiary("Sirius_XM_Holdings","Sirius_XM_Canada").
+type("New_York_City","City_(New_York)").
+type("Sirius_XM_Holdings","Public_company").
+birthPlace("Jay_S._Fishman","New_York_City").
+deathPlace("Jay_S._Fishman","New_Jersey").
+birthYear("Jay_S._Fishman","1952").
+deathYear("Jay_S._Fishman","2016").
+almaMater("Jay_S._Fishman","University_of_Pennsylvania").
+occupation("Jay_S._Fishman","Jay_S._Fishman__1").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+country("University_of_Pennsylvania","United States").
+capital("New_Jersey","Trenton,_New_Jersey").
+city("University_of_Pennsylvania","Philadelphia").
+country("New_Jersey","United_States").
+largestCity("New_Jersey","Newark,_New_Jersey").
+type("University_of_Pennsylvania","Private_university").

@@ -1,0 +1,13 @@
+operatingIncome("Williams-Sonoma","4.521E8").
+numberOfEmployees("Williams-Sonoma","26800").
+foundedBy("Williams-Sonoma","Chuck_Williams_(author)").
+industry("Williams-Sonoma","E-commerce").
+keyPerson("Williams-Sonoma","CFO").
+keyPerson("Williams-Sonoma","Chief_executive_officer").
+keyPerson("Williams-Sonoma","CEO").
+keyPerson("Williams-Sonoma","Laura_Alber").
+type("Williams-Sonoma","Public_company").
+birthPlace("Chuck_Williams_(author)","Florida").
+birthPlace("Chuck_Williams_(author)","Jacksonville,_Florida").
+birthYear("Chuck_Williams_(author)","1915").
+occupation("Chuck_Williams_(author)","Chuck_Williams_(author)__1").

@@ -1,0 +1,24 @@
+keyPerson("Global_Telecom_Holding","Executive_Chairman").
+keyPerson("Global_Telecom_Holding","Khaled_Bichara").
+keyPerson("Global_Telecom_Holding","Group_CEO").
+location("Global_Telecom_Holding","Cairo").
+location("Global_Telecom_Holding","Egypt").
+parentCompany("Global_Telecom_Holding","Wind_Telecom").
+type("Global_Telecom_Holding","Public_company").
+parentCompany("Wind_Telecom","VimpelCom_Ltd.").
+type("Wind_Telecom","Subsidiary").
+birthPlace("Muhtar_Kent","New_York_City").
+nationality("Muhtar_Kent","United_States").
+nationality("Muhtar_Kent","Turkey").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+parent("Muhtar_Kent","Necdet_Kent").
+type("Cass_Business_School","Undergraduate, Postgraduate, Executive Education, Research").
+nationality("Necdet_Kent","Turkish_people").
+occupation("Necdet_Kent","Diplomat").
+occupation("Necdet_Kent","Necdet_Kent__1").
+type("New_York_City","City_(New_York)").
+type("University_of_Hull","Public_university").
+type("Tarsus_American_College","Independent_school").
+type("Tarsus_American_College","Boarding_school").

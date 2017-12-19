@@ -1,0 +1,17 @@
+foundingYear("Nation_Media_Group","1959").
+industry("Nation_Media_Group","Mass_media").
+location("Nation_Media_Group","Kenya").
+location("Nation_Media_Group","Nairobi").
+type("Nation_Media_Group","Public_company").
+location("Nairobi","Nairobi").
+country("Nairobi","Kenya").
+type("Nairobi","List_of_cities_and_towns_in_Kenya_by_population").
+birthPlace("Wilfred_Kiboro","Kenya_Colony").
+birthPlace("Wilfred_Kiboro","Kiambu_County").
+birthYear("Wilfred_Kiboro","1944").
+almaMater("Wilfred_Kiboro","University_of_Nairobi").
+occupation("Wilfred_Kiboro","Wilfred_Kiboro__1").
+country("University_of_Nairobi","Kenya").
+country("Kiambu_County","Kenya").
+type("University_of_Nairobi","Public_university").
+type("Kiambu_County","Counties_of_Kenya").

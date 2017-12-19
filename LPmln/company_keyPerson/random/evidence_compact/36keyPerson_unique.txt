@@ -1,0 +1,6 @@
+keyPerson("Citigroup","Michael_E._O'Neill").
+type("Citigroup","Public_company").
+birthPlace("Michael_Corbat","Bristol,_Connecticut").
+occupation("Michael_Corbat","Michael_Corbat__1").
+type("Bristol,_Connecticut","City").
+type("Harvard_University","Research_university").

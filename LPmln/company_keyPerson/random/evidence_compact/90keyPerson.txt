@@ -1,0 +1,17 @@
+birthPlace("Avram_Glazer","Rochester,_New_York").
+birthPlace("Joel_Glazer","Rochester,_New_York").
+location("Old_Trafford","England").
+location("Old_Trafford","Old_Trafford,_Greater_Manchester").
+location("Old_Trafford","Greater_Manchester").
+location("Old_Trafford","Sir_Matt_Busby_Way").
+birthPlace("David_Gill_(executive)","Reading,_Berkshire").
+occupation("David_Gill_(executive)","David_Gill_(executive)__1").
+birthPlace("Oliver_Gill","Frimley").
+location("Reading,_Berkshire","Reading").
+location("The_Football_Association","England").
+type("Manchester_United_F.C.","Public_company").
+headquarter("FIFA","Swiss_Football_Association").
+headquarter("UEFA","Swiss_Football_Association").
+type("Reading,_Berkshire","City_status_in_the_United_Kingdom").
+type("FIFA","List_of_international_sport_federations").
+type("University_of_Birmingham","Public_university").

@@ -1,0 +1,19 @@
+operatingIncome("Prudential_Financial","1.759E9").
+foundingYear("Prudential_Financial","1875").
+numberOfEmployees("Prudential_Financial","48331").
+foundationPlace("Prudential_Financial","New_Jersey").
+foundationPlace("Prudential_Financial","Newark,_New_Jersey").
+foundationPlace("Prudential_Financial","United_States").
+foundedBy("Prudential_Financial","John_F._Dryden").
+industry("Prudential_Financial","Financial_Services").
+keyPerson("Prudential_Financial","Mark_Grier").
+locationCity("Prudential_Financial","Newark,_New_Jersey").
+locationCity("Prudential_Financial","Prudential_Headquarters").
+locationCountry("Prudential_Financial","United_States").
+type("Prudential_Financial","Public_company").
+birthPlace("John_F._Dryden","Temple,_Maine").
+country("New_Jersey","New Jersey").
+location("Newark,_New_Jersey","Newark, New Jersey").
+country("New_Jersey","United_States").
+predecessor("John_F._Dryden","William_Joyce_Sewell").
+type("Newark,_New_Jersey","City_(New_Jersey)").

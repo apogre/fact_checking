@@ -1,0 +1,104 @@
+operatingIncome("Royal_Dutch_Shell","-3.261E9").
+numberOfEmployees("Royal_Dutch_Shell","94000").
+industry("Royal_Dutch_Shell","Petroleum_industry").
+keyPerson("Royal_Dutch_Shell","Charles_O._Holliday").
+keyPerson("Royal_Dutch_Shell","Ben_van_Beurden").
+location("Royal_Dutch_Shell","London").
+location("Royal_Dutch_Shell","Netherlands").
+location("Royal_Dutch_Shell","The_Hague").
+location("Royal_Dutch_Shell","United_Kingdom").
+location("Royal_Dutch_Shell","Shell_Centre").
+subsidiary("Royal_Dutch_Shell","Shell_Oil_Company").
+subsidiary("Royal_Dutch_Shell","Shell_Nigeria").
+subsidiary("Royal_Dutch_Shell","Shell_Pakistan").
+subsidiary("Royal_Dutch_Shell","Shell_Australia").
+subsidiary("Royal_Dutch_Shell","Shell_Chemicals").
+subsidiary("Royal_Dutch_Shell","Shell_Gas_&_Power").
+subsidiary("Royal_Dutch_Shell","Shell_Canada").
+type("Royal_Dutch_Shell","Public_limited_company").
+birthPlace("Charles_O._Holliday","Nashville,_Tennessee").
+birthPlace("Ben_van_Beurden","Roosendaal").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+location("Netherlands","De Bilt , all KNMI locations , snowy days: .").
+location("The_Hague","Valkenburg_Naval_Air_Base").
+spouse("Ben_van_Beurden","Stacey van Beurden").
+birthYear("Charles_O._Holliday","1948").
+birthYear("Ben_van_Beurden","1958").
+foundingYear("Shell_Oil_Company","1912").
+foundingYear("Shell_Australia","1901").
+foundingYear("Shell_Canada","1911").
+numberOfEmployees("Shell_Oil_Company","92000").
+numberOfEmployees("Shell_Australia","1000").
+almaMater("Charles_O._Holliday","University_of_Tennessee").
+almaMater("Ben_van_Beurden","Delft_University_of_Technology").
+country("London","United_Kingdom").
+country("The_Hague","Netherlands").
+foundationPlace("Shell_Oil_Company","United_States").
+foundationPlace("Shell_Australia","Melbourne").
+foundationPlace("Shell_Canada","Canada").
+foundationPlace("Shell_Canada","Quebec").
+industry("Shell_Oil_Company","Petroleum_industry").
+industry("Shell_Pakistan","Petroleum_industry").
+industry("Shell_Australia","Petroleum_industry").
+industry("Shell_Canada","Petroleum_industry").
+keyPerson("Shell_Oil_Company","President_(corporate_title)").
+keyPerson("Shell_Pakistan","Chief_executive_officer").
+keyPerson("Shell_Canada","President_(corporate_title)").
+location("Shell_Pakistan","Karachi").
+location("Shell_Pakistan","Pakistan").
+locationCity("Shell_Oil_Company","Houston").
+locationCity("Shell_Oil_Company","Texas").
+locationCity("Shell_Australia","Melbourne").
+locationCity("Shell_Australia","Perth").
+locationCity("Shell_Canada","Alberta").
+locationCity("Shell_Canada","Calgary").
+locationCountry("Shell_Oil_Company","United_States").
+locationCountry("Shell_Australia","Australia").
+locationCountry("Shell_Canada","Canada").
+parentCompany("Shell_Oil_Company","Royal_Dutch_Shell").
+parentCompany("Shell_Pakistan","Royal_Dutch_Shell").
+parentCompany("Shell_Australia","Royal_Dutch_Shell").
+parentCompany("Shell_Canada","Royal_Dutch_Shell").
+predecessor("Ben_van_Beurden","Peter_Voser").
+type("The_Hague","List_of_municipalities_of_the_Netherlands").
+type("The_Hague","Cities_of_the_Netherlands").
+type("Shell_Oil_Company","Subsidiary").
+type("Shell_Pakistan","Public_limited_company").
+type("Shell_Australia","Subsidiary").
+type("Shell_Canada","Subsidiary").
+birthPlace("Andrew_Witty","England").
+birthYear("Andrew_Witty","1964").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","University_of_Nottingham").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+operatingIncome("GlaxoSmithKline","1.0322E10").
+birthPlace("Jean-Pierre_Garnier","Le_Mans").
+almaMater("Emma_Walmsley","Oxford_University").
+birthPlace("Emma_Walmsley","Lancashire").
+country("University_of_Nottingham","England, UK").
+predecessor("GlaxoSmithKline","Beckman Companies").
+predecessor("GlaxoSmithKline","Beecham Group plc").
+predecessor("GlaxoSmithKline","Glaxo plc").
+predecessor("GlaxoSmithKline","Kline & French").
+predecessor("GlaxoSmithKline","Smith plc").
+predecessor("GlaxoSmithKline","Wellcome plc").
+spouse("Emma_Walmsley","David").
+type("England","Administrative_division").
+numberOfEmployees("GlaxoSmithKline","96575").
+industry("GlaxoSmithKline","Pharmaceutical_industry").
+industry("GlaxoSmithKline","Biotechnology").
+industry("GlaxoSmithKline","Fast-moving_consumer_goods").
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+parent("Emma_Walmsley","Robert_Walmsley").
+predecessor("Emma_Walmsley","Sir_Andrew_Witty").
+subsidiary("GlaxoSmithKline","Stiefel_Laboratories").
+type("GlaxoSmithKline","Public_limited_company").
+type("University_of_Nottingham","Public_university").

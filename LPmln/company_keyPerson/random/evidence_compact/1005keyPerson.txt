@@ -1,0 +1,23 @@
+foundedBy("Tesco","Jack_Cohen_(businessman)").
+keyPerson("Tesco","Dave_Lewis_(businessman)").
+keyPerson("Tesco","John_Allan_(businessman)").
+location("Tesco","Hertfordshire").
+location("Tesco","Welwyn_Garden_City").
+type("Tesco","Public_limited_company").
+birthPlace("Brian_Moynihan","United_States").
+birthPlace("Brian_Moynihan","Marietta,_Ohio").
+occupation("Brian_Moynihan","Brian_Moynihan__1").
+occupation("Brian_Moynihan","Bank_of_America").
+birthPlace("Ken_Lewis_(executive)","Meridian,_Mississippi").
+birthPlace("Ken_Lewis_(executive)","Walnut_Grove,_Mississippi").
+predecessor("Bank_of_America","[[#Merger of NationsBank and BankAmerica").
+foundedBy("Bank_of_America","Amadeo_Giannini").
+keyPerson("Bank_of_America","Brian_T._Moynihan").
+occupation("Ken_Lewis_(executive)","Bank_of_America").
+occupation("Ken_Lewis_(executive)","Ken_Lewis_(executive)__1").
+type("Marietta,_Ohio","City").
+type("Brown_University","Private_university").
+type("University_of_Notre_Dame","Research").
+type("University_of_Notre_Dame","Private_university").
+type("University_of_Notre_Dame","Mixed-sex_education").
+type("Bank_of_America","Public_company").

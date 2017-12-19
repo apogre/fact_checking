@@ -1,0 +1,52 @@
+assets("Las_Vegas_Sands","2.23E10").
+equity("Las_Vegas_Sands","7.21E9").
+netIncome("Las_Vegas_Sands","2.84E9").
+operatingIncome("Las_Vegas_Sands","4.09E9").
+revenue("Las_Vegas_Sands","1.45E10").
+foundingYear("Las_Vegas_Sands","1988").
+numberOfEmployees("Las_Vegas_Sands","40000").
+foundedBy("Las_Vegas_Sands","Sheldon_G._Adelson").
+industry("Las_Vegas_Sands","Tourism").
+industry("Las_Vegas_Sands","Hospitality").
+keyPerson("Las_Vegas_Sands","Partha_Ojha").
+keyPerson("Las_Vegas_Sands","Sheldon_G._Adelson").
+location("Las_Vegas_Sands","Nevada").
+location("Las_Vegas_Sands","Paradise,_Nevada").
+owner("Las_Vegas_Sands","Sheldon_Adelson").
+owningCompany("Las_Vegas_Sands","Sheldon_Adelson").
+product("Las_Vegas_Sands","Casino").
+product("Las_Vegas_Sands","Gambling").
+product("Las_Vegas_Sands","Entertainment").
+product("Las_Vegas_Sands","Hotels").
+product("Las_Vegas_Sands","Resort").
+networth("Sheldon_Adelson","2.92E10").
+birthPlace("Sheldon_Adelson","Boston").
+birthPlace("Sheldon_Adelson","Massachusetts").
+birthPlace("Sheldon_Adelson","United_States").
+city("Nevada","Carson City, NevadaCarson City").
+city("Nevada","Enterprise, NevadaEnterprise").
+city("Nevada","Henderson, NevadaHenderson").
+city("Nevada","Las Vegas, NevadaLas Vegas").
+city("Nevada","North Las Vegas, NevadaNorth Las Vegas").
+city("Nevada","Paradise, NevadaParadise").
+city("Nevada","Reno, NevadaReno").
+city("Nevada","Sparks, NevadaSparks").
+city("Nevada","Spring Valley, NevadaSpring Valley").
+city("Nevada","Sunrise Manor, NevadaSunrise Manor").
+country("Nevada","Nevada").
+birthYear("Sheldon_Adelson","1933").
+almaMater("Sheldon_Adelson","City_College_of_New_York").
+capital("Nevada","Carson_City,_Nevada").
+country("Nevada","United_States").
+country("Paradise,_Nevada","United_States").
+isPartOf("Paradise,_Nevada","Nevada").
+isPartOf("Paradise,_Nevada","Clark_County,_Nevada").
+largestCity("Nevada","Las_Vegas").
+occupation("Sheldon_Adelson","Sheldon_Adelson__1").
+occupation("Sheldon_Adelson","Las_Vegas_Sands").
+religion("Sheldon_Adelson","Judaism").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").
+birthYear("Jonathan_I._Schwartz","1965").
+country("Wesleyan_University","U.S.").
+city("Wesleyan_University","Middletown,_Connecticut").
+type("Wesleyan_University","Private_university").

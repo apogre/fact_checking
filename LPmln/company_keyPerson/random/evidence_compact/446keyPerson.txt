@@ -1,0 +1,10 @@
+foundedBy("EBay","Pierre_Omidyar").
+location("EBay","California").
+location("EBay","San_Jose,_California").
+type("EBay","Public_company").
+birthPlace("Daniel_Vasella","Switzerland").
+birthPlace("Daniel_Vasella","Fribourg").
+occupation("Daniel_Vasella","Daniel_Vasella__1").
+location("Fribourg"," Posieux").
+type("Harvard_Business_School","Private_school").
+type("University_of_Bern","Public_university").

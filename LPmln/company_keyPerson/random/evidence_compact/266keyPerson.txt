@@ -1,0 +1,32 @@
+keyPerson("Apple_Inc.","Arthur_D._Levinson").
+keyPerson("Apple_Inc.","Jeff_Williams_(Apple)").
+keyPerson("Apple_Inc.","Luca_Maestri").
+keyPerson("Apple_Inc.","Tim_Cook").
+keyPerson("Apple_Inc.","Jonathan_Ive").
+type("Apple_Inc.","Public_company").
+birthPlace("Andrew_Witty","England").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","University_of_Nottingham").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+birthPlace("Jean-Pierre_Garnier","Le_Mans").
+birthPlace("Emma_Walmsley","Lancashire").
+nationality("Emma_Walmsley","British").
+predecessor("GlaxoSmithKline","Beckman Companies").
+predecessor("GlaxoSmithKline","Beecham Group plc").
+predecessor("GlaxoSmithKline","Glaxo plc").
+predecessor("GlaxoSmithKline","Kline & French").
+predecessor("GlaxoSmithKline","Smith plc").
+predecessor("GlaxoSmithKline","Wellcome plc").
+type("England","Administrative_division").
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+parent("Emma_Walmsley","Robert_Walmsley").
+predecessor("Emma_Walmsley","Sir_Andrew_Witty").
+type("GlaxoSmithKline","Public_limited_company").
+type("University_of_Nottingham","Public_university").

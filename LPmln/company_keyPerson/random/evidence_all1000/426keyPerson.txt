@@ -1,0 +1,131 @@
+numberOfLocations("DineEquity","3716").
+revenue("DineEquity","6.811E8").
+foundingYear("DineEquity","1976").
+numberOfEmployees("DineEquity","200000").
+keyPerson("DineEquity","Julia_Stewart_(businesswoman)").
+location("DineEquity","California").
+location("DineEquity","Glendale,_California").
+subsidiary("DineEquity","IHOP").
+subsidiary("DineEquity","Applebee's").
+type("DineEquity","Public_company").
+assets("Applebee's","9.35E8").
+equity("Applebee's","4.87E8").
+netIncome("IHOP","4.45E7").
+netIncome("Applebee's","8.1E7").
+numberOfLocations("IHOP","1650").
+numberOfLocations("Applebee's","2033").
+operatingIncome("IHOP","7.28E7").
+operatingIncome("Applebee's","1.31E8").
+revenue("IHOP","3.496E8").
+revenue("Applebee's","2.5E9").
+birthPlace("Julia_Stewart_(businesswoman)","United_States").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+industry("Applebee's","Restaurants").
+location("Glendale,_California","Glendale, California").
+birthYear("Julia_Stewart_(businesswoman)","1955").
+numberOfEmployees("IHOP","32300").
+numberOfEmployees("Applebee's","28000").
+country("Glendale,_California","United_States").
+foundationPlace("IHOP","California").
+foundationPlace("IHOP","Los_Angeles").
+foundationPlace("IHOP","United_States").
+foundationPlace("Applebee's","Decatur,_Georgia").
+foundationPlace("Applebee's","Georgia_(U.S._state)").
+foundationPlace("Applebee's","United_States").
+industry("IHOP","Restaurant").
+isPartOf("Glendale,_California","California").
+isPartOf("Glendale,_California","Los_Angeles_County,_California").
+keyPerson("IHOP","Darren_Rebelez").
+keyPerson("IHOP","Russell_Findlay").
+keyPerson("Applebee's","Julia_Stewart_(businesswoman)").
+largestCity("California","Los_Angeles").
+location("IHOP","Glendale,_California").
+location("IHOP","United_States").
+location("Applebee's","Kansas_City,_Missouri").
+location("Applebee's","United_States").
+occupation("Julia_Stewart_(businesswoman)","Julia_Stewart_(businesswoman)__1").
+occupation("Julia_Stewart_(businesswoman)","DineEquity").
+parentCompany("IHOP","DineEquity").
+parentCompany("Applebee's","DineEquity").
+product("IHOP","Lunch").
+product("IHOP","Pancakes").
+product("IHOP","Breakfast").
+type("Glendale,_California","Charter_city").
+type("IHOP","Subsidiary").
+type("Applebee's","Subsidiary").
+birthPlace("Marillyn_Hewson","Junction_City,_Kansas").
+birthYear("Marillyn_Hewson","1954").
+occupation("Marillyn_Hewson","Marillyn_Hewson__1").
+occupation("Marillyn_Hewson","Lockheed_Martin").
+predecessor("Marillyn_Hewson","Robert_J._Stevens").
+assets("Lockheed_Martin","4.9128E10").
+equity("Lockheed_Martin","3.097E9").
+netIncome("Lockheed_Martin","3.605E9").
+operatingIncome("Lockheed_Martin","5.3546E9").
+birthPlace("Robert_J._Stevens","McKeesport,_Pennsylvania").
+birthPlace("Robert_J._Stevens","Pennsylvania").
+birthPlace("Robert_J._Stevens","McKeesport").
+country("University_of_Alabama","U.S.").
+revenue("Lockheed_Martin","United_States_Dollar").
+type("Lockheed_Martin","Public company").
+birthYear("Robert_J._Stevens","1951").
+numberOfEmployees("Lockheed_Martin","126000").
+almaMater("Robert_J._Stevens","Slippery_Rock_University_of_Pennsylvania").
+almaMater("Robert_J._Stevens","Polytechnic_University_of_New_York").
+almaMater("Robert_J._Stevens","Columbia_University").
+city("University_of_Alabama","Tuscaloosa,_Alabama").
+country("Junction_City,_Kansas","United_States").
+industry("Lockheed_Martin","Information_Security").
+industry("Lockheed_Martin","Technology").
+industry("Lockheed_Martin","Aerospace_manufacturer").
+industry("Lockheed_Martin","Defense_(military)").
+isPartOf("Junction_City,_Kansas","Kansas").
+isPartOf("Junction_City,_Kansas","Geary_County,_Kansas").
+keyPerson("Lockheed_Martin","President_(corporate_title)").
+keyPerson("Lockheed_Martin","Marillyn_A._Hewson").
+keyPerson("Lockheed_Martin","Chairman").
+location("Lockheed_Martin","Bethesda,_Maryland").
+location("Lockheed_Martin","United_States").
+occupation("Robert_J._Stevens","Robert_J._Stevens__1").
+occupation("Robert_J._Stevens","President").
+occupation("Robert_J._Stevens","Lockheed_Martin").
+product("Lockheed_Martin","Atlas_V").
+product("Lockheed_Martin","Air_Traffic_Control").
+product("Lockheed_Martin","Military_aircraft").
+product("Lockheed_Martin","Precision-guided_munition").
+product("Lockheed_Martin","Satellites").
+product("Lockheed_Martin","Sensor").
+product("Lockheed_Martin","Littoral_combat_ship").
+product("Lockheed_Martin","Radar").
+product("Lockheed_Martin","Missile_Defense_Agency").
+product("Lockheed_Martin","Armoured_fighting_vehicle").
+product("Lockheed_Martin","Spacecraft").
+product("Lockheed_Martin","Combat_aircraft").
+product("Lockheed_Martin","Information_and_communications_technology").
+product("Lockheed_Martin","Directed-energy_weapon").
+product("Lockheed_Martin","Aegis_Combat_System").
+product("Lockheed_Martin","Ballistic_Missiles").
+product("Lockheed_Martin","Electronic_warfare").
+product("Lockheed_Martin","Energy_management_system").
+product("Lockheed_Martin","Uncrewed_vehicle").
+subsidiary("Lockheed_Martin","Lockheed_Martin_UK").
+subsidiary("Lockheed_Martin","Sikorsky_Aircraft_Corporation").
+subsidiary("Lockheed_Martin","Lockheed_Martin_Canada").
+subsidiary("Lockheed_Martin","Sandia_Corporation").
+type("University_of_Alabama","State_university_system").
+type("University_of_Alabama","Flagship_university").
+type("University_of_Alabama","Sea-grant").
+type("University_of_Alabama","Space-grant").
+type("Junction_City,_Kansas","City").

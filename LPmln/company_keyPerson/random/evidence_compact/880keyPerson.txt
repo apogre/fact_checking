@@ -1,0 +1,33 @@
+foundedBy("Seagate_Technology","Syed_Iftikar").
+foundedBy("Seagate_Technology","Alan_Shugart").
+keyPerson("Seagate_Technology","Stephen_J._Luczo").
+keyPerson("Seagate_Technology","CEO").
+type("Seagate_Technology","Public_limited_company").
+birthPlace("Alan_Shugart","Los_Angeles").
+birthPlace("Stephen_J._Luczo","Chicago").
+birthPlace("Stephen_J._Luczo","Chicago,_Illinois").
+birthPlace("Alan_Shugart","Los Angeles").
+nationality("Alan_Shugart","United States").
+nationality("Stephen_J._Luczo","United States").
+location("LaCie","Paris,_France").
+occupation("Alan_Shugart","Alan_Shugart__1").
+parentCompany("LaCie","Seagate_Technology").
+predecessor("Stephen_J._Luczo","Bill_Watkins_(Seagate)").
+type("LaCie","Subsidiary").
+birthPlace("Gordon_Nixon","Montreal").
+birthPlace("Gordon_Nixon","Canada").
+birthPlace("Gordon_Nixon","Montreal,_Quebec").
+occupation("Gordon_Nixon","Gordon_Nixon__1").
+occupation("Gordon_Nixon","President").
+occupation("Gordon_Nixon","Royal_Bank_of_Canada").
+birthPlace("John_Cleghorn","Montreal").
+birthPlace("John_Cleghorn","Quebec").
+keyPerson("Royal_Bank_of_Canada","David_I._McKay").
+location("Royal_Bank_of_Canada","Canada").
+location("Royal_Bank_of_Canada","Montreal").
+location("Royal_Bank_of_Canada","Ontario").
+location("Royal_Bank_of_Canada","Quebec").
+location("Royal_Bank_of_Canada","Toronto").
+type("Montreal","City_(TV_network)").
+type("Queen's_University","Public_university").
+type("Royal_Bank_of_Canada","Public_company").

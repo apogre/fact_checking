@@ -1,0 +1,14 @@
+foundedBy("Simon_Property_Group","Herbert_Simon_(real_estate)").
+foundedBy("Simon_Property_Group","Melvin_Simon").
+keyPerson("Simon_Property_Group","David_Simon_(CEO)").
+location("Simon_Property_Group","Indianapolis").
+location("Simon_Property_Group","Indiana").
+location("Simon_Property_Group","United_States").
+birthPlace("Jeff_Bewkes","Paterson,_New_Jersey").
+birthPlace("Jeff_Bewkes","United_States").
+occupation("Jeff_Bewkes","Chief_executive_officer").
+occupation("Jeff_Bewkes","Jeff_Bewkes__1").
+occupation("Jeff_Bewkes","Chairman").
+type("Stanford_Graduate_School_of_Business","Private").
+type("Paterson,_New_Jersey","City_(New_Jersey)").
+type("Yale_University","Private_university").

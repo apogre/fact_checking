@@ -1,0 +1,28 @@
+foundingYear("Nation_Media_Group","1959").
+industry("Nation_Media_Group","Mass_media").
+location("Nation_Media_Group","Kenya").
+location("Nation_Media_Group","Nairobi").
+type("Nation_Media_Group","Public_company").
+location("Nairobi","Nairobi").
+country("Nairobi","Kenya").
+type("Nairobi","List_of_cities_and_towns_in_Kenya_by_population").
+birthPlace("Muhtar_Kent","New_York_City").
+birthYear("Muhtar_Kent","1952").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+parent("Muhtar_Kent","Necdet_Kent").
+country("Cass_Business_School","United Kingdom").
+type("Cass_Business_School","Undergraduate, Postgraduate, Executive Education, Research").
+birthYear("Necdet_Kent","1911").
+foundingYear("Tarsus_American_College","1888").
+almaMater("Necdet_Kent","New_York_University").
+country("New_York_City","United_States").
+country("University_of_Hull","England").
+country("Tarsus_American_College","Turkey").
+occupation("Necdet_Kent","Diplomat").
+occupation("Necdet_Kent","Necdet_Kent__1").
+type("New_York_City","City_(New_York)").
+type("University_of_Hull","Public_university").
+type("Tarsus_American_College","Independent_school").
+type("Tarsus_American_College","Boarding_school").

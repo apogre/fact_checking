@@ -1,0 +1,9 @@
+keyPerson("Pfizer","Ian_Read").
+location("Pfizer","New_York_City").
+type("Pfizer","Public_company").
+occupation("Andrew_S._Rosen","Kaplan,_Inc.").
+occupation("Andrew_S._Rosen","Andrew_S._Rosen__1").
+foundedBy("Kaplan,_Inc.","Stanley_Kaplan").
+keyPerson("Kaplan,_Inc.","Andrew_Rosen").
+parentCompany("Kaplan,_Inc.","Graham_Holdings_Company").
+type("Kaplan,_Inc.","Subsidiary").

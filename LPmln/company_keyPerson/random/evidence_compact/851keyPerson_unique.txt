@@ -1,0 +1,3 @@
+birthPlace("Stefano_Pessina","Pescara").
+nationality("Stefano_Pessina","Monaco").
+occupation("Stefano_Pessina","Stefano_Pessina__1").

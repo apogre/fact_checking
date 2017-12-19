@@ -1,0 +1,26 @@
+foundedBy("Tesco","Jack_Cohen_(businessman)").
+keyPerson("Tesco","Dave_Lewis_(businessman)").
+keyPerson("Tesco","John_Allan_(businessman)").
+location("Tesco","Hertfordshire").
+location("Tesco","Welwyn_Garden_City").
+type("Tesco","Public_limited_company").
+birthPlace("Michel_Combes","Boulogne-Billancourt").
+occupation("Michel_Combes","Michel_Combes__1").
+occupation("Michel_Combes","Chief_executive_officer").
+birthPlace("Ben_Verwaayen","Driebergen").
+birthPlace("Ben_Verwaayen","Utrecht_(province)").
+parent("SFR","SFR Group").
+type("Paris","Cultural").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+keyPerson("Vodafone","Vittorio_Colao").
+keyPerson("Alcatel-Lucent","Philippe_Camus_(businessman)").
+keyPerson("Alcatel-Lucent","Chairman").
+location("Vodafone","Newbury,_Berkshire").
+nationality("Ben_Verwaayen","Dutch_people").
+occupation("Ben_Verwaayen","Chief_executive_officer").
+occupation("Ben_Verwaayen","Ben_Verwaayen__1").
+parentCompany("Alcatel-Lucent","Nokia").
+predecessor("Vodafone","Racal").
+type("Vodafone","Public_limited_company").
+type("Alcatel-Lucent","S.A._(corporation)").
+type("SFR","S.A._(corporation)").

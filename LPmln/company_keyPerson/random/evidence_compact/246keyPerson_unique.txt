@@ -1,0 +1,26 @@
+foundedBy("Advanced_Micro_Devices","Jerry_Sanders_(businessman)").
+keyPerson("Advanced_Micro_Devices","Lisa_Su").
+keyPerson("Advanced_Micro_Devices","John_Edward_Caldwell").
+type("Advanced_Micro_Devices","Public_company").
+birthPlace("Lisa_Su","Taiwan").
+birthPlace("Lisa_Su","Tainan").
+location("Sunnyvale,_California","Sunnyvale, California").
+location("Lisa_Su","US").
+nationality("Lisa_Su","United_States").
+occupation("Lisa_Su","Lisa_Su__1").
+occupation("Lisa_Su","AMD").
+type("Sunnyvale,_California","Charter_city").
+birthPlace("Vittorio_Colao","Brescia").
+location("Brescia","Brescia").
+type("Brescia","Cultural").
+foundedBy("RCS_MediaGroup","Angelo_Rizzoli").
+keyPerson("RCS_MediaGroup","Urbano_Cairo").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+keyPerson("Vodafone","Vittorio_Colao").
+location("Vodafone","Newbury,_Berkshire").
+parentCompany("RCS_MediaGroup","Cairo_Communication").
+predecessor("Vodafone","Racal").
+type("RCS_MediaGroup","S.A._(corporation)").
+type("Vodafone","Public_limited_company").
+type("Harvard_University","Research_university").
+type("Bocconi_University","Private_school").

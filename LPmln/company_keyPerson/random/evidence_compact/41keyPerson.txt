@@ -1,0 +1,5 @@
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+occupation("James_E._Thompson","James_E._Thompson__1").
+type("San_Jose_State_University","Public_university").

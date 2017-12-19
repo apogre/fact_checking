@@ -1,0 +1,34 @@
+foundingYear("Aditya_Birla_Group","1857").
+numberOfEmployees("Aditya_Birla_Group","120000").
+foundedBy("Aditya_Birla_Group","Seth_Shiv_Narayan_Birla").
+industry("Aditya_Birla_Group","Conglomerate_(company)").
+location("Aditya_Birla_Group","Maharashtra").
+location("Aditya_Birla_Group","Mumbai").
+location("Aditya_Birla_Group","India").
+subsidiary("Aditya_Birla_Group","Aditya_Birla_Group").
+type("Aditya_Birla_Group","Privately_held_company").
+birthPlace("Kumar_Mangalam_Birla","Mumbai").
+spouse("Kumar_Mangalam_Birla","Neerja Birla").
+type("Maharashtra","States_and_union_territories_of_India").
+birthYear("Kumar_Mangalam_Birla","1967").
+almaMater("Kumar_Mangalam_Birla","Institute_of_Chartered_Accountants_of_India").
+almaMater("Kumar_Mangalam_Birla","University_of_Mumbai").
+almaMater("Kumar_Mangalam_Birla","London_Business_School").
+country("Maharashtra","India").
+country("Mumbai","India").
+occupation("Kumar_Mangalam_Birla","Chairman").
+occupation("Kumar_Mangalam_Birla","Kumar_Mangalam_Birla__1").
+parent("Kumar_Mangalam_Birla","Aditya_Vikram_Birla").
+type("Mumbai","Megacity").
+birthPlace("Aditya_Vikram_Birla","Kolkata").
+birthPlace("Aditya_Vikram_Birla","Calcutta").
+country("University_of_Mumbai","India").
+country("London_Business_School","United Kingdom").
+regionServed("Institute_of_Chartered_Accountants_of_India","India").
+birthYear("Aditya_Vikram_Birla","1943").
+almaMater("Aditya_Vikram_Birla","Massachusetts_Institute_of_Technology").
+occupation("Aditya_Vikram_Birla","Aditya_Birla_Group").
+occupation("Aditya_Vikram_Birla","Aditya_Vikram_Birla__1").
+spouse("Aditya_Vikram_Birla","Rajashree_Birla").
+type("University_of_Mumbai","Public_university").
+type("London_Business_School","Business_school").

@@ -1,0 +1,12 @@
+keyPerson("Boston_Consulting_Group","Rich_Lesser").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+location("Boston_Consulting_Group","Boston").
+type("Boston_Consulting_Group","Privately_held_company").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Management_Consultant").
+type("Boston","Capital_city").
+birthPlace("Chuck_Rozanski","Germany").
+birthPlace("Chuck_Rozanski","Goldbach,_Bavaria").
+nationality("Chuck_Rozanski","United_States").

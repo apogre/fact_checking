@@ -1,0 +1,21 @@
+keyPerson("Gerdau","CEO").
+keyPerson("Gerdau","Jorge_Gerdau_Johannpeter").
+keyPerson("Gerdau","Chairman").
+location("Gerdau","Brazil").
+location("Gerdau","Porto_Alegre").
+type("Gerdau","S.A._(corporation)").
+birthPlace("Jorge_Gerdau_Johannpeter","Brazil").
+birthPlace("Jorge_Gerdau_Johannpeter","Rio_de_Janeiro").
+location("Porto_Alegre","Porto Alegre").
+nationality("Jorge_Gerdau_Johannpeter","Brazil").
+birthPlace("Rupert_Murdoch","Australia").
+birthPlace("Rupert_Murdoch","Melbourne").
+birthPlace("Rupert_Murdoch","Victoria_(Australia)").
+nationality("Rupert_Murdoch","United_States").
+nationality("Rupert_Murdoch","Australian").
+occupation("Rupert_Murdoch","21st_Century_Fox").
+occupation("Rupert_Murdoch","Fox_News").
+occupation("Rupert_Murdoch","News_Corporation").
+occupation("Rupert_Murdoch","Rupert_Murdoch__1").
+parent("Rupert_Murdoch","Elisabeth_Murdoch_(philanthropist)").
+parent("Rupert_Murdoch","Keith_Murdoch").

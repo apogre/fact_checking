@@ -1,0 +1,57 @@
+foundingYear("Fidelity_Investments","1946").
+numberOfEmployees("Fidelity_Investments","45000").
+industry("Fidelity_Investments","Financial_Services").
+keyPerson("Fidelity_Investments","Edward_Johnson,_III").
+keyPerson("Fidelity_Investments","Kathleen_Murphy_(executive)").
+keyPerson("Fidelity_Investments","Abigail_Johnson").
+locationCity("Fidelity_Investments","Boston").
+locationCity("Fidelity_Investments","Massachusetts").
+locationCountry("Fidelity_Investments","United_States").
+product("Fidelity_Investments","Mutual_fund").
+product("Fidelity_Investments","Investing_online").
+product("Fidelity_Investments","Investment_management").
+assetUnderManagement("Fidelity_Investments","2.1E12").
+networth("Abigail_Johnson","1.49E10").
+city("Massachusetts","Boston, MassachusettsBoston").
+city("Massachusetts","Brockton, MassachusettsBrockton").
+city("Massachusetts","Cambridge, MassachusettsCambridge").
+city("Massachusetts","Fall River, MassachusettsFall River").
+city("Massachusetts","Lowell, MassachusettsLowell").
+city("Massachusetts","Lynn, MassachusettsLynn").
+city("Massachusetts","New Bedford, MassachusettsNew Bedford").
+city("Massachusetts","Quincy, MassachusettsQuincy").
+city("Massachusetts","Springfield, MassachusettsSpringfield").
+city("Massachusetts","Worcester, MassachusettsWorcester").
+country("Massachusetts","Massachusetts").
+nationality("Kathleen_Murphy_(executive)","American").
+birthYear("Abigail_Johnson","1961").
+almaMater("Kathleen_Murphy_(executive)","Fairfield_University").
+almaMater("Kathleen_Murphy_(executive)","University_of_Connecticut_School_of_Law").
+capital("Massachusetts","Boston").
+capital("United_States","Washington,_D.C.").
+country("Massachusetts","United_States").
+isPartOf("Boston","Massachusetts").
+isPartOf("Boston","Kingdom_of_Great_Britain").
+isPartOf("Boston","Province_of_Massachusetts_Bay").
+isPartOf("Boston","Massachusetts_Bay_Colony").
+isPartOf("Boston","Suffolk_County,_Massachusetts").
+isPartOf("Boston","Kingdom_of_England").
+largestCity("Massachusetts","Boston").
+largestCity("United_States","New_York_City").
+occupation("Kathleen_Murphy_(executive)","Kathleen_Murphy_(executive)__1").
+occupation("Abigail_Johnson","Fidelity_Investments").
+occupation("Abigail_Johnson","Fidelity_International").
+occupation("Abigail_Johnson","Abigail_Johnson__1").
+personFunction("Kathleen_Murphy_(executive)","Kathleen_Murphy_(executive)__1").
+residence("Abigail_Johnson","Boston,_Massachusetts").
+type("Boston","Capital_city").
+birthPlace("Hans_Vestberg","Hudiksvall").
+birthPlace("Hans_Vestberg","Sweden").
+birthYear("Hans_Vestberg","1965").
+occupation("Hans_Vestberg","Hans_Vestberg__1").
+occupation("Hans_Vestberg","CEO").
+largestCity("Sweden","capital").
+location("Hudiksvall","Hudiksvall").
+capital("Sweden","Stockholm").
+country("Hudiksvall","Sweden").
+isPartOf("Hudiksvall","Hudiksvall_Municipality").

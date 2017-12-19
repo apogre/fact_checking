@@ -1,0 +1,42 @@
+operatingIncome("Singtel","5.013E9").
+numberOfEmployees("Singtel","25000").
+industry("Singtel","Telecommunications").
+location("Singtel","Singapore").
+regionServed("Singtel","Australia").
+subsidiary("Singtel","Optus").
+foundingYear("Optus","1981").
+industry("Optus","Telecommunication").
+location("Optus","Australia").
+location("Optus","New_South_Wales").
+location("Optus","Sydney").
+type("Optus","Subsidiary").
+birthPlace("Mark_Fields_(businessman)","Brooklyn").
+birthPlace("Mark_Fields_(businessman)","New_York_(state)").
+predecessor("Mark_Fields_(businessman)","Alan_Mulally").
+birthPlace("Alan_Mulally","Oakland,_California").
+birthPlace("Alan_Mulally","United_States").
+country("Harvard_Business_School","U.S.").
+country("Rutgers_University","U.S.").
+location("Brooklyn","JFK Airport, New York").
+location("Dearborn,_Michigan","Dearborn, Michigan").
+spouse("Alan_Mulally","Nicki Mulally").
+birthYear("Alan_Mulally","1945").
+foundingYear("Paramus_High_School","1957").
+almaMater("Alan_Mulally","University_of_Kansas").
+almaMater("Alan_Mulally","MIT_Sloan_School_of_Management").
+country("Brooklyn","United_States_of_America").
+country("Dearborn,_Michigan","United_States").
+location("Paramus_High_School","New_Jersey").
+location("Paramus_High_School","Paramus,_New_Jersey").
+occupation("Alan_Mulally","Chief_Executive_Officer").
+occupation("Alan_Mulally","President").
+occupation("Alan_Mulally","Alan_Mulally__1").
+type("Brooklyn","Borough_(New_York_City)").
+type("Dearborn,_Michigan","City").
+type("Harvard_Business_School","Private_school").
+type("Paramus_High_School","State_school").
+type("Rutgers_University","Research_university").
+type("Rutgers_University","Public_university").
+type("Rutgers_University","Land-grant_university").
+type("Rutgers_University","Sea-grant_university").
+type("Rutgers_University","University_system").

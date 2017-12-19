@@ -1,0 +1,33 @@
+foundingYear("InterCall","1991").
+industry("InterCall","Web_conferencing").
+industry("InterCall","Telecommunication").
+keyPerson("InterCall","Scott_Etzler").
+location("InterCall","Chicago").
+parentCompany("InterCall","West_Corporation").
+industry("West_Corporation","Unified Communications
+Interactive Services
+Specialized Agent Services
+Telecom Services
+Safety Services").
+numberOfEmployees("West_Corporation","26430").
+almaMater("Scott_Etzler","Indiana_University").
+almaMater("Scott_Etzler","Northwestern_University").
+almaMater("Scott_Etzler","Kellogg_School_of_Management").
+country("Chicago","United_States_of_America").
+location("West_Corporation","Omaha,_Nebraska").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+occupation("Scott_Etzler","Scott_Etzler__1").
+type("Chicago","City").
+type("West_Corporation","Public_company").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_district").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","India").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Nellore_District").
+birthPlace("Gunupati_Venkata_Krishna_Reddy","Andhra_Pradesh").
+birthYear("Gunupati_Venkata_Krishna_Reddy","1937").
+occupation("Gunupati_Venkata_Krishna_Reddy","Gunupati_Venkata_Krishna_Reddy__1").
+occupation("Gunupati_Venkata_Krishna_Reddy","GVK_Group").
+division("Nellore_district","Nellore district").
+type("Padma_Bhushan","Civilian").
+type("Andhra_Pradesh","States_of_India").
+country("Andhra_Pradesh","India").

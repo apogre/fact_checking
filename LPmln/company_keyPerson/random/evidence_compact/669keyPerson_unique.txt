@@ -1,0 +1,16 @@
+foundedBy("Mile_High_Comics","Chuck_Rozanski").
+location("Mile_High_Comics","Denver,_Colorado").
+type("Mile_High_Comics","Privately_held_company").
+birthPlace("Chuck_Rozanski","Germany").
+birthPlace("Chuck_Rozanski","Goldbach,_Bavaria").
+occupation("Chuck_Rozanski","Retailer, columnist").
+nationality("Chuck_Rozanski","United_States").
+type("Colorado_Springs,_Colorado","List_of_cities_and_towns_in_Colorado").
+birthPlace("Jeff_Bewkes","Paterson,_New_Jersey").
+birthPlace("Jeff_Bewkes","United_States").
+occupation("Jeff_Bewkes","Chief_executive_officer").
+occupation("Jeff_Bewkes","Jeff_Bewkes__1").
+occupation("Jeff_Bewkes","Chairman").
+type("Stanford_Graduate_School_of_Business","Private").
+type("Paterson,_New_Jersey","City_(New_Jersey)").
+type("Yale_University","Private_university").

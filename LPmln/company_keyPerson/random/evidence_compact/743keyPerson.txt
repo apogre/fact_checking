@@ -1,0 +1,47 @@
+keyPerson("Office_Depot","Chief_accounting_officer").
+keyPerson("Office_Depot","Chief_executive_officer").
+keyPerson("Office_Depot","Executive_vice_president").
+keyPerson("Office_Depot","Chief_financial_officer").
+keyPerson("Office_Depot","Chairman").
+type("Office_Depot","Public_company").
+location("Boca_Raton,_Florida","Boca Raton, Florida").
+foundedBy("Grand_&_Toy","James_Grand").
+location("OfficeMax","Boca_Raton,_Florida").
+location("OfficeMax","Florida").
+location("Viking_Direct","Leicester").
+location("Viking_Direct","United_Kingdom").
+parentCompany("OfficeMax","Office_Depot").
+parentCompany("Viking_Direct","Office_Depot").
+parentCompany("Grand_&_Toy","OfficeMax").
+type("Boca_Raton,_Florida","City_(Florida)").
+type("OfficeMax","Subsidiary").
+type("OfficeMax","Brand_(marketing)").
+type("Viking_Direct","Subsidiary").
+type("Viking_Direct","Private_company_limited_by_shares").
+type("Grand_&_Toy","Subsidiary").
+birthPlace("Tim_Cook","Alabama").
+birthPlace("Tim_Cook","United_States").
+birthPlace("Tim_Cook","Mobile,_Alabama").
+location("Palo_Alto,_California","Palo Alto").
+location("Mobile,_Alabama","Mobile, Alabama").
+type("Compaq","Public").
+foundedBy("Compaq","Jim_Harris_(entrepreneur)").
+foundedBy("Compaq","Rod_Canion").
+foundedBy("Compaq","Bill_Murto").
+foundedBy("IBM","Charles_Ranlett_Flint").
+keyPerson("Apple_Inc.","Arthur_D._Levinson").
+keyPerson("Apple_Inc.","Jeff_Williams_(Apple)").
+keyPerson("Apple_Inc.","Luca_Maestri").
+keyPerson("Apple_Inc.","Tim_Cook").
+keyPerson("Apple_Inc.","Jonathan_Ive").
+keyPerson("IBM","Ginni_Rometty").
+type("Auburn_University","Flagship").
+type("Auburn_University","Higher_education").
+type("Auburn_University","Land-grant_University").
+type("Auburn_University","Sea-grant").
+type("Auburn_University","Space-grant").
+type("Palo_Alto,_California","Charter_city").
+type("Mobile,_Alabama","City").
+type("Apple_Inc.","Public_company").
+type("Duke_University","Private_university").
+type("IBM","Public_company").

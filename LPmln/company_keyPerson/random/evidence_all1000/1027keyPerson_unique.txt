@@ -1,0 +1,58 @@
+country("Tracinda","United_States").
+foundedBy("Tracinda","Kirk_Kerkorian").
+keyPerson("Tracinda","Kirk_Kerkorian").
+locationCity("Tracinda","Nevada").
+locationCity("Tracinda","Las_Vegas").
+networth("Kirk_Kerkorian","4.0E9").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+deathPlace("Kirk_Kerkorian","Beverly_Hills,_California").
+deathPlace("Kirk_Kerkorian","Los_Angeles").
+city("Nevada","Carson City, NevadaCarson City").
+city("Nevada","Enterprise, NevadaEnterprise").
+city("Nevada","Henderson, NevadaHenderson").
+city("Nevada","Las Vegas, NevadaLas Vegas").
+city("Nevada","North Las Vegas, NevadaNorth Las Vegas").
+city("Nevada","Paradise, NevadaParadise").
+city("Nevada","Reno, NevadaReno").
+city("Nevada","Sparks, NevadaSparks").
+city("Nevada","Spring Valley, NevadaSpring Valley").
+city("Nevada","Sunrise Manor, NevadaSunrise Manor").
+country("Nevada","Nevada").
+religion("Kirk_Kerkorian","Armenian Apostolic Church").
+residence("Kirk_Kerkorian","Beverly Hills, California").
+birthYear("Kirk_Kerkorian","1917").
+deathYear("Kirk_Kerkorian","2015").
+capital("Nevada","Carson_City,_Nevada").
+capital("United_States","Washington,_D.C.").
+country("Las_Vegas","United_States_of_America").
+country("Nevada","United_States").
+isPartOf("Las_Vegas","Nevada").
+isPartOf("Las_Vegas","Clark_County,_Nevada").
+largestCity("Nevada","Las_Vegas").
+largestCity("United_States","New_York_City").
+type("Las_Vegas","City").
+birthPlace("Jeff_Clarke_(businessman)","Ithaca,_New_York").
+birthPlace("Jeff_Clarke_(businessman)","United_States").
+knownFor("Jeff_Clarke_(businessman)","Kodak").
+occupation("Jeff_Clarke_(businessman)","Jeff_Clarke_(businessman)__1").
+assets("Kodak","2.138E9").
+equity("Kodak","1.03E8").
+netIncome("Kodak","-2.11E8").
+operatingIncome("Kodak","2000000.0").
+revenue("Kodak","1.798E9").
+predecessor("Kodak","The Eastman Dry Plate Company").
+numberOfEmployees("Kodak","6500").
+country("Ithaca,_New_York","United_States").
+foundedBy("Kodak","George_Eastman").
+foundedBy("Kodak","Henry_A._Strong").
+industry("Kodak","Photography").
+industry("Kodak","Digital_imaging").
+industry("Kodak","Mobile_devices").
+isPartOf("Ithaca,_New_York","Tompkins_County,_New_York").
+isPartOf("Ithaca,_New_York","New_York_(state)").
+keyPerson("Kodak","Jeff_Clarke_(businessman)").
+keyPerson("Kodak","Chief_executive_officer").
+location("Kodak","Rochester,_New_York").
+location("Kodak","New_York_(state)").
+product("Kodak","Digital_imaging").
+type("Kodak","Public_company").

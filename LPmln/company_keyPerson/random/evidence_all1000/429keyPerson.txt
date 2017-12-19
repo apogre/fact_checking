@@ -1,0 +1,124 @@
+numberOfLocations("DineEquity","3716").
+revenue("DineEquity","6.811E8").
+foundingYear("DineEquity","1976").
+numberOfEmployees("DineEquity","200000").
+keyPerson("DineEquity","Julia_Stewart_(businesswoman)").
+location("DineEquity","California").
+location("DineEquity","Glendale,_California").
+subsidiary("DineEquity","IHOP").
+subsidiary("DineEquity","Applebee's").
+type("DineEquity","Public_company").
+assets("Applebee's","9.35E8").
+equity("Applebee's","4.87E8").
+netIncome("IHOP","4.45E7").
+netIncome("Applebee's","8.1E7").
+numberOfLocations("IHOP","1650").
+numberOfLocations("Applebee's","2033").
+operatingIncome("IHOP","7.28E7").
+operatingIncome("Applebee's","1.31E8").
+revenue("IHOP","3.496E8").
+revenue("Applebee's","2.5E9").
+birthPlace("Julia_Stewart_(businesswoman)","United_States").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+industry("Applebee's","Restaurants").
+location("Glendale,_California","Glendale, California").
+birthYear("Julia_Stewart_(businesswoman)","1955").
+numberOfEmployees("IHOP","32300").
+numberOfEmployees("Applebee's","28000").
+country("Glendale,_California","United_States").
+foundationPlace("IHOP","California").
+foundationPlace("IHOP","Los_Angeles").
+foundationPlace("IHOP","United_States").
+foundationPlace("Applebee's","Decatur,_Georgia").
+foundationPlace("Applebee's","Georgia_(U.S._state)").
+foundationPlace("Applebee's","United_States").
+industry("IHOP","Restaurant").
+isPartOf("Glendale,_California","California").
+isPartOf("Glendale,_California","Los_Angeles_County,_California").
+keyPerson("IHOP","Darren_Rebelez").
+keyPerson("IHOP","Russell_Findlay").
+keyPerson("Applebee's","Julia_Stewart_(businesswoman)").
+largestCity("California","Los_Angeles").
+location("IHOP","Glendale,_California").
+location("IHOP","United_States").
+location("Applebee's","Kansas_City,_Missouri").
+location("Applebee's","United_States").
+occupation("Julia_Stewart_(businesswoman)","Julia_Stewart_(businesswoman)__1").
+occupation("Julia_Stewart_(businesswoman)","DineEquity").
+parentCompany("IHOP","DineEquity").
+parentCompany("Applebee's","DineEquity").
+product("IHOP","Lunch").
+product("IHOP","Pancakes").
+product("IHOP","Breakfast").
+type("Glendale,_California","Charter_city").
+type("IHOP","Subsidiary").
+type("Applebee's","Subsidiary").
+networth("Sheldon_Adelson","2.92E10").
+birthPlace("Sheldon_Adelson","Massachusetts").
+birthPlace("Sheldon_Adelson","Boston").
+birthPlace("Sheldon_Adelson","United_States").
+birthYear("Sheldon_Adelson","1933").
+almaMater("Sheldon_Adelson","City_College_of_New_York").
+occupation("Sheldon_Adelson","Las_Vegas_Sands").
+occupation("Sheldon_Adelson","Sheldon_Adelson__1").
+religion("Sheldon_Adelson","Judaism").
+assets("Las_Vegas_Sands","2.23E10").
+equity("Las_Vegas_Sands","7.21E9").
+netIncome("Las_Vegas_Sands","2.84E9").
+operatingIncome("Las_Vegas_Sands","4.09E9").
+revenue("Las_Vegas_Sands","1.45E10").
+city("Massachusetts","Boston, MassachusettsBoston").
+city("Massachusetts","Brockton, MassachusettsBrockton").
+city("Massachusetts","Cambridge, MassachusettsCambridge").
+city("Massachusetts","Fall River, MassachusettsFall River").
+city("Massachusetts","Lowell, MassachusettsLowell").
+city("Massachusetts","Lynn, MassachusettsLynn").
+city("Massachusetts","New Bedford, MassachusettsNew Bedford").
+city("Massachusetts","Quincy, MassachusettsQuincy").
+city("Massachusetts","Springfield, MassachusettsSpringfield").
+city("Massachusetts","Worcester, MassachusettsWorcester").
+country("Massachusetts","Massachusetts").
+country("City_College_of_New_York","U.S.").
+type("Las_Vegas_Sands","Public").
+foundingYear("Las_Vegas_Sands","1988").
+numberOfEmployees("Las_Vegas_Sands","40000").
+capital("Massachusetts","Boston").
+capital("United_States","Washington,_D.C.").
+city("City_College_of_New_York","New_York_City").
+country("Massachusetts","United_States").
+foundedBy("Las_Vegas_Sands","Sheldon_G._Adelson").
+industry("Las_Vegas_Sands","Hospitality").
+industry("Las_Vegas_Sands","Tourism").
+isPartOf("Boston","Massachusetts").
+isPartOf("Boston","Kingdom_of_Great_Britain").
+isPartOf("Boston","Province_of_Massachusetts_Bay").
+isPartOf("Boston","Massachusetts_Bay_Colony").
+isPartOf("Boston","Suffolk_County,_Massachusetts").
+isPartOf("Boston","Kingdom_of_England").
+keyPerson("Las_Vegas_Sands","Partha_Ojha").
+keyPerson("Las_Vegas_Sands","Sheldon_G._Adelson").
+largestCity("Massachusetts","Boston").
+largestCity("United_States","New_York_City").
+location("Las_Vegas_Sands","Nevada").
+location("Las_Vegas_Sands","Paradise,_Nevada").
+owner("Las_Vegas_Sands","Sheldon_Adelson").
+owningCompany("Las_Vegas_Sands","Sheldon_Adelson").
+product("Las_Vegas_Sands","Entertainment").
+product("Las_Vegas_Sands","Gambling").
+product("Las_Vegas_Sands","Resort").
+product("Las_Vegas_Sands","Casino").
+product("Las_Vegas_Sands","Hotels").
+type("Boston","Capital_city").
+type("City_College_of_New_York","Public_university").

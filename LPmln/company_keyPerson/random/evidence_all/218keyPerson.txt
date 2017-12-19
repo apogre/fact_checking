@@ -1,0 +1,84 @@
+numberOfEmployees("Adobe_Systems","14154").
+foundationPlace("Adobe_Systems","Mountain_View,_California").
+industry("Adobe_Systems","Computer_software").
+keyPerson("Adobe_Systems","Shantanu_Narayen").
+keyPerson("Adobe_Systems","Charles_Geschke").
+keyPerson("Adobe_Systems","John_Warnock").
+location("Adobe_Systems","Adobe_Systems_headquarters_complex").
+location("Adobe_Systems","California").
+location("Adobe_Systems","San_Jose,_California").
+product("Adobe_Systems","List_of_Adobe_software").
+type("Adobe_Systems","Public_company").
+birthPlace("John_Warnock","Salt_Lake_City").
+birthPlace("Shantanu_Narayen","Hyderabad").
+birthPlace("Shantanu_Narayen","India").
+birthPlace("Shantanu_Narayen","Telangana").
+birthPlace("Charles_Geschke","Cleveland").
+birthPlace("Charles_Geschke","Cleveland,_Ohio").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+location("Mountain_View,_California","Mountain View").
+location("San_Jose,_California","San Jose, California").
+birthYear("Shantanu_Narayen","1963").
+almaMater("John_Warnock","University_of_Utah").
+almaMater("Shantanu_Narayen","Bowling_Green_State_University").
+almaMater("Shantanu_Narayen","University_of_California,_Berkeley").
+almaMater("Shantanu_Narayen","Osmania_University").
+almaMater("Charles_Geschke","Carnegie_Mellon_University").
+almaMater("Charles_Geschke","Xavier_University").
+country("Mountain_View,_California","United_States").
+country("San_Jose,_California","United_States").
+isPartOf("Mountain_View,_California","California").
+isPartOf("Mountain_View,_California","Santa_Clara_County,_California").
+isPartOf("San_Jose,_California","California").
+isPartOf("San_Jose,_California","Santa_Clara_County,_California").
+isPartOf("San_Jose,_California","San_Francisco_Bay_Area").
+isPartOf("San_Jose,_California","San_Jose-San_Francisco-Oakland,_CA_Combined_Statistical_Area").
+largestCity("California","Los_Angeles").
+nationality("Charles_Geschke","United_States").
+occupation("Shantanu_Narayen","Adobe_Systems").
+occupation("Shantanu_Narayen","Shantanu_Narayen__1").
+residence("Shantanu_Narayen","Palo_Alto,_California").
+residence("Charles_Geschke","Los_Altos,_California").
+type("Mountain_View,_California","Charter_city").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+networth("Dilip_Shanghvi","1.69E10").
+birthPlace("Dilip_Shanghvi","Mumbai").
+birthPlace("Dilip_Shanghvi","Gujarat").
+birthPlace("Dilip_Shanghvi","Amreli").
+birthYear("Dilip_Shanghvi","1955").
+almaMater("Dilip_Shanghvi","University_of_Calcutta").
+nationality("Dilip_Shanghvi","Indian_people").
+occupation("Dilip_Shanghvi","Sun_Pharmaceuticals").
+occupation("Dilip_Shanghvi","Dilip_Shanghvi__1").
+residence("Dilip_Shanghvi","Mumbai,_Maharashtra").
+stateOfOrigin("Dilip_Shanghvi","Indian_people").
+type("University_of_Calcutta","University and college").
+type("Gujarat","States").
+city("University_of_Calcutta","Kolkata").
+country("Mumbai","India").
+country("Amreli","India").
+country("University_of_Calcutta","India").
+country("Gujarat","India").
+isPartOf("Mumbai","Maharashtra").
+isPartOf("Mumbai","Konkani_language").
+isPartOf("Mumbai","Navi_Mumbai").
+isPartOf("Mumbai","Mumbai_City_district").
+isPartOf("Mumbai","Marathi_language").
+isPartOf("Mumbai","Mumbai_Suburban_District").
+isPartOf("Amreli","Amreli_district").
+isPartOf("Amreli","Gujarat").
+type("Mumbai","Megacity").
+type("University_of_Calcutta","Public_university").

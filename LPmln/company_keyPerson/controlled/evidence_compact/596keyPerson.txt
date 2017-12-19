@@ -1,0 +1,45 @@
+foundingYear("InterCall","1991").
+industry("InterCall","Web_conferencing").
+industry("InterCall","Telecommunication").
+keyPerson("InterCall","Scott_Etzler").
+location("InterCall","Chicago").
+parentCompany("InterCall","West_Corporation").
+industry("West_Corporation","Unified Communications
+Interactive Services
+Specialized Agent Services
+Telecom Services
+Safety Services").
+numberOfEmployees("West_Corporation","26430").
+almaMater("Scott_Etzler","Indiana_University").
+almaMater("Scott_Etzler","Northwestern_University").
+almaMater("Scott_Etzler","Kellogg_School_of_Management").
+country("Chicago","United_States_of_America").
+location("West_Corporation","Omaha,_Nebraska").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+occupation("Scott_Etzler","Scott_Etzler__1").
+type("Chicago","City").
+type("West_Corporation","Public_company").
+birthPlace("Grandhi_Mallikarjuna_Rao","Srikakulam").
+birthPlace("Grandhi_Mallikarjuna_Rao","India").
+birthPlace("Grandhi_Mallikarjuna_Rao","Rajam,_Andhra_Pradesh").
+birthPlace("Grandhi_Mallikarjuna_Rao","Andhra_Pradesh").
+birthYear("Grandhi_Mallikarjuna_Rao","1950").
+occupation("Grandhi_Mallikarjuna_Rao","GMR_Group").
+occupation("Grandhi_Mallikarjuna_Rao","Grandhi_Mallikarjuna_Rao__1").
+division("GMR_Group","Airports, Energy, Highways and Urban Infrastructure").
+industry("GMR_Group","Infrastructure").
+location("Srikakulam","Srikakulam, Andhra Pradesh").
+type("Andhra_Pradesh","States_of_India").
+foundingYear("GMR_Group","1978").
+numberOfEmployees("GMR_Group","10000").
+country("Andhra_Pradesh","India").
+country("Srikakulam","India").
+country("Rajam,_Andhra_Pradesh","India").
+foundedBy("GMR_Group","Grandhi_Mallikarjuna_Rao").
+keyPerson("GMR_Group","Grandhi_Mallikarjuna_Rao").
+locationCity("GMR_Group","Bengaluru").
+locationCountry("GMR_Group","India").
+type("GMR_Group","Listed_company").
+type("Srikakulam","City").
+type("Rajam,_Andhra_Pradesh","Town").

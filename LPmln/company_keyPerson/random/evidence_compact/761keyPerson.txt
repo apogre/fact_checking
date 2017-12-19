@@ -1,0 +1,26 @@
+parentCompany("Outback_Steakhouse","Bloomin'_Brands").
+type("Outback_Steakhouse","Subsidiary").
+location("Costa_Rica","Costa Rica").
+location("Venezuela","right").
+location("Guam","Guam").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+foundedBy("Bloomin'_Brands","J._Timothy_Gannon").
+foundedBy("Bloomin'_Brands","Chris_T._Sullivan").
+keyPerson("Bloomin'_Brands","Chief_brand_officer").
+keyPerson("Bloomin'_Brands","President").
+keyPerson("Bloomin'_Brands","Chief_executive_officer").
+keyPerson("Bloomin'_Brands","Vice_president").
+keyPerson("Bloomin'_Brands","Chairman").
+keyPerson("Bloomin'_Brands","CFO").
+location("Bloomin'_Brands","Tampa,_Florida").
+type("Bloomin'_Brands","Public_company").
+birthPlace("Howard_Schultz","New_York_(state)").
+birthPlace("Howard_Schultz","Brooklyn").
+birthPlace("Howard_Schultz","United_States").
+occupation("Howard_Schultz","Howard_Schultz__1").
+occupation("Howard_Schultz","Starbucks").
+location("Brooklyn","JFK Airport, New York").
+type("Brooklyn","Borough_(New_York_City)").
+type("Starbucks","Public_company").
+type("Northern_Michigan_University","Public_university").

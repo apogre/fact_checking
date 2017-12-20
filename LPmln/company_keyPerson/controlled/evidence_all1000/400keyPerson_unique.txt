@@ -1,0 +1,40 @@
+foundingYear("Crown_Worldwide_Group","1965").
+numberOfEmployees("Crown_Worldwide_Group","4600").
+division("Crown_Worldwide_Group","www.crownfineart.com").
+division("Crown_Worldwide_Group","www.crownrms.com").
+division("Crown_Worldwide_Group","www.crown-logistics.com").
+division("Crown_Worldwide_Group","www.crownwinecellars.com").
+division("Crown_Worldwide_Group","www.crownrelo.com").
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+industry("Crown_Worldwide_Group","Warehouse").
+industry("Crown_Worldwide_Group","Relocation_service").
+industry("Crown_Worldwide_Group","Facilities_Management").
+industry("Crown_Worldwide_Group","Records_Management").
+networth("James_E._Thompson","1.0E9").
+knownFor("James_E._Thompson","Founder of The Crown Worldwide Group").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+spouse("James_E._Thompson","Sally Thompson").
+birthYear("James_E._Thompson","1940").
+almaMater("James_E._Thompson","San_Jose_State_University").
+occupation("James_E._Thompson","James_E._Thompson__1").
+personFunction("James_E._Thompson","James_E._Thompson__1").
+networth("Mukesh_Ambani","2.24E10").
+birthPlace("Mukesh_Ambani","Aden").
+birthPlace("Mukesh_Ambani","Colony_of_Aden").
+birthYear("Mukesh_Ambani","1957").
+almaMater("Mukesh_Ambani","Forest_School_(Walthamstow)").
+almaMater("Mukesh_Ambani","Institute_of_Chemical_Technology").
+almaMater("Mukesh_Ambani","Stanford_University").
+child("Mukesh_Ambani","Akash_Ambani").
+child("Mukesh_Ambani","Isha_M._Ambani").
+nationality("Mukesh_Ambani","India").
+occupation("Mukesh_Ambani","Mukesh_Ambani__1").
+occupation("Mukesh_Ambani","Reliance_Industries").
+parent("Mukesh_Ambani","Dhirubhai_Ambani").
+relation("Mukesh_Ambani","Anil_Ambani").
+residence("Mukesh_Ambani","Maharashtra").
+residence("Mukesh_Ambani","India").
+residence("Mukesh_Ambani","Mumbai").
+spouse("Mukesh_Ambani","Nita_Ambani").
+stateOfOrigin("Mukesh_Ambani","India").

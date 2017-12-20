@@ -1,0 +1,130 @@
+assets("American_Airlines_Group","4.8415E10").
+equity("American_Airlines_Group","5.635E9").
+netIncome("American_Airlines_Group","7.61E9").
+operatingIncome("American_Airlines_Group","6.204E9").
+revenue("American_Airlines_Group","4.099E10").
+numberOfEmployees("American_Airlines_Group","118500").
+division("American_Airlines_Group","American_Airlines_Cargo").
+division("American_Airlines_Group","American_Eagle_(airline_brand)").
+division("American_Airlines_Group","American_Airlines_Shuttle").
+industry("American_Airlines_Group","Aviation").
+keyPerson("American_Airlines_Group","Chief_Financial_Officer").
+keyPerson("American_Airlines_Group","Doug_Parker").
+subsidiary("American_Airlines_Group","American_Airlines,_Inc.").
+subsidiary("American_Airlines_Group","Envoy_Air_Inc.").
+subsidiary("American_Airlines_Group","PSA_Airlines,_Inc.").
+subsidiary("American_Airlines_Group","Piedmont_Airlines,_Inc.").
+type("American_Airlines_Group","Public_company").
+assets("AMR_Corporation","2.351E10").
+assets("US_Airways_Group","8.33E9").
+equity("AMR_Corporation","-7.111E9").
+equity("US_Airways_Group","1.5E8").
+netIncome("AMR_Corporation","-1.876E9").
+netIncome("US_Airways_Group","7.1E7").
+operatingIncome("AMR_Corporation","-1.172E9").
+operatingIncome("US_Airways_Group","4.26E8").
+revenue("US_Airways_Group","1.305E10").
+assets("American_Eagle_(airline_brand)","See parent").
+assets("American_Airlines_Shuttle","See parent").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+equity("American_Eagle_(airline_brand)","See parent").
+equity("American_Airlines_Shuttle","See parent").
+location("Fort_Worth,_Texas","Fort Worth, Texas").
+netIncome("American_Eagle_(airline_brand)","See parent").
+netIncome("American_Airlines_Shuttle","See parent").
+operatingIncome("American_Eagle_(airline_brand)","See parent").
+operatingIncome("American_Airlines_Shuttle","See parent").
+revenue("AMR_Corporation","United_States_Dollar").
+revenue("American_Eagle_(airline_brand)","See parent").
+revenue("American_Airlines_Shuttle","See parent").
+state("Texas","expanded").
+extinctionYear("AMR_Corporation","2013").
+extinctionYear("US_Airways_Group","2013").
+foundingYear("AMR_Corporation","1982").
+foundingYear("US_Airways_Group","1939").
+numberOfEmployees("AMR_Corporation","77750").
+numberOfEmployees("US_Airways_Group","31467").
+capital("Texas","Austin,_Texas").
+capital("United_States","Washington,_D.C.").
+country("Fort_Worth,_Texas","United_States_of_America").
+country("Texas","United_States").
+headquarter("American_Eagle_(airline_brand)","Texas").
+headquarter("American_Eagle_(airline_brand)","United_States").
+headquarter("American_Eagle_(airline_brand)","Fort_Worth").
+headquarter("American_Airlines_Shuttle","Texas").
+headquarter("American_Airlines_Shuttle","United_States").
+headquarter("American_Airlines_Shuttle","Fort_Worth").
+industry("AMR_Corporation","Aviation").
+industry("American_Eagle_(airline_brand)","Air_Transport").
+industry("American_Airlines_Shuttle","Air_Transport").
+industry("US_Airways_Group","Aviation").
+isPartOf("Fort_Worth,_Texas","Texas").
+isPartOf("Fort_Worth,_Texas","Denton_County,_Texas").
+isPartOf("Fort_Worth,_Texas","Parker_County,_Texas").
+isPartOf("Fort_Worth,_Texas","Tarrant_County,_Texas").
+isPartOf("Fort_Worth,_Texas","Wise_County,_Texas").
+keyPerson("US_Airways_Group","Doug_Parker_(airline_executive)").
+keyPerson("US_Airways_Group","CEO").
+keyPerson("US_Airways_Group","President").
+largestCity("Texas","Houston").
+largestCity("United_States","New_York_City").
+location("AMR_Corporation","Fort_Worth,_Texas").
+location("AMR_Corporation","Texas").
+location("US_Airways_Group","Tempe,_Arizona").
+parentCompany("American_Eagle_(airline_brand)","American_Airlines_Group").
+parentCompany("American_Airlines_Shuttle","American_Airlines_Group").
+product("US_Airways_Group","Airline").
+regionServed("AMR_Corporation","World").
+service("AMR_Corporation","Airline").
+successor("US_Airways_Group","American_Airlines_Group").
+type("Fort_Worth,_Texas","City").
+type("AMR_Corporation","Public_company").
+type("US_Airways_Group","Public_company").
+birthPlace("Satya_Nadella","India").
+birthPlace("Satya_Nadella","Hyderabad").
+birthPlace("Satya_Nadella","Telangana").
+birthYear("Satya_Nadella","1967").
+almaMater("Satya_Nadella","Manipal_Institute_of_Technology").
+almaMater("Satya_Nadella","University_of_Chicago_Booth_School_of_Business").
+employer("Satya_Nadella","Microsoft_Corporation").
+occupation("Satya_Nadella","Microsoft_Corporation").
+occupation("Satya_Nadella","Satya_Nadella__1").
+salary("Satya_Nadella","1.82E7").
+networth("Steve_Ballmer","2.78E10").
+birthPlace("Steve_Ballmer","Detroit").
+birthPlace("Steve_Ballmer","Michigan").
+birthPlace("Steve_Ballmer","United_States").
+country("Telangana","India").
+spouse("Steve_Ballmer","Connie Snyder").
+type("Telangana","States_and_union_territories_of_India").
+birthYear("Steve_Ballmer","1956").
+affiliation("Manipal_Institute_of_Technology","Manipal_University").
+almaMater("Steve_Ballmer","Stanford_Graduate_School_of_Business").
+almaMater("Steve_Ballmer","Harvard_College").
+capital("India","New_Delhi").
+city("Manipal_Institute_of_Technology","Manipal").
+country("Hyderabad","India").
+country("Manipal_Institute_of_Technology","India").
+isPartOf("Hyderabad","Sangareddy_district").
+isPartOf("Hyderabad","Ranga_Reddy_district").
+isPartOf("Hyderabad","Medak_district").
+isPartOf("Hyderabad","South_India").
+isPartOf("Hyderabad","Hyderabad_district,_India").
+isPartOf("Hyderabad","Telangana").
+isPartOf("Hyderabad","Deccan").
+isPartOf("Hyderabad","Medchal-Malkajgiri_district").
+largestCity("India","Mumbai").
+residence("Steve_Ballmer","Hunts_Point,_Washington").
+state("Manipal_Institute_of_Technology","Karnataka").
+type("Hyderabad","Metropolis").
+type("Manipal_Institute_of_Technology","Private_school").

@@ -1,0 +1,66 @@
+numberOfEmployees("Valero_Energy","10103").
+industry("Valero_Energy","List_of_petroleum_companies").
+keyPerson("Valero_Energy","CEO").
+location("Valero_Energy","Texas").
+location("Valero_Energy","United_States").
+location("Valero_Energy","San_Antonio").
+regionServed("Valero_Energy","North_America").
+regionServed("Valero_Energy","Caribbean").
+type("Valero_Energy","Public_company").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+state("Texas","expanded").
+capital("Texas","Austin,_Texas").
+capital("United_States","Washington,_D.C.").
+country("Texas","United_States").
+isPartOf("San_Antonio","Texas").
+isPartOf("San_Antonio","Bexar_County,_Texas").
+isPartOf("San_Antonio","Comal_County,_Texas").
+isPartOf("San_Antonio","Medina_County,_Texas").
+largestCity("Texas","Houston").
+largestCity("United_States","New_York_City").
+type("San_Antonio","City_(Texas)").
+birthPlace("Ho_Ching","Singapore").
+almaMater("Ho_Ching","Stanford_University").
+child("Ho_Ching","Li_Hongyi_(Singapore)").
+predecessor("Ho_Ching","Tan_Choo_Leng").
+spouse("Ho_Ching","Lee_Hsien_Loong").
+birthPlace("Tan_Choo_Leng","Singapore").
+birthPlace("Lee_Hsien_Loong","Singapore").
+birthPlace("Lee_Hsien_Loong","Colony_of_Singapore").
+country("Stanford_University","U.S.").
+predecessor("Lee_Hsien_Loong","Constituency established").
+predecessor("Lee_Hsien_Loong","Himself").
+state("Stanford_University","autocollapse").
+successor("Lee_Hsien_Loong","Himself").
+almaMater("Lee_Hsien_Loong","Trinity_College,_Cambridge").
+almaMater("Lee_Hsien_Loong","United_States_Army_Command_and_General_Staff_College").
+almaMater("Lee_Hsien_Loong","Harvard_University").
+capital("Singapore","City-state").
+city("Stanford_University","Stanford,_California").
+country("Lee_Hsien_Loong","Singapore").
+country("Lee_Hsien_Loong","Colony_of_Singapore").
+nationality("Lee_Hsien_Loong","Colony_of_Singapore").
+predecessor("Tan_Choo_Leng","Kwa_Geok_Choo").
+predecessor("Lee_Hsien_Loong","Richard_Hu").
+predecessor("Lee_Hsien_Loong","Goh_Chok_Tong").
+residence("Lee_Hsien_Loong","Colony_of_Singapore").
+spouse("Tan_Choo_Leng","Goh_Chok_Tong").
+spouse("Lee_Hsien_Loong","Ho_Ching").
+spouse("Lee_Hsien_Loong","Wong_Ming_Yang").
+state("Stanford_University","California").
+successor("Tan_Choo_Leng","Ho_Ching").
+successor("Lee_Hsien_Loong","S._Jayakumar").
+successor("Lee_Hsien_Loong","Tharman_Shanmugaratnam").
+type("Stanford_University","Private_university").

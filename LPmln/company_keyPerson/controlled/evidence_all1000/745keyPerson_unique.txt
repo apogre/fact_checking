@@ -1,0 +1,143 @@
+assets("Office_Depot","6.844E9").
+equity("Office_Depot","1.621E9").
+netIncome("Office_Depot","-3.54E8").
+operatingIncome("Office_Depot","-2.75E8").
+revenue("Office_Depot","1.45E10").
+numberOfEmployees("Office_Depot","56000").
+keyPerson("Office_Depot","Chief_accounting_officer").
+keyPerson("Office_Depot","Chief_executive_officer").
+keyPerson("Office_Depot","Executive_vice_president").
+keyPerson("Office_Depot","Chief_financial_officer").
+keyPerson("Office_Depot","Chairman").
+product("Office_Depot","Office_supplies").
+subsidiary("Office_Depot","Grand_&_Toy").
+subsidiary("Office_Depot","OfficeMax").
+subsidiary("Office_Depot","Viking_Direct").
+type("Office_Depot","Public_company").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+location("Boca_Raton,_Florida","Boca Raton, Florida").
+state("Florida","expanded").
+foundingYear("Viking_Direct","1960").
+foundingYear("Grand_&_Toy","1882").
+numberOfEmployees("Viking_Direct","1300").
+numberOfEmployees("Grand_&_Toy","1100").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+country("Boca_Raton,_Florida","United_States_of_America").
+country("Florida","United_States").
+foundationPlace("OfficeMax","Cleveland").
+foundationPlace("OfficeMax","Ohio").
+foundationPlace("OfficeMax","United_States").
+foundationPlace("Viking_Direct","California").
+foundationPlace("Viking_Direct","Los_Angeles").
+foundationPlace("Viking_Direct","United_States").
+foundedBy("Grand_&_Toy","James_Grand").
+industry("OfficeMax","Retail").
+industry("Viking_Direct","Office_supplies").
+isPartOf("Boca_Raton,_Florida","Florida").
+isPartOf("Boca_Raton,_Florida","Palm_Beach_County,_Florida").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+location("OfficeMax","Boca_Raton,_Florida").
+location("OfficeMax","Florida").
+location("Viking_Direct","Leicester").
+location("Viking_Direct","United_Kingdom").
+locationCity("Grand_&_Toy","Ontario").
+locationCity("Grand_&_Toy","Toronto").
+locationCountry("Grand_&_Toy","Canada").
+owner("Grand_&_Toy","Office_Depot").
+owningCompany("Grand_&_Toy","Office_Depot").
+parentCompany("OfficeMax","Office_Depot").
+parentCompany("Viking_Direct","Office_Depot").
+parentCompany("Grand_&_Toy","OfficeMax").
+product("OfficeMax","Office_supplies").
+regionServed("Viking_Direct","Europe").
+type("Boca_Raton,_Florida","City_(Florida)").
+type("OfficeMax","Subsidiary").
+type("OfficeMax","Brand_(marketing)").
+type("Viking_Direct","Subsidiary").
+type("Viking_Direct","Private_company_limited_by_shares").
+type("Grand_&_Toy","Subsidiary").
+birthPlace("John_T._Chambers","Ohio").
+birthPlace("John_T._Chambers","Cleveland").
+birthPlace("John_T._Chambers","United_States").
+birthYear("John_T._Chambers","1949").
+almaMater("John_T._Chambers","Edmund_T._Pratt_Jr._School_of_Engineering").
+almaMater("John_T._Chambers","West_Virginia_University").
+almaMater("John_T._Chambers","Kelley_School_of_Business").
+occupation("John_T._Chambers","Cisco_Systems").
+occupation("John_T._Chambers","Chairman").
+occupation("John_T._Chambers","John_T._Chambers__1").
+city("Ohio","Cleveland").
+city("Ohio","Akron, OhioAkron").
+city("Ohio","Canton, OhioCanton").
+city("Ohio","Cincinnati").
+city("Ohio","Columbus, OhioColumbus").
+city("Ohio","Dayton, OhioDayton").
+city("Ohio","Lorain, OhioLorain").
+city("Ohio","Parma, OhioParma").
+city("Ohio","Toledo, OhioToledo").
+city("Ohio","Youngstown, OhioYoungstown").
+country("Ohio","Ohio").
+country("West_Virginia_University","U.S.").
+country("Kelley_School_of_Business","U.S.").
+country("Republican_Party_(United_States)","United States").
+location("Edmund_T._Pratt_Jr._School_of_Engineering","Durham,_North_Carolina").
+location("Edmund_T._Pratt_Jr._School_of_Engineering","North_Carolina").
+location("Edmund_T._Pratt_Jr._School_of_Engineering","United_States").
+parent("Kelley_School_of_Business","Indiana_University").
+parent("Edmund_T._Pratt_Jr._School_of_Engineering","Duke_University").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+state("Ohio","expanded").
+numberOfEmployees("Cisco_Systems","71883").
+affiliation("Kelley_School_of_Business","The_Washington_Campus").
+affiliation("Republican_Party_(United_States)","Asia_Pacific_Democrat_Union").
+capital("Ohio","Columbus,_Ohio").
+city("West_Virginia_University","Morgantown,_West_Virginia").
+city("Kelley_School_of_Business","Bloomington,_Indiana").
+country("Ohio","United_States").
+foundationPlace("Cisco_Systems","California").
+foundationPlace("Cisco_Systems","San_Francisco").
+foundationPlace("Cisco_Systems","United_States").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+industry("Cisco_Systems","Networking_hardware").
+isPartOf("Cleveland","Ohio").
+isPartOf("Cleveland","Cuyahoga_County,_Ohio").
+keyPerson("Cisco_Systems","John_T._Chambers").
+keyPerson("Cisco_Systems","Chuck_Robbins").
+locationCity("Cisco_Systems","California").
+locationCity("Cisco_Systems","San_Jose,_CA").
+locationCountry("Cisco_Systems","United_States").
+product("Cisco_Systems","Cisco_IOS").
+product("Cisco_Systems","Wireless").
+product("Cisco_Systems","Computer_networking_device").
+product("Cisco_Systems","Datacenter").
+product("Cisco_Systems","Interface_(computer_science)").
+product("Cisco_Systems","Module").
+product("Cisco_Systems","Network_Management").
+product("Cisco_Systems","Optical_networking_(disambiguation)").
+product("Cisco_Systems","Storage_area_network").
+product("Cisco_Systems","Telepresence").
+product("Cisco_Systems","VOIP").
+state("West_Virginia_University","West_Virginia").
+state("Kelley_School_of_Business","Indiana").
+subsidiary("Cisco_Systems","List_of_acquisitions_by_Cisco_Systems").
+type("Cleveland","City").
+type("West_Virginia_University","Satellite_campus").
+type("West_Virginia_University","Public_university").
+type("West_Virginia_University","Flagship_university").
+type("West_Virginia_University","Land-grant_university").
+type("West_Virginia_University","Space_grant_college").
+type("Kelley_School_of_Business","Public_university").
+type("Cisco_Systems","Public_company").

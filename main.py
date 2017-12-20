@@ -306,6 +306,8 @@ def fact_inference(data_source):
     print "Executing Fact Inference"
     resources_v = load_csv('dataset/' + data_source + '/triples.csv')
     lpmln_evaluation = []
+    rule_predicates = get_rule_predicates(data_source, top_k, predicate)
+    print rule_predicates
     for id, resource_v in enumerate(resources_v):
         print id
         id = str(id+1)
@@ -320,7 +322,7 @@ def fact_inference(data_source):
             except:
                 pass
         if distance_three:
-            item_set = evidence_writer(distance_three, id, data_source, resource_v, top_k, predicate, set_up)
+            item_set = evidence_writer(distance_three, id, data_source, resource_v, top_k, predicate, set_up, rule_predicates)
 
             # probability, prob_test = inference(id, data_source,resource_v, top_k, predicate)
             answer_set, answer_test = clingo_map(id, data_source, resource_v, top_k, predicate, set_up)

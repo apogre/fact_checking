@@ -1,0 +1,59 @@
+foundingYear("The_Siegel_Group","2001").
+keyPerson("The_Siegel_Group","Steve_Siegel").
+location("The_Siegel_Group","Paradise,_Nevada").
+location("The_Siegel_Group","Nevada").
+city("Nevada","Carson City, NevadaCarson City").
+city("Nevada","Enterprise, NevadaEnterprise").
+city("Nevada","Henderson, NevadaHenderson").
+city("Nevada","Las Vegas, NevadaLas Vegas").
+city("Nevada","North Las Vegas, NevadaNorth Las Vegas").
+city("Nevada","Paradise, NevadaParadise").
+city("Nevada","Reno, NevadaReno").
+city("Nevada","Sparks, NevadaSparks").
+city("Nevada","Spring Valley, NevadaSpring Valley").
+city("Nevada","Sunrise Manor, NevadaSunrise Manor").
+country("Nevada","Nevada").
+birthYear("Steve_Siegel","1971").
+capital("Nevada","Carson_City,_Nevada").
+country("Nevada","United_States").
+country("Paradise,_Nevada","United_States").
+isPartOf("Paradise,_Nevada","Nevada").
+isPartOf("Paradise,_Nevada","Clark_County,_Nevada").
+largestCity("Nevada","Las_Vegas").
+occupation("Steve_Siegel","Real_Estate_Development").
+occupation("Steve_Siegel","Steve_Siegel__1").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").
+birthYear("Rich_Lesser","1963").
+almaMater("Rich_Lesser","University_of_Michigan").
+almaMater("Rich_Lesser","Harvard_Business_School").
+employer("Rich_Lesser","Boston_Consulting_Group").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Management_Consultant").
+personFunction("Rich_Lesser","Rich_Lesser__1").
+revenue("Boston_Consulting_Group","5.0E9").
+country("Harvard_Business_School","U.S.").
+country("University_of_Michigan","United States").
+state("University_of_Michigan","collapsed").
+foundingYear("Boston_Consulting_Group","1963").
+numberOfEmployees("Boston_Consulting_Group","6200").
+affiliation("Harvard_Business_School","Harvard_University").
+affiliation("University_of_Michigan","Big_Ten_Academic_Alliance").
+affiliation("University_of_Michigan","Association_of_Public_and_Land-Grant_Universities").
+affiliation("University_of_Michigan","Association_of_American_Universities").
+affiliation("University_of_Michigan","Universities_Research_Association").
+city("Harvard_Business_School","Boston").
+city("University_of_Michigan","Ann_Arbor,_Michigan").
+industry("Boston_Consulting_Group","Management_consulting").
+keyPerson("Boston_Consulting_Group","Rich_Lesser").
+location("Boston_Consulting_Group","Boston").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+state("Harvard_Business_School","Massachusetts").
+state("University_of_Michigan","Michigan").
+type("Harvard_Business_School","Private_school").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").
+type("Boston_Consulting_Group","Privately_held_company").

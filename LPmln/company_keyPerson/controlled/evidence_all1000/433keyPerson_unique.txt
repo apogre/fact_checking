@@ -1,0 +1,95 @@
+netIncome("DLF_(company)","2.2E8").
+revenue("DLF_(company)","1.87E9").
+foundingYear("DLF_(company)","1946").
+numberOfEmployees("DLF_(company)","11495").
+industry("DLF_(company)","Real_estate").
+keyPerson("DLF_(company)","Chief_Executive_Officer").
+keyPerson("DLF_(company)","Kushal_Pal_Singh").
+location("DLF_(company)","New_Delhi").
+location("DLF_(company)","India").
+product("DLF_(company)","Golf_courses").
+product("DLF_(company)","Infrastructure").
+product("DLF_(company)","Hotels").
+product("DLF_(company)","Shopping_Malls").
+product("DLF_(company)","Apartments").
+product("DLF_(company)","Offices").
+type("DLF_(company)","Public_company").
+networth("Kushal_Pal_Singh","2.5E9").
+birthPlace("Kushal_Pal_Singh","Uttar_Pradesh").
+birthPlace("Kushal_Pal_Singh","United_Provinces_of_Agra_and_Oudh").
+birthPlace("Kushal_Pal_Singh","Bulandshahr").
+birthPlace("Kushal_Pal_Singh","Bulandshahar").
+birthPlace("Kushal_Pal_Singh","British_India").
+city("BSE_SENSEX","Mumbai").
+country("BSE_SENSEX","India").
+spouse("Kushal_Pal_Singh","Married").
+type("BSE_SENSEX","Stock_Exchange").
+birthYear("Kushal_Pal_Singh","1931").
+almaMater("Kushal_Pal_Singh","Meerut_College").
+capital("India","New_Delhi").
+country("New_Delhi","India").
+isPartOf("New_Delhi","Delhi").
+largestCity("India","Mumbai").
+occupation("Kushal_Pal_Singh","DLF_Universal").
+occupation("Kushal_Pal_Singh","Kushal_Pal_Singh__1").
+residence("Kushal_Pal_Singh","New_Delhi").
+type("New_Delhi","List_of_districts_of_Delhi").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+birthYear("James_J._Greco","1958").
+almaMater("James_J._Greco","Georgetown_University").
+almaMater("James_J._Greco","University_of_Miami").
+almaMater("James_J._Greco","City_University,_London").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+residence("James_J._Greco","Florida").
+residence("James_J._Greco","Delray_Beach,_Florida").
+residence("James_J._Greco","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Georgetown_University","US").
+country("University_of_Miami","U.S.").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+state("Florida","expanded").
+type("University_of_Miami","Private").
+affiliation("Georgetown_University","Association_of_Jesuit_Colleges_and_Universities").
+affiliation("Georgetown_University","Roman_Catholic_Church").
+affiliation("Georgetown_University","Association_of_Catholic_Colleges_and_Universities").
+affiliation("Georgetown_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Georgetown_University","Oak_Ridge_Associated_Universities").
+affiliation("Georgetown_University","568_Group").
+affiliation("Georgetown_University","Consortium_of_Universities_of_the_Washington_Metropolitan_Area").
+affiliation("University_of_Miami","Southeastern_Universities_Research_Association").
+affiliation("University_of_Miami","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("University_of_Miami","Oak_Ridge_Associated_Universities").
+capital("Connecticut","Hartford,_Connecticut").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+city("Georgetown_University","Washington,_D.C.").
+city("University_of_Miami","Coral_Gables,_Florida").
+country("Connecticut","United_States").
+country("Delray_Beach,_Florida","United_States_of_America").
+country("Florida","United_States").
+isPartOf("Delray_Beach,_Florida","Florida").
+isPartOf("Delray_Beach,_Florida","Palm_Beach_County,_Florida").
+isPartOf("New_Haven,_Connecticut","Connecticut").
+isPartOf("New_Haven,_Connecticut","Greater_New_Haven").
+isPartOf("New_Haven,_Connecticut","Union_Station_(New_Haven)").
+largestCity("Connecticut","Bridgeport,_Connecticut").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+state("University_of_Miami","Florida").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

@@ -1,0 +1,78 @@
+assets("Las_Vegas_Sands","2.23E10").
+equity("Las_Vegas_Sands","7.21E9").
+netIncome("Las_Vegas_Sands","2.84E9").
+operatingIncome("Las_Vegas_Sands","4.09E9").
+revenue("Las_Vegas_Sands","1.45E10").
+foundingYear("Las_Vegas_Sands","1988").
+numberOfEmployees("Las_Vegas_Sands","40000").
+foundedBy("Las_Vegas_Sands","Sheldon_G._Adelson").
+industry("Las_Vegas_Sands","Tourism").
+industry("Las_Vegas_Sands","Hospitality").
+keyPerson("Las_Vegas_Sands","Partha_Ojha").
+keyPerson("Las_Vegas_Sands","Sheldon_G._Adelson").
+location("Las_Vegas_Sands","Nevada").
+location("Las_Vegas_Sands","Paradise,_Nevada").
+owner("Las_Vegas_Sands","Sheldon_Adelson").
+owningCompany("Las_Vegas_Sands","Sheldon_Adelson").
+product("Las_Vegas_Sands","Casino").
+product("Las_Vegas_Sands","Gambling").
+product("Las_Vegas_Sands","Entertainment").
+product("Las_Vegas_Sands","Hotels").
+product("Las_Vegas_Sands","Resort").
+networth("Sheldon_Adelson","2.92E10").
+birthPlace("Sheldon_Adelson","Boston").
+birthPlace("Sheldon_Adelson","Massachusetts").
+birthPlace("Sheldon_Adelson","United_States").
+city("Nevada","Carson City, NevadaCarson City").
+city("Nevada","Enterprise, NevadaEnterprise").
+city("Nevada","Henderson, NevadaHenderson").
+city("Nevada","Las Vegas, NevadaLas Vegas").
+city("Nevada","North Las Vegas, NevadaNorth Las Vegas").
+city("Nevada","Paradise, NevadaParadise").
+city("Nevada","Reno, NevadaReno").
+city("Nevada","Sparks, NevadaSparks").
+city("Nevada","Spring Valley, NevadaSpring Valley").
+city("Nevada","Sunrise Manor, NevadaSunrise Manor").
+country("Nevada","Nevada").
+spouse("Sheldon_Adelson","Miriam Ochsorn").
+spouse("Sheldon_Adelson","Sandra Adelson").
+birthYear("Sheldon_Adelson","1933").
+almaMater("Sheldon_Adelson","City_College_of_New_York").
+capital("Nevada","Carson_City,_Nevada").
+country("Nevada","United_States").
+country("Paradise,_Nevada","United_States").
+isPartOf("Paradise,_Nevada","Nevada").
+isPartOf("Paradise,_Nevada","Clark_County,_Nevada").
+largestCity("Nevada","Las_Vegas").
+occupation("Sheldon_Adelson","Sheldon_Adelson__1").
+occupation("Sheldon_Adelson","Las_Vegas_Sands").
+type("Paradise,_Nevada","Unincorporated_towns_in_Nevada").
+birthPlace("Lowell_McAdam","Buffalo,_New_York").
+birthYear("Lowell_McAdam","1954").
+almaMater("Lowell_McAdam","University_of_San_Diego").
+almaMater("Lowell_McAdam","Cornell_University").
+occupation("Lowell_McAdam","Lowell_McAdam__1").
+occupation("Lowell_McAdam","Chief_Executive_Officer").
+occupation("Lowell_McAdam","Chairman").
+salary("Lowell_McAdam","1.82E7").
+country("University_of_San_Diego","U.S.").
+country("Cornell_University","U.S.").
+affiliation("University_of_San_Diego","Consortium_for_North_American_Higher_Education_Collaboration").
+affiliation("University_of_San_Diego","Roman_Catholic").
+affiliation("University_of_San_Diego","Association_of_Catholic_Colleges_and_Universities").
+affiliation("University_of_San_Diego","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Cornell_University","Association_of_Public_and_Land-Grant_Universities").
+affiliation("Cornell_University","Association_of_American_Universities").
+affiliation("Cornell_University","National_Association_of_Independent_Colleges_and_Universities").
+city("University_of_San_Diego","San_Diego").
+city("Cornell_University","Ithaca,_New_York").
+isPartOf("Buffalo,_New_York","Erie_County,_New_York").
+state("University_of_San_Diego","California").
+state("Cornell_University","New_York_(state)").
+type("Buffalo,_New_York","City_(New_York)").
+type("University_of_San_Diego","Private_university").
+type("Cornell_University","Private_university").
+type("Cornell_University","Land-grant_university").
+type("Cornell_University","Sea-grant").
+type("Cornell_University","Space-grant").
+type("Cornell_University","Statutory_college").

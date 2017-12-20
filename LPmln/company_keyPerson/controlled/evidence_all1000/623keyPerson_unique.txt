@@ -1,0 +1,61 @@
+netIncome("Land_Securities","2416.0").
+operatingIncome("Land_Securities","2346.0").
+revenue("Land_Securities","7.704E8").
+foundingYear("Land_Securities","1944").
+industry("Land_Securities","Property").
+keyPerson("Land_Securities","Chief_Executive").
+keyPerson("Land_Securities","Chairman").
+keyPerson("Land_Securities","Robert_Noel_(businessman)").
+keyPerson("Land_Securities","Alison_Carnwath").
+location("Land_Securities","London").
+location("Land_Securities","United_Kingdom").
+type("Land_Securities","Real_estate_investment_trust").
+networth("Walter_Kwok","7.0E9").
+birthPlace("Walter_Kwok","Hong_Kong").
+occupation("Walter_Kwok","Walter_Kwok__1").
+occupation("Walter_Kwok","Sun_Hung_Kai_Properties").
+parent("Walter_Kwok","Kwok_Tak_Seng").
+parent("Walter_Kwok","Kwong_Siu-hing").
+relation("Walter_Kwok","Thomas_Kwok").
+relation("Walter_Kwok","Raymond_Kwok").
+equity("Sun_Hung_Kai_Properties","456818.0").
+networth("Raymond_Kwok","1.86E10").
+networth("Thomas_Kwok","1.63E10").
+revenue("Sun_Hung_Kai_Properties","6.68E10").
+birthPlace("Raymond_Kwok","Hong_Kong").
+birthPlace("Thomas_Kwok","Macau").
+birthPlace("Thomas_Kwok","Portuguese_Macau").
+birthPlace("Raymond_Kwok","Hong Kong").
+location("Sun_Hung_Kai_Properties","Hong Kong, SAR").
+location("Sun_Hung_Kai_Properties","Sun Hung Kai Centre,").
+residence("Raymond_Kwok","Hong Kong").
+residence("Thomas_Kwok","Hong Kong").
+type("Sun_Hung_Kai_Properties","Public").
+birthYear("Thomas_Kwok","1951").
+foundingYear("Sun_Hung_Kai_Properties","1963").
+numberOfEmployees("Sun_Hung_Kai_Properties","37000").
+foundedBy("Sun_Hung_Kai_Properties","Kwok_Tak_Seng").
+foundedBy("Sun_Hung_Kai_Properties","Lee_Shau_Kee").
+foundedBy("Sun_Hung_Kai_Properties","Fung_King_Hey").
+industry("Sun_Hung_Kai_Properties","Real_Estate").
+keyPerson("Sun_Hung_Kai_Properties","Raymond_Kwok").
+keyPerson("Sun_Hung_Kai_Properties","Adam_Kwok").
+occupation("Raymond_Kwok","Sun_Hung_Kai_Properties").
+occupation("Raymond_Kwok","Raymond_Kwok__1").
+occupation("Thomas_Kwok","Sun_Hung_Kai_Properties").
+occupation("Thomas_Kwok","Thomas_Kwok__1").
+owner("Sun_Hung_Kai_Properties","Raymond_Kwok").
+owner("Sun_Hung_Kai_Properties","Thomas_Kwok").
+owningCompany("Sun_Hung_Kai_Properties","Raymond_Kwok").
+owningCompany("Sun_Hung_Kai_Properties","Thomas_Kwok").
+parent("Raymond_Kwok","Kwong_Siu-hing").
+parent("Raymond_Kwok","Kwok_Tak_Seng").
+parent("Thomas_Kwok","Kwong_Siu-hing").
+parent("Thomas_Kwok","Kwok_Tak_Seng").
+product("Sun_Hung_Kai_Properties","Real_Estate").
+product("Sun_Hung_Kai_Properties","Telecommunication").
+relation("Raymond_Kwok","Thomas_Kwok").
+relation("Raymond_Kwok","Walter_Kwok").
+relation("Thomas_Kwok","Raymond_Kwok").
+relation("Thomas_Kwok","Walter_Kwok").
+subsidiary("Sun_Hung_Kai_Properties","SmarTone_Telecommunications_Holdings_Limited").

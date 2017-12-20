@@ -1,0 +1,30 @@
+foundingYear("Cavium","2001").
+numberOfEmployees("Cavium","850").
+keyPerson("Cavium","Syed_B._Ali").
+keyPerson("Cavium","M._Raghib_Hussain").
+locationCity("Cavium","San_Jose,_California").
+type("Cavium","Public_company").
+birthPlace("M._Raghib_Hussain","Karachi,_Pakistan").
+author("San_Jose,_California",""Dutch" Hamann, 1965").
+location("San_Jose,_California","San Jose, California").
+nationality("M._Raghib_Hussain","Pakistani-American").
+almaMater("M._Raghib_Hussain","NED_University_of_Engineering_&_Technology").
+almaMater("M._Raghib_Hussain","San_Jose_State_University").
+country("San_Jose,_California","United_States").
+isPartOf("San_Jose,_California","California").
+isPartOf("San_Jose,_California","Santa_Clara_County,_California").
+isPartOf("San_Jose,_California","San_Francisco_Bay_Area").
+isPartOf("San_Jose,_California","San_Jose-San_Francisco-Oakland,_CA_Combined_Statistical_Area").
+knownFor("M._Raghib_Hussain","Cavium").
+occupation("M._Raghib_Hussain","M._Raghib_Hussain__1").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+birthPlace("Gregg_Steinhafel","Milwaukee").
+birthYear("Gregg_Steinhafel","1954").
+occupation("Gregg_Steinhafel","Gregg_Steinhafel__1").
+country("Milwaukee","United_States").
+isPartOf("Milwaukee","Wisconsin").
+isPartOf("Milwaukee","Milwaukee_County,_Wisconsin").
+isPartOf("Milwaukee","Washington_County,_Wisconsin").
+isPartOf("Milwaukee","Waukesha_County,_Wisconsin").
+type("Milwaukee","City").

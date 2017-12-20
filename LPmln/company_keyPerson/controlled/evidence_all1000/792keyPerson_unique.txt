@@ -1,0 +1,67 @@
+assets("Prudential_Financial","7.66655E11").
+equity("Prudential_Financial","4.177E10").
+netIncome("Prudential_Financial","1.381E9").
+operatingIncome("Prudential_Financial","1.759E9").
+revenue("Prudential_Financial","5.4161E10").
+foundingYear("Prudential_Financial","1875").
+numberOfEmployees("Prudential_Financial","48331").
+foundationPlace("Prudential_Financial","New_Jersey").
+foundationPlace("Prudential_Financial","Newark,_New_Jersey").
+foundationPlace("Prudential_Financial","United_States").
+foundedBy("Prudential_Financial","John_F._Dryden").
+industry("Prudential_Financial","Financial_Services").
+keyPerson("Prudential_Financial","Mark_Grier").
+keyPerson("Prudential_Financial","John_Strangfeld").
+locationCity("Prudential_Financial","Newark,_New_Jersey").
+locationCity("Prudential_Financial","Prudential_Headquarters").
+locationCountry("Prudential_Financial","United_States").
+type("Prudential_Financial","Public_company").
+birthPlace("John_F._Dryden","Temple,_Maine").
+deathPlace("John_F._Dryden","Newark,_New_Jersey").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+location("Newark,_New_Jersey","Newark, New Jersey").
+state("Newark,_New_Jersey","collapsed").
+state("John_F._Dryden","New_Jersey").
+state("John_F._Dryden","New Jersey").
+capital("New_Jersey","Trenton,_New_Jersey").
+capital("United_States","Washington,_D.C.").
+country("New_Jersey","United_States").
+isPartOf("Newark,_New_Jersey","New_Jersey").
+isPartOf("Newark,_New_Jersey","Essex_County,_New_Jersey").
+largestCity("New_Jersey","Newark,_New_Jersey").
+largestCity("United_States","New_York_City").
+predecessor("John_F._Dryden","William_Joyce_Sewell").
+successor("John_F._Dryden","Frank_O._Briggs").
+type("Newark,_New_Jersey","City_(New_Jersey)").
+birthPlace("Paul_Reiche_III","Lincoln,_Nebraska").
+birthYear("Paul_Reiche_III","1961").
+occupation("Paul_Reiche_III","Paul_Reiche_III__1").
+occupation("Paul_Reiche_III","Toys_for_Bob").
+occupation("Paul_Reiche_III","Game_designer").
+location("Lincoln,_Nebraska","Lincoln Airport, Nebraska").
+foundingYear("Toys_for_Bob","1989").
+numberOfEmployees("Toys_for_Bob","120").
+country("Lincoln,_Nebraska","United_States_of_America").
+foundedBy("Toys_for_Bob","Fred_Ford_(programmer)").
+foundedBy("Toys_for_Bob","Paul_Reiche_III").
+industry("Toys_for_Bob","Video_game_industry").
+industry("Toys_for_Bob","Interactive_entertainment").
+isPartOf("Lincoln,_Nebraska","Nebraska").
+isPartOf("Lincoln,_Nebraska","Lancaster_County,_Nebraska").
+locationCity("Toys_for_Bob","Novato,_California").
+locationCountry("Toys_for_Bob","United_States").
+parentCompany("Toys_for_Bob","Activision").
+product("Toys_for_Bob","Skylanders").
+type("Lincoln,_Nebraska","City").
+type("Toys_for_Bob","Subsidiary").

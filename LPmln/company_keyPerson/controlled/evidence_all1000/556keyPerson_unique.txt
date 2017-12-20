@@ -1,0 +1,135 @@
+assets("Hewlett-Packard","1.52406E11").
+equity("Hewlett-Packard","2.8731E10").
+netIncome("Hewlett-Packard","7.013E9").
+operatingIncome("Hewlett-Packard","9.185E9").
+extinctionYear("Hewlett-Packard","2015").
+numberOfEmployees("Hewlett-Packard","315000").
+division("Hewlett-Packard","Business_service_provider").
+division("Hewlett-Packard","Software").
+industry("Hewlett-Packard","Software").
+industry("Hewlett-Packard","IT_service_management").
+industry("Hewlett-Packard","Information_technology_consulting").
+industry("Hewlett-Packard","Computer_hardware").
+locationCity("Hewlett-Packard","California").
+locationCity("Hewlett-Packard","Palo_Alto,_California").
+locationCountry("Hewlett-Packard","United_States").
+product("Hewlett-Packard","List_of_Hewlett-Packard_products").
+subsidiary("Hewlett-Packard","List_of_acquisitions_by_Hewlett-Packard").
+successor("Hewlett-Packard","Hewlett_Packard_Enterprise").
+successor("Hewlett-Packard","HP_Inc.").
+type("Hewlett-Packard","Public_company").
+revenue("Hewlett_Packard_Enterprise","5.2107E10").
+revenue("HP_Inc.","5.73E10").
+birthPlace("David_Packard","Pueblo,_Colorado").
+birthPlace("William_Redington_Hewlett","Ann_Arbor,_Michigan").
+deathPlace("David_Packard","Stanford,_California").
+deathPlace("William_Redington_Hewlett","Palo_Alto,_California").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+knownFor("David_Packard","Agilent_Technologies").
+knownFor("David_Packard","Keysight").
+knownFor("David_Packard","Hewlett-Packard").
+knownFor("David_Packard","Co-founder of:").
+location("Palo_Alto,_California","Palo Alto").
+spouse("David_Packard","Lucile Salter").
+birthYear("William_Redington_Hewlett","1913").
+numberOfEmployees("Hewlett_Packard_Enterprise","240000").
+numberOfEmployees("HP_Inc.","50000").
+almaMater("William_Redington_Hewlett","Massachusetts_Institute_of_Technology").
+almaMater("William_Redington_Hewlett","Stanford_University").
+capital("United_States","Washington,_D.C.").
+child("David_Packard","David_Woodley_Packard").
+industry("Hewlett_Packard_Enterprise","Information_technology").
+industry("HP_Inc.","Information_technology").
+isPartOf("Palo_Alto,_California","California").
+isPartOf("Palo_Alto,_California","Santa_Clara_County,_California").
+keyPerson("Hewlett_Packard_Enterprise","Meg_Whitman").
+keyPerson("Hewlett_Packard_Enterprise","Patricia_Russo").
+keyPerson("HP_Inc.","Dion_Weisler").
+keyPerson("HP_Inc.","Meg_Whitman").
+knownFor("William_Redington_Hewlett","Agilent_Technologies").
+knownFor("William_Redington_Hewlett","Keysight").
+knownFor("William_Redington_Hewlett","Hewlett-Packard").
+largestCity("California","Los_Angeles").
+largestCity("United_States","New_York_City").
+predecessor("Hewlett_Packard_Enterprise","Hewlett-Packard").
+predecessor("David_Packard","Paul_Nitze").
+predecessor("HP_Inc.","Hewlett-Packard").
+spouse("William_Redington_Hewlett","Flora_Lamson_Hewlett").
+spouse("William_Redington_Hewlett","Rosemary_Bradford_Hewlett").
+successor("David_Packard","Kenneth_Rush").
+type("Hewlett_Packard_Enterprise","Public_company").
+type("Palo_Alto,_California","Charter_city").
+type("HP_Inc.","Public_company").
+birthPlace("Vittorio_Colao","Brescia").
+birthYear("Vittorio_Colao","1961").
+knownFor("Vittorio_Colao","Vodafone").
+knownFor("Vittorio_Colao","RCS_MediaGroup").
+knownFor("Vittorio_Colao","Omnitel_Pronto_Italia").
+salary("Vittorio_Colao","8927000.0").
+almaMater("Vittorio_Colao","Harvard_University").
+almaMater("Vittorio_Colao","Bocconi_University").
+assets("RCS_MediaGroup","1.368E9").
+assets("Vodafone","1.337E11").
+equity("RCS_MediaGroup","1.0E8").
+equity("Vodafone","6.588E10").
+netIncome("Vodafone","-4.02E9").
+operatingIncome("Vodafone","1.37E9").
+revenue("Vodafone","4.097E10").
+country("Harvard_University","U.S.").
+location("Brescia","Brescia").
+type("Brescia","Cultural").
+foundingYear("RCS_MediaGroup","1927").
+foundingYear("RCS_MediaGroup","1952").
+foundingYear("RCS_MediaGroup","1986").
+foundingYear("RCS_MediaGroup","1997").
+foundingYear("RCS_MediaGroup","2003").
+numberOfEmployees("Vodafone","107667").
+affiliation("Harvard_University","Association_of_American_Universities").
+affiliation("Harvard_University","Association_of_Independent_Colleges_and_Universities_in_Massachusetts").
+affiliation("Harvard_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Harvard_University","Universities_Research_Association").
+affiliation("Bocconi_University","Association_of_MBAs").
+affiliation("Bocconi_University","Global_Alliance_in_Management_Education").
+affiliation("Bocconi_University","AACSB").
+affiliation("Bocconi_University","EQUIS").
+affiliation("Bocconi_University","CFA_Institute").
+city("Harvard_University","Cambridge,_Massachusetts").
+city("Bocconi_University","Milan").
+country("Brescia","Italy").
+country("Bocconi_University","Italy").
+division("Vodafone","Vodafone_Global_Enterprise").
+foundedBy("RCS_MediaGroup","Angelo_Rizzoli").
+industry("RCS_MediaGroup","Mass_media").
+industry("Vodafone","Telecommunication").
+keyPerson("RCS_MediaGroup","Urbano_Cairo").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+keyPerson("Vodafone","Vittorio_Colao").
+location("Vodafone","Newbury,_Berkshire").
+parentCompany("RCS_MediaGroup","Cairo_Communication").
+predecessor("Vodafone","Racal").
+product("RCS_MediaGroup","Radio").
+product("RCS_MediaGroup","Magazines").
+product("RCS_MediaGroup","Newspapers").
+product("RCS_MediaGroup","Advertising").
+product("RCS_MediaGroup","Television").
+product("RCS_MediaGroup","New_Media").
+product("Vodafone","Landline").
+product("Vodafone","Mobile_phone").
+product("Vodafone","Digital_television").
+state("Harvard_University","Massachusetts").
+type("RCS_MediaGroup","S.A._(corporation)").
+type("Vodafone","Public_limited_company").
+type("Harvard_University","Research_university").
+type("Bocconi_University","Private_school").

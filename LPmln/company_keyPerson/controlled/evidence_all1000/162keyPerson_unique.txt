@@ -1,0 +1,13 @@
+netIncome("Tim_Hortons","5.117E8").
+numberOfLocations("Tim_Hortons","4389").
+numberOfLocations("Tim_Hortons","4413").
+revenue("Tim_Hortons","4.0522E9").
+foundingYear("Tim_Hortons","1964").
+numberOfEmployees("Tim_Hortons","100000").
+foundationPlace("Tim_Hortons","Hamilton,_Ontario").
+keyPerson("Tim_Hortons","Alex_Behring").
+keyPerson("Tim_Hortons","Daniel_Schwartz").
+location("Tim_Hortons","Canada").
+location("Tim_Hortons","Oakville,_Ontario").
+parentCompany("Tim_Hortons","Restaurant_Brands_International").
+type("Tim_Hortons","Subsidiary").

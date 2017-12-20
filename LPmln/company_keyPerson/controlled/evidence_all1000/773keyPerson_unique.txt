@@ -1,0 +1,99 @@
+numberOfLocations("Pizza_Hut","13728").
+numberOfEmployees("Pizza_Hut","160000").
+foundationPlace("Pizza_Hut","Kansas").
+foundationPlace("Pizza_Hut","Wichita,_Kansas").
+industry("Pizza_Hut","Restaurant").
+location("Pizza_Hut","Plano,_Texas").
+parentCompany("Pizza_Hut","PepsiCo").
+parentCompany("Pizza_Hut","Yum!_Brands").
+product("Pizza_Hut","Italian-American_cuisine").
+product("Pizza_Hut","Pizza").
+type("Pizza_Hut","Subsidiary").
+assets("Yum!_Brands","8.075E9").
+equity("Yum!_Brands","9.69E8").
+netIncome("Yum!_Brands","1.293E9").
+operatingIncome("Yum!_Brands","1.921E9").
+revenue("Yum!_Brands","1.3105E10").
+location("Wichita,_Kansas","Wichita Mid-Continent Airport, Kansas").
+locationCountry("Yum!_Brands","United States").
+type("Pizza","Lunch or dinner").
+foundingYear("Yum!_Brands","1997").
+numberOfEmployees("Yum!_Brands","505000").
+numberOfEmployees("PepsiCo","263000").
+capital("Kansas","Topeka,_Kansas").
+country("Kansas","United_States").
+country("Plano,_Texas","United_States_of_America").
+country("Wichita,_Kansas","United_States").
+country("Pizza","Campania").
+country("Pizza","Italy").
+country("Pizza","Naples").
+division("Yum!_Brands","India").
+foundationPlace("PepsiCo","New_Bern,_North_Carolina").
+foundationPlace("PepsiCo","North_Carolina").
+foundationPlace("PepsiCo","United_States").
+industry("Yum!_Brands","Restaurant").
+industry("PepsiCo","Beverages").
+industry("PepsiCo","Food_processing").
+isPartOf("Plano,_Texas","Collin_County,_Texas").
+isPartOf("Plano,_Texas","Texas").
+isPartOf("Wichita,_Kansas","Kansas").
+isPartOf("Wichita,_Kansas","Sedgwick_County,_Kansas").
+keyPerson("Yum!_Brands","Greg_Creed").
+keyPerson("Yum!_Brands","CEO").
+keyPerson("Yum!_Brands","Robert_D._Walter").
+keyPerson("Yum!_Brands","CFO").
+keyPerson("PepsiCo","Indra_Nooyi").
+largestCity("Kansas","Wichita,_Kansas").
+location("PepsiCo","United_States").
+location("PepsiCo","Purchase,_New_York").
+location("PepsiCo","New_York_(state)").
+locationCity("Yum!_Brands","Louisville,_Kentucky").
+subsidiary("Yum!_Brands","WingStreet").
+subsidiary("Yum!_Brands","KFC").
+subsidiary("Yum!_Brands","Pizza_Hut").
+subsidiary("Yum!_Brands","Taco_Bell").
+subsidiary("PepsiCo","List_of_assets_owned_by_PepsiCo").
+type("Plano,_Texas","City_(Texas)").
+type("Wichita,_Kansas","City").
+type("Yum!_Brands","Public_company").
+type("PepsiCo","Public_company").
+type("Pizza","Flatbread").
+birthPlace("Jay_S._Fishman","New_York_City").
+deathPlace("Jay_S._Fishman","New_Jersey").
+birthYear("Jay_S._Fishman","1952").
+almaMater("Jay_S._Fishman","University_of_Pennsylvania").
+occupation("Jay_S._Fishman","Jay_S._Fishman__1").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+country("University_of_Pennsylvania","United States").
+affiliation("University_of_Pennsylvania","Association_of_American_Universities").
+affiliation("University_of_Pennsylvania","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("University_of_Pennsylvania","Universities_Research_Association").
+affiliation("University_of_Pennsylvania","568_Group").
+affiliation("University_of_Pennsylvania","Consortium_on_Financing_Higher_Education").
+capital("New_Jersey","Trenton,_New_Jersey").
+city("University_of_Pennsylvania","Philadelphia").
+country("New_Jersey","United_States").
+country("New_York_City","United_States").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+largestCity("New_Jersey","Newark,_New_Jersey").
+state("University_of_Pennsylvania","Pennsylvania").
+type("New_York_City","City_(New_York)").
+type("University_of_Pennsylvania","Private_university").

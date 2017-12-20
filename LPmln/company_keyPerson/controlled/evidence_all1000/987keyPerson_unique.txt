@@ -1,0 +1,32 @@
+foundingYear("Telmex","1947").
+numberOfEmployees("Telmex","52346").
+industry("Telmex","Telecommunications").
+keyPerson("Telmex","CEO").
+keyPerson("Telmex","Carlos_Slim").
+location("Telmex","Mexico").
+location("Telmex","Mexico_City").
+product("Telmex","Internet").
+product("Telmex","Data").
+product("Telmex","Television").
+product("Telmex","Telephone").
+type("Telmex","Subsidiary").
+birthPlace("Carlos_Slim","Mexico_City").
+knownFor("Carlos_Slim","World's wealthiest person").
+location("Mexico_City","Mexico City").
+nationality("Carlos_Slim","Mexican").
+parent("Mexico_City","National_Autonomous_University_of_Mexico").
+spouse("Carlos_Slim","died").
+spouse("Carlos_Slim","Soumaya Domit").
+type("Mexico_City","Cultural").
+birthYear("Carlos_Slim","1940").
+capital("Mexico","Mexico_City").
+child("Carlos_Slim","Carlos_Slim_Domit").
+country("Mexico_City","Mexico").
+isPartOf("Mexico_City","States_of_Mexico").
+largestCity("Mexico","Mexico_City").
+occupation("Carlos_Slim","Grupo_Carso").
+occupation("Carlos_Slim","Telmex").
+occupation("Carlos_Slim","Carlos_Slim__1").
+occupation("Carlos_Slim","Samsung_Mexico").
+residence("Carlos_Slim","Mexico_City").
+type("Mexico_City","Administrative_divisions_of_Mexico").

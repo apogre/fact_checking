@@ -1,0 +1,90 @@
+assets("Capital_One","3.34048E11").
+equity("Capital_One","4.7284E10").
+netIncome("Capital_One","4.05E9").
+operatingIncome("Capital_One","6.23E9").
+revenue("Capital_One","2.5038E10").
+numberOfEmployees("Capital_One","45400").
+foundationPlace("Capital_One","Virginia").
+foundationPlace("Capital_One","Richmond,_Virginia").
+foundationPlace("Capital_One","United_States").
+foundedBy("Capital_One","Nigel_Morris").
+foundedBy("Capital_One","Richard_Fairbank").
+industry("Capital_One","Financial_services").
+keyPerson("Capital_One","Chief_financial_officer").
+keyPerson("Capital_One","Richard_Fairbank").
+keyPerson("Capital_One","Chairman").
+keyPerson("Capital_One","President").
+keyPerson("Capital_One","Chief_Executive_Officer").
+location("Capital_One","United_States").
+location("Capital_One","McLean,_Virginia").
+location("Capital_One","Tysons_Corner,_Virginia").
+product("Capital_One","Savings_account").
+product("Capital_One","Credit_card").
+product("Capital_One","Loan").
+product("Capital_One","Retail_banking").
+type("Capital_One","Public_company").
+city("Virginia","Alexandria, VirginiaAlexandria").
+city("Virginia","Arlington County, VirginiaArlington").
+city("Virginia","Chesapeake, VirginiaChesapeake").
+city("Virginia","Hampton, VirginiaHampton").
+city("Virginia","Newport News, VirginiaNewport News").
+city("Virginia","Norfolk, VirginiaNorfolk").
+city("Virginia","Portsmouth, VirginiaPortsmouth").
+city("Virginia","Richmond, VirginiaRichmond").
+city("Virginia","Roanoke, VirginiaRoanoke").
+city("Virginia","Virginia Beach, VirginiaVirginia Beach").
+country("Virginia","Virginia").
+location("Richmond,_Virginia","Richmond International Airport, Virginia").
+capital("United_States","Washington,_D.C.").
+capital("Virginia","Richmond,_Virginia").
+country("Richmond,_Virginia","United_States").
+country("Virginia","United_States").
+country("Tysons_Corner,_Virginia","United_States").
+isPartOf("McLean,_Virginia","Virginia").
+isPartOf("McLean,_Virginia","Fairfax_County,_Virginia").
+isPartOf("Richmond,_Virginia","Virginia").
+isPartOf("Richmond,_Virginia","Independent_city_(United_States)").
+isPartOf("Tysons_Corner,_Virginia","Virginia").
+isPartOf("Tysons_Corner,_Virginia","Fairfax_County,_Virginia").
+largestCity("United_States","New_York_City").
+largestCity("Virginia","Virginia_Beach,_Virginia").
+type("McLean,_Virginia","Census-designated_place").
+type("Richmond,_Virginia","Independent_city_(United_States)").
+type("Richmond,_Virginia","List_of_capitals_in_the_United_States").
+type("Tysons_Corner,_Virginia","Census-designated_place").
+networth("Brian_L._Roberts","1.57E9").
+birthPlace("Brian_L._Roberts","Philadelphia").
+birthPlace("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+birthYear("Brian_L._Roberts","1959").
+almaMater("Brian_L._Roberts","Wharton_School_of_the_University_of_Pennsylvania").
+occupation("Brian_L._Roberts","leadership-overview").
+occupation("Brian_L._Roberts","Brian_L._Roberts__1").
+parent("Brian_L._Roberts","Ralph_J._Roberts").
+residence("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+salary("Brian_L._Roberts","2.64E7").
+birthPlace("Ralph_J._Roberts","New_York_City").
+deathPlace("Ralph_J._Roberts","Philadelphia").
+country("Germantown_Academy","US").
+country("Wharton_School_of_the_University_of_Pennsylvania","U.S.").
+foundedBy("Philadelphia","William Penn").
+knownFor("Ralph_J._Roberts","Founder of Comcast").
+nationality("Ralph_J._Roberts","United States").
+spouse("Ralph_J._Roberts","Suzanne Fleisher").
+state("Germantown_Academy","Pennsylvania").
+type("Germantown_Academy","Private").
+birthYear("Ralph_J._Roberts","1920").
+foundingYear("Germantown_Academy","1759").
+affiliation("Wharton_School_of_the_University_of_Pennsylvania","University_of_Pennsylvania").
+child("Ralph_J._Roberts","Brian_L._Roberts").
+city("Germantown_Academy","Fort_Washington,_Pennsylvania").
+city("Wharton_School_of_the_University_of_Pennsylvania","Philadelphia").
+country("Philadelphia","United_States").
+isPartOf("Philadelphia","Pennsylvania").
+isPartOf("Philadelphia","Kingdom_of_Great_Britain").
+isPartOf("Philadelphia","Philadelphia_County,_Pennsylvania").
+isPartOf("Philadelphia","Kingdom_of_England").
+isPartOf("Philadelphia","Province_of_Pennsylvania").
+occupation("Ralph_J._Roberts","Ralph_J._Roberts__1").
+state("Wharton_School_of_the_University_of_Pennsylvania","Pennsylvania").
+type("Philadelphia","Consolidated_city-county").
+type("Wharton_School_of_the_University_of_Pennsylvania","Private_university").

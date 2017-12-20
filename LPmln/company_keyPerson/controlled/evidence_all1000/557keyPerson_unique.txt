@@ -1,0 +1,89 @@
+assets("Hewlett-Packard","1.52406E11").
+equity("Hewlett-Packard","2.8731E10").
+netIncome("Hewlett-Packard","7.013E9").
+operatingIncome("Hewlett-Packard","9.185E9").
+extinctionYear("Hewlett-Packard","2015").
+numberOfEmployees("Hewlett-Packard","315000").
+division("Hewlett-Packard","Business_service_provider").
+division("Hewlett-Packard","Software").
+industry("Hewlett-Packard","Software").
+industry("Hewlett-Packard","IT_service_management").
+industry("Hewlett-Packard","Information_technology_consulting").
+industry("Hewlett-Packard","Computer_hardware").
+locationCity("Hewlett-Packard","California").
+locationCity("Hewlett-Packard","Palo_Alto,_California").
+locationCountry("Hewlett-Packard","United_States").
+product("Hewlett-Packard","List_of_Hewlett-Packard_products").
+subsidiary("Hewlett-Packard","List_of_acquisitions_by_Hewlett-Packard").
+successor("Hewlett-Packard","Hewlett_Packard_Enterprise").
+successor("Hewlett-Packard","HP_Inc.").
+type("Hewlett-Packard","Public_company").
+revenue("Hewlett_Packard_Enterprise","5.2107E10").
+revenue("HP_Inc.","5.73E10").
+birthPlace("David_Packard","Pueblo,_Colorado").
+birthPlace("William_Redington_Hewlett","Ann_Arbor,_Michigan").
+deathPlace("David_Packard","Stanford,_California").
+deathPlace("William_Redington_Hewlett","Palo_Alto,_California").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+knownFor("David_Packard","Agilent_Technologies").
+knownFor("David_Packard","Keysight").
+knownFor("David_Packard","Hewlett-Packard").
+knownFor("David_Packard","Co-founder of:").
+location("Palo_Alto,_California","Palo Alto").
+spouse("David_Packard","Lucile Salter").
+birthYear("William_Redington_Hewlett","1913").
+numberOfEmployees("Hewlett_Packard_Enterprise","240000").
+numberOfEmployees("HP_Inc.","50000").
+almaMater("William_Redington_Hewlett","Massachusetts_Institute_of_Technology").
+almaMater("William_Redington_Hewlett","Stanford_University").
+capital("United_States","Washington,_D.C.").
+child("David_Packard","David_Woodley_Packard").
+industry("Hewlett_Packard_Enterprise","Information_technology").
+industry("HP_Inc.","Information_technology").
+isPartOf("Palo_Alto,_California","California").
+isPartOf("Palo_Alto,_California","Santa_Clara_County,_California").
+keyPerson("Hewlett_Packard_Enterprise","Meg_Whitman").
+keyPerson("Hewlett_Packard_Enterprise","Patricia_Russo").
+keyPerson("HP_Inc.","Dion_Weisler").
+keyPerson("HP_Inc.","Meg_Whitman").
+knownFor("William_Redington_Hewlett","Agilent_Technologies").
+knownFor("William_Redington_Hewlett","Keysight").
+knownFor("William_Redington_Hewlett","Hewlett-Packard").
+largestCity("California","Los_Angeles").
+largestCity("United_States","New_York_City").
+predecessor("Hewlett_Packard_Enterprise","Hewlett-Packard").
+predecessor("David_Packard","Paul_Nitze").
+predecessor("HP_Inc.","Hewlett-Packard").
+spouse("William_Redington_Hewlett","Flora_Lamson_Hewlett").
+spouse("William_Redington_Hewlett","Rosemary_Bradford_Hewlett").
+successor("David_Packard","Kenneth_Rush").
+type("Hewlett_Packard_Enterprise","Public_company").
+type("Palo_Alto,_California","Charter_city").
+type("HP_Inc.","Public_company").
+birthPlace("Julia_Stewart_(businesswoman)","United_States").
+birthYear("Julia_Stewart_(businesswoman)","1955").
+occupation("Julia_Stewart_(businesswoman)","DineEquity").
+occupation("Julia_Stewart_(businesswoman)","Julia_Stewart_(businesswoman)__1").
+numberOfLocations("DineEquity","3716").
+revenue("DineEquity","6.811E8").
+industry("DineEquity","Restaurants").
+foundingYear("DineEquity","1976").
+numberOfEmployees("DineEquity","200000").
+keyPerson("DineEquity","Julia_Stewart_(businesswoman)").
+location("DineEquity","California").
+location("DineEquity","Glendale,_California").
+subsidiary("DineEquity","IHOP").
+subsidiary("DineEquity","Applebee's").
+type("DineEquity","Public_company").

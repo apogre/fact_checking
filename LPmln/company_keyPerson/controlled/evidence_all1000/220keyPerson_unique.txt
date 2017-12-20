@@ -1,0 +1,114 @@
+numberOfEmployees("Adobe_Systems","14154").
+foundationPlace("Adobe_Systems","Mountain_View,_California").
+industry("Adobe_Systems","Computer_software").
+keyPerson("Adobe_Systems","Shantanu_Narayen").
+keyPerson("Adobe_Systems","Charles_Geschke").
+keyPerson("Adobe_Systems","John_Warnock").
+location("Adobe_Systems","Adobe_Systems_headquarters_complex").
+location("Adobe_Systems","California").
+location("Adobe_Systems","San_Jose,_California").
+product("Adobe_Systems","List_of_Adobe_software").
+type("Adobe_Systems","Public_company").
+birthPlace("John_Warnock","Salt_Lake_City").
+birthPlace("Shantanu_Narayen","Hyderabad").
+birthPlace("Shantanu_Narayen","India").
+birthPlace("Shantanu_Narayen","Telangana").
+birthPlace("Charles_Geschke","Cleveland").
+birthPlace("Charles_Geschke","Cleveland,_Ohio").
+author("San_Jose,_California",""Dutch" Hamann, 1965").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+location("Mountain_View,_California","Mountain View").
+location("San_Jose,_California","San Jose, California").
+birthYear("Shantanu_Narayen","1963").
+almaMater("John_Warnock","University_of_Utah").
+almaMater("Shantanu_Narayen","Bowling_Green_State_University").
+almaMater("Shantanu_Narayen","University_of_California,_Berkeley").
+almaMater("Shantanu_Narayen","Osmania_University").
+almaMater("Charles_Geschke","Carnegie_Mellon_University").
+almaMater("Charles_Geschke","Xavier_University").
+board("Shantanu_Narayen","University_of_California_at_Berkeley").
+board("Shantanu_Narayen","Adobe_Systems").
+board("Shantanu_Narayen","Dell,_Inc.").
+country("Mountain_View,_California","United_States").
+country("San_Jose,_California","United_States").
+developer("Adobe_Creative_Cloud","Adobe_Systems").
+employer("Shantanu_Narayen","Adobe_Systems").
+isPartOf("Mountain_View,_California","California").
+isPartOf("Mountain_View,_California","Santa_Clara_County,_California").
+isPartOf("San_Jose,_California","California").
+isPartOf("San_Jose,_California","Santa_Clara_County,_California").
+isPartOf("San_Jose,_California","San_Francisco_Bay_Area").
+isPartOf("San_Jose,_California","San_Jose-San_Francisco-Oakland,_CA_Combined_Statistical_Area").
+knownFor("John_Warnock","Adobe_Systems").
+knownFor("John_Warnock","Portable_Document_Format").
+knownFor("John_Warnock","PostScript").
+knownFor("Charles_Geschke","Adobe_Systems").
+knownFor("Charles_Geschke","PostScript").
+largestCity("California","Los_Angeles").
+nationality("Charles_Geschke","United_States").
+occupation("Shantanu_Narayen","Adobe_Systems").
+occupation("Shantanu_Narayen","Shantanu_Narayen__1").
+operatingSystem("Adobe_Creative_Cloud","OS_X").
+operatingSystem("Adobe_Creative_Cloud","Windows").
+residence("Shantanu_Narayen","Palo_Alto,_California").
+residence("Charles_Geschke","Los_Altos,_California").
+type("Mountain_View,_California","Charter_city").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+birthPlace("Lloyd_Blankfein","New_York_(state)").
+birthPlace("Lloyd_Blankfein","The_Bronx").
+birthPlace("Lloyd_Blankfein","New_York_City").
+birthPlace("Lloyd_Blankfein","United_States").
+almaMater("Lloyd_Blankfein","Harvard_University").
+predecessor("Lloyd_Blankfein","Henry_Paulson").
+birthPlace("Henry_Paulson","Florida").
+birthPlace("Henry_Paulson","Palm_Beach,_Florida").
+country("Harvard_University","U.S.").
+predecessor("Democratic_Party_(United_States)","Democratic-Republican_Party").
+spouse("Henry_Paulson","Wendy Judge").
+affiliation("Harvard_University","Association_of_American_Universities").
+affiliation("Harvard_University","Association_of_Independent_Colleges_and_Universities_in_Massachusetts").
+affiliation("Harvard_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Harvard_University","Universities_Research_Association").
+almaMater("Henry_Paulson","Harvard_Business_School").
+almaMater("Henry_Paulson","Dartmouth_College").
+capital("United_States","Washington,_D.C.").
+child("Henry_Paulson","Merritt_Paulson").
+city("Harvard_University","Cambridge,_Massachusetts").
+country("New_York_City","United_States").
+country("The_Bronx","United_States_of_America").
+country("Democratic_Party_(United_States)","United_States").
+headquarter("Democratic_Party_(United_States)","Washington,_D.C.").
+headquarter("Democratic_Party_(United_States)","South_Capitol_Street").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+isPartOf("The_Bronx","New_York").
+isPartOf("The_Bronx","New_York_City").
+isPartOf("The_Bronx","Bronx_River").
+largestCity("United_States","New_York_City").
+predecessor("Henry_Paulson","John_W._Snow").
+predecessor("Henry_Paulson","Jon_Corzine").
+state("Harvard_University","Massachusetts").
+successor("Henry_Paulson","Lloyd_Blankfein").
+successor("Henry_Paulson","Timothy_Geithner").
+type("New_York_City","City_(New_York)").
+type("The_Bronx","Borough_(New_York_City)").
+type("Harvard_University","Research_university").

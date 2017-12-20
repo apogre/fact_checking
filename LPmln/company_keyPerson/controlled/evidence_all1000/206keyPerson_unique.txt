@@ -1,0 +1,86 @@
+assets("Accenture","1.8266E10").
+equity("Accenture","6.133E9").
+netIncome("Accenture","3.053E9").
+operatingIncome("Accenture","4.435E9").
+revenue("Accenture","3.1E10").
+foundingYear("Accenture","1989").
+numberOfEmployees("Accenture","375000").
+industry("Accenture","IT_service_management").
+industry("Accenture","Information_technology_consulting").
+keyPerson("Accenture","Pierre_Nanterme").
+location("Accenture","Dublin").
+location("Accenture","Ireland").
+predecessor("Accenture","Andersen_Consulting").
+service("Accenture","Business_operations").
+service("Accenture","Business_consulting").
+service("Accenture","Computer").
+service("Accenture","Technology").
+service("Accenture","Strategic_management").
+type("Accenture","Public_company").
+birthPlace("Pierre_Nanterme","Lyon").
+location("Dublin","Dublin_Airport").
+nationality("Pierre_Nanterme","French").
+birthYear("Pierre_Nanterme","1959").
+almaMater("Pierre_Nanterme","ESSEC_Business_School").
+country("Dublin","Republic_of_Ireland").
+country("Ireland","Republic_of_Ireland").
+country("Ireland","United_Kingdom").
+isPartOf("Dublin","Leinster").
+knownFor("Pierre_Nanterme","Accenture").
+largestCity("Ireland","Dublin").
+location("Ireland","Europe").
+type("Dublin","Capital_city").
+birthPlace("Ashok_Vemuri","New_Delhi").
+birthPlace("Ashok_Vemuri","India").
+activeYearsStartYear("Ashok_Vemuri","1992").
+birthYear("Ashok_Vemuri","1968").
+almaMater("Ashok_Vemuri","Indian_Institute_of_Management,_Ahmedabad").
+employer("Ashok_Vemuri","Xerox").
+occupation("Ashok_Vemuri","Business_executive").
+occupation("Ashok_Vemuri","Ashok_Vemuri__1").
+residence("Ashok_Vemuri","United_States").
+residence("Ashok_Vemuri","New_Jersey").
+assets("Xerox","2.48E10").
+netIncome("Xerox","4.88E8").
+operatingIncome("Xerox","6.45E8").
+revenue("Xerox","1.804E10").
+capital("New_Jersey","Trenton").
+city("New_Jersey","Edison, New JerseyEdison").
+city("New_Jersey","Elizabeth, New JerseyElizabeth").
+city("New_Jersey","Jersey City, New JerseyJersey City").
+city("New_Jersey","Lakewood, New JerseyLakewood").
+city("New_Jersey","Newark, New JerseyNewark").
+city("New_Jersey","Paterson, New JerseyPaterson").
+city("New_Jersey","Hamilton Township, Mercer County, New Jersey Hamilton").
+city("New_Jersey","Toms River, New JerseyToms River").
+city("New_Jersey","Trenton, New JerseyTrenton").
+city("New_Jersey","Woodbridge, New JerseyWoodbridge").
+country("New_Jersey","New Jersey").
+location("St._Stephen's_College,_Delhi","University Enclave, New Delhi, India").
+type("Xerox","Public").
+numberOfEmployees("Xerox","140800").
+affiliation("St._Stephen's_College,_Delhi","University_of_Delhi").
+capital("India","New_Delhi").
+capital("New_Jersey","Trenton,_New_Jersey").
+capital("United_States","Washington,_D.C.").
+country("New_Delhi","India").
+country("New_Jersey","United_States").
+foundationPlace("Xerox","Rochester,_New_York").
+foundationPlace("Xerox","United_States").
+foundationPlace("Xerox","New_York_(state)").
+industry("Xerox","Document_management_system").
+isPartOf("New_Delhi","Delhi").
+keyPerson("Xerox","Ursula_Burns").
+largestCity("India","Mumbai").
+largestCity("New_Jersey","Newark,_New_Jersey").
+largestCity("United_States","New_York_City").
+locationCity("Xerox","Connecticut").
+locationCity("Xerox","Norwalk,_Connecticut").
+locationCountry("Xerox","United_States").
+product("Xerox","Image_projector").
+product("Xerox","Image_scanner").
+product("Xerox","Office_equipment").
+product("Xerox","Printer_(computing)").
+service("Xerox","Business_consulting").
+service("Xerox","Outsourcing").
+type("New_Delhi","List_of_districts_of_Delhi").

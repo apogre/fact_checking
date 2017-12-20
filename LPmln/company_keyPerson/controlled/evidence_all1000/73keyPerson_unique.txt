@@ -1,0 +1,146 @@
+assets("Hewlett-Packard","1.52406E11").
+equity("Hewlett-Packard","2.8731E10").
+netIncome("Hewlett-Packard","7.013E9").
+operatingIncome("Hewlett-Packard","9.185E9").
+extinctionYear("Hewlett-Packard","2015").
+numberOfEmployees("Hewlett-Packard","315000").
+division("Hewlett-Packard","Business_service_provider").
+division("Hewlett-Packard","Software").
+industry("Hewlett-Packard","Software").
+industry("Hewlett-Packard","IT_service_management").
+industry("Hewlett-Packard","Information_technology_consulting").
+industry("Hewlett-Packard","Computer_hardware").
+locationCity("Hewlett-Packard","California").
+locationCity("Hewlett-Packard","Palo_Alto,_California").
+locationCountry("Hewlett-Packard","United_States").
+product("Hewlett-Packard","List_of_Hewlett-Packard_products").
+subsidiary("Hewlett-Packard","List_of_acquisitions_by_Hewlett-Packard").
+successor("Hewlett-Packard","Hewlett_Packard_Enterprise").
+successor("Hewlett-Packard","HP_Inc.").
+type("Hewlett-Packard","Public_company").
+revenue("Hewlett_Packard_Enterprise","5.2107E10").
+revenue("HP_Inc.","5.73E10").
+birthPlace("David_Packard","Pueblo,_Colorado").
+birthPlace("William_Redington_Hewlett","Ann_Arbor,_Michigan").
+deathPlace("David_Packard","Stanford,_California").
+deathPlace("William_Redington_Hewlett","Palo_Alto,_California").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+knownFor("David_Packard","Agilent_Technologies").
+knownFor("David_Packard","Keysight").
+knownFor("David_Packard","Hewlett-Packard").
+knownFor("David_Packard","Co-founder of:").
+location("Palo_Alto,_California","Palo Alto").
+spouse("David_Packard","Lucile Salter").
+birthYear("William_Redington_Hewlett","1913").
+numberOfEmployees("Hewlett_Packard_Enterprise","240000").
+numberOfEmployees("HP_Inc.","50000").
+almaMater("William_Redington_Hewlett","Massachusetts_Institute_of_Technology").
+almaMater("William_Redington_Hewlett","Stanford_University").
+capital("United_States","Washington,_D.C.").
+child("David_Packard","David_Woodley_Packard").
+industry("Hewlett_Packard_Enterprise","Information_technology").
+industry("HP_Inc.","Information_technology").
+isPartOf("Palo_Alto,_California","California").
+isPartOf("Palo_Alto,_California","Santa_Clara_County,_California").
+keyPerson("Hewlett_Packard_Enterprise","Meg_Whitman").
+keyPerson("Hewlett_Packard_Enterprise","Patricia_Russo").
+keyPerson("HP_Inc.","Dion_Weisler").
+keyPerson("HP_Inc.","Meg_Whitman").
+knownFor("William_Redington_Hewlett","Agilent_Technologies").
+knownFor("William_Redington_Hewlett","Keysight").
+knownFor("William_Redington_Hewlett","Hewlett-Packard").
+largestCity("California","Los_Angeles").
+largestCity("United_States","New_York_City").
+predecessor("Hewlett_Packard_Enterprise","Hewlett-Packard").
+predecessor("David_Packard","Paul_Nitze").
+predecessor("HP_Inc.","Hewlett-Packard").
+spouse("William_Redington_Hewlett","Flora_Lamson_Hewlett").
+spouse("William_Redington_Hewlett","Rosemary_Bradford_Hewlett").
+successor("David_Packard","Kenneth_Rush").
+type("Hewlett_Packard_Enterprise","Public_company").
+type("Palo_Alto,_California","Charter_city").
+type("HP_Inc.","Public_company").
+networth("Meg_Whitman","2.1E9").
+birthPlace("Meg_Whitman","United_States").
+birthPlace("Meg_Whitman","New_York_(state)").
+birthPlace("Meg_Whitman","Cold_Spring_Harbor,_New_York").
+birthYear("Meg_Whitman","1956").
+almaMater("Meg_Whitman","Harvard_Business_School").
+almaMater("Meg_Whitman","Princeton_University").
+residence("Meg_Whitman","Atherton,_California").
+spouse("Meg_Whitman","Griffith_R._Harsh").
+networth("Jeffrey_Skoll","3.8E9").
+birthPlace("Griffith_R._Harsh","St._Louis").
+birthPlace("Jeffrey_Skoll","Canada").
+birthPlace("Jeffrey_Skoll","Montreal").
+birthPlace("Jeffrey_Skoll","Quebec").
+birthPlace("John_Donahoe","Evanston,_Illinois").
+almaMater("Dion_Weisler","Monash_University").
+birthPlace("Dion_Weisler","Australia").
+country("Harvard_Business_School","U.S.").
+country("Princeton_University","U.S.").
+country("Republican_Party_(United_States)","United States").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+spouse("Jeffrey_Skoll","Stephanie Swedlove").
+spouse("Dion_Weisler","married").
+birthYear("Griffith_R._Harsh","1953").
+birthYear("Jeffrey_Skoll","1965").
+birthYear("John_Donahoe","1960").
+affiliation("Harvard_Business_School","Harvard_University").
+affiliation("Princeton_University","Association_of_American_Universities").
+affiliation("Princeton_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Princeton_University","Universities_Research_Association").
+affiliation("Republican_Party_(United_States)","Asia_Pacific_Democrat_Union").
+almaMater("Griffith_R._Harsh","University_of_Oxford").
+almaMater("Griffith_R._Harsh","Harvard_University").
+almaMater("John_Donahoe","Stanford_Graduate_School_of_Business").
+almaMater("John_Donahoe","Dartmouth_College").
+city("Harvard_Business_School","Boston").
+city("Princeton_University","Princeton,_New_Jersey").
+country("Cold_Spring_Harbor,_New_York","United_States").
+country("Atherton,_California","United_States").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+isPartOf("Cold_Spring_Harbor,_New_York","Suffolk_County,_New_York").
+isPartOf("Cold_Spring_Harbor,_New_York","New_York_(state)").
+isPartOf("Atherton,_California","California").
+isPartOf("Atherton,_California","San_Mateo_County,_California").
+nationality("Jeffrey_Skoll","Canadians").
+occupation("Griffith_R._Harsh","Neurosurgeon").
+occupation("Griffith_R._Harsh","Griffith_R._Harsh__1").
+occupation("Jeffrey_Skoll","Jeffrey_Skoll__1").
+occupation("Jeffrey_Skoll","Internet_entrepreneur").
+occupation("Jeffrey_Skoll","EBay").
+occupation("John_Donahoe","PayPal").
+occupation("John_Donahoe","John_Donahoe__1").
+personFunction("Dion_Weisler","Dion_Weisler__1").
+predecessor("Dion_Weisler","Meg_Whitman").
+residence("Griffith_R._Harsh","Atherton,_California").
+residence("Jeffrey_Skoll","United_States").
+residence("Jeffrey_Skoll","Woodside,_California").
+residence("Dion_Weisler","Palo_Alto").
+residence("John_Donahoe","California").
+residence("John_Donahoe","Portola_Valley,_California").
+spouse("Griffith_R._Harsh","Meg_Whitman").
+spouse("John_Donahoe","Eileen_Donahoe").
+state("Harvard_Business_School","Massachusetts").
+state("Princeton_University","New_Jersey").
+stateOfOrigin("Jeffrey_Skoll","Canadians").
+type("Harvard_Business_School","Private_school").
+type("Princeton_University","Private_university").
+type("Cold_Spring_Harbor,_New_York","Hamlet_(New_York)").
+type("Cold_Spring_Harbor,_New_York","Census-designated_place").
+salary("Dion_Weisler","1.8727803E7").
+salary("John_Donahoe","1.3833374E7").

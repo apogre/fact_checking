@@ -1,0 +1,82 @@
+numberOfEmployees("Citigroup","239000").
+industry("Citigroup","Financial_services").
+keyPerson("Citigroup","Michael_Corbat").
+keyPerson("Citigroup","Michael_E._O'Neill").
+locationCity("Citigroup","Manhattan").
+locationCity("Citigroup","New_York_(state)").
+product("Citigroup","Private_equity").
+product("Citigroup","Commercial_bank").
+product("Citigroup","Retail_banking").
+product("Citigroup","Financial_analysis").
+product("Citigroup","Investment_banking").
+product("Citigroup","Private_banking").
+subsidiary("Citigroup","Citibank_India").
+subsidiary("Citigroup","Citi_Private_Bank").
+subsidiary("Citigroup","Grupo_Financiero_Banamex").
+subsidiary("Citigroup","Citibank").
+subsidiary("Citigroup","CitiBranded_Cards").
+subsidiary("Citigroup","CitiMortgage").
+subsidiary("Citigroup","Citi_Securities_&_Banking").
+subsidiary("Citigroup","Nikko_Citigroup").
+subsidiary("Citigroup","Railmark_Holdings").
+subsidiary("Citigroup","Salomon_BIG").
+subsidiary("Citigroup","Sedna_Finance").
+type("Citigroup","Public_company").
+birthPlace("Andrew_Witty","England").
+birthYear("Andrew_Witty","1964").
+occupation("Andrew_Witty","Andrew_Witty__1").
+occupation("Andrew_Witty","Chancellor_(education)").
+occupation("Andrew_Witty","GlaxoSmithKline").
+occupation("Andrew_Witty","University_of_Nottingham").
+predecessor("Andrew_Witty","Jean-Pierre_Garnier").
+successor("Andrew_Witty","Emma_Walmsley").
+netIncome("GlaxoSmithKline","8.372E9").
+operatingIncome("GlaxoSmithKline","1.0322E10").
+revenue("GlaxoSmithKline","2.3923E10").
+birthPlace("Jean-Pierre_Garnier","Le_Mans").
+almaMater("Emma_Walmsley","Oxford_University").
+birthPlace("Emma_Walmsley","Lancashire").
+capital("England","London").
+country("University_of_Nottingham","England, UK").
+largestCity("England","capital").
+nationality("Emma_Walmsley","British").
+predecessor("GlaxoSmithKline","Beckman Companies").
+predecessor("GlaxoSmithKline","Beecham Group plc").
+predecessor("GlaxoSmithKline","Glaxo plc").
+predecessor("GlaxoSmithKline","Kline & French").
+predecessor("GlaxoSmithKline","Smith plc").
+predecessor("GlaxoSmithKline","Wellcome plc").
+spouse("Emma_Walmsley","David").
+type("England","Administrative_division").
+numberOfEmployees("GlaxoSmithKline","96575").
+affiliation("University_of_Nottingham","Sutton_Trust").
+affiliation("University_of_Nottingham","Association_of_MBAs").
+affiliation("University_of_Nottingham","Universities_UK").
+affiliation("University_of_Nottingham","European_University_Association").
+affiliation("University_of_Nottingham","Universitas_21").
+affiliation("University_of_Nottingham","Association_of_Commonwealth_Universities").
+affiliation("University_of_Nottingham","EQUIS").
+affiliation("University_of_Nottingham","Russell_Group").
+affiliation("University_of_Nottingham","M5_(universities)").
+affiliation("University_of_Nottingham","Virgo_Consortium").
+board("Emma_Walmsley","GlaxoSmithKline").
+board("Emma_Walmsley","Diageo").
+city("University_of_Nottingham","Nottingham").
+industry("GlaxoSmithKline","Pharmaceutical_industry").
+industry("GlaxoSmithKline","Biotechnology").
+industry("GlaxoSmithKline","Fast-moving_consumer_goods").
+keyPerson("GlaxoSmithKline","Andrew_Witty").
+keyPerson("GlaxoSmithKline","Philip_Hampton").
+location("GlaxoSmithKline","England").
+location("GlaxoSmithKline","Isleworth").
+location("GlaxoSmithKline","London").
+location("GlaxoSmithKline","United_Kingdom").
+parent("Emma_Walmsley","Robert_Walmsley").
+personFunction("Emma_Walmsley","Emma_Walmsley__1").
+predecessor("Emma_Walmsley","Sir_Andrew_Witty").
+product("GlaxoSmithKline","Over-the-counter_drug").
+product("GlaxoSmithKline","Vaccine").
+product("GlaxoSmithKline","Pharmaceutical").
+subsidiary("GlaxoSmithKline","Stiefel_Laboratories").
+type("GlaxoSmithKline","Public_limited_company").
+type("University_of_Nottingham","Public_university").

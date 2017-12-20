@@ -1,0 +1,148 @@
+numberOfEmployees("Oracle_Corporation","136262").
+foundationPlace("Oracle_Corporation","California").
+foundationPlace("Oracle_Corporation","Santa_Clara,_California").
+foundedBy("Oracle_Corporation","Larry_Ellison").
+foundedBy("Oracle_Corporation","Bob_Miner").
+foundedBy("Oracle_Corporation","Ed_Oates").
+industry("Oracle_Corporation","Cloud_Computing").
+industry("Oracle_Corporation","Enterprise_software").
+keyPerson("Oracle_Corporation","Safra_A._Catz").
+keyPerson("Oracle_Corporation","Mark_Hurd").
+keyPerson("Oracle_Corporation","Larry_Ellison").
+keyPerson("Oracle_Corporation","Jeffrey_O._Henley").
+locationCity("Oracle_Corporation","California").
+locationCity("Oracle_Corporation","Redwood_City,_California").
+locationCity("Oracle_Corporation","Redwood_Shores,_California").
+product("Oracle_Corporation","Oracle_Database").
+product("Oracle_Corporation","Server_(computing)").
+product("Oracle_Corporation","Computer_data_storage").
+product("Oracle_Corporation","Oracle_Corporation").
+product("Oracle_Corporation","Workstation").
+product("Oracle_Corporation","Oracle_Applications").
+product("Oracle_Corporation","Oracle_Enterprise_Manager").
+product("Oracle_Corporation","Oracle_Fusion_Middleware").
+subsidiary("Oracle_Corporation","List_of_acquisitions_by_Oracle").
+type("Oracle_Corporation","Public_company").
+networth("Safra_A._Catz","5.25E8").
+networth("Larry_Ellison","5.16E10").
+birthPlace("Safra_A._Catz","Israel").
+birthPlace("Safra_A._Catz","Holon").
+birthPlace("Mark_Hurd","Manhattan").
+birthPlace("Mark_Hurd","Manhattan,_New_York").
+birthPlace("Larry_Ellison","Manhattan").
+birthPlace("Larry_Ellison","The_Bronx").
+birthPlace("Larry_Ellison","New_York_(state)").
+birthPlace("Bob_Miner","Cicero,_Illinois").
+deathPlace("Bob_Miner","San_Francisco").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+deathPlace("Bob_Miner","San Francisco, California, U.S.").
+knownFor("Ed_Oates","One of the three founders of Oracle Corporation").
+location("Redwood_City,_California","Redwood City, California").
+location("Santa_Clara,_California","Santa Clara, California").
+locationCountry("Oracle_Corporation","United States").
+nationality("Larry_Ellison","American").
+nationality("Bob_Miner","American, Assyrian").
+nationality("Ed_Oates","USA").
+residence("Safra_A._Catz","Redwood City, CA").
+spouse("Safra_A._Catz","Gal Tirosh").
+spouse("Mark_Hurd","Paula Hurd").
+activeYearsStartYear("Safra_A._Catz","1986").
+activeYearsStartYear("Larry_Ellison","1966").
+activeYearsStartYear("Bob_Miner","1994").
+birthYear("Safra_A._Catz","1961").
+birthYear("Mark_Hurd","1957").
+birthYear("Larry_Ellison","1944").
+birthYear("Bob_Miner","1941").
+birthYear("Ed_Oates","1946").
+almaMater("Larry_Ellison","University_of_Chicago").
+almaMater("Larry_Ellison","University_of_Illinois_at_Urbana-Champaign").
+child("Larry_Ellison","Megan_Ellison").
+child("Larry_Ellison","David_Ellison").
+country("Redwood_City,_California","United_States").
+country("Santa_Clara,_California","United_States_of_America").
+developer("Oracle_Database","Oracle_Corporation").
+isPartOf("Redwood_City,_California","California").
+isPartOf("Redwood_City,_California","San_Mateo_County,_California").
+isPartOf("Santa_Clara,_California","California").
+isPartOf("Santa_Clara,_California","Santa_Clara_County,_California").
+knownFor("Larry_Ellison","Co-founder").
+knownFor("Larry_Ellison","CEO").
+largestCity("California","Los_Angeles").
+nationality("Ed_Oates","United_States").
+occupation("Safra_A._Catz","Oracle_Corporation").
+occupation("Safra_A._Catz","Safra_A._Catz__1").
+occupation("Mark_Hurd","Mark_Hurd__1").
+occupation("Mark_Hurd","Oracle_Corporation").
+occupation("Larry_Ellison","Executive_Chairman").
+occupation("Larry_Ellison","Chief_technology_officer").
+occupation("Larry_Ellison","Larry_Ellison__1").
+occupation("Bob_Miner","Oracle_Corporation").
+occupation("Bob_Miner","Bob_Miner__1").
+residence("Mark_Hurd","Palo_Alto,_California").
+residence("Larry_Ellison","Woodside,_California").
+spouse("Larry_Ellison","Melanie_Craft").
+type("Redwood_City,_California","Charter_city").
+type("Santa_Clara,_California","City_(California)").
+type("Redwood_Shores,_California","Redwood_City,_California").
+salary("Safra_A._Catz","5.32E7").
+salary("Mark_Hurd","5.32E7").
+birthPlace("Muhtar_Kent","New_York_City").
+birthYear("Muhtar_Kent","1952").
+nationality("Muhtar_Kent","United_States").
+nationality("Muhtar_Kent","Turkey").
+occupation("Muhtar_Kent","Muhtar_Kent__1").
+occupation("Muhtar_Kent","Chief_executive_officer").
+occupation("Muhtar_Kent","Chairman").
+parent("Muhtar_Kent","Necdet_Kent").
+residence("Muhtar_Kent","Atlanta,_Georgia").
+stateOfOrigin("Muhtar_Kent","Turkey").
+stateOfOrigin("Muhtar_Kent","United_States").
+country("Cass_Business_School","United Kingdom").
+type("Cass_Business_School","Undergraduate, Postgraduate, Executive Education, Research").
+birthYear("Necdet_Kent","1911").
+foundingYear("Tarsus_American_College","1888").
+affiliation("University_of_Hull","Utrecht_Network").
+affiliation("University_of_Hull","GU8").
+affiliation("Cass_Business_School","Association_of_MBAs").
+almaMater("Necdet_Kent","New_York_University").
+capital("Turkey","Ankara").
+capital("United_States","Washington,_D.C.").
+child("Necdet_Kent","Muhtar_Kent").
+city("University_of_Hull","Kingston_upon_Hull").
+city("Tarsus_American_College","Mersin").
+city("Tarsus_American_College","Tarsus_(city)").
+city("Cass_Business_School","London").
+country("New_York_City","United_States").
+country("University_of_Hull","England").
+country("Tarsus_American_College","Turkey").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+knownFor("Necdet_Kent","Jews").
+largestCity("Turkey","Istanbul").
+largestCity("United_States","New_York_City").
+nationality("Necdet_Kent","Turkish_people").
+occupation("Necdet_Kent","Diplomat").
+occupation("Necdet_Kent","Necdet_Kent__1").
+stateOfOrigin("Necdet_Kent","Turkish_people").
+type("New_York_City","City_(New_York)").
+type("University_of_Hull","Public_university").
+type("Tarsus_American_College","Independent_school").
+type("Tarsus_American_College","Boarding_school").

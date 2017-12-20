@@ -1,0 +1,48 @@
+foundingYear("NIIT","1981").
+numberOfEmployees("NIIT","2372").
+foundedBy("NIIT","Vijay_K._Thadani").
+foundedBy("NIIT","Rajendra_S._Pawar").
+industry("NIIT","For-profit_school").
+location("NIIT","Gurgaon,_India").
+type("NIIT","Public_company").
+birthYear("Vijay_K._Thadani","1951").
+almaMater("Vijay_K._Thadani","Indian_Institute_of_Technology,_Delhi").
+employer("Vijay_K._Thadani","NIIT").
+knownFor("Vijay_K._Thadani","NIIT").
+nationality("Vijay_K._Thadani","India").
+occupation("Vijay_K._Thadani","CEO").
+occupation("Vijay_K._Thadani","NIIT").
+occupation("Vijay_K._Thadani","Vijay_K._Thadani__1").
+stateOfOrigin("Vijay_K._Thadani","India").
+birthPlace("Mel_Karmazin","United_States").
+birthPlace("Mel_Karmazin","Manhattan").
+birthPlace("Mel_Karmazin","New_York_(state)").
+birthYear("Mel_Karmazin","1943").
+almaMater("Mel_Karmazin","Pace_University").
+child("Mel_Karmazin","Craig_Karmazin").
+residence("Mel_Karmazin","Greenwich,_Connecticut").
+residence("Mel_Karmazin","United_States").
+knownFor("Craig_Karmazin","founder of Good Karma Brands").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+nationality("Craig_Karmazin","United States").
+spouse("Craig_Karmazin","Kelli Gabel").
+birthYear("Craig_Karmazin","1975").
+almaMater("Craig_Karmazin","Emory_University").
+capital("United_States","Washington,_D.C.").
+city("Pace_University","New_York_City,_New_York").
+country("Greenwich,_Connecticut","United_States").
+country("Pace_University","United_States").
+isPartOf("Greenwich,_Connecticut","Connecticut").
+isPartOf("Manhattan","New_York").
+isPartOf("Manhattan","New_York_City").
+isPartOf("Manhattan","New_York_(state)").
+largestCity("United_States","New_York_City").
+occupation("Craig_Karmazin","Craig_Karmazin__1").
+occupation("Craig_Karmazin","CEO").
+parent("Craig_Karmazin","Mel_Karmazin").
+residence("Craig_Karmazin","Fox_Point,_WI").
+type("Greenwich,_Connecticut","New_England_town").
+type("Manhattan","Borough_(New_York_City)").
+type("Pace_University","Nonsectarian").
+type("Pace_University","Private_University").
+type("Pace_University","Co-educational").

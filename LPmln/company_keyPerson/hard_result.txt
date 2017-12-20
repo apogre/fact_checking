@@ -1,6 +1,6 @@
 lpmln2cl
 Clingo executed with command:
-clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=not_keyPerson LPmln/company_keyPerson/controlled/evidence_compact/1208keyPerson_unique.txt 
+clingo /home/apradhan/proj/fact_checking/out.txt /usr/local/share/lpmln/marginal-prob-script.py 0 --opt-mode=enum -c issoft=true --warn=no-atom-undefined -c quiet=true --quiet -c q=not_keyPerson LPmln/company_keyPerson/controlled/evidence_all1000/1208keyPerson_unique.txt 
 clingo version 4.5.4
 Reading from ...me/apradhan/proj/fact_checking/out.txt ...
 Solving...
@@ -8,36 +8,111 @@ Solving...
 
 
 
-not_keyPerson('Pizza_Hut', 'CEO') 1.0
-not_keyPerson('Yum!_Brands', 'CFO') 1.0
+not_keyPerson('Italian-American_cuisine', 'Robert_D._Walter') 1.0
 not_keyPerson('WingStreet', 'Glen_Bell') 1.0
-not_keyPerson('WingStreet', 'CFO') 1.0
-not_keyPerson('Yum!_Brands', 'Greg_Creed') 1.0
+not_keyPerson('Consolidated_city-county', 'CEO') 1.0
+not_keyPerson('Taco', 'CEO') 1.0
+not_keyPerson('Pizza_Hut', 'CEO') 1.0
+not_keyPerson('Greg_Creed', 'CFO') 1.0
 not_keyPerson('Pizza_Hut', 'Glen_Bell') 1.0
+not_keyPerson('Taco', 'Robert_D._Walter') 1.0
 not_keyPerson('WingStreet', 'Robert_D._Walter') 1.0
-not_keyPerson('WingStreet', 'CEO') 1.0
-not_keyPerson('Pizza_Hut', 'Greg_Creed') 1.0
-not_keyPerson('Taco_Bell', 'Robert_D._Walter') 1.0
-not_keyPerson('Pizza_Hut', 'Robert_D._Walter') 1.0
+not_keyPerson('Robert_D._Walter', 'Robert_D._Walter') 1.0
 not_keyPerson('KFC', 'CEO') 1.0
 not_keyPerson('Taco_Bell', 'Glen_Bell') 1.0
-not_keyPerson('Taco_Bell', 'CFO') 1.0
-not_keyPerson('Yum!_Brands', 'CEO') 1.0
-not_keyPerson('Pizza_Hut', 'CFO') 1.0
-not_keyPerson('Taco_Bell', 'Greg_Creed') 1.0
-not_keyPerson('KFC', 'Robert_D._Walter') 1.0
+not_keyPerson('Public_company', 'Robert_D._Walter') 1.0
+not_keyPerson('WingStreet', 'CEO') 1.0
+not_keyPerson('Robert_D._Walter', 'CFO') 1.0
+not_keyPerson('Subsidiary', 'CEO') 1.0
+not_keyPerson('CFO', 'Greg_Creed') 1.0
+not_keyPerson('Chicken', 'Glen_Bell') 1.0
 not_keyPerson('KFC', 'Greg_Creed') 1.0
 not_keyPerson('WingStreet', 'Greg_Creed') 1.0
-not_keyPerson('KFC', 'Glen_Bell') 1.0
-not_keyPerson('KFC', 'CFO') 1.0
-not_keyPerson('Taco_Bell', 'CEO') 1.0
-not_keyPerson('Yum!_Brands', 'Glen_Bell') 1.0
+not_keyPerson('PepsiCo', 'Glen_Bell') 1.0
+not_keyPerson('Italian-American_cuisine', 'CFO') 1.0
+not_keyPerson('Tex-Mex_cuisine', 'CEO') 1.0
+not_keyPerson('Glen_Bell', 'Robert_D._Walter') 1.0
+not_keyPerson('Greg_Creed', 'Greg_Creed') 1.0
+not_keyPerson('Subsidiary', 'CFO') 1.0
 not_keyPerson('Yum!_Brands', 'Robert_D._Walter') 1.0
+not_keyPerson('Burrito', 'Greg_Creed') 1.0
+not_keyPerson('Yum!_Brands', 'CFO') 1.0
+not_keyPerson('Taco', 'CFO') 1.0
+not_keyPerson('Pizza_Hut', 'Robert_D._Walter') 1.0
+not_keyPerson('Chicken', 'CFO') 1.0
+not_keyPerson('Chicken', 'CEO') 1.0
+not_keyPerson('Taco', 'Greg_Creed') 1.0
+not_keyPerson('Glen_Bell', 'Greg_Creed') 1.0
+not_keyPerson('Yum!_Brands', 'CEO') 1.0
+not_keyPerson('Public_company', 'CEO') 1.0
+not_keyPerson('Chicken', 'Robert_D._Walter') 1.0
+not_keyPerson('CEO', 'CFO') 1.0
+not_keyPerson('KFC', 'CFO') 1.0
+not_keyPerson('CFO', 'CFO') 1.0
+not_keyPerson('Italian-American_cuisine', 'Greg_Creed') 1.0
+not_keyPerson('Burrito', 'Glen_Bell') 1.0
+not_keyPerson('Robert_D._Walter', 'CEO') 1.0
+not_keyPerson('WingStreet', 'CFO') 1.0
+not_keyPerson('Public_company', 'Greg_Creed') 1.0
+not_keyPerson('Burrito', 'Robert_D._Walter') 1.0
+not_keyPerson('Pizza_Hut', 'CFO') 1.0
+not_keyPerson('Robert_D._Walter', 'Glen_Bell') 1.0
+not_keyPerson('Pizza', 'Glen_Bell') 1.0
+not_keyPerson('Pizza_Hut', 'Greg_Creed') 1.0
+not_keyPerson('Chicken', 'Greg_Creed') 1.0
+not_keyPerson('CFO', 'Glen_Bell') 1.0
+not_keyPerson('Consolidated_city-county', 'Robert_D._Walter') 1.0
+not_keyPerson('Subsidiary', 'Robert_D._Walter') 1.0
+not_keyPerson('Italian-American_cuisine', 'CEO') 1.0
+not_keyPerson('CEO', 'Glen_Bell') 1.0
+not_keyPerson('Pizza', 'Greg_Creed') 1.0
+not_keyPerson('Robert_D._Walter', 'Greg_Creed') 1.0
+not_keyPerson('Taco_Bell', 'CFO') 1.0
+not_keyPerson('CEO', 'Greg_Creed') 1.0
+not_keyPerson('Public_company', 'Glen_Bell') 1.0
+not_keyPerson('Taco_Bell', 'Greg_Creed') 1.0
+not_keyPerson('KFC', 'Robert_D._Walter') 1.0
+not_keyPerson('PepsiCo', 'CFO') 1.0
+not_keyPerson('Taco_Bell', 'CEO') 1.0
+not_keyPerson('CEO', 'CEO') 1.0
+not_keyPerson('Italian-American_cuisine', 'Glen_Bell') 1.0
+not_keyPerson('Subsidiary', 'Greg_Creed') 1.0
+not_keyPerson('Consolidated_city-county', 'CFO') 1.0
+not_keyPerson('PepsiCo', 'Robert_D._Walter') 1.0
+not_keyPerson('Pizza', 'CEO') 1.0
+not_keyPerson('Glen_Bell', 'Glen_Bell') 1.0
+not_keyPerson('Public_company', 'CFO') 1.0
+not_keyPerson('Glen_Bell', 'CEO') 1.0
+not_keyPerson('Yum!_Brands', 'Greg_Creed') 1.0
+not_keyPerson('CFO', 'Robert_D._Walter') 1.0
+not_keyPerson('Tex-Mex_cuisine', 'Robert_D._Walter') 1.0
+not_keyPerson('Taco', 'Glen_Bell') 1.0
+not_keyPerson('Consolidated_city-county', 'Glen_Bell') 1.0
+not_keyPerson('Burrito', 'CFO') 1.0
+not_keyPerson('Taco_Bell', 'Robert_D._Walter') 1.0
+not_keyPerson('Tex-Mex_cuisine', 'Glen_Bell') 1.0
+not_keyPerson('PepsiCo', 'CEO') 1.0
+not_keyPerson('Burrito', 'CEO') 1.0
+not_keyPerson('Pizza', 'Robert_D._Walter') 1.0
+not_keyPerson('CFO', 'CEO') 1.0
+not_keyPerson('Subsidiary', 'Glen_Bell') 1.0
+not_keyPerson('Greg_Creed', 'Robert_D._Walter') 1.0
+not_keyPerson('CEO', 'Robert_D._Walter') 1.0
+not_keyPerson('Pizza', 'CFO') 1.0
+not_keyPerson('Glen_Bell', 'CFO') 1.0
+not_keyPerson('Greg_Creed', 'Glen_Bell') 1.0
+not_keyPerson('Greg_Creed', 'CEO') 1.0
+not_keyPerson('Tex-Mex_cuisine', 'Greg_Creed') 1.0
+not_keyPerson('KFC', 'Glen_Bell') 1.0
+not_keyPerson('Tex-Mex_cuisine', 'CFO') 1.0
+not_keyPerson('Consolidated_city-county', 'Greg_Creed') 1.0
+not_keyPerson('Yum!_Brands', 'Glen_Bell') 1.0
+not_keyPerson('PepsiCo', 'Greg_Creed') 1.0
 
 
 SATISFIABLE
 
 Models       : 1     
 Calls        : 1
-Time         : 0.171s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.160s
+Time         : 0.220s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.220s

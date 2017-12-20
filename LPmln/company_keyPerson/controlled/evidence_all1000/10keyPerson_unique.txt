@@ -1,0 +1,58 @@
+assets("Advanced_Micro_Devices","3.316E9").
+equity("Advanced_Micro_Devices","4.13E8").
+netIncome("Advanced_Micro_Devices","6.9E7").
+operatingIncome("Advanced_Micro_Devices","8000000.0").
+revenue("Advanced_Micro_Devices","1.027E9").
+numberOfEmployees("Advanced_Micro_Devices","8099").
+foundedBy("Advanced_Micro_Devices","Jerry_Sanders_(businessman)").
+industry("Advanced_Micro_Devices","Semiconductor_industry").
+keyPerson("Advanced_Micro_Devices","Lisa_Su").
+keyPerson("Advanced_Micro_Devices","John_Edward_Caldwell").
+locationCity("Advanced_Micro_Devices","California").
+locationCity("Advanced_Micro_Devices","Sunnyvale,_California").
+locationCity("Advanced_Micro_Devices","United_States").
+product("Advanced_Micro_Devices","Graphics_processing_unit").
+product("Advanced_Micro_Devices","Random-access_memory").
+product("Advanced_Micro_Devices","Motherboard").
+product("Advanced_Micro_Devices","Microprocessor").
+product("Advanced_Micro_Devices","TV_tuner_card").
+regionServed("Advanced_Micro_Devices","World").
+type("Advanced_Micro_Devices","Public_company").
+birthPlace("Lisa_Su","Taiwan").
+birthPlace("Lisa_Su","Tainan").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+location("Sunnyvale,_California","Sunnyvale, California").
+location("Lisa_Su","US").
+birthYear("Jerry_Sanders_(businessman)","1936").
+birthYear("Lisa_Su","1969").
+almaMater("Lisa_Su","MIT").
+capital("United_States","Washington,_D.C.").
+country("Sunnyvale,_California","United_States").
+isPartOf("Sunnyvale,_California","California").
+isPartOf("Sunnyvale,_California","Santa_Clara_County,_California").
+largestCity("California","Los_Angeles").
+largestCity("United_States","New_York_City").
+nationality("Lisa_Su","United_States").
+occupation("Lisa_Su","Lisa_Su__1").
+occupation("Lisa_Su","AMD").
+stateOfOrigin("Lisa_Su","United_States").
+type("Sunnyvale,_California","Charter_city").
+almaMater("Rory_Read","Hartwick_College").
+occupation("Rory_Read","Rory_Read__1").
+occupation("Rory_Read","Dell_Incorporated").
+city("Hartwick_College","Oneonta,_New_York").
+country("Hartwick_College","United_States").
+state("Hartwick_College","New_York_(state)").
+type("Hartwick_College","Private_school").

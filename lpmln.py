@@ -126,10 +126,10 @@ def inference_hard_not(sentence_id, data_source, resource_v,top_k, predicate, se
     return probs, probs_test
 
 
-def evidence_writer(filtered_evidence, sentence_id, data_source, resource_v, top_k, predicate, set_up):
+def evidence_writer(filtered_evidence, sentence_id, data_source, resource_v, top_k, predicate, set_up, rule_predicates):
     data_source = data_source+ '/' + set_up
-    rule_predicates = get_rule_predicates(data_source, top_k, predicate)
-    print rule_predicates
+    # rule_predicates = get_rule_predicates(data_source, top_k, predicate)
+    # print rule_predicates
     item_set = OrderedSet()
     print resource_v, predicate
     for evidence in filtered_evidence:

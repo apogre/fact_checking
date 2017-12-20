@@ -1,0 +1,65 @@
+foundingYear("Cavium","2001").
+numberOfEmployees("Cavium","850").
+keyPerson("Cavium","Syed_B._Ali").
+keyPerson("Cavium","M._Raghib_Hussain").
+locationCity("Cavium","San_Jose,_California").
+type("Cavium","Public_company").
+birthPlace("M._Raghib_Hussain","Karachi,_Pakistan").
+author("San_Jose,_California",""Dutch" Hamann, 1965").
+location("San_Jose,_California","San Jose, California").
+nationality("M._Raghib_Hussain","Pakistani-American").
+almaMater("M._Raghib_Hussain","NED_University_of_Engineering_&_Technology").
+almaMater("M._Raghib_Hussain","San_Jose_State_University").
+country("San_Jose,_California","United_States").
+isPartOf("San_Jose,_California","California").
+isPartOf("San_Jose,_California","Santa_Clara_County,_California").
+isPartOf("San_Jose,_California","San_Francisco_Bay_Area").
+isPartOf("San_Jose,_California","San_Jose-San_Francisco-Oakland,_CA_Combined_Statistical_Area").
+knownFor("M._Raghib_Hussain","Cavium").
+occupation("M._Raghib_Hussain","M._Raghib_Hussain__1").
+type("San_Jose,_California","Charter_city").
+type("San_Jose,_California","County_seat").
+birthPlace("Mark_Fields_(businessman)","Brooklyn").
+birthPlace("Mark_Fields_(businessman)","New_York_(state)").
+predecessor("Mark_Fields_(businessman)","Alan_Mulally").
+residence("Mark_Fields_(businessman)","Dearborn,_Michigan").
+birthPlace("Alan_Mulally","Oakland,_California").
+birthPlace("Alan_Mulally","United_States").
+country("Harvard_Business_School","U.S.").
+country("Rutgers_University","U.S.").
+location("Brooklyn","JFK Airport, New York").
+location("Dearborn,_Michigan","Dearborn, Michigan").
+spouse("Alan_Mulally","Nicki Mulally").
+birthYear("Alan_Mulally","1945").
+foundingYear("Paramus_High_School","1957").
+affiliation("Harvard_Business_School","Harvard_University").
+almaMater("Alan_Mulally","University_of_Kansas").
+almaMater("Alan_Mulally","MIT_Sloan_School_of_Management").
+city("Harvard_Business_School","Boston").
+city("Rutgers_University","New_Brunswick,_New_Jersey").
+country("Brooklyn","United_States_of_America").
+country("Dearborn,_Michigan","United_States").
+isPartOf("Brooklyn","New_York").
+isPartOf("Brooklyn","New_York_City").
+isPartOf("Dearborn,_Michigan","Michigan").
+isPartOf("Dearborn,_Michigan","Wayne_County,_Michigan").
+location("Paramus_High_School","New_Jersey").
+location("Paramus_High_School","Paramus,_New_Jersey").
+occupation("Alan_Mulally","Chief_Executive_Officer").
+occupation("Alan_Mulally","President").
+occupation("Alan_Mulally","Alan_Mulally__1").
+residence("Alan_Mulally","Dearborn,_Michigan").
+residence("Alan_Mulally","United_States").
+state("Harvard_Business_School","Massachusetts").
+state("Rutgers_University","New_Jersey").
+type("Brooklyn","Borough_(New_York_City)").
+type("Dearborn,_Michigan","City").
+type("Harvard_Business_School","Private_school").
+type("Paramus_High_School","State_school").
+type("Rutgers_University","Research_university").
+type("Rutgers_University","Public_university").
+type("Rutgers_University","Land-grant_university").
+type("Rutgers_University","Sea-grant_university").
+type("Rutgers_University","University_system").
+salary("Alan_Mulally","1400000.0").
+salary("Alan_Mulally","1.65E7").

@@ -1,0 +1,112 @@
+assets("Advanced_Micro_Devices","3.316E9").
+equity("Advanced_Micro_Devices","4.13E8").
+netIncome("Advanced_Micro_Devices","6.9E7").
+operatingIncome("Advanced_Micro_Devices","8000000.0").
+revenue("Advanced_Micro_Devices","1.027E9").
+numberOfEmployees("Advanced_Micro_Devices","8099").
+foundedBy("Advanced_Micro_Devices","Jerry_Sanders_(businessman)").
+industry("Advanced_Micro_Devices","Semiconductor_industry").
+keyPerson("Advanced_Micro_Devices","Lisa_Su").
+keyPerson("Advanced_Micro_Devices","John_Edward_Caldwell").
+locationCity("Advanced_Micro_Devices","California").
+locationCity("Advanced_Micro_Devices","Sunnyvale,_California").
+locationCity("Advanced_Micro_Devices","United_States").
+product("Advanced_Micro_Devices","Graphics_processing_unit").
+product("Advanced_Micro_Devices","Random-access_memory").
+product("Advanced_Micro_Devices","Motherboard").
+product("Advanced_Micro_Devices","Microprocessor").
+product("Advanced_Micro_Devices","TV_tuner_card").
+regionServed("Advanced_Micro_Devices","World").
+type("Advanced_Micro_Devices","Public_company").
+birthPlace("Lisa_Su","Taiwan").
+birthPlace("Lisa_Su","Tainan").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+location("Sunnyvale,_California","Sunnyvale, California").
+location("Lisa_Su","US").
+birthYear("Jerry_Sanders_(businessman)","1936").
+birthYear("Lisa_Su","1969").
+almaMater("Lisa_Su","MIT").
+capital("United_States","Washington,_D.C.").
+country("Sunnyvale,_California","United_States").
+isPartOf("Sunnyvale,_California","California").
+isPartOf("Sunnyvale,_California","Santa_Clara_County,_California").
+largestCity("California","Los_Angeles").
+largestCity("United_States","New_York_City").
+nationality("Lisa_Su","United_States").
+occupation("Lisa_Su","Lisa_Su__1").
+occupation("Lisa_Su","AMD").
+stateOfOrigin("Lisa_Su","United_States").
+type("Sunnyvale,_California","Charter_city").
+birthPlace("Vittorio_Colao","Brescia").
+birthYear("Vittorio_Colao","1961").
+knownFor("Vittorio_Colao","Vodafone").
+knownFor("Vittorio_Colao","RCS_MediaGroup").
+knownFor("Vittorio_Colao","Omnitel_Pronto_Italia").
+salary("Vittorio_Colao","8927000.0").
+almaMater("Vittorio_Colao","Harvard_University").
+almaMater("Vittorio_Colao","Bocconi_University").
+assets("RCS_MediaGroup","1.368E9").
+assets("Vodafone","1.337E11").
+equity("RCS_MediaGroup","1.0E8").
+equity("Vodafone","6.588E10").
+netIncome("Vodafone","-4.02E9").
+operatingIncome("Vodafone","1.37E9").
+revenue("Vodafone","4.097E10").
+country("Harvard_University","U.S.").
+location("Brescia","Brescia").
+type("Brescia","Cultural").
+foundingYear("RCS_MediaGroup","1927").
+foundingYear("RCS_MediaGroup","1952").
+foundingYear("RCS_MediaGroup","1986").
+foundingYear("RCS_MediaGroup","1997").
+foundingYear("RCS_MediaGroup","2003").
+numberOfEmployees("Vodafone","107667").
+affiliation("Harvard_University","Association_of_American_Universities").
+affiliation("Harvard_University","Association_of_Independent_Colleges_and_Universities_in_Massachusetts").
+affiliation("Harvard_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Harvard_University","Universities_Research_Association").
+affiliation("Bocconi_University","Association_of_MBAs").
+affiliation("Bocconi_University","Global_Alliance_in_Management_Education").
+affiliation("Bocconi_University","AACSB").
+affiliation("Bocconi_University","EQUIS").
+affiliation("Bocconi_University","CFA_Institute").
+city("Harvard_University","Cambridge,_Massachusetts").
+city("Bocconi_University","Milan").
+country("Brescia","Italy").
+country("Bocconi_University","Italy").
+division("Vodafone","Vodafone_Global_Enterprise").
+foundedBy("RCS_MediaGroup","Angelo_Rizzoli").
+industry("RCS_MediaGroup","Mass_media").
+industry("Vodafone","Telecommunication").
+keyPerson("RCS_MediaGroup","Urbano_Cairo").
+keyPerson("Vodafone","Gerard_Kleisterlee").
+keyPerson("Vodafone","Vittorio_Colao").
+location("Vodafone","Newbury,_Berkshire").
+parentCompany("RCS_MediaGroup","Cairo_Communication").
+predecessor("Vodafone","Racal").
+product("RCS_MediaGroup","Radio").
+product("RCS_MediaGroup","Magazines").
+product("RCS_MediaGroup","Newspapers").
+product("RCS_MediaGroup","Advertising").
+product("RCS_MediaGroup","Television").
+product("RCS_MediaGroup","New_Media").
+product("Vodafone","Landline").
+product("Vodafone","Mobile_phone").
+product("Vodafone","Digital_television").
+state("Harvard_University","Massachusetts").
+type("RCS_MediaGroup","S.A._(corporation)").
+type("Vodafone","Public_limited_company").
+type("Harvard_University","Research_university").
+type("Bocconi_University","Private_school").

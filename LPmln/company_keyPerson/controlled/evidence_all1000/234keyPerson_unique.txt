@@ -1,0 +1,54 @@
+assets("Alcatel-Lucent","2.32E10").
+equity("Alcatel-Lucent","3.7E9").
+netIncome("Alcatel-Lucent","2.72E8").
+operatingIncome("Alcatel-Lucent","7.14E8").
+revenue("Alcatel-Lucent","1.43E10").
+foundingYear("Alcatel-Lucent","1872").
+foundingYear("Alcatel-Lucent","2006").
+foundingYear("Alcatel-Lucent","1870").
+numberOfEmployees("Alcatel-Lucent","52673").
+industry("Alcatel-Lucent","Networking_equipment").
+industry("Alcatel-Lucent","Telecommunications_equipment").
+keyPerson("Alcatel-Lucent","Philippe_Camus_(businessman)").
+keyPerson("Alcatel-Lucent","Chairman").
+locationCity("Alcatel-Lucent","Boulogne-Billancourt").
+locationCountry("Alcatel-Lucent","France").
+parentCompany("Alcatel-Lucent","Nokia").
+product("Alcatel-Lucent","Computer_software").
+type("Alcatel-Lucent","S.A._(corporation)").
+assets("Nokia","4.506E10").
+equity("Nokia","9.44E9").
+netIncome("Nokia","1.68E9").
+operatingIncome("Nokia","5.453E9").
+revenue("Nokia","2.322E10").
+birthPlace("Philippe_Camus_(businessman)","France").
+birthPlace("Philippe_Camus_(businessman)","Paris").
+author("Nokia","Dan_Steinbock").
+author("Nokia","Michael Lattanzi, Antti Korhonen, Vishy Gopalakrishnan").
+author("Nokia","Dan Steinbock").
+author("Nokia","David J. Cord").
+author("Nokia","Trevor Merriden").
+author("Nokia","Christian Lindholm, Turkka Keinonen, Harri Kiljander").
+birthYear("Philippe_Camus_(businessman)","1948").
+foundingYear("Nokia","1871").
+numberOfEmployees("Nokia","114256").
+capital("France","Paris").
+country("Boulogne-Billancourt","France").
+foundationPlace("Nokia","Tampere").
+foundationPlace("Nokia","Nokia,_Finland").
+foundationPlace("Nokia","Grand_Duchy_of_Finland").
+keyPerson("Nokia","Rajeev_Suri").
+keyPerson("Nokia","Risto_Siilasmaa").
+largestCity("France","Capital_city").
+locationCity("Nokia","Espoo").
+locationCity("Nokia","Uusimaa").
+locationCountry("Nokia","Finland").
+nationality("Philippe_Camus_(businessman)","France").
+occupation("Philippe_Camus_(businessman)","Alcatel-Lucent").
+occupation("Philippe_Camus_(businessman)","Philippe_Camus_(businessman)__1").
+product("Nokia","List_of_Nokia_products").
+stateOfOrigin("Philippe_Camus_(businessman)","France").
+subsidiary("Nokia","Alcatel-Lucent").
+subsidiary("Nokia","Nokia_Networks").
+subsidiary("Nokia","Nokia_Bell_Labs").
+subsidiary("Nokia","Nokia_Technologies").

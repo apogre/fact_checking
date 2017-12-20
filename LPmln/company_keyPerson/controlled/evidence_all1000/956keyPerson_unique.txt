@@ -1,0 +1,41 @@
+assets("SunTrust_Banks","1.908E11").
+equity("SunTrust_Banks","2.14E10").
+netIncome("SunTrust_Banks","1.34E9").
+numberOfLocations("SunTrust_Banks","2160").
+numberOfLocations("SunTrust_Banks","1400").
+revenue("SunTrust_Banks","8.2E9").
+foundingYear("SunTrust_Banks","1985").
+numberOfEmployees("SunTrust_Banks","2400").
+industry("SunTrust_Banks","Banking").
+keyPerson("SunTrust_Banks","William_H._Rogers,_Jr.").
+location("SunTrust_Banks","Georgia_(U.S._state)").
+location("SunTrust_Banks","Atlanta").
+location("SunTrust_Banks","SunTrust_Plaza").
+product("SunTrust_Banks","Financial_Services").
+regionServed("SunTrust_Banks","Southeastern_United_States").
+type("SunTrust_Banks","Public_company").
+city("Georgia_(U.S._state)","Albany, GeorgiaAlbany").
+city("Georgia_(U.S._state)","Athens, GeorgiaAthens").
+city("Georgia_(U.S._state)","Atlanta, GeorgiaAtlanta").
+city("Georgia_(U.S._state)","Augusta, GeorgiaAugusta").
+city("Georgia_(U.S._state)","Columbus, GeorgiaColumbus").
+city("Georgia_(U.S._state)","Johns Creek, GeorgiaJohns Creek").
+city("Georgia_(U.S._state)","Macon, GeorgiaMacon").
+city("Georgia_(U.S._state)","Roswell, GeorgiaRoswell").
+city("Georgia_(U.S._state)","Sandy Springs, GeorgiaSandy Springs").
+city("Georgia_(U.S._state)","Savannah, GeorgiaSavannah").
+country("Georgia_(U.S._state)","Georgia").
+developer("SunTrust_Plaza","John_C._Portman,_Jr.").
+capital("Georgia_(U.S._state)","Atlanta").
+country("Atlanta","United_States_of_America").
+country("Georgia_(U.S._state)","United_States").
+employer("William_H._Rogers,_Jr.","SunTrust_Banks").
+isPartOf("Atlanta","Georgia_(U.S._state)").
+isPartOf("Atlanta","Fulton_County,_Georgia").
+isPartOf("Atlanta","DeKalb_County,_Georgia").
+location("SunTrust_Plaza","Peachtree_Street").
+location("SunTrust_Plaza","Atlanta,_Georgia").
+nationality("William_H._Rogers,_Jr.","United_States").
+occupation("William_H._Rogers,_Jr.","William_H._Rogers,_Jr.__1").
+stateOfOrigin("William_H._Rogers,_Jr.","United_States").
+type("Atlanta","City").

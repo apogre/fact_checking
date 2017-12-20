@@ -1,0 +1,10 @@
+networth("Stefano_Pessina","1.47E10").
+birthPlace("Stefano_Pessina","Pescara").
+activeYearsStartYear("Stefano_Pessina","1966").
+birthYear("Stefano_Pessina","1941").
+almaMater("Stefano_Pessina","Polytechnic_University_of_Milan").
+board("Stefano_Pessina","Walgreens_Boots_Alliance").
+nationality("Stefano_Pessina","Monaco").
+occupation("Stefano_Pessina","Stefano_Pessina__1").
+personFunction("Stefano_Pessina","Stefano_Pessina__1").
+stateOfOrigin("Stefano_Pessina","Monaco").

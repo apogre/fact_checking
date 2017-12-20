@@ -1,7 +1,7 @@
 import re
 set_up = "controlled"
 predicate = "keyPerson"
-polarity = "_neg"
+polarity = "_pos"
 fname = "company_keyPerson/"+ set_up + "/rudik_rules_all1000/" + predicate + polarity + "_all.txt"
 with open("company_keyPerson/" + set_up + "/rudik_rules_all1000/" + predicate + polarity + "_lpmln.txt", "w") as text_file:
 	with open(fname) as f:
@@ -16,7 +16,7 @@ with open("company_keyPerson/" + set_up + "/rudik_rules_all1000/" + predicate + 
 			con = con.replace('!=(C,D)', 'C!=D')
 			con = con.replace("!=(D,C)", "C!=D")
 			con = con.replace(">(C,D)", "C>D")
-			con = con.replace("<(C,D)", "C>D")
+			con = con.replace("<(C,D)", "C<D")
 			if "null" not in con:
 				if polarity == "_neg":
 					text_file.write("not_"+predicate+"(A,B) :- "+str(con))

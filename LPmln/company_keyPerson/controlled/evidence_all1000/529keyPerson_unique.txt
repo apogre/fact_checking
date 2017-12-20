@@ -1,0 +1,105 @@
+broadcastArea("GMA_Network","Philippines").
+country("GMA_Network","Philippines").
+foundedBy("GMA_Network","Robert_%22Uncle_Bob%22_Stewart").
+keyPerson("GMA_Network","Chief_Executive_Officer").
+keyPerson("GMA_Network","President").
+keyPerson("GMA_Network","Felipe_Gozon").
+keyPerson("GMA_Network","Chief_Operating_Officer").
+locationCountry("GMA_Network","Philippines").
+owningCompany("GMA_Network","GMA_Network_(company)").
+type("GMA_Network","Terrestrial_television").
+service("GMA_Network","GMA_News_TV").
+birthPlace("Felipe_Gozon","Manila").
+birthPlace("Felipe_Gozon","Commonwealth_of_the_Philippines").
+birthPlace("Felipe_Gozon","Ermita,_Manila").
+broadcastArea("GMA_News_TV","Worldwide").
+broadcastArea("GMA_News_TV","Nationwide").
+owner("GMA_Network_(company)","FLG Management and Development Corporation").
+owner("GMA_Network_(company)","GMA Holdings, Inc.").
+owner("GMA_Network_(company)","Group Management and Development, Inc.").
+owner("GMA_Network_(company)","M.A. Jimenez Enterprises").
+owner("GMA_Network_(company)","Television International Corporation").
+parent("GMA_Network_(company)","GMA Holdings, Inc.").
+predecessor("GMA_Network_(company)","Loreto F. de Hemedes Inc.").
+predecessor("GMA_Network_(company)","Republic Broadcasting System Inc.").
+service("GMA_News_TV","GMA_Network").
+spouse("Felipe_Gozon","Teresa Gozon").
+activeYearsStartYear("Felipe_Gozon","1963").
+birthYear("Felipe_Gozon","1939").
+numberOfEmployees("GMA_Network_(company)","2913").
+almaMater("Felipe_Gozon","Yale_Law_School").
+almaMater("Felipe_Gozon","University_of_the_Philippines_Diliman").
+capital("Philippines","Manila").
+country("GMA_News_TV","Philippines").
+division("GMA_Network_(company)","GMA_Kapuso_Foundation").
+division("GMA_Network_(company)","GMA_News_and_Public_Affairs").
+division("GMA_Network_(company)","List_of_GMA_Network_radio_stations").
+foundedBy("GMA_Network_(company)","Robert_%22Uncle_Bob%22_Stewart").
+industry("GMA_Network_(company)","Mass_media").
+keyPerson("GMA_News_TV","GMA_Network_Inc.").
+keyPerson("GMA_News_TV","CEO").
+keyPerson("GMA_News_TV","Eddie_Villanueva").
+keyPerson("GMA_News_TV","GMA_Network_(company)").
+keyPerson("GMA_News_TV","Felipe_Gozon").
+keyPerson("GMA_Network_(company)","Chief_financial_officer").
+keyPerson("GMA_Network_(company)","Chief_operating_officer").
+keyPerson("GMA_Network_(company)","President").
+keyPerson("GMA_Network_(company)","Chief_executive_officer").
+keyPerson("GMA_Network_(company)","Felipe_Gozon").
+largestCity("Philippines","Quezon_City").
+locationCity("GMA_Network_(company)","Quezon_City").
+locationCity("GMA_Network_(company)","EDSA_(road)").
+locationCity("GMA_Network_(company)","Diliman").
+locationCity("GMA_Network_(company)","GMA_Network_Center").
+locationCountry("GMA_News_TV","Philippines").
+locationCountry("GMA_Network_(company)","Philippines").
+nationality("Felipe_Gozon","Filipino_people").
+occupation("Felipe_Gozon","Lawyer").
+occupation("Felipe_Gozon","Felipe_Gozon__1").
+owningCompany("GMA_News_TV","GMA_Network_(company)").
+owningCompany("GMA_News_TV","ZOE_Broadcasting_Network").
+personFunction("Felipe_Gozon","Felipe_Gozon__1").
+stateOfOrigin("Felipe_Gozon","Filipino_people").
+subsidiary("GMA_Network_(company)","GMA_Films").
+subsidiary("GMA_Network_(company)","GMA_Records").
+subsidiary("GMA_Network_(company)","Digify_(company)").
+subsidiary("GMA_Network_(company)","GMA_New_Media").
+type("GMA_Network_(company)","Public_company").
+birthPlace("Frank_Appel","Hamburg").
+occupation("Frank_Appel","Frank_Appel__1").
+occupation("Frank_Appel","Deutsche_Post").
+predecessor("Frank_Appel","Klaus_Zumwinkel").
+assets("Deutsche_Post","4.142E10").
+equity("Deutsche_Post","1.119E10").
+netIncome("Deutsche_Post","2.016E9").
+operatingIncome("Deutsche_Post","2.965E9").
+revenue("Deutsche_Post","5.663E10").
+birthPlace("Klaus_Zumwinkel","Germany").
+birthPlace("Klaus_Zumwinkel","Rheinberg").
+birthPlace("Klaus_Zumwinkel","Northrhine-Westphalia").
+location("Hamburg","Hamburg").
+location("Hamburg","left").
+birthYear("Klaus_Zumwinkel","1943").
+foundingYear("Deutsche_Post","1995").
+numberOfEmployees("Deutsche_Post","424351").
+country("Hamburg","Germany").
+industry("Deutsche_Post","Courier").
+industry("Deutsche_Post","Mail").
+keyPerson("Deutsche_Post","Chief_financial_officer").
+keyPerson("Deutsche_Post","Wulf_von_Schimmelmann").
+keyPerson("Deutsche_Post","Frank_Appel").
+location("Deutsche_Post","Bonn").
+location("Deutsche_Post","Germany").
+location("Deutsche_Post","Post_Tower").
+occupation("Klaus_Zumwinkel","Klaus_Zumwinkel__1").
+owner("Deutsche_Post","KfW").
+owningCompany("Deutsche_Post","KfW").
+personFunction("Klaus_Zumwinkel","Klaus_Zumwinkel__1").
+service("Deutsche_Post","Delivery_(commerce)").
+service("Deutsche_Post","Cargo").
+service("Deutsche_Post","Mail").
+service("Deutsche_Post","Express_mail").
+service("Deutsche_Post","Third-party_logistics").
+service("Deutsche_Post","Parcel_post").
+successor("Klaus_Zumwinkel","Frank_Appel").
+type("Deutsche_Post","Aktiengesellschaft").

@@ -1,0 +1,98 @@
+assets("Playboy_Enterprises","1.9683E8").
+equity("Playboy_Enterprises","-2.23E7").
+netIncome("Playboy_Enterprises","-4.85E7").
+operatingIncome("Playboy_Enterprises","-3.63E7").
+revenue("Playboy_Enterprises","2.15E8").
+foundingYear("Playboy_Enterprises","1953").
+numberOfEmployees("Playboy_Enterprises","165").
+foundationPlace("Playboy_Enterprises","Illinois").
+foundationPlace("Playboy_Enterprises","United_States").
+foundationPlace("Playboy_Enterprises","Chicago,_Illinois").
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+industry("Playboy_Enterprises","Lifestyle_(sociology)").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+product("Playboy_Enterprises","Playboy_Magazine").
+product("Playboy_Enterprises","Playboy_Online").
+product("Playboy_Enterprises","Adult_entertainment").
+product("Playboy_Enterprises","Playboy_TV").
+type("Playboy_Enterprises","Privately_held_company").
+birthPlace("Hugh_Hefner","Chicago").
+birthPlace("Scott_Flanders","Indiana").
+birthPlace("Scott_Flanders","Indianapolis").
+broadcastArea("Playboy_TV","United States, Canada, Latin America, Sweden, Brazil, Japan, New Zealand, Portugal, Greece, Spain and Norway").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Playboy_TV","United States").
+knownFor("Hugh_Hefner","Editor-in-chief of Playboy magazine, Chief Creative Officer of Playboy Enterprises").
+nationality("Scott_Flanders","American").
+state("Illinois","expanded").
+state("Illinois","off").
+birthYear("Hugh_Hefner","1926").
+birthYear("Scott_Flanders","1956").
+almaMater("Hugh_Hefner","University_of_Illinois_at_Urbana_Champaign").
+almaMater("Hugh_Hefner","Steinmetz_High_School").
+board("Hugh_Hefner","Playboy_Enterprises").
+capital("Illinois","Springfield,_Illinois").
+capital("United_States","Washington,_D.C.").
+child("Hugh_Hefner","Christie_Hefner").
+country("Illinois","United_States").
+isPartOf("Beverly_Hills,_California","California").
+isPartOf("Beverly_Hills,_California","Los_Angeles_County,_California").
+largestCity("Illinois","Chicago").
+largestCity("United_States","New_York_City").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+occupation("Scott_Flanders","Scott_Flanders__1").
+owningCompany("Playboy_TV","MindGeek").
+residence("Hugh_Hefner","Playboy_Mansion").
+residence("Hugh_Hefner","Holmby_Hills,_Los_Angeles").
+spouse("Hugh_Hefner","Kimberley_Conrad").
+spouse("Hugh_Hefner","Crystal_Harris").
+type("Beverly_Hills,_California","General_law_city").
+birthPlace("Evan_G._Greenberg","United_States").
+birthYear("Evan_G._Greenberg","1955").
+nationality("Evan_G._Greenberg","United_States").
+occupation("Evan_G._Greenberg","Evan_G._Greenberg__1").
+occupation("Evan_G._Greenberg","Chubb_Limited").
+parent("Evan_G._Greenberg","Maurice_R._Greenberg").
+relative("Evan_G._Greenberg","Jeffrey_W._Greenberg").
+stateOfOrigin("Evan_G._Greenberg","United_States").
+netIncome("Chubb_Limited","4.3E9").
+operatingIncome("Chubb_Limited","4.5E9").
+revenue("Chubb_Limited","3.7E10").
+birthPlace("Jeffrey_W._Greenberg","United_States").
+birthPlace("Maurice_R._Greenberg","Chicago").
+birthPlace("Maurice_R._Greenberg","New_York_City").
+birthPlace("Maurice_R._Greenberg","United_States").
+spouse("Maurice_R._Greenberg","Corinne Phyllis Zuckerman").
+birthYear("Jeffrey_W._Greenberg","1951").
+birthYear("Maurice_R._Greenberg","1925").
+foundingYear("Chubb_Limited","1882").
+numberOfEmployees("Chubb_Limited","30000").
+almaMater("Maurice_R._Greenberg","New_York_Law_School").
+almaMater("Maurice_R._Greenberg","University_of_Miami").
+child("Maurice_R._Greenberg","Jeffrey_W._Greenberg").
+child("Maurice_R._Greenberg","Evan_G._Greenberg").
+industry("Chubb_Limited","Insurance").
+keyPerson("Chubb_Limited","Evan_Greenberg").
+location("Chubb_Limited","Zurich,_Switzerland").
+nationality("Maurice_R._Greenberg","United_States").
+occupation("Jeffrey_W._Greenberg","Jeffrey_W._Greenberg__1").
+occupation("Jeffrey_W._Greenberg","Lawyer").
+occupation("Maurice_R._Greenberg","Maurice_R._Greenberg__1").
+parent("Jeffrey_W._Greenberg","Maurice_R._Greenberg").
+product("Chubb_Limited","Insurance").
+relative("Jeffrey_W._Greenberg","Evan_G._Greenberg").
+spouse("Jeffrey_W._Greenberg","Nikki_Finke").
+stateOfOrigin("Maurice_R._Greenberg","United_States").
+type("Chubb_Limited","Public_company").

@@ -1,0 +1,135 @@
+numberOfEmployees("Sun_Microsystems","38600").
+industry("Sun_Microsystems","Computer_systems").
+locationCity("Sun_Microsystems","Santa_Clara,_California").
+owner("Sun_Microsystems","Oracle_Corporation").
+owningCompany("Sun_Microsystems","Oracle_Corporation").
+product("Sun_Microsystems","Computer_data_storage").
+product("Sun_Microsystems","Server_(computing)").
+product("Sun_Microsystems","Workstation").
+networth("Vinod_Khosla","1.5E9").
+networth("Andy_Bechtolsheim","3.8E9").
+birthPlace("Bill_Joy","Detroit").
+birthPlace("Bill_Joy","Farmington_Hills,_Michigan").
+birthPlace("Vinod_Khosla","Delhi").
+birthPlace("Vinod_Khosla","India").
+birthPlace("Andy_Bechtolsheim","Bavaria").
+birthPlace("Scott_McNealy","Columbus,_Indiana").
+location("Santa_Clara,_California","Santa Clara, California").
+locationCountry("Oracle_Corporation","United States").
+nationality("Bill_Joy","USA").
+spouse("Scott_McNealy","Susan McNealy").
+type("SPARC","Register-Register").
+birthYear("Vinod_Khosla","1955").
+birthYear("Andy_Bechtolsheim","1955").
+birthYear("Scott_McNealy","1954").
+numberOfEmployees("Oracle_Corporation","136262").
+almaMater("Bill_Joy","University_of_California,_Berkeley").
+almaMater("Bill_Joy","University_of_Michigan").
+almaMater("Vinod_Khosla","Stanford_Graduate_School_of_Business").
+almaMater("Vinod_Khosla","IIT_Delhi").
+almaMater("Vinod_Khosla","Carnegie_Mellon_University").
+child("Scott_McNealy","Maverick_McNealy").
+country("Santa_Clara,_California","United_States_of_America").
+foundationPlace("Oracle_Corporation","California").
+foundationPlace("Oracle_Corporation","Santa_Clara,_California").
+foundedBy("Oracle_Corporation","Larry_Ellison").
+foundedBy("Oracle_Corporation","Bob_Miner").
+foundedBy("Oracle_Corporation","Ed_Oates").
+industry("Oracle_Corporation","Cloud_Computing").
+industry("Oracle_Corporation","Enterprise_software").
+isPartOf("Santa_Clara,_California","California").
+isPartOf("Santa_Clara,_California","Santa_Clara_County,_California").
+keyPerson("Oracle_Corporation","Safra_A._Catz").
+keyPerson("Oracle_Corporation","Mark_Hurd").
+keyPerson("Oracle_Corporation","Larry_Ellison").
+keyPerson("Oracle_Corporation","Jeffrey_O._Henley").
+knownFor("Bill_Joy","BSD").
+knownFor("Andy_Bechtolsheim","Sun_Microsystems").
+knownFor("Andy_Bechtolsheim","Google").
+knownFor("Scott_McNealy","CEO").
+knownFor("Scott_McNealy","Sun_Microsystems").
+locationCity("Oracle_Corporation","California").
+locationCity("Oracle_Corporation","Redwood_City,_California").
+locationCity("Oracle_Corporation","Redwood_Shores,_California").
+occupation("Vinod_Khosla","Khosla_Ventures").
+occupation("Vinod_Khosla","Vinod_Khosla__1").
+occupation("Vinod_Khosla","Venture_capitalist").
+product("Oracle_Corporation","Oracle_Database").
+product("Oracle_Corporation","Server_(computing)").
+product("Oracle_Corporation","Computer_data_storage").
+product("Oracle_Corporation","Oracle_Corporation").
+product("Oracle_Corporation","Workstation").
+product("Oracle_Corporation","Oracle_Applications").
+product("Oracle_Corporation","Oracle_Enterprise_Manager").
+product("Oracle_Corporation","Oracle_Fusion_Middleware").
+spouse("Vinod_Khosla","Neeru_Khosla").
+subsidiary("Oracle_Corporation","List_of_acquisitions_by_Oracle").
+type("Santa_Clara,_California","City_(California)").
+type("Oracle_Corporation","Public_company").
+birthPlace("Jeffrey_R._Immelt","Ohio").
+birthPlace("Jeffrey_R._Immelt","Cincinnati").
+birthPlace("Jeffrey_R._Immelt","United_States").
+almaMater("Jeffrey_R._Immelt","Harvard_Business_School").
+almaMater("Jeffrey_R._Immelt","Dartmouth_College").
+predecessor("Jeffrey_R._Immelt","Jack_Welch").
+networth("Jack_Welch","7.5E8").
+birthPlace("Jack_Welch","Peabody,_Massachusetts").
+birthPlace("Paul_Volcker","Cape_May,_New_Jersey").
+birthPlace("Paul_Volcker","New_Jersey").
+birthPlace("Paul_Volcker","United_States").
+city("Ohio","Cleveland").
+city("Ohio","Akron, OhioAkron").
+city("Ohio","Canton, OhioCanton").
+city("Ohio","Cincinnati").
+city("Ohio","Columbus, OhioColumbus").
+city("Ohio","Dayton, OhioDayton").
+city("Ohio","Lorain, OhioLorain").
+city("Ohio","Parma, OhioParma").
+city("Ohio","Toledo, OhioToledo").
+city("Ohio","Youngstown, OhioYoungstown").
+country("Ohio","Ohio").
+country("Harvard_Business_School","U.S.").
+country("Republican_Party_(United_States)","United States").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+predecessor("Paul_Volcker","Position established").
+spouse("Paul_Volcker","Anke Dening").
+spouse("Paul_Volcker","Barbara Bahnson").
+state("Ohio","expanded").
+state("Dartmouth_College","autocollapse").
+birthYear("Jack_Welch","1935").
+affiliation("Harvard_Business_School","Harvard_University").
+affiliation("Dartmouth_College","University_Press_of_New_England").
+affiliation("Dartmouth_College","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Dartmouth_College","University_of_the_Arctic").
+affiliation("Dartmouth_College","568_Group").
+affiliation("Dartmouth_College","Matariki_Network_of_Universities").
+affiliation("Republican_Party_(United_States)","Asia_Pacific_Democrat_Union").
+almaMater("Jack_Welch","University_of_Illinois").
+almaMater("Jack_Welch","University_of_Massachusetts_Amherst").
+almaMater("Paul_Volcker","Harvard_University").
+almaMater("Paul_Volcker","Princeton_University").
+almaMater("Paul_Volcker","London_School_of_Economics").
+capital("Ohio","Columbus,_Ohio").
+capital("United_States","Washington,_D.C.").
+city("Harvard_Business_School","Boston").
+city("Dartmouth_College","Hanover,_New_Hampshire").
+country("Cincinnati","United_States").
+country("Ohio","United_States").
+country("Dartmouth_College","United_States").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+isPartOf("Cincinnati","Ohio").
+isPartOf("Cincinnati","Hamilton_County,_Ohio").
+largestCity("United_States","New_York_City").
+occupation("Jack_Welch","Jack_Welch__1").
+predecessor("Paul_Volcker","G._William_Miller").
+predecessor("Paul_Volcker","Alfred_Hayes_(banker)").
+residence("Jack_Welch","Boston,_Massachusetts").
+spouse("Jack_Welch","Suzy_Wetlaufer").
+state("Harvard_Business_School","Massachusetts").
+state("Dartmouth_College","New_Hampshire").
+successor("Paul_Volcker","Alan_Greenspan").
+successor("Paul_Volcker","Anthony_M._Solomon").
+successor("Paul_Volcker","Jeffrey_R._Immelt").
+type("Harvard_Business_School","Private_school").
+type("Dartmouth_College","Private_university").

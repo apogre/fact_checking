@@ -1,0 +1,62 @@
+assets("The_Travelers_Companies","1.002E11").
+equity("The_Travelers_Companies","2.3598E10").
+netIncome("The_Travelers_Companies","3.439E9").
+operatingIncome("The_Travelers_Companies","3.437E9").
+revenue("The_Travelers_Companies","2.68E10").
+foundingYear("The_Travelers_Companies","1853").
+foundingYear("The_Travelers_Companies","2004").
+numberOfEmployees("The_Travelers_Companies","30000").
+industry("The_Travelers_Companies","Insurance").
+keyPerson("The_Travelers_Companies","Executive_Chairman").
+keyPerson("The_Travelers_Companies","Alan_D._Schnitzer").
+keyPerson("The_Travelers_Companies","John_Dasburg").
+keyPerson("The_Travelers_Companies","Chief_Executive_Officer").
+location("The_Travelers_Companies","New_York_(state)").
+location("The_Travelers_Companies","New_York_City").
+location("The_Travelers_Companies","United_States").
+predecessor("The_Travelers_Companies","Citigroup").
+product("The_Travelers_Companies","Insurance_policy").
+product("The_Travelers_Companies","Risk_management").
+type("The_Travelers_Companies","Public_company").
+birthPlace("John_Thain","United_States").
+birthPlace("John_Thain","Antioch,_Illinois").
+birthPlace("John_Thain","Illinois").
+birthYear("John_Thain","1955").
+almaMater("John_Thain","Massachusetts_Institute_of_Technology").
+almaMater("John_Thain","Harvard_Business_School").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Harvard_Business_School","U.S.").
+country("Massachusetts_Institute_of_Technology","United States").
+country("Republican_Party_(United_States)","United States").
+location("Antioch,_Illinois","Antioch, IL").
+predecessor("Republican_Party_(United_States)","Free_Soil_Party").
+predecessor("Republican_Party_(United_States)","Whig_Party_(United_States)").
+state("Illinois","expanded").
+state("Illinois","off").
+state("Antioch,_Illinois","Illinois").
+affiliation("Harvard_Business_School","Harvard_University").
+affiliation("Republican_Party_(United_States)","Asia_Pacific_Democrat_Union").
+capital("Illinois","Springfield,_Illinois").
+capital("United_States","Washington,_D.C.").
+city("Harvard_Business_School","Boston").
+city("Massachusetts_Institute_of_Technology","Cambridge,_Massachusetts").
+country("Illinois","United_States").
+country("Antioch,_Illinois","United_States").
+headquarter("Republican_Party_(United_States)","Washington,_D.C.").
+largestCity("Illinois","Chicago").
+largestCity("United_States","New_York_City").
+state("Harvard_Business_School","Massachusetts").
+state("Massachusetts_Institute_of_Technology","Massachusetts").
+type("Harvard_Business_School","Private_school").
+type("Massachusetts_Institute_of_Technology","Private_university").
+type("Massachusetts_Institute_of_Technology","Land-grant_university").

@@ -1,0 +1,178 @@
+assets("Comcast","1.6657E11").
+equity("Comcast","5.227E10").
+netIncome("Comcast","8.16E9").
+operatingIncome("Comcast","1.6E10").
+revenue("Comcast","7.451E10").
+numberOfEmployees("Comcast","153000").
+division("Comcast","Comcast_Cable").
+division("Comcast","NBCUniversal").
+foundationPlace("Comcast","Mississippi").
+foundationPlace("Comcast","Tupelo,_Mississippi").
+foundedBy("Comcast","Ralph_J._Roberts").
+foundedBy("Comcast","Julian_A._Brodsky").
+industry("Comcast","Telecommunications").
+industry("Comcast","Mass_media").
+keyPerson("Comcast","David_L._Cohen").
+keyPerson("Comcast","Brian_L._Roberts").
+product("Comcast","Movie_production").
+product("Comcast","Broadcasting").
+product("Comcast","Internet").
+product("Comcast","Venture_capital").
+product("Comcast","Cable_television").
+product("Comcast","TV_production").
+product("Comcast","Theme_park").
+product("Comcast","Home_Security_Systems").
+product("Comcast","Sport_management").
+product("Comcast","VoIP_phone").
+subsidiary("Comcast","Comcast_Spectacor").
+subsidiary("Comcast","Midco").
+subsidiary("Comcast","Comcast_Interactive_Media").
+type("Comcast","Public_company").
+networth("Brian_L._Roberts","1.57E9").
+operatingIncome("NBCUniversal","4.819E9").
+revenue("NBCUniversal","2.8462E10").
+birthPlace("Ralph_J._Roberts","New_York_City").
+birthPlace("David_L._Cohen","Highland_Park,_New_Jersey").
+birthPlace("Brian_L._Roberts","Philadelphia").
+birthPlace("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+deathPlace("Ralph_J._Roberts","Philadelphia").
+city("Pennsylvania","Allentown, PennsylvaniaAllentown").
+city("Pennsylvania","Bethlehem, PennsylvaniaBethlehem").
+city("Pennsylvania","Erie, PennsylvaniaErie").
+city("Pennsylvania","Harrisburg, PennsylvaniaHarrisburg").
+city("Pennsylvania","Lancaster, PennsylvaniaLancaster").
+city("Pennsylvania","Levittown, PennsylvaniaLevittown").
+city("Pennsylvania","Philadelphia, PennsylvaniaPhiladelphia").
+city("Pennsylvania","Pittsburgh, PennsylvaniaPittsburgh").
+city("Pennsylvania","Reading, PennsylvaniaReading").
+city("Pennsylvania","Scranton, PennsylvaniaScranton").
+country("Pennsylvania","Pennsylvania").
+foundedBy("Philadelphia","William Penn").
+knownFor("Ralph_J._Roberts","Founder of Comcast").
+knownFor("Julian_A._Brodsky","Co-Founder of Comcast Corporation").
+location("Tupelo,_Mississippi","Tupelo, Mississippi").
+locationCountry("NBCUniversal","United States").
+nationality("Ralph_J._Roberts","United States").
+nationality("Julian_A._Brodsky","United States").
+nationality("Brian_L._Roberts","United States").
+spouse("Ralph_J._Roberts","Suzanne Fleisher").
+spouse("Brian_L._Roberts","Aileen Kennedy Roberts").
+state("Mississippi","expanded").
+birthYear("Ralph_J._Roberts","1920").
+birthYear("Julian_A._Brodsky","1933").
+birthYear("Brian_L._Roberts","1959").
+foundingYear("Comcast_Spectacor","1974").
+foundingYear("Midco","1931").
+foundingYear("NBCUniversal","2011").
+foundingYear("Comcast_Interactive_Media","2005").
+numberOfEmployees("Comcast_Interactive_Media","500").
+almaMater("David_L._Cohen","Juris_Doctor").
+almaMater("David_L._Cohen","Swarthmore_College").
+almaMater("David_L._Cohen","University_of_Pennsylvania").
+almaMater("Brian_L._Roberts","Wharton_School_of_the_University_of_Pennsylvania").
+capital("Mississippi","Jackson,_Mississippi").
+capital("Pennsylvania","Harrisburg,_Pennsylvania").
+child("Ralph_J._Roberts","Brian_L._Roberts").
+country("Mississippi","United_States").
+country("Pennsylvania","United_States").
+country("Philadelphia","United_States").
+country("Tupelo,_Mississippi","United_States").
+division("NBCUniversal","NBC_News").
+division("NBCUniversal","NBC_Sports_Group").
+division("NBCUniversal","Universal_Studios").
+division("NBCUniversal","NBCUniversal_Television_Group").
+division("NBCUniversal","NBCUniversal_Cable").
+foundationPlace("Midco","Minneapolis,_Minnesota").
+foundedBy("Comcast_Spectacor","Ed_Snider").
+industry("Comcast_Spectacor","Sports_management").
+industry("Midco","Cable_Internet_access").
+industry("Midco","Telecommunications").
+industry("Midco","Cable_television").
+industry("Midco","Fiber-optic_communication").
+industry("Midco","Cable_telephony").
+industry("Comcast_Cable","Telecommunications").
+industry("NBCUniversal","Mass_media").
+isPartOf("Philadelphia","Pennsylvania").
+isPartOf("Philadelphia","Kingdom_of_Great_Britain").
+isPartOf("Philadelphia","Philadelphia_County,_Pennsylvania").
+isPartOf("Philadelphia","Kingdom_of_England").
+isPartOf("Philadelphia","Province_of_Pennsylvania").
+isPartOf("Tupelo,_Mississippi","Mississippi").
+isPartOf("Tupelo,_Mississippi","Lee_County,_Mississippi").
+keyPerson("Comcast_Spectacor","Chief_financial_officer").
+keyPerson("Comcast_Spectacor","President").
+keyPerson("Comcast_Spectacor","TBA").
+keyPerson("Comcast_Spectacor","Vice_Chairman").
+keyPerson("Comcast_Cable","Neil_Smit").
+keyPerson("Comcast_Cable","Brian_L._Roberts").
+keyPerson("NBCUniversal","Steve_Burke_(businessman)").
+keyPerson("Comcast_Interactive_Media","Amy_Banse").
+keyPerson("Comcast_Interactive_Media","President").
+keyPerson("Comcast_Interactive_Media","Samuel_H._Schwartz").
+keyPerson("Comcast_Interactive_Media","Executive_Vice_President").
+largestCity("Pennsylvania","Philadelphia").
+location("Midco","Sioux_Falls,_South_Dakota").
+locationCity("Comcast_Spectacor","Pennsylvania").
+locationCity("Comcast_Spectacor","Philadelphia").
+locationCity("NBCUniversal","Comcast_Building").
+locationCity("Comcast_Interactive_Media","Philadelphia,_Pennsylvania").
+locationCountry("Comcast_Spectacor","United_States").
+locationCountry("Comcast_Interactive_Media","United_States").
+occupation("Ralph_J._Roberts","Ralph_J._Roberts__1").
+occupation("Julian_A._Brodsky","Julian_A._Brodsky__1").
+occupation("David_L._Cohen","Comcast").
+occupation("David_L._Cohen","David_L._Cohen__1").
+occupation("Brian_L._Roberts","Brian_L._Roberts__1").
+occupation("Brian_L._Roberts","leadership-overview").
+owner("Comcast_Spectacor","Comcast").
+owner("Comcast_Interactive_Media","Comcast").
+owningCompany("Comcast_Spectacor","Comcast").
+owningCompany("Comcast_Interactive_Media","Comcast").
+parent("Brian_L._Roberts","Ralph_J._Roberts").
+parentCompany("Comcast_Spectacor","Comcast").
+parentCompany("Midco","Comcast").
+parentCompany("Comcast_Cable","Comcast").
+parentCompany("NBCUniversal","Comcast").
+parentCompany("Comcast_Interactive_Media","Comcast_Cable").
+predecessor("NBCUniversal","MCA_Inc.").
+predecessor("NBCUniversal","General_Electric").
+predecessor("NBCUniversal","Vivendi_Universal_Entertainment").
+product("Comcast_Cable","Home_security").
+product("Comcast_Cable","Cable_television").
+product("Comcast_Cable","Broadband_internet").
+product("Comcast_Cable","VoIP_phone").
+regionServed("Midco","Minnesota").
+regionServed("Midco","Wisconsin").
+regionServed("Midco","South_Dakota").
+regionServed("Midco","North_Dakota").
+residence("David_L._Cohen","Pennsylvania").
+residence("David_L._Cohen","Philadelphia").
+residence("Brian_L._Roberts","Philadelphia,_Pennsylvania").
+subsidiary("Comcast_Spectacor","Philadelphia_Flyers").
+subsidiary("Comcast_Spectacor","Flyers_Skate_Zone").
+subsidiary("Comcast_Cable","Comcast_Spotlight").
+subsidiary("Comcast_Cable","Comcast_Business").
+subsidiary("NBCUniversal","DreamWorks_Animation").
+subsidiary("NBCUniversal","Hulu").
+subsidiary("NBCUniversal","Focus_Features").
+subsidiary("NBCUniversal","Illumination_Entertainment").
+subsidiary("NBCUniversal","Universal_Studios").
+subsidiary("NBCUniversal","Telemundo").
+subsidiary("NBCUniversal","The_Weather_Channel").
+subsidiary("NBCUniversal","WKAQ-TV").
+subsidiary("NBCUniversal","Universal_Parks_&_Resorts").
+subsidiary("NBCUniversal","Telemundo_Television_Studios").
+type("Philadelphia","Consolidated_city-county").
+type("Tupelo,_Mississippi","City").
+type("Comcast_Spectacor","Subsidiary").
+type("Midco","Joint_venture").
+type("Comcast_Cable","Division_(business)").
+type("NBCUniversal","Division_(business)").
+type("Comcast_Interactive_Media","Subsidiary").
+salary("David_L._Cohen","1.09E7").
+salary("Brian_L._Roberts","2.64E7").
+birthPlace("Natarajan_Chandrasekaran","Mohanur").
+country("Mohanur","India").
+isPartOf("Mohanur","Tamil_Nadu").
+isPartOf("Mohanur","Namakkal_district").
+type("Mohanur","Town_panchayat").

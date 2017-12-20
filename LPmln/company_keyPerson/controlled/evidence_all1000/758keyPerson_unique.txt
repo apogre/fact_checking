@@ -1,0 +1,109 @@
+numberOfLocations("Outback_Steakhouse","978").
+industry("Outback_Steakhouse","Restaurant").
+locationCity("Outback_Steakhouse","Tampa,_Florida").
+locationCity("Outback_Steakhouse","Florida").
+locationCountry("Outback_Steakhouse","United_States").
+parentCompany("Outback_Steakhouse","Bloomin'_Brands").
+product("Outback_Steakhouse","Cuisine_of_the_United_States").
+regionServed("Outback_Steakhouse","Taiwan").
+regionServed("Outback_Steakhouse","China").
+regionServed("Outback_Steakhouse","Costa_Rica").
+regionServed("Outback_Steakhouse","Southeast_Asia").
+regionServed("Outback_Steakhouse","Japan").
+regionServed("Outback_Steakhouse","Australia").
+regionServed("Outback_Steakhouse","Venezuela").
+regionServed("Outback_Steakhouse","Caribbean").
+regionServed("Outback_Steakhouse","United_Kingdom").
+regionServed("Outback_Steakhouse","Hong_Kong").
+regionServed("Outback_Steakhouse","Guam").
+regionServed("Outback_Steakhouse","Brazil").
+regionServed("Outback_Steakhouse","Philippines").
+regionServed("Outback_Steakhouse","North_America").
+type("Outback_Steakhouse","Subsidiary").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+largestCity("Costa_Rica","capital").
+largestCity("Japan","capital").
+location("Costa_Rica","Costa Rica").
+state("Florida","expanded").
+capital("Australia","Canberra").
+capital("Florida","Tallahassee,_Florida").
+capital("Japan","Tokyo").
+capital("Philippines","Manila").
+capital("Taiwan","Taipei").
+capital("United_Kingdom","London").
+country("Florida","United_States").
+isPartOf("Tampa,_Florida","Florida").
+isPartOf("Tampa,_Florida","Hillsborough_County,_Florida").
+largestCity("Australia","Sydney").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("Philippines","Quezon_City").
+largestCity("Taiwan","New_Taipei_City").
+largestCity("United_Kingdom","Capital_city").
+numberOfLocations("Bloomin'_Brands","1507").
+largestCity("Venezuela","capital").
+location("Venezuela","right").
+location("Guam","Guam").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+numberOfEmployees("Bloomin'_Brands","100000").
+capital("United_States","Washington,_D.C.").
+capital("Venezuela","Caracas").
+capital("China","Beijing").
+foundationPlace("Bloomin'_Brands","Tampa,_Florida").
+foundedBy("Bloomin'_Brands","J._Timothy_Gannon").
+foundedBy("Bloomin'_Brands","Chris_T._Sullivan").
+industry("Bloomin'_Brands","Restaurant").
+keyPerson("Bloomin'_Brands","Chief_brand_officer").
+keyPerson("Bloomin'_Brands","President").
+keyPerson("Bloomin'_Brands","Chief_executive_officer").
+keyPerson("Bloomin'_Brands","Vice_president").
+keyPerson("Bloomin'_Brands","Chairman").
+keyPerson("Bloomin'_Brands","CFO").
+largestCity("United_States","New_York_City").
+largestCity("China","Shanghai").
+location("Bloomin'_Brands","Tampa,_Florida").
+subsidiary("Bloomin'_Brands","Outback_Steakhouse").
+subsidiary("Bloomin'_Brands","Bonefish_Grill").
+subsidiary("Bloomin'_Brands","Carrabba's_Italian_Grill").
+subsidiary("Bloomin'_Brands","Fleming's_Prime_Steakhouse_&_Wine_Bar").
+type("Bloomin'_Brands","Public_company").
+almaMater("Scott_Etzler","Northwestern_University").
+almaMater("Scott_Etzler","Kellogg_School_of_Management").
+almaMater("Scott_Etzler","Indiana_University").
+occupation("Scott_Etzler","Scott_Etzler__1").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+country("Northwestern_University","U.S.").
+state("Northwestern_University","autocollapse").
+affiliation("Indiana_University","Big_Ten_Academic_Alliance").
+affiliation("Indiana_University","Association_of_Public_and_Land-Grant_Universities").
+affiliation("Indiana_University","Association_of_American_Universities").
+affiliation("Indiana_University","Oak_Ridge_Associated_Universities").
+affiliation("Indiana_University","Universities_Research_Association").
+affiliation("Northwestern_University","Big_Ten_Academic_Alliance").
+affiliation("Northwestern_University","Association_of_American_Universities").
+affiliation("Northwestern_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Northwestern_University","The_Consortium_on_Financing_Higher_Education").
+affiliation("Northwestern_University","Universities_Research_Association").
+affiliation("Northwestern_University","International_Association_of_Methodist-related_Schools,_Colleges,_and_Universities").
+city("Indiana_University","Bloomington,_Indiana").
+city("Indiana_University","Indianapolis").
+city("Northwestern_University","Chicago").
+city("Northwestern_University","Evanston,_Illinois").
+city("Kellogg_School_of_Management","Evanston,_Illinois").
+country("Kellogg_School_of_Management","United_States").
+state("Northwestern_University","Illinois").
+state("Kellogg_School_of_Management","Illinois").
+type("Indiana_University","Public_University").
+type("Northwestern_University","Private_university").
+type("Kellogg_School_of_Management","Private_university").

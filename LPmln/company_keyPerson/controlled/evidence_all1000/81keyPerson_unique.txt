@@ -1,0 +1,50 @@
+revenue("InterCall","2.69").
+foundingYear("InterCall","1991").
+industry("InterCall","Web_conferencing").
+industry("InterCall","Telecommunication").
+location("InterCall","Chicago").
+parentCompany("InterCall","West_Corporation").
+revenue("West_Corporation","2.6E9").
+industry("West_Corporation","Unified Communications
+Interactive Services
+Specialized Agent Services
+Telecom Services
+Safety Services").
+numberOfEmployees("West_Corporation","26430").
+almaMater("Scott_Etzler","Indiana_University").
+almaMater("Scott_Etzler","Northwestern_University").
+almaMater("Scott_Etzler","Kellogg_School_of_Management").
+country("Chicago","United_States_of_America").
+isPartOf("Chicago","Illinois").
+isPartOf("Chicago","DuPage_County,_Illinois").
+isPartOf("Chicago","Cook_County,_Illinois").
+location("West_Corporation","Omaha,_Nebraska").
+occupation("Scott_Etzler","Chief_Executive_Officer").
+occupation("Scott_Etzler","Chairman_of_the_Board").
+occupation("Scott_Etzler","Scott_Etzler__1").
+type("Chicago","City").
+type("West_Corporation","Public_company").
+country("Northwestern_University","U.S.").
+state("Northwestern_University","autocollapse").
+affiliation("Indiana_University","Big_Ten_Academic_Alliance").
+affiliation("Indiana_University","Association_of_Public_and_Land-Grant_Universities").
+affiliation("Indiana_University","Association_of_American_Universities").
+affiliation("Indiana_University","Oak_Ridge_Associated_Universities").
+affiliation("Indiana_University","Universities_Research_Association").
+affiliation("Northwestern_University","Big_Ten_Academic_Alliance").
+affiliation("Northwestern_University","Association_of_American_Universities").
+affiliation("Northwestern_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Northwestern_University","The_Consortium_on_Financing_Higher_Education").
+affiliation("Northwestern_University","Universities_Research_Association").
+affiliation("Northwestern_University","International_Association_of_Methodist-related_Schools,_Colleges,_and_Universities").
+city("Indiana_University","Bloomington,_Indiana").
+city("Indiana_University","Indianapolis").
+city("Northwestern_University","Chicago").
+city("Northwestern_University","Evanston,_Illinois").
+city("Kellogg_School_of_Management","Evanston,_Illinois").
+country("Kellogg_School_of_Management","United_States").
+state("Northwestern_University","Illinois").
+state("Kellogg_School_of_Management","Illinois").
+type("Indiana_University","Public_University").
+type("Northwestern_University","Private_university").
+type("Kellogg_School_of_Management","Private_university").

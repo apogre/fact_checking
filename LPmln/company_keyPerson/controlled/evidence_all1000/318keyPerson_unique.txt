@@ -1,0 +1,184 @@
+assets("The_Blackstone_Group","3.151E10").
+netIncome("The_Blackstone_Group","1.584E9").
+revenue("The_Blackstone_Group","7.484E9").
+foundingYear("The_Blackstone_Group","1985").
+numberOfEmployees("The_Blackstone_Group","2190").
+foundedBy("The_Blackstone_Group","Peter_George_Peterson").
+foundedBy("The_Blackstone_Group","Stephen_A._Schwarzman").
+industry("The_Blackstone_Group","Financial_services").
+keyPerson("The_Blackstone_Group","J._Tomilson_Hill").
+keyPerson("The_Blackstone_Group","President_(corporate_title)").
+keyPerson("The_Blackstone_Group","Jonathan_D._Gray").
+keyPerson("The_Blackstone_Group","Chief_executive_officer").
+keyPerson("The_Blackstone_Group","Stephen_A._Schwarzman").
+keyPerson("The_Blackstone_Group","Chairman").
+keyPerson("The_Blackstone_Group","Real_estate").
+keyPerson("The_Blackstone_Group","Hamilton_E._James").
+location("The_Blackstone_Group","345_Park_Avenue").
+locationCity("The_Blackstone_Group","Manhattan").
+locationCity("The_Blackstone_Group","New_York_City").
+locationCity("The_Blackstone_Group","New_York_(state)").
+locationCountry("The_Blackstone_Group","United_States").
+product("The_Blackstone_Group","Private_equity").
+product("The_Blackstone_Group","Asset_management").
+product("The_Blackstone_Group","Investment_banking").
+product("The_Blackstone_Group","Investment_management").
+type("The_Blackstone_Group","Public_company").
+assets("BlackRock","2.1987E11").
+equity("BlackRock","2.646E10").
+netIncome("BlackRock","2.932E9").
+networth("Jonathan_D._Gray","1.66E9").
+networth("Stephen_A._Schwarzman","1.01E10").
+networth("Hamilton_E._James","1.84E9").
+revenue("BlackRock","1.05E10").
+birthPlace("Peter_George_Peterson","Kearney,_Nebraska").
+birthPlace("Peter_George_Peterson","United_States").
+birthPlace("Peter_George_Peterson","Nebraska").
+birthPlace("Stephen_A._Schwarzman","Philadelphia").
+birthPlace("Hamilton_E._James","Wyandotte,_Michigan").
+almaMater("Hamilton_E._James","Harvard_College").
+almaMater("Hamilton_E._James","Harvard Business School").
+nationality("Jonathan_D._Gray","United States").
+nationality("Hamilton_E._James","American").
+residence("Stephen_A._Schwarzman","New York City, US").
+residence("Hamilton_E._James","Manhattan, New York, US").
+spouse("Jonathan_D._Gray","Mindy Basser").
+spouse("Stephen_A._Schwarzman","Christine Mularchuk Hearst").
+spouse("Stephen_A._Schwarzman","Ellen Philips").
+spouse("Hamilton_E._James","Amabel").
+type("President_(corporate_title)","Employment").
+type("BlackRock","Public").
+birthYear("Jonathan_D._Gray","1970").
+birthYear("Stephen_A._Schwarzman","1947").
+birthYear("Hamilton_E._James","1951").
+foundingYear("BlackRock","1988").
+numberOfEmployees("BlackRock","12000").
+almaMater("Peter_George_Peterson","Booth_School_of_Business").
+almaMater("Peter_George_Peterson","Bachelor_of_Arts").
+almaMater("Peter_George_Peterson","Northwestern_University").
+almaMater("Stephen_A._Schwarzman","Harvard_Business_School").
+almaMater("Stephen_A._Schwarzman","Yale_University").
+capital("United_States","Washington,_D.C.").
+child("Peter_George_Peterson","Holly_Peterson").
+country("New_York_City","United_States").
+industry("BlackRock","Investment_management").
+isPartOf("Manhattan","New_York").
+isPartOf("Manhattan","New_York_City").
+isPartOf("Manhattan","New_York_(state)").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+keyPerson("BlackRock","Robert_S._Kapito").
+keyPerson("BlackRock","Laurence_D._Fink").
+largestCity("United_States","New_York_City").
+locationCity("BlackRock","New_York_City").
+locationCity("BlackRock","New_York_(state)").
+locationCity("BlackRock","52nd_Street_(Manhattan)").
+occupation("Stephen_A._Schwarzman","Stephen_A._Schwarzman__1").
+occupation("Stephen_A._Schwarzman","Entrepreneur").
+occupation("Stephen_A._Schwarzman","The_Blackstone_Group").
+occupation("Hamilton_E._James","Hamilton_E._James__1").
+occupation("Hamilton_E._James","The_Blackstone_Group").
+owner("345_Park_Avenue","Rudin_Management_Company").
+predecessor("Peter_George_Peterson","David_Rockefeller").
+predecessor("Peter_George_Peterson","Maurice_Stans").
+product("BlackRock","Asset_management").
+residence("Jonathan_D._Gray","Manhattan").
+spouse("Peter_George_Peterson","Joan_Ganz_Cooney").
+successor("Peter_George_Peterson","Carla_Anderson_Hills").
+successor("Peter_George_Peterson","Frederick_B._Dent").
+successor("Peter_George_Peterson","Robert_Rubin").
+type("Manhattan","Borough_(New_York_City)").
+type("New_York_City","City_(New_York)").
+birthPlace("John_Donahoe","Evanston,_Illinois").
+birthYear("John_Donahoe","1960").
+almaMater("John_Donahoe","Dartmouth_College").
+almaMater("John_Donahoe","Stanford_Graduate_School_of_Business").
+occupation("John_Donahoe","John_Donahoe__1").
+occupation("John_Donahoe","PayPal").
+residence("John_Donahoe","Portola_Valley,_California").
+residence("John_Donahoe","California").
+spouse("John_Donahoe","Eileen_Donahoe").
+salary("John_Donahoe","1.3833374E7").
+networth("Meg_Whitman","2.1E9").
+revenue("Bain_&_Company","2.1E9").
+birthPlace("Meg_Whitman","United_States").
+birthPlace("Meg_Whitman","New_York_(state)").
+birthPlace("Meg_Whitman","Cold_Spring_Harbor,_New_York").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+country("PayPal","United States 95131").
+country("Stanford_Graduate_School_of_Business","U.S.").
+predecessor("PayPal","Confinity").
+state("Dartmouth_College","autocollapse").
+type("Stanford_Graduate_School_of_Business","Private").
+birthYear("Meg_Whitman","1956").
+foundingYear("Bain_&_Company","1973").
+numberOfEmployees("Bain_&_Company","5700").
+affiliation("Stanford_Graduate_School_of_Business","Stanford_University").
+affiliation("Dartmouth_College","University_Press_of_New_England").
+affiliation("Dartmouth_College","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Dartmouth_College","University_of_the_Arctic").
+affiliation("Dartmouth_College","568_Group").
+affiliation("Dartmouth_College","Matariki_Network_of_Universities").
+almaMater("Meg_Whitman","Harvard_Business_School").
+almaMater("Meg_Whitman","Princeton_University").
+almaMater("Eileen_Donahoe","Dartmouth_College").
+almaMater("Eileen_Donahoe","Harvard_University").
+almaMater("Eileen_Donahoe","Stanford_University").
+city("Stanford_Graduate_School_of_Business","Stanford,_California").
+city("Dartmouth_College","Hanover,_New_Hampshire").
+country("Evanston,_Illinois","United_States").
+country("Dartmouth_College","United_States").
+foundedBy("PayPal","Ken_Howery").
+foundedBy("PayPal","Luke_Nosek").
+foundedBy("PayPal","Max_Levchin").
+foundedBy("PayPal","Peter_Thiel").
+foundedBy("PayPal","Elon_Musk").
+foundedBy("Bain_&_Company","Bill_Bain_(consultant)").
+industry("PayPal","Financial_Services").
+industry("Bain_&_Company","Management_consulting").
+isPartOf("Evanston,_Illinois","Illinois").
+isPartOf("Evanston,_Illinois","Cook_County,_Illinois").
+isPartOf("Evanston,_Illinois","Evanston_Township,_Cook_County,_Illinois").
+isPartOf("Portola_Valley,_California","California").
+isPartOf("Portola_Valley,_California","San_Mateo_County,_California").
+keyPerson("Bain_&_Company","Orit_Gadiesh").
+largestCity("California","Los_Angeles").
+location("PayPal","San_Jose,_California").
+location("Bain_&_Company","Boston").
+location("Bain_&_Company","Massachusetts").
+location("Bain_&_Company","United_States").
+nationality("Eileen_Donahoe","United_States").
+parentCompany("PayPal","EBay").
+predecessor("Eileen_Donahoe","Rudy_Boschwitz").
+product("PayPal","Payment_system").
+product("Bain_&_Company","Management_Consulting").
+residence("Meg_Whitman","Atherton,_California").
+residence("Eileen_Donahoe","Geneva").
+spouse("Meg_Whitman","Griffith_R._Harsh").
+spouse("Eileen_Donahoe","John_Donahoe").
+state("Stanford_Graduate_School_of_Business","California").
+state("Dartmouth_College","New_Hampshire").
+successor("Eileen_Donahoe","Keith_M._Harper").
+type("Evanston,_Illinois","City").
+type("PayPal","Public_company").
+type("Bain_&_Company","Partnership").
+type("Dartmouth_College","Private_university").
+type("Portola_Valley,_California","Town").

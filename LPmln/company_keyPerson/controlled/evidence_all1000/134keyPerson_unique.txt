@@ -1,0 +1,75 @@
+revenue("SAS_Institute","3.16E9").
+numberOfEmployees("SAS_Institute","14158").
+foundedBy("SAS_Institute","James_Goodnight").
+foundedBy("SAS_Institute","John_Sall").
+foundedBy("SAS_Institute","Anthony_James_Barr").
+keyPerson("SAS_Institute","John_Sall").
+keyPerson("SAS_Institute","Entrepreneur").
+location("SAS_Institute","United_States").
+location("SAS_Institute","Cary,_North_Carolina").
+location("SAS_Institute","North_Carolina").
+networth("James_Goodnight","8.8E9").
+networth("John_Sall","4.2E9").
+birthPlace("James_Goodnight","Salisbury,_North_Carolina").
+birthPlace("James_Goodnight","Salisbury,_NC").
+birthPlace("Anthony_James_Barr","New_York").
+birthPlace("John_Sall","Rockford,_Illinois").
+city("North_Carolina","Cary, North CarolinaCary").
+city("North_Carolina","Charlotte, North CarolinaCharlotte").
+city("North_Carolina","Durham, North CarolinaDurham").
+city("North_Carolina","Fayetteville, North CarolinaFayetteville").
+city("North_Carolina","Greensboro, North CarolinaGreensboro").
+city("North_Carolina","Greenville, North CarolinaGreenville").
+city("North_Carolina","High Point, North CarolinaHigh Point").
+city("North_Carolina","Raleigh, North CarolinaRaleigh").
+city("North_Carolina","Wilmington, North CarolinaWilmington").
+city("North_Carolina","Winston-Salem, North CarolinaWinston-Salem").
+country("North_Carolina","North Carolina").
+location("Cary,_North_Carolina","Cary, North Carolina").
+birthYear("James_Goodnight","1943").
+birthYear("Anthony_James_Barr","1940").
+birthYear("John_Sall","1948").
+almaMater("James_Goodnight","North_Carolina_State_University").
+almaMater("Anthony_James_Barr","North_Carolina_State_University").
+capital("North_Carolina","Raleigh,_North_Carolina").
+capital("United_States","Washington,_D.C.").
+country("North_Carolina","United_States").
+country("Cary,_North_Carolina","United_States").
+isPartOf("Cary,_North_Carolina","North_Carolina").
+isPartOf("Cary,_North_Carolina","Wake_County,_North_Carolina").
+isPartOf("Cary,_North_Carolina","Chatham_County,_North_Carolina").
+largestCity("North_Carolina","Charlotte,_North_Carolina").
+largestCity("United_States","New_York_City").
+nationality("James_Goodnight","United_States").
+nationality("Anthony_James_Barr","United_States").
+occupation("James_Goodnight","CEO").
+occupation("James_Goodnight","Entrepreneur").
+occupation("James_Goodnight","Statistician").
+occupation("James_Goodnight","Inventor").
+occupation("James_Goodnight","Software_engineer").
+occupation("James_Goodnight","James_Goodnight__1").
+occupation("Anthony_James_Barr","Programming_language").
+occupation("Anthony_James_Barr","Software_Engineer").
+occupation("Anthony_James_Barr","Inventor").
+occupation("Anthony_James_Barr","Anthony_James_Barr__1").
+occupation("John_Sall","SAS_Institute").
+occupation("John_Sall","John_Sall__1").
+residence("John_Sall","Cary,_North_Carolina").
+stateOfOrigin("James_Goodnight","United_States").
+stateOfOrigin("Anthony_James_Barr","United_States").
+country("North_Carolina_State_University","U.S.").
+affiliation("North_Carolina_State_University","Southeastern_Universities_Research_Association").
+affiliation("North_Carolina_State_University","University_of_North_Carolina").
+affiliation("North_Carolina_State_University","Association_of_Public_and_Land-Grant_Universities").
+affiliation("North_Carolina_State_University","Oak_Ridge_Associated_Universities").
+affiliation("North_Carolina_State_University","University_Global_Partnership_Network").
+city("North_Carolina_State_University","Raleigh,_North_Carolina").
+country("Salisbury,_North_Carolina","United_States").
+isPartOf("Salisbury,_North_Carolina","North_Carolina").
+isPartOf("Salisbury,_North_Carolina","Rowan_County,_North_Carolina").
+state("North_Carolina_State_University","North_Carolina").
+type("Salisbury,_North_Carolina","City").
+type("North_Carolina_State_University","Public_university").
+type("North_Carolina_State_University","Land-grant_university").
+type("North_Carolina_State_University","Sea-grant_university").
+type("North_Carolina_State_University","Space-grant_university").

@@ -1,0 +1,67 @@
+assets("Telstra","4.045E10").
+equity("Telstra","1.451E10").
+netIncome("Telstra","5.8E9").
+operatingIncome("Telstra","6.3E9").
+revenue("Telstra","2.71E10").
+numberOfEmployees("Telstra","36165").
+industry("Telstra","Telecommunication").
+keyPerson("Telstra","Chief_financial_officer").
+keyPerson("Telstra","Chairperson").
+keyPerson("Telstra","Andy_Penn").
+location("Telstra","Melbourne").
+location("Telstra","Telstra_Corporate_Centre").
+location("Telstra","Australia").
+product("Telstra","Internet").
+product("Telstra","Landline").
+product("Telstra","Mobile_phone").
+product("Telstra","Digital_television").
+type("Telstra","Public_company").
+location("Melbourne","Canberra").
+location("Melbourne","Perth").
+location("Melbourne","Sydney").
+location("Melbourne","Adelaide").
+location("Melbourne","Brisbane").
+location("Melbourne","Melbourne City").
+state("Melbourne","vic").
+type("Melbourne","city").
+birthYear("Andy_Penn","1963").
+capital("Australia","Canberra").
+country("Melbourne","Australia").
+employer("Andy_Penn","Telstra").
+largestCity("Australia","Sydney").
+location("Telstra_Corporate_Centre","Melbourne,_Australia").
+occupation("Andy_Penn","Chief_Executive_Officer").
+occupation("Andy_Penn","Andy_Penn__1").
+predecessor("Andy_Penn","David_Thodey").
+birthPlace("Mel_Karmazin","United_States").
+birthPlace("Mel_Karmazin","Manhattan").
+birthPlace("Mel_Karmazin","New_York_(state)").
+birthYear("Mel_Karmazin","1943").
+almaMater("Mel_Karmazin","Pace_University").
+child("Mel_Karmazin","Craig_Karmazin").
+residence("Mel_Karmazin","Greenwich,_Connecticut").
+residence("Mel_Karmazin","United_States").
+knownFor("Craig_Karmazin","founder of Good Karma Brands").
+location("Greenwich,_Connecticut","Greenwich, Connecticut").
+nationality("Craig_Karmazin","United States").
+spouse("Craig_Karmazin","Kelli Gabel").
+birthYear("Craig_Karmazin","1975").
+almaMater("Craig_Karmazin","Emory_University").
+capital("United_States","Washington,_D.C.").
+city("Pace_University","New_York_City,_New_York").
+country("Greenwich,_Connecticut","United_States").
+country("Pace_University","United_States").
+isPartOf("Greenwich,_Connecticut","Connecticut").
+isPartOf("Manhattan","New_York").
+isPartOf("Manhattan","New_York_City").
+isPartOf("Manhattan","New_York_(state)").
+largestCity("United_States","New_York_City").
+occupation("Craig_Karmazin","Craig_Karmazin__1").
+occupation("Craig_Karmazin","CEO").
+parent("Craig_Karmazin","Mel_Karmazin").
+residence("Craig_Karmazin","Fox_Point,_WI").
+type("Greenwich,_Connecticut","New_England_town").
+type("Manhattan","Borough_(New_York_City)").
+type("Pace_University","Nonsectarian").
+type("Pace_University","Private_University").
+type("Pace_University","Co-educational").

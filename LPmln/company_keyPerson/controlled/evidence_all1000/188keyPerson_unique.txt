@@ -1,0 +1,185 @@
+numberOfEmployees("The_Walt_Disney_Company","180000").
+foundationPlace("The_Walt_Disney_Company","California").
+foundationPlace("The_Walt_Disney_Company","Los_Angeles").
+foundationPlace("The_Walt_Disney_Company","United_States").
+industry("The_Walt_Disney_Company","Entertainment").
+industry("The_Walt_Disney_Company","Mass_media").
+keyPerson("The_Walt_Disney_Company","Robert_A._Iger").
+locationCity("The_Walt_Disney_Company","Burbank,_California").
+locationCity("The_Walt_Disney_Company","California").
+locationCity("The_Walt_Disney_Company","Walt_Disney_Studios_(Burbank)").
+locationCountry("The_Walt_Disney_Company","United_States").
+product("The_Walt_Disney_Company","Radio").
+product("The_Walt_Disney_Company","Broadcasting").
+product("The_Walt_Disney_Company","Publishing").
+product("The_Walt_Disney_Company","Film").
+product("The_Walt_Disney_Company","Music").
+product("The_Walt_Disney_Company","Video_game").
+product("The_Walt_Disney_Company","Web_portal").
+product("The_Walt_Disney_Company","Cable_television").
+product("The_Walt_Disney_Company","Theme_parks").
+type("The_Walt_Disney_Company","Public_company").
+birthPlace("Walt_Disney","Chicago").
+birthPlace("Roy_O._Disney","Chicago").
+birthPlace("Roy_O._Disney","Illinois").
+deathPlace("Walt_Disney","Burbank,_California").
+deathPlace("Roy_O._Disney","Burbank,_California").
+capital("California","Sacramento,_California").
+city("California","Anaheim, CaliforniaAnaheim").
+city("California","Bakersfield, CaliforniaBakersfield").
+city("California","Fresno, CaliforniaFresno").
+city("California","Long Beach, CaliforniaLong Beach").
+city("California","Los Angeles, CaliforniaLos Angeles").
+city("California","Oakland, CaliforniaOakland").
+city("California","Sacramento, CaliforniaSacramento").
+city("California","San Diego, CaliforniaSan Diego").
+city("California","San Francisco, CaliforniaSan Francisco").
+city("California","San Jose, CaliforniaSan Jose").
+country("California","United_States").
+country("California","California").
+location("Burbank,_California","Burbank-Glendale-Pasadena Airport, California").
+location("Los_Angeles","Los Angeles").
+occupation("Roy_O._Disney","Entertainment industry executive").
+predecessor("Roy_O._Disney","office created").
+spouse("Roy_O._Disney","Edna Francis").
+birthYear("Walt_Disney","1901").
+foundingYear("Laugh-O-Gram_Studio","1921").
+board("Walt_Disney","The_Walt_Disney_Company").
+capital("United_States","Washington,_D.C.").
+child("Roy_O._Disney","Roy_E._Disney").
+country("Burbank,_California","United_States").
+foundedBy("Laugh-O-Gram_Studio","Walt_Disney").
+industry("Laugh-O-Gram_Studio","Film_studio").
+isPartOf("Burbank,_California","California").
+isPartOf("Burbank,_California","Los_Angeles_County,_California").
+isPartOf("Los_Angeles","California").
+isPartOf("Los_Angeles","Los_Angeles_County,_California").
+isPartOf("Los_Angeles","Los_Angeles_metropolitan_area").
+isPartOf("Los_Angeles","Greater_Los_Angeles_Area").
+largestCity("California","Los_Angeles").
+largestCity("United_States","New_York_City").
+location("Laugh-O-Gram_Studio","Kansas_City,_Missouri").
+occupation("Walt_Disney","Walt_Disney__1").
+owner("Laugh-O-Gram_Studio","The_Walt_Disney_Company").
+owningCompany("Laugh-O-Gram_Studio","The_Walt_Disney_Company").
+predecessor("Roy_O._Disney","Walt_Disney").
+relation("Walt_Disney","Disney_family").
+relation("Roy_O._Disney","Disney_family").
+relation("Roy_O._Disney","Walter_Elias_Disney").
+successor("Laugh-O-Gram_Studio","The_Walt_Disney_Company").
+successor("Roy_O._Disney","Donn_Tatum").
+type("Burbank,_California","Charter_city").
+type("Los_Angeles","Metropolitan_City").
+birthPlace("Bob_Iger","New_York_City").
+birthPlace("Bob_Iger","Oceanside,_New_York").
+birthPlace("Bob_Iger","New_York_(state)").
+activeYearsStartYear("Bob_Iger","1974").
+birthYear("Bob_Iger","1951").
+board("Bob_Iger","Apple_Inc.").
+employer("Bob_Iger","The_Walt_Disney_Company").
+nationality("Bob_Iger","United_States").
+occupation("Bob_Iger","Bob_Iger__1").
+personFunction("Bob_Iger","Bob_Iger__1").
+predecessor("Bob_Iger","Michael_Eisner").
+residence("Bob_Iger","California").
+residence("Bob_Iger","Los_Angeles").
+spouse("Bob_Iger","Willow_Bay").
+stateOfOrigin("Bob_Iger","United_States").
+salary("Bob_Iger","4.49E7").
+assets("Apple_Inc.","3.05277E11").
+equity("Apple_Inc.","1.7482E11").
+netIncome("Apple_Inc.","5.3394E10").
+networth("Michael_Eisner","1.0E9").
+numberOfLocations("Apple_Inc.","478").
+operatingIncome("Apple_Inc.","7.123E10").
+revenue("Apple_Inc.","2.33715E11").
+birthPlace("Michael_Eisner","New_York_City").
+birthPlace("Michael_Eisner","Mount_Kisco,_New_York").
+birthPlace("Ted_Harbert","New_York_City").
+birthPlace("Ted_Harbert","New_York,_New_York").
+birthPlace("Willow_Bay","New_York_City").
+birthPlace("Willow_Bay","New_York,_New_York").
+country("Ithaca_College","USA").
+locationCountry("Apple_Inc.","U.S.").
+nationality("Michael_Eisner","American").
+residence("Ted_Harbert","New York, New York, U.S.").
+spouse("Michael_Eisner","Jane Breckenridge").
+activeYearsStartYear("Michael_Eisner","1966").
+activeYearsStartYear("Ted_Harbert","1973").
+birthYear("Michael_Eisner","1942").
+birthYear("Ted_Harbert","1955").
+birthYear("Willow_Bay","1963").
+numberOfEmployees("Apple_Inc.","115000").
+affiliation("Ithaca_College","Council_of_Independent_Colleges").
+affiliation("Ithaca_College","National_Association_of_Independent_Colleges_and_Universities").
+almaMater("Michael_Eisner","Denison_University").
+almaMater("Ted_Harbert","Boston_University").
+board("Michael_Eisner","Denison_University").
+board("Michael_Eisner","The_Walt_Disney_Company").
+child("Michael_Eisner","Breck_Eisner").
+child("Michael_Eisner","Eric_Eisner").
+city("Ithaca_College","Ithaca,_New_York").
+country("New_York_City","United_States").
+country("Oceanside,_New_York","United_States").
+industry("Apple_Inc.","Consumer_electronics").
+industry("Apple_Inc.","Digital_distribution").
+industry("Apple_Inc.","Computer_software").
+industry("Apple_Inc.","Computer_hardware").
+industry("Apple_Inc.","Corporate_Venture_Capital").
+industry("Apple_Inc.","Fabless_manufacturing").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+isPartOf("Oceanside,_New_York","New_York_(state)").
+isPartOf("Oceanside,_New_York","Nassau_County,_New_York").
+keyPerson("Apple_Inc.","Arthur_D._Levinson").
+keyPerson("Apple_Inc.","Jeff_Williams_(Apple)").
+keyPerson("Apple_Inc.","Luca_Maestri").
+keyPerson("Apple_Inc.","Tim_Cook").
+keyPerson("Apple_Inc.","Jonathan_Ive").
+locationCity("Apple_Inc.","California").
+locationCity("Apple_Inc.","Apple_Campus").
+locationCity("Apple_Inc.","Cupertino,_California").
+nationality("John_E._Pepper,_Jr.","United_States").
+occupation("Michael_Eisner","Michael_Eisner__1").
+occupation("Ted_Harbert","Ted_Harbert__1").
+occupation("Willow_Bay","Willow_Bay__1").
+occupation("Willow_Bay","Television_presenter").
+product("Apple_Inc.","Apple_TV").
+product("Apple_Inc.","ILife").
+product("Apple_Inc.","Apple_Watch").
+product("Apple_Inc.","IOS").
+product("Apple_Inc.","MacOS").
+product("Apple_Inc.","Macintosh").
+product("Apple_Inc.","IPad").
+product("Apple_Inc.","IPhone").
+product("Apple_Inc.","IPod").
+product("Apple_Inc.","TvOS").
+product("Apple_Inc.","WatchOS").
+product("Apple_Inc.","IWork").
+residence("Michael_Eisner","Los_Angeles").
+service("Apple_Inc.","Apple_Music").
+service("Apple_Inc.","ICloud").
+service("Apple_Inc.","Mac_App_Store").
+service("Apple_Inc.","Apple_Store").
+service("Apple_Inc.","Apple_Pay").
+service("Apple_Inc.","App_Store_(iOS)").
+service("Apple_Inc.","Apple_Store_(online)").
+service("Apple_Inc.","ITunes_Store").
+service("Apple_Inc.","IBooks_Store").
+spouse("Willow_Bay","Bob_Iger").
+state("Ithaca_College","New_York_(state)").
+subsidiary("Apple_Inc.","FileMaker_Inc.").
+subsidiary("Apple_Inc.","Beats_Electronics").
+subsidiary("Apple_Inc.","Anobit").
+subsidiary("Apple_Inc.","Braeburn_Capital").
+type("New_York_City","City_(New_York)").
+type("Oceanside,_New_York","Hamlet_(New_York)").
+type("Oceanside,_New_York","Census-designated_place").
+type("Apple_Inc.","Public_company").
+type("Ithaca_College","Private_university").

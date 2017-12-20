@@ -1,0 +1,123 @@
+numberOfEmployees("Canonical_(company)","700").
+foundedBy("Canonical_(company)","Mark_Shuttleworth").
+industry("Canonical_(company)","Computer_software").
+keyPerson("Canonical_(company)","Jane_Silber").
+keyPerson("Canonical_(company)","Mark_Shuttleworth").
+location("Canonical_(company)","London").
+location("Canonical_(company)","United_Kingdom").
+product("Canonical_(company)","Launchpad_(website)").
+product("Canonical_(company)","Ubuntu_One").
+product("Canonical_(company)","Canonical_Landscape").
+product("Canonical_(company)","Ubuntu_(operating_system)").
+product("Canonical_(company)","Bazaar_(software)").
+subsidiary("Canonical_(company)","Canonical_Ltd.").
+type("Canonical_(company)","Private_company_limited_by_shares").
+networth("Mark_Shuttleworth","1.6E8").
+birthPlace("Mark_Shuttleworth","South_Africa").
+birthPlace("Mark_Shuttleworth","Welkom").
+birthPlace("Mark_Shuttleworth","Free_State_(province)").
+birthPlace("Jane_Silber","United_States").
+developer("Launchpad_(website)","Francis J. Lacoste and 52 others").
+location("London","London Heathrow").
+location("London","London Weather Centre").
+type("Launchpad_(website)","Project Hosting Server").
+birthYear("Mark_Shuttleworth","1973").
+author("Launchpad_(website)","Canonical_Ltd.").
+capital("United_Kingdom","London").
+country("London","United_Kingdom").
+developer("Ubuntu_(operating_system)","Canonical_(company)").
+developer("Ubuntu_(operating_system)","Open-source_movement").
+developer("Ubuntu_One","Canonical_Ltd.").
+isPartOf("London","England").
+isPartOf("London","Greater_London").
+largestCity("United_Kingdom","Capital_city").
+nationality("Mark_Shuttleworth","South_Africa").
+nationality("Mark_Shuttleworth","United_Kingdom").
+occupation("Mark_Shuttleworth","Mark_Shuttleworth__1").
+operatingSystem("Ubuntu_One","List_of_Ubuntu_releases").
+operatingSystem("Ubuntu_One","Android_(operating_system)").
+operatingSystem("Ubuntu_One","Linux").
+operatingSystem("Ubuntu_One","Microsoft_Windows").
+operatingSystem("Ubuntu_One","OS_X").
+operatingSystem("Ubuntu_One","Ubuntu_(operating_system)").
+operatingSystem("Ubuntu_One","IOS").
+owner("Launchpad_(website)","Canonical_Ltd.").
+stateOfOrigin("Mark_Shuttleworth","South_Africa").
+stateOfOrigin("Mark_Shuttleworth","United_Kingdom").
+birthPlace("Christie_Hefner","Chicago,_Illinois").
+birthPlace("Christie_Hefner","Illinois").
+birthPlace("Christie_Hefner","Wilmette,_Illinois").
+birthYear("Christie_Hefner","1952").
+knownFor("Christie_Hefner","Playboy_Enterprises").
+occupation("Christie_Hefner","Christie_Hefner__1").
+parent("Christie_Hefner","Hugh_Hefner").
+residence("Christie_Hefner","Chicago").
+residence("Christie_Hefner","Illinois").
+spouse("Christie_Hefner","William_A._Marovitz").
+assets("Playboy_Enterprises","1.9683E8").
+equity("Playboy_Enterprises","-2.23E7").
+netIncome("Playboy_Enterprises","-4.85E7").
+operatingIncome("Playboy_Enterprises","-3.63E7").
+revenue("Playboy_Enterprises","2.15E8").
+birthPlace("Hugh_Hefner","Chicago").
+author("Playboy_Enterprises","Playboy Enterprises, Inc.").
+city("Illinois","Aurora, IllinoisAurora").
+city("Illinois","Champaign, IllinoisChampaign").
+city("Illinois","ChicagoChicago").
+city("Illinois","Elgin, IllinoisElgin").
+city("Illinois","Joliet, IllinoisJoliet").
+city("Illinois","Naperville, IllinoisNaperville").
+city("Illinois","Peoria, IllinoisPeoria").
+city("Illinois","Rockford, IllinoisRockford").
+city("Illinois","Springfield, IllinoisSpringfield").
+city("Illinois","Waukegan, IllinoisWaukegan").
+country("Illinois","Illinois").
+country("Brandeis_University","U.S.").
+knownFor("Hugh_Hefner","Editor-in-chief of Playboy magazine, Chief Creative Officer of Playboy Enterprises").
+revenue("Playboy_Enterprises","A").
+state("Illinois","expanded").
+state("Illinois","off").
+type("Playboy_Enterprises","magazine website, erotica").
+birthYear("Hugh_Hefner","1926").
+foundingYear("Playboy_Enterprises","1953").
+numberOfEmployees("Playboy_Enterprises","165").
+affiliation("Brandeis_University","Association_of_American_Universities").
+affiliation("Brandeis_University","Association_of_Independent_Colleges_and_Universities_in_Massachusetts").
+affiliation("Brandeis_University","National_Association_of_Independent_Colleges_and_Universities").
+almaMater("Hugh_Hefner","University_of_Illinois_at_Urbana_Champaign").
+almaMater("Hugh_Hefner","Steinmetz_High_School").
+board("Hugh_Hefner","Playboy_Enterprises").
+capital("Illinois","Springfield,_Illinois").
+child("Hugh_Hefner","Christie_Hefner").
+city("Brandeis_University","Waltham,_Massachusetts").
+country("Chicago","United_States_of_America").
+country("Illinois","United_States").
+country("Wilmette,_Illinois","United_States").
+foundationPlace("Playboy_Enterprises","Illinois").
+foundationPlace("Playboy_Enterprises","United_States").
+foundationPlace("Playboy_Enterprises","Chicago,_Illinois").
+foundedBy("Playboy_Enterprises","Hugh_Hefner").
+industry("Playboy_Enterprises","Lifestyle_(sociology)").
+isPartOf("Chicago","Illinois").
+isPartOf("Chicago","DuPage_County,_Illinois").
+isPartOf("Chicago","Cook_County,_Illinois").
+keyPerson("Playboy_Enterprises","Scott_Flanders").
+largestCity("Illinois","Chicago").
+location("Playboy_Enterprises","Beverly_Hills,_California").
+location("Playboy_Enterprises","United_States").
+occupation("Hugh_Hefner","Hugh_Hefner__1").
+product("Playboy_Enterprises","Playboy_Magazine").
+product("Playboy_Enterprises","Playboy_Online").
+product("Playboy_Enterprises","Adult_entertainment").
+product("Playboy_Enterprises","Playboy_TV").
+residence("Hugh_Hefner","Playboy_Mansion").
+residence("Hugh_Hefner","Holmby_Hills,_Los_Angeles").
+spouse("William_A._Marovitz","Christie_Hefner").
+spouse("Hugh_Hefner","Kimberley_Conrad").
+spouse("Hugh_Hefner","Crystal_Harris").
+state("Wilmette,_Illinois","Illinois").
+state("Brandeis_University","Massachusetts").
+type("Chicago","City").
+type("Playboy_Enterprises","Privately_held_company").
+type("Wilmette,_Illinois","List_of_towns_and_villages_in_Illinois").
+type("Brandeis_University","Private_university").

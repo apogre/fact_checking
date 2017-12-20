@@ -1,0 +1,29 @@
+foundingYear("Crown_Worldwide_Group","1965").
+numberOfEmployees("Crown_Worldwide_Group","4600").
+division("Crown_Worldwide_Group","www.crownfineart.com").
+division("Crown_Worldwide_Group","www.crownrms.com").
+division("Crown_Worldwide_Group","www.crown-logistics.com").
+division("Crown_Worldwide_Group","www.crownwinecellars.com").
+division("Crown_Worldwide_Group","www.crownrelo.com").
+foundedBy("Crown_Worldwide_Group","James_E._Thompson").
+industry("Crown_Worldwide_Group","Warehouse").
+industry("Crown_Worldwide_Group","Relocation_service").
+industry("Crown_Worldwide_Group","Facilities_Management").
+industry("Crown_Worldwide_Group","Records_Management").
+networth("James_E._Thompson","1.0E9").
+knownFor("James_E._Thompson","Founder of The Crown Worldwide Group").
+nationality("James_E._Thompson","United States").
+nationality("James_E._Thompson","Permanent resident of Hong Kong").
+spouse("James_E._Thompson","Sally Thompson").
+birthYear("James_E._Thompson","1940").
+almaMater("James_E._Thompson","San_Jose_State_University").
+occupation("James_E._Thompson","James_E._Thompson__1").
+personFunction("James_E._Thompson","James_E._Thompson__1").
+country("San_Jose_State_University","U.S.").
+state("San_Jose_State_University","autocollapse").
+affiliation("San_Jose_State_University","American_Association_of_State_Colleges_and_Universities").
+affiliation("San_Jose_State_University","California_State_University").
+affiliation("San_Jose_State_University","Western_Association_of_Schools_and_Colleges").
+city("San_Jose_State_University","San_Jose,_California").
+state("San_Jose_State_University","California").
+type("San_Jose_State_University","Public_university").

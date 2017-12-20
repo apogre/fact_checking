@@ -1,0 +1,81 @@
+assets("Popular,_Inc.","3.6507535E10").
+assets("Popular,_Inc.","3.5749333E10").
+netIncome("Popular,_Inc.","5.993E8").
+operatingIncome("Popular,_Inc.","7.89E8").
+revenue("Popular,_Inc.","3.82E9").
+foundingYear("Popular,_Inc.","1893").
+numberOfEmployees("Popular,_Inc.","13210").
+foundationPlace("Popular,_Inc.","San_Juan,_Puerto_Rico").
+industry("Popular,_Inc.","Finance_and_Insurance").
+location("Popular,_Inc.","Hato_Rey").
+location("Popular,_Inc.","San_Juan,_Puerto_Rico").
+product("Popular,_Inc.","Consumer_finance").
+product("Popular,_Inc.","Insurance").
+product("Popular,_Inc.","Brokerage_firm").
+product("Popular,_Inc.","Investment_Bank").
+product("Popular,_Inc.","Asset-based_lending").
+product("Popular,_Inc.","Banking").
+product("Popular,_Inc.","Checking_Accounts").
+type("Popular,_Inc.","Public_company").
+country("San_Juan,_Puerto_Rico","United_States_of_America").
+isPartOf("San_Juan,_Puerto_Rico","Puerto_Rico").
+type("San_Juan,_Puerto_Rico","Municipalities_of_Puerto_Rico").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+birthYear("James_J._Greco","1958").
+almaMater("James_J._Greco","Georgetown_University").
+almaMater("James_J._Greco","University_of_Miami").
+almaMater("James_J._Greco","City_University,_London").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+residence("James_J._Greco","Florida").
+residence("James_J._Greco","Delray_Beach,_Florida").
+residence("James_J._Greco","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Georgetown_University","US").
+country("University_of_Miami","U.S.").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+state("Florida","expanded").
+type("University_of_Miami","Private").
+affiliation("Georgetown_University","Association_of_Jesuit_Colleges_and_Universities").
+affiliation("Georgetown_University","Roman_Catholic_Church").
+affiliation("Georgetown_University","Association_of_Catholic_Colleges_and_Universities").
+affiliation("Georgetown_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Georgetown_University","Oak_Ridge_Associated_Universities").
+affiliation("Georgetown_University","568_Group").
+affiliation("Georgetown_University","Consortium_of_Universities_of_the_Washington_Metropolitan_Area").
+affiliation("University_of_Miami","Southeastern_Universities_Research_Association").
+affiliation("University_of_Miami","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("University_of_Miami","Oak_Ridge_Associated_Universities").
+capital("Connecticut","Hartford,_Connecticut").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+city("Georgetown_University","Washington,_D.C.").
+city("University_of_Miami","Coral_Gables,_Florida").
+country("Connecticut","United_States").
+country("Delray_Beach,_Florida","United_States_of_America").
+country("Florida","United_States").
+isPartOf("Delray_Beach,_Florida","Florida").
+isPartOf("Delray_Beach,_Florida","Palm_Beach_County,_Florida").
+isPartOf("New_Haven,_Connecticut","Connecticut").
+isPartOf("New_Haven,_Connecticut","Greater_New_Haven").
+isPartOf("New_Haven,_Connecticut","Union_Station_(New_Haven)").
+largestCity("Connecticut","Bridgeport,_Connecticut").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+state("University_of_Miami","Florida").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

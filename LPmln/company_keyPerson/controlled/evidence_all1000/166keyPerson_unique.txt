@@ -1,0 +1,50 @@
+country("Tracinda","United_States").
+foundedBy("Tracinda","Kirk_Kerkorian").
+locationCity("Tracinda","Nevada").
+locationCity("Tracinda","Las_Vegas").
+networth("Kirk_Kerkorian","4.0E9").
+birthPlace("Kirk_Kerkorian","Fresno,_California").
+deathPlace("Kirk_Kerkorian","Beverly_Hills,_California").
+deathPlace("Kirk_Kerkorian","Los_Angeles").
+city("Nevada","Carson City, NevadaCarson City").
+city("Nevada","Enterprise, NevadaEnterprise").
+city("Nevada","Henderson, NevadaHenderson").
+city("Nevada","Las Vegas, NevadaLas Vegas").
+city("Nevada","North Las Vegas, NevadaNorth Las Vegas").
+city("Nevada","Paradise, NevadaParadise").
+city("Nevada","Reno, NevadaReno").
+city("Nevada","Sparks, NevadaSparks").
+city("Nevada","Spring Valley, NevadaSpring Valley").
+city("Nevada","Sunrise Manor, NevadaSunrise Manor").
+country("Nevada","Nevada").
+residence("Kirk_Kerkorian","Beverly Hills, California").
+birthYear("Kirk_Kerkorian","1917").
+capital("Nevada","Carson_City,_Nevada").
+capital("United_States","Washington,_D.C.").
+country("Las_Vegas","United_States_of_America").
+country("Nevada","United_States").
+isPartOf("Las_Vegas","Nevada").
+isPartOf("Las_Vegas","Clark_County,_Nevada").
+largestCity("Nevada","Las_Vegas").
+largestCity("United_States","New_York_City").
+spouse("Kirk_Kerkorian","Lisa_Bonder").
+type("Las_Vegas","City").
+birthPlace("Lisa_Bonder","Columbus,_Ohio").
+country("Lisa_Bonder","USA").
+largestCity("Armenia","capital").
+location("Los_Angeles","Los Angeles").
+capital("Armenia","Yerevan").
+isPartOf("Beverly_Hills,_California","California").
+isPartOf("Beverly_Hills,_California","Los_Angeles_County,_California").
+isPartOf("Fresno,_California","California").
+isPartOf("Fresno,_California","Fresno_County,_California").
+isPartOf("Fresno,_California","San_Joaquin_Valley").
+isPartOf("Los_Angeles","California").
+isPartOf("Los_Angeles","Los_Angeles_County,_California").
+isPartOf("Los_Angeles","Los_Angeles_metropolitan_area").
+isPartOf("Los_Angeles","Greater_Los_Angeles_Area").
+residence("Lisa_Bonder","Beverly_Hills,_California").
+type("Beverly_Hills,_California","General_law_city").
+type("Fresno,_California","Charter_city").
+type("Fresno,_California","County_seat").
+type("Los_Angeles","Metropolitan_City").

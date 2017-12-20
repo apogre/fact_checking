@@ -11,7 +11,7 @@ rank_threshold = 0.5
 kgminer_predicate_threshold = 0.4
 evidence_threshold = 0
 rule_threshold = 0.15
-top_k = str('compact')
+top_k = str('all1000')
 predicate = 'keyPerson'
 set_up = "controlled"
 #

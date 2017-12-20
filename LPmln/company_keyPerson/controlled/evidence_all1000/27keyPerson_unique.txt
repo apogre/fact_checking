@@ -1,0 +1,56 @@
+revenue("Boston_Consulting_Group","5.0E9").
+foundingYear("Boston_Consulting_Group","1963").
+numberOfEmployees("Boston_Consulting_Group","6200").
+industry("Boston_Consulting_Group","Management_consulting").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+location("Boston_Consulting_Group","Boston").
+type("Boston_Consulting_Group","Privately_held_company").
+city("Massachusetts","Boston, MassachusettsBoston").
+city("Massachusetts","Brockton, MassachusettsBrockton").
+city("Massachusetts","Cambridge, MassachusettsCambridge").
+city("Massachusetts","Fall River, MassachusettsFall River").
+city("Massachusetts","Lowell, MassachusettsLowell").
+city("Massachusetts","Lynn, MassachusettsLynn").
+city("Massachusetts","New Bedford, MassachusettsNew Bedford").
+city("Massachusetts","Quincy, MassachusettsQuincy").
+city("Massachusetts","Springfield, MassachusettsSpringfield").
+city("Massachusetts","Worcester, MassachusettsWorcester").
+country("Massachusetts","Massachusetts").
+birthYear("Rich_Lesser","1963").
+almaMater("Rich_Lesser","Harvard_Business_School").
+almaMater("Rich_Lesser","University_of_Michigan").
+capital("Massachusetts","Boston").
+capital("United_States","Washington,_D.C.").
+country("Massachusetts","United_States").
+employer("Rich_Lesser","Boston_Consulting_Group").
+isPartOf("Boston","Massachusetts").
+isPartOf("Boston","Kingdom_of_Great_Britain").
+isPartOf("Boston","Province_of_Massachusetts_Bay").
+isPartOf("Boston","Massachusetts_Bay_Colony").
+isPartOf("Boston","Suffolk_County,_Massachusetts").
+isPartOf("Boston","Kingdom_of_England").
+largestCity("Massachusetts","Boston").
+largestCity("United_States","New_York_City").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Management_Consultant").
+personFunction("Rich_Lesser","Rich_Lesser__1").
+type("Boston","Capital_city").
+country("Harvard_Business_School","U.S.").
+country("University_of_Michigan","United States").
+state("University_of_Michigan","collapsed").
+affiliation("Harvard_Business_School","Harvard_University").
+affiliation("University_of_Michigan","Big_Ten_Academic_Alliance").
+affiliation("University_of_Michigan","Association_of_Public_and_Land-Grant_Universities").
+affiliation("University_of_Michigan","Association_of_American_Universities").
+affiliation("University_of_Michigan","Universities_Research_Association").
+city("Harvard_Business_School","Boston").
+city("University_of_Michigan","Ann_Arbor,_Michigan").
+state("Harvard_Business_School","Massachusetts").
+state("University_of_Michigan","Michigan").
+type("Harvard_Business_School","Private_school").
+type("University_of_Michigan","Public_university").
+type("University_of_Michigan","Flagship_university").
+type("University_of_Michigan","Sea_grant_colleges").
+type("University_of_Michigan","Space_grant_colleges").

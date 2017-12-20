@@ -1,0 +1,101 @@
+numberOfLocations("Sbarro","800").
+foundingYear("Sbarro","1956").
+foundationPlace("Sbarro","New_York_City").
+foundationPlace("Sbarro","New_York_(state)").
+foundationPlace("Sbarro","Brooklyn").
+keyPerson("Sbarro","CEO").
+keyPerson("Sbarro","President").
+location("Sbarro","Columbus,_Ohio").
+product("Sbarro","Pasta").
+product("Sbarro","Italian-American_cuisine").
+product("Sbarro","Salad").
+product("Sbarro","Pizza").
+type("Sbarro","Privately_held_company").
+location("Brooklyn","JFK Airport, New York").
+location("Sbarro_restaurant_suicide_bombing","Israel").
+location("Sbarro_restaurant_suicide_bombing","Jerusalem").
+type("Sbarro_restaurant_suicide_bombing","Suicide_bombing").
+type("Pizza","Lunch or dinner").
+country("Brooklyn","United_States_of_America").
+country("New_York_City","United_States").
+country("Pasta","Italy").
+country("Pizza","Campania").
+country("Pizza","Italy").
+country("Pizza","Naples").
+isPartOf("Brooklyn","New_York").
+isPartOf("Brooklyn","New_York_City").
+isPartOf("Columbus,_Ohio","Ohio").
+isPartOf("Columbus,_Ohio","Franklin_County,_Ohio").
+isPartOf("Columbus,_Ohio","Delaware_County,_Ohio").
+isPartOf("Columbus,_Ohio","Fairfield_County,_Ohio").
+isPartOf("New_York_City","Brooklyn").
+isPartOf("New_York_City","Manhattan").
+isPartOf("New_York_City","New_York").
+isPartOf("New_York_City","Queens").
+isPartOf("New_York_City","Staten_Island").
+isPartOf("New_York_City","The_Bronx").
+isPartOf("New_York_City","Province_of_New_York").
+isPartOf("New_York_City","New_Netherland").
+type("Brooklyn","Borough_(New_York_City)").
+type("Columbus,_Ohio","City").
+type("New_York_City","City_(New_York)").
+type("Pizza","Flatbread").
+birthPlace("James_J._Greco","Connecticut").
+birthPlace("James_J._Greco","New_Haven,_Connecticut").
+birthYear("James_J._Greco","1958").
+almaMater("James_J._Greco","Georgetown_University").
+almaMater("James_J._Greco","University_of_Miami").
+almaMater("James_J._Greco","City_University,_London").
+occupation("James_J._Greco","James_J._Greco__1").
+occupation("James_J._Greco","Chief_operating_officer").
+occupation("James_J._Greco","President").
+residence("James_J._Greco","Florida").
+residence("James_J._Greco","Delray_Beach,_Florida").
+residence("James_J._Greco","United_States").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+country("Georgetown_University","US").
+country("University_of_Miami","U.S.").
+location("Delray_Beach,_Florida","Delray Beach").
+location("New_Haven,_Connecticut","New Haven, Connecticut").
+state("Florida","expanded").
+type("University_of_Miami","Private").
+affiliation("Georgetown_University","Association_of_Jesuit_Colleges_and_Universities").
+affiliation("Georgetown_University","Roman_Catholic_Church").
+affiliation("Georgetown_University","Association_of_Catholic_Colleges_and_Universities").
+affiliation("Georgetown_University","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("Georgetown_University","Oak_Ridge_Associated_Universities").
+affiliation("Georgetown_University","568_Group").
+affiliation("Georgetown_University","Consortium_of_Universities_of_the_Washington_Metropolitan_Area").
+affiliation("University_of_Miami","Southeastern_Universities_Research_Association").
+affiliation("University_of_Miami","National_Association_of_Independent_Colleges_and_Universities").
+affiliation("University_of_Miami","Oak_Ridge_Associated_Universities").
+capital("Connecticut","Hartford,_Connecticut").
+capital("Florida","Tallahassee,_Florida").
+capital("United_States","Washington,_D.C.").
+city("Georgetown_University","Washington,_D.C.").
+city("University_of_Miami","Coral_Gables,_Florida").
+country("Connecticut","United_States").
+country("Delray_Beach,_Florida","United_States_of_America").
+country("Florida","United_States").
+isPartOf("Delray_Beach,_Florida","Florida").
+isPartOf("Delray_Beach,_Florida","Palm_Beach_County,_Florida").
+isPartOf("New_Haven,_Connecticut","Connecticut").
+isPartOf("New_Haven,_Connecticut","Greater_New_Haven").
+isPartOf("New_Haven,_Connecticut","Union_Station_(New_Haven)").
+largestCity("Connecticut","Bridgeport,_Connecticut").
+largestCity("Florida","Jacksonville,_Florida").
+largestCity("United_States","New_York_City").
+state("University_of_Miami","Florida").
+type("Delray_Beach,_Florida","City_(Florida)").
+type("New_Haven,_Connecticut","City").
+type("Georgetown_University","Private_university").

@@ -1,0 +1,67 @@
+numberOfEmployees("Valero_Energy","10103").
+industry("Valero_Energy","List_of_petroleum_companies").
+keyPerson("Valero_Energy","CEO").
+location("Valero_Energy","Texas").
+location("Valero_Energy","United_States").
+location("Valero_Energy","San_Antonio").
+regionServed("Valero_Energy","North_America").
+regionServed("Valero_Energy","Caribbean").
+type("Valero_Energy","Public_company").
+city("Texas","Austin").
+city("Texas","Houston").
+city("Texas","Arlington, TexasArlington").
+city("Texas","Corpus Christi, TexasCorpus Christi").
+city("Texas","Dallas").
+city("Texas","El Paso").
+city("Texas","Fort Worth").
+city("Texas","Laredo, TexasLaredo").
+city("Texas","Plano, TexasPlano").
+city("Texas","San Antonio").
+country("Texas","Texas").
+location("Caribbean","Oranjestad, Aruba").
+location("Caribbean","Havana").
+state("Texas","expanded").
+capital("Texas","Austin,_Texas").
+capital("United_States","Washington,_D.C.").
+country("Texas","United_States").
+isPartOf("San_Antonio","Texas").
+isPartOf("San_Antonio","Bexar_County,_Texas").
+isPartOf("San_Antonio","Comal_County,_Texas").
+isPartOf("San_Antonio","Medina_County,_Texas").
+largestCity("Texas","Houston").
+largestCity("United_States","New_York_City").
+type("San_Antonio","City_(Texas)").
+birthPlace("Bob_Dudley","Queens,_New_York").
+birthPlace("Bob_Dudley","Queens").
+birthYear("Bob_Dudley","1955").
+occupation("Bob_Dudley","BP").
+occupation("Bob_Dudley","Bob_Dudley__1").
+salary("Bob_Dudley","1.5334E7").
+assets("BP","2.618E11").
+equity("BP","9.8387E10").
+operatingIncome("BP","-7.92E9").
+revenue("BP","2.2598E11").
+foundingYear("BP","1935").
+foundingYear("BP","1954").
+foundingYear("BP","1998").
+foundingYear("BP","2001").
+numberOfEmployees("BP","79800").
+country("Queens","United_States_of_America").
+industry("BP","Petroleum_industry").
+isPartOf("Queens","New_York").
+isPartOf("Queens","New_York_City").
+keyPerson("BP","Carl-Henric_Svanberg").
+keyPerson("BP","Bob_Dudley").
+locationCity("BP","London").
+locationCountry("BP","England").
+locationCountry("BP","United_Kingdom").
+product("BP","Natural_gas").
+product("BP","Petroleum").
+product("BP","Aviation_fuel").
+product("BP","Petrochemical").
+product("BP","Motor_fuel").
+regionServed("BP","World").
+service("BP","Filling_station").
+subsidiary("BP","Amoco").
+type("Queens","Borough_(New_York_City)").
+type("BP","Public_limited_company").

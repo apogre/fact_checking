@@ -1,0 +1,42 @@
+assets("Kodak","2.138E9").
+equity("Kodak","1.03E8").
+netIncome("Kodak","-2.11E8").
+operatingIncome("Kodak","2000000.0").
+revenue("Kodak","1.798E9").
+numberOfEmployees("Kodak","6500").
+foundedBy("Kodak","Henry_A._Strong").
+foundedBy("Kodak","George_Eastman").
+industry("Kodak","Digital_imaging").
+industry("Kodak","Mobile_devices").
+industry("Kodak","Photography").
+keyPerson("Kodak","Chief_executive_officer").
+location("Kodak","Rochester,_New_York").
+location("Kodak","New_York_(state)").
+product("Kodak","Digital_imaging").
+type("Kodak","Public_company").
+networth("George_Eastman","9.5E7").
+birthPlace("Jeff_Clarke_(businessman)","Ithaca,_New_York").
+birthPlace("Jeff_Clarke_(businessman)","United_States").
+birthPlace("George_Eastman","Waterville,_New_York").
+birthPlace("Henry_A._Strong","Rochester,_New_York").
+deathPlace("George_Eastman","Rochester,_New_York").
+knownFor("George_Eastman","Photography pioneer, Founder of Eastman Kodak").
+nationality("George_Eastman","American").
+spouse("Henry_A._Strong","Hattie Maria  Lockwood  ( )").
+spouse("Henry_A._Strong","Helen Phoebe Griffin").
+birthYear("George_Eastman","1854").
+birthYear("Henry_A._Strong","1838").
+isPartOf("Rochester,_New_York","Monroe_County,_New_York").
+isPartOf("Rochester,_New_York","New_York_(state)").
+knownFor("Jeff_Clarke_(businessman)","Kodak").
+occupation("Jeff_Clarke_(businessman)","Jeff_Clarke_(businessman)__1").
+occupation("George_Eastman","Philanthropist").
+occupation("George_Eastman","George_Eastman__1").
+occupation("Henry_A._Strong","Henry_A._Strong__1").
+type("Rochester,_New_York","City_(New_York)").
+predecessor("Kodak","The Eastman Dry Plate Company").
+capital("United_States","Washington,_D.C.").
+country("Ithaca,_New_York","United_States").
+isPartOf("Ithaca,_New_York","Tompkins_County,_New_York").
+isPartOf("Ithaca,_New_York","New_York_(state)").
+largestCity("United_States","New_York_City").

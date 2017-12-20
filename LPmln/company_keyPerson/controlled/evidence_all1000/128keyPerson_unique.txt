@@ -1,0 +1,32 @@
+birthYear("Ross_McEwan","1957").
+almaMater("Ross_McEwan","Massey_University").
+nationality("Ross_McEwan","New_Zealand").
+occupation("Ross_McEwan","Ross_McEwan__1").
+personFunction("Ross_McEwan","Ross_McEwan__1").
+predecessor("Ross_McEwan","Stephen_Hester").
+stateOfOrigin("Ross_McEwan","New_Zealand").
+salary("Ross_McEwan","1350000.0").
+birthPlace("Stephen_Hester","Yorkshire").
+country("Massey_University","New Zealand").
+location("Hastings,_New_Zealand","Hastings").
+nationality("Stephen_Hester","British").
+spouse("Stephen_Hester","Barbara Abt").
+type("Hastings_Boys'_High_School","State single-sex boys, Secondary").
+activeYearsStartYear("Stephen_Hester","1982").
+birthYear("Stephen_Hester","1960").
+foundingYear("Hastings_Boys'_High_School","1904").
+almaMater("Stephen_Hester","Oxford_University").
+almaMater("Stephen_Hester","Lady_Margaret_Hall,_Oxford").
+capital("New_Zealand","Wellington").
+city("Massey_University","Wellington").
+city("Massey_University","Palmerston_North").
+city("Massey_University","Albany,_New_Zealand").
+country("Hastings,_New_Zealand","New_Zealand").
+isPartOf("Hastings,_New_Zealand","Hawke's_Bay_Region").
+isPartOf("Hastings,_New_Zealand","Hastings_District").
+largestCity("New_Zealand","Auckland").
+occupation("Stephen_Hester","Stephen_Hester__1").
+personFunction("Stephen_Hester","Stephen_Hester__1").
+type("Hastings,_New_Zealand","Urban_areas_of_New_Zealand").
+type("Massey_University","Public_university").
+salary("Stephen_Hester","4000000.0").

@@ -1,0 +1,39 @@
+keyPerson(A,B) :- employer(C,A) , birthPlace(C,D) , birthPlace(B,D).
+keyPerson(A,B) :- foundedBy(A,B).
+keyPerson(A,B) :- occupation(B,C) , C!=D , location(A,D).
+keyPerson(A,B) :- keyPerson(C,B) , C!=D , owningCompany(D,A).
+keyPerson(A,B) :- foundationPlace(A,C) , C!=D , birthPlace(B,D).
+keyPerson(A,B) :- owningCompany(C,A) , C!=D , almaMater(B,D).
+keyPerson(A,B) :- locationCity(A,C) , C!=D , occupation(B,D).
+keyPerson(A,B) :- occupation(B,A).
+keyPerson(A,B) :- locationCity(A,C) , C!=D , birthPlace(B,D).
+keyPerson(A,B) :- division(A,C) , C!=D , occupation(B,D).
+keyPerson(A,B) :- location(A,C) , C!=D , birthPlace(B,D).
+keyPerson(A,B) :- birthYear(B,C) , C<D , foundingYear(A,D).
+keyPerson(A,B) :- industry(A,C) , industry(D,C) , keyPerson(D,B).
+keyPerson(A,B) :- birthPlace(B,C) , locationCity(D,C) , owningCompany(D,A).
+keyPerson(A,B) :- numberOfEmployees(A,C) , C>D , birthYear(B,D).
+keyPerson(A,B) :- keyPerson(C,B) , locationCountry(C,D) , locationCountry(A,D).
+keyPerson(A,B) :- type(A,C) , type(D,C) , keyPerson(D,B).
+keyPerson(A,B) :- keyPerson(A,C) , predecessor(C,B).
+~keyPerson(A,B) :- parentCompany(A,C) , C!=D , keyPerson(D,B).
+~keyPerson(A,B) :- location(A,C) , country(D,C) , birthPlace(B,D).
+~keyPerson(A,B) :- keyPerson(C,B) , location(C,D) , locationCountry(A,D).
+~keyPerson(A,B) :- keyPerson(C,B) , C!=D , subsidiary(D,A).
+~keyPerson(A,B) :- locationCity(A,C) , country(C,D) , birthPlace(B,D).
+~keyPerson(A,B) :- owner(A,C) , C!=D , occupation(B,D).
+~keyPerson(A,B) :- owningCompany(C,B) , C!=D , parentCompany(D,A).
+~keyPerson(A,B) :- owner(C,A) , locationCountry(C,D) , birthPlace(B,D).
+~keyPerson(A,B) :- birthYear(B,C) , C>D , operatingIncome(A,D).
+~keyPerson(A,B) :- birthPlace(B,C) , foundationPlace(D,C) , parentCompany(D,A).
+~keyPerson(A,B) :- parent(B,C) , C!=D , keyPerson(A,D).
+~keyPerson(A,B) :- birthDate(B,C) , C>D , extinctionDate(A,D).
+~keyPerson(A,B) :- predecessor(C,B) , C!=D , keyPerson(A,D).
+~keyPerson(A,B) :- spouse(B,C) , C!=D , foundedBy(A,D).
+~keyPerson(A,B) :- predecessor(C,B) , C!=D , occupation(D,A).
+~keyPerson(A,B) :- owningCompany(A,C) , C!=D , keyPerson(D,B).
+~keyPerson(A,B) :- numberOfEmployees(A,C) , C>D , birthYear(B,D).
+~keyPerson(A,B) :- parentCompany(A,C) , C!=D , almaMater(B,D).
+~keyPerson(A,B) :- occupation(B,C) , C!=D , regionServed(A,D).
+~keyPerson(A,B) :- parentCompany(A,C) , C!=D , occupation(B,D).
+~keyPerson(A,B) :- division(A,C) , C!=D , keyPerson(D,B).

@@ -1,0 +1,76 @@
+assets("U.S._Century_Bank","9.31E8").
+equity("U.S._Century_Bank","4.7E7").
+foundingYear("U.S._Century_Bank","2002").
+numberOfEmployees("U.S._Century_Bank","243").
+foundationPlace("U.S._Century_Bank","Florida").
+foundationPlace("U.S._Century_Bank","Miami,_Florida").
+industry("U.S._Century_Bank","Banking").
+industry("U.S._Century_Bank","Financial_services").
+industry("U.S._Century_Bank","Investment").
+keyPerson("U.S._Century_Bank","Chief_Executive_Officer").
+keyPerson("U.S._Century_Bank","President").
+keyPerson("U.S._Century_Bank","Chairman").
+keyPerson("U.S._Century_Bank","Alex_Acosta").
+keyPerson("U.S._Century_Bank","Luis_de_la_Aguilera").
+location("U.S._Century_Bank","Florida").
+location("U.S._Century_Bank","Miami").
+location("U.S._Century_Bank","Doral,_Florida").
+product("U.S._Century_Bank","Finance_and_insurance").
+product("U.S._Century_Bank","Commercial_bank").
+product("U.S._Century_Bank","Investment_Banking").
+product("U.S._Century_Bank","Retail_banking").
+product("U.S._Century_Bank","Private_banking").
+product("U.S._Century_Bank","Mortgages").
+city("Florida","Cape Coral, FloridaCape Coral").
+city("Florida","Fort Lauderdale, FloridaFort Lauderdale").
+city("Florida","Hialeah, FloridaHialeah").
+city("Florida","Jacksonville, FloridaJacksonville").
+city("Florida","Miami, FloridaMiami").
+city("Florida","Orlando, FloridaOrlando").
+city("Florida","Port St. Lucie, FloridaPort St. Lucie").
+city("Florida","St. Petersburg, FloridaSt. Petersburg").
+city("Florida","Tallahassee, FloridaTallahassee").
+city("Florida","Tampa, FloridaTampa").
+country("Florida","Florida").
+state("Florida","expanded").
+capital("Florida","Tallahassee,_Florida").
+country("Florida","United_States").
+country("Miami","United_States").
+isPartOf("Miami","Florida").
+isPartOf("Miami","Miami-Dade_County,_Florida").
+isPartOf("Doral,_Florida","Florida").
+isPartOf("Doral,_Florida","Miami-Dade_County,_Florida").
+largestCity("Florida","Jacksonville,_Florida").
+type("Miami","Metropolitan_City").
+type("Doral,_Florida","List_of_communities_in_Miami-Dade_County,_Florida").
+birthPlace("Alan_Joyce_(executive)","Republic_of_Ireland").
+birthPlace("Alan_Joyce_(executive)","Dublin").
+birthPlace("Alan_Joyce_(executive)","Tallaght").
+birthYear("Alan_Joyce_(executive)","1966").
+nationality("Alan_Joyce_(executive)","Irish_nationality_law").
+occupation("Alan_Joyce_(executive)","Alan_Joyce_(executive)__1").
+occupation("Alan_Joyce_(executive)","Businessperson").
+residence("Alan_Joyce_(executive)","The_Rocks,_New_South_Wales").
+stateOfOrigin("Alan_Joyce_(executive)","Irish_nationality_law").
+assets("Qantas","1.75E10").
+equity("Qantas","3.45E9").
+operatingIncome("Qantas","9.75E8").
+largestCity("Republic_of_Ireland","capital").
+location("Dublin","Dublin_Airport").
+numberOfEmployees("Qantas","28622").
+capital("Republic_of_Ireland","Dublin").
+country("Dublin","Republic_of_Ireland").
+country("Tallaght","Republic_of_Ireland").
+headquarter("Qantas","Australia").
+headquarter("Qantas","Mascot,_New_South_Wales").
+industry("Qantas","Air_Transport").
+isPartOf("Dublin","Leinster").
+isPartOf("Tallaght","South_Dublin").
+isPartOf("Tallaght","Leinster").
+subsidiary("Qantas","Qantas_Freight").
+subsidiary("Qantas","Jetstar_Airways").
+subsidiary("Qantas","QantasLink").
+subsidiary("Qantas","Jetconnect").
+subsidiary("Qantas","Network_Aviation").
+subsidiary("Qantas","Australian_air_Express").
+type("Dublin","Capital_city").

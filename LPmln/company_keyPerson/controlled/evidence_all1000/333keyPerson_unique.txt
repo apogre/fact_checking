@@ -1,0 +1,102 @@
+revenue("Boston_Consulting_Group","5.0E9").
+foundingYear("Boston_Consulting_Group","1963").
+numberOfEmployees("Boston_Consulting_Group","6200").
+industry("Boston_Consulting_Group","Management_consulting").
+keyPerson("Boston_Consulting_Group","Rich_Lesser").
+location("Boston_Consulting_Group","Massachusetts").
+location("Boston_Consulting_Group","United_States").
+location("Boston_Consulting_Group","Boston").
+type("Boston_Consulting_Group","Privately_held_company").
+city("Massachusetts","Boston, MassachusettsBoston").
+city("Massachusetts","Brockton, MassachusettsBrockton").
+city("Massachusetts","Cambridge, MassachusettsCambridge").
+city("Massachusetts","Fall River, MassachusettsFall River").
+city("Massachusetts","Lowell, MassachusettsLowell").
+city("Massachusetts","Lynn, MassachusettsLynn").
+city("Massachusetts","New Bedford, MassachusettsNew Bedford").
+city("Massachusetts","Quincy, MassachusettsQuincy").
+city("Massachusetts","Springfield, MassachusettsSpringfield").
+city("Massachusetts","Worcester, MassachusettsWorcester").
+country("Massachusetts","Massachusetts").
+birthYear("Rich_Lesser","1963").
+almaMater("Rich_Lesser","Harvard_Business_School").
+almaMater("Rich_Lesser","University_of_Michigan").
+capital("Massachusetts","Boston").
+capital("United_States","Washington,_D.C.").
+country("Massachusetts","United_States").
+employer("Rich_Lesser","Boston_Consulting_Group").
+isPartOf("Boston","Massachusetts").
+isPartOf("Boston","Kingdom_of_Great_Britain").
+isPartOf("Boston","Province_of_Massachusetts_Bay").
+isPartOf("Boston","Massachusetts_Bay_Colony").
+isPartOf("Boston","Suffolk_County,_Massachusetts").
+isPartOf("Boston","Kingdom_of_England").
+largestCity("Massachusetts","Boston").
+largestCity("United_States","New_York_City").
+occupation("Rich_Lesser","Strategist").
+occupation("Rich_Lesser","Rich_Lesser__1").
+occupation("Rich_Lesser","Management_Consultant").
+personFunction("Rich_Lesser","Rich_Lesser__1").
+type("Boston","Capital_city").
+birthPlace("Andrew_House","Wales").
+birthPlace("Andrew_House","United_Kingdom").
+birthYear("Andrew_House","1965").
+nationality("Andrew_House","Welsh_people").
+occupation("Andrew_House","Chief_executive_officer").
+occupation("Andrew_House","President").
+occupation("Andrew_House","Andrew_House__1").
+occupation("Andrew_House","Sony").
+stateOfOrigin("Andrew_House","Welsh_people").
+numberOfLocations("Sony","14").
+capital("Wales","Cardiff").
+city("Wales","Cardiff").
+city("Wales","Aberdare").
+city("Wales","Barry, WalesBarry").
+city("Wales","Blackwood, WalesBlackwood").
+city("Wales","Bridgend").
+city("Wales","Caerphilly").
+city("Wales","Colwyn Bay").
+city("Wales","Cwmbran").
+city("Wales","Llanelli").
+city("Wales","Maesteg").
+city("Wales","Merthyr Tydfil").
+city("Wales","Neath").
+city("Wales","Newport, WalesNewport").
+city("Wales","Penarth").
+city("Wales","Pontypool").
+city("Wales","Pontypridd").
+city("Wales","Port Talbot").
+city("Wales","Rhyl").
+city("Wales","Swansea").
+city("Wales","Wrexham").
+country("Wales","Wales").
+largestCity("Wales","capital").
+numberOfEmployees("Sony","125").
+capital("United_Kingdom","London").
+foundationPlace("Sony","Japan").
+foundationPlace("Sony","Tokyo").
+foundedBy("Sony","Masaru_Ibuka").
+foundedBy("Sony","Akio_Morita").
+industry("Sony","Finance").
+industry("Sony","Entertainment").
+industry("Sony","Computer_software").
+industry("Sony","Telecommunications").
+industry("Sony","Mass_media").
+keyPerson("Sony","Kazuo_Hirai").
+keyPerson("Sony","Osamu_Nagayama").
+largestCity("United_Kingdom","Capital_city").
+location("Sony","Minato,_Tokyo").
+locationCity("Sony","Tokyo").
+locationCountry("Sony","Japan").
+product("Sony","Consumer_electronics").
+product("Sony","Semiconductor").
+product("Sony","Video_games").
+product("Sony","Computer_hardware").
+product("Sony","Telecommunications_equipment").
+service("Sony","Banking").
+service("Sony","Insurance").
+service("Sony","Financial_services").
+service("Sony","Advertising_agency").
+service("Sony","Credit_(finance)").
+subsidiary("Sony","Sony_Corporation_shareholders_and_subsidiaries").
+type("Sony","Kabushiki_gaisha").

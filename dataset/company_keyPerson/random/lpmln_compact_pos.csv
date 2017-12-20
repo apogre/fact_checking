@@ -1,9 +1,4 @@
 id,triples,label,lpmln hard rules -q keyPerson(True Positive),lpmln hard rules -q not_keyPerson(False Positive),asp
-34,"['CBS_Corporation', 'Leslie_Moonves']",1,[],"[""not_keyPerson('CBS_Corporation', 'Leslie_Moonves') 1.0""]","['not_keyPerson(""CBS_Corporation"",""Leslie_Moonves"")']"
-102,"['National_Amusements', 'Sumner_Redstone']",1,"[""keyPerson('National_Amusements', 'Sumner_Redstone') 1.0""]","[""not_keyPerson('National_Amusements', 'Sumner_Redstone') 1.0""]","['keyPerson(""National_Amusements"",""Sumner_Redstone"")', 'not_keyPerson(""National_Amusements"",""Sumner_Redstone"")']"
-117,"['Ralph_Lauren_Corporation', 'Ralph_Lauren']",1,[],[],[]
-132,"['Samsung', 'Lee_Kun-hee']",1,"[""keyPerson('Samsung', 'Lee_Kun-hee') 1.0""]","[""not_keyPerson('Samsung', 'Lee_Kun-hee') 1.0""]","['keyPerson(""Samsung"",""Lee_Kun-hee"")', 'not_keyPerson(""Samsung"",""Lee_Kun-hee"")'']"
-198,"['WWE', 'Vince_McMahon']",1,[],"[""not_keyPerson('WWE', 'Vince_McMahon') 1.0""]","['not_keyPerson(""WWE"",""Vince_McMahon"")']"
 8,"['Alcoa', 'Klaus_Kleinfeld']",1,"[""keyPerson('Alcoa', 'Klaus_Kleinfeld') 1.0""]",[],"['keyPerson(""Alcoa"",""Klaus_Kleinfeld"")']"
 23,"['Bharti_Enterprises', 'Sunil_Mittal']",1,"[""keyPerson('Bharti_Enterprises', 'Sunil_Mittal') 1.0""]",[],"['keyPerson(""Bharti_Enterprises"",""Sunil_Mittal"")']"
 39,"['Comcast', 'Brian_L._Roberts']",1,"[""keyPerson('Comcast_Cable', 'Brian_L._Roberts') 1.0""]",[],"['keyPerson(""Comcast_Cable"",""Brian_L._Roberts"")']"
@@ -16,13 +11,18 @@ id,triples,label,lpmln hard rules -q keyPerson(True Positive),lpmln hard rules -
 92,"['Merrill_Lynch', 'John_Thain']",1,"[""keyPerson('Merrill_Lynch', 'John_Thain') 1.0""]",[],"['keyPerson(""Merrill_Lynch"",""John_Thain"")']"
 99,"['Motorola', 'Greg_Brown_(businessman)']",1,"[""keyPerson('Motorola_Solutions', 'Greg_Brown_(businessman)') 1.0""]",[],"['keyPerson(""Motorola_Solutions"",""Greg_Brown_(businessman)"")']"
 100,"['Mozilla', 'Mitchell_Baker']",1,"[""keyPerson('Mozilla_Corporation', 'Mitchell_Baker') 1.0""]",[],"['keyPerson(""Mozilla_Corporation"",""Mitchell_Baker"")']"
+102,"['National_Amusements', 'Sumner_Redstone']",1,"[""keyPerson('National_Amusements', 'Sumner_Redstone') 1.0""]","[""not_keyPerson('National_Amusements', 'Sumner_Redstone') 1.0""]","['keyPerson(""National_Amusements"",""Sumner_Redstone"")', 'not_keyPerson(""National_Amusements"",""Sumner_Redstone"")']"
 110,"['Nintendo', 'Satoru_Iwata']",1,"[""keyPerson('Nintendo_Network_Service_Database', 'Satoru_Iwata') 1.0""]",[],"['keyPerson(""Nintendo_Network_Service_Database"",""Satoru_Iwata"")']"
 107,"['Nokia', 'Rajeev_Suri']",1,"[""keyPerson('Nokia_Networks', 'Rajeev_Suri') 1.0""]",[],"['keyPerson(""Nokia_Networks"",""Rajeev_Suri"")']"
+132,"['Samsung', 'Lee_Kun-hee']",1,"[""keyPerson('Samsung', 'Lee_Kun-hee') 1.0""]","[""not_keyPerson('Samsung', 'Lee_Kun-hee') 1.0""]","['keyPerson(""Samsung"",""Lee_Kun-hee"")', 'not_keyPerson(""Samsung"",""Lee_Kun-hee"")'']"
 134,"['SAS_Institute', 'James_Goodnight']",1,"[""keyPerson('SAS_Institute', 'James_Goodnight') 1.0""]",[],"['keyPerson(""SAS_Institute"",""James_Goodnight"")']"
 135,"['Sbarro', 'James_J._Greco']",1,"[""keyPerson('Sbarro', 'James_J._Greco') 1.0""]",[],"['keyPerson(""Sbarro"",""James_J._Greco"")']"
 159,"['Telstra', 'David_Thodey']",1,"[""keyPerson('Telstra', 'David_Thodey') 1.0""]",[],"['keyPerson(""Telstra"",""David_Thodey"")']"
 169,"['The_Trump_Organization', 'Donald_Trump']",1,"[""keyPerson('The_Trump_Organization', 'Donald_Trump') 1.0""]",[],"['keyPerson(""The_Trump_Organization"",""Donald_Trump_Jr."")'']"
 180,"['U.S._Steel', 'John_P._Surma']",1,"[""keyPerson('U.S._Steel', 'John_P._Surma') 1.0""]",[],"['keyPerson(""U.S._Steel"",""John_P._Surma"")']"
+34,"['CBS_Corporation', 'Leslie_Moonves']",1,[],"[""not_keyPerson('CBS_Corporation', 'Leslie_Moonves') 1.0""]","['not_keyPerson(""CBS_Corporation"",""Leslie_Moonves"")']"
+117,"['Ralph_Lauren_Corporation', 'Ralph_Lauren']",1,[],[],[]
+198,"['WWE', 'Vince_McMahon']",1,[],"[""not_keyPerson('WWE', 'Vince_McMahon') 1.0""]","['not_keyPerson(""WWE"",""Vince_McMahon"")']"
 1,"['Accenture', 'Pierre_Nanterme']",1,[],[],[]
 2,"['ACE_Limited', 'Evan_G._Greenberg']",1,[],[],[]
 3,"['Aditya_Birla_Group', 'Kumar_Mangalam_Birla']",1,[],[],[]
@@ -42,7 +42,7 @@ id,triples,label,lpmln hard rules -q keyPerson(True Positive),lpmln hard rules -
 18,"['Banco_Bilbao_Vizcaya_Argentaria', 'Francisco_Gonz\xc3\xa1lez_(banker)']",1,[],[],[]
 19,"['Bank_of_America', 'Brian_Moynihan']",1,[],[],[]
 20,"['Barclays', 'Antony_Jenkins']",1,[],[],[]
-21,"['Berkshire_Hathaway', 'Warren_Buffett']",1,[],[],"['keyPerson(""List_of_assets_owned_by_Berkshire_Hathaway"",""Warren_Buffett_VCSSGOC"")']"
+21,"['Berkshire_Hathaway', 'Warren_Buffett']",1,[],[],[]
 22,"['Best_Buy', 'Hubert_Joly']",1,[],[],[]
 24,"['The_Blackstone_Group', 'Stephen_A._Schwarzman']",1,[],[],[]
 25,"['BHP_Billiton', 'Andrew_Mackenzie_(businessman)']",1,[],[],[]
